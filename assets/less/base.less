@@ -92,7 +92,7 @@ input {
 }
 
 .container {
-    max-width: 1560px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 16px;
 
@@ -100,8 +100,17 @@ input {
         padding: 0 32px;
     });
 
+    .media-min(1280px, {
+        padding: 0;
+        max-width: 1088px;
+    });  
+
     .media-min(1441px, {
-        max-width: 1560px;
+        max-width: 1264px;
+    });
+
+    .media-min(1920px, {
+        max-width: 1408px;
     });
 }
 
