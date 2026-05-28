@@ -1,0 +1,30 @@
+name: FTP Deploy
+
+on:
+  push:
+    branches:
+      - main # Скрипт сработает при пуше в ветку main
+
+jobs:
+  web-deploy:
+    name: Deploy Website
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    # (Опциональный шаг) Если у вас React/Vue/Next.js, раскомментируйте строки ниже для сборки:
+    # - name: Install Node.js & Build Project
+    #   run: |
+    #     npm install
+    #     npm run build
+
+    - name: Upload files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # local-dir: ./dist/ # Какую локальную папку загружать (уберите решетку, если загружаете только результат сборки)
+        server-dir: /www/vkalivay.blueberry-digital.ru/ # Папка на вашем сервере, куда загружать файлы (например, public_html, www или /)
