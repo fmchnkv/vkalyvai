@@ -78,13 +78,11 @@
 
                             <div class="field__dropdown" data-id="worktime">
                                 <ul class="field__dropdown-list">
-                                    <li class="field__option js-select-item" data-value="Пятидневка">Пятидневка</li>
-                                    <li class="field__option js-select-item" data-value="Шестидневка">Шестидневка </li>
-                                    <li class="field__option js-select-item" data-value="Сменный">Сменный</li>
-                                    <li class="field__option js-select-item" data-value="Суточный">Суточный</li>
-                                    <li class="field__option js-select-item" data-value="Частичная занятость">Частичная занятость</li>
-                                    <li class="field__option js-select-item" data-value="Удаленная работа">Удаленная работа</li>
+                                    <li class="field__option js-select-item" data-value="Сдельная">Сдельная</li>
+                                    <li class="field__option js-select-item" data-value="Проект">Проект</li>
                                     <li class="field__option js-select-item" data-value="Вахта">Вахта</li>
+                                    <li class="field__option js-select-item" data-value="Подработка">Подработка</li>
+                                    <li class="field__option js-select-item" data-value="Стажировка">Стажировка</li>
                                 </ul>
                             </div>
                         </div>
