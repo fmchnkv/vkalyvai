@@ -127,64 +127,40 @@
   gap: 8px;
 }
 .btn_size-s {
-  padding: 11px 23px 11px 23px;
+  padding: 7px 11px;
   font-size: 16px;
 }
 .btn_size-m {
-  padding: 15px 23px 15px 23px;
+  padding: 12px;
   font-size: 16px;
 }
-@media screen and (max-width: 1440px) {
-  .btn_size-m {
-    padding: 11px 23px 11px 23px;
-    font-size: 16px;
-  }
-}
 .btn_size-l {
-  padding: 19px 31px 19px 31px;
-  font-size: 18px;
-}
-@media screen and (max-width: 1440px) {
-  .btn_size-l {
-    padding: 15px 23px 15px 23px;
-    font-size: 16px;
-  }
+  padding: 16px;
+  font-size: 16px;
 }
 .btn_size-xl {
-  padding: 23px 31px 23px 31px;
-  font-size: 20px;
-}
-@media screen and (max-width: 767px) {
-  .btn_size-xl {
-    padding: 15px 23px 15px 23px;
-    font-size: 16px;
-  }
+  padding: 20px;
+  font-size: 16px;
 }
 .btn_icon {
-  width: 41px;
-  height: 41px;
-  padding: 11px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
 }
-@media screen and (min-width: 1441px) {
-  .btn_icon-m {
-    width: 49px;
-    height: 49px;
-    padding: 14px;
-  }
+.btn_icon-m {
+  width: 42px;
+  height: 42px;
+  padding: 0;
 }
-@media screen and (min-width: 1441px) {
-  .btn_icon-l {
-    width: 59px;
-    height: 59px;
-    padding: 18px;
-  }
+.btn_icon-l {
+  width: 50px;
+  height: 50px;
+  padding: 0;
 }
-@media screen and (min-width: 1441px) {
-  .btn_icon-xl {
-    width: 69px;
-    height: 69px;
-    padding: 18px;
-  }
+.btn_icon-xl {
+  width: 58px;
+  height: 58px;
+  padding: 0;
 }
 .btn_no-hover {
   pointer-events: none;

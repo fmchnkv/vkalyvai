@@ -6,8 +6,8 @@
     justify-content: center;
 }
 
-.btn-size(@padding-top: 12px, @padding-right: 24px, @padding-bottom: 12px, @padding-left: 24px, @font: 16px) {
-    padding: @padding-top @padding-right @padding-bottom @padding-left;
+.btn-size(@padding: 8px 12px, @font: 16px) {
+    padding: @padding;
     font-size: @font;
 }
 
@@ -32,7 +32,7 @@
     }
 }
 
-.icon-size(@size, @padding) {
+.icon-size(@size, @padding: 0) {
     width: @size;
     height: @size;
     padding: @padding;
