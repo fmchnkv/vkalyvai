@@ -1,0 +1,79 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.vacancy {
+    .section-margin();
+
+    &__header {
+        .section-margin();
+    }
+
+    .companies-grid {
+        margin-bottom: 48px;
+
+        .media-min(768px, {
+            display: none;
+        });
+    }
+
+    &__tags {
+        .section-margin();
+    }
+    
+    &__cta {
+        .section-margin();
+    }
+
+    &__content {
+        .section-margin();
+    }
+}
+
+.vacancy-header {
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 600;
+
+        .media-min(768px, {
+            font-size: 28px;
+            line-height: 28px;
+        });
+
+        .media-min(1441px, {
+            font-size: @f-h3;
+            line-height: @lh-h3;
+        });
+    }
+
+    &__sale {
+        margin-bottom: 24px;
+        display: block;
+        color: @primary;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 600;
+
+        .media-min(768px, {
+            font-size: 24px;
+            line-height: 24px;
+        });
+
+        .media-min(1441px, {
+            font-size: @f-h4;
+            line-height: @lh-h4;
+        });
+    }
+
+    &__tags {
+        margin-bottom: 32px;
+
+        .media-min(768px, {
+            margin-bottom: 16px;
+        });
+    }
+
+    
+}

@@ -1,0 +1,46 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.faq {
+    margin-bottom: 56px;
+
+    .media-min(768px, {
+        margin-bottom: 80px;
+    });
+
+    &__title {
+        margin-bottom: 40px;
+
+        .page-title();
+    }
+
+    &__body {
+        margin-bottom: 56px;
+
+        .media-min(768px, {
+            margin-bottom: 80px;
+        });
+    }
+
+    .catalog-nav__form {
+
+        .media-min(768px, {
+            margin-bottom: 12px;
+        });
+    }
+
+    .inline-form__btn {
+
+        .media-min(768px, {
+            width: 228px;
+        });
+    }
+
+    .tab {
+
+        .media-min(768px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
+    }
+}

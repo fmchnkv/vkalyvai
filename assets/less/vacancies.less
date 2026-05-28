@@ -1,0 +1,116 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .media-max(1023px, {
+        grid-template-columns: repeat(1, 1fr);
+    });
+
+    .media-min(1441px, {
+        gap: 32px;
+    });
+
+    &_single {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        padding: 31px;
+        border: 1px solid @border-neutral;
+        border-radius: @border-radius-xl;
+        display: flex;
+        flex-direction: column;
+        .transition(box-shadow, .3s, ease-in-out);
+
+        .media-max(1440px, {
+            padding: 23px;
+        });
+
+        .media-max(767px, {
+            padding: 15px;
+            border-radius: @border-radius-m;
+        });
+
+        &:hover {
+            box-shadow: 0px 8px 64px -12px rgba(20, 20, 20, 0.12);
+        }
+    }
+
+    &__title {
+        font-size: @f-h6;
+        line-height: @lh-h6;
+        margin-bottom: 12px;
+        font-weight: 600;
+        transition: color .3s ease-in-out;
+
+        .media-max(1440px, {
+            font-size: @f-body-m;
+            line-height: @lh-body;
+        });
+
+        .media-max(1023px, {
+            margin-bottom: 30px;
+        });
+
+        .media-max(767px, {
+            font-size: @f-body;
+            line-height: @lh-body-s;
+            margin-bottom: 12px;
+        });
+
+        &:hover {
+            color: @primary;
+        }
+
+        &:active {
+            color: @primary-active;
+        }
+    }
+
+    &__sale {
+        font-size: @f-body-l;
+        line-height: @lh-body-l;
+        margin-bottom: 16px;
+
+        .media-max(1440px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
+
+        .media-max(767px, {
+            font-size: @f-body;
+            line-height: @lh-body;
+        });
+    }
+
+    &__tags {
+        margin-bottom: 24px;
+        gap: 4px;
+    }
+
+    &__info {
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        color: @neutral;
+        margin-bottom: 24px;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+    }
+}

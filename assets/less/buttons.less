@@ -1,0 +1,172 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+
+.btn {
+    .flex-center(inline-flex);
+
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: @border-radius-xl;
+
+    transition-property: color, background-color, border-color;
+
+    .transition-ext(.3s, ease-in-out);
+
+    &.disabled {
+        cursor: none;
+        pointer-events: none;
+        background-color: @disabled;
+        border-color: @disabled;
+    }
+
+    &:disabled {
+        cursor: none;
+        pointer-events: none;
+        background-color: @disabled;
+        border-color: @disabled;
+    }
+
+    &_primary {
+        background-color: @primary;
+        color: @white;
+        border-color: @primary;
+
+        &:hover {
+            background-color: @primary-hover;
+            border-color: @primary-hover;
+        }
+
+        &:active {
+            background-color: @primary-active;
+            border-color: @primary-active;
+        }
+    }
+
+    &_secondary {
+        background-color: @secondary;
+        color: @white;
+        border-color: @secondary;
+
+        &:hover {
+            background-color: @secondary-hover;
+            border-color: @secondary-hover;
+        }
+
+        &:active {
+            background-color: @secondary-active;
+            border-color: @secondary-active;
+        }
+    }
+
+    &_neutral {
+        background-color: @neutral;
+        color: @white;
+        border-color: @neutral;
+
+        &:hover {
+            background-color: @neutral-hover;
+            border-color: @neutral-hover;
+        }
+
+        &:active {
+            background-color: @neutral-active;
+            border-color: @neutral-active;
+        }
+    }
+
+    &_light {
+        background-color: @light;
+        color: @default;
+        border-color: @light;
+
+        &:hover {
+            background-color: @light-hover;
+            color: @white;
+            border-color: @light-hover;
+        }
+
+        &:active {
+            background-color: @light-active;
+            color: @white;
+            border-color: @light-active;
+        }
+    }
+
+    &_outline {
+        background-color: transparent;
+        color: @default;
+        border-color: @primary;
+
+        &:hover {
+            border-color: @primary;
+            background-color: @primary;
+            color: @white;
+        }
+
+        &:active {
+            border-color: @primary-active;
+            background-color: @primary-active;
+            color: @white;
+        }
+    }
+
+    &_has-icon {
+        gap: @gap-3xs;
+    }
+
+    &_size-s {
+        .btn-size(11px, 23px, 11px, 23px, 16px);
+    }
+
+    &_size-m {
+        .btn-size(15px, 23px, 15px, 23px, 16px);
+
+        .media-max(1440px, {
+            .btn-size(11px, 23px, 11px, 23px, 16px);
+        });
+    }
+
+    &_size-l {
+        .btn-size(19px, 31px, 19px, 31px, 18px);
+
+        .media-max(1440px, {
+            .btn-size(15px, 23px, 15px, 23px, 16px);
+        });
+    }
+
+    &_size-xl {
+        .btn-size(23px, 31px, 23px, 31px, 20px);
+
+        .media-max(767px, {
+            .btn-size(15px, 23px, 15px, 23px, 16px);
+        });
+    }
+
+    &_icon {
+        .icon-size(41px, 11px);
+
+        &-m {          
+            .media-min(1441px, {
+                .icon-size(49px, 14px);
+            });
+        }
+
+        &-l {
+            .media-min(1441px, {
+                .icon-size(59px, 18px);
+            });
+        }
+
+        &-xl {
+            .media-min(1441px, {
+                .icon-size(69px, 18px);
+            });
+        }
+    }
+
+    &_no-hover {
+        pointer-events: none;
+    }
+}

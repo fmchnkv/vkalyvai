@@ -1,0 +1,235 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.filter {
+    justify-content: flex-start;
+
+    &__actions {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: auto;
+
+        .media-min(1024px, {
+            grid-template-columns: 1fr 1fr;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 24px 32px;
+            border-top: 1px solid @border-neutral;
+        });
+    }
+
+    &__inner {
+        position: static;
+
+        .media-min(1024px, {
+            max-height: calc(100% - 105px);
+        });
+    }
+
+    &__wrapper {
+        transform: translateY(200px);
+        transition-property: transform;
+        .transition-ext(.3s, ease-in-out);
+
+        .media-min(1024px, {
+            transform: translate(-100px, 0);
+        });
+    }
+
+    &.active {
+
+        .filter__wrapper {
+            transform: translateY(0);
+
+            .media-min(1024px, {
+                transform: translate(0, 0);
+            });
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        height: 100%;
+    }
+
+    &__list {
+        padding: 0 0 20px;
+        margin-bottom: 24px;
+
+        .media-min(1024px, {
+            padding: 0;
+            margin-bottom: 0;
+        });
+
+        > *:last-child {
+
+            .select__dropdown, .multiple-select__dropdown {
+                top: auto;
+                bottom: calc(100% + 4px);
+            }
+        }
+    }
+
+    .input {
+        &:hover {
+
+            input {
+                border-color: @light;
+                background-color: @light;
+
+                &::placeholder {
+                    color: @default;
+                }
+            }
+            }
+
+        &:active {
+
+            input {
+                border-color: @primary;
+                background-color: @primary;
+                color: @white;
+
+                &::placeholder {
+                    color: @white;
+                }
+            }
+
+            path {
+                fill: @white;
+            }
+        }
+    }
+}
+
+.filter-group {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @border-neutral;
+
+    &:last-child {
+        margin-bottom: 0;
+        padding: 0;
+        border: none;
+    }
+
+    &__title {       
+        font-weight: 600;
+        margin-bottom: 16px;
+        display: block;
+        color: @neutral;
+
+        .media-min(768px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
+    }
+
+    &__price-checkbox {
+        margin-bottom: 12px;
+    }
+
+    &__price-wrapper {
+        margin-bottom: 18px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+
+        .input__icon {
+            right: 16px;
+        }
+
+        &_single {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .js-prices-wrapper {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__periods {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 16px;
+
+        .select {
+            flex: 1 1;
+
+            &:nth-child(2) {
+                margin-left: auto;
+                flex: 0 0 auto;
+                width: 59px;
+
+                .input__icon {
+                    right: 6px;
+                }
+
+                .input__field {
+                    font-weight: 600;
+
+                    .media-min(768px, {
+                        font-size: @f-body;
+                        line-height: @lh-body;
+                    });
+                }
+            }
+        }
+
+        .input__field {
+            padding: 14px 11px;
+            font-size: @f-body;
+            line-height: @lh-body;
+            font-weight: 400;
+
+            &::placeholder {
+                font-size: @f-body;
+                line-height: @lh-body;
+            }
+        }
+    }
+
+    &__reset, &__more {
+        color: @neutral;
+        margin-top: 16px;
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__checkbox {
+
+        &:nth-child(n+6) {
+            display: none;
+        }
+    }
+
+    &.opened {
+
+        .filter-group__checkbox:nth-child(n+6) {
+            display: inline-flex;
+        }
+
+        .filter-group__more {
+            display: none;
+        }
+
+        .filter-group__checkboxes {
+            max-height: 200px;
+            overflow: auto;
+        }
+    }
+}

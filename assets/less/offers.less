@@ -1,0 +1,149 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.offers {
+    margin-bottom: 80px;
+
+    .media-max(767px, {
+        margin-bottom: 56px;
+    });
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 56px;
+
+        .media-max(767px, {
+            margin-bottom: 40px;
+        });
+    }
+
+    &__caption {
+        margin-right: 10px;
+    }
+
+    &__link {
+        font-size: @f-body-m;
+        line-height: @lh-body-m;
+
+        .media-max(767px, {
+            display: none;
+        });
+    }
+
+    &__nav {
+        margin: 46px auto 0;
+        gap: 12px;
+        max-width: 496px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        .media-max(1023px, {
+            max-width: 416px;
+        });
+
+        .media-max(767px, {
+            grid-template-columns: 1fr;
+        });
+    }
+
+    &--rezumes {
+
+        .offers__nav {
+            max-width: 412px;
+
+            .media-min(1441px, {
+                max-width: 470px;
+            });
+        }
+    }
+}
+
+.offer-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.offer-header {
+
+    &__title {
+        margin-bottom: 12px;
+        font-size: @f-body-m;
+        line-height: @lh-body;
+        font-weight: 600;
+
+        .media-min(768px, {
+            font-size: @f-h6;
+            line-height: @lh-h6;
+        });
+
+        .media-min(1441px, {
+            font-size: @f-h5;
+            line-height: @lh-h5;
+        });
+    }
+
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 12px;
+
+        .media-min(768px, {
+            gap: 24px;
+        });
+
+        &-item {
+            font-size: @f-body-xs;
+            line-height: @lh-body-xs;
+
+            .media-min(768px, {
+                font-size: @f-body-s;
+                line-height: @lh-body-s;
+            });
+
+            &.has-dot {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+    }
+
+    &__sale {
+        font-size: @f-body-m;
+        line-height: @lh-body-m;
+
+        .media-min(1441px, {
+            font-size: @f-body-l;
+            line-height: @lh-body-l;
+        });
+    }
+}
+
+.offer-info {
+    display: flex;
+    gap: 32px;
+
+    .media-max(1440px, {
+        gap: 20px;
+    });
+
+    .media-max(767px, {
+        flex-direction: column;
+    });
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .media-max(767px, {
+            font-size: @f-body-s;
+            line-height: @lh-body-s;
+        });
+    }
+}

@@ -1,0 +1,118 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.article-page {
+    margin-bottom: 56px;
+
+    .media-min(768px, {
+        margin-bottom: 80px;
+    });
+
+    &__row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+
+        .media-min(1024px, {
+            flex-direction: row;
+        });
+    }
+
+    &__main {
+        flex: 1 1;
+        width: 100%;
+
+        .media-min(1024px, {
+            width: calc(100% - 341px);
+        });
+
+        .media-min(1441px, {
+            width: calc(100% - 376px);
+        });
+    }
+
+    &__sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+
+        .media-min(1024px, {
+            position: sticky;
+            width: 309px;
+            height: 100%;
+            top: 100px;
+        });
+
+        .media-min(1441px, {
+            width: 344px;
+        });
+    }
+
+    &__nav-list {
+        padding: 16px;
+        border: 1px solid @border-neutral;
+        border-radius: @border-radius-m;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        counter-reset: item;
+    }
+
+    &__nav-item {
+
+        a { 
+            transition-property: color;
+            .transition-ext(.3s, ease-in-out);
+
+            &::before {
+                counter-increment: item;
+                content: counter(item) ".";
+                margin-right: 8px;
+                transition-property: color;
+                .transition-ext(.3s, ease-in-out);
+            }
+
+            .media-min(1441px, {
+                font-size: @f-body-m;
+                line-height: @lh-body-m;
+            });
+
+            &:hover {
+                color: @primary;
+
+                &::before {
+                    color: @primary;
+                }
+            }
+        }
+    }
+}
+
+.article {
+    counter-reset: h2;
+
+    &__title {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 24px;
+
+        .media-min(768px, {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 32px;
+        });
+
+        .media-min(1441px, {
+            font-size: @f-h2;
+            line-height: @lh-h2;
+        });
+    }
+
+    h2 {
+
+        &::before {
+            counter-increment: h2;
+            content: counter(h2) ".";
+            margin-right: 8px;
+        }
+    }
+}

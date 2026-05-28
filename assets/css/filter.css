@@ -1,0 +1,220 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.filter {
+  justify-content: flex-start;
+}
+.filter__actions {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: auto;
+}
+@media screen and (min-width: 1024px) {
+  .filter__actions {
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 24px 32px;
+    border-top: 1px solid #EBEBEB;
+  }
+}
+.filter__inner {
+  position: static;
+}
+@media screen and (min-width: 1024px) {
+  .filter__inner {
+    max-height: calc(100% - 105px);
+  }
+}
+.filter__wrapper {
+  transform: translateY(200px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .filter__wrapper {
+    transform: translate(-100px, 0);
+  }
+}
+.filter.active .filter__wrapper {
+  transform: translateY(0);
+}
+@media screen and (min-width: 1024px) {
+  .filter.active .filter__wrapper {
+    transform: translate(0, 0);
+  }
+}
+.filter__content {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  height: 100%;
+}
+.filter__list {
+  padding: 0 0 20px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .filter__list {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+.filter__list > *:last-child .select__dropdown,
+.filter__list > *:last-child .multiple-select__dropdown {
+  top: auto;
+  bottom: calc(100% + 4px);
+}
+.filter .input:hover input {
+  border-color: #FFF2E9;
+  background-color: #FFF2E9;
+}
+.filter .input:hover input::placeholder {
+  color: #232323;
+}
+.filter .input:active input {
+  border-color: #FC7827;
+  background-color: #FC7827;
+  color: #ffffff;
+}
+.filter .input:active input::placeholder {
+  color: #ffffff;
+}
+.filter .input:active path {
+  fill: #ffffff;
+}
+.filter-group {
+  padding: 0 0 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EBEBEB;
+}
+.filter-group:last-child {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+}
+.filter-group__title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: block;
+  color: #999999;
+}
+@media screen and (min-width: 768px) {
+  .filter-group__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.filter-group__price-checkbox {
+  margin-bottom: 12px;
+}
+.filter-group__price-wrapper {
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+.filter-group__price-wrapper .input__icon {
+  right: 16px;
+}
+.filter-group__price-wrapper_single {
+  grid-template-columns: 1fr;
+}
+.filter-group .js-prices-wrapper {
+  display: none;
+}
+.filter-group .js-prices-wrapper.active {
+  display: block;
+}
+.filter-group__periods {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.filter-group__periods .select {
+  flex: 1 1;
+}
+.filter-group__periods .select:nth-child(2) {
+  margin-left: auto;
+  flex: 0 0 auto;
+  width: 59px;
+}
+.filter-group__periods .select:nth-child(2) .input__icon {
+  right: 6px;
+}
+.filter-group__periods .select:nth-child(2) .input__field {
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .filter-group__periods .select:nth-child(2) .input__field {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.filter-group__periods .input__field {
+  padding: 14px 11px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.filter-group__periods .input__field::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+}
+.filter-group__reset,
+.filter-group__more {
+  color: #999999;
+  margin-top: 16px;
+}
+.filter-group__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filter-group__checkbox:nth-child(n+6) {
+  display: none;
+}
+.filter-group.opened .filter-group__checkbox:nth-child(n+6) {
+  display: inline-flex;
+}
+.filter-group.opened .filter-group__more {
+  display: none;
+}
+.filter-group.opened .filter-group__checkboxes {
+  max-height: 200px;
+  overflow: auto;
+}

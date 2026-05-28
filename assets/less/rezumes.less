@@ -1,0 +1,126 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__item {
+        padding: 15px 15px 23px;
+        border: 1px solid @border-neutral;
+        border-radius: @border-radius-m;
+        .transition(box-shadow, .3s, ease-in-out);
+
+        .media-min(768px, {
+            padding: 23px;
+            border-radius: @border-radius-xl;
+        });
+
+        &:hover {
+            box-shadow: 0px 8px 64px -12px rgba(20, 20, 20, 0.12);
+        }
+    }
+
+    &__top {
+        padding: 0 0 24px;
+        border-bottom: 1px solid @border-neutral;
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .media-min(768px, {
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        });
+
+        .media-min(1441px, {
+            padding: 0;
+            border-bottom: none;
+            margin-bottom: 18px;
+        });
+    }
+
+    &__avatar {
+        margin-right: auto;
+        flex: 0 0 auto;
+
+        .media-min(768px, {
+            order: 1;
+        });
+    }
+
+    &__header {
+
+        .media-min(768px, {
+            order: 2;
+            padding-right: 8px;
+        });
+    }
+
+    &__actions {
+        margin-left: auto;
+
+        .icon-button {
+
+            .media-max(767px, {
+                width: 47px;
+                height: 47px;
+            });
+        }
+
+        .media-min(768px, {
+            order: 3;
+        });
+    }
+
+    &__content {
+        margin-bottom: 31px;
+
+        .media-min(1441px, {
+            padding-left: 144px;
+        });
+    }
+
+    &__tags {
+        margin-bottom: 16px;
+        gap: 4px;
+    }
+
+    &__info {
+        margin-bottom: 24px;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .media-min(768px, {
+            flex-direction: row;
+        });
+
+        .media-min(1441px, {
+            padding-left: 144px;
+        });
+    }
+
+    &__btn {
+
+        .media-max(767px, {
+            width: 100%;
+        });
+
+        .media-min(768px, {
+            .btn-size(15px, 23px, 15px, 23px, 16px);
+        });
+    }
+
+    &__link {
+        font-size: @f-body;
+        line-height: @lh-body;
+        gap: 4px;
+    }
+}

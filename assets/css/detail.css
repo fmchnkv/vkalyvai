@@ -1,0 +1,204 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.detail {
+  margin-bottom: 56px;
+}
+@media screen and (min-width: 768px) {
+  .detail {
+    margin-bottom: 80px;
+  }
+}
+.detail__section {
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 1024px) {
+  .detail__section {
+    margin-bottom: 64px;
+  }
+}
+.detail__row {
+  display: flex;
+  gap: 16px;
+}
+@media screen and (min-width: 1441px) {
+  .detail__row {
+    gap: 40px;
+  }
+}
+.detail__main {
+  flex: 1 1;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .detail__main {
+    width: calc(100% - 325px);
+  }
+}
+@media screen and (min-width: 1441px) {
+  .detail__main {
+    width: calc(100% - 384px);
+  }
+}
+.detail__sidebar {
+  position: fixed;
+  bottom: 12px;
+  width: calc(100% - 32px);
+  left: 16px;
+  border: 1px solid #EBEBEB;
+  padding: 8px 7px;
+  border-radius: 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 32px rgba(20, 20, 20, 0.04), 0px 8px 12px -6px rgba(20, 20, 20, 0.04);
+  flex: 0 0 auto;
+  z-index: 10;
+}
+@media screen and (min-width: 1024px) {
+  .detail__sidebar {
+    position: sticky;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    width: 309px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    top: 100px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .detail__sidebar {
+    width: 344px;
+  }
+}
+.detail__sidebar .companies-grid {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .detail__sidebar .companies-grid {
+    display: grid;
+  }
+}
+.detail__sidebar_small {
+  max-width: 256px;
+  left: calc(50% - 128px);
+}
+@media screen and (min-width: 768px) {
+  .detail__sidebar_small {
+    max-width: 280px;
+    left: calc(50% - 140px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__sidebar_small {
+    max-width: 100%;
+  }
+}
+.detail__sidebar_small .detail__like {
+  width: 187px;
+}
+@media screen and (min-width: 1024px) {
+  .detail__sidebar_small .detail__like {
+    width: 100%;
+  }
+}
+.detail__sidebar_small .detail__like span {
+  display: block;
+}
+.detail__actions {
+  display: flex;
+  gap: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .detail__actions {
+    padding: 12px;
+    border-radius: 32px;
+    background-color: #ffffff;
+    border: 1px solid #EBEBEB;
+    flex-direction: column;
+  }
+}
+.detail__btn {
+  flex: 1 1 auto;
+}
+@media screen and (max-width: 767px) {
+  .detail__btn {
+    padding: 11px 23px 11px 23px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__btn_company {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .detail__like {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+  }
+}
+.detail__like span {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .detail__like span {
+    display: block;
+  }
+}
+.detail__like:hover path,
+.detail__like:active path {
+  fill: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .detail__share {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+  }
+}
+.detail__share span {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .detail__share span {
+    display: block;
+  }
+}
+.detail__share:hover path,
+.detail__share:active path {
+  fill: #ffffff;
+}

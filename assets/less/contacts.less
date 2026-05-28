@@ -1,0 +1,126 @@
+@import url(_variables.less);
+@import url(_mixins.less);
+
+.contacts {
+    margin-bottom: 56px;
+
+    .media-min(768px, {
+        margin-bottom: 80px;
+    });
+
+    &__title {
+        .page-title();
+        margin-bottom: 40px;
+    }
+
+    &__map {
+        margin-bottom: 16px;
+
+        .media-min(1441px, {
+            margin-bottom: 24px;
+        });
+    }
+
+    &__list {
+        margin-bottom: 56px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        .media-min(768px, {
+            margin-bottom: 80px;
+            gap: 16px;
+        });
+
+        .media-min(1024px, {
+            grid-template-columns: repeat(3, 1fr);
+        });
+
+        .media-min(1441px, {
+            gap: 24px;
+        });
+    }
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: @border-radius-m;
+    border: 1px solid @border-neutral;
+
+    .media-min(768px, {
+        padding: 24px;
+        border-radius: @border-radius-xl;
+        gap: 20px;
+    });
+
+    .media-min(1441px, {
+        padding: 32px;
+    });
+
+    &__title {
+        color: @primary;
+        font-weight: 600;
+        .label-title();
+    }
+
+    &__description {
+        
+        .media-min(768px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
+    }
+
+    &__label {
+        color: @neutral;
+        margin-bottom: 12px;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.socials-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: @light;
+        padding: 8px;
+
+        svg {
+            background-color: @light;
+            border-radius: 6px;
+            transition-property: background-color;
+            .transition-ext(.3s, ease-in-out);
+        }
+
+        &:hover {
+
+            svg {
+                background-color: @white;
+            }
+        }
+    }
+}

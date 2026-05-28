@@ -1,0 +1,125 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.article-page {
+  margin-bottom: 56px;
+}
+@media screen and (min-width: 768px) {
+  .article-page {
+    margin-bottom: 80px;
+  }
+}
+.article-page__row {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .article-page__row {
+    flex-direction: row;
+  }
+}
+.article-page__main {
+  flex: 1 1;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .article-page__main {
+    width: calc(100% - 341px);
+  }
+}
+@media screen and (min-width: 1441px) {
+  .article-page__main {
+    width: calc(100% - 376px);
+  }
+}
+.article-page__sidebar {
+  flex: 0 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .article-page__sidebar {
+    position: sticky;
+    width: 309px;
+    height: 100%;
+    top: 100px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .article-page__sidebar {
+    width: 344px;
+  }
+}
+.article-page__nav-list {
+  padding: 16px;
+  border: 1px solid #EBEBEB;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  counter-reset: item;
+}
+.article-page__nav-item a {
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.article-page__nav-item a::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  margin-right: 8px;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+@media screen and (min-width: 1441px) {
+  .article-page__nav-item a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.article-page__nav-item a:hover {
+  color: #FC7827;
+}
+.article-page__nav-item a:hover::before {
+  color: #FC7827;
+}
+.article {
+  counter-reset: h2;
+}
+.article__title {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .article__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .article__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+.article h2::before {
+  counter-increment: h2;
+  content: counter(h2) ".";
+  margin-right: 8px;
+}

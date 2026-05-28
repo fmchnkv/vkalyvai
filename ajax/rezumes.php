@@ -1,0 +1,1 @@
+<? for ($i = 0; $i < 4; $i++) { include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php'; } ?>
