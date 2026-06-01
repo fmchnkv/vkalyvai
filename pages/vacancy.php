@@ -93,7 +93,7 @@
                                     <span class="cta__title">Подходит вам на 80%</span>
                                     <p class="cta__description">Ваши навыки подходят под требования вакансии на 80%!</p>
                                 </div>
-                                <button class="cta__btn btn btn_secondary btn_size-xl">Откликнуться</button>
+                                <button class="cta__btn btn btn_secondary btn_size-xl js-anchor-feedback" data-id="feedback">Откликнуться</button>
                             </div>
                         </div>
                     </div>

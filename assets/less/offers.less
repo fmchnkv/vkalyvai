@@ -2,7 +2,7 @@
 @import url(_mixins.less);
 
 .offers {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     .media-max(767px, {
         margin-bottom: 56px;
@@ -12,10 +12,14 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
 
-        .media-max(767px, {
+        .media-min(768px, {
             margin-bottom: 40px;
+        });
+
+        .media-min(1441px, {
+            margin-bottom: 48px;
         });
     }
 
@@ -33,30 +37,32 @@
     }
 
     &__nav {
-        margin: 46px auto 0;
-        gap: 12px;
-        max-width: 496px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        margin: 32px auto 0;
+        gap: 8px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
 
-        .media-max(1023px, {
-            max-width: 416px;
+        .media-min(465px, {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);        
+            max-width: 433px;
         });
 
-        .media-max(767px, {
-            grid-template-columns: 1fr;
+        .media-min(768px, {
+            max-width: 100%;
+            justify-content: center;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
         });
-    }
 
-    &--rezumes {
+        .media-min(1441px, {
+            margin-top: 48px;
+        }); 
+        
+        .btn {
 
-        .offers__nav {
-            max-width: 412px;
-
-            .media-min(1441px, {
-                max-width: 470px;
-            });
         }
     }
 }
@@ -93,7 +99,11 @@
         margin-bottom: 12px;
 
         .media-min(768px, {
-            gap: 24px;
+            gap: 12px;
+        });
+
+        .media-min(1441px, {
+            gap: 16px 24px;
         });
 
         &-item {
@@ -126,14 +136,16 @@
 
 .offer-info {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px 16px;
 
-    .media-max(1440px, {
-        gap: 20px;
+    .media-min(768px, {
+        flex-direction: row;
     });
 
-    .media-max(767px, {
-        flex-direction: column;
+    .media-min(1441px, {
+        gap: 16px 32px;
     });
 
     &__item {

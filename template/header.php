@@ -20,6 +20,11 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+    />
+
     <link rel="stylesheet" href="/assets/css/main.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/filter.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/vacancies.css?v=<?= time() ?>">
@@ -49,14 +54,23 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
         <header class="header <?= ($auth && $auth == 'Y') ? 'is-auth' : '' ?>">
             <div class="container">
                 <div class="header__row">
-                    <a href="/" class="header__logo">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="50" height="50" rx="25" fill="#FC7827" />
-                            <path d="M16 36V14H25.9615C28.4651 14 30.4171 14.4924 31.8174 15.4771C33.2178 16.441 33.9179 17.8343 33.9179 19.6571C33.9179 21.459 33.2496 22.8524 31.9129 23.8371C30.5762 24.801 28.8152 25.2829 26.6298 25.2829L27.2027 24.1514C29.6851 24.1514 31.6052 24.6438 32.9632 25.6286C34.3211 26.6133 35 28.0381 35 29.9029C35 31.8095 34.2892 33.3076 32.8677 34.3971C31.4461 35.4657 29.3456 36 26.5662 36H16ZM20.0737 32.8571H26.4389C27.8816 32.8571 28.9743 32.5952 29.7169 32.0714C30.4595 31.5267 30.8308 30.699 30.8308 29.5886C30.8308 28.4781 30.4595 27.6714 29.7169 27.1686C28.9743 26.6448 27.8816 26.3829 26.4389 26.3829H20.0737V32.8571ZM20.0737 23.3971H25.6114C26.9481 23.3971 27.9665 23.1352 28.6667 22.6114C29.3668 22.0667 29.7169 21.2914 29.7169 20.2857C29.7169 19.2381 29.3668 18.4524 28.6667 17.9286C27.9665 17.4048 26.9481 17.1429 25.6114 17.1429H20.0737V23.3971Z" fill="white" />
-                        </svg>
-                        <span>калывай</span>
-                    </a>
-
+                    <? if ($_SERVER['PHP_SELF'] != '/index.php') : ?>
+                        <a href="/" class="header__logo">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="50" height="50" rx="25" fill="#FC7827" />
+                                <path d="M16 36V14H25.9615C28.4651 14 30.4171 14.4924 31.8174 15.4771C33.2178 16.441 33.9179 17.8343 33.9179 19.6571C33.9179 21.459 33.2496 22.8524 31.9129 23.8371C30.5762 24.801 28.8152 25.2829 26.6298 25.2829L27.2027 24.1514C29.6851 24.1514 31.6052 24.6438 32.9632 25.6286C34.3211 26.6133 35 28.0381 35 29.9029C35 31.8095 34.2892 33.3076 32.8677 34.3971C31.4461 35.4657 29.3456 36 26.5662 36H16ZM20.0737 32.8571H26.4389C27.8816 32.8571 28.9743 32.5952 29.7169 32.0714C30.4595 31.5267 30.8308 30.699 30.8308 29.5886C30.8308 28.4781 30.4595 27.6714 29.7169 27.1686C28.9743 26.6448 27.8816 26.3829 26.4389 26.3829H20.0737V32.8571ZM20.0737 23.3971H25.6114C26.9481 23.3971 27.9665 23.1352 28.6667 22.6114C29.3668 22.0667 29.7169 21.2914 29.7169 20.2857C29.7169 19.2381 29.3668 18.4524 28.6667 17.9286C27.9665 17.4048 26.9481 17.1429 25.6114 17.1429H20.0737V23.3971Z" fill="white" />
+                            </svg>
+                            <span>калывай</span>
+                        </a>
+                    <? else: ?>
+                        <span class="header__logo">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="50" height="50" rx="25" fill="#FC7827" />
+                                <path d="M16 36V14H25.9615C28.4651 14 30.4171 14.4924 31.8174 15.4771C33.2178 16.441 33.9179 17.8343 33.9179 19.6571C33.9179 21.459 33.2496 22.8524 31.9129 23.8371C30.5762 24.801 28.8152 25.2829 26.6298 25.2829L27.2027 24.1514C29.6851 24.1514 31.6052 24.6438 32.9632 25.6286C34.3211 26.6133 35 28.0381 35 29.9029C35 31.8095 34.2892 33.3076 32.8677 34.3971C31.4461 35.4657 29.3456 36 26.5662 36H16ZM20.0737 32.8571H26.4389C27.8816 32.8571 28.9743 32.5952 29.7169 32.0714C30.4595 31.5267 30.8308 30.699 30.8308 29.5886C30.8308 28.4781 30.4595 27.6714 29.7169 27.1686C28.9743 26.6448 27.8816 26.3829 26.4389 26.3829H20.0737V32.8571ZM20.0737 23.3971H25.6114C26.9481 23.3971 27.9665 23.1352 28.6667 22.6114C29.3668 22.0667 29.7169 21.2914 29.7169 20.2857C29.7169 19.2381 29.3668 18.4524 28.6667 17.9286C27.9665 17.4048 26.9481 17.1429 25.6114 17.1429H20.0737V23.3971Z" fill="white" />
+                            </svg>
+                            <span>калывай</span>
+                        </span>
+                    <? endif; ?>
                     <? if ($auth && $auth == 'Y') : ?>
                         <nav class="header__nav nav tablet-none">
                             <ul class="nav__list">
@@ -94,7 +108,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 </svg>
                                 <span>Поиск вакансий</span>
                             </a>
-                            <a href="#" class="btn btn_size-m btn_light btn_has-icon lk-chat">
+                            <a href="#" class="btn btn_size-s btn_light btn_has-icon lk-chat">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4466_3980)">
                                         <path d="M8.00391 2.00098C11.3177 2.00098 14.0039 4.68718 14.0039 8.00098C14.0039 11.3148 11.3177 14.001 8.00391 14.001C7.01833 14.0025 6.04789 13.7596 5.17872 13.2949L2.00391 14.001L2.70997 10.8262C2.24529 9.957 2.00243 8.98656 2.00391 8.00098C2.00391 4.68718 4.69011 2.00098 8.00391 2.00098Z" fill="#FC7827" />
@@ -107,7 +121,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 </svg>
                                 <span>Чаты</span>
                             </a>
-                            <a href="#" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+                            <a href="#" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4466_3096)">
                                         <path d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z" fill="white" />
@@ -121,12 +135,12 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 <span>Профиль</span>
                             </a>
                             <? if ($client && $client == 'Y') : ?>
-                                <a href="#" class="btn btn_size-m btn_secondary m-none lk-create-link">Создать резюме</a>
+                                <a href="#" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
                             <? else : ?>
-                                <a href="#" class="btn btn_size-m btn_secondary m-none lk-create-link">Создать вакансию</a>
+                                <a href="#" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать вакансию</a>
                             <? endif; ?>
 
-                            <button class="btn btn_secondary btn_icon btn_icon-m burger">
+                            <button class="btn btn_secondary btn_icon btn_icon-s burger">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4466_785)">
                                         <path d="M16.7539 16.001H3.25391V14.501H16.7539V16.001ZM16.7539 10.751H3.25391V9.25098H16.7539V10.751ZM16.7539 5.50098H3.25391V4.00098H16.7539V5.50098Z" fill="white" />
@@ -168,7 +182,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                         </nav>
 
                         <div class="header__toolbar">
-                            <a href="#" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+                            <a href="#" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4466_3096)">
                                         <path d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z" fill="white" />
@@ -182,13 +196,13 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 <span>Войти</span>
                             </a>
                             <? if ($client && $client == 'Y') : ?>
-                                <a href="#" class="btn btn_size-m btn_secondary m-none">Создать вакансию</a>
+                                <a href="#" class="btn btn_size-s btn_secondary m-none">Создать вакансию</a>
                             <? else : ?>
-                                <a href="#" class="btn btn_size-m btn_secondary m-none">Создать резюме</a>
+                                <a href="#" class="btn btn_size-s btn_secondary m-none">Создать резюме</a>
                             <? endif; ?>
 
 
-                            <button class="btn btn_secondary btn_icon btn_icon-m burger">
+                            <button class="btn btn_secondary btn_icon btn_icon-s burger">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4466_785)">
                                         <path d="M16.7539 16.001H3.25391V14.501H16.7539V16.001ZM16.7539 10.751H3.25391V9.25098H16.7539V10.751ZM16.7539 5.50098H3.25391V4.00098H16.7539V5.50098Z" fill="white" />
@@ -217,11 +231,11 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                     </li>
                     <? if ($client && $client == 'Y') : ?>
                         <li class="burger-menu__item">
-                            <a href="#" class="btn btn_size-m btn_secondary">Создать вакансию</a>
+                            <a href="#" class="btn btn_size-s btn_secondary">Создать вакансию</a>
                         </li>
                     <? else : ?>
                         <li class="burger-menu__item">
-                            <a href="#" class="btn btn_size-m btn_secondary">Создать резюме</a>
+                            <a href="#" class="btn btn_size-s btn_secondary">Создать резюме</a>
                         </li>
                     <? endif; ?>
                 </ul>

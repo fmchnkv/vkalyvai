@@ -31,7 +31,7 @@
   }
 }
 .offers {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 767px) {
   .offers {
@@ -42,11 +42,16 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .offers__header {
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offers__header {
+    margin-bottom: 48px;
   }
 }
 .offers__caption {
@@ -62,28 +67,31 @@
   }
 }
 .offers__nav {
-  margin: 46px auto 0;
-  max-width: 496px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  margin: 32px auto 0;
+  gap: 8px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 465px) {
   .offers__nav {
-    max-width: 416px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 433px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .offers__nav {
-    grid-template-columns: 1fr;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
   }
-}
-.offers--rezumes .offers__nav {
-  max-width: 412px;
 }
 @media screen and (min-width: 1441px) {
-  .offers--rezumes .offers__nav {
-    max-width: 470px;
+  .offers__nav {
+    margin-top: 48px;
   }
 }
 .offer-actions {
@@ -117,7 +125,12 @@
 }
 @media screen and (min-width: 768px) {
   .offer-header__main {
-    gap: 24px;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offer-header__main {
+    gap: 16px 24px;
   }
 }
 .offer-header__main-item {
@@ -147,16 +160,18 @@
 }
 .offer-info {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px 16px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
   .offer-info {
-    gap: 20px;
+    flex-direction: row;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1441px) {
   .offer-info {
-    flex-direction: column;
+    gap: 16px 32px;
   }
 }
 .offer-info__item {
