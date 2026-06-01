@@ -3,7 +3,7 @@
         <div class="main-hero__inner">
             <img class="main-hero__bg" src="/images/main.png" alt="">
             <div class="main-hero__header">
-                <h1 class="main-hero__title">ищи КОМАНДУ, А НЕ ОТКЛИКИ!</h1>
+                <h1 class="main-hero__title">ищи КОМАНДУ,<br>А&nbsp;НЕ ОТКЛИКИ!</h1>
                 <p class="main-hero__caption">Найди людей, которые двигают бизнес, а не просто занимают место.</p>
             </div>
 
@@ -117,6 +117,8 @@
         <div class="offers__inner">
             <div class="offers__header">
                 <h2 class="offers__caption caption">Новые резюме</h2>
+                <? 
+                /*
                 <a href="/pages/rezumes.php" class="offers__link icon-link">
                     <span>Смотреть все</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,6 +132,8 @@
                         </defs>
                     </svg>
                 </a>
+                */ 
+                ?>
             </div>
 
             <ul class="offers__list offers-list js-list" data-id="rezumes">

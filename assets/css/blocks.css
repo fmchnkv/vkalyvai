@@ -207,14 +207,15 @@
   visibility: visible;
 }
 .profile {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 12px;
 }
 @media screen and (min-width: 768px) {
   .profile {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 .profile__item {

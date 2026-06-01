@@ -112,6 +112,9 @@
         <div class="offers__inner">
             <div class="offers__header">
                 <h2 class="offers__caption caption">Новые вакансии</h2>
+                <? 
+                /* 
+            
                 <a href="/pages/vacancies.php" class="offers__link icon-link">
                     <span>Смотреть все</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,6 +128,8 @@
                         </defs>
                     </svg>
                 </a>
+                */
+                ?>
             </div>
 
             <ul class="offers__list offers-grid js-list" data-id="vacancies">

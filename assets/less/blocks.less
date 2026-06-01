@@ -204,13 +204,14 @@
 }
 
 .profile {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 12px;
 
     .media-min(768px, {
-        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     });
 
     &__item {

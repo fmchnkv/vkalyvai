@@ -31,8 +31,8 @@
   }
 }
 .avatar {
-  width: 47px;
-  height: 47px;
+  width: 42px;
+  height: 42px;
   border-radius: 16px;
   border: 1px solid transparent;
   flex: 0 0 auto;
@@ -43,25 +43,23 @@
     height: 64px;
   }
 }
-@media screen and (min-width: 1441px) {
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
-}
 .avatar.empty {
   border-color: rgba(252, 120, 39, 0.07);
   background-color: #FFF2E9;
-  padding: 14px;
-}
-@media screen and (min-width: 1441px) {
-  .avatar.empty {
-    padding: 34px;
-  }
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .avatar.empty svg {
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .avatar.empty svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 .avatar img {
   width: 100%;
@@ -205,18 +203,12 @@
   }
 }
 .icon-button {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 32px;
   background-color: #ffffff;
-  padding: 12px;
+  padding: 8px;
   transition: background-color 0.3s ease-in-out;
-}
-@media screen and (max-width: 767px) {
-  .icon-button {
-    width: 42px;
-    height: 42px;
-  }
 }
 .icon-button path {
   transition-property: fill;
@@ -698,14 +690,15 @@
   visibility: visible;
 }
 .profile {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 12px;
 }
 @media screen and (min-width: 768px) {
   .profile {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 .profile__item {
@@ -1869,7 +1862,8 @@ input::placeholder {
 }
 @media screen and (min-width: 465px) {
   .offers__nav {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 433px;
   }
 }
@@ -1878,19 +1872,13 @@ input::placeholder {
     max-width: 100%;
     justify-content: center;
     margin-top: 40px;
+    display: flex;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1441px) {
   .offers__nav {
     margin-top: 48px;
-  }
-}
-.offers--rezumes .offers__nav {
-  max-width: 412px;
-}
-@media screen and (min-width: 1441px) {
-  .offers--rezumes .offers__nav {
-    max-width: 470px;
   }
 }
 .offer-actions {
@@ -1924,7 +1912,12 @@ input::placeholder {
 }
 @media screen and (min-width: 768px) {
   .offer-header__main {
-    gap: 24px;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offer-header__main {
+    gap: 16px 24px;
   }
 }
 .offer-header__main-item {
@@ -1954,8 +1947,19 @@ input::placeholder {
 }
 .offer-info {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px 12px;
+  gap: 12px 16px;
+}
+@media screen and (min-width: 768px) {
+  .offer-info {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offer-info {
+    gap: 16px 32px;
+  }
 }
 .offer-info__item {
   display: flex;
@@ -3670,7 +3674,7 @@ input::placeholder {
 }
 @media screen and (min-width: 768px) {
   .footer__right {
-    gap: 40px 20px;
+    gap: 40px;
     flex-direction: row;
     max-width: 637px;
     justify-content: flex-start;
@@ -3923,7 +3927,6 @@ input::placeholder {
 }
 .main-hero__caption {
   font-weight: 600;
-  max-width: 260px;
   font-size: 18px;
   line-height: 22px;
   padding-bottom: 4px;
@@ -3933,11 +3936,12 @@ input::placeholder {
     padding-bottom: 0;
     font-size: 16px;
     line-height: 18px;
+    max-width: 100%;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1280px) {
   .main-hero__caption {
-    max-width: 100%;
+    max-width: 260px;
   }
 }
 .main-hero__form {
@@ -4022,36 +4026,6 @@ input::placeholder {
 @media screen and (max-width: 767px) {
   .main-hero__btn svg {
     display: block;
-  }
-}
-.main-hero--rezumes {
-  margin-bottom: 80px;
-}
-@media screen and (min-width: 1024px) {
-  .main-hero--rezumes .main-hero__header {
-    margin-bottom: 24px;
-  }
-}
-@media screen and (min-width: 1441px) {
-  .main-hero--rezumes .main-hero__header {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .main-hero--rezumes .main-hero__caption {
-    max-width: 244px;
-    margin-bottom: 2px;
-  }
-}
-@media screen and (min-width: 1441px) {
-  .main-hero--rezumes .main-hero__caption {
-    max-width: 259px;
-    margin-bottom: 0;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .main-hero--rezumes .main-hero__title {
-    max-width: 920px;
   }
 }
 .page-404 {
