@@ -1,5 +1,8 @@
 <h1 class="deals__title page-title">Контакты</h1>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/deals-list.php"); ?>
+<div class="deals-wrapper">
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/deals-list.php"); ?>
+    <button class="btn add-resume-btn detail__btn btn_primary btn_size-l">Добавить резюме</button>
+</div>
 <div class="section-title__wrapper">
     <h2 class="section-title vacancies-title">Вакансии для вас</h2>
     <button class="vacancies-all transp-btn btn_has-icon">

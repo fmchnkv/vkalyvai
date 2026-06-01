@@ -54,7 +54,7 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">Основная информация</span>
-    <div class="grid-bubbles">
+    <div class="grid-bubbles personal-bubbles">
         <div class="lk-bubble tight-bubble gray-bubble">
             <span>ФИО</span>
             <p>Иванов Иван Иванович</p>
@@ -84,7 +84,7 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">Контакты</span>
-    <div class="grid-bubbles">
+    <div class="grid-bubbles personal-bubbles">
         <div class="lk-bubble tight-bubble with-icon bright-bubble">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7081_845)">
