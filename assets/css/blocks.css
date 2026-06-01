@@ -771,7 +771,6 @@
   margin-bottom: 24px;
   border-radius: 16px;
   border: 1px solid #EBEBEB;
-  aspect-ratio: 16 / 9;
 }
 @media screen and (min-width: 768px) {
   .content img {

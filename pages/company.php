@@ -145,32 +145,32 @@
                                     <div class="portfolio-slider__carousel swiper js-portfolio-slider">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-1.png">
+                                                <a href="/images/slide-1.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-1.png" alt="">
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-2.png">
+                                                <a href="/images/slide-2.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-2.png" alt="">
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-3.png">
+                                                <a href="/images/slide-3.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-3.png" alt="">
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-1.png">
+                                                <a href="/images/slide-1.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-1.png" alt="">
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-2.png">
+                                                <a href="/images/slide-2.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-2.png" alt="">
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="/images/slide-3.png">
+                                                <a href="/images/slide-3.png" data-fancybox="portfolio">
                                                     <img src="/images/slide-3.png" alt="">
                                                 </a>
                                             </div>
