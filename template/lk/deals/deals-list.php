@@ -1,4 +1,4 @@
-<div class="deals-list full-width-list">
+<div class="deals-list grid-list">
     <div class="deals-item lk-card">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state publish">Опубликовано</span>

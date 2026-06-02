@@ -3,8 +3,8 @@ $vacancies = isset($_GET['vacancies']) ? $_GET['vacancies'] : '';
 $resume = isset($_GET['resume']) ? $_GET['resume'] : ''; 
 $companies = isset($_GET['companies']) ? $_GET['companies'] : ''; 
 ?>
-<h1 class="favorite__title page-title">Избранное</h1>
-<ul class="favorite__tabs tabs">
+<h1 class="favorite__title page-title lk__page-title">Избранное</h1>
+<ul class="favorite__tabs lk__tabs tabs">
     <li class="tabs__item">
         <a href="javascript:void(0);" class="tabs__link tab active">Вакансии</a>
     </li>
@@ -15,7 +15,7 @@ $companies = isset($_GET['companies']) ? $_GET['companies'] : '';
         <a href="javascript:void(0);" class="tabs__link tab">Резюме</a>
     </li>
 </ul>
-<div class="favorite__sorting sorting">
+<div class="favorite__sorting lk__sorting sorting">
     <div class="sorting__item">
         <button class="sorting__button accordion-button btn-link js-sort-btn">
             <span>По новизне</span>

@@ -1,4 +1,4 @@
-<ul class="responces__tabs tabs">
+<ul class="responces__tabs lk__tabs tabs">
     <li class="tabs__item">
         <a href="javascript:void(0);" class="tabs__link tab active">Все</a>
     </li>

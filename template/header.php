@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="/assets/css/article.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/contacts.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/custom.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="/assets/css/lk.css?v=<?= time() ?>">
 </head>
 
 <?

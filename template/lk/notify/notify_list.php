@@ -1,4 +1,4 @@
-<div class="notify-list full-width-list">
+<div class="notify-list grid-list">
     <div class="lk-card notify-list__item">
         <div class="notify-item__body">
             <h3 class="unseen">Ваше резюме поднялось в поиске</h3>
@@ -62,7 +62,7 @@
             </button>
         </div>
     </div>
-    <div class="lk-card notifys-list__item">
+    <div class="lk-card notify-list__item">
         <div class="notify-item__body">
             <h3 class="unseen">Ваше резюме поднялось в поиске</h3>
             <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
