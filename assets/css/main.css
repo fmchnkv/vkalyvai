@@ -229,7 +229,6 @@
 .icon-button.disabled,
 .icon-button.swiper-button-disabled {
   cursor: none;
-  pointer-events: none;
 }
 .icon-button.disabled path,
 .icon-button.swiper-button-disabled path {
@@ -390,6 +389,11 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
+.btn path {
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
 .btn.disabled {
   cursor: none;
   pointer-events: none;
@@ -451,10 +455,16 @@
   color: #FFFFFF;
   border-color: #FC7827;
 }
+.btn_light:hover path {
+  fill: #FFFFFF;
+}
 .btn_light:active {
   background-color: #974817;
   color: #FFFFFF;
   border-color: #974817;
+}
+.btn_light:active path {
+  fill: #FFFFFF;
 }
 .btn_outline {
   background-color: transparent;

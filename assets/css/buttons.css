@@ -42,6 +42,11 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
+.btn path {
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
 .btn.disabled {
   cursor: none;
   pointer-events: none;
@@ -56,7 +61,7 @@
 }
 .btn_primary {
   background-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: #FC7827;
 }
 .btn_primary:hover {
@@ -69,7 +74,7 @@
 }
 .btn_secondary {
   background-color: #232323;
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: #232323;
 }
 .btn_secondary:hover {
@@ -82,7 +87,7 @@
 }
 .btn_neutral {
   background-color: #999999;
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: #999999;
 }
 .btn_neutral:hover {
@@ -100,13 +105,19 @@
 }
 .btn_light:hover {
   background-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: #FC7827;
+}
+.btn_light:hover path {
+  fill: #FFFFFF;
 }
 .btn_light:active {
   background-color: #974817;
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: #974817;
+}
+.btn_light:active path {
+  fill: #FFFFFF;
 }
 .btn_outline {
   background-color: transparent;
@@ -116,12 +127,12 @@
 .btn_outline:hover {
   border-color: #FC7827;
   background-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .btn_outline:active {
   border-color: #974817;
   background-color: #974817;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .btn_has-icon {
   gap: 8px;

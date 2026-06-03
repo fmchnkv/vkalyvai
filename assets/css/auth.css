@@ -38,6 +38,130 @@
   flex-direction: column;
   align-items: center;
 }
+.auth-section__back {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+.auth-section__header {
+  margin-bottom: 48px;
+}
+.auth-section__logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.auth-section__logo span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.auth-section__container {
+  width: 100%;
+  margin-bottom: 16px;
+}
 .auth-section__footer {
   margin-top: auto;
+}
+.auth-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.auth-hero__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.auth-hero__choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.auth-hero__btn {
+  width: 100%;
+  font-size: 18px;
+  line-height: 22px;
+}
+.auth-hero__btn.active {
+  background-color: #FC7827;
+  color: #FFFFFF;
+}
+.auth-hero__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: #999999;
+}
+.auth-hero__link.active {
+  color: #FC7827;
+}
+.auth-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-login__title {
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.auth-login__input {
+  margin-bottom: 12px;
+  width: 100%;
+}
+.auth-login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.auth-login__forgot {
+  color: #FC7827;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 32px;
+}
+.auth-login__socials {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-login__socials-title {
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.auth-login__socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.auth-login__socials-item {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+.auth-login__submit {
+  width: 100%;
+}
+.auth-login__accept {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+.auth-login__accept a {
+  color: #FC7827;
+  text-decoration: underline;
 }
