@@ -1,4 +1,4 @@
-<div class="vacancies-list">
+<div class="vacancies-list grid-list">
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
         <span class="offers-grid__sale">от 100 000 ₽</span>

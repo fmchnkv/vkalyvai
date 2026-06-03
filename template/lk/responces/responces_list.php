@@ -1,7 +1,7 @@
-<div class="responces-list full-width-list">
+<div class="responces-list grid-list">
     <div class="lk-card responces-list__item">
-        <div class="card-header responce-item__header">
-            <span class="responce-item__status neutral state">На модерации</span>
+        <div class="card-header responces-item__header">
+            <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7142_8317)">
@@ -17,21 +17,21 @@
                 </svg>
             </button>
         </div>
-        <div class="responce-item__body">
-            <div class="responce-item__icon">
+        <div class="responces-item__body">
+            <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
-            <div class="responce-item__content">
+            <div class="responces-item__content">
                 <h3>Название должности ограниченное по символам максимельно в одну строчку</h3>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responce-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
-        <div class="card-header responce-item__header">
-            <span class="responce-item__status neutral state">На модерации</span>
+        <div class="card-header responces-item__header">
+            <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7142_8317)">
@@ -47,21 +47,21 @@
                 </svg>
             </button>
         </div>
-        <div class="responce-item__body">
-            <div class="responce-item__icon">
+        <div class="responces-item__body">
+            <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
-            <div class="responce-item__content">
+            <div class="responces-item__content">
                 <h3>Название должности ограниченное по символам максимельно в одну строчку</h3>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responce-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
-        <div class="card-header responce-item__header">
-            <span class="responce-item__status neutral state">На модерации</span>
+        <div class="card-header responces-item__header">
+            <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7142_8317)">
@@ -77,21 +77,21 @@
                 </svg>
             </button>
         </div>
-        <div class="responce-item__body">
-            <div class="responce-item__icon">
+        <div class="responces-item__body">
+            <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
-            <div class="responce-item__content">
+            <div class="responces-item__content">
                 <h3>Название должности ограниченное по символам максимельно в одну строчку</h3>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responce-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
-        <div class="card-header responce-item__header">
-            <span class="responce-item__status neutral state">На модерации</span>
+        <div class="card-header responces-item__header">
+            <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7142_8317)">
@@ -107,17 +107,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responce-item__body">
-            <div class="responce-item__icon">
+        <div class="responces-item__body">
+            <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
-            <div class="responce-item__content">
+            <div class="responces-item__content">
                 <h3>Название должности ограниченное по символам максимельно в одну строчку</h3>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responce-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
     </div>
 </div>
 <div class="responces__pagination pagination">

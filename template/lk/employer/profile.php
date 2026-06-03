@@ -2,8 +2,7 @@
     <div class="lk__person">
         <img src="" alt="">
         <div class="lk__person-data">
-            <div>Иванов Иван Иванович</div>
-            <p>Российская федерация 01.01.1990</p>
+            <div>Название компании</div>
         </div>
     </div>
     <div class="lk__buttons">
@@ -54,30 +53,44 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">Основная информация</span>
-    <div class="grid-bubbles">
+    <div class="grid-bubbles employer-bubbles">
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>ФИО</span>
+            <span>Название компании</span>
+            <p>Название компании</p>
+        </div>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>ФИО пользователя</span>
             <p>Иванов Иван Иванович</p>
         </div>
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>Пол</span>
-            <p>Мужской</p>
+            <span>ИНН</span>
+            <p>88888888888</p>
         </div>
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>Дата рождения</span>
-            <p>01.01.1990</p>
+            <span>Пароль</span>
+            <p>admin</p>
+        </div>
+    </div>
+</div>
+
+<div class="lk__content detail__section">
+    <span class="subcaption">О компании</span>
+    <div class="grid-bubbles employer-bubbles">
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>Тип регистрации</span>
+            <p>Организация</p>
         </div>
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>Место жительства</span>
-            <p>Москва, Малая Тульская улица, 2/1 к5</p>
+            <span>Сфера деятельности</span>
+            <p>Медицинская клиника</p>
         </div>
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>Участник СВО</span>
-            <p>Нет</p>
+            <span>Регион</span>
+            <p>Москва, Московская область</p>
         </div>
         <div class="lk-bubble tight-bubble gray-bubble">
-            <span>Статус поиска</span>
-            <p>Активно ищу работу</p>
+            <span>Сайт</span>
+            <p>https://blueberry-digital.ru/</p>
         </div>
     </div>
 </div>
@@ -182,138 +195,39 @@
 </div>
 
 <div class="lk__content detail__section">
-    <div class="full-width">
-        <span class="subcaption">Образование</span>
-        <button class="education-add transp-btn btn_has-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_7081_644)">
-                <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#FC7827"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_7081_644">
-                <rect width="20" height="20" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
-            <span>Добавить</span>
-        </button>
-    </div>
-    
-    <div class="grid-bubbles full-width">
-        <div class="lk-bubble big-bubble with-icon">
-            <div class="date">
-                <span>Среднее специальное</span>
-                <p>2009</p>
-            </div>
-            <div class="text">
-                <span>Сибирский государственный университет телекоммуникаций и информатики</span>
-                <p>Фундаментальная информатика и информационные технологии</p>
-            </div>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_4363_22925)">
-                <path d="M26.8037 28.0012H5.2041V25.6008H26.8037V28.0012ZM19.7744 4.03638C20.0926 4.03641 20.398 4.163 20.623 4.38794L24.0176 7.78247C24.2425 8.0075 24.3691 8.31293 24.3691 8.6311C24.3691 8.94907 24.2423 9.25382 24.0176 9.47876L10.2959 23.2014H5.2041V18.1096L18.9258 4.38794C19.1508 4.16297 19.4562 4.03638 19.7744 4.03638ZM7.60352 19.1047V20.801H9.30078L21.4707 8.6311L19.7744 6.93384L7.60352 19.1047Z" fill="#C2C2C2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_4363_22925">
-                <rect width="32" height="32" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+    <span class="subcaption">Реквизиты компании</span>
+    <div class="flex-bubbles employer-bubbles-flex">
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>Полное название</span>
+            <p>Общество с ограниченой ответственностью «Название компании»</p>
         </div>
-        <div class="lk-bubble big-bubble with-icon">
-            <div class="date">
-                <span>Высшее</span>
-                <p>2012</p>
-            </div>
-            <div class="text">
-                <span>Сибирский государственный университет телекоммуникаций и информатики</span>
-                <p>Фундаментальная информатика и информационные технологии</p>
-            </div>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_4363_22925)">
-                <path d="M26.8037 28.0012H5.2041V25.6008H26.8037V28.0012ZM19.7744 4.03638C20.0926 4.03641 20.398 4.163 20.623 4.38794L24.0176 7.78247C24.2425 8.0075 24.3691 8.31293 24.3691 8.6311C24.3691 8.94907 24.2423 9.25382 24.0176 9.47876L10.2959 23.2014H5.2041V18.1096L18.9258 4.38794C19.1508 4.16297 19.4562 4.03638 19.7744 4.03638ZM7.60352 19.1047V20.801H9.30078L21.4707 8.6311L19.7744 6.93384L7.60352 19.1047Z" fill="#C2C2C2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_4363_22925">
-                <rect width="32" height="32" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>Фактический адрес</span>
+            <p>97022, Г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</p>
         </div>
-    </div>
-</div>
-
-<div class="lk__content detail__section">
-    <span class="subcaption">Опыт вождения</span>
-    <div class="grid-bubbles">
-        <div class="lk-bubble big-bubble with-icon">
-            <div class="lk-bubble__text-wrapper">
-                <span>Категория прав</span>
-                <p>B, C, A</p>
-            </div>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_4363_22925)">
-                <path d="M26.8037 28.0012H5.2041V25.6008H26.8037V28.0012ZM19.7744 4.03638C20.0926 4.03641 20.398 4.163 20.623 4.38794L24.0176 7.78247C24.2425 8.0075 24.3691 8.31293 24.3691 8.6311C24.3691 8.94907 24.2423 9.25382 24.0176 9.47876L10.2959 23.2014H5.2041V18.1096L18.9258 4.38794C19.1508 4.16297 19.4562 4.03638 19.7744 4.03638ZM7.60352 19.1047V20.801H9.30078L21.4707 8.6311L19.7744 6.93384L7.60352 19.1047Z" fill="#C2C2C2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_4363_22925">
-                <rect width="32" height="32" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>Юридический адрес</span>
+            <p>97022, Г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</p>
         </div>
-    </div>
-</div>
-
-<div class="lk__content detail__section">
-    <div class="full-width">
-        <span class="subcaption">Знание языков</span>
-        <button class="education-add transp-btn btn_has-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_7081_644)">
-                <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#FC7827"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_7081_644">
-                <rect width="20" height="20" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
-            <span>Добавить</span>
-        </button>
-    </div>
-    <div class="grid-bubbles">
-        <div class="lk-bubble big-bubble with-icon">
-            <div class="lk-bubble__text-wrapper">
-                <span>Родной</span>
-                <p>Русский</p>
-            </div>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_4363_22925)">
-                <path d="M26.8037 28.0012H5.2041V25.6008H26.8037V28.0012ZM19.7744 4.03638C20.0926 4.03641 20.398 4.163 20.623 4.38794L24.0176 7.78247C24.2425 8.0075 24.3691 8.31293 24.3691 8.6311C24.3691 8.94907 24.2423 9.25382 24.0176 9.47876L10.2959 23.2014H5.2041V18.1096L18.9258 4.38794C19.1508 4.16297 19.4562 4.03638 19.7744 4.03638ZM7.60352 19.1047V20.801H9.30078L21.4707 8.6311L19.7744 6.93384L7.60352 19.1047Z" fill="#C2C2C2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_4363_22925">
-                <rect width="32" height="32" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>КПП</span>
+            <p>88888888888</p>
         </div>
-        <div class="lk-bubble big-bubble with-icon">
-            <div class="lk-bubble__text-wrapper">
-                <span>Английский</span>
-                <p>А1-начальный</p>
-            </div>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_4363_22925)">
-                <path d="M26.8037 28.0012H5.2041V25.6008H26.8037V28.0012ZM19.7744 4.03638C20.0926 4.03641 20.398 4.163 20.623 4.38794L24.0176 7.78247C24.2425 8.0075 24.3691 8.31293 24.3691 8.6311C24.3691 8.94907 24.2423 9.25382 24.0176 9.47876L10.2959 23.2014H5.2041V18.1096L18.9258 4.38794C19.1508 4.16297 19.4562 4.03638 19.7744 4.03638ZM7.60352 19.1047V20.801H9.30078L21.4707 8.6311L19.7744 6.93384L7.60352 19.1047Z" fill="#C2C2C2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_4363_22925">
-                <rect width="32" height="32" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>БИК</span>
+            <p>88888888888</p>
+        </div>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>ОГРН</span>
+            <p>88888888888</p>
+        </div>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>К/С банка</span>
+            <p>88888888888</p>
+        </div>
+        <div class="lk-bubble tight-bubble gray-bubble">
+            <span>Генеральный директор</span>
+            <p>Иванов Иван Иванович</p>
         </div>
     </div>
 </div>

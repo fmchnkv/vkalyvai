@@ -1,4 +1,4 @@
-<div class="responces__sorting sorting">
+<div class="responces__sorting lk__sorting sorting">
     <div class="sorting__item">
         <button class="sorting__button accordion-button btn-link js-sort-btn">
             <span>По новизне</span>
