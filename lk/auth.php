@@ -1,9 +1,15 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header_auth.php"); ?>
 
+<?
+$reg = isset($_GET['reg']) ? $_GET['reg'] : 0;
+$role = isset($_GET['role']) ? $_GET['role'] : 0;
+$pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
+?>
+
 <section class="auth-section">
     <div class="container">
         <div class="auth-section__inner">
-            <a href="/" class="auth-section__back">
+            <a href="/lk/auth.php" class="auth-section__back">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_5125_41776)">
                         <path d="M13.9736 5.47071C14.2665 5.17781 14.7413 5.17781 15.0342 5.47071C15.3271 5.7636 15.3271 6.23836 15.0342 6.53125L9.56446 12.001L15.0342 17.4707C15.3271 17.7636 15.3271 18.2384 15.0342 18.5313C14.7413 18.8241 14.2665 18.8241 13.9736 18.5313L7.97364 12.5313C7.68074 12.2384 7.68074 11.7636 7.97364 11.4707L13.9736 5.47071Z" fill="#999999" />
@@ -26,7 +32,21 @@
             </div>
 
             <div class="auth-section__container" id="auth-container">
-                <? include $_SERVER["DOCUMENT_ROOT"] . '/include/auth-first.php'; ?>
+                <?
+                if ($pass) {
+                    include $_SERVER["DOCUMENT_ROOT"] . '/include/auth-pass.php';
+                } else {
+                    if ($reg || $role) {
+                        if ($reg) {
+                            include $_SERVER["DOCUMENT_ROOT"] . '/include/auth-reg.php';
+                        } else {
+                            include $_SERVER["DOCUMENT_ROOT"] . '/include/auth-login.php';
+                        }
+                    } else {
+                        include $_SERVER["DOCUMENT_ROOT"] . '/include/auth-first.php';
+                    }
+                }
+                ?>
             </div>
 
             <div class="auth-section__footer">
