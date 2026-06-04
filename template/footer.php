@@ -153,7 +153,7 @@
     </div>
 </div>
 
-<div class="modal lk__modal">
+<div data-modal="edit__personal" class="modal lk__modal">
     <div class="modal__wrapper">
         <button class="modal__close js-modal-close icon-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,8 +169,8 @@
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__main-form">
-            <div class="lk__main-form-inputs">
+        <form action="" method="post" class="lk__main-form lk__form">
+            <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Статус поиска</span>
                     <div class="lk__input-wrapper">
@@ -180,9 +180,9 @@
                         </div>
                         <div class="lk__custom-select-list">
                             <div class="lk__custom-select-list-container">
-                                <div class="active">Активно ищу работу</div>
-                                <div>Пассивно ищу работу</div>
-                                <div>Не ищу работу</div>
+                                <div class="lk__custom-select-item active">Активно ищу работу</div>
+                                <div class="lk__custom-select-item">Пассивно ищу работу</div>
+                                <div class="lk__custom-select-item">Не ищу работу</div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                             <div class="lk__custom-select-list">
                                 <div class="lk__custom-select-list-container">
                                     <?php for ($i = 1; $i <= 31; $i++): ?>
-                                        <div>
+                                        <div class="lk__custom-select-item">
                                             <?= $i ?>
                                         </div>
                                     <?php endfor; ?>
@@ -253,7 +253,7 @@
                                     ];
                                     foreach ($months as $month):
                                         ?>
-                                        <div>
+                                        <div class="lk__custom-select-item">
                                             <?= $month ?>
                                         </div>
                                     <?php endforeach; ?>
@@ -268,7 +268,7 @@
                             <div class="lk__custom-select-list">
                                 <div class="lk__custom-select-list-container">
                                     <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
-                                        <div>
+                                        <div class="lk__custom-select-item">
                                             <?= $year ?>
                                         </div>
                                     <?php endfor; ?>
@@ -297,7 +297,7 @@
                         <div class="lk__custom-select-list">
                             <div class="lk__custom-select-list-container">
                                 <?php foreach ($countries as $country): ?>
-                                    <div>
+                                    <div class="lk__custom-select-item">
                                         <?= $country ?>
                                     </div>
                                 <?php endforeach; ?>
@@ -332,6 +332,355 @@
     </div>
 </div>
 
+<div data-modal="add__contacts" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4751_70498)">
+                <path d="M17.7324 7.54614L13.2773 12.0012L17.7324 16.4563L16.46 17.7288L12.0049 13.2737L7.5498 17.7288L6.27734 16.4563L10.7324 12.0012L6.27734 7.54614L7.5498 6.27368L12.0049 10.7288L16.46 6.27368L17.7324 7.54614Z" fill="#999999"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_4751_70498">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__modal-form lk__contacts-form">
+            <h3 class="lk__modal-form-title">Добавить контакт</h3>
+            <div class="lk__modal-form-content">
+                <div class="lk__input-element">
+                    <span class="subcaption">Тип контакта</span>
+                    <div class="lk__radio-buttons">
+                        <label class="lk__input-wrapper">
+                            <input type="radio" name="contact_type" value="tel">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7682_28356)">
+                                <path d="M8.02637 3.90137C8.13792 3.90127 8.24533 3.94283 8.32812 4.01758C8.41095 4.09242 8.46345 4.19557 8.47461 4.30664C8.49528 4.51328 8.51425 4.67774 8.53223 4.80273C8.71109 6.05097 9.07734 7.26565 9.61914 8.4043C9.70449 8.58414 9.649 8.79883 9.4873 8.91406L7.54492 10.3018C8.7324 13.0687 10.9372 15.2744 13.7041 16.4619L15.0908 14.5234C15.1475 14.4442 15.23 14.3868 15.3242 14.3623C15.4184 14.3379 15.5185 14.3472 15.6064 14.3887C16.7449 14.9294 17.9583 15.2955 19.2061 15.4736C19.3312 15.4916 19.496 15.5115 19.7012 15.5313C19.8121 15.5426 19.9146 15.5949 19.9893 15.6777C20.0639 15.7605 20.1056 15.868 20.1055 15.9795H20.1045V19.1621C20.1045 19.3898 20.0176 19.6088 19.8623 19.7754C19.707 19.942 19.4948 20.0435 19.2676 20.0596C18.8745 20.0866 18.553 20.1015 18.3047 20.1016C10.3514 20.1016 3.9043 13.6545 3.9043 5.70117C3.9043 5.4528 3.91742 5.13148 3.94531 4.73828C3.96127 4.51103 4.06284 4.2979 4.22949 4.14258C4.39616 3.98727 4.61594 3.9013 4.84375 3.90137H8.02637Z" fill="#C2C2C2"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7682_28051">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="radio" name="contact_type" value="email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7682_28356)">
+                                <path d="M20.1035 4.50098C20.3422 4.50098 20.5715 4.59587 20.7402 4.76465C20.909 4.93343 21.0039 5.16267 21.0039 5.40137V18.6006C21.0039 18.8393 20.909 19.0685 20.7402 19.2373C20.5715 19.4061 20.3422 19.501 20.1035 19.501H3.9043C3.6656 19.501 3.43636 19.4061 3.26758 19.2373C3.0988 19.0685 3.00391 18.8393 3.00391 18.6006V5.40137C3.00391 5.16267 3.0988 4.93343 3.26758 4.76465C3.43636 4.59587 3.6656 4.50098 3.9043 4.50098H20.1035ZM4.80371 17.7012H19.2041V8.31543L12.0684 14.7051L4.80371 8.29492V17.7012ZM12.0586 12.2969L18.7559 6.30078H5.26367L12.0586 12.2969Z" fill="#C2C2C2"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7682_28356">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="radio" name="contact_type" value="vk">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7682_29344)">
+                                <path d="M14.0039 2.00098C16.8039 2.00098 18.2039 2.00111 19.2734 2.5459C20.2142 3.02527 20.9796 3.79063 21.459 4.73145C22.0038 5.80096 22.0039 7.20102 22.0039 10.001V14.001C22.0039 16.8009 22.0038 18.201 21.459 19.2705C20.9796 20.2113 20.2142 20.9767 19.2734 21.4561C18.2039 22.0008 16.8039 22.001 14.0039 22.001H10.0039C7.20395 22.001 5.80389 22.0008 4.73438 21.4561C3.79356 20.9767 3.02819 20.2113 2.54883 19.2705C2.00404 18.201 2.00391 16.8009 2.00391 14.001V10.001C2.00391 7.20102 2.00404 5.80096 2.54883 4.73145C3.02819 3.79063 3.79356 3.02527 4.73438 2.5459C5.80389 2.00111 7.20395 2.00098 10.0039 2.00098H14.0039ZM5.37891 8.08496C5.48739 13.2847 8.08736 16.4092 12.6455 16.4092H12.9043V13.4346C13.7082 13.5355 14.4645 13.8714 15.0781 14.4004C15.6918 14.9296 16.1354 15.6287 16.3535 16.4092H18.7207C18.4777 15.5106 18.0464 14.6737 17.4561 13.9541C16.8657 13.2346 16.1295 12.6483 15.2959 12.2344C16.0424 11.7811 16.6872 11.1786 17.1904 10.4648C17.6936 9.7509 18.0448 8.94052 18.2207 8.08496H16.0703C15.6036 9.73459 14.2207 11.2341 12.9043 11.376V8.08496H10.7539V13.8516C9.42061 13.5182 7.73723 11.9013 7.66211 8.08496H5.37891Z" fill="#C2C2C2"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7682_29344">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="radio" name="contact_type" value="tg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7682_29352)">
+                                <path d="M14.0039 2.00098C16.8039 2.00098 18.2039 2.00111 19.2734 2.5459C20.2142 3.02527 20.9796 3.79063 21.459 4.73145C22.0038 5.80096 22.0039 7.20102 22.0039 10.001V14.001C22.0039 16.8009 22.0038 18.201 21.459 19.2705C20.9796 20.2113 20.2142 20.9767 19.2734 21.4561C18.2039 22.0008 16.8039 22.001 14.0039 22.001H10.0039C7.20395 22.001 5.80389 22.0008 4.73438 21.4561C3.79356 20.9767 3.02819 20.2113 2.54883 19.2705C2.00404 18.201 2.00391 16.8009 2.00391 14.001V10.001C2.00391 7.20102 2.00404 5.80096 2.54883 4.73145C3.02819 3.79063 3.79356 3.02527 4.73438 2.5459C5.80389 2.00111 7.20395 2.00098 10.0039 2.00098H14.0039ZM16.1143 8.03027C15.7343 8.03027 15.1638 8.23063 12.3838 9.39062C11.4137 9.79065 9.47357 10.6305 6.55371 11.9004C6.08383 12.0904 5.83351 12.2702 5.81348 12.4502C5.77348 12.8002 6.26365 12.9104 6.89355 13.1104C7.40335 13.2803 8.08324 13.4703 8.44336 13.4805C8.76332 13.4905 9.1235 13.35 9.52344 13.0801C12.2534 11.2401 13.6541 10.31 13.7441 10.29C13.8141 10.28 13.8942 10.2606 13.9541 10.3105C13.9763 10.3342 13.9923 10.3633 14.001 10.3945C14.0096 10.4258 14.0108 10.4586 14.0039 10.4902C13.9539 10.7002 11.3941 13.0307 11.2441 13.1807C10.6742 13.7606 10.0337 14.1206 11.0234 14.7705C11.8734 15.3305 12.3739 15.6905 13.2539 16.2705C13.8138 16.6405 14.254 17.0705 14.834 17.0205C15.0939 16.9904 15.3737 16.7401 15.5137 15.9902C15.8437 14.2202 16.4936 10.3798 16.6436 8.7998C16.6535 8.65987 16.6336 8.47986 16.6436 8.41992C16.6335 8.33998 16.6037 8.23026 16.5039 8.15039C16.3841 8.05058 16.1945 8.03035 16.1143 8.03027Z" fill="#C2C2C2"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7682_29352">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="radio" name="contact_type" value="max">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7682_29360)">
+                                <path d="M17.0098 2.00195C19.7672 2.00207 22.0028 4.23766 22.0029 6.99512V17.0068C22.0028 19.7643 19.7672 21.9999 17.0098 22H6.99805C4.24058 21.9999 2.005 19.7643 2.00488 17.0068V6.99512C2.005 4.23765 4.24058 2.00207 6.99805 2.00195H17.0098ZM12.1289 4.3916C7.91737 4.3916 4.3625 7.6505 4.3623 11.9824C4.3623 13.7963 4.69755 15.0488 4.99316 16.1729C5.24131 17.0852 5.46094 17.9212 5.46094 18.9102C5.56734 20.227 7.99343 19.457 8.75977 18.4717C9.97124 19.3474 10.6691 19.5674 12.1689 19.5674C16.315 19.545 19.6603 16.1695 19.6465 12.0234C19.6465 7.81201 16.3439 4.39196 12.1289 4.3916ZM12.2305 8.13574V8.13965C14.3558 8.26151 15.992 10.0632 15.9092 12.1904C15.7665 14.3133 13.9504 15.9313 11.8252 15.8291C11.16 15.7757 10.5207 15.5482 9.97168 15.1689C9.63962 15.501 9.10628 15.9318 8.89453 15.8809C8.45302 15.7636 7.93483 13.5195 8.22656 11.6768C8.58056 9.45057 10.1795 8.03003 12.2305 8.13574Z" fill="#C2C2C2"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_7682_29360">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Введите данные</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" value="" id="contact_data">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn_size-m btn_primary">
+                <span>Применить</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div data-modal="add__univercity" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.7324 7.5459L13.2773 12.001L17.7324 16.4561L16.46 17.7285L12.0049 13.2734L7.5498 17.7285L6.27734 16.4561L10.7324 12.001L6.27734 7.5459L7.5498 6.27344L12.0049 10.7285L16.46 6.27344L17.7324 7.5459Z" fill="#999999"/>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__univercity-form lk__modal-form">
+            <h3 class="lk__modal-form-title">Место учебы</h3>
+            <div class="lk__univercity-form-inputs lk__form-inputs">
+                <div class="lk__input-element">
+                    <span class="subcaption">Уровень образования</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="education" value="Высшее" name="">
+                            <div class="lk__custom-select-choise">Высшее</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">Высшее</div>
+                                <div class="lk__custom-select-item">Средне-специальное</div>
+                                <div class="lk__custom-select-item">Среднее</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__inputs-set">
+                    <div class="lk__input-element">
+                        <span class="subcaption">Учебное заведение</span>
+                        <div class="lk__input-wrapper">
+                            <input type="text" value="" placeholder="Название учебного заведения">
+                        </div>
+                    </div>
+                    <div class="lk__input-element">
+                        <div class="lk__input-wrapper">
+                            <input type="text" value="" placeholder="Специальность">
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Окончание</span>
+                    <?php
+                    $currentYear = date('Y');
+                    $minYear = $currentYear - 100;
+                    $maxYear = $currentYear - 18;
+                    ?>
+                    <div class="lk__input-grid lk__main-form__date-wrapper">
+                        <div class="lk__input-wrapper">
+                            <div class="lk__custom-select">
+                                <input type="hidden" id="month" name="">
+                                <div class="lk__custom-select-choise">Месяц</div>
+                            </div>
+                            <div class="lk__custom-select-list">
+                                <div class="lk__custom-select-list-container">
+                                    <?php
+                                    $months = [
+                                        'Январь',
+                                        'Февраль',
+                                        'Март',
+                                        'Апрель',
+                                        'Май',
+                                        'Июнь',
+                                        'Июль',
+                                        'Август',
+                                        'Сентябрь',
+                                        'Октябрь',
+                                        'Ноябрь',
+                                        'Декабрь'
+                                    ];
+                                    foreach ($months as $month):
+                                        ?>
+                                        <div class="lk__custom-select-item">
+                                            <?= $month ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk__input-wrapper">
+                            <div class="lk__custom-select">
+                                <input type="hidden" id="year" name="">
+                                <div class="lk__custom-select-choise">Год</div>
+                            </div>
+                            <div class="lk__custom-select-list">
+                                <div class="lk__custom-select-list-container">
+                                    <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
+                                        <div class="lk__custom-select-item">
+                                            <?= $year ?>
+                                        </div>
+                                    <?php endfor; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn_size-m btn_primary">
+                <span>Применить</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div data-modal="add__driver" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.7324 7.5459L13.2773 12.001L17.7324 16.4561L16.46 17.7285L12.0049 13.2734L7.5498 17.7285L6.27734 16.4561L10.7324 12.001L6.27734 7.5459L7.5498 6.27344L12.0049 10.7285L16.46 6.27344L17.7324 7.5459Z" fill="#999999"/>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__driver-form lk__modal-form">
+            <h3 class="lk__modal-form-title">Опыт вождения</h3>
+            <div class="lk__driver-form-inputs lk__form-inputs">
+                <div class="lk__input-element">
+                    <div class="lk__checkbox-buttons">
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="A">
+                            <span class="lk__input-label">A</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="B">
+                            <span class="lk__input-label">B</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="C">
+                            <span class="lk__input-label">C</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="D">
+                            <span class="lk__input-label">D</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="E">
+                            <span class="lk__input-label">E</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="BE">
+                            <span class="lk__input-label">BE</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="CE">
+                            <span class="lk__input-label">CE</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="DE">
+                            <span class="lk__input-label">DE</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="TM">
+                            <span class="lk__input-label">TM</span>
+                        </label>
+                        <label class="lk__input-wrapper">
+                            <input type="checkbox" name="driver" value="TB">
+                            <span class="lk__input-label">TB</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn_size-m btn_secondary">
+                <span>Применить</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div data-modal="add__external-language" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.7324 7.5459L13.2773 12.001L17.7324 16.4561L16.46 17.7285L12.0049 13.2734L7.5498 17.7285L6.27734 16.4561L10.7324 12.001L6.27734 7.5459L7.5498 6.27344L12.0049 10.7285L16.46 6.27344L17.7324 7.5459Z" fill="#999999"/>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__language-form lk__modal-form">
+            <h3 class="lk__modal-form-title">Иностранный язык</h3>
+            <div class="lk__language-form-inputs lk__form-inputs">
+                <div class="lk__input-element">
+                    <span class="subcaption">Язык</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="language" value="Английский" name="">
+                            <div class="lk__custom-select-choise">Английский</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">Английский</div>
+                                <div class="lk__custom-select-item">Немецкий</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Уровень владения</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="skill" value="А1-Начальный" name="">
+                            <div class="lk__custom-select-choise">А1-Начальный</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">А1-Начальный</div>
+                                <div class="lk__custom-select-item">А2-Элементарный</div>
+                                <div class="lk__custom-select-item">B1-Средний</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <button type="submit" class="btn btn_size-m btn_primary">
+                <span>Применить</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div data-modal="add__internal-language" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.7324 7.5459L13.2773 12.001L17.7324 16.4561L16.46 17.7285L12.0049 13.2734L7.5498 17.7285L6.27734 16.4561L10.7324 12.001L6.27734 7.5459L7.5498 6.27344L12.0049 10.7285L16.46 6.27344L17.7324 7.5459Z" fill="#999999"/>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__language-form lk__modal-form">
+            <h3 class="lk__modal-form-title">Родной язык</h3>
+            <div class="lk__language-form-inputs lk__form-inputs">
+                <div class="lk__input-element">
+                    <span class="subcaption">Язык</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="language" value="Английский" name="">
+                            <div class="lk__custom-select-choise">Английский</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">Английский</div>
+                                <div class="lk__custom-select-item">Немецкий</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn_size-m btn_primary">
+                <span>Применить</span>
+            </button>
+        </form>
+    </div>
+</div>
+
 </div> <!-- /wrapper -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.0/nouislider.min.js"
@@ -339,6 +688,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+<script src="/assets/js/inputmask.min.js"></script>
 <script defer src="/assets/js/main.js?v=<?= time() ?>"></script>
 </body>
 

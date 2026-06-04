@@ -40,7 +40,7 @@
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding: 52px 0 0;
   opacity: 0;
   visibility: hidden;
@@ -51,6 +51,7 @@
 @media screen and (min-width: 1024px) {
   .modal {
     padding: 10px 40px;
+    align-items: center;
   }
 }
 .modal.active {
@@ -59,7 +60,7 @@
 }
 .modal__wrapper {
   position: relative;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 16px 16px 0 0;
   padding: 16px 6px 16px 16px;
   width: 100%;
@@ -67,12 +68,13 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-height: max-content;
 }
 .modal__wrapper::before {
   content: '';
   width: 200px;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   position: absolute;
   top: -12px;
   left: calc(50% - 100px);

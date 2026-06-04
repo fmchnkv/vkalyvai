@@ -39,9 +39,11 @@
 
 .bright-bubble {
     border: 1px solid @border-neutral;
+    transition: all .3 ease;
 
     &:hover, &:focus {
         border-color: @primary;
+        transition: all .3 ease;
     }
 }
 
@@ -173,6 +175,20 @@
     }
 
     &-bubble {
+
+        &:not(.bright-bubble) {
+            &:hover {
+                svg path {
+                    fill: @primary;
+                }
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
         span {
             display: block;
@@ -596,13 +612,22 @@
         }
     }
 
+    &__form {
+        overflow-y: scroll;
+        &-inputs {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+    }
+
     &__main-form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
         position: relative;
-        overflow-y: scroll;
         height: 90vh;
 
         &-btn {
@@ -618,15 +643,19 @@
         }
 
         &-inputs {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 24px;
             margin-bottom: 100px;
-            width: 100%;
         }
     }
 
     &__input-element {
+        p {
+            display: block;
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 114%;
+            color: @neutral;
+        }
         .subcaption {
             margin-bottom: 16px;
             display: block;
@@ -642,19 +671,26 @@
         background-color: transparent;
         transition: all .3s ease;
         width: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all .3s ease;
 
         input {
             font-weight: 400;
             font-size: 18px;
             line-height: 122%;
             color: @neutral;
+            display: inline-block;
+            width: 100%;
         }
 
-        input[type="radio"] {
+        input[type="radio"], input[type="checkbox"] {
             opacity: 0;
             width: 0;
             height: 0;
             visibility: hidden;
+            position: absolute;
+            width: 100%;
         }
 
         input[type="text"] {
@@ -665,6 +701,10 @@
             color: @white;
             background-color: @primary;
             transition: all .3s ease;
+
+            svg path {
+                fill: @white;
+            }
         }
     }
 
@@ -673,10 +713,16 @@
         gap: 8px;
         grid-template-columns: repeat(2, 1fr);
 
-        .lk__input-wrapper:last-child {
+        .lk__input-wrapper:nth-child(3) {
             grid-column-start: 1;
             grid-column-end: 3;
         }
+    }
+
+    &__inputs-set {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
     }
 
     &__custom-select {
@@ -753,11 +799,71 @@
     }
 
     &__radio-buttons {
-        .flex-center();
+        display: flex;
+        align-items: center;
         gap: 8px;
 
-        label.lk__input-wrapper {
+        label {
             text-align: center;
+            max-width: max-content;
+            background-color: transparent;
+            color: @default;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: @primary;
+                color: @white;
+                transition: all .3s ease;
+
+                svg path {
+                    fill: @white;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
+    &__checkbox-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+
+        label {
+            text-align: center;
+
+            &:hover {
+                background-color: @primary;
+                color: @white;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &__modal {
+        &-form {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            &-title {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 100%;
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    }
+
+    &__contacts-form {
+        .lk__radio-buttons label.lk__input-wrapper {
+            padding: 12px;
+            border-radius: 100%;
+            .flex-center();
         }
     }
     

@@ -60,10 +60,12 @@
 }
 .bright-bubble {
   border: 1px solid #EBEBEB;
+  transition: all 0.3 ease;
 }
 .bright-bubble:hover,
 .bright-bubble:focus {
   border-color: #FC7827;
+  transition: all 0.3 ease;
 }
 .full-width {
   width: 100%;
@@ -177,6 +179,14 @@
 }
 .lk__page-title {
   margin-bottom: 40px;
+}
+.lk-bubble:not(.bright-bubble):hover svg path {
+  fill: #FC7827;
+}
+.lk-bubble__content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .lk-bubble span {
   display: block;
@@ -529,13 +539,21 @@
 .lk .employer__search-form {
   margin-bottom: 24px;
 }
+.lk__form {
+  overflow-y: scroll;
+}
+.lk__form-inputs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  width: 100%;
+}
 .lk__main-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  overflow-y: scroll;
   height: 90vh;
 }
 .lk__main-form-btn {
@@ -549,11 +567,15 @@
   justify-content: center;
 }
 .lk__main-form-inputs {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
   margin-bottom: 100px;
-  width: 100%;
+}
+.lk__input-element p {
+  display: block;
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #999999;
 }
 .lk__input-element .subcaption {
   margin-bottom: 16px;
@@ -565,21 +587,27 @@
   border-radius: 32px;
   position: relative;
   color: #232323;
+  width: 100%;
+  cursor: pointer;
   background-color: transparent;
   transition: all 0.3s ease;
-  width: 100%;
 }
 .lk__input-wrapper input {
   font-weight: 400;
   font-size: 18px;
   line-height: 122%;
   color: #999999;
+  display: inline-block;
+  width: 100%;
 }
-.lk__input-wrapper input[type="radio"] {
+.lk__input-wrapper input[type="radio"],
+.lk__input-wrapper input[type="checkbox"] {
   opacity: 0;
   width: 0;
   height: 0;
   visibility: hidden;
+  position: absolute;
+  width: 100%;
 }
 .lk__input-wrapper input[type="text"] {
   line-clamp: 1;
@@ -594,14 +622,22 @@
   background-color: #FC7827;
   transition: all 0.3s ease;
 }
+.lk__input-wrapper:has(input:checked) svg path {
+  fill: #FFFFFF;
+}
 .lk__input-grid {
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(2, 1fr);
 }
-.lk__input-grid .lk__input-wrapper:last-child {
+.lk__input-grid .lk__input-wrapper:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+.lk__inputs-set {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
 }
 .lk__custom-select {
   position: relative;
@@ -671,9 +707,56 @@
 .lk__radio-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
-.lk__radio-buttons label.lk__input-wrapper {
+.lk__radio-buttons label {
   text-align: center;
+  max-width: max-content;
+  background-color: transparent;
+  color: #232323;
+  transition: all 0.3s ease;
+}
+.lk__radio-buttons label:hover {
+  background-color: #FC7827;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.lk__radio-buttons label:hover svg path {
+  fill: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.lk__checkbox-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.lk__checkbox-buttons label {
+  text-align: center;
+}
+.lk__checkbox-buttons label:hover {
+  background-color: #FC7827;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.lk__modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.lk__modal-form-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+}
+.lk__modal-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.lk__contacts-form .lk__radio-buttons label.lk__input-wrapper {
+  padding: 12px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

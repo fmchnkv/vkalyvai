@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalCloseBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const modal = modalCloseBtn.closest('.modal');
+                console.log('modal close via button', modal ? modal.dataset.modal : null, new Date().toISOString());
                 modal.classList.remove('active');
                 document.body.classList.remove('no-scroll');
             });
@@ -926,4 +927,114 @@ document.addEventListener('DOMContentLoaded', () => {
     Fancybox.bind("[data-fancybox]", {
         
     });
+
+    //вызов модалок с кнопок
+    document.querySelectorAll('[data-call-modal]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            console.log('modal open via button', button.dataset.callModal, new Date().toISOString());
+
+            let modal = document.querySelector(`.modal[data-modal="${button.dataset.callModal}"]`);
+            if(modal) {
+                modal.classList.add('active');
+            }
+        })
+    });
+
+    //селекты в модалках
+    const customSelects = document.querySelectorAll('.lk__custom-select');
+
+    if(customSelects) {
+        customSelects.forEach(select => {
+            select.addEventListener('click', function() {
+                let parent = select.closest('.lk__input-wrapper');
+                let hiddenInput = select.querySelector('input[type="hidden"]');
+                let choisesList = parent.querySelector('.lk__custom-select-list');
+                let userChoise = parent.querySelector('.lk__custom-select-choise');
+                if(parent) {
+                    let choises = choisesList.querySelectorAll('.lk__custom-select-item');
+                    if(choises) {
+                        choises.forEach(choise => {
+                            choise.addEventListener('click', function() {
+                                choises.forEach(item => item.classList.remove('active'));
+                                choise.classList.add('active');
+                                hiddenInput.value = choise.textContent;
+                                userChoise.textContent = choise.textContent;
+
+                                choisesList.classList.remove('active');
+                                select.classList.remove('active');
+                            })
+                        });
+                    }
+                }
+
+                if(choisesList.classList.contains('active')) {
+                    choisesList.classList.remove('active');
+                    select.classList.remove('active');
+                } else {
+                    choisesList.classList.add('active');
+                    select.classList.add('active');
+                }
+            })
+        });
+    }
+
+    //маски контактов
+    const contactInput = document.getElementById('contact_data');
+    const radios = document.querySelectorAll('input[name="contact_type"]');
+    const maskInputs = document.querySelectorAll('input[data-mask]');
+    let currentMask = null;
+
+    function applyMaskFor(contactInput, type) {
+        if (!contactInput || !type) return;
+
+        if (currentMask) {
+            currentMask.remove();
+            currentMask = null;
+        }
+
+        switch (type) {
+            case 'tel':
+                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99', showMaskOnHover: false });
+                currentMask.mask(contactInput);
+                contactInput.type = 'tel';
+                contactInput.placeholder = '+7 (___) ___-__-__';
+            break;
+
+            case 'email':
+                currentMask = new Inputmask({ alias: 'email' });
+                currentMask.mask(contactInput);
+                contactInput.type = 'text';
+                contactInput.placeholder = 'name@example.com';
+            break;
+
+            default:
+                currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
+                currentMask.mask(contactInput);
+                contactInput.type = 'text';
+                contactInput.placeholder = 'id221396498';
+            break;
+        }
+        contactInput.value = '';
+    }
+
+    if(radios) {
+        radios.forEach(r => r.addEventListener('change', (e) => {
+            if(e.target.value) applyMaskFor(contactInput, e.target.value);
+        }));
+    }
+
+    if(maskInputs) {
+        maskInputs.forEach(input => {
+            applyMaskFor(input, input.dataset.mask);
+        });
+    }
+
+    // применить при загрузке
+    const checked = Array.from(radios).find(r => r.checked);
+    if (checked) {
+        //contactType = checked.value;
+        applyMaskFor(contactInput, checked.value);
+    }
 });

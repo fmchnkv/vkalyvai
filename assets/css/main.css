@@ -761,6 +761,7 @@
   cursor: pointer;
   background-color: #F5F5F5;
   border: 1px solid #F5F5F5;
+  font-weight: 600;
   transition-property: background-color, color, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -3162,7 +3163,7 @@ input::placeholder {
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding: 52px 0 0;
   opacity: 0;
   visibility: hidden;
@@ -3173,6 +3174,7 @@ input::placeholder {
 @media screen and (min-width: 1024px) {
   .modal {
     padding: 10px 40px;
+    align-items: center;
   }
 }
 .modal.active {
@@ -3189,6 +3191,7 @@ input::placeholder {
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-height: max-content;
 }
 .modal__wrapper::before {
   content: '';
