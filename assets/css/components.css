@@ -170,7 +170,7 @@
   }
 }
 .tag_btn {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   cursor: pointer;
   border: 1px solid #EBEBEB;
   padding: 7px 11px;
@@ -190,7 +190,7 @@
 .tag_btn:hover {
   background-color: #FC7827;
   border-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .tag_has-close {
   display: flex;
@@ -206,7 +206,7 @@
   width: 42px;
   height: 42px;
   border-radius: 32px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 8px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -229,7 +229,6 @@
 .icon-button.disabled,
 .icon-button.swiper-button-disabled {
   cursor: none;
-  pointer-events: none;
 }
 .icon-button.disabled path,
 .icon-button.swiper-button-disabled path {
@@ -246,7 +245,7 @@
   text-align: center;
   padding: 8px 12px;
   border-radius: 32px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border: 1px solid #EBEBEB;
   transition-property: background-color, border-color, color;
   transition-duration: 0.3s;
@@ -264,7 +263,7 @@
   border-color: #FFF2E9;
 }
 .tab.active {
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #FC7827;
   border-color: #FC7827;
 }
@@ -338,7 +337,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 32px;
   z-index: 10;
   cursor: pointer;
