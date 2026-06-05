@@ -30,6 +30,17 @@
     line-height: 24px;
   }
 }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  max-width: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.error {
+  border-color: #F14C4C !important;
+}
 .section-title {
   font-weight: 600;
   font-size: 20px;
@@ -118,6 +129,7 @@
   padding: 16px 16px 20px;
   border: 1px solid #EBEBEB;
   border-radius: 16px;
+  transition: all 0.3s ease;
 }
 .big-bubble span {
   font-weight: 400;
@@ -179,6 +191,23 @@
 }
 .lk__page-title {
   margin-bottom: 40px;
+}
+.lk-bubble__hidden-input {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  transition: all 0.3s ease;
+}
+.lk-bubble__hidden-input.showed {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 .lk-bubble:not(.bright-bubble):hover svg path {
   fill: #FC7827;
@@ -327,6 +356,18 @@
 }
 .lk-card {
   border: 1px solid #EBEBEB;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+.lk-card:hover {
+  border-color: #FC7827;
+  box-shadow: 0px 8px 64px -12px rgba(20, 20, 20, 0.12);
+  transition: all 0.3s ease;
+}
+.lk-card:hover button:not(.btn),
+.lk-card:hover a:not(.btn) {
+  color: #FC7827;
+  transition: all 0.3s ease;
 }
 .lk .deals-wrapper {
   padding-bottom: 64px;
@@ -338,6 +379,7 @@
 .lk .deals-item {
   border-radius: 20px;
   padding: 20px 16px;
+  transition: all 0.3s ease;
 }
 .lk .deals-item__header {
   margin-bottom: 17px;
@@ -353,12 +395,14 @@
   color: #999999;
   margin-bottom: 8px;
 }
-.lk .deals__title-block h3 {
+.lk .deals__title-block a {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   color: #232323;
   margin-bottom: 12px;
+  transition: all 0.3s ease;
 }
 .lk .deals__title-block ul {
   gap: 12px;
@@ -370,7 +414,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 70px;
 }
 .lk .deals__item {
   display: flex;
@@ -409,6 +454,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: all 0.3s ease;
 }
 .lk .responces-item__status {
   color: #232323;
@@ -452,6 +498,43 @@
 .lk .notify-list__item {
   padding: 16px;
   border-radius: 20px;
+  position: relative;
+}
+.lk .notify-list__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.lk .notify-list__item-header .avatar {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+.lk .notify-list__item-header span {
+  line-height: 18px;
+  font-weight: 500;
+}
+.lk .notify-list__item::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  right: 16px;
+  top: 16px;
+}
+.lk .notify-list__item.unseen::after {
+  background-color: #FFB700;
+}
+.lk .notify-list__item.new::after {
+  background-color: #5DB634;
+}
+.lk .notify-list__item.viewed::after {
+  background-color: #c2c2c2;
 }
 .lk .notify-list__item h3 {
   font-weight: 600;
@@ -459,18 +542,6 @@
   line-height: 100%;
   color: #232323;
   margin-bottom: 12px;
-  position: relative;
-}
-.lk .notify-list__item h3.unseen::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 8px;
-  height: 8px;
-  background-color: #5DB634;
-  border-radius: 100%;
-  right: 0;
-  top: 0;
 }
 .lk .notify-list__item p {
   font-weight: 400;
@@ -512,7 +583,6 @@
   display: flex;
   position: relative;
   padding: 12px 20px 12px 12px;
-  border: 1px solid #EBEBEB;
   border-radius: 16px;
 }
 .lk .companies-grid__item .icon-button {
@@ -759,4 +829,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.lk .contact__ok-btn {
+  display: block;
+  max-width: 0;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.lk .contact__ok-btn.showed {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transition: all 0.3s ease;
 }

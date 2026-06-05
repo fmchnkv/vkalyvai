@@ -1037,4 +1037,43 @@ document.addEventListener('DOMContentLoaded', () => {
         //contactType = checked.value;
         applyMaskFor(contactInput, checked.value);
     }
+
+    //открытие поля для редактирования
+    const lkForms = document.querySelectorAll('form.lk-bubble');
+
+    if(lkForms) {
+        lkForms.forEach(form => {
+            let input = form.querySelector('.lk-bubble__hidden-input');
+            let userValue = form.querySelector('p');
+            let editBtn = form.querySelector('.contact--edit');
+            let deleteBtn = form.querySelector('.contact__delete-btn');
+            let saveBtn = form.querySelector('.contact__ok-btn');
+
+            function addClasses(action) {
+                input.classList[action]('showed');
+                saveBtn.classList[action]('showed');
+                userValue.classList[action]('hidden');
+                editBtn.classList[action]('hidden');
+                deleteBtn.classList[action]('hidden');
+            }
+
+            editBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                addClasses('add');
+            })
+
+            saveBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                if(input.value) {
+                    form.classList.remove('error');
+                    userValue.textContent = input.value;
+                   // form.submit();
+                   addClasses('remove');
+                } else {
+                    form.classList.add('error');
+                }
+            })
+        });
+    }
 });

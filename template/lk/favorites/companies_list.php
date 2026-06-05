@@ -1,5 +1,5 @@
 <ul class="catalog__list companies-grid js-list" data-id="companies">
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
             </button>
         </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@
             </button>
         </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +110,7 @@
             </button>
         </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,7 +147,7 @@
             </button>
         </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,7 +184,7 @@
             </button>
         </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
