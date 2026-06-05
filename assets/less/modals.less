@@ -11,7 +11,7 @@
     z-index: 1000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 52px 0 0;
     opacity: 0;
     visibility: hidden;
@@ -21,6 +21,7 @@
 
     .media-min(1024px, {
         padding: 10px 40px;
+        align-items: center;
     });
 
     &.active {
@@ -38,6 +39,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        max-height: max-content;
 
         &::before {
             content: '';

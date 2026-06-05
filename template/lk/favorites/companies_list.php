@@ -1,5 +1,5 @@
 <ul class="catalog__list companies-grid js-list" data-id="companies">
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,8 +21,22 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,8 +58,22 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,8 +95,22 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,8 +132,22 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,8 +169,22 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
-    <li class="companies-grid__item">
+    <li class="companies-grid__item lk-card">
         <a href="/pages/company.php" class="companies-grid__link">
             <div class="companies-grid__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,5 +206,19 @@
                 <span class="companies-grid__counter">99 активных вакансий</span>
             </div>
         </a>
+        <div class="offers-list__actions offer-actions">
+            <button class="delete icon-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7358_23992)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7358_23992">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </li>
 </ul>

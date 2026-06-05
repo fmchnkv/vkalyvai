@@ -1,5 +1,5 @@
 <div class="deals-list grid-list">
-    <div class="deals-item lk-card">
+    <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state publish">Опубликовано</span>
             <div class="buttons-wrapper">
@@ -36,7 +36,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <h3>Начальник отдела</h3>
+                <a href="javascript:void(0)">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="deals-item lk-card">
+    <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state working">На доработке</span>
             <div class="buttons-wrapper">
@@ -92,7 +92,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <h3>Начальник отдела</h3>
+                <a href="javascript:void(0)">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -111,7 +111,7 @@
             </div>
         </div>
     </div>
-    <div class="deals-item lk-card">
+    <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state blocked">Заблокировано</span>
             <div class="buttons-wrapper">
@@ -148,7 +148,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <h3>Начальник отдела</h3>
+                <a href="javascript:void(0)">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -167,7 +167,7 @@
             </div>
         </div>
     </div>
-    <div class="deals-item lk-card">
+    <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state neutral">На модерации</span>
             <div class="buttons-wrapper">
@@ -204,7 +204,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <h3>Начальник отдела</h3>
+                <a href="javascript:void(0)">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>

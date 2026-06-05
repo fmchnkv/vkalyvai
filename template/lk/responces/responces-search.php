@@ -1,4 +1,4 @@
-<form class="catalog-nav__form inline-form">
+<form class="catalog-nav__form employer__search-form inline-form">
     <div class="inline-form__row">
         <div class="inline-form__input-wrapper">
             <label class="inline-form__label field">
