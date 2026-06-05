@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="lk__buttons">
-        <a href="#" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+        <a href="#" class="btn btn_size-m btn_neutral lk__btn_has-icon lk-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7002_1640)">
                 <path d="M16.7539 17.501H3.25391V16.001H16.7539V17.501ZM12.3604 2.52246C12.5591 2.52246 12.75 2.60168 12.8906 2.74219L15.0127 4.86426C15.1532 5.00489 15.2324 5.19573 15.2324 5.39453C15.2324 5.59334 15.1532 5.78418 15.0127 5.9248L6.43652 14.501H3.25391V11.3184L11.8301 2.74219C11.9707 2.60166 12.1615 2.52248 12.3604 2.52246ZM4.75391 11.9404V13.001H5.81445L13.4209 5.39453L12.3604 4.33398L4.75391 11.9404Z" fill="white"/>
@@ -309,7 +309,7 @@
                 </button>
             </div>
         </div>
-        <button class="contact-add btn btn_light btn_size-xl btn_has-icon">
+        <button class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7081_644)">
                     <path

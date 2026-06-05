@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="lk__buttons">
-        <a href="#" data-call-modal="edit__personal" class="btn btn_size-m btn_neutral btn_has-icon profile-btn">
+        <a href="#" data-call-modal="edit__personal" class="btn btn_size-m btn_neutral lk__btn_has-icon profile-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7002_1640)">
                     <path
@@ -39,7 +39,7 @@
                 </svg>
             </div>
         </a>
-        <a href="#" class="btn profile-btn detail__btn btn_primary btn_size-m btn_has-icon ">
+        <a href="#" class="btn profile-btn detail__btn btn_primary btn_size-m lk__btn_has-icon ">
             <span>Выйти</span>
             <div class="mob-icon">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -356,7 +356,7 @@
                 </button>
             </div>
         </form>
-        <button data-call-modal="add__contacts" class="contact-add btn btn_light btn_size-xl btn_has-icon">
+        <button data-call-modal="add__contacts" class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7081_644)">
                     <path
@@ -377,7 +377,7 @@
 <div class="lk__content detail__section">
     <div class="full-width lk__section-title-wrapper">
         <span class="subcaption">Образование</span>
-        <button data-call-modal="add__univercity" class="education-add transp-btn btn_has-icon">
+        <button data-call-modal="add__univercity" class="education-add transp-btn lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7081_644)">
                     <path
@@ -475,7 +475,7 @@
 <div class="lk__content detail__section">
     <div class="full-width lk__section-title-wrapper">
         <span class="subcaption">Знание языков</span>
-        <button data-call-modal="add__external-language" class="education-add transp-btn btn_has-icon">
+        <button data-call-modal="add__external-language" class="education-add transp-btn lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_7081_644)">
                     <path

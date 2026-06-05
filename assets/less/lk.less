@@ -3,23 +3,8 @@
 @import url(_variables.less);
 @import url(_mixins.less);
 
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-    max-height: 0;
-    max-width: 0;
-    visibility: hidden;
-    transition: all .3s ease;
-}
-
 .error {
     border-color: @error !important;
-}
-
-.section-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 110%;
 }
 
 .grid-bubbles {
@@ -68,33 +53,6 @@
     span {
         margin: 0;
     }
-}
-
-.with-icon {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    justify-content: space-between;
-
-    svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    &:hover, &:focus {
-        border-color: @primary;
-
-        .lk-bubble__buttons-wrapper {
-            opacity: 1;
-            pointer-events: all;
-            transition: opacity .3s ease-in-out;
-        }
-    }
-}
-
-.btn_has-icon {
-    .flex-center();
-    gap: 4px;
 }
 
 .transp-btn {
@@ -178,6 +136,48 @@
 .lk {
     padding-top: 82px;
     padding-bottom: 61px;
+
+    .with-icon {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: space-between;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover, &:focus {
+            border-color: @primary;
+
+            .lk-bubble__buttons-wrapper {
+                opacity: 1;
+                pointer-events: all;
+                transition: opacity .3s ease-in-out;
+            }
+        }
+    }
+
+    &__section-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 110%;
+    }
+
+    &__hidden {
+        opacity: 0;
+        pointer-events: none;
+        max-height: 0;
+        max-width: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+    }
+
+    &__btn_has-icon {
+        .flex-center();
+        gap: 4px;
+    }
 
     .page-title {
         font-size: 28px;

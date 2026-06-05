@@ -43,7 +43,7 @@
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
                 <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -58,7 +58,7 @@
                     </svg>
                     <span>Пригласить</span>
                 </button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
@@ -144,7 +144,7 @@
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
                 <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -159,7 +159,7 @@
                     </svg>
                     <span>Пригласить</span>
                 </button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
@@ -245,7 +245,7 @@
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
                 <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -260,7 +260,7 @@
                     </svg>
                     <span>Пригласить</span>
                 </button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
@@ -346,7 +346,7 @@
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
                 <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -361,7 +361,7 @@
                     </svg>
                     <span>Пригласить</span>
                 </button>
-                <button class="accept__btn btn btn_light btn_size-m btn_has-icon">
+                <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
