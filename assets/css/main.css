@@ -4018,7 +4018,7 @@ img {
   width: 100%;
   flex: 0 0 auto;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 801px) {
   .main-hero__input-wrapper_select {
     width: 180px;
   }
@@ -4043,6 +4043,11 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 32px;
+  }
+}
+@media screen and (min-width: 801px) {
+  .main-hero__btn {
+    width: auto;
   }
 }
 @media screen and (min-width: 1441px) {

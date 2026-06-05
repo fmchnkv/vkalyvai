@@ -187,7 +187,7 @@ img {
             width: 100%;
             flex: 0 0 auto;
 
-            .media-min(1280px, {
+            .media-min(801px, {
                 width: 180px;
             });
 
@@ -216,13 +216,14 @@ img {
             border-radius: @border-radius-xl;
         });
 
+        .media-min(801px, {
+            width: auto;
+        });
+
+
         .media-min(1441px, {
             padding: 19px;
         });
-
-        span {
-
-        }
 
         svg {
             display: none;
