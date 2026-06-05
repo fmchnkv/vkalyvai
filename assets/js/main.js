@@ -1053,8 +1053,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 input.classList[action]('showed');
                 saveBtn.classList[action]('showed');
                 userValue.classList[action]('hidden');
-                editBtn.classList[action]('hidden');
-                deleteBtn.classList[action]('hidden');
+                editBtn.classList[action]('lk__hidden');
+                deleteBtn.classList[action]('lk__hidden');
             }
 
             editBtn.addEventListener('click', function(e) {

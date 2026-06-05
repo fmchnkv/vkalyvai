@@ -4,8 +4,8 @@
     <button class="btn add-resume-btn detail__btn btn_primary btn_size-l">Добавить вакансию</button>
 </div>
 <div class="section-title__wrapper employer__title-wrapper full-width">
-    <h2 class="section-title vacancies-title">Кандидаты для вас</h2>
-    <a href="javascript:void(0)" class="vacancies-all desk-elem transp-btn btn_has-icon">
+    <h2 class="lk__section-title vacancies-title">Кандидаты для вас</h2>
+    <a href="javascript:void(0)" class="vacancies-all desk-elem transp-btn lk__btn_has-icon">
         <span>Смотреть все</span>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_7142_9460)">
@@ -22,7 +22,7 @@
     </a>
 </div>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/resume_list.php"); ?>
-<a href="javascript:void(0)" class="vacancies-all transp-btn btn_has-icon">
+<a href="javascript:void(0)" class="vacancies-all transp-btn lk__btn_has-icon">
     <span>Смотреть все</span>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_7142_9460)">
