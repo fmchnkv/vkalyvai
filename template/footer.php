@@ -332,6 +332,126 @@
     </div>
 </div>
 
+<div data-modal="edit__company" class="modal lk__modal">
+    <div class="modal__wrapper">
+        <button class="modal__close js-modal-close icon-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4751_70498)">
+                <path d="M17.7324 7.54614L13.2773 12.0012L17.7324 16.4563L16.46 17.7288L12.0049 13.2737L7.5498 17.7288L6.27734 16.4563L10.7324 12.0012L6.27734 7.54614L7.5498 6.27368L12.0049 10.7288L16.46 6.27368L17.7324 7.54614Z" fill="#999999"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_4751_70498">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </button>
+        <form action="" method="post" class="lk__main-form lk__form">
+            <div class="lk__main-form-inputs lk__form-inputs">
+                <div class="lk__input-element">
+                    <span class="subcaption">Название компании</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" value="" placeholder="Название компании">
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">ФИО пользователя</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" value="" placeholder="Иванов Иван Иванович">
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">ИНН</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" data-mask="inn" value="" placeholder="0000000000000">
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Тип регистрации</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="search_status" value="Организация" name="">
+                            <div class="lk__custom-select-choise">Организация</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">Организация</div>
+                                <div class="lk__custom-select-item">ИП</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Сфера деятельности</span>
+                    <div class="lk__input-wrapper">
+                        <div class="lk__custom-select">
+                            <input type="hidden" id="search_status" value="Медицинская клиника" name="">
+                            <div class="lk__custom-select-choise">Медицинская клиника</div>
+                        </div>
+                        <div class="lk__custom-select-list">
+                            <div class="lk__custom-select-list-container">
+                                <div class="lk__custom-select-item active">Медицинская клиника</div>
+                                <div class="lk__custom-select-item">Медицинская клиника</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Регион</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" value="" placeholder="Иванов Иван Иванович">
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Сайт</span>
+                    <div class="lk__input-wrapper">
+                        <input type="text" value="" placeholder="https://blueberry-digital.ru/">
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Пароль</span>
+                    <div class="lk__input-wrapper lk__btn_has-icon password-wrapper">
+                        <input type="password" value="" placeholder="">
+                        <button class="lk__btn_has-icon btn transp-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8102_14688)">
+                            <path d="M12.0039 3.90137C16.8567 3.90137 20.8943 7.39298 21.7412 12.001C20.8952 16.609 16.8567 20.1006 12.0039 20.1006C7.15111 20.1006 3.1135 16.609 2.2666 12.001C3.1126 7.39298 7.15111 3.90137 12.0039 3.90137ZM12.0039 5.70898C10.1694 5.70898 8.38898 6.33067 6.9541 7.47363C5.51922 8.61661 4.51468 10.213 4.10449 12.001C4.51315 13.7903 5.51729 15.3878 6.95215 16.5322C8.38717 17.6767 10.1684 18.3004 12.0039 18.3008C13.8394 18.3004 15.6206 17.6767 17.0557 16.5322C18.4905 15.3878 19.4947 13.7903 19.9033 12.001C19.4931 10.213 18.4886 8.61661 17.0537 7.47363C15.6188 6.33067 13.8384 5.70898 12.0039 5.70898ZM12.0039 7.95117C13.078 7.95117 14.1086 8.3772 14.8682 9.13672C15.6277 9.89624 16.0537 10.9269 16.0537 12.001C16.0537 13.0751 15.6277 14.1057 14.8682 14.8652C14.1086 15.6248 13.078 16.0508 12.0039 16.0508C10.9298 16.0508 9.89917 15.6248 9.13965 14.8652C8.38013 14.1057 7.9541 13.0751 7.9541 12.001C7.9541 10.9269 8.38013 9.89624 9.13965 9.13672C9.89917 8.3772 10.9298 7.95117 12.0039 7.95117ZM12.0039 9.75098C11.4072 9.75098 10.835 9.9882 10.4131 10.4102C9.99113 10.8321 9.75391 11.4042 9.75391 12.001C9.75391 12.5977 9.99113 13.1698 10.4131 13.5918C10.835 14.0138 11.4072 14.251 12.0039 14.251C12.6006 14.251 13.1728 14.0138 13.5947 13.5918C14.0167 13.1698 14.2539 12.5977 14.2539 12.001C14.2539 11.4042 14.0167 10.8321 13.5947 10.4102C13.1728 9.9882 12.6006 9.75098 12.0039 9.75098Z" fill="#232323"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_8102_14688">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="lk__input-element">
+                    <span class="subcaption">Повторить пароль</span>
+                    <div class="lk__input-wrapper lk__btn_has-icon password-wrapper">
+                        <input type="password" value="" placeholder="">
+                        <button class="lk__btn_has-icon btn transp-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8102_14688)">
+                            <path d="M12.0039 3.90137C16.8567 3.90137 20.8943 7.39298 21.7412 12.001C20.8952 16.609 16.8567 20.1006 12.0039 20.1006C7.15111 20.1006 3.1135 16.609 2.2666 12.001C3.1126 7.39298 7.15111 3.90137 12.0039 3.90137ZM12.0039 5.70898C10.1694 5.70898 8.38898 6.33067 6.9541 7.47363C5.51922 8.61661 4.51468 10.213 4.10449 12.001C4.51315 13.7903 5.51729 15.3878 6.95215 16.5322C8.38717 17.6767 10.1684 18.3004 12.0039 18.3008C13.8394 18.3004 15.6206 17.6767 17.0557 16.5322C18.4905 15.3878 19.4947 13.7903 19.9033 12.001C19.4931 10.213 18.4886 8.61661 17.0537 7.47363C15.6188 6.33067 13.8384 5.70898 12.0039 5.70898ZM12.0039 7.95117C13.078 7.95117 14.1086 8.3772 14.8682 9.13672C15.6277 9.89624 16.0537 10.9269 16.0537 12.001C16.0537 13.0751 15.6277 14.1057 14.8682 14.8652C14.1086 15.6248 13.078 16.0508 12.0039 16.0508C10.9298 16.0508 9.89917 15.6248 9.13965 14.8652C8.38013 14.1057 7.9541 13.0751 7.9541 12.001C7.9541 10.9269 8.38013 9.89624 9.13965 9.13672C9.89917 8.3772 10.9298 7.95117 12.0039 7.95117ZM12.0039 9.75098C11.4072 9.75098 10.835 9.9882 10.4131 10.4102C9.99113 10.8321 9.75391 11.4042 9.75391 12.001C9.75391 12.5977 9.99113 13.1698 10.4131 13.5918C10.835 14.0138 11.4072 14.251 12.0039 14.251C12.6006 14.251 13.1728 14.0138 13.5947 13.5918C14.0167 13.1698 14.2539 12.5977 14.2539 12.001C14.2539 11.4042 14.0167 10.8321 13.5947 10.4102C13.1728 9.9882 12.6006 9.75098 12.0039 9.75098Z" fill="#232323"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_8102_14688">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="lk__main-form-btn">
+                <button type="submit" class="btn btn_size-l full-width btn_secondary">Применить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div data-modal="add__contacts" class="modal lk__modal">
     <div class="modal__wrapper">
         <button class="modal__close js-modal-close icon-button">

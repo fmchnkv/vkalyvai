@@ -984,6 +984,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactInput = document.getElementById('contact_data');
     const radios = document.querySelectorAll('input[name="contact_type"]');
     const maskInputs = document.querySelectorAll('input[data-mask]');
+    const passwordWrappers = document.querySelectorAll('.password-wrapper');
     let currentMask = null;
 
     function applyMaskFor(contactInput, type) {
@@ -996,7 +997,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (type) {
             case 'tel':
-                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99', showMaskOnHover: false });
+                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99'});
                 currentMask.mask(contactInput);
                 contactInput.type = 'tel';
                 contactInput.placeholder = '+7 (___) ___-__-__';
@@ -1009,14 +1010,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactInput.placeholder = 'name@example.com';
             break;
 
-            default:
+            case 'inn':
+                currentMask = new Inputmask({ mask: '999999999999'});
+                currentMask.mask(contactInput);
+                contactInput.type = 'text';
+                contactInput.placeholder = '999999999999';
+            break;
+
+            case 'password':
+                currentMask = new Inputmask({ mask: '******************'});
+                currentMask.mask(contactInput);
+                contactInput.type = 'password';
+                contactInput.placeholder = 'admin';
+            break;
+
+            case 'soc':
                 currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = 'id221396498';
             break;
+
+            default:
+                currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
+                currentMask.mask(contactInput);
+                contactInput.type = 'text';
+                contactInput.placeholder = 'Введите текст';
+            break;
         }
         contactInput.value = '';
+    }
+
+    function removeMask(input) {
+        if (input && input.inputmask) {
+            input.inputmask.remove();
+            input.inputmask = null;
+        }
     }
 
     if(radios) {
@@ -1031,6 +1060,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    //отображение и скрытие пароля
+    if(passwordWrappers) {
+        passwordWrappers.forEach(wrapper => {
+            let input = wrapper.querySelector('input');
+            let btnShow = wrapper.querySelector('button');
+
+            if(input && btnShow) {
+                //const originalType = input.type;
+                
+                btnShow.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    if(input.type == 'text') {
+                        input.type = 'password';
+                    } else {
+                        input.type = 'text';
+                    }
+                });
+            }
+        });
+    }
+
     // применить при загрузке
     const checked = Array.from(radios).find(r => r.checked);
     if (checked) {
@@ -1039,15 +1090,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //открытие поля для редактирования
-    const lkForms = document.querySelectorAll('form.lk-bubble');
+    const lkForms = document.querySelectorAll('form.input-edit-form');
 
     if(lkForms) {
         lkForms.forEach(form => {
             let input = form.querySelector('.lk-bubble__hidden-input');
             let userValue = form.querySelector('p');
-            let editBtn = form.querySelector('.contact--edit');
-            let deleteBtn = form.querySelector('.contact__delete-btn');
-            let saveBtn = form.querySelector('.contact__ok-btn');
+            let editBtn = form.querySelector('.btn--edit');
+            let deleteBtn = form.querySelector('.btn--delete');
+            let saveBtn = form.querySelector('.btn--ok');
 
             function addClasses(action) {
                 input.classList[action]('showed');

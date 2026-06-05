@@ -1,6 +1,6 @@
-<div class="employer__responces-list full-width-list">
+<div class="employer__responces-list grid-list">
     <div class="employer__responces-item lk-card">
-        <span class="employer__responces-item__status state publish">Опубликовано</span>
+        <span class="employer__responces-item__status state publish">Приглашение</span>
         <div class="employer__responces-item__vacancy">Название вакансии</div>
         <div class="employer__responces-item__body">
             <div class="employer__responces-item__title">
@@ -42,7 +42,19 @@
         </div>
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
+                <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8147_26166)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0039 2.50098C14.1462 2.50098 17.5039 5.85873 17.5039 10.001C17.5039 14.1432 14.1462 17.501 10.0039 17.501C8.77193 17.5028 7.55815 17.2 6.47169 16.6191L2.50391 17.501L3.38575 13.5332C2.8049 12.4467 2.50206 11.233 2.50391 10.001C2.50391 5.85873 5.86167 2.50098 10.0039 2.50098Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8147_26166">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <span>Чат</span>
+                </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
@@ -56,7 +68,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Пригласить</span>
+                    <span class="desk-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,9 +76,8 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span>Отказать</span>
+                    <span class="desk-elem">Отказать</span>
                 </button>
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +154,19 @@
         </div>
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
+                <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8147_26166)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0039 2.50098C14.1462 2.50098 17.5039 5.85873 17.5039 10.001C17.5039 14.1432 14.1462 17.501 10.0039 17.501C8.77193 17.5028 7.55815 17.2 6.47169 16.6191L2.50391 17.501L3.38575 13.5332C2.8049 12.4467 2.50206 11.233 2.50391 10.001C2.50391 5.85873 5.86167 2.50098 10.0039 2.50098Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8147_26166">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <span>Чат</span>
+                </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
@@ -157,7 +180,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Пригласить</span>
+                    <span class="desk-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,9 +188,8 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span>Отказать</span>
+                    <span class="desk-elem">Отказать</span>
                 </button>
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +266,19 @@
         </div>
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
+                <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8147_26166)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0039 2.50098C14.1462 2.50098 17.5039 5.85873 17.5039 10.001C17.5039 14.1432 14.1462 17.501 10.0039 17.501C8.77193 17.5028 7.55815 17.2 6.47169 16.6191L2.50391 17.501L3.38575 13.5332C2.8049 12.4467 2.50206 11.233 2.50391 10.001C2.50391 5.85873 5.86167 2.50098 10.0039 2.50098Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8147_26166">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <span>Чат</span>
+                </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
@@ -258,7 +292,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Пригласить</span>
+                    <span class="desk-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,9 +300,8 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span>Отказать</span>
+                    <span class="desk-elem">Отказать</span>
                 </button>
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -303,7 +336,7 @@
 
 
     <div class="employer__responces-item lk-card">
-        <span class="employer__responces-item__status state neutral">Просмотрен</span>
+        <span class="employer__responces-item__status state neutral">Не просмотрен</span>
         <div class="employer__responces-item__vacancy">Название вакансии</div>
         <div class="employer__responces-item__body">
             <div class="employer__responces-item__title">
@@ -345,7 +378,19 @@
         </div>
         <div class="employer__responces-item__footer">
             <div class="buttons-wrapper">
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
+                <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8147_26166)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0039 2.50098C14.1462 2.50098 17.5039 5.85873 17.5039 10.001C17.5039 14.1432 14.1462 17.501 10.0039 17.501C8.77193 17.5028 7.55815 17.2 6.47169 16.6191L2.50391 17.501L3.38575 13.5332C2.8049 12.4467 2.50206 11.233 2.50391 10.001C2.50391 5.85873 5.86167 2.50098 10.0039 2.50098Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8147_26166">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <span>Чат</span>
+                </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7407_21646)">
@@ -359,7 +404,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Пригласить</span>
+                    <span class="desk-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -367,9 +412,8 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span>Отказать</span>
+                    <span class="desk-elem">Отказать</span>
                 </button>
-                <button class="chat__btn btn btn_primary btn_size-m">Чат</button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
