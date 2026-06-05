@@ -41,7 +41,7 @@
         </div>
 
         <div class="offers-list__header offer-header">
-            <h3 class="offer-header__title"><a href="/pages/rezume.php" class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского языка</a></h3>
+            <a href="/pages/rezume.php" class="offer-header__title">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского языка</a>
             <ul class="offer-header__main">
                 <li class="offer-header__main-item">Мужчина, 42 года</li>
                 <li class="offer-header__main-item has-dot">Был сегодня</li>

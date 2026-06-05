@@ -137,15 +137,26 @@
             </div>
 
             <ul class="offers__list offers-list js-list" data-id="rezumes">
+                <? 
+                $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+                ?>
                 <? for ($i = 0; $i < 4; $i++) {
-                    include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php';
+                    if ($auth && $auth == 'N') {
+                        include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item_empty.php';
+                    } else {
+                        include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php';
+                    }
                 } ?>
             </ul>
 
-            <div class="offers__nav">
-                <button class="btn btn_outline btn_size-m js-load" data-id="rezumes">Показать еще&nbsp;<span>4</span></button>
-                <a href="/pages/rezumes.php" class="btn btn_primary btn_size-m">Каталог резюме</a>
-            </div>
+            <? if ($auth && $auth == 'N') : ?>
+                
+            <? else : ?>
+                <div class="offers__nav">
+                    <button class="btn btn_outline btn_size-m js-load" data-id="rezumes">Показать еще&nbsp;<span>4</span></button>
+                    <a href="/pages/rezumes.php" class="btn btn_primary btn_size-m">Каталог резюме</a>
+                </div>
+            <? endif; ?>
         </div>
     </div>
 </section>

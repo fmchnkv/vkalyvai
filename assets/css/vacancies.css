@@ -78,6 +78,9 @@
     line-height: 20px;
   }
 }
+.offers-grid__title:visited {
+  color: #999999;
+}
 .offers-grid__title:hover {
   color: #FC7827;
 }
