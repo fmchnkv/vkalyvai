@@ -95,7 +95,7 @@
 <div class="lk__content detail__section">
     <span class="subcaption">Контакты</span>
     <div class="grid-bubbles grid-list personal-bubbles">
-        <form class="lk-bubble tight-bubble with-icon bright-bubble" method="post">
+        <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble" method="post">
             <div class="lk-bubble__content">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7081_845)">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <button class="contact--edit btn">
+                <button class="btn--edit btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2334)">
                         <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#232323"/>
@@ -128,7 +128,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="delete" class="contact--submit btn contact__delete-btn">
+                <button type="submit" name="action" value="delete" class="contact--submit btn btn--delete">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2339)">
                         <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#232323"/>
@@ -140,7 +140,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="save" class="contact--submit contact__ok-btn btn">
+                <button type="submit" name="action" value="save" class="contact--submit btn--ok btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"/>
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"/>
@@ -149,7 +149,7 @@
                 </button>
             </div>
         </form>
-        <form class="lk-bubble tight-bubble with-icon bright-bubble">
+        <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
             <div class="lk-bubble__content">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.1035 4.50098C20.3422 4.50098 20.5715 4.59587 20.7402 4.76465C20.909 4.93343 21.0039 5.16267 21.0039 5.40137V18.6006C21.0039 18.8393 20.909 19.0685 20.7402 19.2373C20.5715 19.4061 20.3422 19.501 20.1035 19.501H3.9043C3.6656 19.501 3.43636 19.4061 3.26758 19.2373C3.0988 19.0685 3.00391 18.8393 3.00391 18.6006V5.40137C3.00391 5.16267 3.0988 4.93343 3.26758 4.76465C3.43636 4.59587 3.6656 4.50098 3.9043 4.50098H20.1035ZM4.80371 17.7012H19.2041V8.31543L12.0684 14.7051L4.80371 8.29492V17.7012ZM12.0586 12.2969L18.7559 6.30078H5.26367L12.0586 12.2969Z" fill="#FC7827"/>
@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <button class="contact--edit btn">
+                <button class="btn--edit btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2334)">
                         <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#232323"/>
@@ -173,7 +173,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="delete" class="contact--submit btn contact__delete-btn">
+                <button type="submit" name="action" value="delete" class="contact--submit btn btn--delete">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2339)">
                         <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#232323"/>
@@ -185,7 +185,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="save" class="contact--submit contact__ok-btn btn">
+                <button type="submit" name="action" value="save" class="contact--submit btn--ok btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"/>
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"/>
@@ -194,7 +194,7 @@
                 </button>
             </div>
         </form>
-        <form class="lk-bubble tight-bubble with-icon bright-bubble">
+        <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
             <div class="lk-bubble__content">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7081_631)">
@@ -211,11 +211,11 @@
                 <div class="lk-bubble__text-wrapper">
                     <span>Вконтакте</span>
                     <p>id221396498</p>
-                    <input type="text" data-mask="text" value="" class="lk-bubble__hidden-input">
+                    <input type="text" data-mask="soc" value="" class="lk-bubble__hidden-input">
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <button class="contact--edit btn">
+                <button class="btn--edit btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2334)">
                         <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#232323"/>
@@ -227,7 +227,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="delete" class="contact--submit btn contact__delete-btn">
+                <button type="submit" name="action" value="delete" class="contact--submit btn btn--delete">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2339)">
                         <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#232323"/>
@@ -239,7 +239,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="save" class="contact--submit contact__ok-btn btn">
+                <button type="submit" name="action" value="save" class="contact--submit btn--ok btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"/>
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"/>
@@ -248,7 +248,7 @@
                 </button>
             </div>
         </form>
-        <form class="lk-bubble tight-bubble with-icon bright-bubble">
+        <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
             <div class="lk-bubble__content">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7081_1003)">
@@ -265,11 +265,11 @@
                 <div class="lk-bubble__text-wrapper">
                     <span>Телеграм</span>
                     <p>@asdasdasd</p>
-                    <input type="text" data-mask="text" value="" class="lk-bubble__hidden-input">
+                    <input type="text" data-mask="soc" value="" class="lk-bubble__hidden-input">
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <button class="contact--edit btn">
+                <button class="btn--edit btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2334)">
                         <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#232323"/>
@@ -281,7 +281,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="delete" class="contact--submit btn contact__delete-btn">
+                <button type="submit" name="action" value="delete" class="contact--submit btn btn--delete">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2339)">
                         <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#232323"/>
@@ -293,7 +293,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="save" class="contact--submit contact__ok-btn btn">
+                <button type="submit" name="action" value="save" class="contact--submit btn--ok btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"/>
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"/>
@@ -302,7 +302,7 @@
                 </button>
             </div>
         </form>
-        <form class="lk-bubble tight-bubble with-icon bright-bubble">
+        <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
             <div class="lk-bubble__content">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7081_356)">
@@ -319,11 +319,11 @@
                 <div class="lk-bubble__text-wrapper">
                     <span>МАХ</span>
                     <p>88888888888</p>
-                    <input type="text" data-mask="text" value="" class="lk-bubble__hidden-input">
+                    <input type="text" data-mask="soc" value="" class="lk-bubble__hidden-input">
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <button class="contact--edit btn">
+                <button class="btn--edit btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2334)">
                         <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#232323"/>
@@ -335,7 +335,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="delete" class="contact--submit btn contact__delete-btn">
+                <button type="submit" name="action" value="delete" class="contact--submit btn btn--delete">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7002_2339)">
                         <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#232323"/>
@@ -347,7 +347,7 @@
                         </defs>
                     </svg>
                 </button>
-                <button type="submit" name="action" value="save" class="contact--submit contact__ok-btn btn">
+                <button type="submit" name="action" value="save" class="contact--submit btn--ok btn">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"/>
                     <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"/>
