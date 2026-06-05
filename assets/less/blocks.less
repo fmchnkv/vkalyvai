@@ -2,19 +2,19 @@
 @import url(_mixins.less);
 
 .breadcrumbs {
-    padding: 100px 0 0;
-    margin-bottom: 40px;
+    padding: 80px 0 0;
+    margin-bottom: 24px;
 
     .media-min(768px, {
-        padding: 110px 0 0;
+        padding: 90px 0 0;
     });
 
     .media-min(1441px, {
-        padding: 126px 0 0;
+        padding: 100px 0 0;
     });
 
     .media-min(1024px, {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     });
 
     &__list {
@@ -26,7 +26,7 @@
         });
 
         & ~ .breadcrumbs__back {
-            margin-top: 32px;
+            margin-top: 24px;
         }
     }
 
@@ -52,11 +52,11 @@
 .sorting {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 12px;
 
     .media-min(768px, {
         flex-direction: row;
-        gap: 24px;
+        gap: 16px;
         flex-wrap: wrap;
     });
     
@@ -337,11 +337,7 @@
 }
 
 .searching-save {
-    margin-bottom: 56px;
-
-    .media-min(1024px, {
-        margin-bottom: 76px;
-    });
+    .section-margin();
 
     &__inner {
         position: relative;
@@ -414,7 +410,6 @@
         align-self: baseline;
 
         .media-min(768px, {
-            .btn-size(23px 31px, 18px); 
             align-self: flex-end;
         });
 
@@ -425,14 +420,9 @@
 
     &__text {
 
-        .media-min(768px, {
+        .media-min(1441px, {
             font-size: @f-body-m;
             line-height: @lh-body-m;
-        });
-
-        .media-min(1441px, {
-            font-size: @f-body-l;
-            line-height: @lh-body-l;
         });
     }
 
@@ -561,7 +551,7 @@
 
             .media-min(768px, {
                 display: block;
-                width: 840px;
+                width: 720px;
                 left: 460px;
                 right: auto;
                 bottom: -36px;
@@ -570,7 +560,7 @@
 
             .media-min(1441px, {
                 left: 749px;
-                bottom: 0;
+                bottom: -20px;
             });
         }
 
@@ -593,7 +583,7 @@
             flex-direction: column;
 
             .media-min(768px, {
-                gap: 48px;
+                gap: 32px;
                 max-width: 745px;
             });
         }
@@ -605,7 +595,7 @@
             .media-min(768px, {
                 display: flex;
                 align-items: center;
-                min-height: 480px;
+                min-height: 420px;
             });
 
             .media-min(1024px, {
@@ -613,7 +603,7 @@
             });
 
             .media-min(1441px, {
-                min-height: 560px; 
+                min-height: 480px; 
             });
         }
 
@@ -645,13 +635,13 @@
         });
 
         .cta__btn {
-            padding: 19px 31px;
+            padding: 12px 16px;
             font-size: @f-body-m;
             line-height: @lh-body-m;
             width: 100%;
 
             .media-min(768px, {
-                padding: 23px 31px;
+                padding: 16px 24px;
             });
         }
     }
@@ -772,6 +762,7 @@
     img {
         display: block;
         max-width: 100%;
+        height: auto;
         margin-bottom: 24px;
         border-radius: @border-radius-m;
         border: 1px solid @border-neutral;

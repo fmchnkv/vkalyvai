@@ -26,14 +26,14 @@
     flex-direction: column;
     padding: 16px;
 
-    min-height: 260px;
+    min-height: 220px;
     
     transition-property: box-shadow;
     .transition-ext(.3s, ease-in-out);
     
     .media-min(768px, {
         padding: 24px;
-        min-height: 298px;
+        min-height: 260px;
     });
     
     &:hover {
@@ -43,15 +43,22 @@
             color: @primary;
         }
     }
+
+    &:visited {
+
+        .card__title {
+            color: @neutral;
+        }
+    }
     
     &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
 
         .media-min(1441px, {
-            margin-bottom: 48px;
+            margin-bottom: 32px;
         });
     }
     
@@ -91,6 +98,7 @@
 
     &__description {
         .clamp-text(2);
+        margin-bottom: 16px;
 
         .media-min(1441px, {
             font-size: @f-body-m;

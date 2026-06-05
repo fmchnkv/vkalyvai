@@ -9,8 +9,8 @@
                 <div class="about-hero__bottom">
                     <p class="about-hero__text">Удобный поиск вакансий и сотрудников!<br>Минимум действий — максимум результата!</p>
                     <div class="about-hero__actions">
-                        <a href="/pages/vacancies.php" class="about-hero__btn btn btn_primary btn_size-xl">Каталог вакансий</a>
-                        <a href="/pages/rezumes.php" class="about-hero__btn btn btn_secondary btn_size-xl">Каталог резюме</a>
+                        <a href="/pages/vacancies.php" class="about-hero__btn btn btn_primary btn_size-m">Каталог вакансий</a>
+                        <a href="/pages/rezumes.php" class="about-hero__btn btn btn_secondary btn_size-m">Каталог резюме</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <p class="about-info__text about-info__text_first"><span class="about-info__accent">«Вкалывай»</span> — это портал для тех, кто хочет работать нормально, а не выгорать на старте.<br><br>Мы убрали всё лишнее: долгие анкеты, запутанные фильтры и бесконечные клики.</p>
                 <span class="about-info__caption">Здесь все просто!</span>
                 <div class="about-info__steps">
-                    <div class="about-info__step btn btn_light btn_size-m btn_no-hover btn_has-icon">
+                    <div class="about-info__step btn_no-hover btn_has-icon">
                         <span>Нашел</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_4950_2861)">
@@ -39,7 +39,7 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="about-info__step btn btn_light btn_size-m btn_no-hover btn_has-icon">
+                    <div class="about-info__step btn_no-hover btn_has-icon">
                         <span>Откликнулся</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_4950_2861)">
@@ -52,18 +52,8 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="about-info__step btn btn_light btn_size-m btn_no-hover btn_has-icon">
+                    <div class="about-info__step btn_no-hover btn_has-icon">
                         <span>Договорился</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_4950_2861)">
-                                <path d="M10.3066 3.63764C10.5995 3.34475 11.0743 3.34475 11.3672 3.63764L17.2002 9.47065C17.4931 9.76354 17.4931 10.2383 17.2002 10.5312L11.3672 16.3652C11.0743 16.6575 10.5994 16.6577 10.3066 16.3652C10.0139 16.0724 10.0142 15.5976 10.3066 15.3046L14.8594 10.7509H3.33691C2.92296 10.7507 2.58709 10.4149 2.58691 10.0009C2.58709 9.58696 2.92296 9.2511 3.33691 9.25092H14.8594L10.3066 4.69819C10.0139 4.4054 10.0141 3.93056 10.3066 3.63764Z" fill="#FC7827" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_4950_2861">
-                                    <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
                     </div>
                 </div>
                 <p class="about-info__text about-info__text_second">Работу или сотрудников можно найти быстро, удобно и без стресса. Потому что поиск работы — <span class="about-info__accent">это часть жизни, а не отдельная работа.</span></p>
@@ -86,9 +76,9 @@
                 <span class="about-features__caption">Возможности для соискателя</span>
                 <ul class="about-features__tabs">
                     <li class="about-features__tab btn btn_primary btn_size-s btn_no-hover">Создать резюме</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Поиск вакансий</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Поиск компаний</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Помощь</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск вакансий</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск компаний</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Помощь</li>
                 </ul>
             </li>
             <li class="about-features__item">
@@ -98,9 +88,9 @@
                 <span class="about-features__caption">Возможности для работодателя</span>
                 <ul class="about-features__tabs">
                     <li class="about-features__tab btn btn_primary btn_size-s btn_no-hover">Создать вакансию</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Поиск кандидатов</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Поиск компаний</li>
-                    <li class="about-features__tab tab tab_size-m tab_no-hover">Помощь</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск кандидатов</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск компаний</li>
+                    <li class="about-features__tab tab btn_size-s tab_no-hover">Помощь</li>
                 </ul>
             </li>
         </ul>

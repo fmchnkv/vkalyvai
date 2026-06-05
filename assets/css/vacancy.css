@@ -1,31 +1,63 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 .vacancy {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .vacancy {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 .vacancy__header {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy__header {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .vacancy__header {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 .vacancy .companies-grid {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy .companies-grid {
@@ -33,42 +65,42 @@
   }
 }
 .vacancy__tags {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy__tags {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .vacancy__tags {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 .vacancy__cta {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy__cta {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .vacancy__cta {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 .vacancy__content {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy__content {
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .vacancy__content {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
   }
 }
 .vacancy-header__title {
@@ -90,7 +122,7 @@
   }
 }
 .vacancy-header__sale {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   display: block;
   color: #FC7827;
   font-size: 20px;
@@ -110,7 +142,7 @@
   }
 }
 .vacancy-header__tags {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .vacancy-header__tags {

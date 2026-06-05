@@ -791,6 +791,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 urlAjax = '/ajax/faq.php';
             } else if (id == 'help-vacancies' || id == 'help-rezumes') {
                 urlAjax = '/ajax/help.php';
+            } else if (id == 'companies') {
+                urlAjax = '/ajax/companies.php';
             }
 
             const response = await fetch(urlAjax, {

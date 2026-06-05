@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="feedback__submit-row">
-                        <button class="feedback__btn btn btn_primary btn_size-l">Отправить заявку</button>
+                        <button class="feedback__btn btn btn_primary btn_size-m">Отправить заявку</button>
                         <label class="checkbox">
                             <input type="checkbox" class="checkbox__input">
                             <p class="checkbox__label">Даю согласие на обработку персональных данных.</p>

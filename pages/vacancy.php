@@ -111,6 +111,7 @@
                         <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
                     </div>
 
+                    <? /*
                     <div class="vacancy__map map">
                         <span class="subcaption">Вакансия на карте</span>
                         <div class="map__wrapper">
@@ -124,6 +125,7 @@
                             </div>
                         </div>
                     </div>
+                    */ ?>
                 </section>
 
                 <div class="feedback" id="feedback">
@@ -167,7 +169,7 @@
                                 </ul>
                             </div>
     
-                            <button class="feedback__btn btn btn_primary btn_size-l">Откликнуться</button>
+                            <button class="feedback__btn btn btn_primary btn_size-m">Откликнуться</button>
                         </form>
                     </div>
                 </div>
@@ -175,7 +177,7 @@
 
             <div class="detail__sidebar">
                 <div class="detail__actions">
-                    <button class="detail__btn btn btn_primary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
+                    <button class="detail__btn btn btn_primary btn_size-m js-anchor-feedback" data-id="feedback">Откликнуться</button>
                     <button class="detail__like btn btn_light btn_size-m btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_4731_6868)">

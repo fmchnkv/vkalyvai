@@ -43,6 +43,7 @@
 @media screen and (min-width: 1441px) {
   .companies-grid {
     gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .companies-grid__link {

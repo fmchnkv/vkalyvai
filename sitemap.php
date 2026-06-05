@@ -33,6 +33,21 @@ $arMenu = [
     '/pages/contacts.php' => 'Контакты',
     '/pages/privacy.php' => 'Политика конфиденциальности',
     '/pages/404.php' => '404',
+    '/lk/auth.php' => 'Авторизация (Входная страница)',
+    '/lk/auth.php?role=1' => 'Авторизация (Соискатель)',
+    '/lk/auth.php?role=2' => 'Авторизация (Работодатель)',
+    '/lk/auth.php?pass=1' => 'Восстановление пароля',
+    '/lk/auth.php?pass=2' => 'Смена пароля',
+    '/lk/job_seeker/index.php' => 'ЛК - Профиль (Соискатель)',
+    '/lk/job_seeker/responces.php' => 'ЛК - Отклики (Соискатель)',
+    '/lk/job_seeker/favorite.php?companies=Y' => 'ЛК - Избранные компании (Соискатель)',
+    '/lk/job_seeker/favorite.php?vacanies=Y' => 'ЛК - Избранные вакансии (Соискатель)',
+    '/lk/job_seeker/favorite.php?deals=Y' => 'ЛК - Избранные резюме (Соискатель)',
+    '/lk/job_seeker/notify.php' => 'ЛК - Уведомления (Соискатель)',
+    '/lk/employer/index.php' => 'ЛК - Профиль (Работодатель)',
+    '/lk/employer/notify.php' => 'ЛК - Уведомления (Работодатель)',
+    '/lk/employer/responces.php' => 'ЛК - Отклики (Работодатель)',
+    '/lk/employer/deals.php' => 'ЛК - Мои вакансии (Работодатель)',
 ];
 ?>
 

@@ -31,14 +31,14 @@
   }
 }
 .catalog-nav {
-  margin-bottom: 41px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .catalog-nav {
-    margin-bottom: 38px;
+    margin-bottom: 32px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1441px) {
   .catalog-nav {
     margin-bottom: 40px;
   }
@@ -81,12 +81,12 @@
 .catalog-nav__nav-btn:hover,
 .catalog-nav__nav-btn:active {
   background-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .catalog-nav__nav-btn.active path,
 .catalog-nav__nav-btn:hover path,
 .catalog-nav__nav-btn:active path {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 .catalog-nav__nav-btn.active svg {
   transform: rotateX(180deg);
@@ -124,7 +124,7 @@
   .catalog-nav__tabs .tab {
     width: 100%;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 7px 11px;
     border-radius: 8px;
     transition: background-color 0.3s ease-in-out;
@@ -159,11 +159,6 @@
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1024px) {
-  .catalog-nav__form .field {
-    padding: 20px 24px;
-  }
-}
 .catalog-nav__filter-tags {
   order: -1;
   margin-top: 8px;
@@ -180,7 +175,7 @@
 }
 @media screen and (min-width: 768px) {
   .catalog-nav__filter-tags .tag_small {
-    padding: 8px 12px;
+    padding: 6px 8px;
   }
 }
 .catalog-nav__split-row {
@@ -205,7 +200,7 @@
   margin-bottom: 0;
 }
 .catalog-header {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -228,18 +223,18 @@
   .catalog-header__filter-btn {
     display: flex;
     align-self: baseline;
-    padding: 12px 23px;
+    padding: 8px 16px;
     font-size: 16px;
   }
 }
 .catalog-header__row {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 16px;
 }
 @media screen and (min-width: 768px) {
   .catalog-header__row {
-    gap: 31px;
+    gap: 24px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -267,11 +262,16 @@
   }
 }
 .catalog {
-  margin-bottom: 56px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .catalog {
-    margin-bottom: 80px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .catalog {
+    margin-bottom: 40px;
   }
 }
 .catalog__pagination {

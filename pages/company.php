@@ -203,6 +203,8 @@
                                     </div>
                                 </div>
 
+                                <? 
+                                /* 
                                 <div class="company__map map detail__section">
                                     <span class="subcaption">Вакансия на карте</span>
                                     <div class="map__wrapper">
@@ -216,6 +218,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                */
+                                ?>
 
                                 <div class="feedback">
                                     <div class="feedback__inner">
@@ -259,7 +263,7 @@
                                                 </ul>
                                             </div>
 
-                                            <button class="feedback__btn btn btn_primary btn_size-l">Откликнуться</button>
+                                            <button class="feedback__btn btn btn_primary btn_size-m">Откликнуться</button>
                                         </form>
                                     </div>
                                 </div>
