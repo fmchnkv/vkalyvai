@@ -136,6 +136,23 @@
     padding-top: 82px;
     padding-bottom: 61px;
 
+    /*
+    .buttons-wrapper {
+        button {
+            svg path {
+                fill: @checkbox;
+                transition: all .3s ease;
+            }
+            &:hover {
+                svg path {
+                    fill: @primary;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    */
+
     .with-icon {
         display: flex;
         align-items: center;
@@ -209,10 +226,25 @@
             }
         }
 
+        /*
         &:not(.bright-bubble) {
             &:hover {
                 svg path {
                     fill: @primary;
+                }
+            }
+        }
+        */
+
+        button, a {
+            svg path {
+                fill: auto;
+                transition: all .3s ease;
+            }
+            &:hover {
+                svg path {
+                    fill: @primary;
+                    transition: all .3s ease;
                 }
             }
         }
@@ -430,6 +462,19 @@
             display: flex;
             justify-content: space-between;
             gap: 4px;
+
+            button:not(.btn--ok) {
+                svg path {
+                    fill: initial;
+                    transition: all .3s ease;
+                }
+                &:hover {
+                    svg path {
+                        fill: @primary;
+                        transition: all .3s ease;
+                    }
+                }
+            }
         }
     }
 
@@ -514,6 +559,14 @@
         &-list {
             gap: 8px;
             margin-bottom: 40px;
+
+            .offers-grid__bottom {
+                gap: 22px;
+
+                .btn_light {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -694,6 +747,18 @@
     }
 
     .employer {
+
+        &__deals-dop-btns {
+            .flex-center();
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
+
+            .btn_light {
+                width: 100%;
+            }
+        }
+
         &-requisites {
             .lk-bubble {
                 p {
@@ -782,6 +847,12 @@
                     }
                 }
             }
+        }
+    }
+
+    .mob__hide-text {
+        span {
+            display: none;
         }
     }
 
@@ -923,7 +994,7 @@
         &.active {
             z-index: 1001;
             &::after {
-                transform: rotate(180deg);
+                transform: rotate(180deg) translate(-50%, 50%);
                 transition: transform .3s ease;
             }
         }
@@ -1037,6 +1108,47 @@
             padding: 12px;
             border-radius: 100%;
             .flex-center();
+        }
+    }
+
+    .docs {
+        &-bubbles {
+            margin-bottom: 40px;
+            .lk-bubble {
+                gap: 8px;
+                &__content {
+                    gap: 8px;
+                    svg {
+                        min-width: 32px;
+                        height: 32px;
+                    }
+                }
+                &__text-wrapper {
+                    p {
+                        word-break: break-all;
+                        .clamp-text(1);
+                    }
+                }
+                &__buttons-wrapper {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+        &__section {
+            > button {
+                width: 100%;
+            }
+        }
+    }
+
+    .show-all-btn {
+        color: initial;
+        transition: color .3s ease;
+
+        &:hover {
+            color: @primary;
+            transition: color .3s ease;
         }
     }
     

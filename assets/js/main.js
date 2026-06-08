@@ -1034,7 +1034,7 @@ document.addEventListener('DOMContentLoaded', () => {
             break;
 
             default:
-                currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
+                currentMask = new Inputmask({ regex: '^[А-Яа-яЁёA-Za-z0-9_.@-\\s]{3,64}$' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = 'Введите текст';

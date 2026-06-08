@@ -1,3 +1,7 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
+
 <div class="vacancies-list grid-list">
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
@@ -21,7 +25,11 @@
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
         <div class="offers-grid__bottom">
-            <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php if (str_contains($uri, 'job_seeker')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php elseif (str_contains($uri, 'employer')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
+            <? endif; ?>
             <div class="offers-grid__actions offer-actions">
                 <button class="share icon-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,16 +46,15 @@
                     </svg>
                 </button>
                 <button class="share icon-button">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white"/>
-                        <g clip-path="url(#clip0_7288_5423)">
-                        <path d="M28.5039 16.8008H33.0039V18.6006H31.2041V32.1006C31.2041 32.3392 31.1092 32.5685 30.9404 32.7373C30.7716 32.9061 30.5424 33.001 30.3037 33.001H17.7041C17.4654 33.001 17.2362 32.9061 17.0674 32.7373C16.8987 32.5685 16.8037 32.3392 16.8037 32.1006V18.6006H15.0039V16.8008H19.5039V15.001H28.5039V16.8008ZM18.6035 31.2012H29.4043V18.6006H18.6035V31.2012ZM23.1035 28.501H21.3037V21.3008H23.1035V28.501ZM26.7041 28.501H24.9043V21.3008H26.7041V28.501Z" fill="#999999"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_7288_5423">
-                        <rect width="24" height="24" fill="white" transform="translate(12 12)"/>
-                        </clipPath>
-                        </defs>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_8242_2544)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8242_2544">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
                     </svg>
                 </button>
             </div>
@@ -75,7 +82,11 @@
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
         <div class="offers-grid__bottom">
-            <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php if (str_contains($uri, 'job_seeker')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php elseif (str_contains($uri, 'employer')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
+            <? endif; ?>
             <div class="offers-grid__actions offer-actions">
                 <button class="share icon-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,16 +103,15 @@
                     </svg>
                 </button>
                 <button class="share icon-button">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white"/>
-                        <g clip-path="url(#clip0_7288_5423)">
-                        <path d="M28.5039 16.8008H33.0039V18.6006H31.2041V32.1006C31.2041 32.3392 31.1092 32.5685 30.9404 32.7373C30.7716 32.9061 30.5424 33.001 30.3037 33.001H17.7041C17.4654 33.001 17.2362 32.9061 17.0674 32.7373C16.8987 32.5685 16.8037 32.3392 16.8037 32.1006V18.6006H15.0039V16.8008H19.5039V15.001H28.5039V16.8008ZM18.6035 31.2012H29.4043V18.6006H18.6035V31.2012ZM23.1035 28.501H21.3037V21.3008H23.1035V28.501ZM26.7041 28.501H24.9043V21.3008H26.7041V28.501Z" fill="#999999"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_7288_5423">
-                        <rect width="24" height="24" fill="white" transform="translate(12 12)"/>
-                        </clipPath>
-                        </defs>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_8242_2544)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8242_2544">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
                     </svg>
                 </button>
             </div>
@@ -129,7 +139,11 @@
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
         <div class="offers-grid__bottom">
-            <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php if (str_contains($uri, 'job_seeker')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+            <?php elseif (str_contains($uri, 'employer')): ?>
+                <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
+            <? endif; ?>
             <div class="offers-grid__actions offer-actions">
                 <button class="share icon-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,16 +160,15 @@
                     </svg>
                 </button>
                 <button class="share icon-button">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white"/>
-                        <g clip-path="url(#clip0_7288_5423)">
-                        <path d="M28.5039 16.8008H33.0039V18.6006H31.2041V32.1006C31.2041 32.3392 31.1092 32.5685 30.9404 32.7373C30.7716 32.9061 30.5424 33.001 30.3037 33.001H17.7041C17.4654 33.001 17.2362 32.9061 17.0674 32.7373C16.8987 32.5685 16.8037 32.3392 16.8037 32.1006V18.6006H15.0039V16.8008H19.5039V15.001H28.5039V16.8008ZM18.6035 31.2012H29.4043V18.6006H18.6035V31.2012ZM23.1035 28.501H21.3037V21.3008H23.1035V28.501ZM26.7041 28.501H24.9043V21.3008H26.7041V28.501Z" fill="#999999"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_7288_5423">
-                        <rect width="24" height="24" fill="white" transform="translate(12 12)"/>
-                        </clipPath>
-                        </defs>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_8242_2544)">
+                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#999999"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8242_2544">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
                     </svg>
                 </button>
             </div>
