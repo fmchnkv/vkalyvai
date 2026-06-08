@@ -143,6 +143,22 @@
 .lk {
   padding-top: 82px;
   padding-bottom: 61px;
+  /*
+    .buttons-wrapper {
+        button {
+            svg path {
+                fill: @checkbox;
+                transition: all .3s ease;
+            }
+            &:hover {
+                svg path {
+                    fill: @primary;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    */
 }
 .lk .with-icon {
   display: flex;
@@ -190,6 +206,17 @@
 .lk__page-title {
   margin-bottom: 40px;
 }
+.lk-bubble {
+  /*
+        &:not(.bright-bubble) {
+            &:hover {
+                svg path {
+                    fill: @primary;
+                }
+            }
+        }
+        */
+}
 .lk-bubble__hidden-input {
   display: block;
   opacity: 0;
@@ -208,8 +235,15 @@
   transition: all 0.3s ease;
   color: #000;
 }
-.lk-bubble:not(.bright-bubble):hover svg path {
+.lk-bubble button svg path,
+.lk-bubble a svg path {
+  fill: auto;
+  transition: all 0.3s ease;
+}
+.lk-bubble button:hover svg path,
+.lk-bubble a:hover svg path {
   fill: #FC7827;
+  transition: all 0.3s ease;
 }
 .lk-bubble__content {
   display: flex;
@@ -388,6 +422,14 @@
   justify-content: space-between;
   gap: 4px;
 }
+.lk-card__notice button:not(.btn--ok) svg path {
+  fill: initial;
+  transition: all 0.3s ease;
+}
+.lk-card__notice button:not(.btn--ok):hover svg path {
+  fill: #FC7827;
+  transition: all 0.3s ease;
+}
 .lk .deals-wrapper {
   padding-bottom: 64px;
 }
@@ -462,6 +504,12 @@
 .lk .vacancies-list {
   gap: 8px;
   margin-bottom: 40px;
+}
+.lk .vacancies-list .offers-grid__bottom {
+  gap: 22px;
+}
+.lk .vacancies-list .offers-grid__bottom .btn_light {
+  width: 100%;
 }
 .lk .responces-list {
   gap: 12px;
@@ -614,6 +662,17 @@
   width: 16px;
   height: 16px;
 }
+.lk .employer__deals-dop-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+.lk .employer__deals-dop-btns .btn_light {
+  width: 100%;
+}
 .lk .employer-requisites .lk-bubble p {
   line-clamp: 1;
   -webkit-line-clamp: 1;
@@ -690,6 +749,9 @@
   font-size: 14px;
   line-height: 114%;
   color: #999999;
+}
+.lk .mob__hide-text span {
+  display: none;
 }
 .lk__form {
   overflow-y: scroll;
@@ -815,7 +877,7 @@
   z-index: 1001;
 }
 .lk__custom-select.active::after {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translate(-50%, 50%);
   transition: transform 0.3s ease;
 }
 .lk__custom-select-list {
@@ -911,6 +973,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.lk .docs-bubbles {
+  margin-bottom: 40px;
+}
+.lk .docs-bubbles .lk-bubble {
+  gap: 8px;
+}
+.lk .docs-bubbles .lk-bubble__content {
+  gap: 8px;
+}
+.lk .docs-bubbles .lk-bubble__content svg {
+  min-width: 32px;
+  height: 32px;
+}
+.lk .docs-bubbles .lk-bubble__text-wrapper p {
+  word-break: break-all;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lk .docs-bubbles .lk-bubble__buttons-wrapper {
+  opacity: 1;
+  pointer-events: all;
+}
+.lk .docs__section > button {
+  width: 100%;
+}
+.lk .show-all-btn {
+  color: initial;
+  transition: color 0.3s ease;
+}
+.lk .show-all-btn:hover {
+  color: #FC7827;
+  transition: color 0.3s ease;
 }
 .btn--ok {
   display: block;
