@@ -69,7 +69,7 @@
                             </div>
     
                             <div class="filter-group__periods">
-                                <div class="select" data-id="periods">
+                                <div class="select" data-id="period">
                                     <label class="filter-group__input select__input input input_has-icon">
                                         <input class="input__field" type="text" name="period" data-id="period" readonly placeholder="Период выплат">
                                         <div class="input__icon">
