@@ -71,6 +71,7 @@
   transition: color 0.3s ease-in-out;
   font-size: 18px;
   line-height: 18px;
+  display: inline-block;
 }
 @media screen and (min-width: 1441px) {
   .offers-grid__title {

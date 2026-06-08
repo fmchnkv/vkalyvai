@@ -1151,6 +1151,78 @@
             transition: color .3s ease;
         }
     }
+
+    .moderator {
+        &__list {
+            gap: 12px;
+        }
+        &__item {
+            padding: 20px 16px;
+            border-radius: 20px;
+            gap: 16px;
+
+            &__date-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .date {
+                    color: @neutral;
+                }
+
+                .employment {
+                    font-size: 14px;
+                    line-height: 114%;
+                    color: @neutral;
+                }
+            }
+
+            .offers-grid__info {
+                margin-bottom: 0;
+                gap: 12px;
+
+                .offer-info__item {
+                    font-size: 16px;
+                }
+            }
+
+            .offers-grid__tags {
+                margin-bottom: 0;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .offers-grid__bottom {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+                padding-top: 16px;
+                border-top: 1px solid @border-neutral;
+
+                .offer-actions {
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: flex-start;
+                }
+            }
+        }
+        &__resume-list {
+            .moderator__item__date-wrapper {
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+            .offers-grid__tags {
+                flex-direction: column;
+            }
+        }
+        &__img {
+            max-width: 120px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
     
 }
 
