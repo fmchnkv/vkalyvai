@@ -160,6 +160,9 @@
     }
     */
 }
+.lk__pagination {
+  margin-top: 40px;
+}
 .lk .with-icon {
   display: flex;
   align-items: center;
@@ -500,10 +503,11 @@
 }
 .lk .vacancies-all {
   max-width: max-content;
+  margin-top: 40px;
 }
 .lk .vacancies-list {
   gap: 8px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .vacancies-list .offers-grid__bottom {
   gap: 22px;
@@ -513,7 +517,7 @@
 }
 .lk .responces-list {
   gap: 12px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .responces-list__item {
   padding: 16px;
@@ -536,7 +540,7 @@
   flex-direction: column;
   gap: 8px;
 }
-.lk .responces-item__content h3 {
+.lk .responces-item__content a {
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
@@ -560,7 +564,7 @@
 }
 .lk .notify-list {
   gap: 12px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .notify-list__item {
   padding: 16px;
@@ -619,7 +623,7 @@
 }
 .lk .favorite-list {
   gap: 12px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .favorite-list__item .offers-list__top {
   margin-bottom: 24px;
@@ -639,7 +643,7 @@
 }
 .lk .companies-grid {
   gap: 12px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .companies-grid__link {
   border: none;
@@ -689,7 +693,7 @@
 }
 .lk .employer__responces-list {
   gap: 12px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lk .employer__responces-item {
   border-radius: 16px;
@@ -1056,6 +1060,13 @@
   gap: 16px;
   align-items: flex-start;
 }
+.lk .moderator__item__title-wrapper .offer-header__main-item {
+  font-size: 14px;
+  line-height: 114%;
+}
+.lk .moderator__item .offers-list__info {
+  margin-bottom: 0;
+}
 .lk .moderator__resume-list .moderator__item__date-wrapper {
   gap: 8px;
   margin-bottom: 8px;
@@ -1069,6 +1080,9 @@
 .lk .moderator__img img {
   width: 100%;
   height: 100%;
+}
+.lk .btn--show {
+  cursor: pointer;
 }
 .btn--ok {
   display: block;

@@ -3,7 +3,7 @@
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
 
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/responces/responces_sort.php"); ?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>
 
 <div class="moderator__list grid-list">
     <div class="offers-grid__item moderator__item lk-card">

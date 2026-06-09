@@ -136,6 +136,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </a>
             </div>
         </div>
+        <?php if(str_contains($uri, 'favorite')): ?>
         <form method="post" class="lk-card__notice input-edit-form">
             <p>Пометка, комментарий, который оставляется по желанию, при добавлении резюме в избранное</p>
             <input type="text" data-mask="text" name="" id="notice" class="lk-bubble__hidden-input">
@@ -173,6 +174,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </form>
+        <?php endif; ?>
     </div>
     <div class="lk-card__wrapper">
         <div class="offers-list__item lk-card favorite-list__item">

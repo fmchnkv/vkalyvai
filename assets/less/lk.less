@@ -153,6 +153,10 @@
     }
     */
 
+    &__pagination {
+        margin-top: 40px;
+    }
+
     .with-icon {
         display: flex;
         align-items: center;
@@ -555,10 +559,11 @@
     .vacancies {
         &-all {
             max-width: max-content;
+            margin-top: 40px;
         }
         &-list {
             gap: 8px;
-            margin-bottom: 40px;
+            /*margin-bottom: 40px;*/
 
             .offers-grid__bottom {
                 gap: 22px;
@@ -574,7 +579,7 @@
 
         &-list {
             gap: 12px;
-            margin-bottom: 40px;
+            /*margin-bottom: 40px;*/
 
             &__item {
                 padding: 16px;
@@ -600,7 +605,7 @@
                 flex-direction: column;
                 gap: 8px;
 
-                h3 {
+                a {
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 100%;
@@ -624,7 +629,7 @@
     .notify {
         &-list {
             gap: 12px;
-            margin-bottom: 40px;
+            /*margin-bottom: 40px;*/
 
             &__item {
                 padding: 16px;
@@ -691,7 +696,7 @@
     .favorite {
         &-list {
             gap: 12px;
-            margin-bottom: 40px;
+            /*margin-bottom: 40px;*/
 
             &__item {
                 .offers-list__top {
@@ -718,7 +723,7 @@
 
     .companies-grid {
         gap: 12px;
-        margin-bottom: 40px;
+        /*margin-bottom: 40px;*/
 
         &__link {
             border: none;
@@ -778,7 +783,7 @@
         &__responces {
             &-list {
                 gap: 12px;
-                margin-bottom: 40px;
+                /*margin-bottom: 40px;*/
             }
 
             &-item {
@@ -1205,6 +1210,17 @@
                     align-items: flex-start;
                 }
             }
+
+            &__title-wrapper {
+                .offer-header__main-item {
+                    font-size: 14px;
+                    line-height: 114%;
+                }
+            }
+
+            .offers-list__info {
+                margin-bottom: 0;
+            }
         }
         &__resume-list {
             .moderator__item__date-wrapper {
@@ -1222,6 +1238,10 @@
                 height: 100%;
             }
         }
+    }
+
+    .btn--show {
+        cursor: pointer;
     }
     
 }

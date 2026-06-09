@@ -1,3 +1,6 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
 <div class="catalog__list companies-grid js-list" data-id="companies">
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
@@ -37,6 +40,7 @@
                 </button>
             </div>
         </div>
+        <?php if(str_contains($uri, 'favorite')): ?>
         <form method="post" class="lk-card__notice input-edit-form">
             <p>Пометка, комментарий, который оставляется по желанию, при добавлении резюме в избранное</p>
             <input type="text" data-mask="text" name="" id="notice" class="lk-bubble__hidden-input">
@@ -74,6 +78,7 @@
                 </button>
             </div>
         </form>
+        <?php endif; ?>
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
