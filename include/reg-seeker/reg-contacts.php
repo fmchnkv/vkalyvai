@@ -1,4 +1,4 @@
-<span class="auth-reg__caption">Контактные данные</span>
+<span class="auth-reg__title">Контактные данные</span>
 
 <form action="/lk/auth.php?reg=1&step=3" class="auth-reg__form" method="post">
     <div class="auth-reg__group">

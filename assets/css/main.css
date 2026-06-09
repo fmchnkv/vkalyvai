@@ -2444,6 +2444,15 @@ input::placeholder {
 .input input:disabled::placeholder {
   color: #E0E0E0;
 }
+.input_readonly {
+  pointer-events: none;
+}
+.input_readonly .input__field,
+.input_readonly input {
+  background-color: #F5F5F5;
+  border-color: #E0E0E0;
+  cursor: default;
+}
 .range-slider {
   border: 0;
   box-shadow: none;
@@ -2835,6 +2844,35 @@ input::placeholder {
 }
 .field.active svg {
   transform: rotateX(180deg);
+}
+.radio {
+  position: relative;
+  display: flex;
+}
+.radio__input,
+.radio input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.radio__input:checked ~ .radio__label,
+.radio input:checked ~ .radio__label {
+  background-color: #FC7827;
+  border-color: #FC7827;
+  color: #FFFFFF;
+}
+.radio__label {
+  border: 1px solid #EBEBEB;
+  border-radius: 32px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  padding: 12px 24px;
+  font-size: 18px;
 }
 .inline-form {
   display: flex;

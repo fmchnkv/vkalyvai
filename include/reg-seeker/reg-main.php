@@ -38,7 +38,7 @@
 
     <div class="auth-reg__group">
         <span class="auth-reg__caption">Дата рождения</span>
-        <div class="auth-reg__row auth-reg__row_3">
+        <div class="auth-reg__row auth-reg__row_3 auth-reg__row_birth">
             <div class="auth-reg__row-item">
                 <label class="auth-reg__input input">
                     <input type="text" placeholder="День" class="input__field">
