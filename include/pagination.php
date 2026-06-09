@@ -1,4 +1,7 @@
-<div class="catalog__pagination pagination">
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
+<div class="<?php echo str_contains($uri, 'lk') ? 'lk__pagination' : 'catalog__pagination'; ?> pagination">
     <a href="#" class="pagination__arrow pagination__arrow_prev" style="display: none;">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_4580_14223)">
