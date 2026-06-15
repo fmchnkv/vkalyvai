@@ -51,6 +51,10 @@ $arMenu = [
     '/lk/employer/responces.php' => 'ЛК - Отклики (Работодатель)',
     '/lk/employer/deals.php' => 'ЛК - Мои вакансии (Работодатель)',
     '/lk/employer/docs.php' => 'ЛК - Документы (Работодатель)',
+    '/lk/moderator/appeals.php' => 'ЛК - Жалобы (Модератор)',
+    '/lk/moderator/companies.php' => 'ЛК - Компании (Модератор)',
+    '/lk/moderator/resume.php' => 'ЛК - Резюме (Модератор)',
+    '/lk/moderator/vacancies.php' => 'ЛК - Вакансии (Модератор)',
 ];
 ?>
 
