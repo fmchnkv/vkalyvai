@@ -1,6 +1,6 @@
 <div class="lk__input-wrapper">
-    <div class="lk__custom-select">
-        <input type="hidden" id="month" name="">
+    <div data-label="Месяц" class="lk__custom-select">
+        <input type="hidden" name="">
         <div class="lk__custom-select-choise">Месяц</div>
     </div>
     <div class="lk__custom-select-list">
