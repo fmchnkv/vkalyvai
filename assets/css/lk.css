@@ -1084,6 +1084,245 @@
 .lk .btn--show {
   cursor: pointer;
 }
+.lk .constructor__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 48px;
+}
+.lk .constructor__steps .progress-step {
+  position: relative;
+  width: 16%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #FFF2E9;
+}
+.lk .constructor__steps .progress-step.active {
+  background-color: #FC7827;
+}
+.lk .constructor-title {
+  margin-bottom: 48px;
+}
+.lk .constructor__forms form {
+  gap: 48px;
+  max-width: 100%;
+}
+.lk .constructor__forms form .resume-file-inputs-wrapper {
+  gap: 33px;
+}
+.lk .constructor__forms form .big-input {
+  padding: 23px 24px;
+}
+.lk .constructor__forms form .custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.lk .constructor__forms form .custom-checkbox__checkmark {
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-image: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+.lk .constructor__forms form .custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.lk .constructor__forms form .custom-checkbox input[type="checkbox"]:checked ~ .custom-checkbox__checkmark {
+  background-color: #FC7827;
+  border-color: #FC7827;
+  background-image: url(/images/active-checkbox.svg);
+  transition: all 0.3s ease;
+}
+.lk .constructor__forms form .custom-checkbox__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  color: #232323;
+}
+.lk .constructor__forms form .education-add {
+  margin-top: 32px;
+}
+.lk .constructor__forms-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.lk .constructor__forms-actions .btn-next,
+.lk .constructor__forms-actions .prev-step {
+  min-width: 102px;
+}
+.lk .constructor__forms .lk__radio-buttons {
+  flex-direction: column;
+}
+.lk .constructor__forms .lk__radio-buttons .lk__input-wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 16px 20px;
+}
+.lk .constructor__forms .lk__custom-select-list {
+  top: 35px;
+}
+.lk .constructor__forms .lk__main-form__date-wrapper {
+  grid-template-columns: repeat(1, 1fr);
+}
+.lk .constructor__forms .lk__main-form__date-wrapper .lk__input-wrapper:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.lk .constructor__skills {
+  gap: 32px;
+}
+.lk .constructor__inputs-list {
+  gap: 8px;
+}
+.lk .constructor__inputs-set {
+  gap: 16px;
+}
+.lk .constructor__inputs-set.duties {
+  gap: 8px;
+}
+.lk .constructor__inputs-group .constructor-select {
+  margin-bottom: 8px;
+}
+.lk .constructor__inputs-title {
+  margin-bottom: 17px;
+}
+.lk .constructor__inputs-title .subcaption {
+  margin-bottom: 12px;
+}
+.lk .constructor-select .lk__input-wrapper {
+  padding: 20px;
+}
+.lk .constructor__bubbles-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.lk .constructor__bubbles-list.top-skills {
+  gap: 2px;
+}
+.lk .constructor__bubbles-list.bright-bubbles .constructor__bubbles-item {
+  background-color: #FFF2E9;
+}
+.lk .constructor__bubbles-list.gray-bubbles .constructor__bubbles-item {
+  background-color: #EBEBEB;
+}
+.lk .constructor__bubbles-item {
+  width: max-content;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 32px;
+}
+.lk .constructor__textarea-wrapper {
+  padding: 24px;
+  border-radius: 16px;
+}
+.lk .constructor__textarea-wrapper textarea {
+  display: block;
+  min-height: 220px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+  font-family: 'Montserrat', sans-serif;
+}
+.lk .constructor__hints-wrapper {
+  overflow: visible;
+  max-width: 288px;
+}
+.lk .constructor__hints-wrapper .slick-list {
+  overflow: visible;
+}
+.lk .constructor__hints-wrapper .hint {
+  border-radius: 12px;
+  padding: 12px;
+  width: 220px;
+  height: 100%;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border-color: auto;
+  color: #999999;
+}
+.lk .constructor__hints-wrapper .hint:hover {
+  border-color: #FC7827;
+  color: #232323;
+  transition: all 0.3s ease;
+}
+.lk .constructor__hints-wrapper .hint.active {
+  background-color: #FFF2E9;
+  transition: all 0.3s ease;
+}
+.lk .constructor__files-input-wrapper {
+  padding: 26px 12px;
+  border: 1px solid #EBEBEB;
+  border-radius: 32px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.lk .constructor__files-input-wrapper:focus,
+.lk .constructor__files-input-wrapper:hover {
+  background-color: #FFF2E9;
+  transition: background-color 0.3s ease;
+}
+.lk .constructor__files-input-wrapper input[type="file"] {
+  opacity: 0;
+  max-width: 0;
+  max-height: 0;
+}
+.lk .constructor__files-input-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.lk .constructor__files-input-text .file-input-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.lk .constructor__files-input-text .file-input-title span {
+  color: #FC7827;
+}
+.lk .constructor__files-input-text p {
+  font-size: 12px;
+  line-height: 117%;
+  color: #999999;
+}
+.lk .grid-2-columns__with-title span {
+  font-weight: 500;
+  line-height: 113%;
+  color: #999999;
+  display: block;
+  margin-bottom: 8px;
+}
+.lk label {
+  cursor: pointer;
+}
 .btn--ok {
   display: block;
   max-width: 0;

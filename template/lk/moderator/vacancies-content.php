@@ -1,5 +1,5 @@
 <h1 class="moderator__vacancies-title page-title lk__page-title">Вакансии</h1>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/responces/responces-search.php"); ?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
 

@@ -208,102 +208,11 @@
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Дата рождения</span>
-                    <?php
-                    $currentYear = date('Y');
-                    $minYear = $currentYear - 100;
-                    $maxYear = $currentYear - 18;
-                    ?>
-                    <div class="lk__input-grid lk__main-form__date-wrapper">
-                        <div class="lk__input-wrapper">
-                            <div class="lk__custom-select">
-                                <input type="hidden" id="day" name="">
-                                <div class="lk__custom-select-choise">День</div>
-                            </div>
-                            <div class="lk__custom-select-list">
-                                <div class="lk__custom-select-list-container">
-                                    <?php for ($i = 1; $i <= 31; $i++): ?>
-                                        <div class="lk__custom-select-item">
-                                            <?= $i ?>
-                                        </div>
-                                    <?php endfor; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lk__input-wrapper">
-                            <div class="lk__custom-select">
-                                <input type="hidden" id="month" name="">
-                                <div class="lk__custom-select-choise">Месяц</div>
-                            </div>
-                            <div class="lk__custom-select-list">
-                                <div class="lk__custom-select-list-container">
-                                    <?php
-                                    $months = [
-                                        'Январь',
-                                        'Февраль',
-                                        'Март',
-                                        'Апрель',
-                                        'Май',
-                                        'Июнь',
-                                        'Июль',
-                                        'Август',
-                                        'Сентябрь',
-                                        'Октябрь',
-                                        'Ноябрь',
-                                        'Декабрь'
-                                    ];
-                                    foreach ($months as $month):
-                                        ?>
-                                        <div class="lk__custom-select-item">
-                                            <?= $month ?>
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lk__input-wrapper">
-                            <div class="lk__custom-select">
-                                <input type="hidden" id="year" name="">
-                                <div class="lk__custom-select-choise">Год</div>
-                            </div>
-                            <div class="lk__custom-select-list">
-                                <div class="lk__custom-select-list-container">
-                                    <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
-                                        <div class="lk__custom-select-item">
-                                            <?= $year ?>
-                                        </div>
-                                    <?php endfor; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/date-fields.php"); ?>
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Гражданство</span>
-                    <?php
-                    $countries = [
-                        'Российская Федерация',
-                        'Беларусь',
-                        'Казахстан',
-                        'Украина',
-                        'Узбекистан'
-                    ];
-                    sort($countries);
-                    ?>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="countrie" value="Российская Федерация" name="">
-                            <div class="lk__custom-select-choise">Российская Федерация</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <?php foreach ($countries as $country): ?>
-                                    <div class="lk__custom-select-item">
-                                        <?= $country ?>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
+                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/country-field.php"); ?>
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Место жительства</span>
@@ -842,13 +751,14 @@
 </div>
 
 </div> <!-- /wrapper -->
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.0/nouislider.min.js"
     integrity="sha512-kWasPJUdIWdHCp9A/0ZnfLRtfuo0EK9y66aSaSY5VekeNlsbud3ks3WuJX3chrkzAV+0yJKXDDh9wYojd+O0pA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
 <script src="/assets/js/inputmask.min.js"></script>
+<script defer src="/assets/js/slick.min.js"></script>
 <script defer src="/assets/js/main.js?v=<?= time() ?>"></script>
 </body>
 

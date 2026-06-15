@@ -24,6 +24,8 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
     />
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
 
     <link rel="stylesheet" href="/assets/css/main.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/filter.css?v=<?= time() ?>">

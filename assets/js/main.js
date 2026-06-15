@@ -1082,7 +1082,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //открытие поля для редактирования
-    const lkForms = document.querySelectorAll('form.input-edit-form');
+    const lkForms = document.querySelectorAll('.input-edit-form');
 
     if(lkForms) {
         lkForms.forEach(form => {
@@ -1119,4 +1119,11 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+
+    $('.constructor__hints-wrapper').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+    });
 });
