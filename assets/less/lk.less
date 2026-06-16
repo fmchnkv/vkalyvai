@@ -36,12 +36,13 @@
 }
 
 .bright-bubble {
-    border: 1px solid @border-neutral;
-    transition: all .3 ease;
+    border: 1px solid;
+    border-color: @border-neutral;
+    transition: border-color .3 ease;
 
     &:hover, &:focus {
         border-color: @primary;
-        transition: all .3 ease;
+        transition: border-color .3 ease;
     }
 }
 
@@ -162,6 +163,8 @@
         align-items: center;
         gap: 12px;
         justify-content: space-between;
+        border-color: auto;
+        transition: border-color .3s ease;
 
         svg {
             width: 24px;
@@ -170,6 +173,7 @@
 
         &:hover, &:focus {
             border-color: @primary;
+            transition: border-color .3s ease;
 
             .lk-bubble__buttons-wrapper {
                 opacity: 1;
@@ -1079,6 +1083,9 @@
 
         label {
             text-align: center;
+            background-color: transparent;
+            color: inherit;
+            transition: all .3s ease;
 
             &:hover {
                 background-color: @primary;
@@ -1273,7 +1280,7 @@
         &__forms {
             form {
                 gap: 48px;
-                transform: translateX(-20%);
+                transform: translateY(20%);
                 opacity: 0;
                 /*max-width: 0;*/
                 max-height: 0;
@@ -1492,11 +1499,38 @@
         }
 
         &__files {
-            &-result-wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 12px;
-                margin-top: 20px;
+            &-result {
+                &-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-top: 20px;
+                }
+                &-noties {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    margin-top: 12px;
+                    max-width: max-content;
+
+                    .errors {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 114%;
+                        color: @error;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                    }
+                    .info {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 114%;
+                        color: @neutral;
+                        display: flex;
+                        gap: 12px;
+                    }
+                }
             }
             &-preview {
                 width: 84px;
@@ -1570,7 +1604,7 @@
                 text-align: center;
                 cursor: pointer;
 
-                &:focus, &:hover {
+                &:focus, &:hover, &.drag-over {
                     background-color: @light;
                     transition: background-color .3s ease;
                 }
