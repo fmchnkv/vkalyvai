@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const navSelect = document.querySelector('.js-btn-nav');
+    const offset = 100; // высота шапки
 
     if (navSelect) {
         navSelect.addEventListener('click', () => {
@@ -935,42 +936,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //селекты в модалках
-    const customSelects = document.querySelectorAll('.lk__custom-select');
+    document.addEventListener('click', function(e) {
+        const select = e.target.closest('.lk__custom-select');
 
-    if(customSelects) {
-        customSelects.forEach(select => {
-            select.addEventListener('click', function() {
-                let parent = select.closest('.lk__input-wrapper');
-                let hiddenInput = select.querySelector('input[type="hidden"]');
-                let choisesList = parent.querySelector('.lk__custom-select-list');
-                let userChoise = parent.querySelector('.lk__custom-select-choise');
-                if(parent) {
-                    let choises = choisesList.querySelectorAll('.lk__custom-select-item');
-                    if(choises) {
-                        choises.forEach(choise => {
-                            choise.addEventListener('click', function() {
-                                choises.forEach(item => item.classList.remove('active'));
-                                choise.classList.add('active');
-                                hiddenInput.value = choise.textContent;
-                                userChoise.textContent = choise.textContent;
+        if (select) {
+            const parent = select.closest('.lk__input-wrapper');
+            const list = parent.querySelector('.lk__custom-select-list');
 
-                                choisesList.classList.remove('active');
-                                select.classList.remove('active');
-                            })
-                        });
-                    }
-                }
+            list.classList.toggle('active');
+            select.classList.toggle('active');
 
-                if(choisesList.classList.contains('active')) {
-                    choisesList.classList.remove('active');
-                    select.classList.remove('active');
-                } else {
-                    choisesList.classList.add('active');
-                    select.classList.add('active');
-                }
-            })
-        });
-    }
+            return;
+        }
+
+        const item = e.target.closest('.lk__custom-select-item');
+
+        if (item) {
+            const parent = item.closest('.lk__input-wrapper');
+            const select = parent.querySelector('.lk__custom-select');
+            const hiddenInput = select.querySelector('input[type="hidden"]');
+            const userChoise = parent.querySelector('.lk__custom-select-choise');
+            const list = parent.querySelector('.lk__custom-select-list');
+
+            parent.querySelectorAll('.lk__custom-select-item').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            item.classList.add('active');
+            hiddenInput.value = item.textContent.trim();
+            userChoise.textContent = item.textContent.trim();
+
+            list.classList.remove('active');
+            select.classList.remove('active');
+        }
+    });
 
     //маски контактов
     const contactInput = document.getElementById('contact_data');
@@ -1120,10 +1119,327 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    $('.constructor__hints-wrapper').slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true
-    });
+    //=========КОНСТРУКТОР=========//
+
+    function initHintsSlider(context = document) {
+        $(context)
+            .find('.constructor__hints-wrapper')
+            .not('.slick-initialized')
+            .slick({
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: true
+            });
+    }
+    initHintsSlider();
+
+    //форма-конструктор резюме
+    const constructorSteps = document.querySelectorAll('form[data-form]');
+    const addBlockBtns = document.querySelectorAll('button[data-add-block]');
+    if(constructorSteps.length) {
+        function changeStep(stepNumber) {
+            const targetForm = document.querySelector(
+                `[data-form="${stepNumber}"]`
+            );
+
+            document.querySelector('h1').textContent = targetForm.dataset.title;
+
+            document.querySelectorAll('.progress-step').forEach(step => {
+                step.classList.toggle(
+                    'active',
+                    Number(step.dataset.step) <= stepNumber
+                );
+            });
+            constructorSteps.forEach(form => {
+                form.classList.remove('active');
+            });
+            document.querySelector(`form[data-form="${stepNumber}"]`).classList.add('active');
+        }
+        constructorSteps.forEach(stepForm => {
+            let btnNext = stepForm.querySelector('.btn-next');
+            let stepPrev = stepForm.querySelector('.prev-step');
+
+            if(btnNext) {
+                btnNext.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const nextStep = Number(this.dataset.nextStep);
+                    if(nextStep) {
+                        changeStep(nextStep);
+                    } else {
+                        //stepForm.submit();
+                    }
+                });
+            }
+
+            if(stepPrev) {
+                stepPrev.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const prevStep = Number(this.dataset.prevStep);
+                    changeStep(prevStep);
+                });
+            }
+        });
+
+        //кнопка добавления блока полей
+        if(addBlockBtns) {
+            addBlockBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if(this.dataset.addBlock) {
+                        let template = document.getElementById(`${this.dataset.addBlock}`);
+                        if (!template) return;
+
+                        let blockId = template.id;
+                        const clone = template.content.firstElementChild.cloneNode(true);
+
+                        
+                        //присваиваем id
+                        let index = 1;
+                        while (document.getElementById(`${blockId}-${index}`)) {
+                            index++;
+                        }
+                        clone.id = `${blockId}-${index}`;
+
+                       let blocksContainer = template.parentNode;
+                       blocksContainer.appendChild(clone);
+                       initHintsSlider(clone);
+
+                        //прокрутка
+                        const top =
+                        clone.getBoundingClientRect().top +
+                        window.pageYOffset -
+                        offset;
+                        window.scrollTo({
+                            top,
+                            behavior: 'smooth'
+                        });
+                    }
+                })
+            });
+        }
+
+        function createSkillBubble(text, removable = false) {
+            const bubble = document.createElement('div');
+
+            bubble.classList.add('constructor__bubbles-item');
+
+            if (removable) {
+                bubble.classList.add('remove-skill');
+
+                bubble.innerHTML = `
+                    <span>${text}</span>
+                    <button class="btn transp-btn" type="button">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z" fill="#232323"></path>
+                        </svg>
+                    </button>
+                `;
+            } else {
+                bubble.classList.add('add-skill');
+                bubble.textContent = text;
+            }
+
+            return bubble;
+        }
+
+
+        function initSkills() {
+            document.addEventListener('click', function(e) {
+
+                // Добавить навык
+                const addSkill = e.target.closest('.add-skill');
+
+                if (addSkill) {
+                    const skillsBlock = addSkill.closest('.constructor__skills');
+
+                    const selectedContainer =
+                        skillsBlock.querySelector('.top-skills .bright-bubbles');
+
+                    const text = addSkill.textContent.trim();
+
+                    selectedContainer.append(
+                        createSkillBubble(text, true)
+                    );
+
+                    addSkill.remove();
+
+                    return;
+                }
+
+                // Удалить навык
+                const removeBtn = e.target.closest('.remove-skill button');
+
+                if (removeBtn) {
+                    e.preventDefault();
+
+                    const skill = removeBtn.closest('.remove-skill');
+                    const skillsBlock = skill.closest('.constructor__skills');
+
+                    const availableContainer =
+                        skillsBlock.querySelector('.gray-bubbles');
+
+                    const text = skill.querySelector('span').textContent.trim();
+
+                    availableContainer.append(
+                        createSkillBubble(text, false)
+                    );
+
+                    skill.remove();
+                }
+            });
+        }
+        initSkills();
+
+        function initHints() {
+            document.addEventListener('click', function(e) {
+                const useHint = e.target.closest('.hint');
+
+                if (!useHint) return;
+                document.querySelectorAll('.hint').forEach(hint => {
+                    hint.classList.remove('active');
+                });
+
+                useHint.classList.add('active');
+
+                const dutiesBlock = useHint.closest('.duties');
+                const textarea = dutiesBlock?.querySelector('textarea');
+
+                if (textarea) {
+                    textarea.value = useHint.textContent.trim();
+                }
+            });
+        }
+        initHints();
+
+        //файлы
+        const uploadedFiles = {
+            portfolio: [],
+            certificates: []
+        };
+        document?.querySelectorAll('.constructor__files-input-wrapper input[type="file"]')?.forEach(input => {
+
+            input.addEventListener('change', function() {
+
+                const type = this.closest('.construstor__inputs-files-block').dataset.filesType;
+
+                if (!uploadedFiles[type]) {
+                    uploadedFiles[type] = [];
+                }
+
+                uploadedFiles[type].push(...this.files);
+
+                renderFiles(this, type);
+
+                this.value = '';
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            const addMoreBtn = e.target.closest('.constructor__files-more');
+
+            if (addMoreBtn) {
+                const parent = addMoreBtn.closest('.construstor__inputs-files-block');
+                const input = parent?.querySelector('input[type="file"]');
+
+                input?.click();
+                return;
+            }
+
+            const removeBtn = e.target.closest(
+                '.constructor__files-remove'
+            );
+
+            if (!removeBtn) return;
+            const parent = removeBtn.closest('.construstor__inputs-files-block');
+            const type = parent.dataset.filesType;
+            const index = Number(removeBtn.dataset.index);
+
+            uploadedFiles[type].splice(index, 1);
+
+            const input = parent.querySelector('input[type="file"]');
+            renderFiles(input, type);
+        });
+
+        function renderFiles(input, type) {
+
+            const block = input.closest('.construstor__inputs-files-block');
+
+            const resultWrapper = block.querySelector(
+                '.constructor__files-result-wrapper'
+            );
+
+            resultWrapper.innerHTML = '';
+
+            uploadedFiles[type].forEach((file, index) => {
+
+                const preview = document.createElement('div');
+                preview.className = 'constructor__files-preview';
+
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+
+                const removeBtn = document.createElement('button');
+                removeBtn.type = 'button';
+                removeBtn.className = 'constructor__files-remove';
+                removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
+                                        </svg>
+                                        `;
+                removeBtn.dataset.index = index;
+
+                preview.append(img, removeBtn);
+
+                resultWrapper.append(preview);
+            });
+            
+            addMoreBtnAdd(resultWrapper);
+            syncInputFiles(input, type);
+        }
+
+        function addMoreBtnAdd(resultWrapper) {
+            const addMoreBtn = document.createElement('div');
+            addMoreBtn.classList.add('constructor__files-preview', 'constructor__files-more');
+            addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4414_40049)">
+                                    <path d="M12.0039 4.25098C12.4181 4.25098 12.7539 4.58676 12.7539 5.00098V11.251H19.0039C19.4181 11.251 19.7539 11.5868 19.7539 12.001C19.7539 12.4152 19.4181 12.751 19.0039 12.751H12.7539V19.001C12.7539 19.4152 12.4181 19.751 12.0039 19.751C11.5897 19.751 11.2539 19.4152 11.2539 19.001V12.751H5.00391C4.58969 12.751 4.25391 12.4152 4.25391 12.001C4.25391 11.5868 4.58969 11.251 5.00391 11.251H11.2539V5.00098C11.2539 4.58676 11.5897 4.25098 12.0039 4.25098Z" fill="#FC7827"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_4414_40049">
+                                    <path d="M0 12C0 5.37258 5.37258 0 12 0V0C18.6274 0 24 5.37258 24 12V12C24 18.6274 18.6274 24 12 24V24C5.37258 24 0 18.6274 0 12V12Z" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </span>`;
+            resultWrapper.append(addMoreBtn);
+        }
+
+        function syncInputFiles(input, type) {
+
+            const dataTransfer = new DataTransfer();
+
+            uploadedFiles[type].forEach(file => {
+                dataTransfer.items.add(file);
+            });
+
+            input.files = dataTransfer.files;
+
+            toggleFilesBlockState(input);
+        }
+
+        function toggleFilesBlockState(input) {
+            const block = input.closest('.construstor__inputs-files-block');
+            if (!block) return;
+
+            const hasFiles = input.files.length > 0;
+            const resultWrapper = block.querySelector('.constructor__files-result-wrapper');
+            const inputWrapper = block.querySelector('.constructor__files-input-wrapper');
+
+            inputWrapper?.classList.toggle('hidden', hasFiles);
+
+            if (!hasFiles && resultWrapper) {
+                resultWrapper.innerHTML = '';
+            }
+        }
+    }
 });

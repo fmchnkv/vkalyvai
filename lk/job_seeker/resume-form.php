@@ -15,7 +15,7 @@
 
         <div class="constructor__forms">
             <!-- Шаг 1 -->
-            <form class="grid-list" id="step-form-profession" data-target-step="1"
+            <form class="active grid-list" id="step-form-profession" data-form="1"
                 data-title="Выберите или укажите профессию" class="step-form active" method="post">
                 <div class="constructor__inputs-list grid-list">
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
@@ -47,14 +47,14 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="2">Далее</button>
                 </div>
                 <input type="hidden" name="step" value="1">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 2 -->
-            <form class="grid-list" id="step-form-contact" data-target-step="2" data-title="Основная информация"
+            <form class="grid-list" id="step-form-contact" data-form="2" data-title="Основная информация"
                 class="step-form" method="post">
                 <div class="constructor__inputs-set grid-list">
                     <span class="subcaption">ФИО</span>
@@ -452,65 +452,121 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="1">Назад</button>
+                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="3">Далее</button>
                 </div>
                 <input type="hidden" name="step" value="2">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 3 -->
-            <form class="grid-list" id="step-form-education" data-target-step="3" data-title="Образование"
-                class="step-form" method="post">
-                <div class="constructor__inputs-set grid-list">
-                    <div class="constructor__inputs-group">
-                        <div class="constructor__inputs-block constructor-select">
-                            <span class="subcaption">Основное образование</span>
-                            <div class="lk__input-wrapper constructor__inputs-block__field">
-                                <div class="lk__custom-select">
-                                    <input type="hidden" id="education" value="" name="">
-                                    <div class="lk__custom-select-choise">Уровень образования</div>
+            <form class="grid-list" id="step-form-education" data-form="3" data-title="Образование" class="step-form"
+                method="post">
+                <div class="education-wrapper grid-list">
+                    <div class="education-templates-wrapper grid-list template-wrapper">
+                        <template id="education-base">
+                            <div class="constructor__inputs-set grid-list">
+                                <div class="constructor__inputs-group">
+                                    <div class="constructor__inputs-block constructor-select">
+                                        <span class="subcaption">Основное образование</span>
+                                        <div class="lk__input-wrapper constructor__inputs-block__field">
+                                            <div data-label="Уровень образования" class="lk__custom-select">
+                                                <input type="hidden" value="" name="">
+                                                <div class="lk__custom-select-choise">Уровень образования</div>
+                                            </div>
+                                            <div class="lk__custom-select-list">
+                                                <div class="lk__custom-select-list-container">
+                                                    <div class="lk__custom-select-item active">Высшее</div>
+                                                    <div class="lk__custom-select-item">Средне-специальное</div>
+                                                    <div class="lk__custom-select-item">Среднее</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="lk__input-wrapper big-input">
+                                            <input type="text" value="" placeholder="Название учебного заведения">
+                                        </div>
+                                        <div class="lk__input-wrapper big-input">
+                                            <input type="text" value="" placeholder="Специальность">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="lk__custom-select-list">
-                                    <div class="lk__custom-select-list-container">
-                                        <div class="lk__custom-select-item active">Высшее</div>
-                                        <div class="lk__custom-select-item">Средне-специальное</div>
-                                        <div class="lk__custom-select-item">Среднее</div>
+                                <div class="constructor-select">
+                                    <div class="grid-2-columns constructor__inputs-set grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Начало</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Окончание</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                    </div>
+                                    <div class="lk__input-element">
+                                        <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="grid-2-columns constructor__inputs-list grid-list">
-                            <div class="lk__input-wrapper big-input">
-                                <input type="text" value="" placeholder="Название учебного заведения">
+                        </template>
+                        <div class="constructor__inputs-set grid-list">
+                            <div class="constructor__inputs-group">
+                                <div class="constructor__inputs-block constructor-select">
+                                    <span class="subcaption">Основное образование</span>
+                                    <div class="lk__input-wrapper constructor__inputs-block__field">
+                                        <div data-label="Уровень образования" class="lk__custom-select">
+                                            <input type="hidden" value="" name="">
+                                            <div class="lk__custom-select-choise">Уровень образования</div>
+                                        </div>
+                                        <div class="lk__custom-select-list">
+                                            <div class="lk__custom-select-list-container">
+                                                <div class="lk__custom-select-item active">Высшее</div>
+                                                <div class="lk__custom-select-item">Средне-специальное</div>
+                                                <div class="lk__custom-select-item">Среднее</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Название учебного заведения">
+                                    </div>
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Специальность">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lk__input-wrapper big-input">
-                                <input type="text" value="" placeholder="Специальность">
+                            <div class="constructor-select">
+                                <div class="grid-2-columns constructor__inputs-set grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Начало</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Окончание</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                </div>
+                                <div class="lk__input-element">
+                                    <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="constructor-select">
-                        <div class="grid-2-columns constructor__inputs-set grid-list">
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Начало</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
-                                </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
-                            </div>
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Окончание</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
-                                </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
-                            </div>
-                        </div>
-                        <div class="lk__input-element">
-                            <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
-                        </div>
-                    </div>
-                    <button data-call-modal="add__contacts"
+                    
+                    <button data-add-block="education-base"
                         class="education-add btn btn_light btn_size-xl lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7081_644)">
@@ -527,40 +583,82 @@
                         <span>Добавить</span>
                     </button>
                 </div>
-                <div class="constructor__inputs-set grid-list">
-                    <div class="constructor__inputs-block">
-                        <span class="subcaption">Повышение квалификации</span>
-                        <div class="constructor__inputs-list grid-list">
-                            <div class="lk__input-wrapper big-input">
-                                <input type="text" value="" placeholder="Название курса">
+
+                <div class="education-wrapper grid-list">
+                    <div class="education-templates-wrapper grid-list template-wrapper">
+                        <template id="education-dop">
+                            <div class="constructor__inputs-set grid-list">
+                                <div class="constructor__inputs-block">
+                                    <span class="subcaption">Повышение квалификации</span>
+                                    <div class="constructor__inputs-list grid-list">
+                                        <div class="lk__input-wrapper big-input">
+                                            <input type="text" value="" placeholder="Название курса">
+                                        </div>
+                                        <div class="lk__input-wrapper big-input">
+                                            <input type="text" value="" placeholder="Специальность">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor-select">
+                                    <div class="grid-2-columns constructor__inputs-set grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Начало</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Окончание</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                    </div>
+                                    <div class="lk__input-element">
+                                        <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="lk__input-wrapper big-input">
-                                <input type="text" value="" placeholder="Специальность">
+                        </template>
+                        <div class="constructor__inputs-set grid-list">
+                            <div class="constructor__inputs-block">
+                                <span class="subcaption">Повышение квалификации</span>
+                                <div class="constructor__inputs-list grid-list">
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Название курса">
+                                    </div>
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Специальность">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="constructor-select">
+                                <div class="grid-2-columns constructor__inputs-set grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Начало</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Окончание</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                </div>
+                                <div class="lk__input-element">
+                                    <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="constructor-select">
-                        <div class="grid-2-columns constructor__inputs-set grid-list">
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Начало</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
-                                </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
-                            </div>
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Окончание</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
-                                </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
-                            </div>
-                        </div>
-                        <div class="lk__input-element">
-                            <p>Если ещё учитесь, укажите год предполагаемого окончания</p>
-                        </div>
-                    </div>
-                    <button data-call-modal="add__contacts"
+                    
+                    <button data-add-block="education-dop"
                         class="education-add btn btn_light btn_size-xl lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_7081_644)">
@@ -577,21 +675,22 @@
                         <span>Добавить</span>
                     </button>
                 </div>
+
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="2">Назад</button>
+                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="4">Далее</button>
                 </div>
                 <input type="hidden" name="step" value="3">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 4 -->
-            <form class="grid-list" id="step-form-skills" data-target-step="4" data-title="Навыки" class="step-form"
+            <form class="grid-list" id="step-form-skills" data-form="4" data-title="Навыки" class="step-form"
                 method="post">
                 <div class="constructor__skills top-skills grid-list">
                     <input type="hidden" name="skills" id="skills">
                     <div class="constructor__bubbles-list bright-bubbles">
-                        <div class="constructor__bubbles-item">
+                        <div class="constructor__bubbles-item remove-skill">
                             <span>Коммуникабельность</span>
                             <button class="btn transp-btn">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -609,158 +708,225 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="constructor__bubbles-item">
+                        <div class="constructor__bubbles-item remove-skill">
                             <span>Выявление потребностей</span>
                             <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4827_39596)">
-                                    <path
-                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                        fill="#232323" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4827_39596">
-                                        <rect width="12" height="12" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></button>
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4827_39596)">
+                                        <path
+                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                            fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4827_39596">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></button>
 
                         </div>
-                        <div class="constructor__bubbles-item">
+                        <div class="constructor__bubbles-item remove-skill">
                             <span>Уравновешенность</span>
                             <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4827_39596)">
-                                    <path
-                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                        fill="#232323" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4827_39596">
-                                        <rect width="12" height="12" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></button>
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4827_39596)">
+                                        <path
+                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                            fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4827_39596">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></button>
 
                         </div>
-                        <div class="constructor__bubbles-item">
+                        <div class="constructor__bubbles-item remove-skill">
                             <span>Консультирование клиентов</span>
                             <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4827_39596)">
-                                    <path
-                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                        fill="#232323" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4827_39596">
-                                        <rect width="12" height="12" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></button>
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4827_39596)">
+                                        <path
+                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                            fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4827_39596">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></button>
 
                         </div>
-                        <div class="constructor__bubbles-item">
+                        <div class="constructor__bubbles-item remove-skill">
                             <span>Составление договоров</span>
                             <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4827_39596)">
-                                    <path
-                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                        fill="#232323" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4827_39596">
-                                        <rect width="12" height="12" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg></button>
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4827_39596)">
+                                        <path
+                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                            fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4827_39596">
+                                            <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg></button>
 
                         </div>
                     </div>
                     <div class="constructor__bubbles-list gray-bubbles">
-                        <div class="constructor__bubbles-item">Коммуникабельность</div>
-                        <div class="constructor__bubbles-item">Выявление потребностей</div>
-                        <div class="constructor__bubbles-item">Уравновешенность</div>
-                        <div class="constructor__bubbles-item">Консультирование клиентов</div>
-                        <div class="constructor__bubbles-item">Составление договоров</div>
-                        <div class="constructor__bubbles-item">Пассивные продажи</div>
-                        <div class="constructor__bubbles-item">Аудит компании</div>
-                        <div class="constructor__bubbles-item">Анализ целевой аудитории</div>
-                        <div class="constructor__bubbles-item">Наставничество</div>
-                        <div class="constructor__bubbles-item">Планирование продаж</div>
+                        <div class="constructor__bubbles-item add-skill">Коммуникабельность</div>
+                        <div class="constructor__bubbles-item add-skill">Выявление потребностей</div>
+                        <div class="constructor__bubbles-item add-skill">Уравновешенность</div>
+                        <div class="constructor__bubbles-item add-skill">Консультирование клиентов</div>
+                        <div class="constructor__bubbles-item add-skill">Составление договоров</div>
+                        <div class="constructor__bubbles-item add-skill">Пассивные продажи</div>
+                        <div class="constructor__bubbles-item add-skill">Аудит компании</div>
+                        <div class="constructor__bubbles-item add-skill">Анализ целевой аудитории</div>
+                        <div class="constructor__bubbles-item add-skill">Наставничество</div>
+                        <div class="constructor__bubbles-item add-skill">Планирование продаж</div>
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="3">Назад</button>
+                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="5">Далее</button>
                 </div>
                 <input type="hidden" name="step" value="4">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 5 -->
-            <form class="grid-list" id="step-form-experience" data-target-step="5" data-title="Опыт работы"
-                class="step-form" method="post">
-                <div class="constructor__inputs-set grid-list">
-                    <div class="constructor__inputs-list grid-list grid-2-columns">
-                        <div class="lk__input-wrapper big-input">
-                            <input type="text" value="" placeholder="Компания">
-                        </div>
-                        <div class="lk__input-wrapper big-input">
-                            <input type="text" value="" placeholder="Должность">
-                        </div>
-                    </div>
-                    <div class="constructor-select">
-                        <div class="grid-2-columns constructor__inputs-set grid-list">
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Начало</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+            <form class="grid-list" id="step-form-experience" data-form="5" data-title="Опыт работы" class="step-form"
+                method="post">
+                <div class="experience-wrapper grid-list template-wrapper">
+                    <template id="company">
+                        <div class="experience-block grid-list">
+                            <div class="constructor__inputs-set grid-list">
+                                <div class="constructor__inputs-list grid-list grid-2-columns">
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Компания">
+                                    </div>
+                                    <div class="lk__input-wrapper big-input">
+                                        <input type="text" value="" placeholder="Должность">
+                                    </div>
                                 </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
-                            </div>
-                            <div class="grid-2-columns constructor__inputs-list grid-list">
-                                <div class="grid-2-columns__with-title">
-                                    <span>Окончание</span>
-                                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                <div class="constructor-select">
+                                    <div class="grid-2-columns constructor__inputs-set grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Начало</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                            <div class="grid-2-columns__with-title">
+                                                <span>Окончание</span>
+                                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                            </div>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                        </div>
+                                        <label class="custom-checkbox working-now">
+                                            <input type="checkbox" name="profession" value="point1">
+                                            <span class="custom-checkbox__checkmark"></span>
+                                            <span class="custom-checkbox__text">
+                                                Работаю по настоящее время
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                             </div>
-                            <label class="custom-checkbox working-now">
-                                <input type="checkbox" name="profession" value="point1">
-                                <span class="custom-checkbox__checkmark"></span>
-                                <span class="custom-checkbox__text">
-                                    Работаю по настоящее время
-                                </span>
-                            </label>
+                            <div class="constructor__inputs-set grid-list duties">
+                                <span class="subcaption">Основные обязанности</span>
+                                <div class="lk__input-wrapper constructor__textarea-wrapper">
+                                    <textarea name="descr" id="" placeholder="Описание работы"></textarea>
+                                </div>
+                                <div class="constructor__hints-wrapper slider">
+                                    <div class="lk__input-wrapper hint">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При
+                                        клике появляются текстом в поле описания.
+                                    </div>
+                                    <div class="lk__input-wrapper hint">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При
+                                        клике появляются текстом в поле описания.
+                                    </div>
+                                    <div class="lk__input-wrapper hint">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При
+                                        клике появляются текстом в поле описания.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <div class="experience-block grid-list">
+                        <div class="constructor__inputs-set grid-list">
+                            <div class="constructor__inputs-list grid-list grid-2-columns">
+                                <div class="lk__input-wrapper big-input">
+                                    <input type="text" value="" placeholder="Компания">
+                                </div>
+                                <div class="lk__input-wrapper big-input">
+                                    <input type="text" value="" placeholder="Должность">
+                                </div>
+                            </div>
+                            <div class="constructor-select">
+                                <div class="grid-2-columns constructor__inputs-set grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Начало</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns__with-title">
+                                            <span>Окончание</span>
+                                            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
+                                        </div>
+                                        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
+                                    </div>
+                                    <label class="custom-checkbox working-now">
+                                        <input type="checkbox" name="profession" value="point1">
+                                        <span class="custom-checkbox__checkmark"></span>
+                                        <span class="custom-checkbox__text">
+                                            Работаю по настоящее время
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="constructor__inputs-set grid-list duties">
+                            <span class="subcaption">Основные обязанности</span>
+                            <div class="lk__input-wrapper constructor__textarea-wrapper">
+                                <textarea name="descr" id="" placeholder="Описание работы"></textarea>
+                            </div>
+                            <div class="constructor__hints-wrapper slider">
+                                <div class="lk__input-wrapper hint">
+                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                    При
+                                    клике появляются текстом в поле описания.
+                                </div>
+                                <div class="lk__input-wrapper hint">
+                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                    При
+                                    клике появляются текстом в поле описания.
+                                </div>
+                                <div class="lk__input-wrapper hint">
+                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                    При
+                                    клике появляются текстом в поле описания.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="constructor__inputs-set grid-list duties">
-                    <span class="subcaption">Основные обязанности</span>
-                    <div class="lk__input-wrapper constructor__textarea-wrapper">
-                        <textarea name="descr" id="" placeholder="Описание работы"></textarea>
-                    </div>
-                    <div class="constructor__hints-wrapper">
-                        <div class="lk__input-wrapper hint">
-                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                            При
-                            клике появляются текстом в поле описания.
-                        </div>
-                        <div class="lk__input-wrapper hint">
-                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                            При
-                            клике появляются текстом в поле описания.
-                        </div>
-                        <div class="lk__input-wrapper hint">
-                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                            При
-                            клике появляются текстом в поле описания.
-                        </div>
-                    </div>
-                </div>
-                <button data-call-modal="add__contacts" class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
+                
+                <button data-add-block="company" class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7081_644)">
                             <path
@@ -776,22 +942,22 @@
                     <span>Добавить место работы</span>
                 </button>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="4">Назад</button>
+                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="6">Далее</button>
                 </div>
                 <input type="hidden" name="step" value="5">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
-            <form id="step-form-files" data-target-step="6" data-title="Портфолио и сертификаты"
-                class="step-form" method="post">
+            <form id="step-form-files" data-form="6" data-title="Портфолио и сертификаты" class="step-form"
+                method="post">
                 <div class="resume-file-inputs-wrapper grid-list">
-                    <div class="construstor__inputs-files-block">
+                    <div class="construstor__inputs-files-block" data-files-type="portfolio">
                         <div class="constructor__inputs-title">
                             <span class="subcaption">Портфолио</span>
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" id="portfolioFileInput" multiple accept="image/png, image/jpeg">
+                            <input type="file" multiple accept="image/png, image/jpeg">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_7542_2494)">
@@ -814,13 +980,13 @@
                         </label>
                         <div class="constructor__files-result-wrapper"></div>
                     </div>
-                    <div class="construstor__inputs-files-block">
+                    <div class="construstor__inputs-files-block" data-files-type="certificates">
                         <div class="constructor__inputs-title">
                             <span class="subcaption">Сертификаты</span>
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" id="portfolioFileInput" multiple accept="image/png, image/jpeg">
+                            <input type="file" multiple accept="image/png, image/jpeg">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_7542_2494)">
@@ -844,8 +1010,9 @@
                         <div class="constructor__files-result-wrapper"></div>
                     </div>
                     <div class="constructor__forms-actions">
-                        <button type="button" class="btn btn_neutral prev-step btn_size-l">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-l ">Далее</button>
+                        <button type="button" class="btn btn_neutral prev-step btn_size-l"
+                            data-prev-step="5">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-l">Далее</button>
                     </div>
                     <input type="hidden" name="step" value="5">
                     <input type="hidden" name="form_action" value="save_step">

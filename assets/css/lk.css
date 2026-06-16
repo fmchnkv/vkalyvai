@@ -1084,6 +1084,10 @@
 .lk .btn--show {
   cursor: pointer;
 }
+.lk.constructor {
+  overflow: hidden;
+  padding-top: 102px;
+}
 .lk .constructor__steps {
   display: flex;
   align-items: center;
@@ -1106,7 +1110,26 @@
 }
 .lk .constructor__forms form {
   gap: 48px;
+  transform: translateX(-20%);
+  opacity: 0;
+  /*max-width: 0;*/
+  max-height: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.lk .constructor__forms form .experience-block {
+  gap: 48px;
+}
+.lk .constructor__forms form .template-wrapper {
+  gap: 32px;
+}
+.lk .constructor__forms form.active {
   max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+  transition: all 0.3s ease;
 }
 .lk .constructor__forms form .resume-file-inputs-wrapper {
   gap: 33px;
@@ -1227,6 +1250,7 @@
   justify-content: center;
   gap: 2px;
   border-radius: 32px;
+  cursor: pointer;
 }
 .lk .constructor__textarea-wrapper {
   padding: 24px;
@@ -1269,6 +1293,69 @@
 .lk .constructor__hints-wrapper .hint.active {
   background-color: #FFF2E9;
   transition: all 0.3s ease;
+}
+.lk .constructor__files-result-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.lk .constructor__files-preview {
+  width: 84px;
+  height: 104px;
+  border-radius: 8px;
+  position: relative;
+}
+.lk .constructor__files-preview img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 8px;
+}
+.lk .constructor__files-remove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 2px;
+  border-radius: 100%;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.lk .constructor__files-remove svg path {
+  transition: all 0.3s ease;
+  fill: auto;
+}
+.lk .constructor__files-remove:hover {
+  background: #FC7827;
+  transition: all 0.3s ease;
+}
+.lk .constructor__files-remove:hover svg path {
+  transition: all 0.3s ease;
+  fill: #fff;
+}
+.lk .constructor__files-more {
+  background-color: #EBEBEB;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.lk .constructor__files-more:hover {
+  background-color: #999999;
+  transition: all 0.3s ease;
+}
+.lk .constructor__files-more span {
+  background-color: #FFFFFF;
+  padding: 6px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .lk .constructor__files-input-wrapper {
   padding: 26px 12px;

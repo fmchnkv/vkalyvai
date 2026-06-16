@@ -4,8 +4,8 @@ $minYear = $currentYear - 100;
 $maxYear = $currentYear - 18;
 ?>
 <div class="lk__input-wrapper">
-    <div class="lk__custom-select">
-        <input type="hidden" id="year" name="">
+    <div data-label="Год" class="lk__custom-select">
+        <input type="hidden" name="">
         <div class="lk__custom-select-choise">Год</div>
     </div>
     <div class="lk__custom-select-list">
