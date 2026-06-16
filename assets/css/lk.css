@@ -57,13 +57,14 @@
   background-color: #F5F5F5;
 }
 .bright-bubble {
-  border: 1px solid #EBEBEB;
-  transition: all 0.3 ease;
+  border: 1px solid;
+  border-color: #EBEBEB;
+  transition: border-color 0.3 ease;
 }
 .bright-bubble:hover,
 .bright-bubble:focus {
   border-color: #FC7827;
-  transition: all 0.3 ease;
+  transition: border-color 0.3 ease;
 }
 .full-width {
   width: 100%;
@@ -168,6 +169,8 @@
   align-items: center;
   gap: 12px;
   justify-content: space-between;
+  border-color: auto;
+  transition: border-color 0.3s ease;
 }
 .lk .with-icon svg {
   width: 24px;
@@ -176,6 +179,7 @@
 .lk .with-icon:hover,
 .lk .with-icon:focus {
   border-color: #FC7827;
+  transition: border-color 0.3s ease;
 }
 .lk .with-icon:hover .lk-bubble__buttons-wrapper,
 .lk .with-icon:focus .lk-bubble__buttons-wrapper {
@@ -950,6 +954,9 @@
 }
 .lk__checkbox-buttons label {
   text-align: center;
+  background-color: transparent;
+  color: inherit;
+  transition: all 0.3s ease;
 }
 .lk__checkbox-buttons label:hover {
   background-color: #FC7827;
@@ -1110,7 +1117,7 @@
 }
 .lk .constructor__forms form {
   gap: 48px;
-  transform: translateX(-20%);
+  transform: translateY(20%);
   opacity: 0;
   /*max-width: 0;*/
   max-height: 0;
@@ -1300,6 +1307,30 @@
   gap: 12px;
   margin-top: 20px;
 }
+.lk .constructor__files-result-noties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  max-width: max-content;
+}
+.lk .constructor__files-result-noties .errors {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #F14C4C;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.lk .constructor__files-result-noties .info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #999999;
+  display: flex;
+  gap: 12px;
+}
 .lk .constructor__files-preview {
   width: 84px;
   height: 104px;
@@ -1372,7 +1403,8 @@
   cursor: pointer;
 }
 .lk .constructor__files-input-wrapper:focus,
-.lk .constructor__files-input-wrapper:hover {
+.lk .constructor__files-input-wrapper:hover,
+.lk .constructor__files-input-wrapper.drag-over {
   background-color: #FFF2E9;
   transition: background-color 0.3s ease;
 }

@@ -1162,7 +1162,18 @@ document.addEventListener('DOMContentLoaded', () => {
             constructorSteps.forEach(form => {
                 form.classList.remove('active');
             });
-            document.querySelector(`form[data-form="${stepNumber}"]`).classList.add('active');
+            let newStep = document.querySelector(`form[data-form="${stepNumber}"]`);
+
+            if(!newStep) return;
+
+            newStep.classList.add('active');
+
+            //прокрутка
+            const top = document.querySelector('.page-title').getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top,
+                behavior: 'smooth'
+            });
         }
         constructorSteps.forEach(stepForm => {
             let btnNext = stepForm.querySelector('.btn-next');
@@ -1325,23 +1336,111 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolio: [],
             certificates: []
         };
+        const errorFiles = {
+            portfolio: [],
+            certificates: []
+        };
+        const MAX_FILES_TOTAL_SIZE = 10 * 1024 * 1024; // 10 МБ
+        const MAX_FILES_COUNT = 10;
+
         document?.querySelectorAll('.constructor__files-input-wrapper input[type="file"]')?.forEach(input => {
 
             input.addEventListener('change', function() {
-
-                const type = this.closest('.construstor__inputs-files-block').dataset.filesType;
-
-                if (!uploadedFiles[type]) {
-                    uploadedFiles[type] = [];
-                }
-
-                uploadedFiles[type].push(...this.files);
-
-                renderFiles(this, type);
+                const block = input.closest('.constructor__files-input-wrapper');
+                addFiles(this, this.files);
 
                 this.value = '';
             });
+
+            initFilesDropZone(input);
         });
+
+        function getFilesTotalSize(files) {
+            return files.reduce((sum, file) => sum + file.size, 0);
+        }
+
+        function bytesToMb(bytes, digits = 0) {
+            return (bytes / 1024 / 1024).toFixed(digits);
+        }
+
+        function addFileError(type, file, errorText) {
+            let errorFile = errorFiles[type].find(item => item.name === file.name);
+
+            if (!errorFile) {
+                errorFile = {
+                    name: file.name,
+                    errors: []
+                };
+
+                errorFiles[type].push(errorFile);
+            }
+
+            errorFile.errors.push(errorText);
+        }
+
+        function addFiles(input, files) {
+            if (!files.length) return;
+
+            const block = input.closest('.construstor__inputs-files-block');
+            const type = block.dataset.filesType;
+            errorFiles[type] = [];
+
+            if (!uploadedFiles[type]) {
+                uploadedFiles[type] = [];
+            }
+
+            const acceptedFiles = [];
+            let totalSize = getFilesTotalSize(uploadedFiles[type]);
+
+            Array.from(files).forEach(file => {
+                const hasFreeSlot = uploadedFiles[type].length + acceptedFiles.length < MAX_FILES_COUNT;
+                const fitsBySize = totalSize + file.size <= MAX_FILES_TOTAL_SIZE;
+
+                if(hasFreeSlot && fitsBySize) {
+                    acceptedFiles.push(file);
+                    totalSize += file.size;
+                } else {
+                    if (!hasFreeSlot) {
+                        addFileError(type, file, 'Изображение не соответствует требованиям: максимум 10 файлов');
+                    }
+
+                    if (!fitsBySize) {
+                        addFileError(type, file, 'Изображение не соответствует требованиям: вес не более 10 Мб');
+                    }
+                }
+            });
+
+            if (!acceptedFiles.length) {
+                return;
+            }
+
+            
+            uploadedFiles[type].push(...acceptedFiles);
+            renderFiles(input, type);
+        }
+
+        function initFilesDropZone(input) {
+            const block = input.closest('.constructor__files-input-wrapper');
+            if (!block) return;
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                block.addEventListener(eventName, function(e) {
+                    e.preventDefault();
+                    block.classList.add('drag-over');
+                });
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                block.addEventListener(eventName, function(e) {
+                    e.preventDefault();
+                    block.classList.remove('drag-over');
+                });
+            });
+
+            block.addEventListener('drop', function(e) {
+                addFiles(input, e.dataTransfer.files);
+            });
+        }
 
         document.addEventListener('click', function(e) {
             const addMoreBtn = e.target.closest('.constructor__files-more');
@@ -1402,7 +1501,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             addMoreBtnAdd(resultWrapper);
+            renderNotices(input, type, block);
             syncInputFiles(input, type);
+        }
+
+        function renderNotices(input, type, block) {
+            const noticeInfo = block.querySelector('.info');
+            const noticeErrors = block.querySelector('.errors');
+
+            if(!noticeInfo && !noticeErrors) return;
+            
+            //очищаем все каждый раз 
+            noticeInfo.innerHTML = '';
+            noticeErrors.innerHTML = '';
+
+            if(!uploadedFiles[type].length) return;
+            
+            //создаем записку
+            let spanPhotos = document.createElement('span');
+            spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
+            let spanSizes = document.createElement('span');
+            spanSizes.textContent = `${bytesToMb(getFilesTotalSize(uploadedFiles[type]))}/${bytesToMb(MAX_FILES_TOTAL_SIZE)} мб`;
+            noticeInfo.append(spanPhotos, spanSizes);
+
+            //создаем ошибки
+            if(errorFiles[type].length) {
+                Array.from(errorFiles[type]).forEach(file => {
+                    let spanError = document.createElement('span');
+                    spanError.textContent = file.name + ' ' + file.errors.join(', ');
+                    noticeErrors.append(spanError);
+                })
+            }
         }
 
         function addMoreBtnAdd(resultWrapper) {
@@ -1442,10 +1571,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasFiles = input.files.length > 0;
             const resultWrapper = block.querySelector('.constructor__files-result-wrapper');
             const inputWrapper = block.querySelector('.constructor__files-input-wrapper');
+            const noticeWrapper = block.querySelector('.constructor__files-result-noties');
 
             inputWrapper?.classList.toggle('hidden', hasFiles);
 
-            if (!hasFiles && resultWrapper) {
+            if (!hasFiles && resultWrapper && noticeWrapper) {
                 resultWrapper.innerHTML = '';
             }
         }

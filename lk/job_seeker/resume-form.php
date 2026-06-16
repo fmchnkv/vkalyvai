@@ -949,7 +949,7 @@
                 <input type="hidden" name="form_action" value="save_step">
             </form>
             <form id="step-form-files" data-form="6" data-title="Портфолио и сертификаты" class="step-form"
-                method="post">
+                method="post" enctype="multipart/form-data">
                 <div class="resume-file-inputs-wrapper grid-list">
                     <div class="construstor__inputs-files-block" data-files-type="portfolio">
                         <div class="constructor__inputs-title">
@@ -957,7 +957,7 @@
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" multiple accept="image/png, image/jpeg">
+                            <input type="file" name="portfolio[]" multiple accept="image/png, image/jpeg">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_7542_2494)">
@@ -979,6 +979,10 @@
                             </div>
                         </label>
                         <div class="constructor__files-result-wrapper"></div>
+                        <div class="constructor__files-result-noties">
+                            <div class="info"></div>
+                            <div class="errors"></div>
+                        </div>
                     </div>
                     <div class="construstor__inputs-files-block" data-files-type="certificates">
                         <div class="constructor__inputs-title">
@@ -986,7 +990,7 @@
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" multiple accept="image/png, image/jpeg">
+                            <input type="file" name="certificates[]" multiple accept="image/png, image/jpeg">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_7542_2494)">
@@ -1008,6 +1012,10 @@
                             </div>
                         </label>
                         <div class="constructor__files-result-wrapper"></div>
+                        <div class="constructor__files-result-noties">
+                            <div class="info"></div>
+                            <div class="errors"></div>
+                        </div>
                     </div>
                     <div class="constructor__forms-actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-l"
