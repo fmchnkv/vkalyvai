@@ -31,19 +31,14 @@
   }
 }
 .detail {
-  margin-bottom: 56px;
-}
-@media screen and (min-width: 768px) {
-  .detail {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 40px;
 }
 .detail__section {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1441px) {
   .detail__section {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 }
 .detail__row {
@@ -77,7 +72,7 @@
   border: 1px solid #EBEBEB;
   padding: 8px 7px;
   border-radius: 32px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   box-shadow: 0px 0px 32px rgba(20, 20, 20, 0.04), 0px 8px 12px -6px rgba(20, 20, 20, 0.04);
   flex: 0 0 auto;
   z-index: 10;
@@ -117,8 +112,8 @@
 }
 @media screen and (min-width: 768px) {
   .detail__sidebar_small {
-    max-width: 280px;
-    left: calc(50% - 140px);
+    max-width: 260px;
+    left: calc(50% - 130px);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -145,7 +140,7 @@
   .detail__actions {
     padding: 12px;
     border-radius: 32px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border: 1px solid #EBEBEB;
     flex-direction: column;
   }
@@ -181,7 +176,7 @@
 }
 .detail__like:hover path,
 .detail__like:active path {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
   .detail__share {
@@ -200,5 +195,5 @@
 }
 .detail__share:hover path,
 .detail__share:active path {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }

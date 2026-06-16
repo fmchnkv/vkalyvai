@@ -6,11 +6,11 @@
     background-color: @bg-secondary;
     border-radius: @border-radius-xl;
     gap: 8px;
+    padding: 4px;
 
     &__row {
         display: flex;
         align-items: center;
-        padding: 5px 4px;
         flex: 1 1 auto;
         gap: 0 4px;
     }
@@ -20,15 +20,14 @@
     }
 
     &__btn {
-        padding: 24px 32px;
         font-size: @f-body-m;
         line-height: @f-body-m;
         flex: 0 0 auto;
 
         .media-max(767px, {
             .flex-center();
-            width: 58px;
-            height: 58px;
+            width: 42px;
+            height: 42px;
             border-radius: @border-radius-xl;
             padding: 0;
         });
@@ -103,8 +102,6 @@
 
         .media-min(768px, {
            margin-top: 22px; 
-
-           .btn-size(19px 31px, 18px);
         });
     }
 

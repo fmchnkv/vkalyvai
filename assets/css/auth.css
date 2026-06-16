@@ -30,13 +30,46 @@
     line-height: 24px;
   }
 }
+.auth-section {
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .auth-section {
+    background-image: url(/images/auth-section.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 1600px;
+  }
+}
 .auth-section__inner {
   position: relative;
   min-height: 100vh;
-  padding: 16px 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 16px 0 24px;
+}
+@media screen and (min-width: 768px) {
+  .auth-section__inner {
+    padding: 60px 0;
+  }
+}
+.auth-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .auth-section__wrapper {
+    position: relative;
+    margin: auto;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    max-width: 552px;
+    padding: 32px;
+    box-shadow: 0px 0px 32px rgba(20, 20, 20, 0.04), 0px 8px 12px -6px rgba(20, 20, 20, 0.04);
+  }
 }
 .auth-section__back {
   position: absolute;
@@ -48,6 +81,11 @@
   width: 48px;
   height: 48px;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .auth-section__back {
+    left: 16px;
+  }
 }
 .auth-section__header {
   margin-bottom: 48px;
@@ -65,10 +103,16 @@
 }
 .auth-section__container {
   width: 100%;
-  margin-bottom: 16px;
 }
 .auth-section__footer {
   margin-top: auto;
+  padding-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .auth-section__footer {
+    position: absolute;
+    bottom: 24px;
+  }
 }
 .auth-hero {
   display: flex;
@@ -164,4 +208,161 @@
 .auth-login__accept a {
   color: #FC7827;
   text-decoration: underline;
+}
+.auth-pass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-pass__title {
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.auth-pass__description {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.auth-pass__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.auth-pass__input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.auth-pass__extra {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+.auth-pass__submit {
+  width: 100%;
+  margin-top: 40px;
+}
+.auth-reg__title {
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+  display: block;
+}
+.auth-reg__description {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.auth-reg__caption {
+  display: block;
+  margin-bottom: 8px;
+  color: #999999;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.auth-reg__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.auth-reg__group {
+  margin-bottom: 12px;
+  width: 100%;
+}
+.auth-reg__row {
+  display: grid;
+  gap: 8px;
+}
+.auth-reg__row_2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.auth-reg__row_3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .auth-reg__row_3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.auth-reg__row_birth .auth-reg__row-item:last-child {
+  grid-column: span 2;
+}
+@media screen and (min-width: 768px) {
+  .auth-reg__row_birth .auth-reg__row-item:last-child {
+    grid-column: span 1;
+  }
+}
+.auth-reg__row_inn {
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px) {
+  .auth-reg__row_inn {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.auth-reg__submit {
+  width: 100%;
+  margin-top: 40px;
+}
+.auth-reg__accept {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+.auth-reg__accept a {
+  color: #FC7827;
+  text-decoration: underline;
+}
+.auth-reg__code {
+  margin-bottom: 24px;
+}
+.auth-reg__resend {
+  color: #FC7827;
+  font-size: 14px;
+  line-height: 16px;
+}
+.auth-reg__resend:hover {
+  text-decoration: underline;
+}
+.auth-reg__extra {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+.auth-reg__checkbox + .auth-reg__checkbox {
+  margin-top: 12px;
+}
+.auth-reg__checkbox a {
+  color: #FC7827;
+}
+.auth-reg__checkbox a:hover {
+  text-decoration: underline;
+}
+.auth-reg__checkbox .checkbox__label {
+  font-size: 12px;
+  line-height: 14px;
+}
+.auth-reg__comment {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.code-input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.code-input__field {
+  aspect-ratio: 1 / 1;
+  background-color: #FFF2E9;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
 }

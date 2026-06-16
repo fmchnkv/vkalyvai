@@ -161,12 +161,12 @@
 }
 @media screen and (min-width: 768px) {
   .tag_size-m {
-    padding: 12px 16px;
+    padding: 8px 12px;
   }
 }
 @media screen and (min-width: 1441px) {
   .tag_size-m {
-    padding: 16px 20px;
+    padding: 12px 16px;
   }
 }
 .tag_btn {
@@ -251,7 +251,7 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1441px) {
   .tab {
     font-size: 18px;
     line-height: 22px;

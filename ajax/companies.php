@@ -1,0 +1,1 @@
+<? for ($i = 0; $i < 12; $i++) { include $_SERVER["DOCUMENT_ROOT"] . '/include/company-item.php'; } ?>

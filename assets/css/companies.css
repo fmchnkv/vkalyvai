@@ -1,3 +1,35 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 .companies-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -11,6 +43,7 @@
 @media screen and (min-width: 1441px) {
   .companies-grid {
     gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .companies-grid__link {
@@ -31,6 +64,9 @@
   .companies-grid__link {
     gap: 20px;
   }
+}
+.companies-grid__link:visited {
+  color: #999999;
 }
 .companies-grid__avatar {
   width: 64px;
