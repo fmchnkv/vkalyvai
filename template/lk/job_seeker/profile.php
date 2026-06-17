@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="lk__buttons">
-        <a href="#" data-call-modal="edit__personal" class="btn btn_size-m btn_neutral lk__btn_has-icon profile-btn">
+        <a href="#" data-call-modal="edit__personal" class="btn btn_size-m btn_primary lk__btn_has-icon profile-btn">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g url(#clip0_7002_1640)">
                     <path
@@ -39,7 +39,7 @@
                 </svg>
             </div>
         </a>
-        <a href="#" class="btn profile-btn detail__btn btn_primary btn_size-m lk__btn_has-icon ">
+        <a href="#" class="btn profile-btn detail__btn btn_neutral btn_size-m lk__btn_has-icon ">
             <span>Выйти</span>
             <div class="mob-icon">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@
             <span>Добавить</span>
         </button>
     </div>
-    <div class="grid-bubbles grid-list">
+    <div class="grid-bubbles grid-list language-list">
         <div class="lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
                 <span>Родной</span>

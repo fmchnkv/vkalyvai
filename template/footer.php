@@ -173,17 +173,29 @@
             <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Статус поиска</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="search_status" value="Активно ищу работу" name="">
-                            <div class="lk__custom-select-choise">Активно ищу работу</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Активно ищу работу</div>
-                                <div class="lk__custom-select-item">Пассивно ищу работу</div>
-                                <div class="lk__custom-select-item">Не ищу работу</div>
+                    <div class="select" data-id="search_status">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="search_status" data-id="search_status" readonly placeholder="Активно ищу работу">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="search_status">
+                                <li class="select__option active" data-value="Активно ищу работу">Активно ищу работу</li>
+                                <li class="select__option" data-value="Пассивно ищу работу">Пассивно ищу работу</li>
+                                <li class="select__option" data-value="Не ищу работу">Не ищу работу</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -196,13 +208,13 @@
                 <div class="lk__input-element">
                     <span class="subcaption">Пол</span>
                     <div class="lk__radio-buttons">
-                        <label class="lk__input-wrapper">
-                            <input type="radio" checked name="gender" value="male">
-                            <span class="lk__input-label">Мужской</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="male" checked="">
+                            <span class="radio__label">Мужской</span>
                         </label>
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="gender" value="female">
-                            <span class="lk__input-label">Женский</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="female">
+                            <span class="radio__label">Женский</span>
                         </label>
                     </div>
                 </div>
@@ -223,13 +235,13 @@
                 <div class="lk__input-element">
                     <span class="subcaption">Участник СВО</span>
                     <div class="lk__radio-buttons">
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="svo" value="Y">
-                            <span class="lk__input-label">Да</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="svo" value="Y" checked="">
+                            <span class="radio__label">Да</span>
                         </label>
-                        <label class="lk__input-wrapper">
-                            <input type="radio" checked name="svo" value="N">
-                            <span class="lk__input-label">Нет</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="svo" value="N">
+                            <span class="radio__label">Нет</span>
                         </label>
                     </div>
                 </div>
@@ -245,7 +257,7 @@
     <div class="modal__wrapper">
         <button class="modal__close js-modal-close icon-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g url(#clip0_4580_6383)">
+                <g>
                     <path
                         d="M15.8212 6.91005C16.1726 6.55863 16.7432 6.55863 17.0946 6.91005C17.4456 7.26148 17.4458 7.83123 17.0946 8.18251L13.9823 11.2938C13.592 11.6843 13.592 12.3174 13.9823 12.7079L17.0946 15.8192C17.446 16.1706 17.446 16.7413 17.0946 17.0927C16.7432 17.4441 16.1726 17.4441 15.8212 17.0927L12.7099 13.9804C12.3194 13.5901 11.6863 13.59 11.2958 13.9804L8.18446 17.0927C7.83318 17.4439 7.26343 17.4436 6.912 17.0927C6.56058 16.7412 6.56058 16.1706 6.912 15.8192L10.0233 12.7079C10.4137 12.3174 10.4137 11.6843 10.0233 11.2938L6.912 8.18251C6.56058 7.83109 6.56058 7.26147 6.912 6.91005C7.26342 6.55863 7.83304 6.55863 8.18446 6.91005L11.2958 10.0214C11.6863 10.4118 12.3193 10.4117 12.7099 10.0214L15.8212 6.91005Z"
                         fill="#999999" />
@@ -279,31 +291,55 @@
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Тип регистрации</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="search_status" value="Организация" name="">
-                            <div class="lk__custom-select-choise">Организация</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Организация</div>
-                                <div class="lk__custom-select-item">ИП</div>
+                    <div class="select" data-id="registration_type">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="registration_type" data-id="registration_type" readonly placeholder="Организация">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="registration_type">
+                                <li class="select__option active" data-value="Организация">Организация</li>
+                                <li class="select__option" data-value="ИП">ИП</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Сфера деятельности</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="search_status" value="Медицинская клиника" name="">
-                            <div class="lk__custom-select-choise">Медицинская клиника</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Медицинская клиника</div>
-                                <div class="lk__custom-select-item">Медицинская клиника</div>
+                    <div class="select" data-id="activity_area">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="activity_area" data-id="activity_area" readonly placeholder="Медицинская клиника">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="activity_area">
+                                <li class="select__option active" data-value="Медицинская клиника">Медицинская клиника</li>
+                                <li class="select__option" data-value="Медицинская клиника">Медицинская клиника</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -487,17 +523,29 @@
             <div class="lk__univercity-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Уровень образования</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="education" value="Высшее" name="">
-                            <div class="lk__custom-select-choise">Высшее</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Высшее</div>
-                                <div class="lk__custom-select-item">Средне-специальное</div>
-                                <div class="lk__custom-select-item">Среднее</div>
+                    <div class="select" data-id="education">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Высшее">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="education">
+                                <li class="select__option" data-value="Высшее">Высшее</li>
+                                <li class="select__option" data-value="Средне-специальное">Средне-специальное</li>
+                                <li class="select__option" data-value="Среднее">Среднее</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -522,13 +570,25 @@
                     $maxYear = $currentYear - 18;
                     ?>
                     <div class="lk__input-grid lk__main-form__date-wrapper">
-                        <div class="lk__input-wrapper">
-                            <div class="lk__custom-select">
-                                <input type="hidden" id="month" name="">
-                                <div class="lk__custom-select-choise">Месяц</div>
-                            </div>
-                            <div class="lk__custom-select-list">
-                                <div class="lk__custom-select-list-container">
+                        <div class="select" data-id="education_month">
+                            <label class="filter-group__input select__input input input_has-icon">
+                                <input class="input__field" type="text" name="education_month" data-id="education_month" readonly placeholder="Месяц">
+                                <div class="input__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4687_14543">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </label>
+
+                            <div class="select__dropdown">
+                                <ul class="select__dropdown-list" data-id="education_month">
                                     <?php
                                     $months = [
                                         'Январь',
@@ -546,26 +606,38 @@
                                     ];
                                     foreach ($months as $month):
                                         ?>
-                                        <div class="lk__custom-select-item">
+                                        <li class="select__option" data-value="<?= $month ?>">
                                             <?= $month ?>
-                                        </div>
+                                        </li>
                                     <?php endforeach; ?>
-                                </div>
+                                </ul>
                             </div>
                         </div>
-                        <div class="lk__input-wrapper">
-                            <div class="lk__custom-select">
-                                <input type="hidden" id="year" name="">
-                                <div class="lk__custom-select-choise">Год</div>
-                            </div>
-                            <div class="lk__custom-select-list">
-                                <div class="lk__custom-select-list-container">
-                                    <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
-                                        <div class="lk__custom-select-item">
-                                            <?= $year ?>
-                                        </div>
-                                    <?php endfor; ?>
+                        <div class="select" data-id="education_year">
+                            <label class="filter-group__input select__input input input_has-icon">
+                                <input class="input__field" type="text" name="education_year" data-id="education_year" readonly placeholder="Год">
+                                <div class="input__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4687_14543">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </div>
+                            </label>
+
+                            <div class="select__dropdown">
+                                <ul class="select__dropdown-list" data-id="education_year">
+                                    <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
+                                        <li class="select__option" data-value="<?= $year ?>">
+                                            <?= $year ?>
+                                        </li>
+                                    <?php endfor; ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -671,35 +743,59 @@
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Язык</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="language" value="Английский" name="">
-                            <div class="lk__custom-select-choise">Английский</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Английский</div>
-                                <div class="lk__custom-select-item">Немецкий</div>
+                    <div class="select" data-id="external_language">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="external_language" data-id="external_language" readonly placeholder="Английский">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="external_language">
+                                <li class="select__option active" data-value="Английский">Английский</li>
+                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="lk__input-element">
                     <span class="subcaption">Уровень владения</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="skill" value="А1-Начальный" name="">
-                            <div class="lk__custom-select-choise">А1-Начальный</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">А1-Начальный</div>
-                                <div class="lk__custom-select-item">А2-Элементарный</div>
-                                <div class="lk__custom-select-item">B1-Средний</div>
+                    <div class="select" data-id="language_level">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="language_level" data-id="language_level" readonly placeholder="А1-Начальный">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="language_level">
+                                <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
+                                <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
+                                <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                            </ul>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
             <button type="submit" class="btn btn_size-m btn_primary">
                 <span>Применить</span>
@@ -729,16 +825,28 @@
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Язык</span>
-                    <div class="lk__input-wrapper">
-                        <div class="lk__custom-select">
-                            <input type="hidden" id="language" value="Английский" name="">
-                            <div class="lk__custom-select-choise">Английский</div>
-                        </div>
-                        <div class="lk__custom-select-list">
-                            <div class="lk__custom-select-list-container">
-                                <div class="lk__custom-select-item active">Английский</div>
-                                <div class="lk__custom-select-item">Немецкий</div>
+                    <div class="select" data-id="internal_language">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="internal_language" data-id="internal_language" readonly placeholder="Английский">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="internal_language">
+                                <li class="select__option active" data-value="Английский">Английский</li>
+                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -763,3 +871,4 @@
 </body>
 
 </html>
+
