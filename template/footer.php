@@ -208,13 +208,13 @@
                 <div class="lk__input-element">
                     <span class="subcaption">Пол</span>
                     <div class="lk__radio-buttons">
-                        <label class="lk__input-wrapper">
-                            <input type="radio" checked name="gender" value="male">
-                            <span class="lk__input-label">Мужской</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="male" checked="">
+                            <span class="radio__label">Мужской</span>
                         </label>
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="gender" value="female">
-                            <span class="lk__input-label">Женский</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="female">
+                            <span class="radio__label">Женский</span>
                         </label>
                     </div>
                 </div>
@@ -235,13 +235,13 @@
                 <div class="lk__input-element">
                     <span class="subcaption">Участник СВО</span>
                     <div class="lk__radio-buttons">
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="svo" value="Y">
-                            <span class="lk__input-label">Да</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="svo" value="Y" checked="">
+                            <span class="radio__label">Да</span>
                         </label>
-                        <label class="lk__input-wrapper">
-                            <input type="radio" checked name="svo" value="N">
-                            <span class="lk__input-label">Нет</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="svo" value="N">
+                            <span class="radio__label">Нет</span>
                         </label>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
     <div class="modal__wrapper">
         <button class="modal__close js-modal-close icon-button">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g url(#clip0_4580_6383)">
+                <g>
                     <path
                         d="M15.8212 6.91005C16.1726 6.55863 16.7432 6.55863 17.0946 6.91005C17.4456 7.26148 17.4458 7.83123 17.0946 8.18251L13.9823 11.2938C13.592 11.6843 13.592 12.3174 13.9823 12.7079L17.0946 15.8192C17.446 16.1706 17.446 16.7413 17.0946 17.0927C16.7432 17.4441 16.1726 17.4441 15.8212 17.0927L12.7099 13.9804C12.3194 13.5901 11.6863 13.59 11.2958 13.9804L8.18446 17.0927C7.83318 17.4439 7.26343 17.4436 6.912 17.0927C6.56058 16.7412 6.56058 16.1706 6.912 15.8192L10.0233 12.7079C10.4137 12.3174 10.4137 11.6843 10.0233 11.2938L6.912 8.18251C6.56058 7.83109 6.56058 7.26147 6.912 6.91005C7.26342 6.55863 7.83304 6.55863 8.18446 6.91005L11.2958 10.0214C11.6863 10.4118 12.3193 10.4117 12.7099 10.0214L15.8212 6.91005Z"
                         fill="#999999" />

@@ -1056,21 +1056,10 @@
         gap: 8px;
 
         label {
-            text-align: center;
-            max-width: max-content;
-            background-color: transparent;
-            color: @default;
-            transition: all .3s ease;
+            width: 100%;
 
-            &:hover {
-                background-color: @primary;
-                color: @white;
-                transition: all .3s ease;
-
-                svg path {
-                    fill: @white;
-                    transition: all .3s ease;
-                }
+            .radio__label {
+                font-size: 16px;
             }
         }
     }
@@ -1111,14 +1100,12 @@
                 flex-direction: column;
                 gap: 24px;
             }
-        }
-    }
 
-    &__contacts-form {
-        .lk__radio-buttons label.lk__input-wrapper {
-            padding: 12px;
-            border-radius: 100%;
-            .flex-center();
+            &.lk__univercity-form {
+                .lk__main-form__date-wrapper {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
         }
     }
 
@@ -1331,11 +1318,6 @@
             }
             .lk__radio-buttons {
                 flex-direction: column;
-                .lk__input-wrapper {
-                    max-width: 100%;
-                    width: 100%;
-                    padding: 16px 20px;
-                }
             }
             .lk__custom-select-list {
                 top: 35px;
@@ -1364,7 +1346,7 @@
                     gap: 8px;
                 }
                 .lk__main-form__date-wrapper {
-                    .select:last-child {
+                    .select:nth-child(3) {
                         grid-column-start: 1;
                         grid-column-end: 2;
                     }

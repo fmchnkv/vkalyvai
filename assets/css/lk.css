@@ -943,20 +943,10 @@
   gap: 8px;
 }
 .lk__radio-buttons label {
-  text-align: center;
-  max-width: max-content;
-  background-color: transparent;
-  color: #232323;
-  transition: all 0.3s ease;
+  width: 100%;
 }
-.lk__radio-buttons label:hover {
-  background-color: #FC7827;
-  color: #FFFFFF;
-  transition: all 0.3s ease;
-}
-.lk__radio-buttons label:hover svg path {
-  fill: #FFFFFF;
-  transition: all 0.3s ease;
+.lk__radio-buttons label .radio__label {
+  font-size: 16px;
 }
 .lk__checkbox-buttons {
   display: grid;
@@ -989,12 +979,8 @@
   flex-direction: column;
   gap: 24px;
 }
-.lk__contacts-form .lk__radio-buttons label.lk__input-wrapper {
-  padding: 12px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.lk__modal-form.lk__univercity-form .lk__main-form__date-wrapper {
+  grid-template-columns: repeat(1, 1fr);
 }
 .lk .docs-bubbles {
   margin-bottom: 40px;
@@ -1174,11 +1160,6 @@
 .lk .constructor__forms .lk__radio-buttons {
   flex-direction: column;
 }
-.lk .constructor__forms .lk__radio-buttons .lk__input-wrapper {
-  max-width: 100%;
-  width: 100%;
-  padding: 16px 20px;
-}
 .lk .constructor__forms .lk__custom-select-list {
   top: 35px;
 }
@@ -1201,7 +1182,7 @@
 .lk .constructor__inputs-set.duties {
   gap: 8px;
 }
-.lk .constructor__inputs-set .lk__main-form__date-wrapper .select:last-child {
+.lk .constructor__inputs-set .lk__main-form__date-wrapper .select:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 2;
 }

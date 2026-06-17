@@ -64,13 +64,13 @@
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Пол</span>
                     <div class="lk__radio-buttons">
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="gender" value="male">
-                            <span class="lk__input-label">Мужской</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="male" checked="">
+                            <span class="radio__label">Мужской</span>
                         </label>
-                        <label class="lk__input-wrapper">
-                            <input type="radio" name="gender" value="female">
-                            <span class="lk__input-label">Женский</span>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="gender" value="female">
+                            <span class="radio__label">Женский</span>
                         </label>
                     </div>
                 </div>
