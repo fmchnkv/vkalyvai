@@ -9,6 +9,21 @@
 
 .grid-bubbles {
     gap: 8px;
+
+    &.personal-bubbles {
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &.language-list {
+        @media (min-width: 1600px) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 55%;
+        }
+    }
 }
 
 .tight-bubble {
@@ -27,6 +42,7 @@
         font-size: 16px;
         line-height: 113%;
         color: @default;
+        .clamp-text(1);
     }
 }
 
@@ -386,9 +402,47 @@
 
         .profile-btn {
             padding: 0;
-            background: transparent;
             border: none;
             align-items: flex-start;
+
+            &.btn_neutral {
+                @media(min-width: 768px) {
+                    padding: 12px 24px;
+                }
+                span {
+                    @media(min-width: 768px) {
+                        display: block;
+                    }
+                }
+            }
+
+            &.btn_primary {
+                @media(min-width: 768px) {
+                    padding: 11px;
+                }
+                svg {
+                    @media(min-width: 768px) {
+                        display: block;
+                    }
+                }
+                span {
+                    @media(min-width: 1600px) {
+                        display: block;
+                    }
+                }
+            }
+
+            @media(max-width: 768px) {
+                background: transparent;
+            }
+
+            @media(min-width: 768px) {
+                max-height: max-content;
+            }
+
+            @media(min-width: 1600px) {
+                align-items: center;
+            }
 
             span {
                 display: none;
@@ -401,6 +455,10 @@
             .mob-icon {
                 svg {
                     display: block;
+                }
+
+                @media(min-width: 768px) {
+                    display: none;
                 }
             }
         }
@@ -564,6 +622,10 @@
         &-all {
             max-width: max-content;
             margin-top: 40px;
+
+            @media(min-width: 768px) {
+                margin-top: 0;
+            }
         }
         &-list {
             gap: 8px;
@@ -574,6 +636,7 @@
 
                 .btn_light {
                     width: 100%;
+                    max-width: max-content;
                 }
             }
         }
@@ -978,75 +1041,11 @@
         gap: 12px;
     }
 
-    &__custom-select {
-        position: relative;
-
-        &-choise {
-            background-color: @white;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background-image: url(/images/arrow-bottom.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
-            right: 0;
-            top: 50%;
-            transform: rotate(0deg) translate(50%, -50%);
-            transition: transform .3s ease;
-        }
-
-        &.active {
-            z-index: 1001;
-            &::after {
-                transform: rotate(180deg) translate(-50%, 50%);
-                transition: transform .3s ease;
-            }
-        }
-
-        &-list {
-            padding: 22px 20px 12px 20px;
-            background-color: @white;
-            border-radius: 0 0 22px 22px;
-            position: absolute;
-            top: 20px;
-            left: 0;
-            width: 100%;
-            border-bottom: 1px solid @border-neutral;
-            border-right: 1px solid @border-neutral;
-            border-left: 1px solid @border-neutral;
-            opacity: 0;
-            pointer-events: none;
-            z-index: -1;
-            transition: opacity .3s ease;
-
-            &-container {
-                max-height: 160px;
-                overflow-y: scroll;
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 8px;
-            }
-
-            &.active {
-                opacity: 1;
-                pointer-events: all;
-                z-index: 1000;
-                transition: opacity .3s ease;
-            }
-
-            div {
-                color: @default;
-                transition: color .3s ease;
-
-                &:hover, &.active {
-                    color: @primary;
-                    transition: color .3s ease;
-                }
+    &__main-form {
+        &__date-wrapper {
+            .select:last-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
             }
         }
     }
@@ -1312,44 +1311,9 @@
                     padding: 23px 24px;
                 }
 
-                .custom-checkbox {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    position: relative;
-
-                    &__checkmark {
-                        position: relative;
-                        border-radius: 8px;
-                        border: 1px solid @checkbox;
-                        width: 20px;
-                        height: 20px;
-                        position: relative;
-                        background-image: none;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        transition: all .3s ease;
-                    }
-
-                    input[type="checkbox"] {
-                        position: absolute;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-
-                        &:checked ~ .custom-checkbox__checkmark {
-                            background-color: @primary;
-                            border-color: @primary;
-                            background-image: url(/images/active-checkbox.svg);
-                            transition: all .3s ease;
-                        }
-                    }
-
-                    &__text {
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 113%;
-                        color: @default;
+                .big-select {
+                    input {
+                        padding: 19px 20px;
                     }
                 }
 
@@ -1399,6 +1363,12 @@
                 &.duties {
                     gap: 8px;
                 }
+                .lk__main-form__date-wrapper {
+                    .select:last-child {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                    }
+                }
             }
             &-group {
                 .constructor-select {
@@ -1409,6 +1379,14 @@
                 margin-bottom: 17px;
                 .subcaption {
                     margin-bottom: 12px;
+                }
+            }
+            &-checkbox {
+                .checkbox__label {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 113%;
+                    color: @default;
                 }
             }
         }
@@ -1451,15 +1429,14 @@
         }
 
         &__textarea-wrapper {
-            padding: 24px;
-            border-radius: 16px;
-
+            border: none;
+            padding: 0;
             textarea {
+                padding: 24px;
+                border-radius: 16px;
                 display: block;
                 min-height: 220px;
                 width: 100%;
-                border: none;
-                outline: none;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 122%;
@@ -1468,13 +1445,15 @@
         }
 
         &__hints-wrapper {
+            /*
             overflow: visible;
             max-width: 288px;
+
 
             .slick-list {
                 overflow: visible;
             }
-
+            */
             .hint {
                 border-radius: 12px;
                 padding: 12px;
@@ -1493,6 +1472,7 @@
                 }
                 &.active {
                     background-color: @light;
+                    color: @default;
                     transition: all .3s ease;
                 }
             }
@@ -1681,5 +1661,13 @@
 
     .media-min(768px, {
         display: block;
+    });
+}
+
+.mob-elem {
+    display: block;
+
+    .media-min(768px, {
+        display: none;
     });
 }

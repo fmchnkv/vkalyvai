@@ -22,7 +22,7 @@
     </a>
 </div>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/vacancies-list.php"); ?>
-<a href="javascript:void(0)" class="vacancies-all show-all-btn transp-btn lk__btn_has-icon">
+<a href="javascript:void(0)" class="vacancies-all show-all-btn transp-btn lk__btn_has-icon mob-elem">
     <span>Смотреть все</span>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_7142_9460)">

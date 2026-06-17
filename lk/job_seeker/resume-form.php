@@ -19,30 +19,21 @@
                 data-title="Выберите или укажите профессию" class="step-form active" method="post">
                 <div class="constructor__inputs-list grid-list">
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
-                        <label class="custom-checkbox">
-                            <input type="checkbox" name="profession" value="point1">
-                            <span class="custom-checkbox__checkmark"></span>
-                            <span class="custom-checkbox__text">
-                                Пункт из списка
-                            </span>
+                        <label class="filter-group__checkbox checkbox">
+                            <input class="checkbox__input" type="checkbox" name="profession" value="1">
+                            <span class="checkbox__label">Пункт из списка</span>
                         </label>
                     </div>
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
-                        <label class="custom-checkbox">
-                            <input type="checkbox" name="profession" value="point2">
-                            <span class="custom-checkbox__checkmark"></span>
-                            <span class="custom-checkbox__text">
-                                Пункт из списка
-                            </span>
+                        <label class="filter-group__checkbox checkbox">
+                            <input class="checkbox__input" type="checkbox" name="profession" value="1">
+                            <span class="checkbox__label">Пункт из списка</span>
                         </label>
                     </div>
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
-                        <label class="custom-checkbox">
-                            <input type="checkbox" name="profession" value="point3">
-                            <span class="custom-checkbox__checkmark"></span>
-                            <span class="custom-checkbox__text">
-                                Пункт из списка
-                            </span>
+                        <label class="filter-group__checkbox checkbox">
+                            <input class="checkbox__input" type="checkbox" name="profession" value="1">
+                            <span class="checkbox__label">Пункт из списка</span>
                         </label>
                     </div>
                 </div>
@@ -83,11 +74,11 @@
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set constructor-select">
+                <div class="constructor__inputs-set constructor-select big-select">
                     <span class="subcaption">Дата рождения</span>
                     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/date-fields.php"); ?>
                 </div>
-                <div class="constructor__inputs-set constructor-select">
+                <div class="constructor__inputs-set constructor-select big-select">
                     <span class="subcaption">Гражданство</span>
                     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/country-field.php"); ?>
                 </div>
@@ -469,17 +460,29 @@
                                 <div class="constructor__inputs-group">
                                     <div class="constructor__inputs-block constructor-select">
                                         <span class="subcaption">Основное образование</span>
-                                        <div class="lk__input-wrapper constructor__inputs-block__field">
-                                            <div data-label="Уровень образования" class="lk__custom-select">
-                                                <input type="hidden" value="" name="">
-                                                <div class="lk__custom-select-choise">Уровень образования</div>
-                                            </div>
-                                            <div class="lk__custom-select-list">
-                                                <div class="lk__custom-select-list-container">
-                                                    <div class="lk__custom-select-item active">Высшее</div>
-                                                    <div class="lk__custom-select-item">Средне-специальное</div>
-                                                    <div class="lk__custom-select-item">Среднее</div>
+                                        <div class="select big-select" data-id="education">
+                                            <label class="filter-group__input select__input input input_has-icon">
+                                                <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Уровень образования">
+                                                <div class="input__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_4687_14543">
+                                                                <rect width="24" height="24" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
                                                 </div>
+                                            </label>
+
+                                            <div class="select__dropdown">
+                                                <ul class="select__dropdown-list" data-id="education">
+                                                    <li class="select__option active" data-value="Высшее">Высшее</li>
+                                                    <li class="select__option" data-value="Средне-специальное">Средне-специальное</li>
+                                                    <li class="select__option" data-value="Среднее">Среднее</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -494,14 +497,14 @@
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -519,17 +522,29 @@
                             <div class="constructor__inputs-group">
                                 <div class="constructor__inputs-block constructor-select">
                                     <span class="subcaption">Основное образование</span>
-                                    <div class="lk__input-wrapper constructor__inputs-block__field">
-                                        <div data-label="Уровень образования" class="lk__custom-select">
-                                            <input type="hidden" value="" name="">
-                                            <div class="lk__custom-select-choise">Уровень образования</div>
-                                        </div>
-                                        <div class="lk__custom-select-list">
-                                            <div class="lk__custom-select-list-container">
-                                                <div class="lk__custom-select-item active">Высшее</div>
-                                                <div class="lk__custom-select-item">Средне-специальное</div>
-                                                <div class="lk__custom-select-item">Среднее</div>
+                                    <div class="select big-select" data-id="education">
+                                        <label class="filter-group__input select__input input input_has-icon">
+                                            <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Уровень образования">
+                                            <div class="input__icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4687_14543">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
                                             </div>
+                                        </label>
+
+                                        <div class="select__dropdown">
+                                            <ul class="select__dropdown-list" data-id="education">
+                                                <li class="select__option active" data-value="Высшее">Высшее</li>
+                                                <li class="select__option" data-value="Средне-специальное">Средне-специальное</li>
+                                                <li class="select__option" data-value="Среднее">Среднее</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -544,14 +559,14 @@
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -601,14 +616,14 @@
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -636,14 +651,14 @@
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -815,50 +830,46 @@
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list">
+                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <label class="custom-checkbox working-now">
-                                            <input type="checkbox" name="profession" value="point1">
-                                            <span class="custom-checkbox__checkmark"></span>
-                                            <span class="custom-checkbox__text">
-                                                Работаю по настоящее время
-                                            </span>
+                                        <label class="filter-group__checkbox checkbox">
+                                            <input class="checkbox__input" type="checkbox" name="working" value="1">
+                                            <span class="checkbox__label">Работаю по настоящее время</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="constructor__inputs-set grid-list duties">
                                 <span class="subcaption">Основные обязанности</span>
-                                <div class="lk__input-wrapper constructor__textarea-wrapper">
+                                <div class="lk__input-wrapper constructor__textarea-wrapper textarea">
                                     <textarea name="descr" id="" placeholder="Описание работы"></textarea>
                                 </div>
-                                <div class="constructor__hints-wrapper slider">
-                                    <div class="lk__input-wrapper hint">
-                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                        При
-                                        клике появляются текстом в поле описания.
-                                    </div>
-                                    <div class="lk__input-wrapper hint">
-                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                        При
-                                        клике появляются текстом в поле описания.
-                                    </div>
-                                    <div class="lk__input-wrapper hint">
-                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                        При
-                                        клике появляются текстом в поле описания.
+                                <div class="constructor__hints-wrapper swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="lk__input-wrapper hint swiper-slide">
+                                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                            При клике появляются текстом в поле описания.
+                                        </div>
+                                        <div class="lk__input-wrapper hint swiper-slide">
+                                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                            При клике появляются текстом в поле описания.
+                                        </div>
+                                        <div class="lk__input-wrapper hint swiper-slide">
+                                            Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                            При клике появляются текстом в поле описания.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -876,50 +887,46 @@
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list">
+                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <label class="custom-checkbox working-now">
-                                        <input type="checkbox" name="profession" value="point1">
-                                        <span class="custom-checkbox__checkmark"></span>
-                                        <span class="custom-checkbox__text">
-                                            Работаю по настоящее время
-                                        </span>
+                                    <label class="filter-group__checkbox checkbox">
+                                        <input class="checkbox__input" type="checkbox" name="working" value="1">
+                                        <span class="checkbox__label">Работаю по настоящее время</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="constructor__inputs-set grid-list duties">
                             <span class="subcaption">Основные обязанности</span>
-                            <div class="lk__input-wrapper constructor__textarea-wrapper">
+                            <div class="lk__input-wrapper constructor__textarea-wrapper textarea">
                                 <textarea name="descr" id="" placeholder="Описание работы"></textarea>
                             </div>
-                            <div class="constructor__hints-wrapper slider">
-                                <div class="lk__input-wrapper hint">
-                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                    При
-                                    клике появляются текстом в поле описания.
-                                </div>
-                                <div class="lk__input-wrapper hint">
-                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                    При
-                                    клике появляются текстом в поле описания.
-                                </div>
-                                <div class="lk__input-wrapper hint">
-                                    Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
-                                    При
-                                    клике появляются текстом в поле описания.
+                            <div class="constructor__hints-wrapper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="lk__input-wrapper hint swiper-slide">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При клике появляются текстом в поле описания.
+                                    </div>
+                                    <div class="lk__input-wrapper hint swiper-slide">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При клике появляются текстом в поле описания.
+                                    </div>
+                                    <div class="lk__input-wrapper hint swiper-slide">
+                                        Подсказки для описания, которые наиболее соответствуют общему описанию указанной должности.
+                                        При клике появляются текстом в поле описания.
+                                    </div>
                                 </div>
                             </div>
                         </div>

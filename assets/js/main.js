@@ -943,42 +943,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
-    //селекты в модалках
-    document.addEventListener('click', function(e) {
-        const select = e.target.closest('.lk__custom-select');
-
-        if (select) {
-            const parent = select.closest('.lk__input-wrapper');
-            const list = parent.querySelector('.lk__custom-select-list');
-
-            list.classList.toggle('active');
-            select.classList.toggle('active');
-
-            return;
-        }
-
-        const item = e.target.closest('.lk__custom-select-item');
-
-        if (item) {
-            const parent = item.closest('.lk__input-wrapper');
-            const select = parent.querySelector('.lk__custom-select');
-            const hiddenInput = select.querySelector('input[type="hidden"]');
-            const userChoise = parent.querySelector('.lk__custom-select-choise');
-            const list = parent.querySelector('.lk__custom-select-list');
-
-            parent.querySelectorAll('.lk__custom-select-item').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            item.classList.add('active');
-            hiddenInput.value = item.textContent.trim();
-            userChoise.textContent = item.textContent.trim();
-
-            list.classList.remove('active');
-            select.classList.remove('active');
-        }
-    });
-
     //маски контактов
     const contactInput = document.getElementById('contact_data');
     const radios = document.querySelectorAll('input[name="contact_type"]');
@@ -1130,15 +1094,18 @@ document.addEventListener('DOMContentLoaded', () => {
     //=========КОНСТРУКТОР=========//
 
     function initHintsSlider(context = document) {
-        $(context)
-            .find('.constructor__hints-wrapper')
-            .not('.slick-initialized')
-            .slick({
-                infinite: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: true
+        if (window.innerWidth >= 768) return;
+
+        const sliders = context.querySelectorAll('.constructor__hints-wrapper');
+
+        sliders.forEach(slider => {
+            if (slider.swiper) return;
+
+            new Swiper(slider, {
+                slidesPerView: 1.2,
+                spaceBetween: 8,
             });
+        });
     }
     initHintsSlider();
 
@@ -1516,7 +1483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             noticeErrors.innerHTML = '';
 
             if(!uploadedFiles[type].length) return;
-            
+
             //создаем записку
             let spanPhotos = document.createElement('span');
             spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
