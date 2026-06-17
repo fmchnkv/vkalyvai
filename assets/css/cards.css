@@ -14,6 +14,22 @@
     line-height: 48px;
   }
 }
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 .cards--grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -36,7 +52,7 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  min-height: 260px;
+  min-height: 220px;
   transition-property: box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -44,7 +60,7 @@
 @media screen and (min-width: 768px) {
   .card {
     padding: 24px;
-    min-height: 298px;
+    min-height: 260px;
   }
 }
 .card:hover {
@@ -53,15 +69,18 @@
 .card:hover .card__title {
   color: #FC7827;
 }
+.card:visited .card__title {
+  color: #999999;
+}
 .card__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 1441px) {
   .card__top {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 }
 .card__bottom {
@@ -108,6 +127,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 1441px) {
   .card__description {

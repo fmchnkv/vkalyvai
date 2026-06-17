@@ -64,6 +64,7 @@
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  max-height: none;
 }
 @media screen and (min-width: 1024px) {
   .filter__wrapper {
@@ -109,13 +110,13 @@
 .filter .input:active input {
   border-color: #FC7827;
   background-color: #FC7827;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .filter .input:active input::placeholder {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .filter .input:active path {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 .filter-group {
   padding: 0 0 20px;

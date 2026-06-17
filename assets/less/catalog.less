@@ -2,13 +2,13 @@
 @import url(_mixins.less);
 
 .catalog-nav {
-    margin-bottom: 41px;
+    margin-bottom: 24px;
 
     .media-min(768px, {
-        margin-bottom: 38px;
+        margin-bottom: 32px;
     });
 
-    .media-min(1024px, {
+    .media-min(1441px, {
         margin-bottom: 40px;
     });
 
@@ -136,13 +136,6 @@
         .media-min(768px, {
             margin-bottom: 0;
         });
-
-        .field {
-
-            .media-min(1024px, {
-                padding: 20px 24px;
-            });
-        }
     }
 
     &__filter-tags {
@@ -159,7 +152,7 @@
             padding: 4px 8px;
 
             .media-min(768px, {
-                padding: 8px 12px;
+                padding: 6px 8px;
             });
         }
     }
@@ -188,7 +181,7 @@
 
 
 .catalog-header {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
 
@@ -209,17 +202,17 @@
             display: flex;
             align-self: baseline;
             
-            .btn-size(12px 23px, 16px);
+            .btn-size(8px 16px, 16px);
         });
     }
 
     &__row {
         display: flex;
         flex-direction: column;
-        gap: 34px;
+        gap: 16px;
 
         .media-min(768px, {
-            gap: 31px;
+            gap: 24px;
         });
 
         .media-min(1024px, {
@@ -247,11 +240,7 @@
 }
 
 .catalog {
-    margin-bottom: 56px;
-
-    .media-min(768px, {
-        margin-bottom: 80px;
-    });
+    .section-margin();
 
     &__pagination {
         margin-top: 64px;

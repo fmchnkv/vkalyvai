@@ -140,16 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         parent.classList.remove('active');
     }
 
-    const header = document.querySelector('.header');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
     const modalCloseBtns = document.querySelectorAll('.js-modal-close');
 
     if (modalCloseBtns.length) {
@@ -404,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setChoice(value, choiceBlock) {
         let choice = document.createElement('div');
         let choiceText = document.createElement('span');
-        let choiceClose = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_4779_24414)"><path d="M7.90913 3.45377C8.08477 3.27843 8.36923 3.27843 8.54487 3.45377C8.72058 3.62948 8.72058 3.91478 8.54487 4.09049L7.34272 5.29264C6.95235 5.68312 6.95237 6.3162 7.34272 6.7067L8.54487 7.90885C8.72058 8.08456 8.72058 8.36986 8.54487 8.54557C8.36922 8.72095 8.08477 8.72094 7.90913 8.54557L6.70698 7.34342C6.31645 6.95289 5.68246 6.95289 5.29194 7.34342L4.08979 8.54557C3.91413 8.72092 3.62968 8.72097 3.45405 8.54557C3.27834 8.36986 3.27834 8.08456 3.45405 7.90885L4.6562 6.7067C5.04658 6.31619 5.0466 5.68313 4.6562 5.29264L3.45405 4.09049C3.27834 3.91478 3.27834 3.62948 3.45405 3.45377C3.62967 3.27841 3.91414 3.27845 4.08979 3.45377L5.29194 4.65592C5.68246 5.04644 6.31645 5.04644 6.70698 4.65592L7.90913 3.45377Z" fill="#232323"/></g><defs><clipPath id="clip0_4779_24414"><rect width="12" height="12" fill="white"/></clipPath></defs></svg>';
+        let choiceClose = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M7.90913 3.45377C8.08477 3.27843 8.36923 3.27843 8.54487 3.45377C8.72058 3.62948 8.72058 3.91478 8.54487 4.09049L7.34272 5.29264C6.95235 5.68312 6.95237 6.3162 7.34272 6.7067L8.54487 7.90885C8.72058 8.08456 8.72058 8.36986 8.54487 8.54557C8.36922 8.72095 8.08477 8.72094 7.90913 8.54557L6.70698 7.34342C6.31645 6.95289 5.68246 6.95289 5.29194 7.34342L4.08979 8.54557C3.91413 8.72092 3.62968 8.72097 3.45405 8.54557C3.27834 8.36986 3.27834 8.08456 3.45405 7.90885L4.6562 6.7067C5.04658 6.31619 5.0466 5.68313 4.6562 5.29264L3.45405 4.09049C3.27834 3.91478 3.27834 3.62948 3.45405 3.45377C3.62967 3.27841 3.91414 3.27845 4.08979 3.45377L5.29194 4.65592C5.68246 5.04644 6.31645 5.04644 6.70698 4.65592L7.90913 3.45377Z" fill="#232323"/></g></svg>';
         choice.classList.add('multiple-select__choice');
         choiceText.textContent = value;
         choice.dataset.value = value;
@@ -792,6 +782,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 urlAjax = '/ajax/faq.php';
             } else if (id == 'help-vacancies' || id == 'help-rezumes') {
                 urlAjax = '/ajax/help.php';
+            } else if (id == 'companies') {
+                urlAjax = '/ajax/companies.php';
             }
 
             const response = await fetch(urlAjax, {
@@ -1505,14 +1497,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const addMoreBtn = document.createElement('div');
             addMoreBtn.classList.add('constructor__files-preview', 'constructor__files-more');
             addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_4414_40049)">
+                                    <g>
                                     <path d="M12.0039 4.25098C12.4181 4.25098 12.7539 4.58676 12.7539 5.00098V11.251H19.0039C19.4181 11.251 19.7539 11.5868 19.7539 12.001C19.7539 12.4152 19.4181 12.751 19.0039 12.751H12.7539V19.001C12.7539 19.4152 12.4181 19.751 12.0039 19.751C11.5897 19.751 11.2539 19.4152 11.2539 19.001V12.751H5.00391C4.58969 12.751 4.25391 12.4152 4.25391 12.001C4.25391 11.5868 4.58969 11.251 5.00391 11.251H11.2539V5.00098C11.2539 4.58676 11.5897 4.25098 12.0039 4.25098Z" fill="#FC7827"/>
                                     </g>
-                                    <defs>
-                                    <clipPath id="clip0_4414_40049">
-                                    <path d="M0 12C0 5.37258 5.37258 0 12 0V0C18.6274 0 24 5.37258 24 12V12C24 18.6274 18.6274 24 12 24V24C5.37258 24 0 18.6274 0 12V12Z" fill="white"/>
-                                    </clipPath>
-                                    </defs>
                                     </svg>
                                     </span>`;
             resultWrapper.append(addMoreBtn);

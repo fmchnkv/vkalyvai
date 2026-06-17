@@ -2,18 +2,14 @@
 @import url(_mixins.less);
 
 .detail {
-    margin-bottom: 56px;
-
-    .media-min(768px, {
-        margin-bottom: 80px;
-    });
+    margin-bottom: 40px;
 
     &__section {
-        margin-bottom: 48px;
+        margin-bottom: 32px;
 
-        .media-min(1024px, {
-            margin-bottom: 64px;
-        })
+        .media-min(1441px, {
+            margin-bottom: 48px;
+        });
     }
 
     &__row {
@@ -83,8 +79,8 @@
             left: calc(50% - 128px);
 
             .media-min(768px, {
-                max-width: 280px;
-                left: calc(50% - 140px);
+                max-width: 260px;
+                left: calc(50% - 130px);
             });
 
             .media-min(1024px, {

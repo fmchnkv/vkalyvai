@@ -12,6 +12,7 @@
 
     .media-min(1441px, {
         gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
     });
 
     &__link {
@@ -32,6 +33,10 @@
         .media-min(1024px, {
             gap: 20px;
         });
+
+        &:visited {
+            color: @neutral;
+        }
     }
 
     &__avatar {
