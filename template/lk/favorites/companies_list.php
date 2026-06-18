@@ -40,7 +40,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
-        <?php if(str_contains($uri, 'favorite')): ?>
+        <?php if(str_contains($uri, 'favorite') && $_GET['companies'] !== 'Y'): ?>
         <form method="post" class="lk-card__notice input-edit-form">
             <p>Пометка, комментарий, который оставляется по желанию, при добавлении резюме в избранное</p>
             <input type="text" data-mask="text" name="" id="notice" class="lk-bubble__hidden-input">

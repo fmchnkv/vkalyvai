@@ -4,7 +4,9 @@
     <div class="container">
         <div class="lk__wrapper">
             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/employer/lk_sidebar.php"); ?>
-            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/employer/profile.php"); ?>
+            <div class="lk__wrapper-content">
+                <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/employer/profile.php"); ?>
+            </div>
         </div>
     </div>
 </section>
