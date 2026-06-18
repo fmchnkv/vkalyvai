@@ -74,24 +74,24 @@
                     <img src="/images/about-features-1.png" alt="">
                 </div>
                 <span class="about-features__caption">Возможности для соискателя</span>
-                <ul class="about-features__tabs">
-                    <li class="about-features__tab btn btn_primary btn_size-s btn_no-hover">Создать резюме</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск вакансий</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск компаний</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Помощь</li>
-                </ul>
+                <div class="about-features__tabs">
+                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Создать резюме</a>
+                    <a href="/pages/vacancies.php" class="about-features__tab tab btn_size-s">Поиск вакансий</a>
+                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Поиск компаний</a>
+                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">Помощь</a>
+                </div>
             </li>
             <li class="about-features__item">
                 <div class="about-features__image">
                     <img src="/images/about-features-2.png" alt="">
                 </div>
                 <span class="about-features__caption">Возможности для работодателя</span>
-                <ul class="about-features__tabs">
-                    <li class="about-features__tab btn btn_primary btn_size-s btn_no-hover">Создать вакансию</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск кандидатов</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Поиск компаний</li>
-                    <li class="about-features__tab tab btn_size-s tab_no-hover">Помощь</li>
-                </ul>
+                <div class="about-features__tabs">
+                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Создать вакансию</a>
+                    <a href="/pages/rezumes.php" class="about-features__tab tab btn_size-s">Поиск кандидатов</a>
+                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Поиск компаний</a>
+                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">Помощь</a>
+                </div>
             </li>
         </ul>
     </div>
