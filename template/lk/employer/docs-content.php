@@ -213,6 +213,6 @@
         </div>
     </div>
     <button data-call-modal="add__contacts" class="contact-add btn btn_primary btn_size-l lk__btn_has-icon">
-        <span>Добавить</span>
+        <span>Добавить документ</span>
     </button>
 </div>

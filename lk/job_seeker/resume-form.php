@@ -46,10 +46,10 @@
 
             <!-- Шаг 2 -->
             <form class="grid-list" id="step-form-contact" data-form="2" data-title="Основная информация"
-                class="step-form" method="post">
+                class="step-form constructor__contact-form" method="post">
                 <div class="constructor__inputs-set grid-list">
                     <span class="subcaption">ФИО</span>
-                    <div class="constructor__inputs-list grid-list">
+                    <div class="constructor__inputs-list grid-list grid-2-columns">
                         <div class="lk__input-wrapper big-input">
                             <input type="text" value="" name="secondName" placeholder="Фамилия">
                         </div>
@@ -454,6 +454,35 @@
             <form class="grid-list" id="step-form-education" data-form="3" data-title="Образование" class="step-form"
                 method="post">
                 <div class="education-wrapper grid-list">
+                    <?php if(isset($_GET['fill']) && $_GET['fill'] == 'Y'): ?>
+                    <div class="institutions-list grid-list">
+                        <label class="lk-bubble lk-bubble__education checkbox institutions-bubble big-bubble">
+                            <input class="checkbox__input" type="checkbox" name="institution" value="1" checked>
+                            <span class="checkbox__label"></span>
+                            <div class="date">
+                                <span>Среднее специальное</span>
+                                <p>2009</p>
+                            </div>
+                            <div class="text">
+                                <span>Сибирский государственный университет телекоммуникаций и информатики</span>
+                                <p>Фундаментальная информатика и информационные технологии</p>
+                            </div>
+                        </label>
+                        <label class="lk-bubble lk-bubble__education checkbox institutions-bubble big-bubble">
+                            <input class="checkbox__input" type="checkbox" name="institution" value="2">
+                            <span class="checkbox__label"></span>
+                            <div class="date">
+                                <span>Среднее специальное</span>
+                                <p>2009</p>
+                            </div>
+                            <div class="text">
+                                <span>Сибирский государственный университет телекоммуникаций и информатики</span>
+                                <p>Фундаментальная информатика и информационные технологии</p>
+                            </div>
+                        </label>
+                    </div>
+                    <?php else: ?>
+
                     <div class="education-templates-wrapper grid-list template-wrapper">
                         <template id="education-base">
                             <div class="constructor__inputs-set grid-list">
@@ -518,6 +547,7 @@
                                 </div>
                             </div>
                         </template>
+                        
                         <div class="constructor__inputs-set grid-list">
                             <div class="constructor__inputs-group">
                                 <div class="constructor__inputs-block constructor-select">
@@ -597,6 +627,8 @@
                         </svg>
                         <span>Добавить</span>
                     </button>
+
+                    <?php endif; ?>
                 </div>
 
                 <div class="education-wrapper grid-list">
@@ -605,7 +637,7 @@
                             <div class="constructor__inputs-set grid-list">
                                 <div class="constructor__inputs-block">
                                     <span class="subcaption">Повышение квалификации</span>
-                                    <div class="constructor__inputs-list grid-list">
+                                    <div class="constructor__inputs-list grid-2-columns grid-list">
                                         <div class="lk__input-wrapper big-input">
                                             <input type="text" value="" placeholder="Название курса">
                                         </div>
@@ -640,7 +672,7 @@
                         <div class="constructor__inputs-set grid-list">
                             <div class="constructor__inputs-block">
                                 <span class="subcaption">Повышение квалификации</span>
-                                <div class="constructor__inputs-list grid-list">
+                                <div class="constructor__inputs-list grid-list grid-2-columns">
                                     <div class="lk__input-wrapper big-input">
                                         <input type="text" value="" placeholder="Название курса">
                                     </div>
