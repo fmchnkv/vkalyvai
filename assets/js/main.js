@@ -1,4 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let prevTarget = null;
+
+    document.addEventListener('click', (e) => {
+
+        // Закрытие модальных окон при клике вне области и не по кнопке
+        const target = e.target;
+        const activeModal = document.querySelector('.modal.active');
+        
+        if (activeModal && !target.closest('.modal__wrapper')) {
+            const isModalBtn = checkModalBtn(target);
+            const isFilterChoice = target.classList.contains('multiple-select__choice') || target.closest('.multiple-select__choice');
+
+            if (!isModalBtn && !isFilterChoice) {
+                activeModal.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                return;
+            }
+        }
+
+        // Закрытие одиночного селекта в форме при клике вне области или смене фокуса
+        const activeField = document.querySelector('.field__dropdown.active');
+        const activeFieldBtn = document.querySelector('.js-select-btn.active');
+
+        if (activeField && activeFieldBtn && !target.closest('.field__dropdown') && !target.closest('.js-select-btn')) {
+            activeField.classList.remove('active');
+            return;
+        }
+
+        // Закрытие одиночного селекта в форме при клике вне области или смене фокуса
+        const activeSelect = document.querySelector('.select.active');
+        
+        if (activeSelect && !target.closest('.select')) {
+            activeSelect.classList.remove('active');
+            return;
+        }
+
+        // Закрытие множественного селекта в форме при клике вне области или смене фокуса
+        const activeMultipleSelect = document.querySelector('.multiple-select.active');
+        if (activeMultipleSelect && !target.closest('.multiple-select') && !target.classList.contains('js-multiple-tag')) {
+            activeMultipleSelect.classList.remove('active');
+            return;
+        }
+
+        // Закрытие кнопки сортировки при клике вне области
+        const activeSort = document.querySelector('.sorting__item.active');
+        const activeSortList = document.querySelector('.sorting__dropdown.active');
+        if (activeSort && !target.closest('.js-sort-btn') && !target.closest('.sorting__dropdown')) {
+            activeSort.classList.remove('active');
+            activeSortList.classList.remove('active');
+            return;
+        }
+    });
+
+    // Функция проверяет, является ли элемент кнопкой модального окна
+    function checkModalBtn(target) {
+        if (target.closest('.js-filter-btn') || target.classList.contains('js-filter-btn')) {
+            return true;
+        }
+
+        if (target.getAttribute('data-call-modal')) {
+            return true;
+        }
+    }
 
     const navSelect = document.querySelector('.js-btn-nav');
     const offset = 100; // высота шапки
@@ -83,13 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let dropdown = document.querySelector(`.field__dropdown[data-id="${id}"]`);
 
             selectInput.addEventListener('input', (e) => {
-                console.log('input');
                 let curValue = e.currentTarget.value;
 
                 if (curValue) {
                     let option = document.querySelector(`.field__option[data-value="${curValue}"]`);
-
-                    console.log(option);
 
                     if (option) {
                         option.classList.add('active');
@@ -101,10 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            selectInput.addEventListener('blur', (e) => {
-                parent.classList.remove('active');
-                dropdown.classList.remove('active');
-            });
+            // selectInput.addEventListener('blur', (e) => {
+            //     parent.classList.remove('active');
+            //     dropdown.classList.remove('active');
+            // });
         });
     }
 
@@ -112,18 +172,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = e.currentTarget.dataset.id;
         const input = document.querySelector(`.field[data-id="${id}"] input`);
 
-        if (!input.readOnly) {
-            input.focus();
-        }
-
         if (id) {
             const list = document.querySelector(`.field__dropdown[data-id="${id}"]`);
 
             if (list) {
-                list.classList.toggle('active');
-                e.currentTarget.classList.toggle('active');
+                if (list.classList.contains('active')) {
+                    e.currentTarget.classList.remove('active');
+                    list.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.js-select-btn').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.field__dropdown').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    e.currentTarget.classList.add('active');
+                    list.classList.add('active');
+                }
+
+                if (!input.readOnly) {
+                    if (list.classList.contains('active')) {
+                        input.focus();
+                    } else {
+                        input.blur();
+                    }
+                }
             }
+            
         }
+
     }
 
     function setValueSelect(e) {
@@ -193,8 +270,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const parent = sortingBtn.closest('.sorting__item');
                 const list = parent.querySelector('.sorting__dropdown');
-                list.classList.toggle('active');
-                parent.classList.toggle('active');
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                    list.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.sorting__item').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.sorting__dropdown').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    parent.classList.add('active');
+                    list.classList.add('active');
+                }
             });
         });
     }
@@ -281,7 +369,14 @@ document.addEventListener('DOMContentLoaded', () => {
         selects.forEach(select => {
             select.addEventListener('click', (e) => {
                 e.preventDefault();
-                select.closest('.select').classList.toggle('active');
+                if (select.closest('.select').classList.contains('active')) {
+                    select.closest('.select').classList.remove('active');
+                } else {
+                    selects.forEach(el => {
+                        el.closest('.select').classList.remove('active');
+                    });
+                    select.closest('.select').classList.add('active');
+                }
             });
         });
     }
@@ -336,7 +431,14 @@ document.addEventListener('DOMContentLoaded', () => {
         multipleSelects.forEach(multipleSelect => {
             multipleSelect.addEventListener('click', (e) => {
                 e.preventDefault();
-                multipleSelect.closest('.multiple-select').classList.toggle('active');
+                if (multipleSelect.closest('.multiple-select').classList.contains('active')) {
+                    multipleSelect.closest('.multiple-select').classList.remove('active');
+                } else {
+                    multipleSelects.forEach(el => {
+                        el.closest('.multiple-select').classList.remove('active');
+                    });
+                    multipleSelect.closest('.multiple-select').classList.add('active');
+                }
             });
         });
     }
@@ -345,7 +447,14 @@ document.addEventListener('DOMContentLoaded', () => {
         multipleSelectsIcons.forEach(multipleSelect => {
             multipleSelect.addEventListener('click', (e) => {
                 e.preventDefault();
-                multipleSelect.closest('.multiple-select').classList.toggle('active');
+                if (multipleSelect.closest('.multiple-select').classList.contains('active')) {
+                    multipleSelect.closest('.multiple-select').classList.remove('active');
+                } else {
+                    multipleSelects.forEach(el => {
+                        el.closest('.multiple-select').classList.remove('active');
+                    });
+                    multipleSelect.closest('.multiple-select').classList.add('active');
+                }
             });
         });
     }
