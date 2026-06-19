@@ -32,7 +32,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <input class="field__input" type="text" name="search" placeholder="Поиск по названию">
+                            <input class="field__input" type="text" name="search" placeholder="Введите тему или ключевое слово...">
                         </label>
                     </div>
                 </div>
