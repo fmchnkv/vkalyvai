@@ -125,21 +125,37 @@
                         </ul>
                     </div>
 
-                    <div class="rezume__driving-skills detail__section">
-                        <span class="subcaption">Водительское удостоверение</span>
-                        <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Категория B</li>
-                            <li class="tags__item tag tag_size-m">Категория A</li>
-                            <li class="tags__item tag tag_size-m">Категория C</li>
-                        </ul>
-                    </div>
+                    <div class="rezume__adv-trainings adv-trainings detail__section">
+                        <span class="subcaption">Повышение квалификации</span>
 
-                    <div class="rezume__language-skills detail__section">
-                        <span class="subcaption">Знание языков</span>
-                        <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Русский - родной</li>
-                            <li class="tags__item tag tag_size-m">Английский А1</li>
-                            <li class="tags__item tag tag_size-m">Польский B2</li>
+                        <ul class="adv-trainings__list enum-list">
+                            <li class="enum-list__item">
+                                <div class="enum-list__nav">
+                                    <span class="enum-list__extra">2009</span>
+                                </div>
+                                <div class="enum-list__content">
+                                    <span class="enum-list__title">Skillbox</span>
+                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
+                                </div>
+                            </li>
+                            <li class="enum-list__item">
+                                <div class="enum-list__nav">
+                                    <span class="enum-list__extra">2009</span>
+                                </div>
+                                <div class="enum-list__content">
+                                    <span class="enum-list__title">Skillbox</span>
+                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
+                                </div>
+                            </li>
+                            <li class="enum-list__item">
+                                <div class="enum-list__nav">
+                                    <span class="enum-list__extra">2009</span>
+                                </div>
+                                <div class="enum-list__content">
+                                    <span class="enum-list__title">Skillbox</span>
+                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
@@ -163,6 +179,24 @@
                                     </div>
                                 </li>
                             <? endfor; ?>
+                        </ul>
+                    </div>
+
+                    <div class="rezume__driving-skills detail__section">
+                        <span class="subcaption">Водительское удостоверение</span>
+                        <ul class="tags">
+                            <li class="tags__item tag tag_size-m">Категория B</li>
+                            <li class="tags__item tag tag_size-m">Категория A</li>
+                            <li class="tags__item tag tag_size-m">Категория C</li>
+                        </ul>
+                    </div>
+
+                    <div class="rezume__language-skills detail__section">
+                        <span class="subcaption">Знание языков</span>
+                        <ul class="tags">
+                            <li class="tags__item tag tag_size-m">Русский - родной</li>
+                            <li class="tags__item tag tag_size-m">Английский А1</li>
+                            <li class="tags__item tag tag_size-m">Польский B2</li>
                         </ul>
                     </div>
 
@@ -301,40 +335,6 @@
                                 </svg>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="rezume__adv-trainings adv-trainings">
-                        <span class="subcaption">Повышение квалификации</span>
-
-                        <ul class="adv-trainings__list enum-list">
-                            <li class="enum-list__item">
-                                <div class="enum-list__nav">
-                                    <span class="enum-list__extra">2009</span>
-                                </div>
-                                <div class="enum-list__content">
-                                    <span class="enum-list__title">Skillbox</span>
-                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
-                                </div>
-                            </li>
-                            <li class="enum-list__item">
-                                <div class="enum-list__nav">
-                                    <span class="enum-list__extra">2009</span>
-                                </div>
-                                <div class="enum-list__content">
-                                    <span class="enum-list__title">Skillbox</span>
-                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
-                                </div>
-                            </li>
-                            <li class="enum-list__item">
-                                <div class="enum-list__nav">
-                                    <span class="enum-list__extra">2009</span>
-                                </div>
-                                <div class="enum-list__content">
-                                    <span class="enum-list__title">Skillbox</span>
-                                    <span class="enum-list__subtitle">Специалист по информационной безопасности</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div> 
                 </section>
             </div>
