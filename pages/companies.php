@@ -59,12 +59,12 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <input class="field__input" type="text" name="search" placeholder="Поиск по компаниям">
+                            <input class="field__input" type="text" name="search" placeholder="Какую компанию вы ищете?">
                         </label>
                     </div>
                 </div>
                 <button class="inline-form__btn btn btn_primary btn_size-s">
-                    <span>Найти компанию</span>
+                    <span>Найти</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path d="M9.25391 2.50098C12.9799 2.50098 16.0039 5.52498 16.0039 9.25098C16.0061 10.7825 15.4853 12.2689 14.5273 13.4639L17.7393 16.6748L16.6777 17.7363L13.4668 14.5244C12.2719 15.4823 10.7854 16.0032 9.25391 16.001C5.52791 16.001 2.50391 12.977 2.50391 9.25098C2.50391 5.52498 5.52791 2.50098 9.25391 2.50098ZM9.25391 4.00098C6.35291 4.00098 4.00391 6.34998 4.00391 9.25098C4.00391 12.1512 6.35291 14.501 9.25391 14.501C10.6192 14.5031 11.9313 13.9714 12.9102 13.0195L13.0225 12.9072C13.9743 11.9284 14.5061 10.6163 14.5039 9.25098C14.5039 6.34998 12.1542 4.00098 9.25391 4.00098Z" fill="white" />
@@ -171,7 +171,7 @@
                     ?>
                     <div class="sorting__item">
                         <button class="sorting__button accordion-button btn-link js-sort-btn">
-                            <span>По соответствию</span>
+                            <span>По количеству вакансий</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g >
                                     <path d="M10.0009 2.58301C10.4149 2.58318 10.7507 2.91905 10.7509 3.33301V14.8555L15.3046 10.3027C15.5976 10.0103 16.0724 10.01 16.3652 10.3027C16.6577 10.5955 16.6575 11.0704 16.3652 11.3633L10.5312 17.1963C10.2383 17.4892 9.76354 17.4892 9.47065 17.1963L3.63764 11.3633C3.34475 11.0704 3.34475 10.5956 3.63764 10.3027C3.93056 10.0102 4.4054 10.0099 4.69819 10.3027L9.25092 14.8555V3.33301C9.2511 2.91905 9.58696 2.58318 10.0009 2.58301Z" fill="#FC7827" />
@@ -186,15 +186,15 @@
                         <!-- TODO: add dropdown  -->
                         <div class="sorting__dropdown" data-id="sort">
                             <ul class="sorting__dropdown-list">
-                                <li class="sorting__option active" data-value="По соответствию">По соответствию</li>
-                                <li class="sorting__option" data-value="По размеру зарплаты">По размеру зарплаты</li>
-                                <li class="sorting__option" data-value="По удаленности">По удаленности</li>
+                                <li class="sorting__option active" data-value="По количеству вакансий">По количеству вакансий</li>
+                                <li class="sorting__option" data-value="По алфавиту">По алфавиту</li>
+                                <li class="sorting__option" data-value="По рейтингу / отзывам">По рейтингу / отзывам</li>
                             </ul>
                         </div>
                     </div>
                     <div class="sorting__item">
                         <button class="sorting__button accordion-button btn-link js-sort-btn">
-                            <span>За все время</span>
+                            <span>Все отрасли</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g >
                                     <path d="M10.0009 2.58301C10.4149 2.58318 10.7507 2.91905 10.7509 3.33301V14.8555L15.3046 10.3027C15.5976 10.0103 16.0724 10.01 16.3652 10.3027C16.6577 10.5955 16.6575 11.0704 16.3652 11.3633L10.5312 17.1963C10.2383 17.4892 9.76354 17.4892 9.47065 17.1963L3.63764 11.3633C3.34475 11.0704 3.34475 10.5956 3.63764 10.3027C3.93056 10.0102 4.4054 10.0099 4.69819 10.3027L9.25092 14.8555V3.33301C9.2511 2.91905 9.58696 2.58318 10.0009 2.58301Z" fill="#FC7827" />
@@ -209,10 +209,16 @@
                         <!-- TODO: add dropdown  -->
                         <div class="sorting__dropdown" data-id="time">
                             <ul class="sorting__dropdown-list">
-                                <li class="sorting__option active" data-value="За все время">За все время</li>
-                                <li class="sorting__option" data-value="За неделю">За неделю</li>
-                                <li class="sorting__option" data-value="За месяц">За месяц</li>
-                                <li class="sorting__option" data-value="За год">За год</li>
+                                <li class="sorting__option active" data-value="Все отрасли">Все отрасли</li>
+                                <li class="sorting__option" data-value="Розничная торговля / Ритейл">Розничная торговля / Ритейл</li>
+                                <li class="sorting__option" data-value="Транспорт и Логистика">Транспорт и Логистика</li>
+                                <li class="sorting__option" data-value="Рестораны, Общепит, Отели">Рестораны, Общепит, Отели</li>
+                                <li class="sorting__option" data-value="Производство и Рабочий персонал">Производство и Рабочий персонал</li>
+                                <li class="sorting__option" data-value="Строительство и Ремонт">Строительство и Ремонт</li>
+                                <li class="sorting__option" data-value="Услуги, ЖКХ и Клининг">Услуги, ЖКХ и Клининг</li>
+                                <li class="sorting__option" data-value="Охрана и Безопасность">Охрана и Безопасность</li>
+                                <li class="sorting__option" data-value="Автобизнес и Автосервисы">Автобизнес и Автосервисы</li>
+                                <li class="sorting__option" data-value="Домашний персонал">Домашний персонал</li>
                             </ul>
                         </div>
                     </div>
