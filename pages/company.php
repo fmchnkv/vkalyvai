@@ -141,7 +141,7 @@
                                 </div>
 
                                 <div class="company__portfolio portfolio-slider detail__section">
-                                    <span class="subcaption">Портфолио</span>
+                                    <span class="subcaption">Жизнь компании</span>
                                     <div class="portfolio-slider__carousel swiper js-portfolio-slider">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -255,11 +255,23 @@
                                             </div>
 
                                             <div class="textarea">
-                                                <textarea name="textarea" placeholder="Сообщение работодателю"></textarea>
+                                                <textarea name="textarea" placeholder="Расскажите коротко о себе, задайте вопросы или используйте готовые ниже..."></textarea>
                                                 <ul class="textarea__choices tags">
                                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как происходят выплаты?">Как происходят выплаты?</li>
                                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно без опыта?">Можно без опыта?</li>
                                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Получится совмещать?">Получится совмещать?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть корпоративный транспорт?">Есть корпоративный транспорт?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как до вас добраться?">Как до вас добраться?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Где территориально находится?">Где территориально находится?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть ночные смены?">Есть ночные смены?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно работать только по выходным?">Можно работать только по выходным?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Какой график работы?">Какой график работы?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Предоставляется ли жилье?">Предоставляется ли жилье?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Питание бесплатное?">Питание бесплатное?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Выдаете ли вы рабочую форму?">Выдаете ли вы рабочую форму?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Нужна ли медкнижка?">Нужна ли медкнижка?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно устроиться как самозанятый?">Можно устроиться как самозанятый?</li>
+                                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Когда можно выходить на смену?">Когда можно выходить на смену?</li>
                                                 </ul>
                                             </div>
 
