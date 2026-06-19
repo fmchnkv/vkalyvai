@@ -101,7 +101,7 @@
                     <div class="vacancy__content content">
                         <span class="subcaption">Описание вакансии</span>
 
-                        <span class="content__title">Задачи</span>
+                        <span class="content__title">Обязанности</span>
                         <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
 
                         <span class="content__title">Требования</span>
@@ -161,11 +161,23 @@
                             </div>
     
                             <div class="textarea">
-                                <textarea name="textarea" placeholder="Сообщение работодателю"></textarea>
+                                <textarea name="textarea" placeholder="Расскажите коротко о себе, задайте вопросы или используйте готовые ниже..."></textarea>
                                 <ul class="textarea__choices tags">
                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как происходят выплаты?">Как происходят выплаты?</li>
                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно без опыта?">Можно без опыта?</li>
                                     <li class="tags__item tag tag_btn js-textarea-choice" data-value="Получится совмещать?">Получится совмещать?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть корпоративный транспорт?">Есть корпоративный транспорт?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как до вас добраться?">Как до вас добраться?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Где территориально находится?">Где территориально находится?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть ночные смены?">Есть ночные смены?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно работать только по выходным?">Можно работать только по выходным?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Какой график работы?">Какой график работы?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Предоставляется ли жилье?">Предоставляется ли жилье?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Питание бесплатное?">Питание бесплатное?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Выдаете ли вы рабочую форму?">Выдаете ли вы рабочую форму?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Нужна ли медкнижка?">Нужна ли медкнижка?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно устроиться как самозанятый?">Можно устроиться как самозанятый?</li>
+                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Когда можно выходить на смену?">Когда можно выходить на смену?</li>
                                 </ul>
                             </div>
     
