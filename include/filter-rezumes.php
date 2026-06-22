@@ -197,6 +197,8 @@
                         </div>
                     </div>
 
+                    <? 
+                    /*
                     <div class="filter__group filter-group filter-group_multiple">
                         <span class="filter-group__title">Категория прав</span>
                         <div class="multiple-select" data-id="category">
@@ -334,6 +336,38 @@
                             <span class="checkbox__label">Со своим автомобилем</span>
                         </label>
                     </div>   
+                    */
+                    ?>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Категория прав</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">A</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">B</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">C</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">D</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">CE</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">E</span>
+                            </label>
+                        </div>
+                    </div>
 
                     <div class="filter__group filter-group">
                         <span class="filter-group__title">Опыт работы</span>
