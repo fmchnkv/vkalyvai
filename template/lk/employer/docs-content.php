@@ -15,7 +15,7 @@
             <div class="lk-bubble__buttons-wrapper">
                 <a href="javascript:void(0)" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g url(#clip0_8316_25555)">
+                        <g>
                             <path
                                 d="M20.1045 20.1006H3.9043V18.3008H20.1045V20.1006ZM12.9043 13.0557L18.3682 7.59082L19.6406 8.86328L12.0039 16.501L4.36816 8.86426L5.64062 7.59082L11.1045 13.0537V3.00098H12.9043V13.0557Z"
                                 fill="#232323" />
@@ -57,7 +57,7 @@
             <div class="lk-bubble__buttons-wrapper">
                 <a href="javascript:void(0)" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g url(#clip0_8316_25555)">
+                        <g>
                             <path
                                 d="M20.1045 20.1006H3.9043V18.3008H20.1045V20.1006ZM12.9043 13.0557L18.3682 7.59082L19.6406 8.86328L12.0039 16.501L4.36816 8.86426L5.64062 7.59082L11.1045 13.0537V3.00098H12.9043V13.0557Z"
                                 fill="#232323" />
@@ -99,7 +99,7 @@
             <div class="lk-bubble__buttons-wrapper">
                 <a href="javascript:void(0)" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g url(#clip0_8316_25555)">
+                        <g>
                             <path
                                 d="M20.1045 20.1006H3.9043V18.3008H20.1045V20.1006ZM12.9043 13.0557L18.3682 7.59082L19.6406 8.86328L12.0039 16.501L4.36816 8.86426L5.64062 7.59082L11.1045 13.0537V3.00098H12.9043V13.0557Z"
                                 fill="#232323" />
@@ -141,7 +141,7 @@
             <div class="lk-bubble__buttons-wrapper">
                 <a href="javascript:void(0)" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g url(#clip0_8316_25555)">
+                        <g>
                             <path
                                 d="M20.1045 20.1006H3.9043V18.3008H20.1045V20.1006ZM12.9043 13.0557L18.3682 7.59082L19.6406 8.86328L12.0039 16.501L4.36816 8.86426L5.64062 7.59082L11.1045 13.0537V3.00098H12.9043V13.0557Z"
                                 fill="#232323" />
@@ -183,7 +183,7 @@
             <div class="lk-bubble__buttons-wrapper">
                 <a href="javascript:void(0)" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g url(#clip0_8316_25555)">
+                        <g>
                             <path
                                 d="M20.1045 20.1006H3.9043V18.3008H20.1045V20.1006ZM12.9043 13.0557L18.3682 7.59082L19.6406 8.86328L12.0039 16.501L4.36816 8.86426L5.64062 7.59082L11.1045 13.0537V3.00098H12.9043V13.0557Z"
                                 fill="#232323" />

@@ -40,7 +40,7 @@
                             <label class="main-hero__label field field_select js-select-btn" data-id="price">
                                 <input type="text" name="price" placeholder="Зарплата" class="field__input js-select-input">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g url(#clip0_23_574)">
+                                    <g>
                                         <path d="M14.4735 7.38764C14.7664 7.09475 15.2411 7.09475 15.534 7.38764C15.8268 7.68055 15.8269 8.15535 15.534 8.44819L10.534 13.4482C10.2595 13.7226 9.82466 13.7401 9.53014 13.4999L9.4735 13.4482L4.4735 8.44819C4.18066 8.15535 4.18076 7.68055 4.4735 7.38764C4.76639 7.09475 5.24115 7.09475 5.53404 7.38764L10.0038 11.8574L14.4735 7.38764Z" fill="#232323" />
                                     </g>
                                     <defs>
@@ -66,7 +66,7 @@
                             <label class="main-hero__label field field_select js-select-btn" data-id="worktime">
                                 <input type="text" name="worktime" placeholder="График и занятость" readonly class="field__input js-select-input">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g url(#clip0_23_574)">
+                                    <g>
                                         <path d="M14.4735 7.38764C14.7664 7.09475 15.2411 7.09475 15.534 7.38764C15.8268 7.68055 15.8269 8.15535 15.534 8.44819L10.534 13.4482C10.2595 13.7226 9.82466 13.7401 9.53014 13.4999L9.4735 13.4482L4.4735 8.44819C4.18066 8.15535 4.18076 7.68055 4.4735 7.38764C4.76639 7.09475 5.24115 7.09475 5.53404 7.38764L10.0038 11.8574L14.4735 7.38764Z" fill="#232323" />
                                     </g>
                                     <defs>
