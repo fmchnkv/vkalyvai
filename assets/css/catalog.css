@@ -35,7 +35,7 @@
 }
 @media screen and (min-width: 768px) {
   .catalog-nav {
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -55,8 +55,14 @@
 .catalog-nav__actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   position: relative;
+  padding: 0 4px;
+}
+@media screen and (min-width: 768px) {
+  .catalog-nav__actions {
+    padding: 0;
+  }
 }
 .catalog-nav__nav-btn {
   flex: 1 1 auto;
@@ -152,7 +158,7 @@
   }
 }
 .catalog-nav__form {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 @media screen and (min-width: 768px) {
   .catalog-nav__form {
@@ -206,14 +212,21 @@
 }
 @media screen and (min-width: 768px) {
   .catalog-header {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .catalog-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 32px;
   }
 }
 @media screen and (min-width: 1441px) {
   .catalog-header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-bottom: 48px;
   }
 }
 .catalog-header__filter-btn {
@@ -223,18 +236,19 @@
   .catalog-header__filter-btn {
     display: flex;
     align-self: baseline;
-    padding: 8px 16px;
+    padding: 11px 11px;
     font-size: 16px;
+    gap: 4px;
   }
 }
 .catalog-header__row {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .catalog-header__row {
-    gap: 24px;
+    gap: 12px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -242,24 +256,14 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 1441px) {
-  .catalog-header__row {
     flex: 1 1 auto;
   }
 }
 .catalog-header__counter {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .catalog-header__counter {
-    font-size: 22px;
-    line-height: 26px;
-  }
 }
 .catalog {
   margin-bottom: 24px;

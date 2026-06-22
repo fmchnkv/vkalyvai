@@ -35,7 +35,7 @@
   grid-template-columns: 1fr;
   gap: 12px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .offers-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -69,8 +69,8 @@
   margin-bottom: 12px;
   font-weight: 600;
   transition: color 0.3s ease-in-out;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   display: inline-block;
 }
 @media screen and (min-width: 1441px) {
@@ -138,6 +138,5 @@
   margin-top: auto;
 }
 .offers-grid__bottom .btn {
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: 400;
 }
