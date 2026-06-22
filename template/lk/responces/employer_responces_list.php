@@ -68,7 +68,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="desk-elem">Пригласить</span>
+                    <span class="desk-elem tab-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,7 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span class="desk-elem">Отказать</span>
+                    <span class="desk-elem tab-elem">Отказать</span>
                 </button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
@@ -180,7 +180,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="desk-elem">Пригласить</span>
+                    <span class="desk-elem tab-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +188,7 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span class="desk-elem">Отказать</span>
+                    <span class="desk-elem tab-elem">Отказать</span>
                 </button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
@@ -292,7 +292,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="desk-elem">Пригласить</span>
+                    <span class="desk-elem tab-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -300,7 +300,7 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span class="desk-elem">Отказать</span>
+                    <span class="desk-elem tab-elem">Отказать</span>
                 </button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>
@@ -404,7 +404,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="desk-elem">Пригласить</span>
+                    <span class="desk-elem tab-elem">Пригласить</span>
                 </button>
                 <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -412,7 +412,7 @@
                             d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z"
                             fill="#F14C4C" />
                     </svg>
-                    <span class="desk-elem">Отказать</span>
+                    <span class="desk-elem tab-elem">Отказать</span>
                 </button>
                 <a href="/pages/rezume.php" class="offers-list__link icon-link">
                     <span>Резюме</span>

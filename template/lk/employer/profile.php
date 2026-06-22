@@ -7,63 +7,38 @@
     </div>
     <div class="lk__buttons">
         <a href="#" data-call-modal="edit__company" class="btn btn_size-m btn_primary lk__btn_has-icon profile-btn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path
-                        d="M16.7539 17.501H3.25391V16.001H16.7539V17.501ZM12.3604 2.52246C12.5591 2.52246 12.75 2.60168 12.8906 2.74219L15.0127 4.86426C15.1532 5.00489 15.2324 5.19573 15.2324 5.39453C15.2324 5.59334 15.1532 5.78418 15.0127 5.9248L6.43652 14.501H3.25391V11.3184L11.8301 2.74219C11.9707 2.60166 12.1615 2.52248 12.3604 2.52246ZM4.75391 11.9404V13.001H5.81445L13.4209 5.39453L12.3604 4.33398L4.75391 11.9404Z"
-                        fill="white" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_7002_1640">
-                        <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <span>Редактировать</span>
-            <div class="mob-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
-                        fill="white" />
+            <div class="mob-elem icons-block">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M25.4043 26.001H14.6035V24.8008H25.4043V26.001ZM21.8887 14.0186C22.0478 14.0186 22.201 14.0819 22.3135 14.1943L24.0107 15.8916C24.1231 16.004 24.1864 16.1565 24.1865 16.3154C24.1865 16.4745 24.1232 16.6277 24.0107 16.7402L17.1494 23.6006H14.6035V21.0557L21.4648 14.1943C21.5773 14.082 21.7297 14.0187 21.8887 14.0186ZM15.8037 21.5527V22.4014H16.6523L22.7373 16.3154L21.8887 15.4678L15.8037 21.5527Z"
-                            fill="#FC7827" />
+                    <path d="M13.4043 14.001H2.60352V12.8008H13.4043V14.001ZM9.88867 2.01855C10.0478 2.01855 10.201 2.08185 10.3135 2.19434L12.0107 3.8916C12.1231 4.00403 12.1864 4.15647 12.1865 4.31543C12.1865 4.47453 12.1232 4.62772 12.0107 4.74023L5.14941 11.6006H2.60352V9.05566L9.46484 2.19434C9.57726 2.08196 9.72973 2.01867 9.88867 2.01855ZM3.80371 9.55273V10.4014H4.65234L10.7373 4.31543L9.88867 3.46777L3.80371 9.55273Z" fill="white"/>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4800_11336">
-                            <rect width="16" height="16" fill="white" transform="translate(12 12)" />
-                        </clipPath>
+                    <clipPath id="clip0_7002_1150">
+                    <rect width="16" height="16" fill="white"/>
+                    </clipPath>
                     </defs>
                 </svg>
             </div>
+            <span class="tab-elem desk-elem">Редактировать</span>
         </a>
         <a href="#" class="btn profile-btn detail__btn btn_neutral btn_size-m lk__btn_has-icon ">
-            <span>Выйти</span>
-            <div class="mob-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
-                        fill="white" />
-                    <g>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M20.0039 14.001C20.9355 14.0003 21.8543 14.2172 22.6875 14.6338C23.5207 15.0504 24.2453 15.6557 24.8037 16.4014H23.1777C22.4849 15.7904 21.6303 15.3923 20.7168 15.2549C19.8034 15.1176 18.8701 15.2469 18.0283 15.627C17.1865 16.0071 16.4717 16.6215 15.9707 17.3975C15.4697 18.1735 15.203 19.0782 15.2031 20.002C15.2033 20.9255 15.4697 21.8296 15.9707 22.6055C16.4718 23.3813 17.1866 23.996 18.0283 24.376C18.8702 24.7559 19.8044 24.8855 20.7178 24.748C21.6312 24.6105 22.486 24.2116 23.1787 23.6006H24.8047C24.2464 24.3462 23.5216 24.9515 22.6885 25.3682C21.8551 25.7848 20.9356 26.0018 20.0039 26.001C16.6901 26.001 14.0039 23.3148 14.0039 20.001C14.0039 16.6872 16.6901 14.001 20.0039 14.001ZM27.2041 20.001L24.2041 22.4014V20.6006H19.4043V19.4014H24.2041V17.6006L27.2041 20.001Z"
-                            fill="#999999" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_4800_11337">
-                            <rect width="16" height="16" fill="white" transform="translate(12 12)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M8.00391 2.00098C8.9355 2.00028 9.85426 2.21717 10.6875 2.63379C11.5207 3.05041 12.2453 3.65567 12.8037 4.40137H11.1777C10.4849 3.79042 9.63027 3.39226 8.7168 3.25488C7.80344 3.11758 6.87012 3.24688 6.02832 3.62695C5.18646 4.00707 4.47175 4.62147 3.9707 5.39746C3.46966 6.17352 3.20305 7.07821 3.20312 8.00195C3.20326 8.92551 3.46967 9.82963 3.9707 10.6055C4.47178 11.3813 5.18656 11.996 6.02832 12.376C6.87023 12.7559 7.80438 12.8855 8.71777 12.748C9.63123 12.6105 10.486 12.2116 11.1787 11.6006H12.8047C12.2464 12.3462 11.5216 12.9515 10.6885 13.3682C9.85512 13.7848 8.9356 14.0018 8.00391 14.001C4.69011 14.001 2.00391 11.3148 2.00391 8.00098C2.00391 4.68718 4.69011 2.00098 8.00391 2.00098ZM15.2041 8.00098L12.2041 10.4014V8.60059H7.4043V7.40137H12.2041V5.60059L15.2041 8.00098Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_7002_859">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
         </a>
     </div>
 </div>
 
 <div class="lk__content detail__section">
     <span class="subcaption">Основная информация</span>
-    <div class="grid-bubbles grid-list employer-bubbles">
+    <div class="grid-bubbles grid-list personal-bubbles">
         <div class="lk-bubble tight-bubble gray-bubble">
             <span>Название компании</span>
             <p>Название компании</p>
@@ -85,7 +60,7 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">О компании</span>
-    <div class="grid-bubbles grid-list employer-bubbles">
+    <div class="grid-bubbles grid-list personal-bubbles">
         <div class="lk-bubble tight-bubble gray-bubble">
             <span>Тип регистрации</span>
             <p>Организация</p>
@@ -112,7 +87,7 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">Реквизиты компании</span>
-    <div class="grid-bubbles grid-list employer-bubbles">
+    <div class="grid-bubbles grid-list personal-bubbles">
         <div class="lk-bubble tight-bubble gray-bubble">
             <span>Полное название</span>
             <p>Общество с ограниченой ответственностью «Название компании»</p>

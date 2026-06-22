@@ -21,7 +21,7 @@ $uri = $_SERVER['REQUEST_URI'];
                     </svg>
                 </div>
 
-                <div class="offers-list__actions offer-actions mob-elem ">
+                <div class="offers-list__actions offer-actions mob-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -152,7 +152,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </a>
                 </div>
-                <div class="offers-list__actions offer-actions desk-elem tab-elem">
+                <div class="offers-list__actions offer-actions desk-elem tab-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -247,7 +247,7 @@ $uri = $_SERVER['REQUEST_URI'];
                     </svg>
                 </div>
 
-                <div class="offers-list__actions offer-actions mob-elem">
+                <div class="offers-list__actions offer-actions mob-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -378,7 +378,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </a>
                 </div>
-                <div class="offers-list__actions offer-actions desk-elem tab-elem">
+                <div class="offers-list__actions offer-actions desk-elem tab-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -444,7 +444,7 @@ $uri = $_SERVER['REQUEST_URI'];
                     </svg>
                 </div>
 
-                <div class="offers-list__actions offer-actions mob-elem">
+                <div class="offers-list__actions offer-actions mob-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -575,7 +575,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </a>
                 </div>
-                <div class="offers-list__actions offer-actions desk-elem tab-elem">
+                <div class="offers-list__actions offer-actions desk-elem tab-elem icons-block">
                     <button class="share icon-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
