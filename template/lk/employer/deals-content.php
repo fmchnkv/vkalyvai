@@ -1,11 +1,11 @@
 <h1 class="deals__title page-title lk__page-title">Мои вакансии</h1>
 <div class="deals-wrapper">
     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/deals-list.php"); ?>
-    <button class="btn add-resume-btn detail__btn btn_primary btn_size-l">Добавить вакансию</button>
+    <button class="btn add-resume-btn detail__btn btn_primary btn_size-m">Добавить вакансию</button>
 </div>
 <div class="section-title__wrapper employer__title-wrapper full-width">
     <h2 class="lk__section-title vacancies-title">Кандидаты для вас</h2>
-    <a href="javascript:void(0)" class="vacancies-all show-all-btn desk-elem transp-btn lk__btn_has-icon tab-elem">
+    <a href="javascript:void(0)" class="vacancies-all-desk show-all-btn desk-elem transp-btn lk__btn_has-icon tab-elem icons-block">
         <span>Смотреть все</span>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g >
@@ -22,7 +22,7 @@
     </a>
 </div>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/resume_list.php"); ?>
-<a href="javascript:void(0)" class="vacancies-all show-all-btn transp-btn lk__btn_has-icon mob-elem">
+<a href="javascript:void(0)" class="vacancies-all show-all-btn transp-btn lk__btn_has-icon mob-elem icons-block">
     <span>Смотреть все</span>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g >

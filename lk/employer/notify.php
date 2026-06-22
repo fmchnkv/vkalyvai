@@ -4,7 +4,7 @@
     <div class="container">
         <div class="lk__wrapper">
             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/employer/lk_sidebar.php"); ?>
-            <div class="lk__wrapper-content">
+            <div class="lk__wrapper-content notify-wrapper">
                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/employer/notify-content.php"); ?>
             </div>
         </div>

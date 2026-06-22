@@ -46,7 +46,7 @@
 
 				<button class="catalog-nav__filter-btn btn btn_secondary btn_icon js-filter-btn">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g url(#clip0_4580_14319)">
+						<g>
 							<path d="M5.50391 16.376H3.25391V14.126H5.50391V16.376ZM16.7539 16.001H7.00391V14.501H16.7539V16.001ZM5.50391 11.126H3.25391V8.87598H5.50391V11.126ZM16.7539 10.751H7.00391V9.25098H16.7539V10.751ZM5.50391 5.87598H3.25391V3.62598H5.50391V5.87598ZM16.7539 5.50098H7.00391V4.00098H16.7539V5.50098Z" fill="white" />
 						</g>
 						<defs>
@@ -99,7 +99,7 @@
 		<div class="catalog__top catalog-header">
 			<button class="catalog-header__filter-btn btn btn_secondary btn_has-icon js-filter-btn">
 				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g url(#clip0_4580_14319)">
+					<g>
 						<path d="M5.50391 16.376H3.25391V14.126H5.50391V16.376ZM16.7539 16.001H7.00391V14.501H16.7539V16.001ZM5.50391 11.126H3.25391V8.87598H5.50391V11.126ZM16.7539 10.751H7.00391V9.25098H16.7539V10.751ZM5.50391 5.87598H3.25391V3.62598H5.50391V5.87598ZM16.7539 5.50098H7.00391V4.00098H16.7539V5.50098Z" fill="white" />
 					</g>
 					<defs>

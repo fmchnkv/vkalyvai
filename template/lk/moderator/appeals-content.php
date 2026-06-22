@@ -23,7 +23,7 @@
         <div class="notify__item-body">
             <h3>Заголовок вопроса или жалобы</h3>
             <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
-            <button class="vacancies-all transp-btn lk__btn_has-icon">
+            <button class="notify-action transp-btn lk__btn_has-icon">
                 <span>Редактировать вакансию</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
@@ -59,7 +59,7 @@
         <div class="notify__item-body">
             <h3>Заголовок вопроса или жалобы</h3>
             <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
-            <button class="vacancies-all transp-btn lk__btn_has-icon">
+            <button class="notify-action transp-btn lk__btn_has-icon">
                 <span>Редактировать вакансию</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
@@ -95,7 +95,7 @@
         <div class="notify__item-body">
             <h3>Заголовок вопроса или жалобы</h3>
             <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
-            <button class="vacancies-all transp-btn lk__btn_has-icon">
+            <button class="notify-action transp-btn lk__btn_has-icon">
                 <span>Редактировать вакансию</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
