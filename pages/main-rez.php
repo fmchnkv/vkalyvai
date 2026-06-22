@@ -3,8 +3,8 @@
         <div class="main-hero__inner">
             <img class="main-hero__bg" src="/images/main.png" alt="">
             <div class="main-hero__header">
-                <h1 class="main-hero__title">ищи КОМАНДУ,<br>А&nbsp;НЕ ОТКЛИКИ!</h1>
-                <p class="main-hero__caption">Найди людей, которые двигают бизнес, а не просто занимают место.</p>
+                <h1 class="main-hero__title">Меньше вкалывай - <br>больше нанимай!</h1>
+                <p class="main-hero__caption">Собери команду, а не отклики! Мы находим вам людей, а не резюме.</p>
             </div>
 
             <div class="main-hero__form-wrapper">
@@ -23,7 +23,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <input class="field__input js-autocomplete-input" type="text" name="spec" placeholder="Должность">
+                                <input class="field__input js-autocomplete-input" type="text" name="spec" placeholder="Кого вы ищете?">
                             </label>
                             <div class="field__dropdown js-without-choice" data-id="spec">
                                 <ul class="field__dropdown-list">
@@ -32,33 +32,6 @@
                                     <li class="field__option js-select-item" data-value="Директор">Директор</li>
                                     <li class="field__option js-select-item" data-value="Программист">Программист</li>
                                     <li class="field__option js-select-item" data-value="Дизайнер">Дизайнер</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="main-hero__input-wrapper main-hero__input-wrapper_select">
-                            <label class="main-hero__label field field_select js-select-btn" data-id="education">
-                                <input type="text" name="education" placeholder="Образование" readonly class="field__input js-select-input">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M14.4735 7.38764C14.7664 7.09475 15.2411 7.09475 15.534 7.38764C15.8268 7.68055 15.8269 8.15535 15.534 8.44819L10.534 13.4482C10.2595 13.7226 9.82466 13.7401 9.53014 13.4999L9.4735 13.4482L4.4735 8.44819C4.18066 8.15535 4.18076 7.68055 4.4735 7.38764C4.76639 7.09475 5.24115 7.09475 5.53404 7.38764L10.0038 11.8574L14.4735 7.38764Z" fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_23_574">
-                                            <rect width="20" height="20" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </label>
-
-                            <div class="field__dropdown" data-id="education">
-                                <ul class="field__dropdown-list">
-                                    <li class="field__option js-select-item" data-value="Высшее">Высшее</li>
-                                    <li class="field__option js-select-item" data-value="Среднее">Среднее</li>
-                                    <li class="field__option js-select-item" data-value="Среднее-специальное">Среднее-специальное</li>
-                                    <li class="field__option js-select-item" data-value="Магистратура">Магистратура</li>
-                                    <li class="field__option js-select-item" data-value="Без образования">Без образования</li>
-                                    <li class="field__option js-select-item" data-value="Другое">Другое</li>
                                 </ul>
                             </div>
                         </div>
@@ -80,21 +53,42 @@
 
                             <div class="field__dropdown" data-id="exp">
                                 <ul class="field__dropdown-list">
-                                    <li class="field__option js-select-item" data-value="От года">От года</li>
-                                    <li class="field__option js-select-item" data-value="От 2 лет">От 2 лет</li>
-                                    <li class="field__option js-select-item" data-value="От 3 лет">От 3 лет</li>
-                                    <li class="field__option js-select-item" data-value="От 4 лет">От 4 лет</li>
-                                    <li class="field__option js-select-item" data-value="От 5 лет">От 5 лет</li>
-                                    <li class="field__option js-select-item" data-value="От 6 лет">От 6 лет</li>
-                                    <li class="field__option js-select-item" data-value="От 7 лет">От 10 лет</li>
                                     <li class="field__option js-select-item" data-value="Без опыта">Без опыта</li>
+                                    <li class="field__option js-select-item" data-value="От 1 года до 3 лет">От 1 года до 3 лет</li>
+                                    <li class="field__option js-select-item" data-value="От 3 до 6 лет">От 3 до 6 лет</li>
+                                    <li class="field__option js-select-item" data-value="Более 6 лет">Более 6 лет</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="main-hero__input-wrapper main-hero__input-wrapper_select">
+                            <label class="main-hero__label field field_select js-select-btn" data-id="education">
+                                <input type="text" name="education" placeholder="Активность" readonly class="field__input js-select-input">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M14.4735 7.38764C14.7664 7.09475 15.2411 7.09475 15.534 7.38764C15.8268 7.68055 15.8269 8.15535 15.534 8.44819L10.534 13.4482C10.2595 13.7226 9.82466 13.7401 9.53014 13.4999L9.4735 13.4482L4.4735 8.44819C4.18066 8.15535 4.18076 7.68055 4.4735 7.38764C4.76639 7.09475 5.24115 7.09475 5.53404 7.38764L10.0038 11.8574L14.4735 7.38764Z" fill="#232323" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_23_574">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+
+                            <div class="field__dropdown" data-id="education">
+                                <ul class="field__dropdown-list">
+                                    <li class="field__option js-select-item" data-value="Сегодня">Сегодня</li>
+                                    <li class="field__option js-select-item" data-value="На этой неделе">На этой неделе</li>
+                                    <li class="field__option js-select-item" data-value="В этом месяце">В этом месяце</li>
+                                    <li class="field__option js-select-item" data-value="Все">Все</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <button class="btn btn_primary main-hero__btn">
-                        <span>Найти резюме</span>
+                        <span>Найти</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M9.25391 2.50098C12.9799 2.50098 16.0039 5.52498 16.0039 9.25098C16.0061 10.7825 15.4853 12.2689 14.5273 13.4639L17.7393 16.6748L16.6777 17.7363L13.4668 14.5244C12.2719 15.4823 10.7854 16.0032 9.25391 16.001C5.52791 16.001 2.50391 12.977 2.50391 9.25098C2.50391 5.52498 5.52791 2.50098 9.25391 2.50098ZM9.25391 4.00098C6.35291 4.00098 4.00391 6.34998 4.00391 9.25098C4.00391 12.1512 6.35291 14.501 9.25391 14.501C10.6192 14.5031 11.9313 13.9714 12.9102 13.0195L13.0225 12.9072C13.9743 11.9284 14.5061 10.6163 14.5039 9.25098C14.5039 6.34998 12.1542 4.00098 9.25391 4.00098Z" fill="white" />
@@ -116,7 +110,7 @@
     <div class="container">
         <div class="offers__inner">
             <div class="offers__header">
-                <h2 class="offers__caption caption">Новые резюме</h2>
+                <h2 class="offers__caption caption">Активные кандидаты</h2>
                 <? 
                 /*
                 <a href="/pages/rezumes.php" class="offers__link icon-link">
@@ -154,7 +148,7 @@
             <? else : ?>
                 <div class="offers__nav">
                     <button class="btn btn_outline btn_size-m js-load" data-id="rezumes">Показать еще&nbsp;<span>4</span></button>
-                    <a href="/pages/rezumes.php" class="btn btn_primary btn_size-m">Каталог резюме</a>
+                    <a href="/pages/rezumes.php" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
                 </div>
             <? endif; ?>
         </div>

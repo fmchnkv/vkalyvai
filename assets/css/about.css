@@ -403,6 +403,25 @@
 .about-features__tab {
   font-size: 18px;
   line-height: 22px;
+  text-align: left;
+}
+.about-video__title {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .about-video__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .about-video__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 .about-advantages {
   overflow: hidden;

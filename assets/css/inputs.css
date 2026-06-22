@@ -630,6 +630,14 @@
 .field.active svg {
   transform: rotateX(180deg);
 }
+.field__icon {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .field__icon {
+    display: block;
+  }
+}
 .radio {
   position: relative;
   display: flex;

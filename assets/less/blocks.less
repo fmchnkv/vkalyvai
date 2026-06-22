@@ -2,19 +2,20 @@
 @import url(_mixins.less);
 
 .breadcrumbs {
-    padding: 80px 0 0;
-    margin-bottom: 24px;
+    padding: 82px 0 0;
+    margin-bottom: 32px;
 
     .media-min(768px, {
         padding: 90px 0 0;
+        margin-bottom: 40px;
+    });
+
+    .media-min(1280px, {
+        padding: 106px 0 0;
     });
 
     .media-min(1441px, {
-        padding: 100px 0 0;
-    });
-
-    .media-min(1024px, {
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     });
 
     &__list {
@@ -342,7 +343,7 @@
     &__inner {
         position: relative;
         background-color: @light;
-        padding: 78px 16px 16px;
+        padding: 80px 16px 16px;
         border-radius: @border-radius-m;
         overflow: hidden;
         width: 100%;
@@ -411,6 +412,7 @@
 
         .media-min(768px, {
             align-self: flex-end;
+            .btn-size(15px 15px, 16px);
         });
 
         .media-min(1024px, {

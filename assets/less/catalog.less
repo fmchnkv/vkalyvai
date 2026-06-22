@@ -5,7 +5,7 @@
     margin-bottom: 24px;
 
     .media-min(768px, {
-        margin-bottom: 32px;
+        margin-bottom: 12px;
     });
 
     .media-min(1441px, {
@@ -24,8 +24,13 @@
     &__actions {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 4px;
         position: relative;
+        padding: 0 4px;
+
+        .media-min(768px, {
+            padding: 0;
+        });
     }
 
     &__nav-btn {
@@ -131,7 +136,7 @@
     }
 
     &__form {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
 
         .media-min(768px, {
             margin-bottom: 0;
@@ -186,13 +191,19 @@
     flex-direction: column;
 
     .media-min(768px, {
+        gap: 12px;
+        margin-bottom: 40px;
+    });
+
+    .media-min(1280px, {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         gap: 32px;
     });
 
     .media-min(1441px, {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        margin-bottom: 48px;
     });
 
     &__filter-btn {
@@ -202,40 +213,33 @@
             display: flex;
             align-self: baseline;
             
-            .btn-size(8px 16px, 16px);
+            .btn-size(11px 11px, 16px);
+            gap: 4px;
         });
     }
 
     &__row {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
 
         .media-min(768px, {
-            gap: 24px;
+            gap: 12px;
         });
 
         .media-min(1024px, {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-        });
-
-        .media-min(1441px, {
             flex: 1 1 auto;
         });
     }
 
     &__counter {
         display: block;
-        font-size: @f-body-m;
+        font-size: @f-body;
         line-height: @lh-body;
         font-weight: 600;
-
-        .media-min(768px, {
-           font-size: @f-body-l;
-           line-height: @lh-body-l; 
-        });
     }
 }
 

@@ -206,7 +206,7 @@
   flex-direction: column;
   gap: 12px;
 }
-.filter-group__checkbox:nth-child(n+6) {
+.filter-group__checkbox:nth-child(n+7) {
   display: none;
 }
 .filter-group.opened .filter-group__checkbox:nth-child(n+6) {

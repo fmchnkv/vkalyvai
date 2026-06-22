@@ -23,7 +23,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <input class="field__input js-autocomplete-input" type="text" name="spec" placeholder="Должность">
+                                <input class="field__input js-autocomplete-input" type="text" name="spec" placeholder="Какую работу вы ищете?">
                             </label>
                             <div class="field__dropdown js-without-choice" data-id="spec">
                                 <ul class="field__dropdown-list">
@@ -53,17 +53,18 @@
 
                             <div class="field__dropdown" data-id="price">
                                 <ul class="field__dropdown-list">
-                                    <li class="field__option js-select-item" data-value="30000">от 30000 ₽</li>
-                                    <li class="field__option js-select-item" data-value="50000">от 50000 ₽</li>
-                                    <li class="field__option js-select-item" data-value="70000">от 70000 ₽</li>
-                                    <li class="field__option js-select-item" data-value="90000">от 80000 ₽</li>
+                                    <li class="field__option js-select-item" data-value="До 40 000 ₽">До 40 000 ₽</li>
+                                    <li class="field__option js-select-item" data-value="40 000 – 70 000 ₽">40 000 – 70 000 ₽</li>
+                                    <li class="field__option js-select-item" data-value="70 000 – 100 000 ₽">70 000 – 100 000 ₽</li>
+                                    <li class="field__option js-select-item" data-value="100 000 – 150 000 ₽">100 000 – 150 000 ₽</li>
+                                    <li class="field__option js-select-item" data-value="От 150 000 ₽">От 150 000 ₽</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="main-hero__input-wrapper main-hero__input-wrapper_select">
                             <label class="main-hero__label field field_select js-select-btn" data-id="worktime">
-                                <input type="text" name="worktime" placeholder="График" readonly class="field__input js-select-input">
+                                <input type="text" name="worktime" placeholder="График и занятость" readonly class="field__input js-select-input">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M14.4735 7.38764C14.7664 7.09475 15.2411 7.09475 15.534 7.38764C15.8268 7.68055 15.8269 8.15535 15.534 8.44819L10.534 13.4482C10.2595 13.7226 9.82466 13.7401 9.53014 13.4999L9.4735 13.4482L4.4735 8.44819C4.18066 8.15535 4.18076 7.68055 4.4735 7.38764C4.76639 7.09475 5.24115 7.09475 5.53404 7.38764L10.0038 11.8574L14.4735 7.38764Z" fill="#232323" />
@@ -78,18 +79,19 @@
 
                             <div class="field__dropdown" data-id="worktime">
                                 <ul class="field__dropdown-list">
-                                    <li class="field__option js-select-item" data-value="Сдельная">Сдельная</li>
-                                    <li class="field__option js-select-item" data-value="Проект">Проект</li>
-                                    <li class="field__option js-select-item" data-value="Вахта">Вахта</li>
-                                    <li class="field__option js-select-item" data-value="Подработка">Подработка</li>
-                                    <li class="field__option js-select-item" data-value="Стажировка">Стажировка</li>
+                                    <li class="field__option js-select-item" data-value="Полный день">Полный день</li>
+                                    <li class="field__option js-select-item" data-value="Удаленная работа">Удаленная работа</li>
+                                    <li class="field__option js-select-item" data-value="Сменный график">Сменный график</li>
+                                    <li class="field__option js-select-item" data-value="Подработка / Гибкий график">Подработка / Гибкий график</li>
+                                    <li class="field__option js-select-item" data-value="Гибридный график">Гибридный график</li>
+                                    <li class="field__option js-select-item" data-value="Вахтовый метод">Вахтовый метод</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <button class="btn btn_primary main-hero__btn">
-                        <span>Найти вакансии</span>
+                        <span>Найти работу</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M9.25391 2.50098C12.9799 2.50098 16.0039 5.52498 16.0039 9.25098C16.0061 10.7825 15.4853 12.2689 14.5273 13.4639L17.7393 16.6748L16.6777 17.7363L13.4668 14.5244C12.2719 15.4823 10.7854 16.0032 9.25391 16.001C5.52791 16.001 2.50391 12.977 2.50391 9.25098C2.50391 5.52498 5.52791 2.50098 9.25391 2.50098ZM9.25391 4.00098C6.35291 4.00098 4.00391 6.34998 4.00391 9.25098C4.00391 12.1512 6.35291 14.501 9.25391 14.501C10.6192 14.5031 11.9313 13.9714 12.9102 13.0195L13.0225 12.9072C13.9743 11.9284 14.5061 10.6163 14.5039 9.25098C14.5039 6.34998 12.1542 4.00098 9.25391 4.00098Z" fill="white" />
@@ -118,7 +120,7 @@
     <div class="container">
         <div class="offers__inner">
             <div class="offers__header">
-                <h2 class="offers__caption caption">Новые вакансии</h2>
+                <h2 class="offers__caption caption">Свежие вакансии</h2>
                 <? 
                 /* 
             
@@ -147,7 +149,7 @@
 
             <div class="offers__nav">
                 <button class="btn btn_outline btn_size-m js-load" data-id="vacancies">Показать еще&nbsp;<span>4</span></button>
-                <a href="/pages/vacancies.php" class="btn btn_primary btn_size-m">Каталог вакансий</a>
+                <a href="/pages/vacancies.php" class="btn btn_primary btn_size-m">Смотреть все вакансии</a>
             </div>
         </div>
     </div>

@@ -19,10 +19,10 @@
                     <div class="filter__group filter-group filter-group_price">
                         <span class="filter-group__title">Уровень дохода</span>
                         <label class="filter-group__price-checkbox checkbox">
-                            <input class="checkbox__input js-prices-checkbox" type="checkbox" name="has_salary" value="1" checked>
-                            <span class="checkbox__label">Указан доход</span>
+                            <input class="checkbox__input js-prices-checkbox" type="checkbox" name="has_salary" value="1" >
+                            <span class="checkbox__label">Указана желаемая зарплата</span>
                         </label>
-                        <div class="js-prices-wrapper active">
+                        <div class="js-prices-wrapper">
 
                             <div class="filter-group__price-wrapper">
                                 <label class="filter-group__input input input_has-icon">
@@ -83,11 +83,10 @@
     
                                     <div class="select__dropdown">
                                         <ul class="select__dropdown-list" data-id="period">
-                                            <li class="select__option" data-value="за смену">за смену</li>
                                             <li class="select__option" data-value="за месяц">за месяц</li>
+                                            <li class="select__option" data-value="за смену">за смену</li>
                                             <li class="select__option" data-value="за час">за час</li>
                                             <li class="select__option" data-value="за вахту">за вахту</li>
-                                            <li class="select__option" data-value="за услугу">за услугу</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -129,95 +128,27 @@
                     </div>
 
                     <div class="filter__group filter-group">
-                        <span class="filter-group__title">Образование</span>
+                        <span class="filter-group__title">Формат работы и график</span>
                         <div class="filter-group__checkboxes">
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Высшее</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
-                                <span class="checkbox__label">Среднее-специальное</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
-                                <span class="checkbox__label">Среднее</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
-                                <span class="checkbox__label">Магистратура</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
-                                <span class="checkbox__label">Без образования</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
-                                <span class="checkbox__label">Не имеет значения или не указано</span>
-                            </label>
-                        </div>
-
-                        <button class="filter-group__more btn-link js-show-checkboxes">
-                            <span>Показать все</span>
-                        </button>
-                    </div>
-
-                    <div class="filter__group filter-group">
-                        <span class="filter-group__title">Знание языков</span>
-                        <div class="filter-group__checkboxes">
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Английский</span>
+                                <span class="checkbox__label">Полный день (в офисе/на объекте)</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Русский</span>
+                                <span class="checkbox__label">Сменный график</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Французский</span>
+                                <span class="checkbox__label">Удаленная работа</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Немецкий</span>
+                                <span class="checkbox__label">Гибридный график</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Итальянский</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Японский</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Не имеет значения</span>
-                            </label>
-                        </div>
-
-                        <button class="filter-group__more btn-link js-show-checkboxes">
-                            <span>Показать все</span>
-                        </button>
-                    </div>
-
-                    <div class="filter__group filter-group">
-                        <span class="filter-group__title">Регион</span>
-                        <div class="filter-group__checkboxes">
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Москва</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Санкт-Петербург</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Екатеринбург</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Не имеет значения</span>
+                                <span class="checkbox__label">Вахтовый метод</span>
                             </label>
                         </div>
                     </div>
@@ -231,49 +162,43 @@
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Проект</span>
+                                <span class="checkbox__label">Частичная занятость / Подработка</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Частичная занятость</span>
+                                <span class="checkbox__label">Проектная работа / Разовый заказ</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Совмещение</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Подработка</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Стажировка</span>
-                            </label>
-                            <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Вахта</span>
+                                <span class="checkbox__label">Стажировка / Практика</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="filter__group filter-group">
-                        <span class="filter-group__title">Формат работы</span>
+                        <span class="filter-group__title">Статус соискателя</span>
                         <div class="filter-group__checkboxes">
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">На месте работодателя</span>
+                                <span class="checkbox__label">Только самозанятые</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Удалённая работа</span>
+                                <span class="checkbox__label">Только граждане РФ (или ЕАЭС)</span>
                             </label>
                             <label class="filter-group__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
-                                <span class="checkbox__label">Гибрид</span>
+                                <span class="checkbox__label">Есть медицинская книжка</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Не имеет значения</span>
                             </label>
                         </div>
                     </div>
 
+                    <? 
+                    /*
                     <div class="filter__group filter-group filter-group_multiple">
                         <span class="filter-group__title">Категория прав</span>
                         <div class="multiple-select" data-id="category">
@@ -399,11 +324,180 @@
                             <li class="select__tag btn btn_size-s btn_light js-multiple-tag" data-id="category" data-value="B">B</li>
                             <li class="select__tag btn btn_size-s btn_light js-multiple-tag" data-id="category" data-value="C">C</li>
                             <li class="select__tag btn btn_size-s btn_light js-multiple-tag" data-id="category" data-value="D">D</li>
+                            <li class="select__tag btn btn_size-s btn_light js-multiple-tag" data-id="category" data-value="CE">CE</li>
+                            <li class="select__tag btn btn_size-s btn_light js-multiple-tag" data-id="category" data-value="E">E</li>
                         </ul>
                         <button class="filter-group__reset btn-link js-reset-multiple">
                             <span>Сбросить</span>
                         </button>
-                    </div>                   
+
+                        <label class="filter-group__checkbox checkbox" style="margin-top: 12px;">
+                            <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                            <span class="checkbox__label">Со своим автомобилем</span>
+                        </label>
+                    </div>   
+                    */
+                    ?>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Категория прав</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">A</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">B</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">C</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">D</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">CE</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">E</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Опыт работы</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Без опыта / Студенты </span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">От 1 года до 3 лет</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">От 3 до 6 лет</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Более 6 лет</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Гражданство / Патент</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Гражданство РФ</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Гражданство ЕАЭС (Беларусь, Казахстан, Армения, Киргизия)</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Есть патент на работу в РФ</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Не имеет значения</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Образование</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Высшее</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Среднее специальное (колледжи, техникумы)</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Среднее (школа)</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
+                                <span class="checkbox__label">Не имеет значения</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Знание языков</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Русский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Узбекский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Казахский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Таджикский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Киргизский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Армянский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Азербайджанский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Китайский</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Английский</span>
+                            </label>
+                        </div>
+
+                        <button class="filter-group__more btn-link js-show-checkboxes">
+                            <span>Показать все</span>
+                        </button>
+                    </div>
+
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Регион</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">В моем регионе</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">По всей России</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">По всему миру</span>
+                            </label>
+                        </div>
+                    </div>                
 
                 </div>
 
