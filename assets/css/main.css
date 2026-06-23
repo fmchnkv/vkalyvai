@@ -1813,17 +1813,17 @@ input::placeholder {
 }
 @media screen and (max-width: 767px) {
   .m-none {
-    display: none;
+    display: none !important;
   }
 }
 @media screen and (max-width: 1023px) {
   .tablet-none {
-    display: none;
+    display: none !important;
   }
 }
 @media screen and (min-width: 1024px) {
   .desktop-none {
-    display: none;
+    display: none !important;
   }
 }
 .offers {
