@@ -31,74 +31,57 @@
   }
 }
 .vacancy {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .vacancy {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .vacancy {
     margin-bottom: 40px;
   }
 }
 .vacancy__header {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .vacancy__header {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .vacancy__header {
     margin-bottom: 40px;
   }
 }
 .vacancy .companies-grid {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .vacancy .companies-grid {
     display: none;
   }
 }
 .vacancy__tags {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .vacancy__tags {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .vacancy__tags {
     margin-bottom: 40px;
   }
 }
-.vacancy__cta {
+.vacancy__tags .subcaption {
   margin-bottom: 24px;
 }
-@media screen and (min-width: 768px) {
-  .vacancy__cta {
+@media screen and (min-width: 1600px) {
+  .vacancy__tags .subcaption {
     margin-bottom: 32px;
   }
 }
-@media screen and (min-width: 1441px) {
+.vacancy__cta {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1600px) {
   .vacancy__cta {
     margin-bottom: 40px;
   }
 }
 .vacancy__content {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .vacancy__content {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .vacancy__content {
     margin-bottom: 40px;
   }
@@ -122,7 +105,7 @@
   }
 }
 .vacancy-header__sale {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   display: block;
   color: #FC7827;
   font-size: 20px;

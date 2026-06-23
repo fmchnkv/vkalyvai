@@ -217,7 +217,7 @@ input::placeholder {
     margin-bottom: 24px;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .subcaption {
     margin-bottom: 32px;
     font-size: 20px;

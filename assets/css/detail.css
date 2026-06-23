@@ -85,7 +85,7 @@
     padding: 0;
     border-radius: 0;
     background-color: transparent;
-    width: 309px;
+    width: 216px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -138,7 +138,7 @@
 }
 @media screen and (min-width: 1024px) {
   .detail__actions {
-    padding: 12px;
+    padding: 8px;
     border-radius: 32px;
     background-color: #FFFFFF;
     border: 1px solid #EBEBEB;

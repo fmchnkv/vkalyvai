@@ -168,7 +168,6 @@
   cursor: pointer;
   border: 1px solid #EBEBEB;
   padding: 7px 11px;
-  font-size: 12px;
   line-height: 14px;
   transition-property: background-color, color, border-color;
   transition-duration: 0.3s;
@@ -519,7 +518,7 @@
 }
 .breadcrumbs {
   padding: 82px 0 0;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .breadcrumbs {
@@ -534,7 +533,7 @@
 }
 @media screen and (min-width: 1441px) {
   .breadcrumbs {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 }
 .breadcrumbs__list {
@@ -808,14 +807,9 @@
   fill: #FC7827;
 }
 .searching-save {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .searching-save {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .searching-save {
     margin-bottom: 40px;
   }
@@ -926,17 +920,22 @@
   position: relative;
   background-color: #FFF2E9;
   border-radius: 16px;
-  padding: 40px 16px 16px;
+  padding: 20px 16px 16px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .cta__inner {
-    padding: 40px 24px 24px;
+    padding: 24px 20px 20px;
   }
 }
 @media screen and (min-width: 1441px) {
   .cta__inner {
-    padding: 40px 32px;
+    padding: 24px 20px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cta__inner {
+    padding: 32px 24px;
   }
 }
 .cta__bg {
@@ -959,11 +958,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .cta__row {
-    gap: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -975,44 +976,48 @@
 .cta__top {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 @media screen and (min-width: 1441px) {
   .cta__top {
-    gap: 24px;
+    gap: 16px;
   }
 }
 .cta__title {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 600;
   color: #FC7827;
 }
 @media screen and (min-width: 768px) {
   .cta__title {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 1441px) {
   .cta__title {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cta__title {
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 .cta__description {
-  font-size: 14px;
   line-height: 16px;
 }
 @media screen and (min-width: 768px) {
   .cta__description {
-    font-size: 18px;
     line-height: 22px;
   }
 }
 @media screen and (min-width: 1441px) {
   .cta__description {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
   }
 }
@@ -1021,7 +1026,7 @@
 }
 @media screen and (min-width: 768px) {
   .cta__btn {
-    font-size: 18px;
+    align-self: flex-end;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -1147,6 +1152,16 @@
   margin-bottom: 16px;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .content__title {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .content__title {
+    font-size: 18px;
+  }
+}
 .content__title_small {
   font-size: 16px;
   line-height: 18px;
@@ -1161,6 +1176,13 @@
 }
 @media screen and (min-width: 768px) {
   .content p {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .content p {
+    font-size: 18px;
     margin-bottom: 32px;
   }
 }
@@ -1798,7 +1820,7 @@ input::placeholder {
     margin-bottom: 24px;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .subcaption {
     margin-bottom: 32px;
     font-size: 20px;
@@ -1977,7 +1999,6 @@ input::placeholder {
 }
 @media screen and (max-width: 767px) {
   .offer-info__item {
-    font-size: 14px;
     line-height: 16px;
   }
 }
@@ -2217,14 +2238,9 @@ input::placeholder {
   font-weight: 600;
 }
 .catalog {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .catalog {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .catalog {
     margin-bottom: 40px;
   }
@@ -2332,14 +2348,14 @@ input::placeholder {
 @media screen and (min-width: 768px) {
   .input__field::placeholder,
   .input input::placeholder {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
 @media screen and (min-width: 768px) {
   .input__field,
   .input input {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
@@ -2403,7 +2419,7 @@ input::placeholder {
 }
 @media screen and (min-width: 768px) {
   .input_size-l.input_has-avatar input {
-    padding-left: 60px;
+    padding: 16px 52px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2954,10 +2970,9 @@ input::placeholder {
   .feedback__title {
     font-size: 28px;
     line-height: 28px;
-    margin-bottom: 32px;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .feedback__title {
     font-size: 32px;
     line-height: 32px;
@@ -3092,7 +3107,7 @@ input::placeholder {
     padding: 0;
     border-radius: 0;
     background-color: transparent;
-    width: 309px;
+    width: 216px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -3145,7 +3160,7 @@ input::placeholder {
 }
 @media screen and (min-width: 1024px) {
   .detail__actions {
-    padding: 12px;
+    padding: 8px;
     border-radius: 32px;
     background-color: #FFFFFF;
     border: 1px solid #EBEBEB;

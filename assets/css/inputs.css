@@ -124,14 +124,14 @@
 @media screen and (min-width: 768px) {
   .input__field::placeholder,
   .input input::placeholder {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
 @media screen and (min-width: 768px) {
   .input__field,
   .input input {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
@@ -195,7 +195,7 @@
 }
 @media screen and (min-width: 768px) {
   .input_size-l.input_has-avatar input {
-    padding-left: 60px;
+    padding: 16px 52px;
   }
 }
 @media screen and (min-width: 768px) {

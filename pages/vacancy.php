@@ -93,7 +93,7 @@
                                     <span class="cta__title">Подходит вам на 80%</span>
                                     <p class="cta__description">Ваши навыки подходят под требования вакансии на 80%!</p>
                                 </div>
-                                <button class="cta__btn btn btn_secondary btn_size-xl js-anchor-feedback" data-id="feedback">Откликнуться</button>
+                                <button class="cta__btn btn btn_secondary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
 
             <div class="detail__sidebar">
                 <div class="detail__actions">
-                    <button class="detail__btn btn btn_primary btn_size-m js-anchor-feedback" data-id="feedback">Откликнуться</button>
+                    <button class="detail__btn btn btn_primary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
                     <button class="detail__like btn btn_light btn_size-m btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
