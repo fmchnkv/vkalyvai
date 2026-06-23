@@ -403,11 +403,6 @@
 .lk .inline-form__btn svg {
   display: block !important;
 }
-@media screen and (min-width: 1441px) {
-  .lk .companies-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 .lk__sidebar {
   display: none;
 }
@@ -429,7 +424,7 @@
   border: 1px solid;
   border-color: #EBEBEB;
   border-radius: 16px;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -566,12 +561,7 @@
 }
 .lk__tabs {
   flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .lk__tabs {
-    margin-bottom: 16px;
-  }
+  margin-bottom: 0;
 }
 @media screen and (min-width: 1600px) {
   .lk__tabs {
@@ -620,11 +610,23 @@
   border-color: #FC7827;
   box-shadow: 0px 8px 64px -12px rgba(20, 20, 20, 0.12);
   transition: all 0.3s ease;
+  /*
+            button, a {
+                &:not(.btn) {
+                    color: @primary;
+                    transition: all .3s ease;
+                }
+            }
+            */
 }
-.lk-card:hover button:not(.btn),
-.lk-card:hover a:not(.btn) {
+.lk-card button:not(.btn),
+.lk-card a:not(.btn) {
+  transition: color 0.3s ease;
+}
+.lk-card button:not(.btn):hover,
+.lk-card a:not(.btn):hover {
   color: #FC7827;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 .lk-card__wrapper {
   display: grid;
@@ -698,12 +700,12 @@
   transition: all 0.3s ease;
 }
 .lk .deals-wrapper {
-  padding-bottom: 24px;
-}
-@media screen and (min-width: 768px) {
-  .lk .deals-wrapper {
-    padding-bottom: 32px;
-  }
+  padding-bottom: 64px;
+  /*
+            .media-min(768px, {
+                padding-bottom: 32px;
+            });
+            */
 }
 .lk .deals-wrapper .detail__btn {
   width: 100%;
@@ -725,6 +727,13 @@
 .lk .deals-item {
   border-radius: 20px;
   padding: 20px 16px;
+  transition: all 0.3s ease;
+}
+.lk .deals-item__button svg path {
+  transition: all 0.3s ease;
+}
+.lk .deals-item__button:hover svg path {
+  fill: #232323;
   transition: all 0.3s ease;
 }
 .lk .deals-item__header {
@@ -968,6 +977,7 @@
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .lk__filters-wrapper {
@@ -977,12 +987,40 @@
     margin-bottom: 32px;
   }
 }
+.lk .favorite__title {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .lk .favorite__title {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lk .favorite-content .vacancies-list {
+    gap: 12px;
+  }
+}
+.lk .favorite .offers-grid__title {
+  font-size: 16px;
+}
 .lk .favorite-list {
   gap: 12px;
   /*margin-bottom: 40px;*/
 }
+.lk .favorite-list__item .offers-list__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lk .favorite-list__item .offers-list__header .offer-header__title {
+  margin-bottom: 0;
+}
+.lk .favorite-list__item .offers-list__header .offer-header__main {
+  width: 100%;
+  margin-bottom: 0;
+}
 .lk .favorite-list__item .offers-list__top {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .lk .favorite-list__item .offers-list__top {
@@ -1014,18 +1052,70 @@
 }
 .lk .companies-grid {
   gap: 12px;
-  /*margin-bottom: 40px;*/
+}
+@media screen and (min-width: 768px) {
+  .lk .companies-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .lk .companies-grid__link {
   border: none;
   padding: 0;
   max-width: 95%;
 }
+.lk .companies-grid__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+}
+@media screen and (min-width: 768px) {
+  .lk .companies-grid__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .lk .companies-grid__name {
+    font-size: 18px;
+  }
+}
+.lk .companies-grid__counter {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+}
+@media screen and (min-width: 768px) {
+  .lk .companies-grid__counter {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .lk .companies-grid__counter {
+    font-size: 16px;
+  }
+}
 .lk .companies-grid__item {
   display: flex;
   position: relative;
-  padding: 12px 20px 12px 12px;
+  padding: 8px;
   border-radius: 16px;
+}
+.lk .companies-grid__item .companies-grid__info {
+  gap: 8px;
+}
+.lk .companies-grid__item .avatar.empty svg {
+  max-width: 24px;
+}
+@media screen and (min-width: 768px) {
+  .lk .companies-grid__item .avatar.empty svg {
+    max-width: 48px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lk .companies-grid__item .avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
 .lk .companies-grid__item .icon-button {
   position: absolute;
@@ -1043,6 +1133,12 @@
 }
 .lk .companies-grid__item .icon-button svg path {
   transition: fill 0.3s ease;
+}
+@media screen and (min-width: 1024px) {
+  .lk .companies-grid__item .icon-button svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 .lk .companies-grid__name {
   color: #232323;
@@ -1209,6 +1305,7 @@
 .lk .employer__responces-item__title h3 {
   margin-bottom: 0;
   font-size: 16px;
+  color: #232323;
 }
 @media screen and (min-width: 768px) {
   .lk .employer__responces-item__title h3 {
@@ -1244,6 +1341,8 @@
   flex-direction: column;
   position: relative;
   height: 90vh;
+  overflow: hidden;
+  padding-right: 0;
 }
 .lk__main-form-btn {
   background-color: #FFFFFF;
@@ -1252,11 +1351,20 @@
   bottom: 0;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .lk__main-form-btn {
+    position: sticky;
+  }
+}
 .lk__main-form-btn button {
   justify-content: center;
 }
 .lk__main-form-inputs {
-  margin-bottom: 100px;
+  flex: 1;
+  min-height: 0;
+  margin-bottom: 0;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 .lk__input-element p {
   display: block;
@@ -1359,6 +1467,15 @@
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
+.lk__modal[data-modal="edit__company"] .modal__wrapper {
+  padding-bottom: 0;
+}
+.lk__modal[data-modal="edit__company"] .modal__wrapper .icon-button {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  right: 20px;
+}
 .lk__modal-form {
   display: flex;
   flex-direction: column;
@@ -1376,6 +1493,24 @@
 }
 .lk__modal-form.lk__univercity-form .lk__main-form__date-wrapper {
   grid-template-columns: repeat(1, 1fr);
+}
+.lk__modal-form .modal-contact {
+  padding: 12px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.lk__modal-form .modal-contact svg path {
+  transition: all 0.3s ease;
+}
+.lk__modal-form .modal-contact:hover {
+  background-color: #FC7827;
+}
+.lk__modal-form .modal-contact:hover svg path {
+  fill: #FFFFFF;
+  transition: all 0.3s ease;
 }
 .lk .docs__title {
   margin-bottom: 24px;

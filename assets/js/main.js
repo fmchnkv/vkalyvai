@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
-        if (target.getAttribute('data-call-modal')) {
+        if (target.closest('[data-call-modal]')) {
             return true;
         }
     }
@@ -1042,8 +1042,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-call-modal]').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-
-            console.log('modal open via button', button.dataset.callModal, new Date().toISOString());
 
             let modal = document.querySelector(`.modal[data-modal="${button.dataset.callModal}"]`);
             if(modal) {
