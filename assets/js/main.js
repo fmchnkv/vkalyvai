@@ -800,7 +800,15 @@ document.addEventListener('DOMContentLoaded', () => {
         accordionBtns.forEach(accordionBtn => {
             accordionBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                accordionBtn.closest('.accordion__item').classList.toggle('active');
+
+                if (accordionBtn.closest('.accordion__item').classList.contains('active')) {
+                    accordionBtn.closest('.accordion__item').classList.remove('active');
+                } else {
+                    accordionBtns.forEach(el => {
+                        el.closest('.accordion__item').classList.remove('active');
+                    });
+                    accordionBtn.closest('.accordion__item').classList.add('active');
+                }
             });
         });
     }

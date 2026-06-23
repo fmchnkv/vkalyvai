@@ -31,22 +31,23 @@
   }
 }
 .breadcrumbs {
-  padding: 80px 0 0;
-  margin-bottom: 24px;
+  padding: 82px 0 0;
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .breadcrumbs {
     padding: 90px 0 0;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .breadcrumbs {
+    padding: 106px 0 0;
   }
 }
 @media screen and (min-width: 1441px) {
   .breadcrumbs {
-    padding: 100px 0 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .breadcrumbs {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
 }
 .breadcrumbs__list {
@@ -335,7 +336,7 @@
 .searching-save__inner {
   position: relative;
   background-color: #FFF2E9;
-  padding: 78px 16px 16px;
+  padding: 80px 16px 16px;
   border-radius: 16px;
   overflow: hidden;
   width: 100%;
@@ -407,6 +408,8 @@
 @media screen and (min-width: 768px) {
   .searching-save__btn {
     align-self: flex-end;
+    padding: 15px 15px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1024px) {

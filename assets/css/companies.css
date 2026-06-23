@@ -33,16 +33,16 @@
 .companies-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 @media screen and (min-width: 768px) {
   .companies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1280px) {
   .companies-grid {
-    gap: 32px;
+    gap: 16px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -73,10 +73,16 @@
   height: 64px;
   flex: 0 0 auto;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .companies-grid__avatar {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .companies-grid__avatar {
+    width: 100px;
+    height: 100px;
   }
 }
 .companies-grid__info {

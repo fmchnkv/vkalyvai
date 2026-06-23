@@ -5,8 +5,8 @@
             <div class="searching-save__row">
                 <span class="searching-save__title">Сохранить поиск?</span>
                 <div class="searching-save__content">
-                    <p class="searching-save__text">По вашему запросу еще будут появляться новые вакансии. <br>Вы можете сохранить поиск, и получать уведомления о новых вакансиях в личном кабинете!</p>
-                    <button class="searching-save__btn btn btn_secondary btn_size-l">Сохранить</button>
+                    <p class="searching-save__text">На Вкалывай регулярно появляются новые вакансии по вашему запросу. Сохраните поиск, чтобы сразу получать уведомления о свежих предложениях в личном кабинете и на почту.</p>
+                    <button class="searching-save__btn btn btn_secondary btn_size-m">Сохранить</button>
                 </div>
             </div>
         </div>

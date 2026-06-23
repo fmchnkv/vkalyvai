@@ -5,9 +5,9 @@
         <div class="about-hero__inner">
             <img src="/images/about.png" class="about-hero__bg" alt="">
             <div class="about-hero__row">
-                <h1 class="about-hero__title">Найдите работу мечты — <br><span>и работайте, а не вкалывайте!</span></h1>
+                <h1 class="about-hero__title">Мы вкалываем, чтобы вы могли <span>спокойно работать!</span></h1>
                 <div class="about-hero__bottom">
-                    <p class="about-hero__text">Удобный поиск вакансий и сотрудников!<br>Минимум действий — максимум результата!</p>
+                    <p class="about-hero__text">Удобный поиск вакансий и сотрудников. <br>Минимум действий — максимум результата!</p>
                     <div class="about-hero__actions">
                         <a href="/pages/vacancies.php" class="about-hero__btn btn btn_primary btn_size-m">Каталог вакансий</a>
                         <a href="/pages/rezumes.php" class="about-hero__btn btn btn_secondary btn_size-m">Каталог резюме</a>
@@ -22,12 +22,12 @@
     <div class="container">
         <div class="about-info__row">
             <div class="about-info__content">
-                <h2 class="about-info__title">Мы не просто <span>портал</span></h2>
-                <p class="about-info__text about-info__text_first"><span class="about-info__accent">«Вкалывай»</span> — это портал для тех, кто хочет работать нормально, а не выгорать на старте.<br><br>Мы убрали всё лишнее: долгие анкеты, запутанные фильтры и бесконечные клики.</p>
+                <h2 class="about-info__title">Больше чем просто <span>поиск</span></h2>
+                <p class="about-info__text about-info__text_first"><span class="about-info__accent">«Вкалывай»</span> — это место, где нанимают и работают без стресса и выгорания. Мы убрали всё лишнее: долгие анкеты, запутанные фильтры и бесконечные клики.</p>
                 <span class="about-info__caption">Здесь все просто!</span>
                 <div class="about-info__steps">
                     <div class="about-info__step btn_no-hover btn_has-icon">
-                        <span>Нашел</span>
+                        <span>Зарегистрировался</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M10.3066 3.63764C10.5995 3.34475 11.0743 3.34475 11.3672 3.63764L17.2002 9.47065C17.4931 9.76354 17.4931 10.2383 17.2002 10.5312L11.3672 16.3652C11.0743 16.6575 10.5994 16.6577 10.3066 16.3652C10.0139 16.0724 10.0142 15.5976 10.3066 15.3046L14.8594 10.7509H3.33691C2.92296 10.7507 2.58709 10.4149 2.58691 10.0009C2.58709 9.58696 2.92296 9.2511 3.33691 9.25092H14.8594L10.3066 4.69819C10.0139 4.4054 10.0141 3.93056 10.3066 3.63764Z" fill="#FC7827" />
@@ -40,7 +40,7 @@
                         </svg>
                     </div>
                     <div class="about-info__step btn_no-hover btn_has-icon">
-                        <span>Откликнулся</span>
+                        <span>Нашёл</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M10.3066 3.63764C10.5995 3.34475 11.0743 3.34475 11.3672 3.63764L17.2002 9.47065C17.4931 9.76354 17.4931 10.2383 17.2002 10.5312L11.3672 16.3652C11.0743 16.6575 10.5994 16.6577 10.3066 16.3652C10.0139 16.0724 10.0142 15.5976 10.3066 15.3046L14.8594 10.7509H3.33691C2.92296 10.7507 2.58709 10.4149 2.58691 10.0009C2.58709 9.58696 2.92296 9.2511 3.33691 9.25092H14.8594L10.3066 4.69819C10.0139 4.4054 10.0141 3.93056 10.3066 3.63764Z" fill="#FC7827" />
@@ -53,10 +53,10 @@
                         </svg>
                     </div>
                     <div class="about-info__step btn_no-hover btn_has-icon">
-                        <span>Договорился</span>
+                        <span>Работаешь!</span>
                     </div>
                 </div>
-                <p class="about-info__text about-info__text_second">Работу или сотрудников можно найти быстро, удобно и без стресса. Потому что поиск работы — <span class="about-info__accent">это часть жизни, а не отдельная работа.</span></p>
+                <p class="about-info__text about-info__text_second">Быстро, удобно и без стресса. Потому что найм и трудоустройство не должны превращаться в ещё одну работу.</p>
             </div>
             <div class="about-info__image">
                 <img src="/images/about-2.png" alt="">
@@ -67,7 +67,7 @@
 
 <section class="about-features about-section">
     <div class="container">
-        <h2 class="about-features__title">Что мы предлагаем</h2>
+        <h2 class="about-features__title">Чем мы полезны</h2>
         <ul class="about-features__list">
             <li class="about-features__item">
                 <div class="about-features__image">
@@ -75,10 +75,10 @@
                 </div>
                 <span class="about-features__caption">Возможности для соискателя</span>
                 <div class="about-features__tabs">
-                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Создать резюме</a>
-                    <a href="/pages/vacancies.php" class="about-features__tab tab btn_size-s">Поиск вакансий</a>
-                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Поиск компаний</a>
-                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">Помощь</a>
+                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Покажи себя</a>
+                    <a href="/pages/vacancies.php" class="about-features__tab tab btn_size-s">Изучи рынок</a>
+                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Выбирай, где работать</a>
+                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>
                 </div>
             </li>
             <li class="about-features__item">
@@ -87,10 +87,10 @@
                 </div>
                 <span class="about-features__caption">Возможности для работодателя</span>
                 <div class="about-features__tabs">
-                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Создать вакансию</a>
-                    <a href="/pages/rezumes.php" class="about-features__tab tab btn_size-s">Поиск кандидатов</a>
-                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Поиск компаний</a>
-                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">Помощь</a>
+                    <a href="#" class="about-features__tab btn btn_primary btn_size-s">Заяви о своей компании</a>
+                    <a href="/pages/rezumes.php" class="about-features__tab tab btn_size-s">Выбирай лучших в штат</a>
+                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Управляй наймом в один клик</a>
+                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>
                 </div>
             </li>
         </ul>
@@ -100,8 +100,7 @@
 <section class="about-advantages about-section">
     <div class="container">
         <div class="about-advantages__inner">
-
-            <h2 class="about-advantages__title">Преимущества портала</h2>
+            <h2 class="about-advantages__title">Простой сервис без скрытых схем и сложных условий</h2>
             <ul class="about-advantages__list">
                 <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +113,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Быстрый поиск</span>
+                    <span>Всё по делу</span>
                 </li>
                 <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +126,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Пара кликов</span>
+                    <span>Чёткие и честные фильтры</span>
                 </li>
                 <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,98 +139,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Без лишнего</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Удобный интерфейс</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Чёткие фильтры</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Мгновенный отклик</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Просто начать</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Чистый дизайн</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Никакой путаницы</span>
-                </li>
-                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g >
-                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_4956_1430">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span>Экономия времени</span>
+                    <span>Никакой путаницы в интерфейсе</span>
                 </li>
                 <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,7 +165,33 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Всё по делу</span>
+                    <span>Мгновенный отклик</span>
+                </li>
+                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g >
+                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4956_1430">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Поиск в пару кликов</span>
+                </li>
+                <li class="about-advantages__item btn btn_size-s btn_outline btn_no-hover btn_has-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g >
+                            <path d="M14.9021 5.75781C15.2925 5.36747 15.9256 5.36763 16.3162 5.75781C16.7066 6.14817 16.7073 6.78127 16.3172 7.17188L9.24685 14.2432C9.05937 14.4307 8.80496 14.5361 8.53981 14.5361C8.27458 14.5361 8.02033 14.4307 7.83278 14.2432L4.29665 10.708C3.90633 10.3175 3.90633 9.68443 4.29665 9.29395C4.68714 8.90362 5.32023 8.90362 5.71071 9.29395L8.53884 12.1221L14.9021 5.75781Z" fill="#FC7827" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4956_1430">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Реальная экономия времени</span>
                 </li>
             </ul>
             <img class="about-advantages__img" src="/images/about-advantages.png" alt="">
@@ -267,6 +201,7 @@
 
 <section class="about-video video-block about-section">
     <div class="container">
+        <h2 class="about-video__title">Как быстро найти работу и сотрудников</h2>
         <div class="video-block__inner">
             <img class="video-block__poster" src="/images/video-poster.jpg" alt="">
             <div class="video-block__content">
@@ -305,8 +240,8 @@
                             </defs>
                         </svg>
                     </div>
-                    <span class="about-philosophy__caption">Простота и удобство</span>
-                    <p class="about-philosophy__text">Мы убрали всё лишнее: длинные формы, десятки кликов и сложные инструкции. В «Вкалывай» вы быстро находите работу или сотрудников, не тратя время на бессмысленные шаги.</p>
+                    <span class="about-philosophy__caption">Удобно для каждого</span>
+                    <p class="about-philosophy__text">Наш сайт одинаково удобен для всех. Здесь просто договориться обычному человеку и любому работодателю. Мы помогаем и малым фирмам, и среднему бизнесу, и крупным компаниям, и госучреждениям.</p>
                 </div>
 
                 <div class="about-philosophy__item swiper-slide">
@@ -323,8 +258,8 @@
                         </svg>
 
                     </div>
-                    <span class="about-philosophy__caption">Быстрый результат</span>
-                    <p class="about-philosophy__text">Наш портал работает так, чтобы вы сразу видели подходящие вакансии или кандидатов. Никаких догадок, никакой суеты — только конкретные предложения, которые реально помогают.</p>
+                    <span class="about-philosophy__caption">Честная работа</span>
+                    <p class="about-philosophy__text">Мы за то, чтобы работники и работодатели относились друг к другу уважительно. Мы помогаем делиться только правдивой информацией, честно выполнять договоренности и вместе приходить к успеху.</p>
                 </div>
 
                 <div class="about-philosophy__item swiper-slide">
@@ -341,8 +276,8 @@
                         </svg>
 
                     </div>
-                    <span class="about-philosophy__caption">Комфорт для каждого</span>
-                    <p class="about-philosophy__text">Интерфейс понятен и дружелюбен для любого пользователя. Мы заботимся о том, чтобы поиск был простым и приятным, без стресса и перегрузки.</p>
+                    <span class="about-philosophy__caption">Дополнительные возможности</span>
+                    <p class="about-philosophy__text">У нас можно не только искать работу или кадры. Используйте наши рекламные инструменты, чтобы продвигать свои вакансии, находить клиентов и развивать свое дело.</p>
                 </div>
 
                 <div class="about-philosophy__item swiper-slide">
@@ -358,8 +293,8 @@
                             </defs>
                         </svg>
                     </div>
-                    <span class="about-philosophy__caption">Фокус на главном</span>
-                    <p class="about-philosophy__text">Главное — найти работу, а не тратить жизнь на поиск, или найти сотрудника, а не кликать по десяткам сайтов. Мы оставляем только то, что реально важно для достижения цели.</p>
+                    <span class="about-philosophy__caption">Всё по закону</span>
+                    <p class="about-philosophy__text">На сайте действуют четкие внутренние правила. Они полностью опираются на законы и честные правила ведения бизнеса, чтобы защитить интересы обеих сторон.</p>
                 </div>
             </div>
         </div>
@@ -371,8 +306,8 @@
         <div class="cta__inner">
             <img class="cta__bg" src="/images/cta.png" alt="">
             <div class="cta__row">
-                <span class="cta__title">Всё просто: выберите раздел и начните поиск без лишних шагов!</span>
-                <p class="cta__description">Выберите, что вам нужно — найти работу или сотрудника. <br>Без регистрации на старте, без длинных форм — просто переходите и получайте результат.</p>
+                <span class="cta__title">Мы уже всё нашли для вас!</span>
+                <p class="cta__description">Забудьте про сложные анкеты и бесконечные проверки. Просто открывайте нужный каталог и выбирайте лучшее прямо сейчас.</p>
                 <div class="cta__actions">
                     <a href="/pages/vacancies.php" class="cta__btn btn btn_primary">Каталог вакансий</a>
                     <a href="/pages/rezumes.php" class="cta__btn btn btn_secondary">Каталог резюме</a>
