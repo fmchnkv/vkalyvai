@@ -1087,6 +1087,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactInput.placeholder = '999999999999';
             break;
 
+            case 'number':
+                currentMask = new Inputmask({ alias: 'numeric', digits: 0, allowMinus: false, rightAlign: false });
+                currentMask.mask(contactInput);
+                contactInput.type = 'text';
+                contactInput.placeholder = '0';
+            break;
+
             case 'password':
                 currentMask = new Inputmask({ mask: '******************'});
                 currentMask.mask(contactInput);

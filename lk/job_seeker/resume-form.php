@@ -47,7 +47,7 @@
             <!-- Шаг 2 -->
             <form class="grid-list" id="step-form-contact" data-form="2" data-title="Основная информация"
                 class="step-form constructor__contact-form" method="post">
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">ФИО</span>
                     <div class="constructor__inputs-list grid-list grid-2-columns">
                         <div class="lk__input-wrapper big-input">

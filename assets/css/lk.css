@@ -40,13 +40,13 @@
 .tight-bubble span {
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 14px;
   color: #999999;
 }
 .tight-bubble p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #232323;
   line-clamp: 1;
   -webkit-line-clamp: 1;
@@ -84,7 +84,7 @@
   border: none;
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
 }
 .transp-btn svg {
   width: 16px;
@@ -99,13 +99,13 @@
 .big-bubble span {
   font-weight: 400;
   font-size: 18px;
-  line-height: 122%;
+  line-height: 22px;
   color: #999999;
 }
 .big-bubble p {
   font-weight: 600;
   font-size: 18px;
-  line-height: 122%;
+  line-height: 22px;
   color: #232323;
 }
 .grid-list {
@@ -142,7 +142,7 @@
   border-radius: 20px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 14px;
   color: #FFFFFF;
   max-width: max-content;
 }
@@ -244,7 +244,7 @@
 .lk__section-title {
   font-weight: 600;
   font-size: 20px;
-  line-height: 110%;
+  line-height: 22px;
 }
 @media screen and (min-width: 768px) {
   .lk__section-title {
@@ -272,18 +272,20 @@
 }
 .lk .page-title {
   font-size: 28px;
-  line-height: 100%;
+  line-height: 28px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .lk .page-title {
     font-size: 32px;
+    line-height: 32px;
     margin-bottom: 24px;
   }
 }
 @media screen and (min-width: 1600px) {
   .lk .page-title {
     font-size: 40px;
+    line-height: 40px;
   }
 }
 .lk-bubble {
@@ -356,13 +358,13 @@
 .lk-bubble__education .date span {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #232323;
 }
 .lk-bubble__education .date p {
   font-weight: 600;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #FC7827;
 }
 .lk-bubble__education .text {
@@ -374,13 +376,13 @@
 .lk-bubble__education .text span {
   font-weight: 600;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #232323;
 }
 .lk-bubble__education .text p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #999999;
 }
 .lk__wrapper {
@@ -496,22 +498,24 @@
 .lk__person-data div {
   font-weight: 600;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .lk__person-data div {
     font-size: 20px;
+    line-height: 20px;
   }
 }
 @media screen and (min-width: 1600px) {
   .lk__person-data div {
     font-size: 24px;
+    line-height: 24px;
   }
 }
 .lk__person-data p {
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 14px;
   color: #999999;
 }
 .lk__content {
@@ -556,9 +560,6 @@
     align-items: center;
   }
 }
-.lk__buttons .profile-btn span {
-  display: none;
-}
 .lk__tabs {
   flex-wrap: wrap;
   margin-bottom: 0;
@@ -591,7 +592,7 @@
 .lk__sorting .sorting__button span {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   white-space: nowrap;
 }
 .lk__sorting .sorting__button svg {
@@ -746,7 +747,7 @@
   display: block;
   font-weight: 500;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
   margin-bottom: 8px;
 }
@@ -754,7 +755,7 @@
   display: block;
   font-weight: 600;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 16px;
   color: #232323;
   margin-bottom: 12px;
   transition: all 0.3s ease;
@@ -773,7 +774,7 @@
   gap: 12px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
 }
 .lk .deals__info-block {
   display: flex;
@@ -790,13 +791,13 @@
 .lk .deals__item span {
   font-weight: 500;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
 }
 .lk .deals__item p {
   font-weight: 600;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #232323;
 }
 .lk .deals__title-wrapper {
@@ -863,7 +864,7 @@
 .lk .responces-item__content a {
   font-weight: 600;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 16px;
   color: #000;
   line-clamp: 1;
   -webkit-line-clamp: 1;
@@ -876,7 +877,7 @@
 .lk .responces-item__content p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #999999;
 }
 .lk .responces-item__btn {
@@ -956,19 +957,20 @@
 .lk .notify-list__item h3 {
   font-weight: 600;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 16px;
   color: #232323;
   margin-bottom: 12px;
 }
 @media screen and (min-width: 768px) {
   .lk .notify-list__item h3 {
     font-size: 18px;
+    line-height: 18px;
   }
 }
 .lk .notify-list__item p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #999999;
   margin-bottom: 16px;
 }
@@ -1066,7 +1068,7 @@
 .lk .companies-grid__name {
   font-weight: 500;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
 }
 @media screen and (min-width: 768px) {
   .lk .companies-grid__name {
@@ -1082,7 +1084,7 @@
 .lk .companies-grid__counter {
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 14px;
 }
 @media screen and (min-width: 768px) {
   .lk .companies-grid__counter {
@@ -1211,7 +1213,7 @@
 }
 .lk .employer__responces-item__vacancy {
   font-weight: 500;
-  line-height: 113%;
+  line-height: 18px;
   font-size: 14px;
   color: #FC7827;
 }
@@ -1314,7 +1316,7 @@
 }
 .lk .employer__responces-item__title span {
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
 }
 @media screen and (min-width: 768px) {
@@ -1371,7 +1373,7 @@
   margin-top: 12px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
 }
 .lk__input-element .subcaption {
@@ -1392,7 +1394,7 @@
 .lk__input-wrapper input {
   font-weight: 400;
   font-size: 18px;
-  line-height: 122%;
+  line-height: 22px;
   color: #999999;
   display: inline-block;
   width: 100%;
@@ -1484,7 +1486,7 @@
 .lk__modal-form-title {
   font-weight: 600;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 24px;
 }
 .lk__modal-form-content {
   display: flex;
@@ -1606,7 +1608,7 @@
 }
 .lk .moderator__item__date-wrapper .employment {
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
 }
 .lk .moderator__item .offers-grid__info {
@@ -1647,7 +1649,7 @@
 }
 .lk .moderator__item__title-wrapper .offer-header__main-item {
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
 }
 .lk .moderator__item .offers-list__info {
   margin-bottom: 0;
@@ -1706,6 +1708,9 @@
 }
 .lk .constructor-title {
   margin-bottom: 48px;
+}
+.lk .constructor__forms .subcaption {
+  margin-bottom: 16px;
 }
 .lk .constructor__forms form {
   gap: 48px;
@@ -1839,7 +1844,7 @@
 .lk .constructor__inputs-checkbox .checkbox__label {
   font-weight: 400;
   font-size: 16px;
-  line-height: 113%;
+  line-height: 18px;
   color: #232323;
 }
 .lk .constructor-select .lk__input-wrapper {
@@ -1882,7 +1887,7 @@
   width: 100%;
   font-weight: 400;
   font-size: 18px;
-  line-height: 122%;
+  line-height: 22px;
   font-family: 'Montserrat', sans-serif;
 }
 .lk .constructor__hints-wrapper {
@@ -1939,7 +1944,7 @@
 .lk .constructor__files-result-noties .errors {
   font-weight: 400;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #F14C4C;
   display: flex;
   flex-direction: column;
@@ -1948,7 +1953,7 @@
 .lk .constructor__files-result-noties .info {
   font-weight: 400;
   font-size: 14px;
-  line-height: 114%;
+  line-height: 16px;
   color: #999999;
   display: flex;
   gap: 12px;
@@ -2050,7 +2055,7 @@
 }
 .lk .constructor__files-input-text p {
   font-size: 12px;
-  line-height: 117%;
+  line-height: 14px;
   color: #999999;
 }
 @media screen and (min-width: 768px) {
@@ -2061,7 +2066,7 @@
 }
 .lk .grid-2-columns__with-title span {
   font-weight: 500;
-  line-height: 113%;
+  line-height: 18px;
   color: #999999;
   display: block;
   margin-bottom: 8px;
