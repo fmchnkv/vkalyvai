@@ -9,15 +9,23 @@
     }
 
     .companies-grid {
-        margin-bottom: 24px;
+        margin-bottom: 32px;
 
-        .media-min(768px, {
+        .media-min(1024px, {
             display: none;
         });
     }
 
     &__tags {
         .section-margin();
+        
+        .subcaption {
+            margin-bottom: 24px;
+
+            .media-min(1600px, {
+                margin-bottom: 32px;
+            });
+        }
     }
     
     &__cta {
@@ -49,7 +57,7 @@
     }
 
     &__sale {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
         display: block;
         color: @primary;
         font-size: 20px;

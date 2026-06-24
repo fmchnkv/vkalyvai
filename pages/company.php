@@ -26,7 +26,7 @@
                     <div class="company__header company-header">
                         <div class="company-header__top">
                             <div class="company-header__avatar avatar">
-                                <img src="/images/avatar.png" alt="">
+                                <img src="/images/company-avatar.png" alt="">
                             </div>
 
                             <div class="company-header__info">
@@ -124,10 +124,10 @@
                     <div class="company__tabs tabs-block">
                         <ul class="tabs-block__nav tabs">
                             <li class="tabs__item">
-                                <a href="" class="tabs__link tab tab_size-m active js-tab" data-tab="about">О компании</a>
+                                <a href="" class="tabs__link tab tab_size-s active js-tab" data-tab="about">О компании</a>
                             </li>
                             <li class="tabs__item">
-                                <a href="" class="tabs__link tab tab_size-m js-tab" data-tab="vacancies">Вакансии</a>
+                                <a href="" class="tabs__link tab tab_size-s js-tab" data-tab="vacancies">Вакансии</a>
                             </li>
                         </ul>
 
@@ -292,7 +292,7 @@
                 </section>
             </div>
 
-            <div class="detail__sidebar detail__sidebar_small">
+            <div class="detail__sidebar detail__sidebar_small company__detail-sidebar">
                 <div class="company-info-grid company-info-grid_side">
                     <div class="company-info-grid__item">
                         <div class="company-info-grid__icon">

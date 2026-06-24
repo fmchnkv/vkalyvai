@@ -3,13 +3,26 @@
 
 .rezume {
     position: relative;
+
+    .subcaption {
+        margin-bottom: 24px;
+
+        .media-min(1600px, {
+            margin-bottom: 32px;
+        });
+    }
+    .content {
+        font-size: 16px;
+    }
 }
 
 .rezume-header {
     position: relative;
 
     &__avatar {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
+        width: 80px;
+        height: 80px;
 
         .media-min(768px, {
            width: 120px;
@@ -17,19 +30,14 @@
            margin-bottom: 0; 
         });
 
-        .media-min(1441px, {
-            width: 259px;
-            height: 259px;
-            position: absolute;
-            top: 0;
-            left: 0;
+        .media-min(1600px, {
+            width: 180px;
+            height: 180px;
         });
     }
 
     &__top {
-        padding-bottom: 24px;
-        border-bottom: 1px solid @border-neutral;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
 
         .media-min(768px, {
             display: flex;
@@ -37,33 +45,45 @@
         });
 
         .media-min(1441px, {
-            gap: 0;
-            padding-bottom: 0;
-            border-bottom: 0;
+            gap: 32px;
+            margin-bottom: 0;
         });
     }
 
     &__bottom {
-
-        .media-min(1441px, {
-            padding-left: 291px;
-            padding-bottom: 16px;
+        .media-min(768px, {
+            padding-left: 144px;
+        });
+        .media-min(1600px, {
+            padding-left: 212px;
+            margin-top: -45px;
         });
     }
 
     &__tags {
         margin-bottom: 16px;
+
+        .tags__item {
+            font-size: 12px;
+            padding: 8px 12px;
+
+            .media-min(768px, {
+                font-size: @f-body;
+            });
+        }
     }
 
     &__info {
-        margin-bottom: 24px;
-    }
+        margin-bottom: 16px;
+        gap: 20px;
 
-    &__header {
-
-        .media-min(1441px, {
-           padding-left: 291px; 
+        .media-min(768px, {
+            gap: 32px;
+        });
+        .media-min(1600px, {
+            margin-bottom: 24px;
         });
     }
+
 }
 

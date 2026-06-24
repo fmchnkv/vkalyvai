@@ -49,7 +49,7 @@
 .companies-grid__link {
   display: flex;
   gap: 12px;
-  padding: 12px 20px 12px 12px;
+  padding: 8px;
   border: 1px solid #EBEBEB;
   border-radius: 16px;
   align-items: center;
@@ -69,14 +69,14 @@
   color: #999999;
 }
 .companies-grid__avatar {
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   flex: 0 0 auto;
 }
 @media screen and (min-width: 768px) {
   .companies-grid__avatar {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -96,7 +96,7 @@
   }
 }
 .companies-grid__name {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
   font-weight: 600;
   overflow: hidden;
@@ -108,6 +108,7 @@
 }
 .companies-grid__counter {
   color: #999999;
+  font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .companies-grid_single {
@@ -115,21 +116,21 @@
   }
 }
 .companies-grid_single .avatar {
-  border-radius: 32px;
+  border-radius: 8px;
 }
 @media screen and (min-width: 1024px) {
   .companies-grid_single .avatar {
-    width: 64px;
-    height: 64px;
-    padding: 23px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
   }
 }
 @media screen and (min-width: 1024px) {
   .companies-grid_single .companies-grid__link {
-    border-radius: 32px;
+    border-radius: 12px;
     gap: 12px;
   }
 }
 .companies-grid_single .companies-grid__info {
-  gap: 8px;
+  gap: 2px;
 }

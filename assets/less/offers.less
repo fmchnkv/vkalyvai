@@ -84,7 +84,7 @@
             line-height: @lh-h6;
         });
 
-        .media-min(1441px, {
+        .media-min(1600px, {
             font-size: @f-h5;
             line-height: @lh-h5;
         });
@@ -133,8 +133,12 @@
         font-size: @f-body-m;
         line-height: @lh-body-m;
 
-        .media-min(1441px, {
+        .media-min(768px, {
             font-size: @f-body-l;
+            line-height: 118%;
+        });
+
+        .media-min(1441px, {
             line-height: @lh-body-l;
         });
     }
@@ -159,7 +163,6 @@
         gap: 4px;
 
         .media-max(767px, {
-            font-size: @f-body-s;
             line-height: @lh-body-s;
         });
     }
