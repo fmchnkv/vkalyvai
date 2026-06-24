@@ -3132,7 +3132,7 @@ input::placeholder {
     height: 100%;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1280px) {
   .detail__sidebar {
     width: 240px;
   }
