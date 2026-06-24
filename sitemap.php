@@ -32,6 +32,8 @@ $arMenu = [
     'pages/article.php' => 'Статья',
     '/pages/contacts.php' => 'Контакты',
     '/pages/privacy.php' => 'Политика конфиденциальности',
+    '/pages/legal.php' => 'Пользовательское соглашение',
+    '/pages/oferta.php' => 'Публичная оферта',
     '/pages/404.php' => '404',
     '/lk/auth.php' => 'Авторизация (Входная страница)',
     '/lk/auth.php?role=1' => 'Авторизация (Соискатель)',
