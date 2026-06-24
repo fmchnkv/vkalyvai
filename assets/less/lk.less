@@ -401,11 +401,17 @@
     }
 
     .inline-form__btn {
-        width: 58px;
-        height: 58px;
+        width: 42px;
+        height: 42px;
         svg {
             display: block !important;
         }
+
+        .media-min(768px, {
+            width: max-content;
+            height: auto;
+            padding: 0 12px;
+        });
     }
 
     &__sidebar {
@@ -1256,7 +1262,7 @@
         }
 
         &__search-form {
-            margin-bottom: 24px;
+            margin-bottom: 12px;
 
             .media-min(1024px, {
                 margin-bottom: 16px;
@@ -1483,7 +1489,7 @@
 
         input {
             font-weight: 400;
-            font-size: @f-body-m;
+            font-size: @f-body;
             line-height: @lh-body-m;
             color: @neutral;
             display: inline-block;
@@ -1549,7 +1555,8 @@
             width: 100%;
 
             .radio__label {
-                font-size: @f-body;
+                font-size: @f-body-m;
+                padding: 10px 16px;
             }
         }
     }
@@ -1832,7 +1839,11 @@
         &__steps {
             .flex-center();
             gap: 2px;
-            margin-bottom: 48px;
+            margin-bottom: 24px;
+
+            .media-min(768px, {
+                margin-bottom: 32px;
+            });
 
             .progress-step {
                 position: relative;
@@ -1847,20 +1858,36 @@
             }
         }
         &-title {
-            margin-bottom: 48px;
+            margin-bottom: 24px;
+
+            .media-min(768px, {
+                margin-bottom: 32px;
+            });
+            .media-min(1441px, {
+                font-size: 40px;
+            });
         }
         &__forms {
             .subcaption {
                 margin-bottom: 16px;
+                color: @default;
             }
             form {
-                gap: 48px;
+                gap: 24px;
                 transform: translateY(20%);
                 opacity: 0;
                 /*max-width: 0;*/
                 max-height: 0;
                 pointer-events: none;
                 transition: all .3s ease;
+
+                .media-min(768px, {
+                    gap: 32px;
+                });
+
+                .lk__input-wrapper {
+                    padding: 12px;
+                }
 
                 .experience-block {
                     gap: 48px;
@@ -1928,17 +1955,43 @@
             &-actions {
                 .flex-center();
                 justify-content: space-between;
-
-                .btn-next, .prev-step {
-                    min-width: 102px;
-                }
-            }
-            .lk__radio-buttons {
                 flex-direction: column;
+                gap: 8px;
 
-                .media-min(768px, {
+                .media-min(465px, {
                     flex-direction: row;
                 });
+                .media-min(1441px, {
+                    margin-top: 32px;
+                });
+
+                .preview-btn {
+                    width: 100%;
+
+                    .media-min(465px, {
+                        width: max-content;
+                    });
+                }
+
+                .prev-back__actions {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .media-min(465px, {
+                        justify-content: flex-end;
+                    });
+
+                    .btn-next, .prev-step {
+                        min-width: 76px;
+                        width: 100%;
+
+                        .media-min(465px, {
+                            width: max-content;
+                        });
+                    }
+                }
             }
             .lk__custom-select-list {
                 top: 35px;
@@ -1960,6 +2013,9 @@
             gap: 32px;
         }
         &__inputs {
+            &-checkbox {
+                padding: 12px;
+            }
             &-list {
                 gap: 8px;
             }

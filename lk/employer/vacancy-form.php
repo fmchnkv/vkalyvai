@@ -127,47 +127,65 @@
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Формат работы</span>
                     <div class="constructor__inputs-list flex-list">
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="work_format[]" value="employer_place">
-                            <span class="checkbox__label">На месте работодателя</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="work_format[]" value="remote">
-                            <span class="checkbox__label">Удаленно</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="work_format[]" value="hybrid">
-                            <span class="checkbox__label">Гибрид</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="work_format[]" value="mobile">
-                            <span class="checkbox__label">Разъездной</span>
-                        </label>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="work_format[]" value="employer_place">
+                                <span class="checkbox__label">На месте работодателя</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="work_format[]" value="remote">
+                                <span class="checkbox__label">Удаленно</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="work_format[]" value="hybrid">
+                                <span class="checkbox__label">Гибрид</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="work_format[]" value="mobile">
+                                <span class="checkbox__label">Разъездной</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Оформление</span>
                     <div class="constructor__inputs-list flex-list">
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="tk_rf">
-                            <span class="checkbox__label">ТК РФ</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="internship">
-                            <span class="checkbox__label">Стажировка</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_self_employed">
-                            <span class="checkbox__label">Договор ГПХ с самозанятым</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_ip">
-                            <span class="checkbox__label">Договор ГПХ с ИП</span>
-                        </label>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_person">
-                            <span class="checkbox__label">Договор ГПХ с физлицом</span>
-                        </label>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="tk_rf">
+                                <span class="checkbox__label">ТК РФ</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="internship">
+                                <span class="checkbox__label">Стажировка</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_self_employed">
+                                <span class="checkbox__label">Договор ГПХ с самозанятым</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_ip">
+                                <span class="checkbox__label">Договор ГПХ с ИП</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="gph_person">
+                                <span class="checkbox__label">Договор ГПХ с физлицом</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
@@ -208,18 +226,20 @@
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad76751831d36b11e1c8803309d605bf4767a55ea748f6bf38622a6c75ffe23b9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
-                        <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                            <input class="checkbox__input" type="checkbox" name="show_adderss" value="N">
-                            <span class="checkbox__label">Не показывать адрес в вакансии</span>
-                        </label>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="show_adderss" value="N">
+                                <span class="checkbox__label">Не показывать адрес в вакансии</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_light prev-step btn_size-l" data-call-modal="vacancy-page">Предпросмотр</button>
-                    <div class="vacancy-form__actions">
-                        <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="1">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="3">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" disabled>Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
                     </div>
                 </div>
                 <input type="hidden" name="step" value="1">
@@ -441,10 +461,10 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_light prev-step btn_size-l" data-call-modal="vacancy-page">Предпросмотр</button>
-                    <div class="vacancy-form__actions">
-                        <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="1">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="3">Далее</button>
+                    <button type="button" disabled class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="1">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
                     </div>
                 </div>
                 <input type="hidden" name="step" value="2">
@@ -622,15 +642,28 @@
                 </div>
                 <div class="constructor__inputs-set grid-list">
                     <span class="subcaption">Особая отметка</span>
-                    <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                        <input class="checkbox__input" type="checkbox" name="special_marker[]" value="invalid">
-                        <span class="checkbox__label">Подходит для соискателей с инвалидностью</span>
-                    </label>
-                    <label class="filter-group__checkbox checkbox lk__input-wrapper">
-                        <input class="checkbox__input" type="checkbox" name="special_marker[]" value="other">
-                        <span class="checkbox__label">Другой параметр</span>
-                    </label>
+                    <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                        <label class="filter-group__checkbox checkbox">
+                            <input class="checkbox__input" type="checkbox" name="special_marker[]" value="invalid">
+                            <span class="checkbox__label">Подходит для соискателей с инвалидностью</span>
+                        </label>
+                    </div>
+                    <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                        <label class="filter-group__checkbox checkbox">
+                            <input class="checkbox__input" type="checkbox" name="special_marker[]" value="other">
+                            <span class="checkbox__label">Другой параметр</span>
+                        </label>
+                    </div>
                 </div>
+                <div class="constructor__forms-actions">
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" disabled>Далее</button>
+                    </div>
+                </div>
+                <input type="hidden" name="step" value="2">
+                <input type="hidden" name="form_action" value="save_step">
             </form>
         </div>
     </div>

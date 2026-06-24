@@ -399,11 +399,18 @@
   width: 100%;
 }
 .lk .inline-form__btn {
-  width: 58px;
-  height: 58px;
+  width: 42px;
+  height: 42px;
 }
 .lk .inline-form__btn svg {
   display: block !important;
+}
+@media screen and (min-width: 768px) {
+  .lk .inline-form__btn {
+    width: max-content;
+    height: auto;
+    padding: 0 12px;
+  }
 }
 .lk__sidebar {
   display: none;
@@ -1187,7 +1194,7 @@
   }
 }
 .lk .employer__search-form {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 1024px) {
   .lk .employer__search-form {
@@ -1396,7 +1403,7 @@
 }
 .lk__input-wrapper input {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   color: #999999;
   display: inline-block;
@@ -1454,7 +1461,8 @@
   width: 100%;
 }
 .lk__radio-buttons label .radio__label {
-  font-size: 16px;
+  font-size: 18px;
+  padding: 10px 16px;
 }
 .lk__checkbox-buttons {
   display: grid;
@@ -1697,7 +1705,12 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .lk .constructor__steps {
+    margin-bottom: 32px;
+  }
 }
 .lk .constructor__steps .progress-step {
   position: relative;
@@ -1710,19 +1723,38 @@
   background-color: #FC7827;
 }
 .lk .constructor-title {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .lk .constructor-title {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .lk .constructor-title {
+    font-size: 40px;
+  }
 }
 .lk .constructor__forms .subcaption {
   margin-bottom: 16px;
+  color: #232323;
 }
 .lk .constructor__forms form {
-  gap: 48px;
+  gap: 24px;
   transform: translateY(20%);
   opacity: 0;
   /*max-width: 0;*/
   max-height: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .lk .constructor__forms form {
+    gap: 32px;
+  }
+}
+.lk .constructor__forms form .lk__input-wrapper {
+  padding: 12px;
 }
 .lk .constructor__forms form .experience-block {
   gap: 48px;
@@ -1780,17 +1812,47 @@
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-}
-.lk .constructor__forms-actions .btn-next,
-.lk .constructor__forms-actions .prev-step {
-  min-width: 102px;
-}
-.lk .constructor__forms .lk__radio-buttons {
   flex-direction: column;
+  gap: 8px;
 }
-@media screen and (min-width: 768px) {
-  .lk .constructor__forms .lk__radio-buttons {
+@media screen and (min-width: 465px) {
+  .lk .constructor__forms-actions {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .lk .constructor__forms-actions {
+    margin-top: 32px;
+  }
+}
+.lk .constructor__forms-actions .preview-btn {
+  width: 100%;
+}
+@media screen and (min-width: 465px) {
+  .lk .constructor__forms-actions .preview-btn {
+    width: max-content;
+  }
+}
+.lk .constructor__forms-actions .prev-back__actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (min-width: 465px) {
+  .lk .constructor__forms-actions .prev-back__actions {
+    justify-content: flex-end;
+  }
+}
+.lk .constructor__forms-actions .prev-back__actions .btn-next,
+.lk .constructor__forms-actions .prev-back__actions .prev-step {
+  min-width: 76px;
+  width: 100%;
+}
+@media screen and (min-width: 465px) {
+  .lk .constructor__forms-actions .prev-back__actions .btn-next,
+  .lk .constructor__forms-actions .prev-back__actions .prev-step {
+    width: max-content;
   }
 }
 .lk .constructor__forms .lk__custom-select-list {
@@ -1810,6 +1872,9 @@
 }
 .lk .constructor__skills {
   gap: 32px;
+}
+.lk .constructor__inputs-checkbox {
+  padding: 12px;
 }
 .lk .constructor__inputs-list {
   gap: 8px;

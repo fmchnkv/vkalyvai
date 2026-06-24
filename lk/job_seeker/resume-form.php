@@ -38,7 +38,11 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="2">Далее</button>
+                    <button type="button" disabled class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" disabled class="btn btn_neutral prev-step btn_size-m">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="2">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="1">
                 <input type="hidden" name="form_action" value="save_step">
@@ -50,13 +54,13 @@
                 <div class="constructor__inputs-set">
                     <span class="subcaption">ФИО</span>
                     <div class="constructor__inputs-list grid-list grid-2-columns">
-                        <div class="lk__input-wrapper big-input">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="secondName" placeholder="Фамилия">
                         </div>
-                        <div class="lk__input-wrapper big-input">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="name" placeholder="Имя">
                         </div>
-                        <div class="lk__input-wrapper big-input">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="patronymic" placeholder="Отчество">
                         </div>
                     </div>
@@ -443,8 +447,11 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="1">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="3">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="1">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="2">
                 <input type="hidden" name="form_action" value="save_step">
@@ -516,10 +523,10 @@
                                         </div>
                                     </div>
                                     <div class="grid-2-columns constructor__inputs-list grid-list">
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Название учебного заведения">
                                         </div>
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Специальность">
                                         </div>
                                     </div>
@@ -579,10 +586,10 @@
                                     </div>
                                 </div>
                                 <div class="grid-2-columns constructor__inputs-list grid-list">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Название учебного заведения">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Специальность">
                                     </div>
                                 </div>
@@ -638,10 +645,10 @@
                                 <div class="constructor__inputs-block">
                                     <span class="subcaption">Повышение квалификации</span>
                                     <div class="constructor__inputs-list grid-2-columns grid-list">
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Название курса">
                                         </div>
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Специальность">
                                         </div>
                                     </div>
@@ -673,10 +680,10 @@
                             <div class="constructor__inputs-block">
                                 <span class="subcaption">Повышение квалификации</span>
                                 <div class="constructor__inputs-list grid-list grid-2-columns">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Название курса">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Специальность">
                                     </div>
                                 </div>
@@ -724,8 +731,11 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="2">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="4">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="4">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="3">
                 <input type="hidden" name="form_action" value="save_step">
@@ -838,8 +848,11 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="3">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="5">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="3">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="5">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="4">
                 <input type="hidden" name="form_action" value="save_step">
@@ -853,10 +866,10 @@
                         <div class="experience-block grid-list">
                             <div class="constructor__inputs-set grid-list">
                                 <div class="constructor__inputs-list grid-list grid-2-columns">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Компания">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Должность">
                                     </div>
                                 </div>
@@ -910,10 +923,10 @@
                     <div class="experience-block grid-list">
                         <div class="constructor__inputs-set grid-list">
                             <div class="constructor__inputs-list grid-list grid-2-columns">
-                                <div class="lk__input-wrapper big-input">
+                                <div class="lk__input-wrapper">
                                     <input type="text" value="" placeholder="Компания">
                                 </div>
-                                <div class="lk__input-wrapper big-input">
+                                <div class="lk__input-wrapper">
                                     <input type="text" value="" placeholder="Должность">
                                 </div>
                             </div>
@@ -981,8 +994,11 @@
                     <span>Добавить место работы</span>
                 </button>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="4">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="6">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="4">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="6">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="5">
                 <input type="hidden" name="form_action" value="save_step">
@@ -1057,9 +1073,12 @@
                         </div>
                     </div>
                     <div class="constructor__forms-actions">
-                        <button type="button" class="btn btn_neutral prev-step btn_size-l"
-                            data-prev-step="5">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-l">Далее</button>
+                        <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                        <div class="prev-back__actions">
+                            <button type="button" class="btn btn_neutral prev-step btn_size-m"
+                                data-prev-step="5">Назад</button>
+                            <button type="submit" class="btn btn_primary btn-next btn_size-m">Далее</button>
+                        </div>
                     </div>
                     <input type="hidden" name="step" value="5">
                     <input type="hidden" name="form_action" value="save_step">

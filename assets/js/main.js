@@ -1226,6 +1226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //форма-конструктор резюме
     const constructorSteps = document.querySelectorAll('form[data-form]');
     const addBlockBtns = document.querySelectorAll('button[data-add-block]');
+    const searchProfessionForm = document.querySelector('form.employer__search-form');
     if(constructorSteps.length) {
         function changeStep(stepNumber) {
             const targetForm = document.querySelector(
@@ -1266,6 +1267,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const nextStep = Number(this.dataset.nextStep);
                     if(nextStep) {
                         changeStep(nextStep);
+                        if(nextStep > 1) {
+                            searchProfessionForm.classList.add('hidden');
+                        }
                     } else {
                         //stepForm.submit();
                     }
@@ -1277,6 +1281,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const prevStep = Number(this.dataset.prevStep);
                     changeStep(prevStep);
+                    if(prevStep == 1) {
+                        searchProfessionForm.classList.remove('hidden');
+                    }
                 });
             }
         });
