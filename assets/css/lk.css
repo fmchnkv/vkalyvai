@@ -125,7 +125,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .grid-bubbles.language-list {
     grid-template-columns: repeat(2, 1fr);
     max-width: 55%;
@@ -173,29 +173,29 @@
     padding-bottom: 56px;
   }
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk {
     padding-top: 106px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk {
     padding-bottom: 64px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .contact-fields {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk .input-edit-form .lk-bubble__buttons-wrapper {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk .input-edit-form:hover {
     opacity: 1;
     pointer-events: all;
@@ -251,7 +251,7 @@
     font-size: 24px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk__section-title {
     font-size: 28px;
   }
@@ -282,7 +282,7 @@
     margin-bottom: 24px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .page-title {
     font-size: 40px;
     line-height: 40px;
@@ -390,7 +390,7 @@
   justify-content: space-between;
   gap: 24px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk__wrapper {
     gap: 32px;
   }
@@ -483,7 +483,7 @@
     border-radius: 16px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk__person img {
     max-width: 80px;
   }
@@ -506,7 +506,7 @@
     line-height: 20px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk__person-data div {
     font-size: 24px;
     line-height: 24px;
@@ -555,7 +555,10 @@
 .lk__buttons .profile-btn > div {
   display: flex;
 }
-@media screen and (min-width: 1600px) {
+.lk__buttons .profile-btn span {
+  display: none;
+}
+@media screen and (min-width: 1441) {
   .lk__buttons .profile-btn {
     align-items: center;
   }
@@ -564,7 +567,7 @@
   flex-wrap: wrap;
   margin-bottom: 0;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk__tabs {
     margin-bottom: 0;
   }
@@ -654,25 +657,25 @@
     justify-content: center;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk-card__wrapper .offer-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk-card__wrapper .offer-header__title {
     max-width: 80%;
     order: 1;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk-card__wrapper .offer-header__main {
     order: 3;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk-card__wrapper .offer-header__sale {
     order: 2;
   }
@@ -760,12 +763,12 @@
   margin-bottom: 12px;
   transition: all 0.3s ease;
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk .deals__title-block a {
     font-size: 18px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .deals__title-block a {
     font-size: 20px;
   }
@@ -1076,7 +1079,7 @@
     font-weight: 600;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .companies-grid__name {
     font-size: 18px;
   }
@@ -1091,7 +1094,7 @@
     font-size: 14px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .companies-grid__counter {
     font-size: 16px;
   }
@@ -1205,7 +1208,7 @@
   grid-template-columns: repeat(1, 1fr);
   gap: 12px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .employer__responces-item {
     padding: 20px;
     gap: 16px;
@@ -1531,7 +1534,7 @@
     margin-bottom: 32px;
   }
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk .docs-bubbles {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1560,7 +1563,7 @@
   opacity: 1;
   pointer-events: all;
 }
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1280) {
   .lk .docs-bubbles .lk-bubble__buttons-wrapper .btn {
     opacity: 0;
     pointer-events: none;
@@ -1597,7 +1600,7 @@
   flex-direction: column;
   gap: 12px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1441) {
   .lk .moderator__item__date-wrapper {
     flex-direction: row-reverse;
     justify-content: space-between;
