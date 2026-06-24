@@ -108,7 +108,7 @@
     line-height: 20px;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .offer-header__title {
     font-size: 24px;
     line-height: 24px;
@@ -156,9 +156,14 @@
   font-size: 18px;
   line-height: 22px;
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 768px) {
   .offer-header__sale {
     font-size: 22px;
+    line-height: 118%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offer-header__sale {
     line-height: 26px;
   }
 }

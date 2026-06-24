@@ -38,7 +38,7 @@
 }
 @media screen and (min-width: 1441px) {
   .detail__section {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 }
 .detail__row {
@@ -95,7 +95,7 @@
 }
 @media screen and (min-width: 1441px) {
   .detail__sidebar {
-    width: 344px;
+    width: 240px;
   }
 }
 .detail__sidebar .companies-grid {

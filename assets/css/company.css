@@ -31,8 +31,7 @@
   }
 }
 .company__tabs .tabs {
-  margin-bottom: 24px;
-  overflow: auto;
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .company__tabs .tabs {
@@ -48,22 +47,38 @@
   flex: 0 0 auto;
 }
 .company__tabs .tabs .tab {
-  width: 166px;
+  line-height: 100%;
+}
+.company__tabs .subcaption {
+  margin-bottom: 24px;
+}
+.company__detail-sidebar {
+  width: 240px;
 }
 .company-info-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
-}
-@media screen and (min-width: 768px) {
-  .company-info-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 4px;
+  /*
+    .media-min(768px, {
+        grid-template-columns: repeat(2, 1fr);
+    });*/
 }
 @media screen and (min-width: 1024px) {
   .company-info-grid {
     display: none;
   }
+}
+.company-info-grid__title {
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company-info-grid__subtitle {
+  font-size: 14px;
 }
 .company-info-grid_side {
   display: none;
@@ -75,16 +90,16 @@
   }
 }
 .company-info-grid__item {
-  padding: 12px 16px;
+  padding: 8px 12px;
   border: 1px solid #EBEBEB;
-  border-radius: 32px;
+  border-radius: 16px;
   display: flex;
   gap: 8px;
   align-items: center;
 }
 .company-info-grid__icon {
-  width: 48px;
-  height: 48px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +133,7 @@
   }
 }
 .company-header {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .company-header__top {
@@ -128,20 +143,20 @@
   }
 }
 .company-header__avatar {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   width: 64px;
   height: 64px;
   border-radius: 32px;
 }
 @media screen and (min-width: 768px) {
   .company-header__avatar {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 0;
   }
 }
 .company-header__title {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-size: 24px;
   line-height: 24px;
 }
@@ -161,6 +176,11 @@
 .company-header__bottom {
   margin-top: 24px;
 }
+@media screen and (min-width: 1024px) {
+  .company-header__bottom {
+    margin-top: 32px;
+  }
+}
 .activity-list {
   display: flex;
   flex-wrap: wrap;
@@ -170,4 +190,5 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  font-size: 14px;
 }

@@ -1304,10 +1304,16 @@
   }
 }
 .portfolio-slider .swiper-slide {
-  width: 272px;
-  height: 340px;
+  width: 208px;
+  height: 260px;
 }
 @media screen and (min-width: 768px) {
+  .portfolio-slider .swiper-slide {
+    width: 272px;
+    height: 340px;
+  }
+}
+@media screen and (min-width: 1600px) {
   .portfolio-slider .swiper-slide {
     width: 320px;
     height: 400px;
@@ -1347,10 +1353,16 @@
   }
 }
 .sertificates-slider .swiper-slide {
-  width: 272px;
-  height: 204px;
+  width: 239px;
+  height: 180px;
 }
 @media screen and (min-width: 768px) {
+  .sertificates-slider .swiper-slide {
+    width: 239px;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1600px) {
   .sertificates-slider .swiper-slide {
     width: 300px;
     height: 225px;
@@ -1402,8 +1414,8 @@
   margin: 0;
 }
 .enum-list__item_big {
-  padding-bottom: 39px;
-  margin-bottom: 40px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .enum-list__item_big {
@@ -1923,7 +1935,7 @@ input::placeholder {
     line-height: 20px;
   }
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .offer-header__title {
     font-size: 24px;
     line-height: 24px;
@@ -1971,9 +1983,14 @@ input::placeholder {
   font-size: 18px;
   line-height: 22px;
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 768px) {
   .offer-header__sale {
     font-size: 22px;
+    line-height: 118%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .offer-header__sale {
     line-height: 26px;
   }
 }
@@ -3060,7 +3077,7 @@ input::placeholder {
 }
 @media screen and (min-width: 1441px) {
   .detail__section {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 }
 .detail__row {
@@ -3117,7 +3134,7 @@ input::placeholder {
 }
 @media screen and (min-width: 1441px) {
   .detail__sidebar {
-    width: 344px;
+    width: 240px;
   }
 }
 .detail__sidebar .companies-grid {
