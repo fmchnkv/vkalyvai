@@ -1217,34 +1217,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
             new Swiper(slider, {
                 slidesPerView: 1.2,
-                spaceBetween: 8,
+                spaceBetween: 4,
             });
         });
     }
     initHintsSlider();
 
     //форма-конструктор резюме
-    const constructorSteps = document.querySelectorAll('form[data-form]');
+    const constructorSteps = document.querySelectorAll('[data-form]');
     const addBlockBtns = document.querySelectorAll('button[data-add-block]');
-    const searchProfessionForm = document.querySelector('form.employer__search-form');
+    const helperForms = document.querySelectorAll('[data-block]');
     if(constructorSteps.length) {
         function changeStep(stepNumber) {
             const targetForm = document.querySelector(
                 `[data-form="${stepNumber}"]`
             );
+            const targetHelperForm = document.querySelector(
+                `[data-block="${stepNumber}"]`
+            );
+
+            constructorSteps.forEach(form => {
+                form.classList.remove('active');
+            });
+            if(helperForms.length) {
+                helperForms.forEach(form => {
+                    form.classList.remove('active');
+                })
+            }
 
             document.querySelector('h1').textContent = targetForm.dataset.title;
-
+            console.log(stepNumber);
+            console.log(targetHelperForm);
+            if(targetHelperForm) {
+                console.log('active');
+                targetHelperForm.classList.add('active');
+                console.log(targetHelperForm);
+            }
             document.querySelectorAll('.progress-step').forEach(step => {
                 step.classList.toggle(
                     'active',
                     Number(step.dataset.step) <= stepNumber
                 );
             });
-            constructorSteps.forEach(form => {
-                form.classList.remove('active');
-            });
-            let newStep = document.querySelector(`form[data-form="${stepNumber}"]`);
+
+
+            let newStep = document.querySelector(`[data-form="${stepNumber}"]`);
 
             if(!newStep) return;
 
@@ -1267,9 +1284,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const nextStep = Number(this.dataset.nextStep);
                     if(nextStep) {
                         changeStep(nextStep);
-                        if(nextStep > 1) {
-                            searchProfessionForm.classList.add('hidden');
-                        }
                     } else {
                         //stepForm.submit();
                     }
@@ -1281,9 +1295,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const prevStep = Number(this.dataset.prevStep);
                     changeStep(prevStep);
-                    if(prevStep == 1) {
-                        searchProfessionForm.classList.remove('hidden');
-                    }
                 });
             }
         });
@@ -1358,10 +1369,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const addSkill = e.target.closest('.add-skill');
 
                 if (addSkill) {
-                    const skillsBlock = addSkill.closest('.constructor__skills');
-
+                    const skillsBlock = addSkill.closest('.skills-block');
                     const selectedContainer =
-                        skillsBlock.querySelector('.top-skills .bright-bubbles');
+                        skillsBlock.querySelector('.bright-bubbles');
 
                     const text = addSkill.textContent.trim();
 
@@ -1381,7 +1391,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
 
                     const skill = removeBtn.closest('.remove-skill');
-                    const skillsBlock = skill.closest('.constructor__skills');
+                    const skillsBlock = skill.closest('.skills-block');
 
                     const availableContainer =
                         skillsBlock.querySelector('.gray-bubbles');
