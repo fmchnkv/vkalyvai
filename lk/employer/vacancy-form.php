@@ -10,7 +10,7 @@
         <h1 class="constructor-title page-title lk__page-title">Основная информация</h1>
         <div class="constructor__forms">
             <!-- Шаг 1 -->
-            <form class="active grid-list" id="step-form-base" data-form="1"
+            <form class="active grid-list step-form" id="step-form-base" data-form="1"
                 data-title="Основная информация" class="step-form active" method="post">
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Название и специальность</span>
@@ -247,7 +247,7 @@
             </form>
 
             <!-- Шаг 2 -->
-            <form class="active grid-list" id="step-form-conditions" data-form="2"
+            <form class="grid-list step-form" id="step-form-conditions" data-form="2"
                 data-title="Условия и график" class="step-form" method="post">
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Оплата работы</span>
@@ -472,7 +472,7 @@
             </form>
 
             <!-- Шаг 3 -->
-            <form class="active grid-list" id="step-form-description" data-form="3"
+            <form class="grid-list step-form" id="step-form-description" data-form="3"
                 data-title="Описание вакансии" class="step-form" method="post">
                 <div class="constructor__inputs-set grid-list">
                     <div class="constructor__inputs-title">

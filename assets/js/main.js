@@ -1227,6 +1227,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const constructorSteps = document.querySelectorAll('[data-form]');
     const addBlockBtns = document.querySelectorAll('button[data-add-block]');
     const helperForms = document.querySelectorAll('[data-block]');
+    const progressWrappers = document.querySelectorAll('.constructor__steps');
+
+    function setProgressStepWidth() {
+        progressWrappers.forEach(wrapper => {
+            const steps = wrapper.querySelectorAll('.progress-step');
+            if(!steps.length) return;
+
+            const gap = parseFloat(getComputedStyle(wrapper).columnGap) || 0;
+            const gapsWidth = gap * (steps.length - 1);
+            const stepWidth = `calc((100% - ${gapsWidth}px) / ${steps.length})`;
+
+            steps.forEach(step => {
+                step.style.width = stepWidth;
+            });
+        });
+    }
+
+    setProgressStepWidth();
+    window.addEventListener('resize', setProgressStepWidth);
     if(constructorSteps.length) {
         function changeStep(stepNumber) {
             const targetForm = document.querySelector(

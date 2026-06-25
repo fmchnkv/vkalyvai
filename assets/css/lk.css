@@ -1732,7 +1732,6 @@
 }
 .lk .constructor__steps .progress-step {
   position: relative;
-  width: 16%;
   height: 4px;
   border-radius: 4px;
   background-color: #FFF2E9;
