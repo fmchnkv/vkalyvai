@@ -92,6 +92,11 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
+.flex-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .grid-bubbles {
     gap: 8px;
 
@@ -1565,6 +1570,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        flex-wrap: wrap;
 
         &.gender-select {
             label {
@@ -1930,6 +1936,29 @@
                     margin-bottom: 0;
                 }
             }
+            .vacancy-form {
+                &__titles-inputs {
+                    &.grid-2-columns {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+                &__radios {
+                    .lk__input-radio {
+                        max-width: max-content;
+                    }
+                }
+                &__map {
+                    gap: 8px;
+                }
+                &__pay-block {
+                    .constructor__inputs-list {
+                        gap: 4px;
+                        &:not(:last-child) {
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+            }
             .step-form {
                 gap: 24px;
                 transform: translateY(20%);
@@ -2092,6 +2121,12 @@
             &-set {
                 gap: 16px;
 
+                .language-block-remove {
+                    color: @neutral;
+                    margin-top: 8px;
+                    margin-left: auto;
+                    margin-bottom: 16px;
+                }
                 .grid-bubbles.personal-bubbles {
                     .media-min(768px, {
                         grid-template-columns: repeat(1, 1fr);
@@ -2107,6 +2142,15 @@
 
                 .checkbox__label {
                     font-size: @f-body;
+                }
+
+                input[name="vacancy-city"] {
+                    .clamp-text(1);
+                    word-break: break-all;
+                }
+
+                .field_text.lk__input-wrapper {
+                    padding: 12px 20px;
                 }
             }
             &-group {

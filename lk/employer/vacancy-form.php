@@ -14,7 +14,7 @@
                 data-title="Основная информация" class="step-form active" method="post">
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Название и специальность</span>
-                    <div class="constructor__inputs-list grid-list grid-2-columns">
+                    <div class="constructor__inputs-list grid-list vacancy-form__titles-inputs grid-2-columns">
                         <div class="lk__input-wrapper">
                             <input type="text" value="" name="vacancyName" placeholder="Название вакансии">
                         </div>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Требуемый опыт</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="experience" value="no" checked="">
                             <span class="radio__label">Без опыта</span>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Какого сотрудника вы ищете</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="employee_type" value="permanent" checked="">
                             <span class="radio__label">Постоянного</span>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Тип занятости</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="employment_type" value="full">
                             <span class="radio__label">Полная</span>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Укажите количество смен</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="15" checked="">
                             <span class="radio__label">15</span>
@@ -193,7 +193,7 @@
                     <span class="subcaption">Город публикации</span>
                     <div class="select" data-id="vacancy-city">
                         <label class="filter-group__input select__input input input_has-icon">
-                            <input class="input__field" type="text" name="education" data-id="education" readonly="" placeholder="Валюта">
+                            <input class="input__field" type="text" name="vacancy-city" data-id="education" readonly="" placeholder="Укажите один или несколько городов">
                             <div class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -219,9 +219,17 @@
 
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Адрес</span>
-                    <div class="vacancy-form__map">
-                        <div class="lk__input-wrapper">
-                            <input type="text" value="" name="vacancyName" placeholder="Название вакансии">
+                    <div class="vacancy-form__map grid-list">
+                        <div class="main-hero__input-wrapper main-hero__input-wrapper_text">
+                            <label class="main-hero__label field field_text lk__input-wrapper" data-id="vacancy_address">
+                                <input class="field__input js-autocomplete-input" type="text" name="vacancy_address" placeholder="Введите адрес">
+                            </label>
+                            <div class="field__dropdown js-without-choice" data-id="vacancy_address">
+                                <ul class="field__dropdown-list">
+                                    <li class="field__option js-select-item hidden" data-value="Ленина">Ленина</li>
+                                    <li class="field__option js-select-item hidden" data-value="Островского">Островского</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad76751831d36b11e1c8803309d605bf4767a55ea748f6bf38622a6c75ffe23b9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
@@ -239,7 +247,7 @@
                     <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" disabled>Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="2">Далее</button>
                     </div>
                 </div>
                 <input type="hidden" name="step" value="1">
@@ -249,9 +257,9 @@
             <!-- Шаг 2 -->
             <form class="grid-list step-form" id="step-form-conditions" data-form="2"
                 data-title="Условия и график" class="step-form" method="post">
-                <div class="constructor__inputs-set">
+                <div class="constructor__inputs-set vacancy-form__pay-block">
                     <span class="subcaption">Оплата работы</span>
-                    <div class="constructor__inputs-list vacancy-form__pay-block grid-list grid-2-columns">
+                    <div class="constructor__inputs-list grid-list grid-2-columns">
                         <div class="lk__input-wrapper">
                             <input type="text" data-mask="number" value="" name="from" placeholder="От">
                         </div>
@@ -259,7 +267,7 @@
                             <input type="text" value="" data-mask="number" name="before" placeholder="До">
                         </div>
                     </div>
-                    <div class="constructor__inputs-list grid-list grid-2-columns">
+                    <div class="constructor__inputs-list grid-list grid-2-columns vacancy-form__titles-inputs">
                         <div class="select" data-id="vacancy-currency">
                             <label class="filter-group__input select__input input input_has-icon">
                                 <input class="input__field" type="text" name="education" data-id="education" readonly="" placeholder="₽">
@@ -312,9 +320,9 @@
                     </div>
                 </div>
 
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">Частота выплат</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="payment_frequency" value="daily" checked="">
                             <span class="radio__label">Ежедневно</span>
@@ -337,9 +345,9 @@
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">График работы</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="work_schedule" value="6_1" checked="">
                             <span class="radio__label">6/1</span>
@@ -398,9 +406,9 @@
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">Рабочие часы в день</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="work_hours" value="2" checked="">
                             <span class="radio__label">2</span>
@@ -474,12 +482,12 @@
             <!-- Шаг 3 -->
             <form class="grid-list step-form" id="step-form-description" data-form="3"
                 data-title="Описание вакансии" class="step-form" method="post">
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <div class="constructor__inputs-title">
                         <span class="subcaption">Описание</span>
                         <p>Проверьте, чтобы в тексте не было дискриминации: упоминаний пола, возраста и национальности. Заодно посмотрите, нет ли нарушений правил или ошибок генерации</p>
                     </div>
-                    <div class="lk__input-wrapper constructor__textarea-wrapper textarea">
+                    <div class="constructor__textarea-wrapper textarea">
                         <textarea name="descr" id="" placeholder="Описание работы"></textarea>
                     </div>
                 </div>
@@ -513,13 +521,13 @@
                         <div class="errors"></div>
                     </div>
                 </div>
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">Знание языков</span>
                     <div class="vacancy__multi-blocks-wrapper">
                         <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
                             <div class="select" data-id="vacancy_language">
                                 <label class="filter-group__input select__input input input_has-icon">
-                                    <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Английский">
+                                    <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
                                     <div class="input__icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -543,7 +551,7 @@
                             </div>
                             <div class="select" data-id="vacancy_language_level">
                                 <label class="filter-group__input select__input input input_has-icon">
-                                    <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="А1-Начальный">
+                                    <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
                                     <div class="input__icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g>
@@ -595,7 +603,7 @@
                         <span>Добавить еще</span>
                     </button>
                 </div>
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">Водительские права</span>
                     <div class="lk__checkbox-buttons">
                         <label class="lk__input-wrapper">
@@ -640,7 +648,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set grid-list">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">Особая отметка</span>
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                         <label class="filter-group__checkbox checkbox">
@@ -659,7 +667,7 @@
                     <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-m" disabled>Далее</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" disabled>Опубликовать</button>
                     </div>
                 </div>
                 <input type="hidden" name="step" value="2">
