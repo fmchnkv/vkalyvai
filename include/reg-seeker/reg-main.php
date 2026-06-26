@@ -72,5 +72,5 @@
     </div>
 
     <button type="submit" class="auth-reg__submit btn btn_size-m btn_secondary">Продолжить</button>
-    <p class="auth-reg__accept">Продолжая, вы принимаете <a href="/pages/privacy.php">политику конфиденциальности</a> и <a href="#">правила сервиса</a></p>
+    <p class="auth-reg__accept">Продолжая, вы принимаете <a href="/pages/privacy.php">политику конфиденциальности</a> и <a href="/pages/legal.php">правила сервиса</a></p>
 </form>

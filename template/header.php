@@ -79,20 +79,20 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                             <ul class="nav__list">
                                 <? if ($client && $client == 'Y') : ?>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link link">Поиск вакансий</a>
+                                        <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
                                     </li>
                                 <? else : ?>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link link">Поиск резюме</a>
+                                        <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
                                     </li>
                                 <? endif; ?>
 
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link link">Отклики</a>
+                                    <a href="/lk/employer/responces.php" class="nav__link link">Отклики</a>
                                 </li>
 
                                 <li class="nav__item">
-                                    <a href="#" class="nav__link link">Помощь</a>
+                                    <a href="/pages/help.php" class="nav__link link">Помощь</a>
                                 </li>
                             </ul>
                         </nav>
@@ -124,7 +124,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 </svg>
                                 <span>Чаты</span>
                             </a>
-                            <a href="#" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
+                            <a href="/lk/job_seeker/index.php" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z" fill="white" />
@@ -138,9 +138,9 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 <span>Профиль</span>
                             </a>
                             <? if ($client && $client == 'Y') : ?>
-                                <a href="#" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
+                                <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
                             <? else : ?>
-                                <a href="#" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать вакансию</a>
+                                <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать вакансию</a>
                             <? endif; ?>
 
                             <button class="btn btn_secondary btn_icon btn_icon-s burger">
@@ -185,7 +185,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                         </nav>
 
                         <div class="header__toolbar">
-                            <a href="#" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
+                            <a href="/lk/auth.php" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z" fill="white" />
@@ -199,9 +199,9 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 <span>Войти</span>
                             </a>
                             <? if ($client && $client == 'Y') : ?>
-                                <a href="#" class="btn btn_size-s btn_secondary m-none">Создать вакансию</a>
+                                <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary m-none">Создать вакансию</a>
                             <? else : ?>
-                                <a href="#" class="btn btn_size-s btn_secondary m-none">Создать резюме</a>
+                                <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary m-none">Создать резюме</a>
                             <? endif; ?>
 
 
@@ -224,7 +224,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
             <div class="burger-menu">
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item">
-                        <a href="#" class="link">Правила составления резюме</a>
+                        <a href="/pages/article.php" class="link">Правила составления резюме</a>
                     </li>
                     <li class="burger-menu__item">
                         <a href="/pages/vacancies.php" class="link">Каталог вакансий</a>
@@ -234,11 +234,11 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                     </li>
                     <? if ($client && $client == 'Y') : ?>
                         <li class="burger-menu__item">
-                            <a href="#" class="btn btn_size-s btn_secondary">Создать вакансию</a>
+                            <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary">Создать вакансию</a>
                         </li>
                     <? else : ?>
                         <li class="burger-menu__item">
-                            <a href="#" class="btn btn_size-s btn_secondary">Создать резюме</a>
+                            <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary">Создать резюме</a>
                         </li>
                     <? endif; ?>
                 </ul>
@@ -280,7 +280,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                             <span>Профиль</span>
                         </li>
                         <li class="auth-mobile-menu__item">
-                            <a href="#" class="btn btn_icon btn_secondary">
+                            <a href="/lk/job_seeker/deals.php" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M12.2539 3.25098C12.6679 3.25098 13.0039 3.58698 13.0039 4.00098V5.50098H16.7539C17.1679 5.50098 17.5039 5.83698 17.5039 6.25098V16.001C17.5039 16.415 17.1679 16.751 16.7539 16.751H3.25391C2.83991 16.751 2.50391 16.415 2.50391 16.001V6.25098C2.50391 5.83698 2.83991 5.50098 3.25391 5.50098H7.00391V4.00098C7.00391 3.58698 7.33991 3.25098 7.75391 3.25098H12.2539ZM5.50391 15.251H7.00391V7.00098H5.50391V15.251ZM13.0039 15.251H14.5039V7.00098H13.0039V15.251ZM8.50391 5.50098H11.5039V4.75098H8.50391V5.50098Z" fill="white" />
@@ -295,7 +295,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                             <span>Резюме</span>
                         </li>
                         <li class="auth-mobile-menu__item">
-                            <a href="#" class="btn btn_icon btn_secondary">
+                            <a href="/lk/employer/responces.php" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M11.8789 16.751C11.8789 17.2483 11.6817 17.7255 11.3301 18.0771C10.9784 18.4288 10.5012 18.626 10.0039 18.626C9.50663 18.626 9.02936 18.4288 8.67773 18.0771C8.3261 17.7255 8.12891 17.2483 8.12891 16.751H11.8789ZM10.0039 2.50098C13.7314 2.50098 16.7539 5.53341 16.7539 9.27441V16.001H3.25391V9.27441C3.25391 5.53341 6.27641 2.50098 10.0039 2.50098ZM10.0039 4.00098C7.10441 4.00098 4.75391 6.36216 4.75391 9.27441V14.501H15.2539V9.27441C15.2539 6.36216 12.9034 4.00098 10.0039 4.00098Z" fill="white" />

@@ -178,13 +178,13 @@
 
         &:not(.select__input) {
             .input__field, input {
-                padding: 24px;
+                padding: 16px;
             }
         }
 
         .input__field, input {
             .media-min(768px, {
-                padding: 24px; 
+                padding: 16px; 
             });
         }
 
@@ -543,7 +543,7 @@
         border: 1px solid @border-neutral;
         border-radius: @border-radius-m;
         background-color: @white;
-        padding: 12px;
+        padding: 16px;
         font-size: @f-body;
         line-height: @lh-body;
         font-family: inherit;
@@ -551,16 +551,10 @@
 
         .media-min(768px, {
             border-radius: @border-radius-xl;
-            padding: 24px;
         });
 
         &::placeholder {
             color: @neutral;
-
-            .media-min(768px, {
-                font-size: @f-body-m;
-                line-height: @lh-body-m;
-            });
         }
 
         &:hover {

@@ -69,10 +69,10 @@
 
                     <ul class="catalog-nav__tabs tabs">
                         <li class="tabs__item">
-                            <button class="tabs__link tab tab_size-m active js-tab is-catalog" data-tab="vacancies">Соискателю</button>
+                            <button class="tabs__link tab active js-tab is-catalog" data-tab="vacancies">Соискателю</button>
                         </li>
                         <li class="tabs__item">
-                            <button class="tabs__link tab tab_size-m js-tab is-catalog" data-tab="rezumes">Работодателю</button>
+                            <button class="tabs__link tab js-tab is-catalog" data-tab="rezumes">Работодателю</button>
                         </li>
                     </ul>
                 </div>

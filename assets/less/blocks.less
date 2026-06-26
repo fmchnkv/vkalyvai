@@ -595,26 +595,29 @@
 
             .media-min(768px, {
                 gap: 32px;
-                max-width: 745px;
+                max-width: 584px;
+                align-items: flex-start;
+            });
+
+            .media-min(1441px, {
+                max-width: 656px;
             });
         }
 
         .cta__inner {
-            padding: 24px;
+            padding: 16px 16px 20px;
             width: 100%;
             
             .media-min(768px, {
                 display: flex;
                 align-items: center;
-                min-height: 420px;
-            });
-
-            .media-min(1024px, {
-                padding: 32px;
+                // min-height: 420px;
+                padding: 24px;
             });
 
             .media-min(1441px, {
-                min-height: 480px; 
+                padding: 32px;
+                min-height: 344px;
             });
         }
 
@@ -630,7 +633,7 @@
     }
 
     &__actions {
-        padding: 8px;
+        padding: 4px;
         border-radius: @border-radius-xl;
         box-shadow: 0px 0px 32px rgba(20, 20, 20, 0.04), 0px 8px 12px -6px rgba(20, 20, 20, 0.04);
         background-color: @white;
@@ -646,14 +649,19 @@
         });
 
         .cta__btn {
-            padding: 12px 16px;
+            padding: 12px;
             font-size: @f-body-m;
             line-height: @lh-body-m;
             width: 100%;
 
-            .media-min(768px, {
-                padding: 16px 24px;
+            .media-min(1024px, {
+                padding: 16px;
             });
+
+            .media-min(1441px, {
+                padding: 20px;
+            });
+
         }
     }
 }
@@ -1105,15 +1113,23 @@
 .accordion {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
 
     &__item {
         border: 1px solid @border-neutral;
-        border-radius: @border-radius-xl;
-        padding: 16px;
+        border-radius: 16px;
+        padding: 19px;
 
         transition-property: border-radius;
         .transition-ext(.3s, ease-in-out);
+
+        .media-min(1024px, {
+            padding: 23px 19px;
+        });
+
+        .media-min(1441px, {
+            padding: 27px 19px;
+        });
 
         &.active {
             
@@ -1184,6 +1200,12 @@
     &__title {
         transition-property: color;
         .transition-ext(.3s, ease-in-out);
+        font-weight: 600;
+        
+        .media-min(768px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
     }
 
     &__wrapper {
