@@ -1944,17 +1944,67 @@
                 }
             }
             .vacancy-form {
-                &__titles-inputs {
+                &__pay-section {
+                    .media-min(768px, {
+                        flex-wrap: nowrap;
+                    });
+                }
+                &__skills {
+                    &-wrapper {
+                        margin-bottom: 16px;
+                        border-radius: @border-radius-m;
+                        .remove-skill {
+                            font-size: 14px;
+                        }
+                    }
+                    .add-skill {
+                        opacity: 1;
+                        pointer-events: all;
+                        position: relative;
+                        z-index: 1;
+                        transition: all .3s ease;
+                        background-color: @light !important;
+                    }
+                }
+                &__currency-inputs {
+                    width: 100%;
                     grid-template-columns: repeat(3, 1fr);
+                    .media-min(768px, {
+                        width: 40%;
+                    });
+
+                    input {
+                        &::placeholder {
+                            color: @default;
+                        }
+                    }
 
                     [data-id="vacancy-space"] {
                         grid-column-start: 2;
                         grid-column-end: 4;
                     }
 
+                    [data-id="vacancy-currency"] {
+                        input {
+                            &::placeholder {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                &__titles-inputs {
+                    grid-template-columns: repeat(3, 1fr);
+
                     &.grid-2-columns {
                         grid-template-columns: repeat(2, 1fr);
                     }
+                }
+                &__prices-inputs {
+                    width: 100%;
+
+                    .media-min(768px, {
+                        width: 60%;
+                    });
                 }
                 &__radios {
                     .lk__input-radio {
@@ -2494,6 +2544,14 @@
         visibility: visible;
         transition: all .3s ease;
     }
+}
+
+.unshow {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    z-index: -1 !important;
+    transition: all .3s ease;
 }
 
 .mob-elem {

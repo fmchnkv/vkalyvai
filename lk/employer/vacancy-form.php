@@ -259,62 +259,64 @@
                 data-title="Условия и график" class="step-form" method="post">
                 <div class="constructor__inputs-set vacancy-form__pay-block">
                     <span class="subcaption">Оплата работы</span>
-                    <div class="constructor__inputs-list grid-list grid-2-columns">
-                        <div class="lk__input-wrapper">
-                            <input type="text" data-mask="number" value="" name="from" placeholder="От">
-                        </div>
-                        <div class="lk__input-wrapper">
-                            <input type="text" value="" data-mask="number" name="before" placeholder="До">
-                        </div>
-                    </div>
-                    <div class="constructor__inputs-list grid-list vacancy-form__titles-inputs">
-                        <div class="select" data-id="vacancy-currency">
-                            <label class="filter-group__input select__input input input_has-icon">
-                                <input class="input__field" type="text" name="education" data-id="education" readonly="" placeholder="₽">
-                                <div class="input__icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_4687_14543">
-                                                <rect width="24" height="24" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </label>
-
-                            <div class="select__dropdown">
-                                <ul class="select__dropdown-list" data-id="vacancy-currency">
-                                    <li class="select__option active" data-value="₽">₽</li>
-                                    <li class="select__option" data-value="$">$</li>
-                                    <li class="select__option" data-value="€">€</li>
-                                </ul>
+                    <div class="constructor__inputs-block flex-list vacancy-form__pay-section">
+                        <div class="constructor__inputs-list grid-list grid-2-columns vacancy-form__prices-inputs">
+                            <div class="lk__input-wrapper">
+                                <input type="text" data-mask="number" value="" name="from" placeholder="От">
+                            </div>
+                            <div class="lk__input-wrapper">
+                                <input type="text" value="" data-mask="number" name="before" placeholder="До">
                             </div>
                         </div>
-                        <div class="select" data-id="vacancy-space">
-                            <label class="filter-group__input select__input input input_has-icon">
-                                <input class="input__field" type="text" name="education" data-id="education" readonly="" placeholder="За месяц">
-                                <div class="input__icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_4687_14543">
-                                                <rect width="24" height="24" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </label>
+                        <div class="constructor__inputs-list grid-list vacancy-form__currency-inputs">
+                            <div class="select" data-id="vacancy-currency">
+                                <label class="filter-group__input select__input input input_has-icon">
+                                    <input class="input__field" type="text" name="vacancy-currency" data-id="vacancy-currency" readonly="" placeholder="₽">
+                                    <div class="input__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_4687_14543">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </label>
 
-                            <div class="select__dropdown">
-                                <ul class="select__dropdown-list" data-id="vacancy-space">
-                                    <li class="select__option active" data-value="За месяц">За месяц</li>
-                                    <li class="select__option" data-value="За день">За день</li>
-                                </ul>
+                                <div class="select__dropdown">
+                                    <ul class="select__dropdown-list" data-id="vacancy-currency">
+                                        <li class="select__option active" data-value="₽">₽</li>
+                                        <li class="select__option" data-value="$">$</li>
+                                        <li class="select__option" data-value="€">€</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="select" data-id="vacancy-space">
+                                <label class="filter-group__input select__input input input_has-icon">
+                                    <input class="input__field" type="text" name="vacancy-space" data-id="vacancy-space" readonly="" placeholder="За месяц">
+                                    <div class="input__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_4687_14543">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </label>
+
+                                <div class="select__dropdown">
+                                    <ul class="select__dropdown-list" data-id="vacancy-space">
+                                        <li class="select__option active" data-value="За месяц">За месяц</li>
+                                        <li class="select__option" data-value="За день">За день</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -408,64 +410,138 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Рабочие часы в день</span>
-                    <div class="lk__radio-buttons vacancy-form__radios">
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="2" checked="">
-                            <span class="radio__label">2</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="3">
-                            <span class="radio__label">3</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="4">
-                            <span class="radio__label">4</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="5">
-                            <span class="radio__label">5</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="6">
-                            <span class="radio__label">6</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="7">
-                            <span class="radio__label">7</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="8">
-                            <span class="radio__label">8</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="9">
-                            <span class="radio__label">9</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="10">
-                            <span class="radio__label">10</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="11">
-                            <span class="radio__label">11</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="12">
-                            <span class="radio__label">12</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="24">
-                            <span class="radio__label">24</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="by_agreement">
-                            <span class="radio__label">По договоренности</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="work_hours" value="other">
-                            <span class="radio__label">Другое</span>
-                        </label>
+                    <div class="constructor__inputs-set grid-list">
+                        <div class="lk__radio-buttons vacancy-form__radios">
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="2" checked="">
+                                <span class="radio__label">2</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="3">
+                                <span class="radio__label">3</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="4">
+                                <span class="radio__label">4</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="5">
+                                <span class="radio__label">5</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="6">
+                                <span class="radio__label">6</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="7">
+                                <span class="radio__label">7</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="8">
+                                <span class="radio__label">8</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="9">
+                                <span class="radio__label">9</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="10">
+                                <span class="radio__label">10</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="11">
+                                <span class="radio__label">11</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="12">
+                                <span class="radio__label">12</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="24">
+                                <span class="radio__label">24</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="by_agreement">
+                                <span class="radio__label">По договоренности</span>
+                            </label>
+                            <label class="lk__input-radio radio">
+                                <input class="radio__input" type="radio" name="work_hours" value="other">
+                                <span class="radio__label">Другое</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="night_hours" value="Y">
+                                <span class="checkbox__label">Есть вечерние или ночные смены</span>
+                            </label>
+                        </div>
                     </div>
+                </div>
+
+                <div class="constructor__inputs-set">
+                    <span class="subcaption">Требуемые навыки</span>
+                    <div class="skills-block vacancy-form__skills">
+                        <div class="lk__input-wrapper bright-bubble vacancy-form__skills-wrapper input_has-icon">
+                            <div class="constructor__bubbles-list bright-bubbles">
+                                <div class="constructor__bubbles-item remove-skill">
+                                    <span>Коммуникабельность</span>
+                                    <button class="btn transp-btn">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z" fill="#232323"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_4827_39596">
+                                                    <rect width="12" height="12" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="constructor__bubbles-item remove-skill">
+                                    <span>Выявление потребностей</span>
+                                    <button class="btn transp-btn">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z" fill="#232323"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_4827_39596">
+                                                    <rect width="12" height="12" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <input type="text" name="vacancy-search-skill">
+                            <div class="input__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="constructor__bubbles-list gray-bubbles">
+                            <div class="constructor__bubbles-item add-skill">Коммуникабельность</div>
+                            <div class="constructor__bubbles-item add-skill">Выявление потребностей</div>
+                            <div class="constructor__bubbles-item add-skill">Уравновешенность</div>
+                            <div class="constructor__bubbles-item add-skill">Консультирование клиентов</div>
+                            <div class="constructor__bubbles-item add-skill">Составление договоров</div>
+                            <div class="constructor__bubbles-item add-skill">Пассивные продажи</div>
+                            <div class="constructor__bubbles-item add-skill">Аудит компании</div>
+                            <div class="constructor__bubbles-item add-skill">Анализ целевой аудитории</div>
+                            <div class="constructor__bubbles-item add-skill">Наставничество</div>
+                            <div class="constructor__bubbles-item add-skill">Планирование продаж</div>
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <div class="constructor__forms-actions">
@@ -526,6 +602,77 @@
                         <template id="languages">
                             <div class="vacancy__multi-blocks-wrapper template-element">
                                 <span class="subcaption">Знание языков</span>
+                                <div class="constructor__inputs-block">
+                                    <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
+                                        <div class="select" data-id="vacancy_language">
+                                            <label class="filter-group__input select__input input input_has-icon">
+                                                <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
+                                                <div class="input__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_4687_14543">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </label>
+
+                                            <div class="select__dropdown">
+                                                <ul class="select__dropdown-list" data-id="vacancy_language">
+                                                    <li class="select__option active" data-value="Английский">Английский</li>
+                                                    <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="select" data-id="vacancy_language_level">
+                                            <label class="filter-group__input select__input input input_has-icon">
+                                                <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
+                                                <div class="input__icon">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_4687_14543">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </label>
+
+                                            <div class="select__dropdown">
+                                                <ul class="select__dropdown-list" data-id="vacancy_language_level">
+                                                    <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
+                                                    <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
+                                                    <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
+                                        <span>Удалить</span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                            <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="#C2C2C2"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_7339_34040">
+                                            <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </template>
+                        <div class="vacancy__multi-blocks-wrapper template-element">
+                            <span class="subcaption">Знание языков</span>
+                            <div class="constructor__inputs-block">
                                 <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
                                     <div class="select" data-id="vacancy_language">
                                         <label class="filter-group__input select__input input input_has-icon">
@@ -591,73 +738,6 @@
                                     </svg>
                                 </button>
                             </div>
-                        </template>
-                        <div class="vacancy__multi-blocks-wrapper template-element">
-                            <span class="subcaption">Знание языков</span>
-                            <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
-                                <div class="select" data-id="vacancy_language">
-                                    <label class="filter-group__input select__input input input_has-icon">
-                                        <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
-                                        <div class="input__icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_4687_14543">
-                                                        <rect width="24" height="24" fill="white"></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </label>
-
-                                    <div class="select__dropdown">
-                                        <ul class="select__dropdown-list" data-id="vacancy_language">
-                                            <li class="select__option active" data-value="Английский">Английский</li>
-                                            <li class="select__option" data-value="Немецкий">Немецкий</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="select" data-id="vacancy_language_level">
-                                    <label class="filter-group__input select__input input input_has-icon">
-                                        <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
-                                        <div class="input__icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_4687_14543">
-                                                        <rect width="24" height="24" fill="white"></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </label>
-
-                                    <div class="select__dropdown">
-                                        <ul class="select__dropdown-list" data-id="vacancy_language_level">
-                                            <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
-                                            <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
-                                            <li class="select__option" data-value="B1-Средний">B1-Средний</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
-                                <span>Удалить</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                    <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="#C2C2C2"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_7339_34040">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
                         </div>
                     </div>
                     <button data-add-block="languages" class="contact-add btn btn_light btn_size-m lk__btn_has-icon">

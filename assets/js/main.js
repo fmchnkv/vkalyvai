@@ -1441,6 +1441,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         initSkills();
 
+        //отслеживаем ввод в инпут поиска навыков
+        const skillsInput = document.querySelector('input[name=vacancy-search-skill]');
+
+        if(skillsInput) {
+            skillsInput.addEventListener('input', function(e) {
+                const value = e.target.value;
+                addClassSkills(value);
+            })
+        }
+
+        //ВРЕМЕННАЯ. БУДЕМ ПОЛУЧАТЬ ЧЕРЕЗ АЯКС
+        function addClassSkills(text) {
+            const skills = document.querySelectorAll('.add-skill');
+            const search = text.trim().toLowerCase();
+
+            if(skills.length <= 0 || !search) return;
+
+            skills.forEach(skill => {
+                const skillText = skill.textContent.trim().toLowerCase();
+
+                skill.classList.toggle(
+                    'unshow',
+                    search.length > 3 && !skillText.includes(search)
+                );
+            });
+        }
+
         function initHints() {
             document.addEventListener('click', function(e) {
                 const useHint = e.target.closest('.hint');

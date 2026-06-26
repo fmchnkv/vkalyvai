@@ -1803,15 +1803,58 @@
 .lk .constructor__forms .skills-search form {
   margin-bottom: 0;
 }
-.lk .constructor__forms .vacancy-form__titles-inputs {
+@media screen and (min-width: 768px) {
+  .lk .constructor__forms .vacancy-form__pay-section {
+    flex-wrap: nowrap;
+  }
+}
+.lk .constructor__forms .vacancy-form__skills-wrapper {
+  margin-bottom: 16px;
+  border-radius: 16px;
+}
+.lk .constructor__forms .vacancy-form__skills-wrapper .remove-skill {
+  font-size: 14px;
+}
+.lk .constructor__forms .vacancy-form__skills .add-skill {
+  opacity: 1;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background-color: #FFF2E9 !important;
+}
+.lk .constructor__forms .vacancy-form__currency-inputs {
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
 }
-.lk .constructor__forms .vacancy-form__titles-inputs [data-id="vacancy-space"] {
+@media screen and (min-width: 768px) {
+  .lk .constructor__forms .vacancy-form__currency-inputs {
+    width: 40%;
+  }
+}
+.lk .constructor__forms .vacancy-form__currency-inputs input::placeholder {
+  color: #232323;
+}
+.lk .constructor__forms .vacancy-form__currency-inputs [data-id="vacancy-space"] {
   grid-column-start: 2;
   grid-column-end: 4;
 }
+.lk .constructor__forms .vacancy-form__currency-inputs [data-id="vacancy-currency"] input::placeholder {
+  font-weight: 600;
+}
+.lk .constructor__forms .vacancy-form__titles-inputs {
+  grid-template-columns: repeat(3, 1fr);
+}
 .lk .constructor__forms .vacancy-form__titles-inputs.grid-2-columns {
   grid-template-columns: repeat(2, 1fr);
+}
+.lk .constructor__forms .vacancy-form__prices-inputs {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .lk .constructor__forms .vacancy-form__prices-inputs {
+    width: 60%;
+  }
 }
 .lk .constructor__forms .vacancy-form__radios .lk__input-radio {
   max-width: max-content;
@@ -2308,6 +2351,13 @@
   opacity: 1;
   pointer-events: all;
   visibility: visible;
+  transition: all 0.3s ease;
+}
+.unshow {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -1 !important;
   transition: all 0.3s ease;
 }
 @media screen and (min-width: 768px) {
