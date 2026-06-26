@@ -1113,15 +1113,23 @@
 .accordion {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
 
     &__item {
         border: 1px solid @border-neutral;
-        border-radius: @border-radius-xl;
-        padding: 16px;
+        border-radius: 16px;
+        padding: 19px;
 
         transition-property: border-radius;
         .transition-ext(.3s, ease-in-out);
+
+        .media-min(1024px, {
+            padding: 23px 19px;
+        });
+
+        .media-min(1441px, {
+            padding: 27px 19px;
+        });
 
         &.active {
             
@@ -1192,6 +1200,12 @@
     &__title {
         transition-property: color;
         .transition-ext(.3s, ease-in-out);
+        font-weight: 600;
+        
+        .media-min(768px, {
+            font-size: @f-body-m;
+            line-height: @lh-body-m;
+        });
     }
 
     &__wrapper {
