@@ -267,7 +267,7 @@
                             <input type="text" value="" data-mask="number" name="before" placeholder="До">
                         </div>
                     </div>
-                    <div class="constructor__inputs-list grid-list grid-2-columns vacancy-form__titles-inputs">
+                    <div class="constructor__inputs-list grid-list vacancy-form__titles-inputs">
                         <div class="select" data-id="vacancy-currency">
                             <label class="filter-group__input select__input input input_has-icon">
                                 <input class="input__field" type="text" name="education" data-id="education" readonly="" placeholder="₽">
@@ -469,7 +469,7 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" disabled class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="1">Назад</button>
                         <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
@@ -522,74 +522,145 @@
                     </div>
                 </div>
                 <div class="constructor__inputs-set">
-                    <span class="subcaption">Знание языков</span>
-                    <div class="vacancy__multi-blocks-wrapper">
-                        <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
-                            <div class="select" data-id="vacancy_language">
-                                <label class="filter-group__input select__input input input_has-icon">
-                                    <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
-                                    <div class="input__icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_4687_14543">
-                                                    <rect width="24" height="24" fill="white"></rect>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                </label>
+                    <div class="grid-list template-wrapper">
+                        <template id="languages">
+                            <div class="vacancy__multi-blocks-wrapper template-element">
+                                <span class="subcaption">Знание языков</span>
+                                <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
+                                    <div class="select" data-id="vacancy_language">
+                                        <label class="filter-group__input select__input input input_has-icon">
+                                            <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
+                                            <div class="input__icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4687_14543">
+                                                            <rect width="24" height="24" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
 
-                                <div class="select__dropdown">
-                                    <ul class="select__dropdown-list" data-id="vacancy_language">
-                                        <li class="select__option active" data-value="Английский">Английский</li>
-                                        <li class="select__option" data-value="Немецкий">Немецкий</li>
-                                    </ul>
+                                        <div class="select__dropdown">
+                                            <ul class="select__dropdown-list" data-id="vacancy_language">
+                                                <li class="select__option active" data-value="Английский">Английский</li>
+                                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="select" data-id="vacancy_language_level">
+                                        <label class="filter-group__input select__input input input_has-icon">
+                                            <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
+                                            <div class="input__icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_4687_14543">
+                                                            <rect width="24" height="24" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
+
+                                        <div class="select__dropdown">
+                                            <ul class="select__dropdown-list" data-id="vacancy_language_level">
+                                                <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
+                                                <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
+                                                <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
+                                    <span>Удалить</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                        <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="#C2C2C2"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_7339_34040">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </template>
+                        <div class="vacancy__multi-blocks-wrapper template-element">
+                            <span class="subcaption">Знание языков</span>
+                            <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
+                                <div class="select" data-id="vacancy_language">
+                                    <label class="filter-group__input select__input input input_has-icon">
+                                        <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
+                                        <div class="input__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_4687_14543">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </label>
+
+                                    <div class="select__dropdown">
+                                        <ul class="select__dropdown-list" data-id="vacancy_language">
+                                            <li class="select__option active" data-value="Английский">Английский</li>
+                                            <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="select" data-id="vacancy_language_level">
+                                    <label class="filter-group__input select__input input input_has-icon">
+                                        <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
+                                        <div class="input__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_4687_14543">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </label>
+
+                                    <div class="select__dropdown">
+                                        <ul class="select__dropdown-list" data-id="vacancy_language_level">
+                                            <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
+                                            <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
+                                            <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="select" data-id="vacancy_language_level">
-                                <label class="filter-group__input select__input input input_has-icon">
-                                    <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
-                                    <div class="input__icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323"></path>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_4687_14543">
-                                                    <rect width="24" height="24" fill="white"></rect>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                </label>
-
-                                <div class="select__dropdown">
-                                    <ul class="select__dropdown-list" data-id="vacancy_language_level">
-                                        <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
-                                        <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
-                                        <li class="select__option" data-value="B1-Средний">B1-Средний</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
+                                <span>Удалить</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                    <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="#C2C2C2"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_7339_34040">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
                         </div>
-                        <button class="language-block-remove transp-btn lk__btn_has-icon">
-                            <span>Удалить</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="#C2C2C2"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_7339_34040">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
                     </div>
-                    <button data-call-modal="add__contacts" class="contact-add btn btn_light btn_size-m lk__btn_has-icon">
+                    <button data-add-block="languages" class="contact-add btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#FC7827"></path>
@@ -605,44 +676,44 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Водительские права</span>
-                    <div class="lk__checkbox-buttons">
-                        <label class="lk__input-wrapper">
+                    <div class="lk__checkbox-buttons flex-list grid-list">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="A" checked="">
                             <span class="lk__input-label">A</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="B">
                             <span class="lk__input-label">B</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="C">
                             <span class="lk__input-label">C</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="D">
                             <span class="lk__input-label">D</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="E">
                             <span class="lk__input-label">E</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="BE">
                             <span class="lk__input-label">BE</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="CE">
                             <span class="lk__input-label">CE</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="DE">
                             <span class="lk__input-label">DE</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="TM">
                             <span class="lk__input-label">TM</span>
                         </label>
-                        <label class="lk__input-wrapper">
+                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="TB">
                             <span class="lk__input-label">TB</span>
                         </label>
@@ -650,24 +721,26 @@
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Особая отметка</span>
-                    <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
-                        <label class="filter-group__checkbox checkbox">
-                            <input class="checkbox__input" type="checkbox" name="special_marker[]" value="invalid">
-                            <span class="checkbox__label">Подходит для соискателей с инвалидностью</span>
-                        </label>
-                    </div>
-                    <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
-                        <label class="filter-group__checkbox checkbox">
-                            <input class="checkbox__input" type="checkbox" name="special_marker[]" value="other">
-                            <span class="checkbox__label">Другой параметр</span>
-                        </label>
+                    <div class="constructor__inputs-list grid-list">
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="special_marker[]" value="invalid">
+                                <span class="checkbox__label">Подходит для соискателей с инвалидностью</span>
+                            </label>
+                        </div>
+                        <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="special_marker[]" value="other">
+                                <span class="checkbox__label">Другой параметр</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
                     <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-m" disabled>Опубликовать</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m">Опубликовать</button>
                     </div>
                 </div>
                 <input type="hidden" name="step" value="2">

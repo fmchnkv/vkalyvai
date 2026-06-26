@@ -1224,6 +1224,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //форма-конструктор резюме
     const constructorSteps = document.querySelectorAll('[data-form]');
     const addBlockBtns = document.querySelectorAll('button[data-add-block]');
+    const removeBlockBtns = document.querySelectorAll('button[data-remove-block]');
     const helperForms = document.querySelectorAll('[data-block]');
     const progressWrappers = document.querySelectorAll('.constructor__steps');
 
@@ -1352,6 +1353,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 })
             });
+        }
+
+        //кнопка удаления блока полей
+        if(removeBlockBtns.length) {
+            document.addEventListener('click', function(e) {
+                const removeBtn = e.target.closest('button[data-remove-block]');
+
+                if(removeBtn) {
+                    e.preventDefault();
+                    const addedBlock = removeBtn.closest('.template-element');
+                    if(addedBlock) {
+                        addedBlock.remove();
+                    }
+                }
+            })
         }
 
         function createSkillBubble(text, removable = false) {

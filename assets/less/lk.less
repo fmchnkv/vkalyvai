@@ -1591,9 +1591,16 @@
     }
 
     &__checkbox-buttons {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
+
+        &.flex-list {
+            .lk__input-wrapper {
+                max-width: max-content;
+                font-size: 18px;
+                line-height: 100%;
+            }
+        }
 
         label {
             text-align: center;
@@ -1938,6 +1945,13 @@
             }
             .vacancy-form {
                 &__titles-inputs {
+                    grid-template-columns: repeat(3, 1fr);
+
+                    [data-id="vacancy-space"] {
+                        grid-column-start: 2;
+                        grid-column-end: 4;
+                    }
+
                     &.grid-2-columns {
                         grid-template-columns: repeat(2, 1fr);
                     }
@@ -1980,6 +1994,10 @@
 
                 .lk__input-wrapper {
                     padding: 12px;
+
+                    &.driver-item {
+                        padding: 11px 16px;
+                    }
                 }
 
                 .experience-block {

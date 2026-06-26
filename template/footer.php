@@ -671,7 +671,7 @@
             <h3 class="lk__modal-form-title">Опыт вождения</h3>
             <div class="lk__driver-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
-                    <div class="lk__checkbox-buttons">
+                    <div class="lk__checkbox-buttons grid-list">
                         <label class="lk__input-wrapper">
                             <input type="checkbox" name="driver" value="A">
                             <span class="lk__input-label">A</span>
