@@ -1,3 +1,7 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+$dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pages/vacancy.php';
+?>
 <div class="deals-list grid-list">
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
@@ -36,7 +40,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <a href="/pages/vacancy.php">Начальник отдела</a>
+                <a href="<?= $dealsDetailUrl ?>">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -92,7 +96,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <a href="/pages/vacancy.php">Начальник отдела</a>
+                <a href="<?= $dealsDetailUrl ?>">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -148,7 +152,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <a href="/pages/vacancy.php">Начальник отдела</a>
+                <a href="<?= $dealsDetailUrl ?>">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
@@ -204,7 +208,7 @@
         <div class="deals-item__body">
             <div class="deals__title-block">
                 <span>Полная занятость</span>
-                <a href="/pages/vacancy.php">Начальник отдела</a>
+                <a href="<?= $dealsDetailUrl ?>">Начальник отдела</a>
                 <ul class="tags">
                     <li>100 000 ₽</li>
                     <li>Полный рабочий день</li>
