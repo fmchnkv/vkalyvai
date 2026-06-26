@@ -1,10 +1,10 @@
 <h1 class="moderator__vacancies-title page-title lk__page-title">Резюме</h1>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
+<div class="lk__filters-wrapper">
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
 
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>
-
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>
+</div>
 <div class="moderator__list moderator__resume-list grid-list">
     <div class="offers-grid__item moderator__item lk-card">
         <span class="moderator__item__status state publish">Опубликовано</span>

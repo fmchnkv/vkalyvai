@@ -22,12 +22,12 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="javascript:void(0)">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -52,12 +52,12 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="javascript:void(0)">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -82,12 +82,12 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="javascript:void(0)">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -112,12 +112,12 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="javascript:void(0)">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-m">Перейти в чат</a>
+        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
 </div>
 <? include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
