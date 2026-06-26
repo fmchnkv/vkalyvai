@@ -763,35 +763,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const breakpoint = window.matchMedia('(min-width: 768px)');
     let philosophySlider;
 
-
-    const breakpointChecker = function () {
-        if (breakpoint.matches === false) {
-            // Если слайдер уже был создан — уничтожаем его
-            if (philosophySlider !== undefined) {
-                // true, true означает очистить инлайн-стили Swiper
-                philosophySlider.destroy(true, true); 
-            }
-            return;
-        } else if (breakpoint.matches === true) {
-            // Запускаем инициализацию заново
-            return enableSwiper();
-        }
-    };
-
-    const enableSwiper = function () {
+    if (philosophySliderElement) {
         philosophySlider = new Swiper(philosophySliderElement, {
             loop: false,
             observer: true,
-            spaceBetween: 16,
+            spaceBetween: 8,
             slidesPerView: 'auto',
+            breakpoints: {
+                1024: {
+                    spaceBetween: 16,
+                },
+                1441: {
+                    spaceBetween: 32,
+                }
+            }
         });
-    };
+    }
+
+
+    // const breakpointChecker = function () {
+    //     if (breakpoint.matches === false) {
+    //         // Если слайдер уже был создан — уничтожаем его
+    //         if (philosophySlider !== undefined) {
+    //             // true, true означает очистить инлайн-стили Swiper
+    //             philosophySlider.destroy(true, true); 
+    //         }
+    //         return;
+    //     } else if (breakpoint.matches === true) {
+    //         // Запускаем инициализацию заново
+    //         return enableSwiper();
+    //     }
+    // };
+
+    // const enableSwiper = function () {
+    //     philosophySlider = new Swiper(philosophySliderElement, {
+    //         loop: false,
+    //         observer: true,
+    //         spaceBetween: 16,
+    //         slidesPerView: 'auto',
+    //     });
+    // };
 
     // Навешиваем слушатель на изменения экрана
-    breakpoint.addEventListener('change', breakpointChecker);
+    // breakpoint.addEventListener('change', breakpointChecker);
 
     // Запускаем проверку при первой загрузке страницы
-    breakpointChecker();
+    // breakpointChecker();
 
 
     const accordionBtns = document.querySelectorAll('.accordion__header');
