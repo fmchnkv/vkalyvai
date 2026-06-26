@@ -72,7 +72,7 @@
                             <a href="/pages/rules-rezume.php" class="f-menu__link link">Правила составления резюме</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/lk/create-rezume.php" class="f-menu__link link">Создать резюме</a>
+                            <a href="/lk/job_seeker/resume-form.php" class="f-menu__link link">Создать резюме</a>
                         </li>
                         <li class="f-menu__item">
                             <a href="/pages/vacancies.php" class="f-menu__link link">Каталог вакансий</a>
@@ -90,7 +90,7 @@
                             <a href="/pages/rules-vacancy.php" class="f-menu__link link">Правила размещения вакансии</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/lk/create-vacancy.php" class="f-menu__link link">Разместить вакансию</a>
+                            <a href="/lk/employer/vacancy-form.php" class="f-menu__link link">Разместить вакансию</a>
                         </li>
                         <li class="f-menu__item">
                             <a href="/pages/rezumes.php" class="f-menu__link link">Каталог резюме</a>
@@ -122,7 +122,7 @@
             <p class="footer__copyright"><?= date('Y') ?> Права защищены</p>
             <div class="footer__links">
                 <a href="/pages/privacy.php" class="link">Политика конфиденциальности</a>
-                <a href="#" class="link">Пользовательское соглашение</a>
+                <a href="/pages/legal.php" class="link">Пользовательское соглашение</a>
             </div>
         </div>
     </div>
