@@ -1140,6 +1140,11 @@
                         border-radius: 100%;
                         width: 32px;
                         height: 32px;
+
+                        .media-min(1441px, {
+                            width: 40px;
+                            height: 40px;
+                        });
                     }
                     span {
                         line-height: @lh-body;
@@ -1934,15 +1939,27 @@
             border-radius: 20px;
             gap: 16px;
 
+            .media-min(768px, {
+                gap: 20px;
+            });
+            .media-min(1441px, {
+                gap: 12px;
+                padding: 20px;
+            });
+
+            .offers-grid__title {
+                .media-min(768px, {
+                    font-size: @f-body-m;
+                });
+                .media-min(1441px, {
+                    font-size: @f-h6;
+                });
+            }
+
             &__date-wrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
-
-                .media-min(1441, {
-                    flex-direction: row-reverse;
-                    justify-content: space-between;
-                });
 
                 .date {
                     color: @neutral;
@@ -1978,6 +1995,9 @@
                 border-top: 1px solid @border-neutral;
 
                 .media-min(768px, {
+                    padding-top: 12px;
+                });
+                .media-min(1441px, {
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
@@ -2005,6 +2025,62 @@
                 margin-bottom: 0;
             }
         }
+        &__companies-list {
+            .moderator__item {
+                .media-min(768px, {
+                    gap: 16px;
+                });
+                .media-min(1441px, {
+                    gap: 12px;
+                });
+
+                &__date-wrapper {
+                    .media-min(1441px, {
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                    });
+                }
+
+                .moderator__img {
+                    .media-min(1441px, {
+                        margin-bottom: 0;
+                    });
+                }
+
+                &__title-wrapper {
+                    .media-min(1441px, {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                    });
+                }
+
+                .offers-grid__bottom {
+                    padding-top: 16px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            .moderator__item__title-wrapper {
+                margin-bottom: 2px;
+            }
+            .offer-info {
+                gap: 18px;
+
+                &__item {
+                    font-size: 14px;
+                }
+            }
+        }
+        &__vacancies-list {
+            .moderator__item__date-wrapper {
+                .media-min(1441px, {
+                    flex-direction: row;
+                    justify-content: space-between;
+                });
+            }
+        }
         &__resume-list {
             .moderator__item__date-wrapper {
                 gap: 8px;
@@ -2012,10 +2088,14 @@
             }
             .offers-grid__tags {
                 flex-direction: column;
+                .media-min(768px, {
+                    flex-direction: row;
+                });
             }
         }
         &__img {
-            max-width: 120px;
+            max-width: 48px;
+            margin-bottom: 12px;
             img {
                 width: 100%;
                 height: 100%;

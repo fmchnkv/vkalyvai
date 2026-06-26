@@ -1,11 +1,10 @@
 <h1 class="moderator__vacancies-title page-title lk__page-title">Компании</h1>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>
-
-<div class="moderator__list grid-list">
+<div class="lk__filters-wrapper">
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/sections-list.php"); ?>
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>
+</div>
+<div class="moderator__list moderator__companies-list grid-list">
     <div class="offers-grid__item moderator__item lk-card">
         <span class="moderator__item__status state publish">Новый пользователь</span>
         <div class="moderator__item__date-wrapper">
@@ -19,11 +18,13 @@
             <div class="moderator__img">
                 <img src="/images/company-avatar.png" alt="">
             </div>
-            <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
-            <ul class="offers-grid__tags tags">
-                <li class="offer-header__main-item has-dot">64 активных вакансии</li>
-                <li class="offer-header__main-item has-dot">Был сегодня</li>
-            </ul>
+            <div class="moderator__item__title-content">
+                <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
+                <ul class="offers-grid__tags tags">
+                    <li class="offer-header__main-item has-dot">64 активных вакансии</li>
+                    <li class="offer-header__main-item has-dot">Был сегодня</li>
+                </ul>
+            </div>
         </div>
         <ul class="offers-list__info offer-info">
             <li class="offer-info__item">
@@ -80,11 +81,13 @@
             <div class="moderator__img">
                 <img src="/images/company-avatar.png" alt="">
             </div>
-            <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
-            <ul class="offers-grid__tags tags">
-                <li class="offer-header__main-item has-dot">64 активных вакансии</li>
-                <li class="offer-header__main-item has-dot">Был сегодня</li>
-            </ul>
+            <div class="moderator__item__title-content">
+                <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
+                <ul class="offers-grid__tags tags">
+                    <li class="offer-header__main-item has-dot">64 активных вакансии</li>
+                    <li class="offer-header__main-item has-dot">Был сегодня</li>
+                </ul>
+            </div>
         </div>
         <ul class="offers-list__info offer-info">
             <li class="offer-info__item">
@@ -156,11 +159,13 @@
             <div class="moderator__img">
                 <img src="/images/company-avatar.png" alt="">
             </div>
-            <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
-            <ul class="offers-grid__tags tags">
-                <li class="offer-header__main-item has-dot">64 активных вакансии</li>
-                <li class="offer-header__main-item has-dot">Был сегодня</li>
-            </ul>
+            <div class="moderator__item__title-content">
+                <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
+                <ul class="offers-grid__tags tags">
+                    <li class="offer-header__main-item has-dot">64 активных вакансии</li>
+                    <li class="offer-header__main-item has-dot">Был сегодня</li>
+                </ul>
+            </div>
         </div>
         <ul class="offers-list__info offer-info">
             <li class="offer-info__item">
@@ -217,11 +222,13 @@
             <div class="moderator__img">
                 <img src="/images/company-avatar.png" alt="">
             </div>
-            <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
-            <ul class="offers-grid__tags tags">
-                <li class="offer-header__main-item has-dot">64 активных вакансии</li>
-                <li class="offer-header__main-item has-dot">Был сегодня</li>
-            </ul>
+            <div class="moderator__item__title-content">
+                <a href="/pages/vacancy.php" class="offers-grid__title">Название компании</a>
+                <ul class="offers-grid__tags tags">
+                    <li class="offer-header__main-item has-dot">64 активных вакансии</li>
+                    <li class="offer-header__main-item has-dot">Был сегодня</li>
+                </ul>
+            </div>
         </div>
         <ul class="offers-list__info offer-info">
             <li class="offer-info__item">
