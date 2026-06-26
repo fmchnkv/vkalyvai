@@ -1087,6 +1087,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactInput.placeholder = '999999999999';
             break;
 
+            case 'number':
+                currentMask = new Inputmask({ alias: 'numeric', digits: 0, allowMinus: false, rightAlign: false });
+                currentMask.mask(contactInput);
+            break;
+
             case 'password':
                 currentMask = new Inputmask({ mask: '******************'});
                 currentMask.mask(contactInput);
@@ -1210,33 +1215,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
             new Swiper(slider, {
                 slidesPerView: 1.2,
-                spaceBetween: 8,
+                spaceBetween: 4,
             });
         });
     }
     initHintsSlider();
 
     //форма-конструктор резюме
-    const constructorSteps = document.querySelectorAll('form[data-form]');
+    const constructorSteps = document.querySelectorAll('[data-form]');
     const addBlockBtns = document.querySelectorAll('button[data-add-block]');
+    const removeBlockBtns = document.querySelectorAll('button[data-remove-block]');
+    const helperForms = document.querySelectorAll('[data-block]');
+    const progressWrappers = document.querySelectorAll('.constructor__steps');
+
+    function setProgressStepWidth() {
+        progressWrappers.forEach(wrapper => {
+            const steps = wrapper.querySelectorAll('.progress-step');
+            if(!steps.length) return;
+
+            const gap = parseFloat(getComputedStyle(wrapper).columnGap) || 0;
+            const gapsWidth = gap * (steps.length - 1);
+            const stepWidth = `calc((100% - ${gapsWidth}px) / ${steps.length})`;
+
+            steps.forEach(step => {
+                step.style.width = stepWidth;
+            });
+        });
+    }
+
+    setProgressStepWidth();
+    window.addEventListener('resize', setProgressStepWidth);
     if(constructorSteps.length) {
         function changeStep(stepNumber) {
             const targetForm = document.querySelector(
                 `[data-form="${stepNumber}"]`
             );
+            const targetHelperForm = document.querySelector(
+                `[data-block="${stepNumber}"]`
+            );
+
+            constructorSteps.forEach(form => {
+                form.classList.remove('active');
+            });
+            if(helperForms.length) {
+                helperForms.forEach(form => {
+                    form.classList.remove('active');
+                })
+            }
 
             document.querySelector('h1').textContent = targetForm.dataset.title;
-
+            console.log(stepNumber);
+            console.log(targetHelperForm);
+            if(targetHelperForm) {
+                console.log('active');
+                targetHelperForm.classList.add('active');
+                console.log(targetHelperForm);
+            }
             document.querySelectorAll('.progress-step').forEach(step => {
                 step.classList.toggle(
                     'active',
                     Number(step.dataset.step) <= stepNumber
                 );
             });
-            constructorSteps.forEach(form => {
-                form.classList.remove('active');
-            });
-            let newStep = document.querySelector(`form[data-form="${stepNumber}"]`);
+
+
+            let newStep = document.querySelector(`[data-form="${stepNumber}"]`);
 
             if(!newStep) return;
 
@@ -1312,6 +1355,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        //кнопка удаления блока полей
+        if(removeBlockBtns.length) {
+            document.addEventListener('click', function(e) {
+                const removeBtn = e.target.closest('button[data-remove-block]');
+
+                if(removeBtn) {
+                    e.preventDefault();
+                    const addedBlock = removeBtn.closest('.template-element');
+                    if(addedBlock) {
+                        addedBlock.remove();
+                    }
+                }
+            })
+        }
+
         function createSkillBubble(text, removable = false) {
             const bubble = document.createElement('div');
 
@@ -1344,10 +1402,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const addSkill = e.target.closest('.add-skill');
 
                 if (addSkill) {
-                    const skillsBlock = addSkill.closest('.constructor__skills');
-
+                    const skillsBlock = addSkill.closest('.skills-block');
                     const selectedContainer =
-                        skillsBlock.querySelector('.top-skills .bright-bubbles');
+                        skillsBlock.querySelector('.bright-bubbles');
 
                     const text = addSkill.textContent.trim();
 
@@ -1367,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
 
                     const skill = removeBtn.closest('.remove-skill');
-                    const skillsBlock = skill.closest('.constructor__skills');
+                    const skillsBlock = skill.closest('.skills-block');
 
                     const availableContainer =
                         skillsBlock.querySelector('.gray-bubbles');

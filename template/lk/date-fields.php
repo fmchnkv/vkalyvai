@@ -1,4 +1,4 @@
-<div class="lk__input-grid lk__main-form__date-wrapper">
+<div class="lk__input-grid grid-3-columns">
     <div class="select" data-id="day">
         <label class="filter-group__input select__input input input_has-icon">
             <input class="input__field" type="text" name="day" data-id="day" readonly placeholder="День">

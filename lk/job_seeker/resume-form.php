@@ -11,12 +11,14 @@
             <span class="progress-step" data-step="6"></span>
         </div>
         <h1 class="constructor-title page-title lk__page-title">Выберите или укажите профессию</h1>
-        <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
+        <div class="constructor__form-helper active" data-block="1">
+            <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
+        </div>
 
         <div class="constructor__forms">
             <!-- Шаг 1 -->
-            <form class="active grid-list" id="step-form-profession" data-form="1"
-                data-title="Выберите или укажите профессию" class="step-form active" method="post">
+            <form class="active grid-list step-form" id="step-form-profession" data-form="1"
+                data-title="Выберите или укажите профессию" method="post">
                 <div class="constructor__inputs-list grid-list">
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                         <label class="filter-group__checkbox checkbox">
@@ -38,32 +40,35 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="2">Далее</button>
+                    <button type="button" disabled class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" disabled class="btn btn_neutral prev-step btn_size-m">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="2">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="1">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 2 -->
-            <form class="grid-list" id="step-form-contact" data-form="2" data-title="Основная информация"
-                class="step-form constructor__contact-form" method="post">
-                <div class="constructor__inputs-set grid-list">
+            <form class="grid-list step-form constructor__contact-form" id="step-form-contact" data-form="2" data-title="Основная информация" method="post">
+                <div class="constructor__inputs-set">
                     <span class="subcaption">ФИО</span>
-                    <div class="constructor__inputs-list grid-list grid-2-columns">
-                        <div class="lk__input-wrapper big-input">
+                    <div class="constructor__inputs-list grid-list grid-3-columns">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="secondName" placeholder="Фамилия">
                         </div>
-                        <div class="lk__input-wrapper big-input">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="name" placeholder="Имя">
                         </div>
-                        <div class="lk__input-wrapper big-input">
+                        <div class="lk__input-wrapper">
                             <input type="text" value="" name="patronymic" placeholder="Отчество">
                         </div>
                     </div>
                 </div>
                 <div class="constructor__inputs-set">
                     <span class="subcaption">Пол</span>
-                    <div class="lk__radio-buttons">
+                    <div class="lk__radio-buttons gender-select">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="gender" value="male" checked="">
                             <span class="radio__label">Мужской</span>
@@ -78,7 +83,7 @@
                     <span class="subcaption">Дата рождения</span>
                     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/date-fields.php"); ?>
                 </div>
-                <div class="constructor__inputs-set constructor-select big-select">
+                <div class="constructor__inputs-set constructor-select">
                     <span class="subcaption">Гражданство</span>
                     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/country-field.php"); ?>
                 </div>
@@ -113,7 +118,7 @@
                                         <g >
                                             <path
                                                 d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2334">
@@ -129,7 +134,7 @@
                                         <g >
                                             <path
                                                 d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2339">
@@ -175,7 +180,7 @@
                                         <g >
                                             <path
                                                 d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2334">
@@ -191,7 +196,7 @@
                                         <g >
                                             <path
                                                 d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2339">
@@ -244,7 +249,7 @@
                                         <g >
                                             <path
                                                 d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2334">
@@ -260,7 +265,7 @@
                                         <g >
                                             <path
                                                 d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2339">
@@ -313,7 +318,7 @@
                                         <g >
                                             <path
                                                 d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2334">
@@ -329,7 +334,7 @@
                                         <g >
                                             <path
                                                 d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2339">
@@ -382,7 +387,7 @@
                                         <g >
                                             <path
                                                 d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2334">
@@ -398,7 +403,7 @@
                                         <g >
                                             <path
                                                 d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z"
-                                                fill="#232323" />
+                                                fill="#999999" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_7002_2339">
@@ -424,7 +429,7 @@
                             </div>
                         </div>
                         <button data-call-modal="add__contacts"
-                            class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
+                            class="contact-add btn btn_light btn_size-m lk__btn_has-icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g >
@@ -443,15 +448,18 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="1">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="3">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="1">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="2">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 3 -->
-            <form class="grid-list" id="step-form-education" data-form="3" data-title="Образование" class="step-form"
+            <form class="grid-list step-form" id="step-form-education" data-form="3" data-title="Образование"
                 method="post">
                 <div class="education-wrapper grid-list">
                     <?php if(isset($_GET['fill']) && $_GET['fill'] == 'Y'): ?>
@@ -516,24 +524,24 @@
                                         </div>
                                     </div>
                                     <div class="grid-2-columns constructor__inputs-list grid-list">
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Название учебного заведения">
                                         </div>
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Специальность">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -579,24 +587,24 @@
                                     </div>
                                 </div>
                                 <div class="grid-2-columns constructor__inputs-list grid-list">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Название учебного заведения">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Специальность">
                                     </div>
                                 </div>
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -612,7 +620,7 @@
                     </div>
                     
                     <button data-add-block="education-base"
-                        class="education-add btn btn_light btn_size-xl lk__btn_has-icon">
+                        class="education-add btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -638,24 +646,24 @@
                                 <div class="constructor__inputs-block">
                                     <span class="subcaption">Повышение квалификации</span>
                                     <div class="constructor__inputs-list grid-2-columns grid-list">
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Название курса">
                                         </div>
-                                        <div class="lk__input-wrapper big-input">
+                                        <div class="lk__input-wrapper">
                                             <input type="text" value="" placeholder="Специальность">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -673,24 +681,24 @@
                             <div class="constructor__inputs-block">
                                 <span class="subcaption">Повышение квалификации</span>
                                 <div class="constructor__inputs-list grid-list grid-2-columns">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Название курса">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Специальность">
                                     </div>
                                 </div>
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="grid-2-columns date-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -706,7 +714,7 @@
                     </div>
                     
                     <button data-add-block="education-dop"
-                        class="education-add btn btn_light btn_size-xl lk__btn_has-icon">
+                        class="education-add btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -724,152 +732,162 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="2">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="4">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="4">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="3">
                 <input type="hidden" name="form_action" value="save_step">
             </form>
 
             <!-- Шаг 4 -->
-            <form class="grid-list" id="step-form-skills" data-form="4" data-title="Навыки" class="step-form"
-                method="post">
-                <div class="constructor__skills top-skills grid-list">
-                    <input type="hidden" name="skills" id="skills">
-                    <div class="constructor__bubbles-list bright-bubbles">
-                        <div class="constructor__bubbles-item remove-skill">
-                            <span>Коммуникабельность</span>
-                            <button class="btn transp-btn">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g >
-                                        <path
-                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                            fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4827_39596">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="constructor__bubbles-item remove-skill">
-                            <span>Выявление потребностей</span>
-                            <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g >
-                                        <path
-                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                            fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4827_39596">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg></button>
-
-                        </div>
-                        <div class="constructor__bubbles-item remove-skill">
-                            <span>Уравновешенность</span>
-                            <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g >
-                                        <path
-                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                            fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4827_39596">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg></button>
-
-                        </div>
-                        <div class="constructor__bubbles-item remove-skill">
-                            <span>Консультирование клиентов</span>
-                            <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g >
-                                        <path
-                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                            fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4827_39596">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg></button>
-
-                        </div>
-                        <div class="constructor__bubbles-item remove-skill">
-                            <span>Составление договоров</span>
-                            <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g >
-                                        <path
-                                            d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
-                                            fill="#232323" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4827_39596">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg></button>
-
-                        </div>
+            <div class="grid-list step-form skills-block" data-form="4" data-title="Навыки">
+                <div class="constructor__bubbles-list bright-bubbles">
+                    <div class="constructor__bubbles-item remove-skill">
+                        <span>Коммуникабельность</span>
+                        <button class="btn transp-btn">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path
+                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                        fill="#232323" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4827_39596">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="constructor__bubbles-list gray-bubbles">
-                        <div class="constructor__bubbles-item add-skill">Коммуникабельность</div>
-                        <div class="constructor__bubbles-item add-skill">Выявление потребностей</div>
-                        <div class="constructor__bubbles-item add-skill">Уравновешенность</div>
-                        <div class="constructor__bubbles-item add-skill">Консультирование клиентов</div>
-                        <div class="constructor__bubbles-item add-skill">Составление договоров</div>
-                        <div class="constructor__bubbles-item add-skill">Пассивные продажи</div>
-                        <div class="constructor__bubbles-item add-skill">Аудит компании</div>
-                        <div class="constructor__bubbles-item add-skill">Анализ целевой аудитории</div>
-                        <div class="constructor__bubbles-item add-skill">Наставничество</div>
-                        <div class="constructor__bubbles-item add-skill">Планирование продаж</div>
+                    <div class="constructor__bubbles-item remove-skill">
+                        <span>Выявление потребностей</span>
+                        <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path
+                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                        fill="#232323" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4827_39596">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></button>
+
+                    </div>
+                    <div class="constructor__bubbles-item remove-skill">
+                        <span>Уравновешенность</span>
+                        <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path
+                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                        fill="#232323" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4827_39596">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></button>
+
+                    </div>
+                    <div class="constructor__bubbles-item remove-skill">
+                        <span>Консультирование клиентов</span>
+                        <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path
+                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                        fill="#232323" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4827_39596">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></button>
+
+                    </div>
+                    <div class="constructor__bubbles-item remove-skill">
+                        <span>Составление договоров</span>
+                        <button class="btn transp-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path
+                                        d="M8.86426 3.77246L6.63672 6L8.86426 8.22754L8.22754 8.86426L6.00098 6.63672L3.77344 8.86426L3.13672 8.22754L5.36426 6L3.13672 3.77246L3.77344 3.13672L6.00098 5.36328L8.22754 3.13672L8.86426 3.77246Z"
+                                        fill="#232323" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4827_39596">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg></button>
+
                     </div>
                 </div>
-                <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="3">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="5">Далее</button>
+                <div class="constructor__form-helper skills-search" data-block="4">
+                    <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/search.php"); ?>
                 </div>
-                <input type="hidden" name="step" value="4">
-                <input type="hidden" name="form_action" value="save_step">
-            </form>
+                <form class="grid-list" id="step-form-skills" method="post">
+                    <div class="constructor__skills top-skills grid-list">
+                        <input type="hidden" name="skills" id="skills">
+                        <div class="constructor__bubbles-list gray-bubbles">
+                            <div class="constructor__bubbles-item add-skill">Коммуникабельность</div>
+                            <div class="constructor__bubbles-item add-skill">Выявление потребностей</div>
+                            <div class="constructor__bubbles-item add-skill">Уравновешенность</div>
+                            <div class="constructor__bubbles-item add-skill">Консультирование клиентов</div>
+                            <div class="constructor__bubbles-item add-skill">Составление договоров</div>
+                            <div class="constructor__bubbles-item add-skill">Пассивные продажи</div>
+                            <div class="constructor__bubbles-item add-skill">Аудит компании</div>
+                            <div class="constructor__bubbles-item add-skill">Анализ целевой аудитории</div>
+                            <div class="constructor__bubbles-item add-skill">Наставничество</div>
+                            <div class="constructor__bubbles-item add-skill">Планирование продаж</div>
+                        </div>
+                    </div>
+                    <div class="constructor__forms-actions">
+                        <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                        <div class="prev-back__actions">
+                            <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="3">Назад</button>
+                            <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="5">Далее</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="step" value="4">
+                    <input type="hidden" name="form_action" value="save_step">
+                </form>
+            </div>
 
             <!-- Шаг 5 -->
-            <form class="grid-list" id="step-form-experience" data-form="5" data-title="Опыт работы" class="step-form"
+            <form class="grid-list step-form" id="step-form-experience" data-form="5" data-title="Опыт работы"
                 method="post">
                 <div class="experience-wrapper grid-list template-wrapper">
                     <template id="company">
                         <div class="experience-block grid-list">
                             <div class="constructor__inputs-set grid-list">
                                 <div class="constructor__inputs-list grid-list grid-2-columns">
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Компания">
                                     </div>
-                                    <div class="lk__input-wrapper big-input">
+                                    <div class="lk__input-wrapper">
                                         <input type="text" value="" placeholder="Должность">
                                     </div>
                                 </div>
                                 <div class="constructor-select">
                                     <div class="grid-2-columns constructor__inputs-set grid-list">
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="date-columns grid-2-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Начало</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                             </div>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                         </div>
-                                        <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                        <div class="date-columns grid-2-columns constructor__inputs-list grid-list">
                                             <div class="grid-2-columns__with-title">
                                                 <span>Окончание</span>
                                                 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -885,7 +903,7 @@
                             </div>
                             <div class="constructor__inputs-set grid-list duties">
                                 <span class="subcaption">Основные обязанности</span>
-                                <div class="lk__input-wrapper constructor__textarea-wrapper textarea">
+                                <div class="constructor__textarea-wrapper textarea">
                                     <textarea name="descr" id="" placeholder="Описание работы"></textarea>
                                 </div>
                                 <div class="constructor__hints-wrapper swiper">
@@ -910,23 +928,23 @@
                     <div class="experience-block grid-list">
                         <div class="constructor__inputs-set grid-list">
                             <div class="constructor__inputs-list grid-list grid-2-columns">
-                                <div class="lk__input-wrapper big-input">
+                                <div class="lk__input-wrapper">
                                     <input type="text" value="" placeholder="Компания">
                                 </div>
-                                <div class="lk__input-wrapper big-input">
+                                <div class="lk__input-wrapper">
                                     <input type="text" value="" placeholder="Должность">
                                 </div>
                             </div>
                             <div class="constructor-select">
                                 <div class="grid-2-columns constructor__inputs-set grid-list">
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="date-columns grid-2-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Начало</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
                                         </div>
                                         <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/year-field.php"); ?>
                                     </div>
-                                    <div class="grid-2-columns constructor__inputs-list grid-list big-select">
+                                    <div class="date-columns grid-2-columns constructor__inputs-list grid-list">
                                         <div class="grid-2-columns__with-title">
                                             <span>Окончание</span>
                                             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/fields/month-field.php"); ?>
@@ -942,7 +960,7 @@
                         </div>
                         <div class="constructor__inputs-set grid-list duties">
                             <span class="subcaption">Основные обязанности</span>
-                            <div class="lk__input-wrapper constructor__textarea-wrapper textarea">
+                            <div class="constructor__textarea-wrapper textarea">
                                 <textarea name="descr" id="" placeholder="Описание работы"></textarea>
                             </div>
                             <div class="constructor__hints-wrapper swiper">
@@ -965,7 +983,7 @@
                     </div>
                 </div>
                 
-                <button data-add-block="company" class="contact-add btn btn_light btn_size-xl lk__btn_has-icon">
+                <button data-add-block="company" class="contact-add btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -981,8 +999,11 @@
                     <span>Добавить место работы</span>
                 </button>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_neutral prev-step btn_size-l" data-prev-step="4">Назад</button>
-                    <button type="submit" class="btn btn_primary btn-next btn_size-l" data-next-step="6">Далее</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                    <div class="prev-back__actions">
+                        <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="4">Назад</button>
+                        <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="6">Далее</button>
+                    </div>
                 </div>
                 <input type="hidden" name="step" value="5">
                 <input type="hidden" name="form_action" value="save_step">
@@ -1057,9 +1078,12 @@
                         </div>
                     </div>
                     <div class="constructor__forms-actions">
-                        <button type="button" class="btn btn_neutral prev-step btn_size-l"
-                            data-prev-step="5">Назад</button>
-                        <button type="submit" class="btn btn_primary btn-next btn_size-l">Далее</button>
+                        <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="resume-page">Предпросмотр</button>
+                        <div class="prev-back__actions">
+                            <button type="button" class="btn btn_neutral prev-step btn_size-m"
+                                data-prev-step="5">Назад</button>
+                            <button type="submit" class="btn btn_primary btn-next btn_size-m">Опубликовать</button>
+                        </div>
                     </div>
                     <input type="hidden" name="step" value="5">
                     <input type="hidden" name="form_action" value="save_step">
