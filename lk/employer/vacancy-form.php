@@ -561,7 +561,7 @@
                 <div class="constructor__inputs-set">
                     <div class="constructor__inputs-title">
                         <span class="subcaption">Описание</span>
-                        <p>Проверьте, чтобы в тексте не было дискриминации: упоминаний пола, возраста и национальности. Заодно посмотрите, нет ли нарушений правил или ошибок генерации</p>
+                        <p>Проверьте, чтобы в тексте не было <a href="javascript:void(0)">дискриминации</a>: упоминаний пола, возраста и национальности. Заодно посмотрите, нет ли нарушений <a href="javascript:void(0)">правил</a> или ошибок генерации</p>
                     </div>
                     <div class="constructor__textarea-wrapper textarea">
                         <textarea name="descr" id="" placeholder="Описание работы"></textarea>

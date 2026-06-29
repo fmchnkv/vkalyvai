@@ -1764,7 +1764,7 @@
         &.flex-list {
             .lk__input-wrapper {
                 max-width: max-content;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 100%;
             }
         }
@@ -2119,7 +2119,11 @@
             });
             .media-min(1024px, {
                 padding: 0;
-                max-width: 808px;
+                max-width: 720px;
+            });
+            .media-min(1441px, {
+                padding: 0;
+                max-width: 832px;
             });
         }
     }
@@ -2183,6 +2187,20 @@
             }
         }
         &__forms {
+            .lk__radio-buttons label .radio__label {
+                font-size: @f-body;
+
+                .media-min(1441px, {
+                    padding: 16px 20px;
+                });
+            }
+            .constructor__inputs-checkbox {
+                padding: 11px 12px;
+
+                .media-min(1441px, {
+                    padding: 15px 16px;
+                });
+            }
             .btn_size-m {
                 .media-min(1441px, {
                     padding: 15px;
@@ -2304,6 +2322,10 @@
                 .lk__input-wrapper {
                     padding: 12px;
 
+                    .media-min(1441px, {
+                        padding: 16px !important;
+                    });
+
                     &.driver-item {
                         padding: 11px 16px;
                     }
@@ -2318,7 +2340,11 @@
                 }
 
                 .template-wrapper {
-                    gap: 32px;
+                    gap: 24px;
+
+                    .media-min(768px, {
+                        gap: 32px;
+                    });
                 }
 
                 &.active {
@@ -2435,6 +2461,12 @@
             });
         }
         &__inputs {
+            &-title {
+                a {
+                    text-decoration: underline;
+                    color: @neutral;
+                }
+            }
             &-checkbox {
                 padding: 12px;
 
@@ -2734,6 +2766,7 @@
                 .flex-center();
                 flex-direction: column;
                 gap: 8px;
+                max-width: 352px;
 
                 .file-input-title {
                     font-size: @f-body;

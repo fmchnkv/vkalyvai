@@ -1701,7 +1701,7 @@
 }
 .lk__checkbox-buttons.flex-list .lk__input-wrapper {
   max-width: max-content;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 100%;
 }
 .lk__checkbox-buttons label {
@@ -2018,7 +2018,13 @@
 @media screen and (min-width: 1024px) {
   .lk.constructor .container {
     padding: 0;
-    max-width: 808px;
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .lk.constructor .container {
+    padding: 0;
+    max-width: 832px;
   }
 }
 .lk .constructor__contact-form {
@@ -2080,6 +2086,22 @@
 @media screen and (min-width: 1441px) {
   .lk .constructor__form-helper .field {
     padding: 13px;
+  }
+}
+.lk .constructor__forms .lk__radio-buttons label .radio__label {
+  font-size: 16px;
+}
+@media screen and (min-width: 1441px) {
+  .lk .constructor__forms .lk__radio-buttons label .radio__label {
+    padding: 16px 20px;
+  }
+}
+.lk .constructor__forms .constructor__inputs-checkbox {
+  padding: 11px 12px;
+}
+@media screen and (min-width: 1441px) {
+  .lk .constructor__forms .constructor__inputs-checkbox {
+    padding: 15px 16px;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -2187,6 +2209,11 @@
 .lk .constructor__forms .step-form .lk__input-wrapper {
   padding: 12px;
 }
+@media screen and (min-width: 1441px) {
+  .lk .constructor__forms .step-form .lk__input-wrapper {
+    padding: 16px !important;
+  }
+}
 .lk .constructor__forms .step-form .lk__input-wrapper.driver-item {
   padding: 11px 16px;
 }
@@ -2199,7 +2226,12 @@
   }
 }
 .lk .constructor__forms .step-form .template-wrapper {
-  gap: 32px;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .lk .constructor__forms .step-form .template-wrapper {
+    gap: 32px;
+  }
 }
 .lk .constructor__forms .step-form.active {
   max-width: 100%;
@@ -2311,6 +2343,10 @@
   .lk .constructor__skills {
     margin-bottom: 32px;
   }
+}
+.lk .constructor__inputs-title a {
+  text-decoration: underline;
+  color: #999999;
 }
 .lk .constructor__inputs-checkbox {
   padding: 12px;
@@ -2595,6 +2631,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 8px;
+  max-width: 352px;
 }
 .lk .constructor__files-input-text .file-input-title {
   font-size: 16px;
