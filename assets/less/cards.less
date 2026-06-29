@@ -6,15 +6,18 @@
     &--grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
 
         .media-min(768px, {
             grid-template-columns: repeat(2, 1fr);
         });
 
-        .media-min(1441px, {
+        .media-min(1280px, {
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+        });
+
+        .media-min(1441px, {
+            gap: 16px;
         });
     }   
 }
@@ -26,14 +29,14 @@
     flex-direction: column;
     padding: 16px;
 
-    min-height: 220px;
+    min-height: 260px;
     
     transition-property: box-shadow;
     .transition-ext(.3s, ease-in-out);
     
     .media-min(768px, {
         padding: 24px;
-        min-height: 260px;
+        min-height: 298px;
     });
     
     &:hover {

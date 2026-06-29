@@ -42,6 +42,6 @@ $role = isset($_GET['role']) ? $_GET['role'] : 0;
         <? endif; ?>
 
         <button type="submit" class="auth-login__submit btn btn_primary btn_size-m">Войти</button>
-        <p class="auth-login__accept">Продолжая, вы принимаете <a href="/pages/privacy.php">политику конфиденциальности</a> и <a href="#">правила сервиса</a></p>
+        <p class="auth-login__accept">Продолжая, вы принимаете <a href="/pages/privacy.php">политику конфиденциальности</a> и <a href="/pages/legal.php">правила сервиса</a></p>
     </form>
 </div>
