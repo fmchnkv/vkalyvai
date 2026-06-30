@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         curOption.classList.remove('active');
                     });
 
-                    if (id === 'sort') {
+                    if (id === 'sort' || id === 'time') {
                         parentItem.querySelector('.js-sort-btn span').textContent = option.dataset.value;
                     }
 
