@@ -1,5 +1,7 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<?
+$uri = $_SERVER['REQUEST_URI'];
+?>
 <div class="breadcrumbs">
     <div class="container">
         <a href="/pages/rezumes.php" class="breadcrumbs__back btn-link">
@@ -185,18 +187,18 @@
                     <div class="rezume__driving-skills detail__section">
                         <span class="subcaption">Водительское удостоверение</span>
                         <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Категория B</li>
-                            <li class="tags__item tag tag_size-m">Категория A</li>
-                            <li class="tags__item tag tag_size-m">Категория C</li>
+                            <li class="tags__item tag tag_size-m">A</li>
+                            <li class="tags__item tag tag_size-m">B</li>
+                            <li class="tags__item tag tag_size-m">C</li>
                         </ul>
                     </div>
 
                     <div class="rezume__language-skills detail__section">
                         <span class="subcaption">Знание языков</span>
                         <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Русский - родной</li>
-                            <li class="tags__item tag tag_size-m">Английский А1</li>
-                            <li class="tags__item tag tag_size-m">Польский B2</li>
+                            <li class="tags__item tag tag_size-m">Русский</li>
+                            <li class="tags__item tag tag_size-m">Английский</li>
+                            <li class="tags__item tag tag_size-m">Казахский</li>
                         </ul>
                     </div>
 
@@ -341,7 +343,7 @@
 
             <div class="detail__sidebar">
                 <div class="detail__actions">
-                    <a href="/lk/index.php" class="detail__btn btn btn_primary btn_size-l">Связаться</a>
+                    <a href="<?php echo str_contains($uri, 'employer') ? '/lk/employer/index.php' : '/lk/job_seeker/index.php'; ?>" class="detail__btn btn btn_primary btn_size-l">Связаться</a>
                     <button class="detail__like btn btn_light btn_size-m btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >

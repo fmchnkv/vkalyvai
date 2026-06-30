@@ -19,12 +19,15 @@
         <div class="sorting__dropdown" data-id="sort">
             <ul class="sorting__dropdown-list">
                 <li class="sorting__option active" data-value="По новизне">По новизне</li>
+                <li class="sorting__option" data-value="По активности">По активности</li>
+                <li class="sorting__option" data-value="По зарплатным ожиданиям">По зарплатным ожиданиям</li>
+                <li class="sorting__option" data-value="По удаленности от вас">По удаленности от вас</li>
             </ul>
         </div>
     </div>
     <div class="sorting__item">
         <button class="sorting__button accordion-button btn-link js-sort-btn">
-            <span>Показывать по 4</span>
+            <span>Показывать по 16</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
                     <path
@@ -39,11 +42,11 @@
             </svg>
         </button>
         <!-- TODO: add dropdown  -->
-        <div class="sorting__dropdown" data-id="elements">
+        <div class="sorting__dropdown" data-id="count">
             <ul class="sorting__dropdown-list">
-                <li class="sorting__option active" data-value="Показывать по 4">Показывать по 4</li>
-                <li class="sorting__option" data-value="Показывать по 8">Показывать по 8</li>
-                <li class="sorting__option" data-value="Показывать по 16">Показывать по 16</li>
+                <li data-group="16" class="sorting__option active" data-value="16">Показывать по 16</li>
+                <li data-group="8" class="sorting__option" data-value="8">Показывать по 8</li>
+                <li data-group="4" class="sorting__option" data-value="4">Показывать по 4</li>
             </ul>
         </div>
     </div>

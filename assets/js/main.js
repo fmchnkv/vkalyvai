@@ -1655,23 +1655,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             uploadedFiles[type].forEach((file, index) => {
 
+                console.log(file);
+
+                const isImage = file.type.startsWith('image/');
+                const isDocument = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type) || /\.(pdf|doc|docx)$/i.test(file.name);
+
+
                 const preview = document.createElement('div');
                 preview.className = 'constructor__files-preview';
-
-                const img = document.createElement('img');
-                img.src = URL.createObjectURL(file);
-
+                let img = null;
                 const removeBtn = document.createElement('button');
-                removeBtn.type = 'button';
-                removeBtn.className = 'constructor__files-remove';
-                removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
-                                        </svg>
-                                        `;
-                removeBtn.dataset.index = index;
-
+                    removeBtn.type = 'button';
+                    removeBtn.className = 'constructor__files-remove';
+                    removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
+                                            </svg>
+                                            `;
+                    removeBtn.dataset.index = index;
+                if (isImage) {
+                    img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                } else if (isDocument) {
+                    const extension = file.name.split('.').pop().toLowerCase();
+                    img = document.createElement('div');
+                    img.textContent = extension;
+                }
                 preview.append(img, removeBtn);
-
                 resultWrapper.append(preview);
             });
             
@@ -1748,6 +1757,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!hasFiles && resultWrapper && noticeWrapper) {
                 resultWrapper.innerHTML = '';
             }
+        }
+    }
+
+    //сортировка в ЛК (временное)
+    const groupBtns = document.querySelectorAll('[data-group]');
+
+    if(groupBtns.length) {
+        groupBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showElements(Number(btn.dataset.group));
+            })
+        })
+
+        function showElements(elementsCount) {
+            const elements = document.querySelectorAll('.lk-card');
+
+            elements.forEach((element, index) => {
+                element.classList.toggle('hidden', index >= elementsCount);
+            });
         }
     }
 });
