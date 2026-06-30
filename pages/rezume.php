@@ -187,18 +187,18 @@ $uri = $_SERVER['REQUEST_URI'];
                     <div class="rezume__driving-skills detail__section">
                         <span class="subcaption">Водительское удостоверение</span>
                         <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Категория B</li>
-                            <li class="tags__item tag tag_size-m">Категория A</li>
-                            <li class="tags__item tag tag_size-m">Категория C</li>
+                            <li class="tags__item tag tag_size-m">A</li>
+                            <li class="tags__item tag tag_size-m">B</li>
+                            <li class="tags__item tag tag_size-m">C</li>
                         </ul>
                     </div>
 
                     <div class="rezume__language-skills detail__section">
                         <span class="subcaption">Знание языков</span>
                         <ul class="tags">
-                            <li class="tags__item tag tag_size-m">Русский - родной</li>
-                            <li class="tags__item tag tag_size-m">Английский А1</li>
-                            <li class="tags__item tag tag_size-m">Польский B2</li>
+                            <li class="tags__item tag tag_size-m">Русский</li>
+                            <li class="tags__item tag tag_size-m">Английский</li>
+                            <li class="tags__item tag tag_size-m">Казахский</li>
                         </ul>
                     </div>
 
