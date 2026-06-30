@@ -1017,7 +1017,7 @@
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" name="portfolio[]" multiple accept="image/png, image/jpeg">
+                            <input type="file" name="portfolio[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g >
@@ -1050,7 +1050,7 @@
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
                         <label class="constructor__files-input-wrapper">
-                            <input type="file" name="certificates[]" multiple accept="image/png, image/jpeg">
+                            <input type="file" name="certificates[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g >

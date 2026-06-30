@@ -762,8 +762,15 @@
 
                         <div class="select__dropdown">
                             <ul class="select__dropdown-list" data-id="external_language">
-                                <li class="select__option active" data-value="Английский">Английский</li>
-                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                <li class="select__option active" data-value="Русский">Русский</li>
+                                <li class="select__option" data-value="Узбекский">Узбекский</li>
+                                <li class="select__option" data-value="Казахский">Казахский</li>
+                                <li class="select__option" data-value="Таджикский">Таджикский</li>
+                                <li class="select__option" data-value="Киргизский">Киргизский</li>
+                                <li class="select__option" data-value="Армянский">Армянский</li>
+                                <li class="select__option" data-value="Азербайджанский">Азербайджанский</li>
+                                <li class="select__option" data-value="Китайский">Китайский</li>
+                                <li class="select__option" data-value="Английский">Английский</li>
                             </ul>
                         </div>
                     </div>
@@ -844,8 +851,15 @@
 
                         <div class="select__dropdown">
                             <ul class="select__dropdown-list" data-id="internal_language">
-                                <li class="select__option active" data-value="Английский">Английский</li>
-                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                <li class="select__option active" data-value="Русский">Русский</li>
+                                <li class="select__option" data-value="Узбекский">Узбекский</li>
+                                <li class="select__option" data-value="Казахский">Казахский</li>
+                                <li class="select__option" data-value="Таджикский">Таджикский</li>
+                                <li class="select__option" data-value="Киргизский">Киргизский</li>
+                                <li class="select__option" data-value="Армянский">Армянский</li>
+                                <li class="select__option" data-value="Азербайджанский">Азербайджанский</li>
+                                <li class="select__option" data-value="Китайский">Китайский</li>
+                                <li class="select__option" data-value="Английский">Английский</li>
                             </ul>
                         </div>
                     </div>

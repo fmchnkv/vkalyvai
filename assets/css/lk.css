@@ -2545,6 +2545,16 @@
   border-radius: 8px;
   position: relative;
 }
+.lk .constructor__files-preview > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FC7827;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+}
 .lk .constructor__files-preview img {
   object-fit: cover;
   height: 100%;

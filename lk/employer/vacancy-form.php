@@ -211,7 +211,7 @@
                         <div class="select__dropdown">
                             <ul class="select__dropdown-list" data-id="vacancy-city">
                                 <li class="select__option active" data-value="Москва">Москва</li>
-                                <li class="select__option" data-value="Санкт-Петербург">Санкт-Петербург</li>
+                                <li class="select__option" data-value="Санкт-Петербург">Санкт-Петербург</li>                            
                             </ul>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                             <div class="field__dropdown js-without-choice" data-id="vacancy_address">
                                 <ul class="field__dropdown-list">
                                     <li class="field__option js-select-item hidden" data-value="Ленина">Ленина</li>
-                                    <li class="field__option js-select-item hidden" data-value="Островского">Островского</li>
+                                    <li class="field__option js-select-item hidden" data-value="Островского">Островского</li>                            
                                 </ul>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                                     <ul class="select__dropdown-list" data-id="vacancy-currency">
                                         <li class="select__option active" data-value="₽">₽</li>
                                         <li class="select__option" data-value="$">$</li>
-                                        <li class="select__option" data-value="€">€</li>
+                                        <li class="select__option" data-value="€">€</li>                            
                                     </ul>
                                 </div>
                             </div>
@@ -314,7 +314,7 @@
                                 <div class="select__dropdown">
                                     <ul class="select__dropdown-list" data-id="vacancy-space">
                                         <li class="select__option active" data-value="За месяц">За месяц</li>
-                                        <li class="select__option" data-value="За день">За день</li>
+                                        <li class="select__option" data-value="За день">За день</li>                            
                                     </ul>
                                 </div>
                             </div>
@@ -623,8 +623,15 @@
 
                                             <div class="select__dropdown">
                                                 <ul class="select__dropdown-list" data-id="vacancy_language">
-                                                    <li class="select__option active" data-value="Английский">Английский</li>
-                                                    <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                                    <li class="select__option active" data-value="Русский">Русский</li>
+                                                    <li class="select__option" data-value="Узбекский">Узбекский</li>
+                                                    <li class="select__option" data-value="Казахский">Казахский</li>
+                                                    <li class="select__option" data-value="Таджикский">Таджикский</li>
+                                                    <li class="select__option" data-value="Киргизский">Киргизский</li>
+                                                    <li class="select__option" data-value="Армянский">Армянский</li>
+                                                    <li class="select__option" data-value="Азербайджанский">Азербайджанский</li>
+                                                    <li class="select__option" data-value="Китайский">Китайский</li>
+                                                    <li class="select__option" data-value="Английский">Английский</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -649,7 +656,7 @@
                                                 <ul class="select__dropdown-list" data-id="vacancy_language_level">
                                                     <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
                                                     <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
-                                                    <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                                                    <li class="select__option" data-value="B1-Средний">B1-Средний</li>                            
                                                 </ul>
                                             </div>
                                         </div>
@@ -693,8 +700,15 @@
 
                                         <div class="select__dropdown">
                                             <ul class="select__dropdown-list" data-id="vacancy_language">
-                                                <li class="select__option active" data-value="Английский">Английский</li>
-                                                <li class="select__option" data-value="Немецкий">Немецкий</li>
+                                                    <li class="select__option active" data-value="Русский">Русский</li>
+                                                    <li class="select__option" data-value="Узбекский">Узбекский</li>
+                                                    <li class="select__option" data-value="Казахский">Казахский</li>
+                                                    <li class="select__option" data-value="Таджикский">Таджикский</li>
+                                                    <li class="select__option" data-value="Киргизский">Киргизский</li>
+                                                    <li class="select__option" data-value="Армянский">Армянский</li>
+                                                    <li class="select__option" data-value="Азербайджанский">Азербайджанский</li>
+                                                    <li class="select__option" data-value="Китайский">Китайский</li>
+                                                    <li class="select__option" data-value="Английский">Английский</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -717,9 +731,9 @@
 
                                         <div class="select__dropdown">
                                             <ul class="select__dropdown-list" data-id="vacancy_language_level">
-                                                <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
-                                                <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
-                                                <li class="select__option" data-value="B1-Средний">B1-Средний</li>
+                                                    <li class="select__option active" data-value="А1-Начальный">А1-Начальный</li>
+                                                    <li class="select__option" data-value="А2-Элементарный">А2-Элементарный</li>
+                                                    <li class="select__option" data-value="B1-Средний">B1-Средний</li>                            
                                             </ul>
                                         </div>
                                     </div>
