@@ -1759,4 +1759,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    //сортировка в ЛК (временное)
+    const groupBtns = document.querySelectorAll('[data-group]');
+
+    if(groupBtns.length) {
+        groupBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showElements(Number(btn.dataset.group));
+            })
+        })
+
+        function showElements(elementsCount) {
+            const elements = document.querySelectorAll('.lk-card');
+
+            elements.forEach((element, index) => {
+                element.classList.toggle('hidden', index >= elementsCount);
+            });
+        }
+    }
 });
