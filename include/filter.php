@@ -393,6 +393,10 @@
                                 <input class="checkbox__input" type="checkbox" name="has_salary" value="2">
                                 <span class="checkbox__label">E</span>
                             </label>
+                            <label class="filter-group__checkbox checkbox" style="margin-top: 12px;">
+                                <input class="checkbox__input" type="checkbox" name="has_salary" value="1">
+                                <span class="checkbox__label">Со своим автомобилем</span>
+                            </label>
                         </div>
                     </div>
 
