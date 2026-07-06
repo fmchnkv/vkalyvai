@@ -75,7 +75,7 @@
                 </div>
                 <span class="about-features__caption">Возможности для соискателя</span>
                 <div class="about-features__tabs">
-                    <a href="/lk/job_seeker/resume-form.php" class="about-features__tab btn btn_primary btn_size-s">Покажи себя</a>
+                    <a href="/lk/job_seeker/resume-form.php" class="about-features__tab tab active btn_size-s">Покажи себя</a>
                     <a href="/pages/vacancies.php" class="about-features__tab tab btn_size-s">Изучи рынок</a>
                     <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Выбирай, где работать</a>
                     <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>
@@ -87,7 +87,7 @@
                 </div>
                 <span class="about-features__caption">Возможности для работодателя</span>
                 <div class="about-features__tabs">
-                    <a href="/lk/employer/vacancy-form.php" class="about-features__tab btn btn_primary btn_size-s">Заяви о своей компании</a>
+                    <a href="/lk/employer/vacancy-form.php" class="about-features__tab tab active btn_size-s">Заяви о своей компании</a>
                     <a href="/pages/rezumes.php" class="about-features__tab tab btn_size-s">Выбирай лучших в штат</a>
                     <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Управляй наймом в один клик</a>
                     <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>

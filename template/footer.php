@@ -775,6 +775,8 @@
                         </div>
                     </div>
                 </div>
+                <? 
+                /*
                 <div class="lk__input-element">
                     <span class="subcaption">Уровень владения</span>
                     <div class="select" data-id="language_level">
@@ -803,6 +805,8 @@
                         </div>
                     </div>
                 </div>
+                */
+                ?>
             </div>
             <button type="submit" class="btn btn_size-m btn_primary">
                 <span>Применить</span>

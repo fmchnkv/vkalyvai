@@ -117,17 +117,27 @@ input {
 .link {
     color: @default;
     border-bottom: 1px solid transparent;
-    transition-property: color, border-color;
+    transition-property: color, border-bottom;
 
-    .transition-ext(.3s, ease-in-out);
+    .transition-ext(.2s, ease-in-out);
 
     &:hover {
         color: @primary;
-        border-color: @primary;
+        border-bottom: 1px solid @primary;
     }
 
     &:active {
         color: @default;
+    }
+
+    &_underline {
+        border-bottom: 1px solid @default;
+        transition-property: color, border-bottom;
+        .transition-ext(.2s, ease-in-out);
+
+        &:hover {
+            border-bottom: 1px solid @primary;
+        }
     }
 }
 
