@@ -244,7 +244,7 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="show_vacancy-preview">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" disabled>Назад</button>
                         <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="2">Далее</button>
@@ -545,7 +545,7 @@
                 </div>
 
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="show_vacancy-preview">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="1">Назад</button>
                         <button type="submit" class="btn btn_primary btn-next btn_size-m" data-next-step="3">Далее</button>
@@ -823,7 +823,7 @@
                     </div>
                 </div>
                 <div class="constructor__forms-actions">
-                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="vacancy-page">Предпросмотр</button>
+                    <button type="button" class="btn btn_light btn_size-m preview-btn" data-call-modal="show_vacancy-preview">Предпросмотр</button>
                     <div class="prev-back__actions">
                         <button type="button" class="btn btn_neutral prev-step btn_size-m" data-prev-step="2">Назад</button>
                         <button type="submit" class="btn btn_primary btn-next btn_size-m">Опубликовать</button>

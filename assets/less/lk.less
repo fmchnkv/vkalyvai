@@ -127,8 +127,6 @@
     &.language-list {
         .media-min(768px, {
             grid-template-columns: repeat(2, 1fr);
-        });
-        .media-min(1024px, {
             max-width: 60%;
         });
     }
@@ -211,7 +209,7 @@
     }
 
     .subcaption {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
 
         .media-min(768px, {
             margin-bottom: 24px;
@@ -388,8 +386,6 @@
 
                 .media-min(768px, {
                     order: 1;
-                });
-                .media-min(1024px, {
                     flex: 0 0 180px;
                 });
 
@@ -426,8 +422,6 @@
 
                 .media-min(768px, {
                     order: 2;
-                });
-                .media-min(1024px, {
                     flex: 1 1 0;
                     width: auto;
                     min-width: 0;
@@ -461,8 +455,6 @@
             button {
                 .media-min(768px, {
                     order: 3;
-                });
-                .media-min(1024px, {
                     flex: 0 0 32px;
                 });
             }
@@ -2827,7 +2819,40 @@
     label {
         cursor: pointer;
     }
+
+    .not-editable {
+        pointer-events: none;
+    }
     
+    .moderator__profile-editor {
+        .deals-list {
+            .media-min(768px, {
+                grid-template-columns: repeat(2, 1fr);
+            });
+        }
+    }
+}
+
+.constructor__modal {
+    .modal__content {
+        overflow-y: auto;
+
+        .portfolio-slider__carousel, .sertificates-slider__carousel {
+            overflow: hidden;
+        }
+
+        .rezume-header__top {
+            .media-min(1441px, {
+                margin-bottom: 24px;
+            });
+        }
+
+        .rezume-header__bottom {
+            .media-min(768px, {
+                padding-left: 0;
+            });
+        }
+    }
 }
 
 .btn--ok {

@@ -150,10 +150,6 @@
 @media screen and (min-width: 768px) {
   .grid-bubbles.language-list {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .grid-bubbles.language-list {
     max-width: 60%;
   }
 }
@@ -239,7 +235,7 @@
   }
 }
 .lk .subcaption {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .lk .subcaption {
@@ -410,10 +406,6 @@
 @media screen and (min-width: 768px) {
   .lk-bubble__education .date {
     order: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lk-bubble__education .date {
     flex: 0 0 180px;
   }
 }
@@ -450,10 +442,6 @@
 @media screen and (min-width: 768px) {
   .lk-bubble__education .text {
     order: 2;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lk-bubble__education .text {
     flex: 1 1 0;
     width: auto;
     min-width: 0;
@@ -486,10 +474,6 @@
 @media screen and (min-width: 768px) {
   .lk-bubble__education button {
     order: 3;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lk-bubble__education button {
     flex: 0 0 32px;
   }
 }
@@ -2679,6 +2663,31 @@
 }
 .lk label {
   cursor: pointer;
+}
+.lk .not-editable {
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .lk .moderator__profile-editor .deals-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.constructor__modal .modal__content {
+  overflow-y: auto;
+}
+.constructor__modal .modal__content .portfolio-slider__carousel,
+.constructor__modal .modal__content .sertificates-slider__carousel {
+  overflow: hidden;
+}
+@media screen and (min-width: 1441px) {
+  .constructor__modal .modal__content .rezume-header__top {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .constructor__modal .modal__content .rezume-header__bottom {
+    padding-left: 0;
+  }
 }
 .btn--ok {
   display: block;
