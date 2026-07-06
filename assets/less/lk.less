@@ -2237,27 +2237,13 @@
                 }
                 &__currency-inputs {
                     width: 100%;
-                    grid-template-columns: repeat(3, 1fr);
                     .media-min(768px, {
-                        width: 40%;
+                        width: 30%;
                     });
 
                     input {
                         &::placeholder {
                             color: @default;
-                        }
-                    }
-
-                    [data-id="vacancy-space"] {
-                        grid-column-start: 2;
-                        grid-column-end: 4;
-                    }
-
-                    [data-id="vacancy-currency"] {
-                        input {
-                            &::placeholder {
-                                font-weight: 600;
-                            }
                         }
                     }
                 }
@@ -2272,7 +2258,7 @@
                     width: 100%;
 
                     .media-min(768px, {
-                        width: 60%;
+                        width: 70%;
                     });
                 }
                 &__radios {
@@ -2845,11 +2831,18 @@
             .media-min(1441px, {
                 margin-bottom: 24px;
             });
+
+            .offer-header__title {
+                max-width: 95%;
+            }
         }
 
         .rezume-header__bottom {
             .media-min(768px, {
                 padding-left: 0;
+            });
+            .media-min(1600px, {
+                margin-top: 0;
             });
         }
     }
