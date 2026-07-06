@@ -2128,22 +2128,14 @@
 }
 .lk .constructor__forms .vacancy-form__currency-inputs {
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
 }
 @media screen and (min-width: 768px) {
   .lk .constructor__forms .vacancy-form__currency-inputs {
-    width: 40%;
+    width: 30%;
   }
 }
 .lk .constructor__forms .vacancy-form__currency-inputs input::placeholder {
   color: #232323;
-}
-.lk .constructor__forms .vacancy-form__currency-inputs [data-id="vacancy-space"] {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-.lk .constructor__forms .vacancy-form__currency-inputs [data-id="vacancy-currency"] input::placeholder {
-  font-weight: 600;
 }
 .lk .constructor__forms .vacancy-form__titles-inputs {
   grid-template-columns: repeat(3, 1fr);
@@ -2156,7 +2148,7 @@
 }
 @media screen and (min-width: 768px) {
   .lk .constructor__forms .vacancy-form__prices-inputs {
-    width: 60%;
+    width: 70%;
   }
 }
 .lk .constructor__forms .vacancy-form__radios .lk__input-radio {
