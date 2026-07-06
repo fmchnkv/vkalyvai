@@ -2676,9 +2676,17 @@
     margin-bottom: 24px;
   }
 }
+.constructor__modal .modal__content .rezume-header__top .offer-header__title {
+  max-width: 95%;
+}
 @media screen and (min-width: 768px) {
   .constructor__modal .modal__content .rezume-header__bottom {
     padding-left: 0;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .constructor__modal .modal__content .rezume-header__bottom {
+    margin-top: 0;
   }
 }
 .btn--ok {
