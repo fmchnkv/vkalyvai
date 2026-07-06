@@ -1,6 +1,10 @@
 <div class="employer__responces-list grid-list">
     <div class="employer__responces-item lk-card">
-        <span class="employer__responces-item__status state publish">Приглашение</span>
+        <div class="state-wrapper">
+            <span class="employer__responces-item__status state publish">Приглашение</span>
+            <span class="responces-item__count">1</span>
+        </div>
+        
         <div class="employer__responces-item__vacancy">Название вакансии</div>
         <div class="employer__responces-item__body">
             <div class="employer__responces-item__title">

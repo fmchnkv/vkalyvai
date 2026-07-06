@@ -168,6 +168,11 @@
   color: #FFFFFF;
   max-width: max-content;
 }
+.state-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .state.publish {
   background-color: #5DB634;
 }
@@ -1016,6 +1021,19 @@
 }
 .lk .responces-item__status {
   color: #232323;
+}
+.lk .responces-item__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background-color: #5DB634;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  color: #FFFFFF;
+  border-radius: 100%;
 }
 .lk .responces-item__icon {
   max-width: 48px;
