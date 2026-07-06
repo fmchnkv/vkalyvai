@@ -1,3 +1,6 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
 <form class="catalog-nav__form employer__search-form inline-form">
     <div class="inline-form__row">
         <div class="inline-form__input-wrapper">
@@ -14,7 +17,7 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <input class="field__input" type="text" name="search" placeholder="Поиск по вакансиям">
+                <input class="field__input" type="text" name="search" placeholder="<?= str_contains($uri, 'job_seeker') ? 'Поиск по вакансиям' : (str_contains($uri, 'employer') ? 'Поиск по резюме' : 'Поиск'); ?>">
             </label>
         </div>
     </div>

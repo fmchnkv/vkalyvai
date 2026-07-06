@@ -146,6 +146,12 @@
     color: @white;
     max-width: max-content;
 
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &.publish {
         background-color: @green;
     }
@@ -1031,6 +1037,17 @@
             &__status {
                 color: @default;
             }
+            &__count {
+                .flex-center();
+                width: 22px;
+                height: 22px;
+                background-color: @green;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 114%;
+                color: @white;
+                border-radius: 100%;
+            }
             &__icon {
                 max-width: 48px;
                 max-height: 48px;
@@ -1517,6 +1534,11 @@
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
+                        flex-wrap: wrap;
+                    });
+
+                    .media-min(1080px, {
+                        flex-wrap: nowrap;
                     });
 
                     .buttons-wrapper {

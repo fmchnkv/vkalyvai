@@ -1,10 +1,16 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+$cardTitle = str_contains($uri, 'job_seeker') ? 'Ваше резюме поднялось в поиске' : 'Ваша вакансия поднялась в поиске';
+$cardTxt = str_contains($uri, 'job_seeker') ? 'За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.' : 'За последние 3 дня ваша вакансия стала чаще появляться в результатах поиска соискателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о вакансии или добавить новые навыки.';
+$cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать резюме' : 'Редактировать вакансию';
+?>
 <div class="notify-list grid-list">
     <div class="lk-card notify-list__item new">
         <div class="notify__item-body">
-            <h3>Ваше резюме поднялось в поиске</h3>
-            <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
+            <h3><?php echo $cardTitle; ?></h3>
+            <p><?php echo $cardTxt; ?></p>
             <button class="notify-action transp-btn lk__btn_has-icon">
-                <span>Редактировать резюме</span>
+                <span><?php echo $cardAction; ?></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
                         <path
@@ -20,6 +26,7 @@
             </button>
         </div>
     </div>
+    <?/*
     <div class="lk-card notify-list__item unseen">
         <a href="javascript:void(0)" class="notify-list__item-header">
             <div class="notify-item__avatar avatar empty">
@@ -56,12 +63,13 @@
             </button>
         </div>
     </div>
+    */?>
     <div class="lk-card notify-list__item viewed">
         <div class="notify__item-body">
-            <h3>Ваше резюме поднялось в поиске</h3>
-            <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
+            <h3><?php echo $cardTitle; ?></h3>
+            <p><?php echo $cardTxt; ?></p>
             <button class="notify-action transp-btn lk__btn_has-icon">
-                <span>Удалить</span>
+                <span><?php echo $cardAction; ?></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
                         <path
@@ -79,10 +87,10 @@
     </div>
     <div class="lk-card notify-list__item viewed">
         <div class="notify__item-body">
-            <h3>Ваше резюме поднялось в поиске</h3>
-            <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
+            <h3><?php echo $cardTitle; ?></h3>
+            <p><?php echo $cardTxt; ?></p>
             <button class="notify-action transp-btn lk__btn_has-icon">
-                <span>Удалить</span>
+                <span><?php echo $cardAction; ?></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
                         <path
@@ -100,10 +108,10 @@
     </div>
     <div class="lk-card notify-list__item new">
         <div class="notify__item-body">
-            <h3>Ваше резюме поднялось в поиске</h3>
-            <p>За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.</p>
+            <h3><?php echo $cardTitle; ?></h3>
+            <p><?php echo $cardTxt; ?></p>
             <button class="notify-action transp-btn lk__btn_has-icon">
-                <span>Редактировать резюме</span>
+                <span><?php echo $cardAction; ?></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g >
                         <path
@@ -119,6 +127,7 @@
             </button>
         </div>
     </div>
+    <?/*
     <div class="lk-card notify-list__item unseen">
         <a href="javascript:void(0)" class="notify-list__item-header">
             <div class="notify-item__avatar avatar empty">
@@ -154,6 +163,6 @@
                 </svg>
             </button>
         </div>
-    </div>
+    </div>*/?>
 </div>
 <? include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
