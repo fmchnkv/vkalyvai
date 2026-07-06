@@ -2830,6 +2830,28 @@
     
 }
 
+.constructor__modal {
+    .modal__content {
+        overflow-y: auto;
+
+        .portfolio-slider__carousel, .sertificates-slider__carousel {
+            overflow: hidden;
+        }
+
+        .rezume-header__top {
+            .media-min(1441px, {
+                margin-bottom: 24px;
+            });
+        }
+
+        .rezume-header__bottom {
+            .media-min(768px, {
+                padding-left: 0;
+            });
+        }
+    }
+}
+
 .btn--ok {
     display: block;
     max-width: 0;
