@@ -1,5 +1,8 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
 <div class="grid-bubbles grid-list personal-bubbles contact-fields">
-    <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble" method="post">
+    <form class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble input-edit-form tight-bubble with-icon bright-bubble" method="post">
         <div class="lk-bubble__content">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -63,7 +66,7 @@
             </button>
         </div>
     </form>
-    <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
+    <form class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
         <div class="lk-bubble__content">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -120,7 +123,7 @@
             </button>
         </div>
     </form>
-    <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
+    <form class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
         <div class="lk-bubble__content">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -184,7 +187,7 @@
             </button>
         </div>
     </form>
-    <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
+    <form class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
         <div class="lk-bubble__content">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -248,7 +251,7 @@
             </button>
         </div>
     </form>
-    <form class="lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
+    <form class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble input-edit-form tight-bubble with-icon bright-bubble">
         <div class="lk-bubble__content">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -312,6 +315,7 @@
             </button>
         </div>
     </form>
+    <?php if(!str_contains($uri, 'moderator')): ?>
     <button data-call-modal="add__contacts" class="contact-add btn btn_light btn_size-l lk__btn_has-icon">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g >
@@ -327,4 +331,5 @@
         </svg>
         <span>Добавить</span>
     </button>
+    <?php endif; ?>
 </div>

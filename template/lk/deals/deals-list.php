@@ -6,6 +6,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state publish">Опубликовано</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +37,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -47,6 +49,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -57,11 +60,13 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>64</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state working">На доработке</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +97,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -103,6 +109,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -113,11 +120,13 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>-</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state blocked">Заблокировано</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,6 +157,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -159,6 +169,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -169,11 +180,13 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>-</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state neutral">На модерации</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,6 +217,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -215,6 +229,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -225,11 +240,13 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>-</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state publish">Опубликовано</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -260,6 +277,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -271,6 +289,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -281,11 +300,13 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>64</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
             <span class="deals-item__status state working">На доработке</span>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,6 +337,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     </svg>
                 </button>
             </div>
+            <?php endif; ?>
         </div>
         <div class="deals-item__body">
             <div class="deals__title-block">
@@ -327,6 +349,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <li>Удаленно</li>
                 </ul>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="deals__info-block">
                 <div class="deals__item">
                     <span>Просмотры</span>
@@ -337,6 +360,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                     <p>-</p>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>

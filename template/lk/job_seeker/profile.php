@@ -1,3 +1,6 @@
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+?>
 <div class="lk__head">
     <div class="lk__person">
         <img src="/../images/avatar_rezume.png" alt="Avatar">
@@ -6,6 +9,7 @@
             <p>Российская федерация 01.01.1990</p>
         </div>
     </div>
+    <?php if(!str_contains($uri, 'moderator')): ?>
     <div class="lk__buttons">
         <a href="#" data-call-modal="edit__company" class="btn btn_size-m btn_primary lk__btn_has-icon profile-btn">
             <div class="mob-elem icons-block">
@@ -35,32 +39,33 @@
             </svg>
         </a>
     </div>
+    <?php endif; ?>
 </div>
 
 <div class="lk__content detail__section">
     <span class="subcaption">Основная информация</span>
     <div class="grid-bubbles grid-list personal-bubbles">
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>ФИО</span>
             <p>Иванов Иван Иванович</p>
         </div>
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Пол</span>
             <p>Мужской</p>
         </div>
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Дата рождения</span>
             <p>01.01.1990</p>
         </div>
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Место жительства</span>
             <p>Москва, Малая Тульская улица, 2/1 к5</p>
         </div>
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Участник СВО</span>
             <p>Нет</p>
         </div>
-        <div class="lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Статус поиска</span>
             <p>Активно ищу работу</p>
         </div>
@@ -72,9 +77,17 @@
     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/contact-fields.php"); ?>
 </div>
 
+<?php if(str_contains($uri, 'moderator')):
+    echo '<div class="lk__content detail__section">
+            <span class="subcaption">Резюме</span>';
+            require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/deals-list.php"); 
+    echo '</div>';
+endif; ?>
+
 <div class="lk__content detail__section">
     <div class="full-width lk__section-title-wrapper">
         <span class="subcaption">Образование</span>
+        <?php if(!str_contains($uri, 'moderator')): ?>
         <button data-call-modal="add__univercity" class="education-add transp-btn lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -90,6 +103,7 @@
             </svg>
             <span>Добавить</span>
         </button>
+        <?php endif; ?>
     </div>
 
     <div class="grid-bubbles grid-list">
@@ -98,6 +112,7 @@
                 <span>Среднее специальное</span>
                 <p>2009</p>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <button class="education--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -112,6 +127,7 @@
                     </defs>
                 </svg>
             </button>
+            <?php endif; ?>
             <div class="text">
                 <span>Сибирский государственный университет телекоммуникаций и информатики</span>
                 <p>Фундаментальная информатика и информационные технологии</p>
@@ -122,6 +138,7 @@
                 <span>Высшее</span>
                 <p>2012</p>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <button class="education--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -136,6 +153,7 @@
                     </defs>
                 </svg>
             </button>
+            <?php endif; ?>
             <div class="text">
                 <span>Сибирский государственный университет телекоммуникаций и информатики</span>
                 <p>Фундаментальная информатика и информационные технологии</p>
@@ -152,6 +170,7 @@
                 <span>Категория прав</span>
                 <p>B, C, A</p>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <button data-call-modal="add__driver" class="driving-experience--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -166,6 +185,7 @@
                     </defs>
                 </svg>
             </button>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -173,6 +193,7 @@
 <div class="lk__content detail__section">
     <div class="full-width lk__section-title-wrapper">
         <span class="subcaption">Знание языков</span>
+        <?php if(!str_contains($uri, 'moderator')): ?>
         <button data-call-modal="add__external-language" class="education-add transp-btn lk__btn_has-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
@@ -188,6 +209,7 @@
             </svg>
             <span>Добавить</span>
         </button>
+        <?php endif; ?>
     </div>
     <div class="grid-bubbles grid-list language-list">
         <div class="lk-bubble big-bubble with-icon">
@@ -195,6 +217,7 @@
                 <span>Родной</span>
                 <p>Русский</p>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <button data-call-modal="add__internal-language" class="driving-experience--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -209,12 +232,14 @@
                     </defs>
                 </svg>
             </button>
+            <?php endif; ?>
         </div>
         <div class="lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
                 <span>Английский</span>
                 <p>А1-начальный</p>
             </div>
+            <?php if(!str_contains($uri, 'moderator')): ?>
             <button data-call-modal="add__external-language" class="driving-experience--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -229,6 +254,7 @@
                     </defs>
                 </svg>
             </button>
+            <?php endif; ?>
         </div>
     </div>
 </div>
