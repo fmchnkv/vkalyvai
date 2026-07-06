@@ -107,7 +107,7 @@ endif; ?>
     </div>
 
     <div class="grid-bubbles grid-list">
-        <div class="lk-bubble lk-bubble__education big-bubble with-icon">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble lk-bubble__education big-bubble with-icon">
             <div class="date">
                 <span>Среднее специальное</span>
                 <p>2009</p>
@@ -133,7 +133,7 @@ endif; ?>
                 <p>Фундаментальная информатика и информационные технологии</p>
             </div>
         </div>
-        <div class="lk-bubble lk-bubble__education big-bubble with-icon">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble lk-bubble__education big-bubble with-icon">
             <div class="date">
                 <span>Высшее</span>
                 <p>2012</p>
@@ -165,7 +165,7 @@ endif; ?>
 <div class="lk__content detail__section">
     <span class="subcaption">Опыт вождения</span>
     <div class="grid-bubbles grid-list">
-        <div class="lk-bubble big-bubble with-icon">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
                 <span>Категория прав</span>
                 <p>B, C, A</p>
@@ -212,7 +212,7 @@ endif; ?>
         <?php endif; ?>
     </div>
     <div class="grid-bubbles grid-list language-list">
-        <div class="lk-bubble big-bubble with-icon">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
                 <span>Родной</span>
                 <p>Русский</p>
@@ -234,7 +234,7 @@ endif; ?>
             </button>
             <?php endif; ?>
         </div>
-        <div class="lk-bubble big-bubble with-icon">
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
                 <span>Английский</span>
                 <p>А1-начальный</p>
