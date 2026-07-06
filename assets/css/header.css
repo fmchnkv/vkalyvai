@@ -37,11 +37,11 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   transition: background-color 0.2s ease-in-out;
 }
 .header.scrolled {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -112,7 +112,7 @@
   align-items: center;
   gap: 8px;
   padding: 9px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 32px;
   transition-property: background-color;
   transition-duration: 0.3s;
@@ -181,7 +181,7 @@
     left: -12px;
     align-items: flex-start;
     padding: 10px 12px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border: 1px solid #FC7827;
     border-radius: 12px;
     opacity: 0;
@@ -276,7 +276,7 @@
   transition: fill 0.3s linear;
 }
 .lk-chat:hover path {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
   .lk-chat span {
@@ -290,7 +290,7 @@
   right: -100px;
   opacity: 0;
   visibility: hidden;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 12px;
   transition-property: opacity, visibility, right;
   transition-duration: 0.3s;
@@ -326,13 +326,16 @@
   background-color: #232323;
   margin: 16px 0;
 }
+.burger-menu__item_exit .link {
+  color: #FC7827;
+}
 .auth-mobile-menu {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 12px 0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-top: 1px solid #232323;
   z-index: 100;
 }

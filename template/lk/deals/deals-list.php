@@ -57,7 +57,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                 </div>
                 <div class="deals__item">
                     <span>Приглашения</span>
-                    <p>64</p>
+                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/employer/responces.php" class="link link_underline">64</a></p>
                 </div>
             </div>
             <?php endif; ?>

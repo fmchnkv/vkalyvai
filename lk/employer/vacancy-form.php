@@ -31,20 +31,16 @@
                             <span class="radio__label">Без опыта</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="experience" value="1y">
-                            <span class="radio__label">до 1 года</span>
-                        </label>
-                        <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="experience" value="1-3y">
-                            <span class="radio__label">1-3 года</span>
+                            <span class="radio__label">От 1 года до 3 лет</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="experience" value="3-6y">
-                            <span class="radio__label">3-6 лет</span>
+                            <span class="radio__label">От 3 до 6 лет</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="experience" value="6y">
-                            <span class="radio__label">более 6 лет</span>
+                            <span class="radio__label">Более 6 лет</span>
                         </label>
                     </div>
                 </div>
@@ -66,15 +62,19 @@
                     <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="employment_type" value="full">
-                            <span class="radio__label">Полная</span>
+                            <span class="radio__label">Полная занятость</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="employment_type" value="part">
-                            <span class="radio__label">Частичная</span>
+                            <span class="radio__label">Частичная занятость</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="employment_type" value="shift" checked="">
-                            <span class="radio__label">Вахта</span>
+                            <span class="radio__label">Проектная работа</span>
+                        </label>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="employment_type" value="shift" checked="">
+                            <span class="radio__label">Стажировка</span>
                         </label>
                     </div>
                 </div>
@@ -563,7 +563,7 @@
                             <div class="file-input-title">
                                 <span>Нажмите чтобы загрузить</span> или перетащите файлы
                             </div>
-                            <p>Вы можете загрузить до 10 фото в формате PNG, JPG общим размером не более 10мб.</p>
+                            <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
                         </div>
                     </label>
                     <div class="constructor__files-result-wrapper"></div>
@@ -578,7 +578,7 @@
                             <div class="vacancy__multi-blocks-wrapper template-element">
                                 <span class="subcaption">Знание языков</span>
                                 <div class="constructor__inputs-block">
-                                    <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
+                                    <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list">
                                         <div class="select" data-id="vacancy_language">
                                             <label class="filter-group__input select__input input input_has-icon">
                                                 <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
@@ -610,6 +610,8 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        <? 
+                                        /* 
                                         <div class="select" data-id="vacancy_language_level">
                                             <label class="filter-group__input select__input input input_has-icon">
                                                 <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
@@ -635,6 +637,8 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        */
+                                        ?>
                                     </div>
                                     <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
                                         <span>Удалить</span>
@@ -655,7 +659,7 @@
                         <div class="vacancy__multi-blocks-wrapper template-element">
                             <span class="subcaption">Знание языков</span>
                             <div class="constructor__inputs-block">
-                                <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list grid-2-columns">
+                                <div class="vacancy__multi-blocks-selects constructor__inputs-list grid-list">
                                     <div class="select" data-id="vacancy_language">
                                         <label class="filter-group__input select__input input input_has-icon">
                                             <input class="input__field" type="text" name="vacancy_language" data-id="vacancy_language" readonly="" placeholder="Выберите язык">
@@ -687,6 +691,8 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <? 
+                                    /*
                                     <div class="select" data-id="vacancy_language_level">
                                         <label class="filter-group__input select__input input input_has-icon">
                                             <input class="input__field" type="text" name="vacancy_language_level" data-id="vacancy_language_level" readonly="" placeholder="Уровень владения">
@@ -712,6 +718,8 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    */
+                                    ?>
                                 </div>
                                 <button data-remove-block="languages" class="language-block-remove transp-btn lk__btn_has-icon">
                                     <span>Удалить</span>
@@ -763,28 +771,12 @@
                             <span class="lk__input-label">D</span>
                         </label>
                         <label class="lk__input-wrapper driver-item">
-                            <input type="checkbox" name="driver_license[]" value="E">
-                            <span class="lk__input-label">E</span>
-                        </label>
-                        <label class="lk__input-wrapper driver-item">
-                            <input type="checkbox" name="driver_license[]" value="BE">
-                            <span class="lk__input-label">BE</span>
-                        </label>
-                        <label class="lk__input-wrapper driver-item">
                             <input type="checkbox" name="driver_license[]" value="CE">
                             <span class="lk__input-label">CE</span>
                         </label>
                         <label class="lk__input-wrapper driver-item">
-                            <input type="checkbox" name="driver_license[]" value="DE">
-                            <span class="lk__input-label">DE</span>
-                        </label>
-                        <label class="lk__input-wrapper driver-item">
-                            <input type="checkbox" name="driver_license[]" value="TM">
-                            <span class="lk__input-label">TM</span>
-                        </label>
-                        <label class="lk__input-wrapper driver-item">
-                            <input type="checkbox" name="driver_license[]" value="TB">
-                            <span class="lk__input-label">TB</span>
+                            <input type="checkbox" name="driver_license[]" value="E">
+                            <span class="lk__input-label">E</span>
                         </label>
                     </div>
                 </div>

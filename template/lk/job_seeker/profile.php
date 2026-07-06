@@ -6,7 +6,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <img src="/../images/avatar_rezume.png" alt="Avatar">
         <div class="lk__person-data">
             <div>Иванов Иван Иванович</div>
-            <p>Российская федерация 01.01.1990</p>
+            <p>Гражданство РФ 01.01.1990</p>
         </div>
     </div>
     <?php if(!str_contains($uri, 'moderator')): ?>
@@ -236,8 +236,8 @@ endif; ?>
         </div>
         <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
-                <span>Английский</span>
-                <p>А1-начальный</p>
+                <span>Иностранный</span>
+                <p>Английский</p>
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <button data-call-modal="add__external-language" class="driving-experience--edit btn">
