@@ -11,7 +11,7 @@
         <span class="auth-reg__caption">Гражданство</span>
         <div class="select" data-id="country">
             <label class="auth-reg__input select__input input input_has-icon">
-                <input class="input__field" type="text" data-id="country" placeholder="Российская федерация">
+                <input class="input__field" type="text" data-id="country" placeholder="Гражданство РФ">
                 <div class="input__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -28,7 +28,7 @@
 
             <div class="select__dropdown">
                 <ul class="select__dropdown-list" data-id="country">
-                    <li class="select__option" data-value="Российская федерация">Российская федерация</li>
+                    <li class="select__option" data-value="Гражданство РФ">Гражданство РФ</li>
                     <li class="select__option" data-value="Беларусь">Беларусь</li>
                     <li class="select__option" data-value="Казахстан">Казахстан</li>
                 </ul>

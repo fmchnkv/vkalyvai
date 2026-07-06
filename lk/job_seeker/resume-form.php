@@ -1035,7 +1035,7 @@
                                 <div class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
                                 </div>
-                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG общим размером не более 10мб.</p>
+                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
                             </div>
                         </label>
                         <div class="constructor__files-result-wrapper"></div>
@@ -1068,7 +1068,7 @@
                                 <div class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
                                 </div>
-                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG общим размером не более 10мб.</p>
+                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
                             </div>
                         </label>
                         <div class="constructor__files-result-wrapper"></div>

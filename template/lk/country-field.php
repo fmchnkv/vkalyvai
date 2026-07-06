@@ -1,16 +1,15 @@
 <?php
 $countries = [
-    'Российская Федерация',
-    'Беларусь',
-    'Казахстан',
-    'Украина',
-    'Узбекистан'
+    'Гражданство РФ',
+    'Гражданство ЕАЭС',
+    'Есть патент на работу в РФ',
+    'Не имеет значения',
 ];
 sort($countries);
 ?>
 <div class="select" data-id="country">
     <label class="filter-group__input select__input input input_has-icon">
-        <input class="input__field" type="text" name="country" data-id="country" readonly placeholder="Российская Федерация">
+        <input class="input__field" type="text" name="country" data-id="country" readonly placeholder="Гражданство РФ">
         <div class="input__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>

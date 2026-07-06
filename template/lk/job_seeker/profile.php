@@ -3,7 +3,7 @@
         <img src="/../images/avatar_rezume.png" alt="Avatar">
         <div class="lk__person-data">
             <div>Иванов Иван Иванович</div>
-            <p>Российская федерация 01.01.1990</p>
+            <p>Гражданство РФ 01.01.1990</p>
         </div>
     </div>
     <div class="lk__buttons">
@@ -212,8 +212,8 @@
         </div>
         <div class="lk-bubble big-bubble with-icon">
             <div class="lk-bubble__text-wrapper">
-                <span>Английский</span>
-                <p>А1-начальный</p>
+                <span>Иностранный</span>
+                <p>Английский</p>
             </div>
             <button data-call-modal="add__external-language" class="driving-experience--edit btn">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

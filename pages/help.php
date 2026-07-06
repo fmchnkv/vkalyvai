@@ -184,7 +184,7 @@
             </div>
             <div class="tabs-block__content js-tab-content" data-tab="rezumes">
                 <ul class="cards cards--grid js-list" data-id="help-rezumes">
-                    <? for ($i = 0; $i < 6; $i++) : ?>
+                    <? for ($i = 0; $i < 3; $i++) : ?>
                         <li class="cards__item">
                             <a href="/pages/article.php" class="card card_help">
                                 <div class="card__top">

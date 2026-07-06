@@ -48,6 +48,15 @@
 <?
 $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
 $client = isset($_GET['client']) ? $_GET['client'] : '';
+
+if (strpos($_SERVER['REQUEST_URI'], '/lk/job_seeker/') !== false) {
+    $auth = 'Y';
+}
+
+if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
+    $auth = 'Y';
+    $client = 'Y';
+}
 ?>
 
 <body>
@@ -79,11 +88,11 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                             <ul class="nav__list">
                                 <? if ($client && $client == 'Y') : ?>
                                     <li class="nav__item">
-                                        <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
+                                        <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
                                     </li>
                                 <? else : ?>
                                     <li class="nav__item">
-                                        <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
+                                        <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
                                     </li>
                                 <? endif; ?>
 
@@ -138,9 +147,9 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                                 <span>Профиль</span>
                             </a>
                             <? if ($client && $client == 'Y') : ?>
-                                <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
-                            <? else : ?>
                                 <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать вакансию</a>
+                            <? else : ?>
+                                <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
                             <? endif; ?>
 
                             <button class="btn btn_secondary btn_icon btn_icon-s burger">
@@ -256,6 +265,11 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
                     <li class="burger-menu__item">
                         <a href="/pages/contacts.php" class="link">Контакты</a>
                     </li>
+                    <? if ($auth && $auth == 'Y') : ?>
+                        <li class="burger-menu__item burger-menu__item_exit">
+                            <a href="#" class="link">Выйти</a>
+                        </li>
+                    <? endif; ?>
                 </ul>
             </div>
         </header>

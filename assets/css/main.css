@@ -1777,16 +1777,25 @@ input::placeholder {
 .link {
   color: #232323;
   border-bottom: 1px solid transparent;
-  transition-property: color, border-color;
-  transition-duration: 0.3s;
+  transition-property: color, border-bottom;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .link:hover {
   color: #FC7827;
-  border-color: #FC7827;
+  border-bottom: 1px solid #FC7827;
 }
 .link:active {
   color: #232323;
+}
+.link_underline {
+  border-bottom: 1px solid #232323;
+  transition-property: color, border-bottom;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.link_underline:hover {
+  border-bottom: 1px solid #FC7827;
 }
 .icon-link {
   display: flex;
@@ -3667,6 +3676,9 @@ input::placeholder {
   height: 2px;
   background-color: #232323;
   margin: 16px 0;
+}
+.burger-menu__item_exit .link {
+  color: #FC7827;
 }
 .auth-mobile-menu {
   position: fixed;

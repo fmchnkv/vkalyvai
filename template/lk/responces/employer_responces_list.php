@@ -17,7 +17,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>
@@ -129,7 +129,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>
@@ -241,7 +241,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>
@@ -353,7 +353,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>
@@ -463,7 +463,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>
@@ -573,7 +573,7 @@
             <ul class="offers-list__profile profile profile--list">
                 <li class="profile__item">
                     <span class="profile__label">Гражданство</span>
-                    <span class="profile__value">Российская федерация</span>
+                    <span class="profile__value">Гражданство РФ</span>
                 </li>
                 <li class="profile__item">
                     <span class="profile__label">Участие в СВО</span>

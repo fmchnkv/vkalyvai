@@ -1779,4 +1779,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+
+    // Переключение ховера на О Нас
+    const featuresTabs = document.querySelectorAll('.about-features__tab');
+
+    if (featuresTabs.length) {
+        featuresTabs.forEach((tab) => {
+            tab.addEventListener('mouseenter', () => {
+                tab.closest('.about-features__tabs').querySelectorAll('.about-features__tab').forEach((el) => {
+                    el.classList.remove('active');
+                });
+
+                tab.classList.add('active');
+            });
+        });
+    }
 });

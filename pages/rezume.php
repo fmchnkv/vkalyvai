@@ -45,7 +45,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             <ul class="rezume-header__tags tags">
                                 <li class="tags__item tag tag_small tag_green">Активно ищу работу</li>
                                 <li class="tags__item tag tag_small">Полная занятость</li>
-                                <li class="tags__item tag tag_small">На месте работодателя</li>
+                                <li class="tags__item tag tag_small">Удаленная работа</li>
                             </ul>
 
                             <ul class="rezume-header__info offer-info">
@@ -59,7 +59,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             <ul class="rezume-header__profile profile profile--list">
                                 <li class="profile__item">
                                     <span class="profile__label">Гражданство</span>
-                                    <span class="profile__value">Российская федерация</span>
+                                    <span class="profile__value">Гражданство РФ</span>
                                 </li>
                                 <li class="profile__item">
                                     <span class="profile__label">Участие в СВО</span>

@@ -27,10 +27,9 @@
                         <h1 class="vacancy-header__title">Оператор call-центра со знанием немецкого языка</h1>
                         <span class="vacancy-header__sale">от 100 000 ₽</span>
                         <ul class="vacancy-header__tags tags">
+                            <li class="tags__item tag">Сменный график</li>
+                            <li class="tags__item tag">От 1 года до 3 лет</li>
                             <li class="tags__item tag">Полная занятость</li>
-                            <li class="tags__item tag">Опыт от 1 года</li>
-                            <li class="tags__item tag">На месте работодателя</li>
-                            <li class="tags__item tag">Полный рабочий день</li>
                         </ul>
 
                         <ul class="vacancy-header__info offer-info">
