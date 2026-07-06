@@ -1502,6 +1502,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .lk .employer__responces-item__footer {
+    flex-wrap: nowrap;
   }
 }
 .lk .employer__responces-item__footer .buttons-wrapper {
