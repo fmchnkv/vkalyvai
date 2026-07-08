@@ -159,7 +159,7 @@
         <div class="help__body">
             <div class="tabs-block__content js-tab-content active" data-tab="vacancies">
                 <ul class="cards cards--grid js-list" data-id="help-vacancies">
-                    <? for ($i = 0; $i < 12; $i++) : ?>
+                    <? for ($i = 0; $i < 3; $i++) : ?>
                         <li class="cards__item">
                             <a href="/pages/article.php" class="card card_help">
                                 <div class="card__top">

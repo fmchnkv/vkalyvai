@@ -689,28 +689,12 @@
                             <span class="lk__input-label">D</span>
                         </label>
                         <label class="lk__input-wrapper">
-                            <input type="checkbox" name="driver" value="E">
-                            <span class="lk__input-label">E</span>
-                        </label>
-                        <label class="lk__input-wrapper">
-                            <input type="checkbox" name="driver" value="BE">
-                            <span class="lk__input-label">BE</span>
-                        </label>
-                        <label class="lk__input-wrapper">
                             <input type="checkbox" name="driver" value="CE">
                             <span class="lk__input-label">CE</span>
                         </label>
                         <label class="lk__input-wrapper">
-                            <input type="checkbox" name="driver" value="DE">
-                            <span class="lk__input-label">DE</span>
-                        </label>
-                        <label class="lk__input-wrapper">
-                            <input type="checkbox" name="driver" value="TM">
-                            <span class="lk__input-label">TM</span>
-                        </label>
-                        <label class="lk__input-wrapper">
-                            <input type="checkbox" name="driver" value="TB">
-                            <span class="lk__input-label">TB</span>
+                            <input type="checkbox" name="driver" value="E">
+                            <span class="lk__input-label">E</span>
                         </label>
                     </div>
                 </div>

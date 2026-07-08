@@ -61,6 +61,7 @@ $arMenu = [
     '/lk/moderator/companies.php' => 'ЛК - Компании (Модератор)',
     '/lk/moderator/resume.php' => 'ЛК - Резюме (Модератор)',
     '/lk/moderator/vacancies.php' => 'ЛК - Вакансии (Модератор)',
+    '/lk/moderator/job_seeker_profile_view.php' => 'ЛК - Просмотр профиля соискателя (Модератор)',
 ];
 ?>
 
