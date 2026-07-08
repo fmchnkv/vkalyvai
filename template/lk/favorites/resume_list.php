@@ -112,7 +112,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -131,7 +131,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
@@ -338,7 +346,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -357,7 +365,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
@@ -535,7 +551,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -554,7 +570,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
@@ -730,7 +754,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -749,7 +773,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
@@ -925,7 +957,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -944,7 +976,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
@@ -1120,7 +1160,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
-                    <?php if (str_contains($uri, 'employer') && str_contains($uri, 'favorite')): ?>
+                    <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
                             <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
@@ -1139,7 +1179,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l">
+                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
+                                    <defs>
+                                    <clipPath id="clip0_8005_6994">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                                 <span>Пригласить</span>
                             </a>
                         </div>
