@@ -4,7 +4,7 @@
     <button class="btn add-resume-btn detail__btn btn_primary btn_size-m">Добавить резюме</button>
 </div>
 <div class="deals__title-wrapper full-width">
-    <h2 class="lk__section-title vacancies-title">Вакансии для вас</h2>
+    <h2 class="lk__section-title vacancies-title">Подходящие вакансии</h2>
     <a href="javascript:void(0)" class="vacancies-all-desk show-all-btn desk-elem transp-btn lk__btn_has-icon tab-elem icons-block">
         <span>Смотреть все</span>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
