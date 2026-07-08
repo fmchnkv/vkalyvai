@@ -353,6 +353,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  text-align: center;
 }
 .auth-mobile-menu__item .btn {
   width: 32px;

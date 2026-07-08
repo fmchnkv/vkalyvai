@@ -46,17 +46,46 @@
 </head>
 
 <?
+$uri = $_SERVER['REQUEST_URI'];
 $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
 $client = isset($_GET['client']) ? $_GET['client'] : '';
 
-if (strpos($_SERVER['REQUEST_URI'], '/lk/job_seeker/') !== false) {
+if (strpos($uri, '/lk/job_seeker/') !== false) {
     $auth = 'Y';
 }
 
-if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
+if (strpos($uri, '/lk/employer/') !== false) {
     $auth = 'Y';
     $client = 'Y';
 }
+
+if (strpos($uri, '/lk/moderator/') !== false) {
+    $auth = 'Y';
+}
+
+$authMobileMenuItems = str_contains($uri, 'moderator')
+    ? [
+        ['href' => '/lk/moderator/vacancies.php', 'label' => 'Вакансии'],
+        ['href' => '/lk/moderator/resume.php', 'label' => 'Резюме'],
+        ['href' => '/lk/moderator/companies.php', 'label' => 'Компании'],
+        ['href' => '/lk/moderator/appeals.php', 'label' => 'Обращения'],
+    ]
+    : (str_contains($uri, 'employer')
+        ? [
+            ['href' => '/lk/employer/index.php', 'label' => 'Профиль'],
+            ['href' => '/lk/employer/deals.php', 'label' => 'Мои вакансии'],
+            ['href' => '/lk/employer/notify.php', 'label' => 'Уведомления'],
+            ['href' => '/lk/employer/responces.php', 'label' => 'Мои отклики'],
+            ['href' => '/lk/employer/favorite.php', 'label' => 'Избранное'],
+            ['href' => '/lk/employer/docs.php', 'label' => 'Документы'],
+        ]
+        : [
+            ['href' => '/lk/job_seeker/index.php', 'label' => 'Профиль'],
+            ['href' => '/lk/job_seeker/deals.php', 'label' => 'Мои резюме'],
+            ['href' => '/lk/job_seeker/notify.php', 'label' => 'Уведомления'],
+            ['href' => '/lk/job_seeker/responces.php', 'label' => 'Мои отклики'],
+            ['href' => '/lk/job_seeker/favorite.php', 'label' => 'Избранное'],
+        ]);
 ?>
 
 <body>
@@ -279,7 +308,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                 <div class="container">
                     <ul class="auth-mobile-menu__row">
                         <li class="auth-mobile-menu__item">
-                            <a href="<?php echo str_contains($uri, 'employer') ? '/lk/employer/index.php' : '/lk/job_seeker/index.php'; ?>" class="btn btn_icon btn_secondary">
+                            <a href="<?= $authMobileMenuItems[0]['href'] ?>" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M12.2539 12.251C13.2483 12.251 14.2021 12.6456 14.9053 13.3486C15.6085 14.0519 16.0039 15.0064 16.0039 16.001V17.501H4.00391V16.001C4.00391 15.0064 4.39928 14.0519 5.10254 13.3486C5.80576 12.6456 6.75954 12.251 7.75391 12.251H12.2539ZM10.0039 1.75098C11.1972 1.75102 12.3417 2.22464 13.1855 3.06836C14.0295 3.91227 14.5039 5.0575 14.5039 6.25098C14.5038 7.44433 14.0294 8.58878 13.1855 9.43262C12.3417 10.2764 11.1973 10.7509 10.0039 10.751C9.41296 10.751 8.82722 10.6343 8.28125 10.4082C7.73541 10.1821 7.23907 9.8504 6.82129 9.43262C6.40356 9.01482 6.07278 8.51848 5.84668 7.97266C5.62058 7.42679 5.50395 6.84181 5.50391 6.25098C5.50391 5.66003 5.62053 5.07429 5.84668 4.52832C6.07281 3.98253 6.40355 3.48611 6.82129 3.06836C7.2391 2.65055 7.73537 2.31892 8.28125 2.09277C8.82722 1.86663 9.41296 1.75098 10.0039 1.75098Z" fill="white" />
@@ -291,10 +320,10 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                                     </defs>
                                 </svg>
                             </a>
-                            <span>Профиль</span>
+                            <span><?= $authMobileMenuItems[0]['label'] ?></span>
                         </li>
                         <li class="auth-mobile-menu__item">
-                            <a href="/lk/job_seeker/deals.php" class="btn btn_icon btn_secondary">
+                            <a href="<?= $authMobileMenuItems[1]['href'] ?>" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M12.2539 3.25098C12.6679 3.25098 13.0039 3.58698 13.0039 4.00098V5.50098H16.7539C17.1679 5.50098 17.5039 5.83698 17.5039 6.25098V16.001C17.5039 16.415 17.1679 16.751 16.7539 16.751H3.25391C2.83991 16.751 2.50391 16.415 2.50391 16.001V6.25098C2.50391 5.83698 2.83991 5.50098 3.25391 5.50098H7.00391V4.00098C7.00391 3.58698 7.33991 3.25098 7.75391 3.25098H12.2539ZM5.50391 15.251H7.00391V7.00098H5.50391V15.251ZM13.0039 15.251H14.5039V7.00098H13.0039V15.251ZM8.50391 5.50098H11.5039V4.75098H8.50391V5.50098Z" fill="white" />
@@ -306,10 +335,10 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                                     </defs>
                                 </svg>
                             </a>
-                            <span>Резюме</span>
+                            <span><?= $authMobileMenuItems[1]['label'] ?></span>
                         </li>
                         <li class="auth-mobile-menu__item">
-                            <a href="/lk/employer/responces.php" class="btn btn_icon btn_secondary">
+                            <a href="<?= $authMobileMenuItems[2]['href'] ?>" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M11.8789 16.751C11.8789 17.2483 11.6817 17.7255 11.3301 18.0771C10.9784 18.4288 10.5012 18.626 10.0039 18.626C9.50663 18.626 9.02936 18.4288 8.67773 18.0771C8.3261 17.7255 8.12891 17.2483 8.12891 16.751H11.8789ZM10.0039 2.50098C13.7314 2.50098 16.7539 5.53341 16.7539 9.27441V16.001H3.25391V9.27441C3.25391 5.53341 6.27641 2.50098 10.0039 2.50098ZM10.0039 4.00098C7.10441 4.00098 4.75391 6.36216 4.75391 9.27441V14.501H15.2539V9.27441C15.2539 6.36216 12.9034 4.00098 10.0039 4.00098Z" fill="white" />
@@ -321,10 +350,10 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                                     </defs>
                                 </svg>
                             </a>
-                            <span>Уведомления</span>
+                            <span><?= $authMobileMenuItems[2]['label'] ?></span>
                         </li>
                         <li class="auth-mobile-menu__item">
-                            <a href="/lk/responses.php" class="btn btn_icon btn_secondary">
+                            <a href="<?= $authMobileMenuItems[3]['href'] ?>" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M16.7539 3.75098C16.9528 3.75098 17.1435 3.83005 17.2842 3.9707C17.4248 4.11136 17.5039 4.30206 17.5039 4.50098V15.501C17.5039 15.6999 17.4248 15.8906 17.2842 16.0312C17.1435 16.1719 16.9528 16.251 16.7539 16.251H3.25391C3.05499 16.251 2.86429 16.1719 2.72363 16.0312C2.58298 15.8906 2.50391 15.6999 2.50391 15.501V4.50098C2.50391 4.30206 2.58298 4.11136 2.72363 3.9707C2.86429 3.83005 3.05499 3.75098 3.25391 3.75098H16.7539ZM4.00391 14.751H16.0039V6.92969L10.0576 12.2549L4.00391 6.91309V14.751ZM10.0498 10.2471L15.6309 5.25098H4.38672L10.0498 10.2471Z" fill="white" />
@@ -336,10 +365,11 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                                     </defs>
                                 </svg>
                             </a>
-                            <span>Отлики</span>
+                            <span><?= $authMobileMenuItems[3]['label'] ?></span>
                         </li>
+                        <?php if (isset($authMobileMenuItems[4])): ?>
                         <li class="auth-mobile-menu__item">
-                            <a href="/lk/favorites.php" class="btn btn_icon btn_secondary">
+                            <a href="<?= $authMobileMenuItems[4]['href'] ?>" class="btn btn_icon btn_secondary">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path d="M13.3789 3.25098C15.6573 3.25098 17.5038 5.12615 17.5039 7.75098C17.5039 13.0008 11.879 16.0009 10.0039 17.126C8.12876 16.0009 2.50391 13.0008 2.50391 7.75098C2.50406 5.12615 4.379 3.25098 6.62891 3.25098C8.02381 3.25098 9.25389 4.00103 10.0039 4.75098C10.7539 4.00103 11.984 3.25098 13.3789 3.25098ZM13.3789 4.75098C12.572 4.75098 11.6989 5.17861 11.0645 5.81152L10.0039 6.87207L8.94336 5.81152C8.30887 5.17861 7.43584 4.75098 6.62891 4.75098C5.174 4.75098 4.00405 5.99315 4.00391 7.75098C4.00391 9.95893 5.25314 11.9012 7.4873 13.6787C8.04605 14.1227 8.64296 14.5369 9.30371 14.9531C9.52795 15.0949 9.74967 15.2313 10.0039 15.3828C10.2581 15.2313 10.4799 15.0951 10.7041 14.9541C11.3649 14.5371 11.9615 14.1227 12.5195 13.6787C14.7553 11.9012 16.0039 9.95823 16.0039 7.75098C16.0038 5.98115 14.8511 4.75098 13.3789 4.75098Z" fill="white" />
@@ -351,8 +381,26 @@ if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
                                     </defs>
                                 </svg>
                             </a>
-                            <span>Избранное</span>
+                            <span><?= $authMobileMenuItems[4]['label'] ?></span>
                         </li>
+                        <?php endif; ?>
+                        <?php /* if (isset($authMobileMenuItems[5])): ?>
+                        <li class="auth-mobile-menu__item">
+                            <a href="<?= $authMobileMenuItems[5]['href'] ?>" class="btn btn_icon btn_secondary">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M13.3789 3.25098C15.6573 3.25098 17.5038 5.12615 17.5039 7.75098C17.5039 13.0008 11.879 16.0009 10.0039 17.126C8.12876 16.0009 2.50391 13.0008 2.50391 7.75098C2.50406 5.12615 4.379 3.25098 6.62891 3.25098C8.02381 3.25098 9.25389 4.00103 10.0039 4.75098C10.7539 4.00103 11.984 3.25098 13.3789 3.25098ZM13.3789 4.75098C12.572 4.75098 11.6989 5.17861 11.0645 5.81152L10.0039 6.87207L8.94336 5.81152C8.30887 5.17861 7.43584 4.75098 6.62891 4.75098C5.174 4.75098 4.00405 5.99315 4.00391 7.75098C4.00391 9.95893 5.25314 11.9012 7.4873 13.6787C8.04605 14.1227 8.64296 14.5369 9.30371 14.9531C9.52795 15.0949 9.74967 15.2313 10.0039 15.3828C10.2581 15.2313 10.4799 15.0951 10.7041 14.9541C11.3649 14.5371 11.9615 14.1227 12.5195 13.6787C14.7553 11.9012 16.0039 9.95823 16.0039 7.75098C16.0038 5.98115 14.8511 4.75098 13.3789 4.75098Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4892_5602">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <span><?= $authMobileMenuItems[5]['label'] ?></span>
+                        </li>
+                        <?php endif; */ ?>
                     </ul>
                 </div>
             </div>

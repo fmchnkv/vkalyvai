@@ -846,11 +846,20 @@
   transition: all 0.3s ease;
 }
 .lk .deals-wrapper {
-  padding-bottom: 44px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EBEBEB;
+  margin-bottom: 24px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .lk .deals-wrapper {
-    padding-bottom: 60px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .lk .deals-wrapper {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 .lk .deals-wrapper .detail__btn {
