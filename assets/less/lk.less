@@ -743,6 +743,33 @@
             */
         }
 
+        &.card-approve {
+            input[name="approved_state"] {
+                &::placeholder {
+                    color: @green;
+                }
+            }
+            .input__icon {
+                width: 20px;
+                height: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        &.card-reject {
+            input[name="approved_state"] {
+                &::placeholder {
+                    color: @error;
+                }
+            }
+        }
+
         button, a {
             &:not(.btn) {
                 transition: color .3s ease;
@@ -1529,12 +1556,14 @@
                     .flex-center();
                     flex-direction: column;
                     gap: 20px;
+                    margin-top: 12px;
 
                     .media-min(768px, {
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
                         flex-wrap: wrap;
+                        margin-top: 0;
                     });
 
                     .media-min(1080px, {
@@ -1543,8 +1572,9 @@
 
                     .buttons-wrapper {
                         .flex-center();
-                        gap: 2px;
+                        gap: 16px 2px;
                         width: 100%;
+                        flex-wrap: wrap;
 
                         .media-min(768px, {
                             justify-content: flex-start;
@@ -2839,6 +2869,27 @@
             });
         }
     }
+
+    .approved {
+        &-select_btns {
+            max-width: 175px;
+            display: none;
+
+            input[data-id="approved_btns"] {
+                padding: 12px;
+                padding-right: 42px;
+            }
+        }
+        &-modal {
+            .modal__close {
+                top: 0;
+                right: 0;
+            }
+            .modal__wrapper {
+                padding: 40px 6px 16px 16px;
+            }
+        }
+    }
 }
 
 .constructor__modal {
@@ -2898,8 +2949,9 @@
 }
 
 .mob-elem {
+    display: block !important;
     .media-min(768px, {
-        display: none;
+        display: none !important;
     });
 }
 

@@ -1795,4 +1795,97 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+    //ВРЕМЕННОЕ - подменяем карточку/статус при отмене выбора
+    const responcesActionBtn = document.querySelectorAll('[data-dropdown-btn]');
+
+    if (responcesActionBtn.length) {
+        const RESPONSE_STATUS = {
+            approve: {
+                cardClass: 'card-approve',
+                stateClass: 'publish',
+                stateText: 'Приглашение',
+                placeholder: 'Приглашение',
+                nextAction: 'reject',
+                nextActionText: 'Отказать',
+            },
+            reject: {
+                cardClass: 'card-reject',
+                stateClass: 'blocked',
+                stateText: 'Отказ',
+                placeholder: 'Отказ',
+                nextAction: 'approve',
+                nextActionText: 'Пригласить',
+            },
+        };
+
+        document.addEventListener('click', function(e) {
+            const actionBtn = e.target.closest('[data-dropdown-btn]');
+            if (!actionBtn) return;
+
+            const cardWrapper = actionBtn.closest('.employer__card-data-wrapper');
+            if (!cardWrapper) return;
+
+            e.preventDefault();
+
+            const action = actionBtn.dataset.dropdownBtn;
+
+            if (action === 'cancel') {
+                resetResponseCard(cardWrapper);
+                return;
+            }
+
+            if (RESPONSE_STATUS[action]) {
+                setResponseCardStatus(cardWrapper, RESPONSE_STATUS[action]);
+            }
+        });
+
+        function resetResponseCard(cardWrapper) {
+            const template = document.getElementById('employer-responces-card-template');
+            if (!template) return;
+
+            const clone = template.content.firstElementChild.cloneNode(true);
+
+            if (clone.classList.contains('employer__card-data-wrapper')) {
+                cardWrapper.replaceWith(clone);
+                return;
+            }
+
+            cardWrapper.innerHTML = '';
+            cardWrapper.append(clone);
+        }
+
+        function setResponseCardStatus(cardWrapper, status) {
+            const card = cardWrapper.querySelector('.employer__responces-item');
+            const state = cardWrapper.querySelector('.state');
+
+            if (!card || !state) return;
+
+            card.classList.remove('card-approve', 'card-reject', 'card-viewed', 'card-viewed-not');
+            card.classList.add(status.cardClass);
+
+            state.textContent = status.stateText;
+            state.classList.remove('publish', 'blocked', 'neutral', 'neutral_see');
+            state.classList.add(status.stateClass);
+
+            updateResponseActionControls(cardWrapper, status);
+        }
+
+        function updateResponseActionControls(cardWrapper, status) {
+            cardWrapper.querySelectorAll('.approved-select_btns .input__field').forEach(input => {
+                input.placeholder = status.placeholder;
+            });
+
+            cardWrapper.querySelectorAll('[data-dropdown-btn="approve"], [data-dropdown-btn="reject"]').forEach(actionBtn => {
+                actionBtn.dataset.dropdownBtn = status.nextAction;
+
+                const text = actionBtn.querySelector('span');
+                if (text) text.textContent = status.nextActionText;
+            });
+
+            cardWrapper.querySelector('.approved-select_btns.active')?.classList.remove('active');
+            cardWrapper.querySelector('.modal.active')?.classList.remove('active');
+        }
+    }
 });
