@@ -749,6 +749,22 @@
             }
             */
 }
+.lk-card.card-approve input[name="approved_state"]::placeholder {
+  color: #5DB634;
+}
+.lk-card.card-approve .input__icon {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lk-card.card-approve .input__icon svg {
+  width: 20px;
+  height: 20px;
+}
+.lk-card.card-reject input[name="approved_state"]::placeholder {
+  color: #F14C4C;
+}
 .lk-card button:not(.btn),
 .lk-card a:not(.btn) {
   transition: color 0.3s ease;
@@ -1496,6 +1512,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  margin-top: 12px;
 }
 @media screen and (min-width: 768px) {
   .lk .employer__responces-item__footer {
@@ -1503,6 +1520,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -1514,8 +1532,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 16px 2px;
   width: 100%;
+  flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .lk .employer__responces-item__footer .buttons-wrapper {
@@ -2688,6 +2707,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.lk .approved-select_btns {
+  max-width: 175px;
+  display: none;
+}
+.lk .approved-select_btns input[data-id="approved_btns"] {
+  padding: 12px;
+  padding-right: 42px;
+}
+.lk .approved-modal .modal__close {
+  top: 0;
+  right: 0;
+}
+.lk .approved-modal .modal__wrapper {
+  padding: 40px 6px 16px 16px;
+}
 .constructor__modal .modal__content {
   overflow-y: auto;
 }
@@ -2737,9 +2771,12 @@
   z-index: -1 !important;
   transition: all 0.3s ease;
 }
+.mob-elem {
+  display: block !important;
+}
 @media screen and (min-width: 768px) {
   .mob-elem {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
