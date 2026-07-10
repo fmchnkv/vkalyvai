@@ -875,6 +875,7 @@
         </form>
     </div>
 </div>
+<div class="overlay"></div>
 
 <!-- превью резюме и вакансий -->
 <? require($_SERVER["DOCUMENT_ROOT"]."/lk/modals/previews/resume-preview.php"); ?>

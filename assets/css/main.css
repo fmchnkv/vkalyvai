@@ -516,6 +516,22 @@
 .btn_no-hover {
   pointer-events: none;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.overlay.active {
+  z-index: 9;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 .breadcrumbs {
   padding: 82px 0 0;
   margin-bottom: 24px;
@@ -3382,7 +3398,6 @@ input::placeholder {
   }
 }
 .header {
-  padding: 8px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -3391,18 +3406,27 @@ input::placeholder {
   background-color: #FFFFFF;
   transition: background-color 0.2s ease-in-out;
 }
-.header.scrolled {
-  background-color: #FFFFFF;
+.header > .container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  z-index: 10;
+  background: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
-  .header {
-    padding: 12px 0;
+  .header > .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
-    padding: 16px 0;
+  .header > .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
+}
+.header.scrolled {
+  background-color: #FFFFFF;
 }
 .header__row {
   display: flex;
@@ -3593,6 +3617,30 @@ input::placeholder {
   align-items: center;
   justify-content: center;
 }
+.burger > svg.close {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+.burger > svg.open {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+.burger.active > svg.close {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+.burger.active > svg.open {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
 @media screen and (min-width: 768px) {
   .burger {
     display: none;
@@ -3604,16 +3652,26 @@ input::placeholder {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 1279px) {
-  .lk-btn {
-    width: 34px;
-    height: 34px;
-    padding: 0;
+.admin-login {
+  padding: 8px 12px;
+}
+.admin-login svg {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .admin-login {
+    padding: 11px 12px;
+  }
+  .admin-login svg {
+    display: block;
   }
 }
-@media screen and (max-width: 1279px) {
-  .lk-btn span {
-    display: none;
+.admin-logout {
+  padding: 9px;
+}
+@media screen and (min-width: 1024px) {
+  .admin-logout {
+    padding: 11px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3637,25 +3695,23 @@ input::placeholder {
 .burger-menu {
   display: block;
   position: absolute;
-  top: calc(100% + 12px);
-  right: -100px;
+  top: -100px;
   opacity: 0;
   visibility: hidden;
   background-color: #FFFFFF;
-  padding: 12px;
-  transition-property: opacity, visibility, right;
+  padding: 16px 16px 24px;
+  z-index: -1;
+  border-radius: 0 0 16px 16px;
+  transition-property: opacity, visibility, top, z-index;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .burger-menu.active {
   opacity: 1;
   visibility: visible;
-  right: 16px;
-}
-@media screen and (min-width: 481px) {
-  .burger-menu.active {
-    right: 32px;
-  }
+  width: 100%;
+  top: 100%;
+  z-index: 9;
 }
 @media screen and (min-width: 1024px) {
   .burger-menu.active {
@@ -3665,11 +3721,17 @@ input::placeholder {
 .burger-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 .burger-menu__list a:not(.btn) {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.burger-menu__list a.btn {
+  width: 100%;
+}
+.burger-menu__list a.btn.btn_primary {
+  margin-bottom: 16px;
 }
 .burger-menu__hr {
   width: 100%;

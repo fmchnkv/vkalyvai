@@ -2,7 +2,6 @@
 @import url(_mixins.less);
 
 .header {
-    padding: 8px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,17 +11,26 @@
 
     .transition(background-color, .2s, ease-in-out);
 
+    > .container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        position: relative;
+        z-index: 10;
+        background: @white;
+
+        .media-min(768px, {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        });
+        .media-min(1280px, {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        });
+    }
+
     &.scrolled {
         background-color: @white;  
     }
-
-    .media-min(768px, {
-        padding: 12px 0;
-    });
-
-    .media-min(1280px, {
-        padding: 16px 0;
-    });
 
     &__row {
         display: flex;
@@ -240,6 +248,36 @@
 .burger {
     .flex-center(flex);
 
+    > svg.close {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        transition: opacity .3s ease;
+    }
+
+    > svg.open {
+        opacity: 1;
+        z-index: 1;
+        position: relative;
+        transition: opacity .3s ease;
+    }
+
+    &.active {
+        > svg.close {
+            opacity: 1;
+            z-index: 1;
+            position: relative;
+            transition: opacity .3s ease;
+        }
+
+        > svg.open {
+            opacity: 0;
+            z-index: -1;
+            position: absolute;
+            transition: opacity .3s ease;
+        }
+    }
+
     .media-min(768px, {
         display: none;
     });
@@ -250,15 +288,30 @@
     .media-min(1280px, {
         .btn-size(11px 12px);
     });
+}
 
-    .media-max(1279px, {
-        .icon-size(34px);
-    });
+.admin {
+    &-login {
+        padding: 8px 12px;
 
-    span {
-        .media-max(1279px, {
+        svg {
             display: none;
+        }
+
+        .media-min(1024px, {
+            padding: 11px 12px;
+
+            svg {
+                display: block;
+            }
         });
+    }
+    &-logout {
+        padding: 9px;
+
+        .media-min(1024px, {
+            padding: 11px;
+        })
     }
 }
 
@@ -289,24 +342,23 @@
 .burger-menu {
     display: block;
     position: absolute;
-    top: calc(100% + 12px);
-    right: -100px;
+    top: -100px;
     opacity: 0;
     visibility: hidden;
     background-color: @white;
-    padding: 12px;
+    padding: 16px 16px 24px;
+    z-index: -1;
+    border-radius: 0 0 16px 16px;
 
-    transition-property: opacity, visibility, right;
+    transition-property: opacity, visibility, top, z-index;
     .transition-ext(.3s, ease-in-out);
 
     &.active {
         opacity: 1;
         visibility: visible;
-        right: 16px;
-
-        .media-min(481px, {
-            right: 32px;
-        });
+        width: 100%;
+        top: 100%;
+        z-index: 9;
 
         .media-min(1024px, {
             display: none;
@@ -316,11 +368,18 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
 
         a:not(.btn) {
-            font-size: @f-body-s;
-            line-height: @lh-body-s;
+            font-size: @f-body;
+            line-height: @lh-body;
+        }
+        a.btn {
+            width: 100%;
+
+            &.btn_primary {
+                margin-bottom: 16px;
+            }
         }
     }
 

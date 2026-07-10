@@ -190,101 +190,140 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                         </span>
                     <? endif; ?>
                     <? if ($auth && $auth == 'Y'): ?>
-                        <nav class="header__nav nav tablet-none">
-                            <ul class="nav__list">
+                        <? if(!str_contains($uri, 'moderator')): ?>
+                            <nav class="header__nav nav tablet-none">
+                                <ul class="nav__list">
+                                    <? if ($client && $client == 'Y'): ?>
+                                        <li class="nav__item">
+                                            <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
+                                        </li>
+                                    <? else: ?>
+                                        <li class="nav__item">
+                                            <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
+                                        </li>
+                                    <? endif; ?>
+
+                                    <li class="nav__item">
+                                        <a href="/lk/employer/responces.php" class="nav__link link">Отклики</a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a href="/pages/help.php" class="nav__link link">Помощь</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            
+                            <div class="header__toolbar">
+                                <a href="#" class="header__search-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.1035 3.00098C15.5746 3.00098 19.2039 6.62957 19.2041 11.1006C19.2067 12.9384 18.5811 14.7223 17.4316 16.1562L21.2861 20.0098L20.0127 21.2832L16.1592 17.4287C14.7252 18.5782 12.9413 19.2038 11.1035 19.2012C6.63249 19.201 3.00391 15.5717 3.00391 11.1006C3.00412 6.6297 6.63263 3.00119 11.1035 3.00098ZM11.1035 4.80078C7.62263 4.80099 4.80392 7.6197 4.80371 11.1006C4.80371 14.5808 7.6225 17.4012 11.1035 17.4014C12.7419 17.4039 14.3166 16.7652 15.4912 15.623L15.626 15.4883C16.7682 14.3137 17.4069 12.739 17.4043 11.1006C17.4041 7.61957 14.5837 4.80078 11.1035 4.80078Z"
+                                                fill="#999999" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4784_13479">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>Поиск <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></span>
+                                </a>
+                                <a href="#" class="btn btn_light btn_has-icon lk-chat">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M8.00391 2.00098C11.3177 2.00098 14.0039 4.68718 14.0039 8.00098C14.0039 11.3148 11.3177 14.001 8.00391 14.001C7.01833 14.0025 6.04789 13.7596 5.17872 13.2949L2.00391 14.001L2.70997 10.8262C2.24529 9.957 2.00243 8.98656 2.00391 8.00098C2.00391 4.68718 4.69011 2.00098 8.00391 2.00098Z"
+                                                fill="#FC7827" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4466_3980">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="/lk/job_seeker/index.php" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4466_3096">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>Профиль</span>
+                                </a>
                                 <? if ($client && $client == 'Y'): ?>
-                                    <li class="nav__item">
-                                        <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
-                                    </li>
+                                    <a href="/lk/employer/vacancy-form.php"
+                                        class="btn btn_size-m btn_secondary m-none lk-create-link">Создать вакансию</a>
                                 <? else: ?>
-                                    <li class="nav__item">
-                                        <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
-                                    </li>
+                                    <a href="/lk/job_seeker/resume-form.php"
+                                        class="btn btn_size-m btn_secondary m-none lk-create-link">Создать резюме</a>
                                 <? endif; ?>
 
-                                <li class="nav__item">
-                                    <a href="/lk/employer/responces.php" class="nav__link link">Отклики</a>
-                                </li>
-
-                                <li class="nav__item">
-                                    <a href="/pages/help.php" class="nav__link link">Помощь</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <div class="header__toolbar">
-                            <a href="#" class="header__search-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M11.1035 3.00098C15.5746 3.00098 19.2039 6.62957 19.2041 11.1006C19.2067 12.9384 18.5811 14.7223 17.4316 16.1562L21.2861 20.0098L20.0127 21.2832L16.1592 17.4287C14.7252 18.5782 12.9413 19.2038 11.1035 19.2012C6.63249 19.201 3.00391 15.5717 3.00391 11.1006C3.00412 6.6297 6.63263 3.00119 11.1035 3.00098ZM11.1035 4.80078C7.62263 4.80099 4.80392 7.6197 4.80371 11.1006C4.80371 14.5808 7.6225 17.4012 11.1035 17.4014C12.7419 17.4039 14.3166 16.7652 15.4912 15.623L15.626 15.4883C16.7682 14.3137 17.4069 12.739 17.4043 11.1006C17.4041 7.61957 14.5837 4.80078 11.1035 4.80078Z"
-                                            fill="#999999" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4784_13479">
-                                            <rect width="24" height="24" fill="white" />
+                                <button class="btn btn_secondary btn_icon btn_icon-s burger">
+                                    <svg class="open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                        <path d="M13.4053 12.8008H2.60547V11.6006H13.4053V12.8008ZM13.4053 8.60059H2.60547V7.40039H13.4053V8.60059ZM13.4053 4.40039H2.60547V3.20117H13.4053V4.40039Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_8006_4204">
+                                        <rect width="16" height="16" fill="white"/>
                                         </clipPath>
-                                    </defs>
-                                </svg>
-                                <span>Поиск вакансий</span>
-                            </a>
-                            <a href="#" class="btn btn_size-s btn_light btn_has-icon lk-chat">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="M8.00391 2.00098C11.3177 2.00098 14.0039 4.68718 14.0039 8.00098C14.0039 11.3148 11.3177 14.001 8.00391 14.001C7.01833 14.0025 6.04789 13.7596 5.17872 13.2949L2.00391 14.001L2.70997 10.8262C2.24529 9.957 2.00243 8.98656 2.00391 8.00098C2.00391 4.68718 4.69011 2.00098 8.00391 2.00098Z"
-                                            fill="#FC7827" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4466_3980">
-                                            <rect width="16" height="16" fill="white" />
+                                        </defs>
+                                    </svg>
+                                    <svg class="close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                        <path d="M11.8242 5.03125L8.85352 8.00098L11.8242 10.9707L10.9756 11.8193L8.00586 8.84961L5.03516 11.8193L4.1875 10.9707L7.15723 8.00098L4.1875 5.03125L5.03516 4.18262L8.00586 7.15234L10.9756 4.18262L11.8242 5.03125Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_8006_4353">
+                                        <rect width="16" height="16" fill="white"/>
                                         </clipPath>
-                                    </defs>
-                                </svg>
-                                <span>Чаты</span>
-                            </a>
-                            <a href="/lk/job_seeker/index.php" class="btn btn_size-s btn_neutral btn_has-icon lk-btn">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4466_3096">
-                                            <rect width="16" height="16" fill="white" />
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        <? else: ?>
+                            <div class="header__toolbar">
+                                <a href="javascript:void(0)" class="btn btn_size-m btn_primary btn_has-icon admin-login">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M9.80273 9.80078C10.5984 9.80078 11.3612 10.1171 11.9238 10.6797C12.4864 11.2423 12.8027 12.0051 12.8027 12.8008V14.001H3.20312V12.8008C3.20312 12.0053 3.51867 11.2423 4.08105 10.6797C4.64366 10.1171 5.40748 9.80078 6.20312 9.80078H9.80273ZM8.00293 1.40039C8.95766 1.40043 9.87373 1.77998 10.5488 2.45508C11.2238 3.13019 11.6025 4.04629 11.6025 5.00098C11.6025 5.95546 11.2236 6.87087 10.5488 7.5459C9.87373 8.221 8.95766 8.60055 8.00293 8.60059C7.53019 8.60059 7.06176 8.50805 6.625 8.32715C6.18823 8.14623 5.79132 7.88019 5.45703 7.5459C5.12288 7.21167 4.85762 6.81457 4.67676 6.37793C4.49599 5.94135 4.40238 5.4735 4.40234 5.00098C4.40234 4.52822 4.49585 4.05981 4.67676 3.62305C4.85766 3.1863 5.12277 2.78936 5.45703 2.45508C5.79129 2.12082 6.18828 1.85572 6.625 1.6748C7.06177 1.49389 7.53017 1.40039 8.00293 1.40039Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4466_3096">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>login</span>
+                                </a>
+                                <button class="btn btn_light admin-logout">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                        <path d="M10.0039 2.50098C11.1684 2.5001 12.3168 2.77122 13.3584 3.29199C14.4 3.81277 15.3059 4.56886 16.0039 5.50098H13.9717C13.1056 4.73732 12.0373 4.2401 10.8955 4.06836C9.75366 3.89664 8.58656 4.05804 7.53418 4.53321C6.48183 5.00837 5.58919 5.77704 4.96289 6.74707C4.33658 7.71714 4.00283 8.84727 4.00293 10.002C4.00305 11.1566 4.33645 12.2869 4.96289 13.2568C5.58936 14.2267 6.48274 14.9948 7.53516 15.4697C8.58762 15.9447 9.75467 16.1065 10.8965 15.9346C12.0382 15.7627 13.1058 15.2647 13.9717 14.501H16.0049C15.3068 15.4332 14.401 16.1902 13.3594 16.7109C12.3177 17.2317 11.1685 17.502 10.0039 17.501C5.86166 17.501 2.50391 14.1432 2.50391 10.001C2.50391 5.85873 5.86166 2.50098 10.0039 2.50098ZM19.0039 10.001L15.2539 13.001V10.751H9.25391V9.25098H15.2539V7.00098L19.0039 10.001Z" fill="#FC7827"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_8006_3076">
+                                        <rect width="20" height="20" fill="white"/>
                                         </clipPath>
-                                    </defs>
-                                </svg>
-                                <span>Профиль</span>
-                            </a>
-                            <? if ($client && $client == 'Y'): ?>
-                                <a href="/lk/employer/vacancy-form.php"
-                                    class="btn btn_size-s btn_secondary m-none lk-create-link">Создать вакансию</a>
-                            <? else: ?>
-                                <a href="/lk/job_seeker/resume-form.php"
-                                    class="btn btn_size-s btn_secondary m-none lk-create-link">Создать резюме</a>
-                            <? endif; ?>
-
-                            <button class="btn btn_secondary btn_icon btn_icon-s burger">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path
-                                            d="M16.7539 16.001H3.25391V14.501H16.7539V16.001ZM16.7539 10.751H3.25391V9.25098H16.7539V10.751ZM16.7539 5.50098H3.25391V4.00098H16.7539V5.50098Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_4466_785">
-                                            <rect width="20" height="20" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
-                        </div>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        <? endif; ?>
                     <? else: ?>
 
 
@@ -366,26 +405,25 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
             <div class="burger-menu">
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item">
-                        <a href="/pages/article.php" class="link">Правила составления резюме</a>
-                    </li>
-                    <li class="burger-menu__item">
-                        <a href="/pages/vacancies.php" class="link">Каталог вакансий</a>
+                        <a href="/pages/vacancies.php" class="link">Каталог <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></a>
                     </li>
                     <li class="burger-menu__item">
                         <a href="/pages/companies.php" class="link">Каталог компаний</a>
                     </li>
+                    <li class="burger-menu__item">
+                        <a href="/pages/article.php" class="link">Правила <?= $client && $client == 'Y' ? 'размещения вакансии' : 'составления резюме'; ?></a>
+                    </li>
                     <? if ($client && $client == 'Y'): ?>
                         <li class="burger-menu__item">
-                            <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary">Создать
+                            <a href="/lk/employer/vacancy-form.php" class="btn btn_size-m btn_primary">Создать
                                 вакансию</a>
                         </li>
                     <? else: ?>
                         <li class="burger-menu__item">
-                            <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary">Создать резюме</a>
+                            <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-m btn_primary">Создать резюме</a>
                         </li>
                     <? endif; ?>
                 </ul>
-                <div class="burger-menu__hr"></div>
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item">
                         <a href="/pages/about.php" class="link">О компании</a>
@@ -400,8 +438,8 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                         <a href="/pages/contacts.php" class="link">Контакты</a>
                     </li>
                     <? if ($auth && $auth == 'Y'): ?>
-                        <li class="burger-menu__item burger-menu__item_exit">
-                            <a href="#" class="link">Выйти</a>
+                        <li class="burger-menu__item">
+                            <a href="javascript:void(0)" class="btn btn_size-m btn_light">Выйти из профиля</a>
                         </li>
                     <? endif; ?>
                 </ul>
