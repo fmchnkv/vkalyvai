@@ -644,11 +644,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const burger = document.querySelector('.burger');
     const burgerMenu = document.querySelector('.burger-menu');
+    const overlay = document.querySelector('.overlay');
 
     if (burger && burgerMenu) {
         burger.addEventListener('click', (e) => {
             e.preventDefault();
             burgerMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            burger.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
     }
 

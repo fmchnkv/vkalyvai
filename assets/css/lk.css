@@ -2764,6 +2764,9 @@
 .lk .approved-modal .modal__wrapper {
   padding: 40px 6px 16px 16px;
 }
+.lk-chat {
+  padding: 11px;
+}
 .constructor__modal .modal__content {
   overflow-y: auto;
 }
