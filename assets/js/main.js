@@ -466,18 +466,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 multipleSelectOption.classList.toggle('active');
 
                 let curChoices = multipleSelectOption.closest('.multiple-select').querySelectorAll('.multiple-select__option.active');
-                let curChoiceBlock = multipleSelectOption.closest('.multiple-select').querySelector('.multiple-select__choices');
+                let curChoiceBlock = multipleSelectOption.closest('.multiple-select').querySelector('.multiple-select__choices');               
 
-                curChoiceBlock.innerHTML = '';
+                
+                if (curChoiceBlock) {
+                    curChoiceBlock.innerHTML = '';
 
-                curChoices.forEach(curChoice => {
-                    setChoice(curChoice.dataset.value, curChoiceBlock);
-                });
+                    curChoices.forEach(curChoice => {
+                        setChoice(curChoice.dataset.value, curChoiceBlock);
+                    });
 
-                if (curChoices.length) {
-                    curChoiceBlock.classList.add('active');
-                } else {
-                    curChoiceBlock.classList.remove('active');
+                    if (curChoices.length) {
+                        curChoiceBlock.classList.add('active');
+                    } else {
+                        curChoiceBlock.classList.remove('active');
+                    }
                 }
 
                 let parent = multipleSelectOption.closest('.multiple-select');
@@ -495,6 +498,19 @@ document.addEventListener('DOMContentLoaded', () => {
                            }
                         }
                     });
+                }
+
+                if (parent.classList.contains('multiple-select_chat')) {
+                    if (curChoices.length > 1) {
+                        parent.querySelector('.multiple-select__counter').textContent = '+' + (curChoices.length - 1);
+                    } else {
+                        if (curChoices.length === 1) {
+                            parent.querySelector('.multiple-select__field').value = curChoices[0].querySelector('.multiple-select__title').textContent;
+                        } else {
+                            parent.querySelector('.multiple-select__field').value = '';
+                        }
+                        parent.querySelector('.multiple-select__counter').textContent = '';
+                    }
                 }
             });
         });
