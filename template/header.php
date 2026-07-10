@@ -245,7 +245,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                         </defs>
                                     </svg>
                                 </a>
-                                <a href="/lk/job_seeker/index.php" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+                                <a href="/lk/<?= $client && $client == 'Y' ? 'employer' : 'job_seeker'; ?>/index.php" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g>
