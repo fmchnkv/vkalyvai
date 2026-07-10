@@ -506,12 +506,35 @@
 .lk .inline-form__btn svg {
   display: block !important;
   width: 20px;
+  height: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .lk .inline-form__btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .lk .inline-form__btn svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 @media screen and (min-width: 768px) {
   .lk .inline-form__btn {
-    width: max-content;
-    height: auto;
-    padding: 0 12px;
+    padding: 11px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lk .inline-form__btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .lk .inline-form__btn {
+    width: 58px;
+    height: 58px;
   }
 }
 .lk__sidebar {
