@@ -2703,6 +2703,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
   transition-property: background-color, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -2733,6 +2734,87 @@ input::placeholder {
   opacity: 1;
   visibility: visible;
   top: calc(100% + 4px);
+}
+.multiple-select__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.multiple-select__title {
+  font-size: 16px;
+  line-height: 18px;
+  color: #232323;
+  font-weight: 600;
+  word-break: break-all;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.multiple-select__subtitle {
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+  font-weight: 400;
+}
+.multiple-select__counter {
+  color: #999999;
+}
+.multiple-select_chat .multiple-select__input {
+  padding: 7px 11px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding-right: 34px;
+}
+.multiple-select_chat .multiple-select__field {
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0;
+}
+.multiple-select_chat .multiple-select__field::placeholder {
+  color: #232323;
+}
+.multiple-select_chat .multiple-select__icon {
+  width: 20px;
+  height: 20px;
+  right: 11px;
+  bottom: calc(50% - 10px);
+}
+.multiple-select_chat .multiple-select__icon svg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .multiple-select_chat .multiple-select__dropdown {
+    width: 328px;
+    right: 0;
+  }
+}
+.multiple-select_chat .multiple-select__dropdown-list {
+  max-height: 234px;
+}
+.multiple-select_chat .multiple-select__option {
+  padding: 12px;
+  align-items: flex-start;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.multiple-select_chat .multiple-select__option:hover {
+  background-color: #FFF2E9;
+}
+.multiple-select_chat .multiple-select__option.active {
+  background-color: #FFFFFF;
+  border-color: #FC7827;
 }
 .textarea {
   width: 100%;

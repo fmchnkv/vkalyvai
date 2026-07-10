@@ -505,6 +505,7 @@
 }
 .lk .inline-form__btn svg {
   display: block !important;
+  width: 20px;
 }
 @media screen and (min-width: 768px) {
   .lk .inline-form__btn {
@@ -692,7 +693,8 @@
 }
 .lk__tabs .tab {
   font-size: 16px;
-  padding: 8px 12px;
+  line-height: 18px;
+  padding: 7px 11px;
 }
 .lk__sorting {
   flex-direction: row;
@@ -764,6 +766,9 @@
 }
 .lk-card.card-reject input[name="approved_state"]::placeholder {
   color: #F14C4C;
+}
+.lk-card.card-viewed-not {
+  border-color: #FC7827;
 }
 .lk-card button:not(.btn),
 .lk-card a:not(.btn) {
@@ -1112,6 +1117,23 @@
 .lk .responces-item__btn {
   max-width: max-content;
 }
+.lk .responces__select {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .lk .responces__select {
+    width: 171px;
+    flex: 0 0 auto;
+  }
+}
+.lk .responces__sort {
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .lk .responces__sort {
+    margin-bottom: 32px;
+  }
+}
 .lk .notify-wrapper .page-title {
   margin-bottom: 24px;
 }
@@ -1253,6 +1275,17 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+  }
+}
+.lk__filters-wrapper_responces {
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .lk__filters-wrapper_responces {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-bottom: 0;
+    flex-direction: row;
   }
 }
 .lk .favorite__title {

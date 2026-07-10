@@ -490,6 +490,7 @@
         height: 42px;
         svg {
             display: block !important;
+            width: 20px;
         }
 
         .media-min(768px, {
@@ -679,7 +680,8 @@
 
         .tab {
             font-size: @f-body;
-            padding: 8px 12px;
+            line-height: @lh-body;
+            padding: 7px 11px;
         }
     }
 
@@ -768,6 +770,10 @@
                     color: @error;
                 }
             }
+        }
+
+        &.card-viewed-not {
+            border-color: @primary;
         }
 
         button, a {
@@ -1129,6 +1135,23 @@
                 max-width: max-content;
             }
         }
+
+        &__select {
+            width: 100%;
+
+            .media-min(768px, {
+                width: 171px;
+                flex: 0 0 auto;
+            });
+        }
+
+        &__sort {
+            margin-top: 16px;
+
+            .media-min(768px, {
+                margin-bottom: 32px;
+            });
+        }
     }
 
     .notify {
@@ -1273,6 +1296,17 @@
             justify-content: space-between;
             margin-bottom: 32px;
         });
+
+        &_responces {
+            flex-direction: column-reverse;
+
+            .media-min(768px, {
+                flex-wrap: nowrap;
+                align-items: flex-start;    
+                margin-bottom: 0;
+                flex-direction: row;
+            });
+        }
     }
 
     .favorite {
