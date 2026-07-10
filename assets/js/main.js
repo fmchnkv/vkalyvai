@@ -1220,6 +1220,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function getFlexItemWidth(wrapper, itemsCount) {
+        const gap = parseFloat(getComputedStyle(wrapper).columnGap) || 0;
+        const gapsWidth = gap * (itemsCount - 1);
+
+        return `calc((100% - ${gapsWidth}px) / ${itemsCount})`;
+    }
+
     //=========КОНСТРУКТОР=========//
 
     function initHintsSlider(context = document) {
@@ -1250,9 +1257,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const steps = wrapper.querySelectorAll('.progress-step');
             if(!steps.length) return;
 
-            const gap = parseFloat(getComputedStyle(wrapper).columnGap) || 0;
-            const gapsWidth = gap * (steps.length - 1);
-            const stepWidth = `calc((100% - ${gapsWidth}px) / ${steps.length})`;
+            const stepWidth = getFlexItemWidth(wrapper, steps.length);
 
             steps.forEach(step => {
                 step.style.width = stepWidth;
@@ -1281,8 +1286,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             document.querySelector('h1').textContent = targetForm.dataset.title;
-            console.log(stepNumber);
-            console.log(targetHelperForm);
             if(targetHelperForm) {
                 console.log('active');
                 targetHelperForm.classList.add('active');
@@ -1887,5 +1890,17 @@ document.addEventListener('DOMContentLoaded', () => {
             cardWrapper.querySelector('.approved-select_btns.active')?.classList.remove('active');
             cardWrapper.querySelector('.modal.active')?.classList.remove('active');
         }
+    }
+
+    //ширина пунктов мобильного сайдбара
+    const points = document.querySelectorAll('.auth-mobile-menu__item');
+    const pointsWrapper = document.querySelector('.auth-mobile-menu__row');
+
+    if(points.length && pointsWrapper) {
+        const pointWidth = getFlexItemWidth(pointsWrapper, points.length);
+
+        points.forEach(point => {
+            point.style.width = pointWidth;
+        });
     }
 });
