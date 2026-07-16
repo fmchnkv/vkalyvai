@@ -1,0 +1,173 @@
+.page-title {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.label-title {
+  font-size: 18px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .label-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .label-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.chats {
+  height: 100dvh;
+  padding-top: 50px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .chats {
+    padding-top: 58px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .chats {
+    padding-top: 74px;
+  }
+}
+.chats > .container {
+  height: 100%;
+  min-height: 0;
+}
+.chats__wrapper {
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+@media screen and (min-width: 768px) {
+  .chats__wrapper {
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .chats__wrapper {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+  }
+}
+.chats__sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+}
+@media screen and (min-width: 768px) {
+  .chats__sidebar {
+    overflow: hidden;
+  }
+}
+.chats__sidebar-header {
+  padding: 12px 0;
+  position: relative;
+}
+.chats__sidebar-header::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #EBEBEB;
+  transform: translateX(-50%);
+}
+.chats__sidebar-header .chats__select .select__input {
+  justify-content: space-between;
+}
+.chats__sidebar-header .chats__select .select__dropdown {
+  top: calc(100% + 12px);
+  max-width: max-content;
+  right: 0;
+}
+.chats__sidebar-header .chats__select .select__dropdown .select__option.active,
+.chats__sidebar-header .chats__select .select__dropdown .select__option:active {
+  background-color: #F5F5F5;
+}
+.chats__sidebar-header .chats__select span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  padding-bottom: 2px;
+}
+.chats__sidebar-header .chats__select input {
+  padding: 0;
+  border: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  color: #999999;
+  border-radius: 0;
+}
+.chats__sidebar-header .chats__select input::placeholder {
+  font-size: 12px;
+  line-height: 117%;
+}
+.chats__sidebar-header .chats__select .input__icon {
+  position: initial;
+}
+.chats__sidebar-header,
+.chats__sidebar-filter {
+  flex: 0 0 auto;
+}
+.chats__items {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.chats__dialog {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .chats__dialog {
+    display: flex;
+  }
+  .chats__dialog__dialog-back {
+    display: none;
+  }
+}
+.chats__dialog-top,
+.chats__dialog-vacancy,
+.chats__dialog-bottom {
+  flex: 0 0 auto;
+}
+.chats__dialog-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.chats.is-open .chats__sidebar {
+  display: none;
+}
+.chats.is-open .chats__dialog {
+  display: flex;
+}

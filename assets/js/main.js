@@ -1541,10 +1541,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const MAX_FILES_TOTAL_SIZE = 10 * 1024 * 1024; // 10 МБ
         const MAX_FILES_COUNT = 10;
 
-        document?.querySelectorAll('.constructor__files-input-wrapper input[type="file"]')?.forEach(input => {
+        document?.querySelectorAll('.files-input-wrapper input[type="file"]')?.forEach(input => {
 
             input.addEventListener('change', function() {
-                const block = input.closest('.constructor__files-input-wrapper');
                 addFiles(this, this.files);
 
                 this.value = '';
@@ -1579,7 +1578,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function addFiles(input, files) {
             if (!files.length) return;
 
-            const block = input.closest('.construstor__inputs-files-block');
+            const block = input.closest('.inputs-files-block');
             const type = block.dataset.filesType;
             errorFiles[type] = [];
 
@@ -1609,6 +1608,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (!acceptedFiles.length) {
+                renderNotices(input, type, block);
                 return;
             }
 
@@ -1618,7 +1618,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function initFilesDropZone(input) {
-            const block = input.closest('.constructor__files-input-wrapper');
+            const block = input.closest('.files-input-wrapper');
             if (!block) return;
 
             ['dragenter', 'dragover'].forEach(eventName => {
@@ -1641,10 +1641,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.addEventListener('click', function(e) {
-            const addMoreBtn = e.target.closest('.constructor__files-more');
+            const addMoreBtn = e.target.closest('.files-more');
 
             if (addMoreBtn) {
-                const parent = addMoreBtn.closest('.construstor__inputs-files-block');
+                const parent = addMoreBtn.closest('.inputs-files-block');
                 const input = parent?.querySelector('input[type="file"]');
 
                 input?.click();
@@ -1652,15 +1652,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const removeBtn = e.target.closest(
-                '.constructor__files-remove'
+                '.files-remove'
             );
 
             if (!removeBtn) return;
-            const parent = removeBtn.closest('.construstor__inputs-files-block');
+            const parent = removeBtn.closest('.inputs-files-block');
             const type = parent.dataset.filesType;
             const index = Number(removeBtn.dataset.index);
 
             uploadedFiles[type].splice(index, 1);
+
+            if (!uploadedFiles[type].length) {
+                errorFiles[type] = [];
+            }
 
             const input = parent.querySelector('input[type="file"]');
             renderFiles(input, type);
@@ -1668,10 +1672,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function renderFiles(input, type) {
 
-            const block = input.closest('.construstor__inputs-files-block');
+            const block = input.closest('.inputs-files-block');
 
             const resultWrapper = block.querySelector(
-                '.constructor__files-result-wrapper'
+                '.files-result-wrapper'
             );
 
             resultWrapper.innerHTML = '';
@@ -1685,11 +1689,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
                 const preview = document.createElement('div');
-                preview.className = 'constructor__files-preview';
+                preview.className = 'files-preview';
                 let img = null;
                 const removeBtn = document.createElement('button');
                     removeBtn.type = 'button';
-                    removeBtn.className = 'constructor__files-remove';
+                    removeBtn.className = 'files-remove';
                     removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
                                             </svg>
@@ -1716,34 +1720,36 @@ document.addEventListener('DOMContentLoaded', () => {
             const noticeInfo = block.querySelector('.info');
             const noticeErrors = block.querySelector('.errors');
 
-            if(!noticeInfo && !noticeErrors) return;
-            
-            //очищаем все каждый раз 
-            noticeInfo.innerHTML = '';
-            noticeErrors.innerHTML = '';
+            if (!noticeInfo && !noticeErrors) return;
 
-            if(!uploadedFiles[type].length) return;
+            if (noticeInfo) {
+                noticeInfo.innerHTML = '';
 
-            //создаем записку
-            let spanPhotos = document.createElement('span');
-            spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
-            let spanSizes = document.createElement('span');
-            spanSizes.textContent = `${bytesToMb(getFilesTotalSize(uploadedFiles[type]))}/${bytesToMb(MAX_FILES_TOTAL_SIZE)} мб`;
-            noticeInfo.append(spanPhotos, spanSizes);
+                if (uploadedFiles[type].length) {
+                    const spanPhotos = document.createElement('span');
+                    spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
 
-            //создаем ошибки
-            if(errorFiles[type].length) {
-                Array.from(errorFiles[type]).forEach(file => {
-                    let spanError = document.createElement('span');
+                    const spanSizes = document.createElement('span');
+                    spanSizes.textContent = `${bytesToMb(getFilesTotalSize(uploadedFiles[type]))}/${bytesToMb(MAX_FILES_TOTAL_SIZE)} мб`;
+
+                    noticeInfo.append(spanPhotos, spanSizes);
+                }
+            }
+
+            if (noticeErrors) {
+                noticeErrors.innerHTML = '';
+
+                errorFiles[type].forEach(file => {
+                    const spanError = document.createElement('span');
                     spanError.textContent = file.name + ' ' + file.errors.join(', ');
                     noticeErrors.append(spanError);
-                })
+                });
             }
         }
 
         function addMoreBtnAdd(resultWrapper) {
             const addMoreBtn = document.createElement('div');
-            addMoreBtn.classList.add('constructor__files-preview', 'constructor__files-more');
+            addMoreBtn.classList.add('files-preview', 'files-more');
             addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                     <path d="M12.0039 4.25098C12.4181 4.25098 12.7539 4.58676 12.7539 5.00098V11.251H19.0039C19.4181 11.251 19.7539 11.5868 19.7539 12.001C19.7539 12.4152 19.4181 12.751 19.0039 12.751H12.7539V19.001C12.7539 19.4152 12.4181 19.751 12.0039 19.751C11.5897 19.751 11.2539 19.4152 11.2539 19.001V12.751H5.00391C4.58969 12.751 4.25391 12.4152 4.25391 12.001C4.25391 11.5868 4.58969 11.251 5.00391 11.251H11.2539V5.00098C11.2539 4.58676 11.5897 4.25098 12.0039 4.25098Z" fill="#FC7827"/>
@@ -1767,13 +1773,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function toggleFilesBlockState(input) {
-            const block = input.closest('.construstor__inputs-files-block');
+            const block = input.closest('.inputs-files-block');
             if (!block) return;
 
             const hasFiles = input.files.length > 0;
-            const resultWrapper = block.querySelector('.constructor__files-result-wrapper');
-            const inputWrapper = block.querySelector('.constructor__files-input-wrapper');
-            const noticeWrapper = block.querySelector('.constructor__files-result-noties');
+            const resultWrapper = block.querySelector('.files-result-wrapper');
+            const inputWrapper = block.querySelector('.files-input-wrapper');
+            const noticeWrapper = block.querySelector('.files-result-noties');
 
             inputWrapper?.classList.toggle('hidden', hasFiles);
 

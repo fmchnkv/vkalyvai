@@ -1685,6 +1685,170 @@
 .accordion__content {
   overflow: hidden;
 }
+.inputs-files-title {
+  margin-bottom: 17px;
+}
+.inputs-files-title .subcaption {
+  margin-bottom: 8px;
+}
+.inputs-files-title p {
+  font-size: 14px;
+  line-height: 114%;
+  color: #999999;
+}
+@media screen and (min-width: 1280px) {
+  .inputs-files-title p {
+    font-size: 16px;
+  }
+}
+.files-result-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.files-result-wrapper:not(:empty) {
+  margin-top: 20px;
+}
+.files-result-noties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  max-width: max-content;
+}
+.files-result-noties .errors {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #F14C4C;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.files-result-noties .info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+  display: flex;
+  gap: 12px;
+}
+.files-preview {
+  width: 84px;
+  height: 104px;
+  border-radius: 8px;
+  position: relative;
+}
+.files-preview > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FC7827;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+}
+.files-preview img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 8px;
+}
+.files-remove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 2px;
+  border-radius: 100%;
+  background: #FFFFFF;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.files-remove svg path {
+  transition: fill 0.3s ease;
+}
+.files-remove:hover {
+  background: #FC7827;
+  transition: all 0.3s ease;
+}
+.files-remove:hover svg path {
+  transition: all 0.3s ease;
+  fill: #FFFFFF;
+}
+.files-more {
+  background-color: #EBEBEB;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.files-more:hover {
+  background-color: #999999;
+  transition: all 0.3s ease;
+}
+.files-more span {
+  background-color: #FFFFFF;
+  padding: 6px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.files-input-wrapper {
+  padding: 26px 12px;
+  border: 1px solid #EBEBEB;
+  border-radius: 32px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .files-input-wrapper {
+    min-height: 220px;
+  }
+}
+.files-input-wrapper:focus,
+.files-input-wrapper:hover,
+.files-input-wrapper.drag-over {
+  background-color: #FFF2E9;
+  transition: background-color 0.3s ease;
+}
+.files-input-wrapper input[type="file"] {
+  opacity: 0;
+  max-width: 0;
+  max-height: 0;
+}
+.files-input-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 352px;
+}
+.files-input-text .file-input-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.files-input-text .file-input-title span {
+  color: #FC7827;
+}
+.files-input-text p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999;
+}
 * {
   box-sizing: border-box;
   margin: 0;

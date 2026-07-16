@@ -1011,12 +1011,12 @@
             <form id="step-form-files" data-form="6" data-title="Портфолио и сертификаты" class="step-form"
                 method="post" enctype="multipart/form-data">
                 <div class="resume-file-inputs-wrapper grid-list">
-                    <div class="construstor__inputs-files-block" data-files-type="portfolio">
-                        <div class="constructor__inputs-title">
+                    <div class="construstor__inputs-files-block inputs-files-block" data-files-type="portfolio">
+                        <div class="constructor__inputs-title inputs-files-title">
                             <span class="subcaption">Портфолио</span>
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
-                        <label class="constructor__files-input-wrapper">
+                        <label class="constructor__files-input-wrapper files-input-wrapper">
                             <input type="file" name="portfolio[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1031,25 +1031,25 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div class="constructor__files-input-text">
+                            <div class="constructor__files-input-text files-input-text">
                                 <div class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
                                 </div>
                                 <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
                             </div>
                         </label>
-                        <div class="constructor__files-result-wrapper"></div>
-                        <div class="constructor__files-result-noties">
+                        <div class="constructor__files-result-wrapper files-result-wrapper"></div>
+                        <div class="constructor__files-result-noties files-result-noties">
                             <div class="info"></div>
                             <div class="errors"></div>
                         </div>
                     </div>
-                    <div class="construstor__inputs-files-block" data-files-type="certificates">
-                        <div class="constructor__inputs-title">
+                    <div class="construstor__inputs-files-block inputs-files-block" data-files-type="certificates">
+                        <div class="constructor__inputs-title inputs-files-title">
                             <span class="subcaption">Сертификаты</span>
                             <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
                         </div>
-                        <label class="constructor__files-input-wrapper">
+                        <label class="constructor__files-input-wrapper files-input-wrapper">
                             <input type="file" name="certificates[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1064,15 +1064,15 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div class="constructor__files-input-text">
+                            <div class="constructor__files-input-text files-input-text">
                                 <div class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
                                 </div>
                                 <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
                             </div>
                         </label>
-                        <div class="constructor__files-result-wrapper"></div>
-                        <div class="constructor__files-result-noties">
+                        <div class="constructor__files-result-wrapper files-result-wrapper"></div>
+                        <div class="constructor__files-result-noties files-result-noties">
                             <div class="info"></div>
                             <div class="errors"></div>
                         </div>
