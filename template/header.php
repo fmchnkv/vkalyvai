@@ -62,6 +62,10 @@ if (strpos($uri, '/lk/moderator/') !== false) {
     $auth = 'Y';
 }
 
+if (strpos($uri, '/chats/') !== false) {
+    $auth = 'Y';
+}
+
 $authMobileMenuItems = str_contains($uri, 'moderator')
     ? [
         [

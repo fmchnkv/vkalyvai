@@ -102,3 +102,31 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.chats_border-mobile() {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: @border-neutral;
+    transform: translateX(-50%);
+
+    .media-min(1280px, {
+        left: 0;
+        width: 100%;
+        transform: none;
+    });
+}
+
+.chats_user-online() {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: @green;
+    right: 0;
+    top: 0;
+    border-radius: 100%;
+}

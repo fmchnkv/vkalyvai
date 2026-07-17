@@ -111,6 +111,48 @@ $cardsData = isset($_GET['client'])
                 'state_text' => 'Отказ',
                 'messages_count' => 0
             ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed reject',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Отказ',
+                'messages_count' => 0
+            ],
         ]);
 ?>
 <div class="chats-list">

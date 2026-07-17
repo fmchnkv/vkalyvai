@@ -43,9 +43,9 @@
         </form>
     </div>
 </div>
-<div data-modal-content="add_files" class="inputs-files-block dialog__modal dialog__inputs-files-block">
+<div data-modal-content="add_files" class="inputs-files-block chats__dialog__modal dialog__inputs-files-block">
     <form action="">
-        <div class="inputs-files-title dialog__inputs-title">
+        <div class="inputs-files-title chats__dialog__inputs-title">
             <span class="subcaption">Прикрепить файл</span>
             <p>Подсказка для любого пользователя какие файлы и для чего можно добавлять в чат</p>
         </div>
@@ -76,16 +76,16 @@
             <div class="info"></div>
             <div class="errors"></div>
         </div>
-        <div class="dialog__files-btns dialog__modal-btns">
+        <div class="dialog__files-btns chats__dialog__modal-btns">
             <button type="button" class="btn btn_light btn_size-m cancel-btn">Отмена</button>
             <button type="submit" class="btn btn_primary submit-btn btn_size-m">Отправить</button>
         </div>
     </form>
 </div>
 
-<div data-modal-content="change_choise" class="dialog__cloise-block dialog__modal">
+<div data-modal-content="change_choise" class="dialog__cloise-block chats__dialog__modal">
     <form action="">
-        <div class="dialog__inputs-title">
+        <div class="chats__dialog__inputs-title">
             <span class="subcaption">Изменить статус резюме</span>
         </div>
         <div class="choise-block__info">

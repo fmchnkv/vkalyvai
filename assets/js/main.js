@@ -1929,4 +1929,84 @@ document.addEventListener('DOMContentLoaded', () => {
             point.style.width = pointWidth;
         });
     }
+
+    //чаты - клик на карточку (временное)
+
+    document.querySelectorAll('.chats-card')?.forEach(card => {
+        card?.addEventListener('click', function() {
+            document.querySelector('.chats')?.classList?.add('is-open');
+        })
+    })
+
+    //клик на кнопку назад для возврата к чатам (временное)
+    document.addEventListener('click', function(e) {
+        const backBtn = e.target.closest('.chats__dialog-back');
+        if(!backBtn) return;
+
+        document.querySelector('.chats')?.classList?.remove('is-open');
+    })
+
+    // действия с сообщением по долгому нажатию на мобилке (временное)
+    const messageActionsModal = document.querySelector('[data-modal="message-actions"]');
+    const mobileChatMedia = window.matchMedia('(max-width: 1280px)');
+
+    if (messageActionsModal) {
+        let pressedMessageWrapper = null;
+        let longPressTimer = null;
+        let pointerStart = null;
+        let longPressTriggered = false;
+        const longPressDelay = 500;
+        const moveTolerance = 10;
+
+        const clearLongPress = () => {
+            window.clearTimeout(longPressTimer);
+            longPressTimer = null;
+            pointerStart = null;
+        };
+
+        document.addEventListener('pointerdown', (e) => {
+            const message = e.target.closest('.dialog__messages-item.myself-message');
+
+            if (!message || !mobileChatMedia.matches || e.pointerType === 'mouse') return;
+
+            pressedMessageWrapper = message.closest('.dialog__messages-wrapper');
+            pointerStart = { x: e.clientX, y: e.clientY, pointerId: e.pointerId };
+            longPressTriggered = false;
+
+            longPressTimer = window.setTimeout(() => {
+                longPressTriggered = true;
+                messageActionsModal.classList.add('active');
+                messageActionsModal.querySelector('[data-message-action]')?.focus();
+            }, longPressDelay);
+        });
+
+        document.addEventListener('pointermove', (e) => {
+            if (!pointerStart || e.pointerId !== pointerStart.pointerId) return;
+
+            const movedX = Math.abs(e.clientX - pointerStart.x);
+            const movedY = Math.abs(e.clientY - pointerStart.y);
+
+            if (movedX > moveTolerance || movedY > moveTolerance) clearLongPress();
+        });
+
+        ['pointerup', 'pointercancel'].forEach(eventName => {
+            document.addEventListener(eventName, () => {
+                clearLongPress();
+
+                if (longPressTriggered) {
+                    window.setTimeout(() => {
+                        longPressTriggered = false;
+                    }, 0);
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (longPressTriggered && !e.target.closest('.chats__message-actions-modal .modal__wrapper')) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                longPressTriggered = false;
+            }
+        }, true);
+    }
 });

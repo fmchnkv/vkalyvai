@@ -16,7 +16,7 @@
             <img src="/images/avatar_rezume.png" alt="">
         </div>
         <div class="title">
-            <h3>Иванов Иван Иванович</h3>
+            <h3><?= $whoIs == 'job_seeker' ? 'Название компании' : 'Иванов Иван Иванович'; ?></h3>
             <p>Сейчас онлайн</p>
         </div>
     </div>
@@ -44,7 +44,7 @@
                 </button>
             </div>
         <? else: ?>
-            <a href="javascript:void(0)" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
+            <a href="<?= $whoIs == 'job_seeker' ? '/pages/company.php' : '/pages/resume.php'; ?>" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
                 <span>Подробнее</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -67,7 +67,7 @@
             <span>Вакансия</span>
             <h5>Название вакансии</h5>
         </div>
-        <a href="javascript:void(0)" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
+        <a href="/pages/vacancy.php" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
             <span>Перейти</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
