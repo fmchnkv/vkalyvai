@@ -534,6 +534,18 @@
         }
     }
 
+    .message-item__button {
+        svg g path {
+            transition: all .3s ease;
+        }
+        &:hover {
+            svg g path {
+                fill: @primary;
+                transition: all .3s ease;
+            }
+        }
+    }
+
     &__dialog {
         display: none;
         flex-direction: column;

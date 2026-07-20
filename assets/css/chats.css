@@ -546,6 +546,13 @@
   justify-content: space-between;
   gap: 8px;
 }
+.chats .message-item__button svg g path {
+  transition: all 0.3s ease;
+}
+.chats .message-item__button:hover svg g path {
+  fill: #FC7827;
+  transition: all 0.3s ease;
+}
 .chats__dialog {
   display: none;
   flex-direction: column;
