@@ -67,7 +67,7 @@
             <span>Вакансия</span>
             <h5>Название вакансии</h5>
         </div>
-        <a href="/pages/vacancy.php" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
+        <a href="/pages/vacancy.php" target="_blank" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
             <span>Перейти</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
