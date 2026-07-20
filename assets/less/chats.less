@@ -203,6 +203,7 @@
         padding: 12px 0;
         position: relative;
         z-index: 1;
+        cursor: pointer;
 
         &:not(:last-of-type) {
             &::after {
@@ -884,6 +885,12 @@
     .show-all-btn {
         span {
             display: none;
+            transition: color .3s ease;
+
+            &:hover {
+                color: @primary;
+                transition: color .3s ease;
+            }
 
             .media-min(768px, {
                 display: block;

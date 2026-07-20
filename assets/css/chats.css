@@ -253,6 +253,7 @@
   padding: 12px 0;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .chats-card:not(:last-of-type)::after {
   content: '';
@@ -884,6 +885,11 @@
 }
 .chats .show-all-btn span {
   display: none;
+  transition: color 0.3s ease;
+}
+.chats .show-all-btn span:hover {
+  color: #FC7827;
+  transition: color 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .chats .show-all-btn span {
