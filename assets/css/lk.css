@@ -1616,11 +1616,11 @@
 .lk .employer__responces-item__footer .buttons-wrapper .accept__btn span {
   display: none;
 }
-.lk .employer__responces-item__footer .buttons-wrapper a {
+.lk .employer__responces-item__footer .buttons-wrapper a:not(.btn) {
   margin-left: 14px;
 }
 @media screen and (min-width: 768px) {
-  .lk .employer__responces-item__footer .buttons-wrapper a {
+  .lk .employer__responces-item__footer .buttons-wrapper a:not(.btn) {
     margin-top: 0;
   }
 }
