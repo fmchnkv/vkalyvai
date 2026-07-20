@@ -114,7 +114,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -348,7 +348,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -553,7 +553,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -756,7 +756,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -959,7 +959,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -1162,7 +1162,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="javascript:void(0)" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >

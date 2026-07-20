@@ -43,7 +43,7 @@
             </div>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -57,7 +57,7 @@
                             </defs>
                         </svg>
                         <span>Чат</span>
-                    </button>
+                    </a>
                     <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -164,7 +164,7 @@
             </div>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -178,7 +178,7 @@
                             </defs>
                         </svg>
                         <span>Чат</span>
-                    </button>
+                    </a>
                     <div class="select approved-select_btns desk-elem" data-id="approved_btns">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
@@ -358,7 +358,7 @@
             </div>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -372,7 +372,7 @@
                             </defs>
                         </svg>
                         <span>Чат</span>
-                    </button>
+                    </a>
                     <div class="select approved-select_btns desk-elem" data-id="approved_btns">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
@@ -554,7 +554,7 @@
             </div>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -568,7 +568,7 @@
                             </defs>
                         </svg>
                         <span>Чат</span>
-                    </button>
+                    </a>
                     <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -673,7 +673,7 @@
             </div>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <button class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -687,7 +687,7 @@
                             </defs>
                         </svg>
                         <span>Чат</span>
-                    </button>
+                    </a>
                     <button class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>

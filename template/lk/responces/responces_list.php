@@ -27,7 +27,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -57,7 +57,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -87,7 +87,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -117,7 +117,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -147,7 +147,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item">
         <div class="card-header responces-item__header">
@@ -177,7 +177,7 @@
                 <span>01.04.2026</span>
             </div>
         </div>
-        <a href="javascript:void(0)" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
 </div>
 <? include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
