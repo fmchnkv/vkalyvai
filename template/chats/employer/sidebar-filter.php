@@ -1,5 +1,5 @@
 <div class="chats__filters">
-    <div class="chats__select select" data-id="recruitment_stage">
+    <div class="chats__filters-select select" data-id="recruitment_stage">
         <label class="filter-group__input select__input input input_has-icon">
             <input class="input__field" type="text" name="recruitment_stage" placeholder="Этапы подбора" readonly>
             <div class="input__icon">
@@ -25,7 +25,7 @@
             </ul>
         </div>
     </div>
-    <div class="chats__multi-select multiple-select multiple-select_chat">
+    <div class="chats__filters-select multiple-select multiple-select_chat">
         <label class="filter-group__input multiple-select__input">
             <input class="multiple-select__field" type="text" name="category" placeholder="Все вакансии" readonly="">
             <span class="multiple-select__counter"></span>

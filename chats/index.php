@@ -17,7 +17,7 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
                     <div class="chats__select select" data-id="chats">
                         <label class="filter-group__input select__input input input_has-icon">
                             <div class="txt">
-                                <span>Чаты</span>
+                                <span><?= $whoIs == 'moderator' ? 'Обращения' : 'Чаты'; ?></span>
                                 <input class="input__field" type="text" name="chats" placeholder="Все" readonly>
                             </div>
                             <div class="input__icon">

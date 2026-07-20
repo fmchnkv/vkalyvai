@@ -43,7 +43,7 @@
         </form>
     </div>
 </div>
-<div data-modal-content="add_files" class="inputs-files-block chats__dialog__modal dialog__inputs-files-block">
+<div data-modal-content="add_files" data-files-type="noname" class="inputs-files-block chats__dialog__modal dialog__inputs-files-block">
     <form action="">
         <div class="inputs-files-title chats__dialog__inputs-title">
             <span class="subcaption">Прикрепить файл</span>
@@ -77,22 +77,22 @@
             <div class="errors"></div>
         </div>
         <div class="dialog__files-btns chats__dialog__modal-btns">
-            <button type="button" class="btn btn_light btn_size-m cancel-btn">Отмена</button>
+            <button type="button" class="btn btn_light btn_size-m cancel-btn" data-close-modal>Отмена</button>
             <button type="submit" class="btn btn_primary submit-btn btn_size-m">Отправить</button>
         </div>
     </form>
 </div>
 
-<div data-modal-content="change_choise" class="dialog__cloise-block chats__dialog__modal">
+<div data-modal-content="invite" class="dialog__cloise-block chats__dialog__modal">
     <form action="">
         <div class="chats__dialog__inputs-title">
             <span class="subcaption">Изменить статус резюме</span>
         </div>
-        <div class="choise-block__info">
+        <div class="dialog__cloise-block__info">
             <span>Иванов Иван Иванович</span>
             <p>Название вакансии</p>
         </div>
-        <div class="cloise-block__inputs">
+        <div class="dialog__cloise-block__inputs">
             <div class="select" data-id="choise">
                 <label class="filter-group__input select__input input input_has-icon">
                     <span>Статус</span>
@@ -116,16 +116,18 @@
 
                 <div class="select__dropdown">
                     <ul class="select__dropdown-list" data-id="choise">
-                        <li class="select__option active" data-value="Приглашение">Приглашение</li>
-                        <li class="select__option" data-value="Отказ">Отказ</li>
+                        <li class="select__option active" data-choise="approve" data-value="Приглашение">Приглашение</li>
+                        <li class="select__option" data-choise="reject" data-value="Отказ">Отказ</li>
                     </ul>
                 </div>
             </div>
             <div class="choise__textarea-wrapper textarea">
                 <span>Сообщение</span>
-                <textarea name="descr" id="" placeholder="">
-                    Текст сообщения генерируется автоматически в зависимости от выбранного статуса. Перед отправкой его можно отредактировать самостоятельно
-                </textarea>
+                <textarea name="descr" id="">Текст сообщения генерируется автоматически в зависимости от выбранного статуса. Перед отправкой его можно отредактировать самостоятельно</textarea>
+            </div>
+            <div class="dialog__state-btns chats__dialog__modal-btns">
+                <button type="button" class="btn btn_light btn_size-m cancel-btn" data-close-modal>Отмена</button>
+                <button type="submit" class="btn btn_primary submit-btn btn_size-m">Отправить</button>
             </div>
         </div>
     </form>

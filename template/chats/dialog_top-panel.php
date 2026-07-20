@@ -23,7 +23,7 @@
     <div class="dialog-btns">
         <? if($whoIs == 'employer'): ?>
             <div class="buttons-wrapper">
-                <button data-dialog-modal="job-seeker_invite" class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
+                <button data-dialog-modal="invite" data-action="approve" class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"></path>
@@ -36,7 +36,7 @@
                     </svg>
                     <span class="desk-elem tab-elem">Пригласить</span>
                 </button>
-                <button data-dialog-modal="job-seeker_invite" class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
+                <button data-dialog-modal="invite" data-action="reject" class="accept__btn btn btn_light btn_size-m lk__btn_has-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.7773 6.28845L11.0654 10.0013L14.7773 13.7133L13.7168 14.7738L10.0049 11.0619L6.29199 14.7738L5.23145 13.7133L8.94434 10.0013L5.23145 6.28845L6.29199 5.22791L10.0049 8.9408L13.7168 5.22791L14.7773 6.28845Z" fill="#F14C4C"></path>
                     </svg>

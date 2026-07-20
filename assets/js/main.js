@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Закрытие модальных окон при клике вне области и не по кнопке
         const target = e.target;
         const activeModal = document.querySelector('.modal.active');
-        
+
         if (activeModal && !target.closest('.modal__wrapper')) {
             const isModalBtn = checkModalBtn(target);
             const isFilterChoice = target.classList.contains('multiple-select__choice') || target.closest('.multiple-select__choice');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Закрытие одиночного селекта в форме при клике вне области или смене фокуса
         const activeSelect = document.querySelector('.select.active');
-        
+
         if (activeSelect && !target.closest('.select')) {
             activeSelect.classList.remove('active');
             return;
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
-            
+
         }
 
     }
@@ -224,7 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modalCloseBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const modal = modalCloseBtn.closest('.modal');
-                console.log('modal close via button', modal ? modal.dataset.modal : null, new Date().toISOString());
                 modal.classList.remove('active');
                 document.body.classList.remove('no-scroll');
             });
@@ -335,10 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: [0],
                 step: 1
             });
-    
+
             rangeInput.noUiSlider.on('update', function (values, handle) {
                 const inputMin = document.querySelector('[name="salary_from"]');
-    
+
                 inputMin.value = parseInt(values[0]);
             });
         } else {
@@ -351,11 +350,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: [min, max],
                 step: 1
             });
-    
+
             rangeInput.noUiSlider.on('update', function (values, handle) {
                 const inputMin = document.querySelector('[name="salary_from"]');
                 const inputMax = document.querySelector('[name="salary_to"]');
-    
+
                 inputMin.value = parseInt(values[0]);
                 inputMax.value = parseInt(values[1]);
             });
@@ -466,9 +465,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 multipleSelectOption.classList.toggle('active');
 
                 let curChoices = multipleSelectOption.closest('.multiple-select').querySelectorAll('.multiple-select__option.active');
-                let curChoiceBlock = multipleSelectOption.closest('.multiple-select').querySelector('.multiple-select__choices');               
+                let curChoiceBlock = multipleSelectOption.closest('.multiple-select').querySelector('.multiple-select__choices');
 
-                
+
                 if (curChoiceBlock) {
                     curChoiceBlock.innerHTML = '';
 
@@ -488,14 +487,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 let tag = document.querySelectorAll(`.select__tag[data-id="${id}"]`);
 
                 if (tag.length) {
-                    console.log(tag);
                     tag.forEach(t => {
                         if (t.dataset.value === multipleSelectOption.dataset.value) {
-                           if (multipleSelectOption.classList.contains('active')) {
+                            if (multipleSelectOption.classList.contains('active')) {
                                 t.classList.add('hidden');
-                           } else {
+                            } else {
                                 t.classList.remove('hidden');
-                           }
+                            }
                         }
                     });
                 }
@@ -569,41 +567,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const porfolioSliderElement = document.querySelector(".js-portfolio-slider");
 
     if (porfolioSliderElement) {
-      const portfolioSlider = new Swiper(porfolioSliderElement, {
-        loop: false,
-        navigation: {
-          nextEl: porfolioSliderElement.querySelector(".slider-button_next"),
-          prevEl: porfolioSliderElement.querySelector(".slider-button_prev"),
-        },
-        slidesPerView: "auto",
-        spaceBetween: 8,
-        observer: true,
-        breakpoints: {
-            768: {
-                spaceBetween: 12
+        const portfolioSlider = new Swiper(porfolioSliderElement, {
+            loop: false,
+            navigation: {
+                nextEl: porfolioSliderElement.querySelector(".slider-button_next"),
+                prevEl: porfolioSliderElement.querySelector(".slider-button_prev"),
+            },
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            observer: true,
+            breakpoints: {
+                768: {
+                    spaceBetween: 12
+                }
             }
-        }
-      });
+        });
     }
 
     const sertificatesSliderElement = document.querySelector(".js-sertificates-slider");
 
     if (sertificatesSliderElement) {
-      const sertificatesSlider = new Swiper(sertificatesSliderElement, {
-        loop: false,
-        navigation: {
-          nextEl: sertificatesSliderElement.querySelector(".slider-button_next"),
-          prevEl: sertificatesSliderElement.querySelector(".slider-button_prev"),
-        },
-        slidesPerView: "auto",
-        spaceBetween: 8,
-        observer: true,
-        breakpoints: {
-            768: {
-                spaceBetween: 12
+        const sertificatesSlider = new Swiper(sertificatesSliderElement, {
+            loop: false,
+            navigation: {
+                nextEl: sertificatesSliderElement.querySelector(".slider-button_next"),
+                prevEl: sertificatesSliderElement.querySelector(".slider-button_prev"),
+            },
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            observer: true,
+            breakpoints: {
+                768: {
+                    spaceBetween: 12
+                }
             }
-        }
-      });
+        });
     }
 
     const jsTabs = document.querySelectorAll('.js-tab');
@@ -675,7 +673,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pricesReset) {
         pricesReset.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             if (rangeInput) {
                 console.log(rangeInput.dataset.min, rangeInput.dataset.max);
                 rangeInput.noUiSlider.updateOptions({
@@ -876,7 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function sendAjaxRequest(url, page, perPage, id) {
-        
+
         const data = {
             page: page,
             perPage: perPage
@@ -891,7 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Content-Type': 'application/json', // Передаем JSON
                     'X-Requested-With': 'XMLHttpRequest' // Традиционный заголовок AJAX (необязательно)
                 },
-                body: JSON.stringify(data) 
+                body: JSON.stringify(data)
             });
 
             if (!response.ok) {
@@ -899,7 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const responseData = await response.text();
-            
+
             setTimeout(() => {
                 list.insertAdjacentHTML('beforeend', responseData);
                 list.classList.remove('loading');
@@ -907,7 +905,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('AJAX запрос завершился ошибкой:', error);
-           
+
         }
     }
 
@@ -916,14 +914,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let isFetching = false;
     let hasMoreData = true;
     const jsList = document.querySelector('.js-list');
-    
+
     async function loadMoreContent(list, page) {
         // Блокируем запрос, если идет загрузка или данные закончились
-        if (isFetching || !hasMoreData) return; 
+        if (isFetching || !hasMoreData) return;
 
         isFetching = true;
 
-        
+
         try {
             let id = list.dataset.id;
             let urlAjax = '';
@@ -951,7 +949,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     perPage: 4
                 })
             });
-            
+
             if (!response.ok) {
                 throw new Error(`Ошибка сервера: ${response.status}`);
             }
@@ -965,12 +963,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            
+
             currentPage++;
             console.log('Текущая страница: ' + currentPage);
 
-            list.insertAdjacentHTML('beforeend', items);   
-            
+            list.insertAdjacentHTML('beforeend', items);
+
             await new Promise(resolve => requestAnimationFrame(resolve));
 
             const triggerBounds = trigger.getBoundingClientRect();
@@ -991,7 +989,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Настройка IntersectionObserver
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px 100px 0px', 
+        rootMargin: '0px 0px 100px 0px',
         threshold: 0
     };
 
@@ -1001,7 +999,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
 
             if (entry.isIntersecting && !isFetching && hasMoreData) {
-                
+
                 const triggerBounds = trigger.getBoundingClientRect();
                 const isTriggerStillVisible = triggerBounds.top < window.innerHeight + 200;
 
@@ -1017,7 +1015,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (trigger) {
         // Запуск наблюдения
-        
+
         observer.observe(trigger);
     }
 
@@ -1072,16 +1070,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     Fancybox.bind("[data-fancybox]", {
-        
+
     });
 
     //вызов модалок с кнопок
     document.querySelectorAll('[data-call-modal]').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
 
             let modal = document.querySelector(`.modal[data-modal="${button.dataset.callModal}"]`);
-            if(modal) {
+            if (modal) {
                 modal.classList.add('active');
             }
         })
@@ -1104,51 +1102,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (type) {
             case 'tel':
-                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99'});
+                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'tel';
                 contactInput.placeholder = '+7 (___) ___-__-__';
-            break;
+                break;
 
             case 'email':
                 currentMask = new Inputmask({ alias: 'email' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = 'name@example.com';
-            break;
+                break;
 
             case 'inn':
-                currentMask = new Inputmask({ mask: '999999999999'});
+                currentMask = new Inputmask({ mask: '999999999999' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = '999999999999';
-            break;
+                break;
 
             case 'number':
                 currentMask = new Inputmask({ alias: 'numeric', digits: 0, allowMinus: false, rightAlign: false });
                 currentMask.mask(contactInput);
-            break;
+                break;
 
             case 'password':
-                currentMask = new Inputmask({ mask: '******************'});
+                currentMask = new Inputmask({ mask: '******************' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'password';
                 contactInput.placeholder = 'admin';
-            break;
+                break;
 
             case 'soc':
                 currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = 'id221396498';
-            break;
+                break;
 
             default:
                 currentMask = new Inputmask({ regex: '^[А-Яа-яЁёA-Za-z0-9_.@-\\s]{3,64}$' });
                 currentMask.mask(contactInput);
                 contactInput.type = 'text';
                 contactInput.placeholder = 'Введите текст';
-            break;
+                break;
         }
         contactInput.value = '';
     }
@@ -1160,31 +1158,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if(radios) {
+    if (radios) {
         radios.forEach(r => r.addEventListener('change', (e) => {
-            if(e.target.value) applyMaskFor(contactInput, e.target.value);
+            if (e.target.value) applyMaskFor(contactInput, e.target.value);
         }));
     }
 
-    if(maskInputs) {
+    if (maskInputs) {
         maskInputs.forEach(input => {
             applyMaskFor(input, input.dataset.mask);
         });
     }
 
     //отображение и скрытие пароля
-    if(passwordWrappers) {
+    if (passwordWrappers) {
         passwordWrappers.forEach(wrapper => {
             let input = wrapper.querySelector('input');
             let btnShow = wrapper.querySelector('button');
 
-            if(input && btnShow) {
+            if (input && btnShow) {
                 //const originalType = input.type;
-                
-                btnShow.addEventListener('click', function(e) {
+
+                btnShow.addEventListener('click', function (e) {
                     e.preventDefault();
 
-                    if(input.type == 'text') {
+                    if (input.type == 'text') {
                         input.type = 'password';
                     } else {
                         input.type = 'text';
@@ -1204,7 +1202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //открытие поля для редактирования
     const lkForms = document.querySelectorAll('.input-edit-form');
 
-    if(lkForms) {
+    if (lkForms) {
         lkForms.forEach(form => {
             let input = form.querySelector('.lk-bubble__hidden-input');
             let userValue = form.querySelector('p');
@@ -1220,19 +1218,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteBtn.classList[action]('lk__hidden');
             }
 
-            editBtn.addEventListener('click', function(e) {
+            editBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 addClasses('add');
             })
 
-            saveBtn.addEventListener('click', function(e) {
+            saveBtn.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                if(input.value) {
+                if (input.value) {
                     form.classList.remove('error');
                     userValue.textContent = input.value;
-                   // form.submit();
-                   addClasses('remove');
+                    // form.submit();
+                    addClasses('remove');
                 } else {
                     form.classList.add('error');
                 }
@@ -1275,7 +1273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setProgressStepWidth() {
         progressWrappers.forEach(wrapper => {
             const steps = wrapper.querySelectorAll('.progress-step');
-            if(!steps.length) return;
+            if (!steps.length) return;
 
             const stepWidth = getFlexItemWidth(wrapper, steps.length);
 
@@ -1287,7 +1285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setProgressStepWidth();
     window.addEventListener('resize', setProgressStepWidth);
-    if(constructorSteps.length) {
+    if (constructorSteps.length) {
         function changeStep(stepNumber) {
             const targetForm = document.querySelector(
                 `[data-form="${stepNumber}"]`
@@ -1299,17 +1297,15 @@ document.addEventListener('DOMContentLoaded', () => {
             constructorSteps.forEach(form => {
                 form.classList.remove('active');
             });
-            if(helperForms.length) {
+            if (helperForms.length) {
                 helperForms.forEach(form => {
                     form.classList.remove('active');
                 })
             }
 
             document.querySelector('h1').textContent = targetForm.dataset.title;
-            if(targetHelperForm) {
-                console.log('active');
+            if (targetHelperForm) {
                 targetHelperForm.classList.add('active');
-                console.log(targetHelperForm);
             }
             document.querySelectorAll('.progress-step').forEach(step => {
                 step.classList.toggle(
@@ -1321,7 +1317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let newStep = document.querySelector(`[data-form="${stepNumber}"]`);
 
-            if(!newStep) return;
+            if (!newStep) return;
 
             newStep.classList.add('active');
 
@@ -1336,11 +1332,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let btnNext = stepForm.querySelector('.btn-next');
             let stepPrev = stepForm.querySelector('.prev-step');
 
-            if(btnNext) {
-                btnNext.addEventListener('click', function(e) {
+            if (btnNext) {
+                btnNext.addEventListener('click', function (e) {
                     e.preventDefault();
                     const nextStep = Number(this.dataset.nextStep);
-                    if(nextStep) {
+                    if (nextStep) {
                         changeStep(nextStep);
                     } else {
                         //stepForm.submit();
@@ -1348,8 +1344,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            if(stepPrev) {
-                stepPrev.addEventListener('click', function(e) {
+            if (stepPrev) {
+                stepPrev.addEventListener('click', function (e) {
                     e.preventDefault();
                     const prevStep = Number(this.dataset.prevStep);
                     changeStep(prevStep);
@@ -1358,18 +1354,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         //кнопка добавления блока полей
-        if(addBlockBtns) {
+        if (addBlockBtns) {
             addBlockBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
+                btn.addEventListener('click', function (e) {
                     e.preventDefault();
-                    if(this.dataset.addBlock) {
+                    if (this.dataset.addBlock) {
                         let template = document.getElementById(`${this.dataset.addBlock}`);
                         if (!template) return;
 
                         let blockId = template.id;
                         const clone = template.content.firstElementChild.cloneNode(true);
 
-                        
+
                         //присваиваем id
                         let index = 1;
                         while (document.getElementById(`${blockId}-${index}`)) {
@@ -1377,15 +1373,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         clone.id = `${blockId}-${index}`;
 
-                       let blocksContainer = template.parentNode;
-                       blocksContainer.appendChild(clone);
-                       initHintsSlider(clone);
+                        let blocksContainer = template.parentNode;
+                        blocksContainer.appendChild(clone);
+                        initHintsSlider(clone);
 
                         //прокрутка
                         const top =
-                        clone.getBoundingClientRect().top +
-                        window.pageYOffset -
-                        offset;
+                            clone.getBoundingClientRect().top +
+                            window.pageYOffset -
+                            offset;
                         window.scrollTo({
                             top,
                             behavior: 'smooth'
@@ -1396,14 +1392,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         //кнопка удаления блока полей
-        if(removeBlockBtns.length) {
-            document.addEventListener('click', function(e) {
+        if (removeBlockBtns.length) {
+            document.addEventListener('click', function (e) {
                 const removeBtn = e.target.closest('button[data-remove-block]');
 
-                if(removeBtn) {
+                if (removeBtn) {
                     e.preventDefault();
                     const addedBlock = removeBtn.closest('.template-element');
-                    if(addedBlock) {
+                    if (addedBlock) {
                         addedBlock.remove();
                     }
                 }
@@ -1436,7 +1432,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         function initSkills() {
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
 
                 // Добавить навык
                 const addSkill = e.target.closest('.add-skill');
@@ -1484,8 +1480,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //отслеживаем ввод в инпут поиска навыков
         const skillsInput = document.querySelector('input[name=vacancy-search-skill]');
 
-        if(skillsInput) {
-            skillsInput.addEventListener('input', function(e) {
+        if (skillsInput) {
+            skillsInput.addEventListener('input', function (e) {
                 const value = e.target.value;
                 addClassSkills(value);
             })
@@ -1496,7 +1492,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const skills = document.querySelectorAll('.add-skill');
             const search = text.trim().toLowerCase();
 
-            if(skills.length <= 0 || !search) return;
+            if (skills.length <= 0 || !search) return;
 
             skills.forEach(skill => {
                 const skillText = skill.textContent.trim().toLowerCase();
@@ -1509,7 +1505,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function initHints() {
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 const useHint = e.target.closest('.hint');
 
                 if (!useHint) return;
@@ -1528,273 +1524,286 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         initHints();
+    }
 
-        //файлы
-        const uploadedFiles = {
-            portfolio: [],
-            certificates: []
-        };
-        const errorFiles = {
-            portfolio: [],
-            certificates: []
-        };
-        const MAX_FILES_TOTAL_SIZE = 10 * 1024 * 1024; // 10 МБ
-        const MAX_FILES_COUNT = 10;
+    //файлы
+    const uploadedFiles = {
+        portfolio: [],
+        certificates: [],
+        noname: []
+    };
+    const errorFiles = {
+        portfolio: [],
+        certificates: [],
+        noname: []
+    };
+    const MAX_FILES_TOTAL_SIZE = 10 * 1024 * 1024; // 10 МБ
+    const MAX_FILES_COUNT = 10;
 
-        document?.querySelectorAll('.files-input-wrapper input[type="file"]')?.forEach(input => {
+    document?.querySelectorAll('.files-input-wrapper input[type="file"]')?.forEach(input => {
 
-            input.addEventListener('change', function() {
-                addFiles(this, this.files);
+        input.addEventListener('change', function () {
+            const selectedFiles = Array.from(this.files);
+            this.value = '';
 
-                this.value = '';
-            });
-
-            initFilesDropZone(input);
+            addFiles(this, selectedFiles);
         });
 
-        function getFilesTotalSize(files) {
-            return files.reduce((sum, file) => sum + file.size, 0);
+        initFilesDropZone(input);
+    });
+
+    function getFilesTotalSize(files) {
+        return files.reduce((sum, file) => sum + file.size, 0);
+    }
+
+    function bytesToMb(bytes, digits = 0) {
+        return (bytes / 1024 / 1024).toFixed(digits);
+    }
+
+    function addFileError(type, file, errorText) {
+        let errorFile = errorFiles[type].find(item => item.name === file.name);
+
+        if (!errorFile) {
+            errorFile = {
+                name: file.name,
+                errors: []
+            };
+
+            errorFiles[type].push(errorFile);
         }
 
-        function bytesToMb(bytes, digits = 0) {
-            return (bytes / 1024 / 1024).toFixed(digits);
+        errorFile.errors.push(errorText);
+    }
+
+    function addFiles(input, files) {
+        if (!files.length) return;
+
+        const block = input.closest('.inputs-files-block');
+        const type = block.dataset.filesType;
+        errorFiles[type] = [];
+
+        if (!uploadedFiles[type]) {
+            uploadedFiles[type] = [];
         }
 
-        function addFileError(type, file, errorText) {
-            let errorFile = errorFiles[type].find(item => item.name === file.name);
+        const acceptedFiles = [];
+        let totalSize = getFilesTotalSize(uploadedFiles[type]);
 
-            if (!errorFile) {
-                errorFile = {
-                    name: file.name,
-                    errors: []
-                };
+        Array.from(files).forEach(file => {
+            const hasFreeSlot = uploadedFiles[type].length + acceptedFiles.length < MAX_FILES_COUNT;
+            const fitsBySize = totalSize + file.size <= MAX_FILES_TOTAL_SIZE;
 
-                errorFiles[type].push(errorFile);
-            }
-
-            errorFile.errors.push(errorText);
-        }
-
-        function addFiles(input, files) {
-            if (!files.length) return;
-
-            const block = input.closest('.inputs-files-block');
-            const type = block.dataset.filesType;
-            errorFiles[type] = [];
-
-            if (!uploadedFiles[type]) {
-                uploadedFiles[type] = [];
-            }
-
-            const acceptedFiles = [];
-            let totalSize = getFilesTotalSize(uploadedFiles[type]);
-
-            Array.from(files).forEach(file => {
-                const hasFreeSlot = uploadedFiles[type].length + acceptedFiles.length < MAX_FILES_COUNT;
-                const fitsBySize = totalSize + file.size <= MAX_FILES_TOTAL_SIZE;
-
-                if(hasFreeSlot && fitsBySize) {
-                    acceptedFiles.push(file);
-                    totalSize += file.size;
-                } else {
-                    if (!hasFreeSlot) {
-                        addFileError(type, file, 'Изображение не соответствует требованиям: максимум 10 файлов');
-                    }
-
-                    if (!fitsBySize) {
-                        addFileError(type, file, 'Изображение не соответствует требованиям: вес не более 10 Мб');
-                    }
+            if (hasFreeSlot && fitsBySize) {
+                acceptedFiles.push(file);
+                totalSize += file.size;
+            } else {
+                if (!hasFreeSlot) {
+                    addFileError(type, file, 'Изображение не соответствует требованиям: максимум 10 файлов');
                 }
-            });
 
-            if (!acceptedFiles.length) {
-                renderNotices(input, type, block);
-                return;
+                if (!fitsBySize) {
+                    addFileError(type, file, 'Изображение не соответствует требованиям: вес не более 10 Мб');
+                }
             }
-
-            
-            uploadedFiles[type].push(...acceptedFiles);
-            renderFiles(input, type);
-        }
-
-        function initFilesDropZone(input) {
-            const block = input.closest('.files-input-wrapper');
-            if (!block) return;
-
-            ['dragenter', 'dragover'].forEach(eventName => {
-                block.addEventListener(eventName, function(e) {
-                    e.preventDefault();
-                    block.classList.add('drag-over');
-                });
-            });
-
-            ['dragleave', 'drop'].forEach(eventName => {
-                block.addEventListener(eventName, function(e) {
-                    e.preventDefault();
-                    block.classList.remove('drag-over');
-                });
-            });
-
-            block.addEventListener('drop', function(e) {
-                addFiles(input, e.dataTransfer.files);
-            });
-        }
-
-        document.addEventListener('click', function(e) {
-            const addMoreBtn = e.target.closest('.files-more');
-
-            if (addMoreBtn) {
-                const parent = addMoreBtn.closest('.inputs-files-block');
-                const input = parent?.querySelector('input[type="file"]');
-
-                input?.click();
-                return;
-            }
-
-            const removeBtn = e.target.closest(
-                '.files-remove'
-            );
-
-            if (!removeBtn) return;
-            const parent = removeBtn.closest('.inputs-files-block');
-            const type = parent.dataset.filesType;
-            const index = Number(removeBtn.dataset.index);
-
-            uploadedFiles[type].splice(index, 1);
-
-            if (!uploadedFiles[type].length) {
-                errorFiles[type] = [];
-            }
-
-            const input = parent.querySelector('input[type="file"]');
-            renderFiles(input, type);
         });
 
-        function renderFiles(input, type) {
-
-            const block = input.closest('.inputs-files-block');
-
-            const resultWrapper = block.querySelector(
-                '.files-result-wrapper'
-            );
-
-            resultWrapper.innerHTML = '';
-
-            uploadedFiles[type].forEach((file, index) => {
-
-                console.log(file);
-
-                const isImage = file.type.startsWith('image/');
-                const isDocument = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type) || /\.(pdf|doc|docx)$/i.test(file.name);
+        if (!acceptedFiles.length) {
+            renderNotices(input, type, block);
+            return;
+        }
 
 
-                const preview = document.createElement('div');
-                preview.className = 'files-preview';
-                let img = null;
-                const removeBtn = document.createElement('button');
-                    removeBtn.type = 'button';
-                    removeBtn.className = 'files-remove';
-                    removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        uploadedFiles[type].push(...acceptedFiles);
+        renderFiles(input, type);
+    }
+
+    function initFilesDropZone(input) {
+        const block = input.closest('.files-input-wrapper');
+        if (!block) return;
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            block.addEventListener(eventName, function (e) {
+                e.preventDefault();
+                block.classList.add('drag-over');
+            });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            block.addEventListener(eventName, function (e) {
+                e.preventDefault();
+                block.classList.remove('drag-over');
+            });
+        });
+
+        block.addEventListener('drop', function (e) {
+            addFiles(input, e.dataTransfer.files);
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+        const addMoreBtn = e.target.closest('.files-more');
+
+        if (addMoreBtn) {
+            const parent = addMoreBtn.closest('.inputs-files-block');
+            const input = parent?.querySelector('input[type="file"]');
+
+            input?.click();
+            return;
+        }
+
+        const removeBtn = e.target.closest(
+            '.files-remove'
+        );
+
+        if (!removeBtn) return;
+        const parent = removeBtn.closest('.inputs-files-block');
+        const type = parent.dataset.filesType;
+        const index = Number(removeBtn.dataset.index);
+
+        uploadedFiles[type].splice(index, 1);
+
+        if (!uploadedFiles[type].length) {
+            errorFiles[type] = [];
+        }
+
+        const input = parent.querySelector('input[type="file"]');
+        renderFiles(input, type);
+    });
+
+    function renderFiles(input, type) {
+
+        const block = input.closest('.inputs-files-block');
+
+        const resultWrapper = block.querySelector(
+            '.files-result-wrapper'
+        );
+
+        resultWrapper.innerHTML = '';
+
+        uploadedFiles[type].forEach((file, index) => {
+
+            const isImage = file.type.startsWith('image/');
+            const isDocument = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type) || /\.(pdf|doc|docx)$/i.test(file.name);
+
+
+            const preview = document.createElement('div');
+            preview.className = 'files-preview';
+            let img = null;
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'files-remove';
+            removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
                                             </svg>
                                             `;
-                    removeBtn.dataset.index = index;
-                if (isImage) {
-                    img = document.createElement('img');
-                    img.src = URL.createObjectURL(file);
-                } else if (isDocument) {
-                    const extension = file.name.split('.').pop().toLowerCase();
-                    img = document.createElement('div');
-                    img.textContent = extension;
-                }
-                preview.append(img, removeBtn);
-                resultWrapper.append(preview);
+            removeBtn.dataset.index = index;
+            if (isImage) {
+                img = document.createElement('img');
+                const previewUrl = URL.createObjectURL(file);
+
+                const revokePreviewUrl = () => {
+                    URL.revokeObjectURL(previewUrl);
+                    img.removeEventListener('load', revokePreviewUrl);
+                    img.removeEventListener('error', revokePreviewUrl);
+                };
+
+                img.addEventListener('load', revokePreviewUrl);
+                img.addEventListener('error', revokePreviewUrl);
+                img.src = previewUrl;
+            } else if (isDocument) {
+                const extension = file.name.split('.').pop().toLowerCase();
+                img = document.createElement('div');
+                img.textContent = extension;
+            }
+            preview.append(img, removeBtn);
+            resultWrapper.append(preview);
+        });
+
+        addMoreBtnAdd(resultWrapper);
+        renderNotices(input, type, block);
+        syncInputFiles(input, type);
+    }
+
+    function renderNotices(input, type, block) {
+        const noticeInfo = block.querySelector('.info');
+        const noticeErrors = block.querySelector('.errors');
+
+        if (!noticeInfo && !noticeErrors) return;
+
+        if (noticeInfo) {
+            noticeInfo.innerHTML = '';
+
+            if (uploadedFiles[type].length) {
+                const spanPhotos = document.createElement('span');
+                spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
+
+                const spanSizes = document.createElement('span');
+                spanSizes.textContent = `${bytesToMb(getFilesTotalSize(uploadedFiles[type]))}/${bytesToMb(MAX_FILES_TOTAL_SIZE)} мб`;
+
+                noticeInfo.append(spanPhotos, spanSizes);
+            }
+        }
+
+        if (noticeErrors) {
+            noticeErrors.innerHTML = '';
+
+            errorFiles[type].forEach(file => {
+                const spanError = document.createElement('span');
+                spanError.textContent = file.name + ' ' + file.errors.join(', ');
+                noticeErrors.append(spanError);
             });
-            
-            addMoreBtnAdd(resultWrapper);
-            renderNotices(input, type, block);
-            syncInputFiles(input, type);
         }
+    }
 
-        function renderNotices(input, type, block) {
-            const noticeInfo = block.querySelector('.info');
-            const noticeErrors = block.querySelector('.errors');
-
-            if (!noticeInfo && !noticeErrors) return;
-
-            if (noticeInfo) {
-                noticeInfo.innerHTML = '';
-
-                if (uploadedFiles[type].length) {
-                    const spanPhotos = document.createElement('span');
-                    spanPhotos.textContent = `${uploadedFiles[type].length}/${MAX_FILES_COUNT} фото`;
-
-                    const spanSizes = document.createElement('span');
-                    spanSizes.textContent = `${bytesToMb(getFilesTotalSize(uploadedFiles[type]))}/${bytesToMb(MAX_FILES_TOTAL_SIZE)} мб`;
-
-                    noticeInfo.append(spanPhotos, spanSizes);
-                }
-            }
-
-            if (noticeErrors) {
-                noticeErrors.innerHTML = '';
-
-                errorFiles[type].forEach(file => {
-                    const spanError = document.createElement('span');
-                    spanError.textContent = file.name + ' ' + file.errors.join(', ');
-                    noticeErrors.append(spanError);
-                });
-            }
-        }
-
-        function addMoreBtnAdd(resultWrapper) {
-            const addMoreBtn = document.createElement('div');
-            addMoreBtn.classList.add('files-preview', 'files-more');
-            addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    function addMoreBtnAdd(resultWrapper) {
+        const addMoreBtn = document.createElement('div');
+        addMoreBtn.classList.add('files-preview', 'files-more');
+        addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                     <path d="M12.0039 4.25098C12.4181 4.25098 12.7539 4.58676 12.7539 5.00098V11.251H19.0039C19.4181 11.251 19.7539 11.5868 19.7539 12.001C19.7539 12.4152 19.4181 12.751 19.0039 12.751H12.7539V19.001C12.7539 19.4152 12.4181 19.751 12.0039 19.751C11.5897 19.751 11.2539 19.4152 11.2539 19.001V12.751H5.00391C4.58969 12.751 4.25391 12.4152 4.25391 12.001C4.25391 11.5868 4.58969 11.251 5.00391 11.251H11.2539V5.00098C11.2539 4.58676 11.5897 4.25098 12.0039 4.25098Z" fill="#FC7827"/>
                                     </g>
                                     </svg>
                                     </span>`;
-            resultWrapper.append(addMoreBtn);
-        }
+        resultWrapper.append(addMoreBtn);
+    }
 
-        function syncInputFiles(input, type) {
+    function syncInputFiles(input, type) {
 
-            const dataTransfer = new DataTransfer();
+        const dataTransfer = new DataTransfer();
 
-            uploadedFiles[type].forEach(file => {
-                dataTransfer.items.add(file);
-            });
+        uploadedFiles[type].forEach(file => {
+            dataTransfer.items.add(file);
+        });
 
-            input.files = dataTransfer.files;
+        input.files = dataTransfer.files;
 
-            toggleFilesBlockState(input);
-        }
+        console.log('Файлы в input:', Array.from(input.files));
 
-        function toggleFilesBlockState(input) {
-            const block = input.closest('.inputs-files-block');
-            if (!block) return;
+        toggleFilesBlockState(input);
+    }
 
-            const hasFiles = input.files.length > 0;
-            const resultWrapper = block.querySelector('.files-result-wrapper');
-            const inputWrapper = block.querySelector('.files-input-wrapper');
-            const noticeWrapper = block.querySelector('.files-result-noties');
+    function toggleFilesBlockState(input) {
+        const block = input.closest('.inputs-files-block');
+        if (!block) return;
 
-            inputWrapper?.classList.toggle('hidden', hasFiles);
+        const hasFiles = input.files.length > 0;
+        const resultWrapper = block.querySelector('.files-result-wrapper');
+        const inputWrapper = block.querySelector('.files-input-wrapper');
+        const noticeWrapper = block.querySelector('.files-result-noties');
 
-            if (!hasFiles && resultWrapper && noticeWrapper) {
-                resultWrapper.innerHTML = '';
-            }
+        inputWrapper?.classList.toggle('hidden', hasFiles);
+
+        if (!hasFiles && resultWrapper && noticeWrapper) {
+            resultWrapper.innerHTML = '';
         }
     }
 
     //сортировка в ЛК (временное)
     const groupBtns = document.querySelectorAll('[data-group]');
 
-    if(groupBtns.length) {
+    if (groupBtns.length) {
         groupBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 e.preventDefault();
                 showElements(Number(btn.dataset.group));
             })
@@ -1849,7 +1858,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         };
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             const actionBtn = e.target.closest('[data-dropdown-btn]');
             if (!actionBtn) return;
 
@@ -1922,7 +1931,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const points = document.querySelectorAll('.auth-mobile-menu__item');
     const pointsWrapper = document.querySelector('.auth-mobile-menu__row');
 
-    if(points.length && pointsWrapper) {
+    if (points.length && pointsWrapper) {
         const pointWidth = getFlexItemWidth(pointsWrapper, points.length);
 
         points.forEach(point => {
@@ -1933,15 +1942,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //чаты - клик на карточку (временное)
 
     document.querySelectorAll('.chats-card')?.forEach(card => {
-        card?.addEventListener('click', function() {
+        card?.addEventListener('click', function () {
             document.querySelector('.chats')?.classList?.add('is-open');
         })
     })
 
     //клик на кнопку назад для возврата к чатам (временное)
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const backBtn = e.target.closest('.chats__dialog-back');
-        if(!backBtn) return;
+        if (!backBtn) return;
 
         document.querySelector('.chats')?.classList?.remove('is-open');
     })
@@ -2009,4 +2018,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, true);
     }
+
+    //специальные блоки в чатах
+    document.addEventListener('click', function (e) {
+        const chatBody = document.querySelector('.chats__dialog-body');
+        const chatFooter = document.querySelector('.chats__dialog-bottom');
+        if (!chatBody || !chatFooter) return;
+
+        const chatsChangeBlockBtn = e.target.closest('[data-dialog-modal]');
+        const closeModalBtn = e.target.closest('[data-close-modal]');
+
+        if (chatsChangeBlockBtn) {
+            e.preventDefault();
+
+            const modal = document.querySelector(`[data-modal-content="${chatsChangeBlockBtn.dataset.dialogModal}"]`);
+            if (!modal) return;
+
+            if(chatsChangeBlockBtn.dataset.action) {
+                document.querySelectorAll('[data-choise]')?.forEach(item => {
+                    item.classList.remove('active');
+                })
+                let modalState = modal.querySelector(`[data-choise="${chatsChangeBlockBtn.dataset.action}"]`);
+                let input = modal.querySelector('input');
+
+                if(input && modalState) {
+                    modalState.classList.add('active');
+                    input.value = modalState.dataset.value;
+                }
+            }
+
+            chatBody.classList.add('hidden');
+            chatFooter.classList.add('hidden');
+            modal.classList.add('showed');
+        }
+
+        if (closeModalBtn) {
+            e.preventDefault();
+
+            const modal = closeModalBtn.closest('[data-modal-content]');
+            if (!modal) return;
+
+            modal.classList.remove('showed');
+            chatBody.classList.remove('hidden');
+            chatFooter.classList.remove('hidden');
+        }
+    })
 });

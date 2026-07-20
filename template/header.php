@@ -93,7 +93,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                 'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M14.25 20.1006C14.25 20.6973 14.0128 21.2704 13.5908 21.6924C13.1689 22.1142 12.5966 22.3506 12 22.3506C11.4034 22.3506 10.8311 22.1142 10.4092 21.6924C9.98722 21.2704 9.75 20.6973 9.75 20.1006H14.25ZM12 3.00098C16.473 3.00098 20.0996 6.63971 20.0996 11.1289V17.4014H21V19.2012H3V17.4014H3.90039V11.1289C3.90039 6.63971 7.527 3.00098 12 3.00098Z" fill="#C2C2C2"/></g><defs><clipPath id="clip0_8009_5712"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>'
         ],
     ]
-    : (str_contains($uri, 'employer')
+    : (str_contains($uri, 'employer') || (str_contains($uri, 'client'))
         ? [
             [
                 'href' => '/lk/employer/index.php',
@@ -235,7 +235,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                     </svg>
                                     <span>Поиск <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></span>
                                 </a>
-                                <a href="#" class="btn btn_light btn_has-icon lk-chat">
+                                <a href="/chats/index.php<?= str_contains($uri, 'moderator') ? '?moderator=Y' : ((str_contains($uri, 'employer') || str_contains($uri, 'client')) ? '?client=Y' : ''); ?>" class="btn btn_light btn_has-icon lk-chat">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g>
