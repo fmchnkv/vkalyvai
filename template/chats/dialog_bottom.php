@@ -1,4 +1,5 @@
 <div class="chats__dialog-bottom">
+    <div class="chats__dialog-attached-images files-result-wrapper"></div>
     <div class="chats__dialog-bottom-wrapper">
         <button data-dialog-modal="add_files" class="message-item__button message-item__button--addFile">
             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,8 +78,8 @@
             <div class="errors"></div>
         </div>
         <div class="dialog__files-btns chats__dialog__modal-btns">
-            <button type="button" class="btn btn_light btn_size-m cancel-btn" data-close-modal>Отмена</button>
-            <button type="submit" class="btn btn_primary submit-btn btn_size-m">Отправить</button>
+            <button type="button" class="btn btn_light btn_size-m cancel-btn reject-images" data-close-modal>Отмена</button>
+            <button type="submit" class="btn btn_primary submit-btn btn_size-m approve-images">Отправить</button>
         </div>
     </form>
 </div>
@@ -127,7 +128,7 @@
             </div>
             <div class="dialog__state-btns chats__dialog__modal-btns">
                 <button type="button" class="btn btn_light btn_size-m cancel-btn" data-close-modal>Отмена</button>
-                <button type="submit" class="btn btn_primary submit-btn btn_size-m">Отправить</button>
+                <button type="submit" data-change-state class="btn btn_primary submit-btn btn_size-m">Отправить</button>
             </div>
         </div>
     </form>
