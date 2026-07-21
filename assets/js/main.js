@@ -1539,6 +1539,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const MAX_FILES_TOTAL_SIZE = 10 * 1024 * 1024; // 10 МБ
     const MAX_FILES_COUNT = 10;
+    const approveImagesBtn = document.querySelector('.approve-images');
+    const imagesForm = approveImagesBtn?.closest('form');
+    const attachedImages = document.querySelector(
+        '.chats__dialog-attached-images'
+    );
 
     document?.querySelectorAll('.files-input-wrapper input[type="file"]')?.forEach(input => {
 
@@ -1551,6 +1556,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
         initFilesDropZone(input);
     });
+
+    document.addEventListener('click', function(e) {
+        const rejectImagesBtn = e.target.closest('.reject-images');
+        if(!rejectImagesBtn) return;
+
+        const imagesForm = rejectImagesBtn.closest('form');
+        if(!imagesForm) return;
+
+        const input = imagesForm.querySelector('input[type="file"]');
+        if (!input) return;
+        cleanFilesWrappers(input);
+        renderAttachedFiles([]);
+    })
+
+    imagesForm?.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const filesBlock = imagesForm.closest('.inputs-files-block');
+        const modal = imagesForm.closest('[data-modal-content]');
+        if (!filesBlock || !modal) return;
+
+        const files = uploadedFiles[filesBlock.dataset.filesType];
+        if (!files?.length) return;
+
+        renderAttachedFiles(files);
+        closeChatContentModal(modal);
+    })
+
+    function renderAttachedFiles(files) {
+        if (!attachedImages) return;
+
+        renderFilePreviews(files, attachedImages, {
+            showFakeMoreButton: true,
+            showRemoveButton: true,
+            showFakeRemoveButton: true,
+        });
+    }
+
+    function closeChatContentModal(modal) {
+        if (!modal) return;
+
+        modal.classList.remove('showed');
+        document.querySelector('.chats__dialog-body')?.classList.remove('hidden');
+        document.querySelector('.chats__dialog-bottom')?.classList.remove('hidden');
+    }
+
+    function cleanFilesWrappers(input) {
+        const block = input.closest('.inputs-files-block');
+        if (!block) return;
+
+        const type = block.dataset.filesType;
+        uploadedFiles[type] = [];
+        errorFiles[type] = [];
+
+        renderFiles(input, type);
+    }
 
     function getFilesTotalSize(files) {
         return files.reduce((sum, file) => sum + file.size, 0);
@@ -1656,7 +1717,13 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         if (!removeBtn) return;
-        const parent = removeBtn.closest('.inputs-files-block');
+        const isAttachedPreview = removeBtn.dataset.fake === 'true';
+        const parent = isAttachedPreview
+            ? imagesForm?.closest('.inputs-files-block')
+            : removeBtn.closest('.inputs-files-block');
+
+        if (!parent) return;
+
         const type = parent.dataset.filesType;
         const index = Number(removeBtn.dataset.index);
 
@@ -1667,7 +1734,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const input = parent.querySelector('input[type="file"]');
+        if (!input) return;
+
         renderFiles(input, type);
+
+        if (isAttachedPreview) {
+            renderAttachedFiles(uploadedFiles[type]);
+        }
     });
 
     function renderFiles(input, type) {
@@ -1678,50 +1751,78 @@ document.addEventListener('DOMContentLoaded', () => {
             '.files-result-wrapper'
         );
 
-        resultWrapper.innerHTML = '';
-
-        uploadedFiles[type].forEach((file, index) => {
-
-            const isImage = file.type.startsWith('image/');
-            const isDocument = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type) || /\.(pdf|doc|docx)$/i.test(file.name);
-
-
-            const preview = document.createElement('div');
-            preview.className = 'files-preview';
-            let img = null;
-            const removeBtn = document.createElement('button');
-            removeBtn.type = 'button';
-            removeBtn.className = 'files-remove';
-            removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
-                                            </svg>
-                                            `;
-            removeBtn.dataset.index = index;
-            if (isImage) {
-                img = document.createElement('img');
-                const previewUrl = URL.createObjectURL(file);
-
-                const revokePreviewUrl = () => {
-                    URL.revokeObjectURL(previewUrl);
-                    img.removeEventListener('load', revokePreviewUrl);
-                    img.removeEventListener('error', revokePreviewUrl);
-                };
-
-                img.addEventListener('load', revokePreviewUrl);
-                img.addEventListener('error', revokePreviewUrl);
-                img.src = previewUrl;
-            } else if (isDocument) {
-                const extension = file.name.split('.').pop().toLowerCase();
-                img = document.createElement('div');
-                img.textContent = extension;
-            }
-            preview.append(img, removeBtn);
-            resultWrapper.append(preview);
+        renderFilePreviews(uploadedFiles[type], resultWrapper, {
+            showRemoveButton: true,
+            showAddMoreButton: true
         });
-
-        addMoreBtnAdd(resultWrapper);
         renderNotices(input, type, block);
         syncInputFiles(input, type);
+    }
+
+    function renderFilePreviews(files, wrapper, options = {}) {
+        const {
+            showRemoveButton = false,
+            showAddMoreButton = false,
+            showFakeMoreButton = false,
+            showFakeRemoveButton = false
+        } = options;
+
+        wrapper.innerHTML = '';
+
+        files.forEach((file, index) => {
+            wrapper.append(createFilePreview(file, index, showRemoveButton, showFakeRemoveButton));
+        });
+
+        if (showAddMoreButton) {
+            addMoreBtn(wrapper, ['files-preview', 'files-more', 'more-picture']);
+        }
+
+        if(showFakeMoreButton) {
+            addMoreBtn(wrapper, ['files-preview', 'files-more-fake', 'more-picture'], 'add_files');
+        }
+    }
+
+    function createFilePreview(file, index, showRemoveButton, showFakeRemoveButton) {
+        const isImage = file.type.startsWith('image/');
+        const isDocument = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.type) || /\.(pdf|doc|docx)$/i.test(file.name);
+        const preview = document.createElement('div');
+        preview.className = 'files-preview';
+
+        if (isImage) {
+            const img = document.createElement('img');
+            const previewUrl = URL.createObjectURL(file);
+
+            const revokePreviewUrl = () => {
+                URL.revokeObjectURL(previewUrl);
+                img.removeEventListener('load', revokePreviewUrl);
+                img.removeEventListener('error', revokePreviewUrl);
+            };
+
+            img.addEventListener('load', revokePreviewUrl);
+            img.addEventListener('error', revokePreviewUrl);
+            img.src = previewUrl;
+            preview.append(img);
+        } else if (isDocument) {
+            const documentPreview = document.createElement('div');
+            documentPreview.textContent = file.name.split('.').pop().toLowerCase();
+            preview.append(documentPreview);
+        }
+
+        if (showRemoveButton) {
+            const removeBtn = document.createElement('button');
+            if(showFakeRemoveButton) {
+                removeBtn.setAttribute('data-fake', 'true');
+            }
+            removeBtn.type = 'button';
+            removeBtn.className = 'files-remove';
+            removeBtn.dataset.index = index;
+            removeBtn.innerHTML = `<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.72754 0.636719L3.5 2.86426L5.72754 5.0918L5.09082 5.72754L2.86328 3.5L0.635742 5.72754L0 5.0918L2.22754 2.86426L0 0.636719L0.635742 0L2.86328 2.22754L5.09082 0L5.72754 0.636719Z" fill="#FC7827"/>
+                                    </svg>`;
+            preview.append(removeBtn);
+        }
+
+        return preview;
     }
 
     function renderNotices(input, type, block) {
@@ -1755,16 +1856,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function addMoreBtnAdd(resultWrapper) {
-        const addMoreBtn = document.createElement('div');
-        addMoreBtn.classList.add('files-preview', 'files-more');
-        addMoreBtn.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    function addMoreBtn(resultWrapper, classes = [], data = false) {
+        const button = document.createElement('div');
+        if(classes.length > 0) {
+            classes.forEach(classCss => {
+                button.classList.add(classCss);
+            });
+        }
+        if(data) {
+            button.setAttribute('data-dialog-modal', data);
+        }
+        button.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                     <path d="M12.0039 4.25098C12.4181 4.25098 12.7539 4.58676 12.7539 5.00098V11.251H19.0039C19.4181 11.251 19.7539 11.5868 19.7539 12.001C19.7539 12.4152 19.4181 12.751 19.0039 12.751H12.7539V19.001C12.7539 19.4152 12.4181 19.751 12.0039 19.751C11.5897 19.751 11.2539 19.4152 11.2539 19.001V12.751H5.00391C4.58969 12.751 4.25391 12.4152 4.25391 12.001C4.25391 11.5868 4.58969 11.251 5.00391 11.251H11.2539V5.00098C11.2539 4.58676 11.5897 4.25098 12.0039 4.25098Z" fill="#FC7827"/>
                                     </g>
                                     </svg>
                                     </span>`;
-        resultWrapper.append(addMoreBtn);
+        resultWrapper.append(button);
     }
 
     function syncInputFiles(input, type) {
@@ -1957,9 +2065,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // действия с сообщением по долгому нажатию на мобилке (временное)
     const messageActionsModal = document.querySelector('[data-modal="message-actions"]');
+    const messageDeleteModal = document.querySelector('[data-modal="message-delete"]');
     const mobileChatMedia = window.matchMedia('(max-width: 1280px)');
+    let activeMessageWrapper = null;
 
-    if (messageActionsModal) {
+    if (messageActionsModal || messageDeleteModal) {
         let pressedMessageWrapper = null;
         let longPressTimer = null;
         let pointerStart = null;
@@ -1974,9 +2084,15 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         document.addEventListener('pointerdown', (e) => {
-            const message = e.target.closest('.dialog__messages-item.myself-message');
+            const message = e.target.closest('.dialog__messages-item.myself-message, .dialog__messages-item.companion-message');
 
             if (!message || !mobileChatMedia.matches || e.pointerType === 'mouse') return;
+
+            const targetModal = message.classList.contains('companion-message')
+                ? messageDeleteModal
+                : messageActionsModal;
+
+            if (!targetModal) return;
 
             pressedMessageWrapper = message.closest('.dialog__messages-wrapper');
             pointerStart = { x: e.clientX, y: e.clientY, pointerId: e.pointerId };
@@ -1984,8 +2100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             longPressTimer = window.setTimeout(() => {
                 longPressTriggered = true;
-                messageActionsModal.classList.add('active');
-                messageActionsModal.querySelector('[data-message-action]')?.focus();
+                activeMessageWrapper = pressedMessageWrapper;
+                targetModal.classList.add('active');
+                targetModal.querySelector('[data-message-action]')?.focus();
             }, longPressDelay);
         });
 
@@ -2058,9 +2175,152 @@ document.addEventListener('DOMContentLoaded', () => {
             const modal = closeModalBtn.closest('[data-modal-content]');
             if (!modal) return;
 
-            modal.classList.remove('showed');
-            chatBody.classList.remove('hidden');
-            chatFooter.classList.remove('hidden');
+            closeChatContentModal(modal);
         }
     })
+
+
+    //смена статуса резюме из чата (ВРЕМЕННОЕ)
+    const changeStateBtn = document.querySelector('[data-change-state]');
+    if(changeStateBtn) {
+        const changeStateForm = changeStateBtn.closest('form');
+
+        if(changeStateForm) {
+            changeStateForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const btnsWrapper = document.querySelector('.dialog-btns');
+                const input = changeStateForm.querySelector('input[name="choise"]');
+                const modal = changeStateForm.closest('[data-modal-content]');
+
+                if (!btnsWrapper || !input) return;
+
+                const states = {
+                    'Приглашение': {
+                        text: 'Приглашение',
+                        action: 'reject',
+                        classCss: 'approve',
+                        btnTxt: 'Отказать',
+                    },
+                    'Отказ': {
+                        text: 'Отказ',
+                        action: 'approve',
+                        classCss: 'reject',
+                        btnTxt: 'Пригласить',
+                    },
+                };
+                const state = states[input.value];
+
+                if (!state) return;
+
+                const { text, action, classCss, btnTxt } = state;
+
+                btnsWrapper.innerHTML = `<div class="select ${classCss} approved-select_btns desk-elem" data-id="approved_btns">
+                        <label class="filter-group__input select__input input input_has-icon">
+                            <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
+                                readonly="" placeholder="${text}">
+                            <div class="input__icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z"
+                                            fill="#232323"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4687_14543">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </label>
+
+                        <div class="select__dropdown">
+                            <ul class="select__dropdown-list" data-id="approved_btns">
+                                <li data-dialog-modal="invite" data-action="${action}" class="btn btn_primary btn_size-s lk__btn_has-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
+                                            fill="white" />
+                                        <defs>
+                                            <clipPath id="clip0_8003_4492">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>${btnTxt}</span>
+                                </li>
+                                <li data-close-status-select class="btn btn_light btn_size-s">
+                                    <span>Отменить</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>`;
+
+                const statusSelect = btnsWrapper.querySelector('.select');
+                const statusSelectInput = statusSelect?.querySelector('.select__input');
+                const closeStatusSelect = statusSelect?.querySelector('[data-close-status-select]');
+
+                statusSelectInput?.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    statusSelect.classList.toggle('active');
+                });
+
+                closeStatusSelect?.addEventListener('click', function() {
+                    statusSelect.classList.remove('active');
+                });
+
+                closeChatContentModal(modal);
+            })
+        }
+    }
+
+    
+    //редактировать сообщение (ВРЕМЕННОЕ)
+    const messageForm = document.querySelector('.dialog__form');
+    const messageInput = messageForm?.querySelector('input[name="message"]');
+    const messageSubmitBtn = messageForm?.querySelector('.inline-form__btn');
+    const messageSubmitIcon = messageSubmitBtn?.innerHTML;
+    let editingMessageWrapper = null;
+
+    document.addEventListener('click', function(e) {
+        const editMessageBtn = e.target.closest('.message-item__button--edit');
+
+        if (!editMessageBtn || !messageInput || !messageSubmitBtn) return;
+
+        const messageWrapper = editMessageBtn.closest('.dialog__messages-wrapper') || activeMessageWrapper;
+        const messageText = messageWrapper?.querySelector('.dialog__messages-item .text');
+        const text = messageText?.textContent.replace(/\s+/g, ' ').trim();
+
+        if (!messageWrapper || !messageText || !text) return;
+
+        editingMessageWrapper = messageWrapper;
+        messageInput.value = text;
+        messageSubmitBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.8981 5.75747C15.2884 5.36709 15.9215 5.36751 16.3121 5.75747C16.7026 6.14786 16.7033 6.78094 16.3131 7.17153L9.24281 14.2428C9.05533 14.4303 8.80092 14.5357 8.53577 14.5358C8.27068 14.5357 8.0162 14.4303 7.82874 14.2428L4.29261 10.7077C3.90255 10.3172 3.90237 9.684 4.29261 9.2936C4.683 8.90324 5.31612 8.9035 5.70667 9.2936L8.5348 12.1217L14.8981 5.75747Z" fill="white"/>
+        </svg>`;
+
+        messageActionsModal?.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+        messageInput.focus();
+    })
+
+    messageForm?.addEventListener('submit', function(e) {
+        if (!editingMessageWrapper || !messageInput || !messageSubmitBtn) return;
+
+        e.preventDefault();
+
+        const messageText = editingMessageWrapper.querySelector('.dialog__messages-item .text');
+        const text = messageInput.value.trim();
+
+        if (!messageText || !text) return;
+
+        messageText.textContent = text;
+        messageInput.value = '';
+        messageSubmitBtn.innerHTML = messageSubmitIcon;
+        editingMessageWrapper = null;
+        activeMessageWrapper = null;
+    });
 });

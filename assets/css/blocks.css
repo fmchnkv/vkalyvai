@@ -1293,7 +1293,7 @@
   transition: all 0.3s ease;
   fill: #FFFFFF;
 }
-.files-more {
+.more-picture {
   background-color: #EBEBEB;
   transition: all 0.3s ease;
   display: flex;
@@ -1301,11 +1301,11 @@
   justify-content: center;
   cursor: pointer;
 }
-.files-more:hover {
+.more-picture:hover {
   background-color: #999999;
   transition: all 0.3s ease;
 }
-.files-more span {
+.more-picture span {
   background-color: #FFFFFF;
   padding: 6px;
   border-radius: 100%;

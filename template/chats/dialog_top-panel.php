@@ -43,20 +43,32 @@
                     <span class="desk-elem tab-elem">Отказать</span>
                 </button>
             </div>
-        <? else: ?>
-            <a href="<?= $whoIs == 'job_seeker' ? '/pages/company.php' : '/pages/resume.php'; ?>" class="show-all-btn transp-btn lk__btn_has-icon icons-block">
-                <span>Подробнее</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                        <path d="M7.38666 4.46985C7.67957 4.17708 8.15436 4.177 8.44721 4.46985L13.4472 9.46985C13.7398 9.76273 13.7399 10.2376 13.4472 10.5304L8.44721 15.5304C8.1544 15.8232 7.67958 15.823 7.38666 15.5304C7.09377 15.2375 7.09377 14.7627 7.38666 14.4699L11.8564 10.0001L7.38666 5.5304C7.09377 5.23751 7.09377 4.76275 7.38666 4.46985Z" fill="#FC7827"></path>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_7142_9460">
-                            <rect width="20" height="20" fill="white"></rect>
+        <? elseif($whoIs == 'moderator' || $whoIs == 'job_seeker'): ?>
+            <div class="dialog-details select">
+                <button type="button" class="dialog-details__button select__input show-all-btn transp-btn lk__btn_has-icon icons-block" aria-label="Подробнее">
+                    <span>Подробнее</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                        <path d="M5.80544 3.47154C6.09828 3.1787 6.57309 3.17881 6.86599 3.47154L10.866 7.47154C11.1589 7.76443 11.1589 8.2392 10.866 8.53209L6.86599 12.5321C6.57309 12.8248 6.09828 12.8249 5.80544 12.5321C5.51277 12.2392 5.51277 11.7644 5.80544 11.4715L9.27517 8.00182L5.80544 4.53209C5.51277 4.23924 5.51277 3.76439 5.80544 3.47154Z" fill="#FC7827"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8003_28901">
+                        <rect width="16" height="16" fill="white"/>
                         </clipPath>
-                    </defs>
-                </svg>
-            </a>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="dialog-details__dropdown select__dropdown">
+                    <ul class="select__dropdown-list">
+                        <li>
+                            <a href="/pages/company.php" class="dialog-details__option">О компании</a>
+                        </li>
+                        <li>
+                            <button type="button" class="dialog-details__option dialog-details__option_danger" data-dialog-action="block-company">Заблокировать</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         <? endif; ?>
     </div>
 </div>
