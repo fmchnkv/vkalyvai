@@ -1777,7 +1777,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addMoreBtn(wrapper, ['files-preview', 'files-more', 'more-picture']);
         }
 
-        if(showFakeMoreButton) {
+        if (showFakeMoreButton && files.length) {
             addMoreBtn(wrapper, ['files-preview', 'files-more-fake', 'more-picture'], 'add_files');
         }
     }
@@ -2277,7 +2277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    
+
     //редактировать сообщение (ВРЕМЕННОЕ)
     const messageForm = document.querySelector('.dialog__form');
     const messageInput = messageForm?.querySelector('input[name="message"]');
