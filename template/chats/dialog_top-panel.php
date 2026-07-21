@@ -1,3 +1,10 @@
+<? 
+$type = isset($_GET['moderator']) && $_GET['moderator'] == 'Y' ? 'moderator' : 'job_seeker';
+
+if (isset($_GET['client']) && $_GET['client'] == 'Y') {
+    $type = 'client';
+}
+?>
 <div class="chats__dialog-top user-online">
     <div class="user-info">
         <button class="chats__dialog-back transp-btn lk__btn_has-icon" type="button">
@@ -61,7 +68,11 @@
                 <div class="dialog-details__dropdown select__dropdown">
                     <ul class="select__dropdown-list">
                         <li>
-                            <a href="/pages/company.php" class="dialog-details__option">О компании</a>
+                            <? if ($type == 'moderator') : ?>
+                                <a href="/lk/moderator/job_seeker_profile_view.php" class="dialog-details__option">Пользователь</a>
+                            <? else : ?>
+                                <a href="/lk/employer/company.php" class="dialog-details__option">О компании</a>
+                            <? endif; ?>
                         </li>
                         <li>
                             <button type="button" class="dialog-details__option dialog-details__option_danger" data-dialog-action="block-company">Заблокировать</button>
