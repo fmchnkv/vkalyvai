@@ -291,9 +291,6 @@
   z-index: -1;
   transform: translateX(-50%);
 }
-.chats-card.active {
-  pointer-events: none;
-}
 .chats-card.active::before {
   background-color: #FC7827;
   transition: none;
@@ -1041,8 +1038,8 @@
   gap: 32px;
 }
 .chats__message-actions-modal .modal__close {
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
 }
 .chats__message-actions-modal .select__dropdown-list {
   gap: 8px;
