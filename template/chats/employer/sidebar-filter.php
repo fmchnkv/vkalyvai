@@ -19,9 +19,9 @@
         </label>
         <div class="select__dropdown">
             <ul class="select__dropdown-list">
-                <li class="select__option active" data-value="Все">Все</li>
-                <li class="select__option" data-value="Приглашение">Приглашение</li>
-                <li class="select__option" data-value="Отказ">Отказ</li>
+                <li class="select__option active" data-filter="all" data-value="Все">Все</li>
+                <li class="select__option" data-filter="approve" data-value="Приглашение">Приглашение</li>
+                <li class="select__option" data-filter="reject" data-value="Отказ">Отказ</li>
             </ul>
         </div>
     </div>

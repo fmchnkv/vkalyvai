@@ -230,9 +230,12 @@
                     fill="#999999" />
             </svg>
         </button>
-        <div class="modal__content">
+        <div class="modal__content delete-approve">
             <h3>Удалить сообщение</h3>
-            <p>Вы уверены, что хотите удалить это сообщение? Это действие нельзя будет отменить.</p>
+            <div class="txt">
+                <p>Вы уверены, что хотите удалить это сообщение?</p>
+                <p>Это действие нельзя будет отменить.</p>
+            </div>
             <button class="btn btn_primary btn_size-m" type="button" data-message-action="delete">
                 <span>Удалить</span>
             </button>

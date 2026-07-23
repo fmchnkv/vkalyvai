@@ -254,6 +254,9 @@
   position: relative;
   z-index: 1;
   cursor: pointer;
+  pointer-events: all;
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 .chats-card:not(:last-of-type)::after {
   content: '';
@@ -282,35 +285,44 @@
     padding: 16px;
   }
 }
-.chats-card:hover::before {
+.chats-card::before {
   content: '';
   height: 100%;
   position: absolute;
   left: 50%;
   top: 0;
   width: 100vw;
-  background-color: #FC7827;
   z-index: -1;
   transform: translateX(-50%);
-  transition: all 0.3s ease;
 }
-.chats-card:hover .chats-card__body h4,
-.chats-card:hover .chats-card__body p,
-.chats-card:hover .chats-card__body span {
+.chats-card.active {
+  pointer-events: none;
+}
+.chats-card.active::before {
+  background-color: #FC7827;
+  transition: none;
+}
+.chats-card.active .chats-card__body h4,
+.chats-card.active .chats-card__body p,
+.chats-card.active .chats-card__body span {
   color: #FFFFFF !important;
   transition: color 0.3s ease;
 }
-.chats-card:hover .chats-card__props-header time {
+.chats-card.active .chats-card__props-header time {
   color: #FFFFFF;
   transition: color 0.3s ease;
 }
-.chats-card:hover .message-state::after {
+.chats-card.active .message-state::after {
   background-color: #FFFFFF;
   transition: background-color 0.3s ease;
 }
-.chats-card:hover .message-count:not(:empty) {
+.chats-card.active .message-count:not(:empty) {
   color: #FC7827;
   background-color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.chats-card:not(.active):hover::before {
+  background-color: #FFF2E9;
   transition: all 0.3s ease;
 }
 .chats-card::before {
@@ -501,8 +513,10 @@
   }
 }
 .chats .dialog__form {
+  align-items: flex-end;
   background: transparent;
   gap: 2px;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .chats .dialog__form {
@@ -512,6 +526,24 @@
 .chats .dialog__form .field {
   border-color: #EBEBEB;
   padding: 12px;
+}
+.chats .dialog__form textarea.field__input {
+  display: block;
+  width: 100%;
+  height: 18px;
+  min-height: 18px;
+  max-height: 72px;
+  overflow-y: hidden;
+  resize: none;
+  border: 0;
+  background-color: transparent;
+  color: #232323;
+  font: inherit;
+  line-height: 18px;
+  -webkit-line-clamp: unset;
+}
+.chats .dialog__form textarea.field__input::placeholder {
+  color: #999999;
 }
 .chats .dialog__messages-wrapper {
   display: flex;
@@ -648,6 +680,58 @@
   flex: 0 0 auto;
   height: 89px;
 }
+.chats__dialog-edited-message {
+  max-height: 104px;
+  overflow: hidden;
+}
+.chats__dialog-edited-message:not(:empty) {
+  padding: 16px;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  margin: 0 -16px 16px;
+}
+.chats__dialog-edited-message .edited-message__wrapper {
+  padding-left: 16px;
+  border-left: 1px solid #FC7827;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  position: relative;
+}
+.chats__dialog-edited-message .edited-message__wrapper-text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 72px;
+  min-width: 0;
+  overflow: hidden;
+}
+.chats__dialog-edited-message .edited-message__wrapper-text > span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  color: #FC7827;
+}
+.chats__dialog-edited-message .edited-message__wrapper-text > p {
+  min-height: 0;
+  font-size: 14px;
+  line-height: 114%;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+.chats__dialog-edited-message .edited-message__wrapper button {
+  display: flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+}
 .chats__dialog-bottom {
   position: relative;
   padding: 12px 0;
@@ -692,6 +776,9 @@
   .chats__dialog-bottom-wrapper {
     gap: 8px;
   }
+}
+.chats__dialog-bottom-wrapper .message-item__button {
+  margin-top: auto;
 }
 .chats__dialog-vacancy {
   display: flex;
@@ -1004,6 +1091,10 @@
     display: block;
   }
 }
+.delete-approve p:last-of-type {
+  padding-top: 20px;
+  font-weight: 600;
+}
 .auth-mobile-menu + .chats {
   height: calc(100dvh - 53px);
 }
@@ -1016,4 +1107,10 @@
   .auth-mobile-menu + .chats {
     height: 100dvh;
   }
+}
+.unvisible {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
 }

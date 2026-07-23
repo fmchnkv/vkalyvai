@@ -3,161 +3,182 @@ $cardsData = isset($_GET['client'])
     ? [
         [
             'title' => 'Иванов Иван Иванович',
-            'card_states' => 'viewed user-online approved',
+            'card_states' => 'active no-viewed user-online approved new-messages',
             'subtitle' => 'Название вакансии',
             'state_text' => 'Отклик на вакансию',
-            'messages_count' => 0
-        ],
-        [
-            'title' => 'Иванов Иван Иванович',
-            'card_states' => 'no-viewed user-online approved new-messages',
-            'subtitle' => 'Название вакансии',
-            'state_text' => 'Отклик на вакансию',
-            'messages_count' => 2
-        ],
-        [
-            'title' => 'Иванов Иван Иванович',
-            'card_states' => 'viewed reject',
-            'subtitle' => 'Название вакансии',
-            'state_text' => 'Отказ',
-            'messages_count' => 0
+            'messages_count' => 2,
+            'attributes' => 'data-sorted="approve" data-viewed="no-viewed"'
         ],
         [
             'title' => 'Иванов Иван Иванович',
             'card_states' => 'viewed reject new-messages user-online',
             'subtitle' => 'Название вакансии',
             'state_text' => 'Отказ',
-            'messages_count' => 1
+            'messages_count' => 1,
+            'attributes' => 'data-sorted="reject" data-viewed="viewed"'
+        ],
+        [
+            'title' => 'Иванов Иван Иванович',
+            'card_states' => 'viewed user-online approved',
+            'subtitle' => 'Название вакансии',
+            'state_text' => 'Отклик на вакансию',
+            'messages_count' => 0,
+            'attributes' => 'data-sorted="approve" data-viewed="viewed"'
+        ],
+        [
+            'title' => 'Иванов Иван Иванович',
+            'card_states' => 'viewed reject',
+            'subtitle' => 'Название вакансии',
+            'state_text' => 'Отказ',
+            'messages_count' => 0,
+            'attributes' => 'data-sorted="reject" data-viewed="viewed"'
         ],
         [
             'title' => 'Иванов Иван Иванович',
             'card_states' => 'no-viewed user-online approved user-online',
             'subtitle' => 'Название вакансии',
             'state_text' => 'Отклик на вакансию',
-            'messages_count' => 0
+            'messages_count' => 0,
+            'attributes' => 'data-sorted="approve" data-viewed="no-viewed"'
         ],
     ]
     : (isset($_GET['moderator'])
         ? [
             [
                 'title' => 'Имя пользователя',
-                'card_states' => 'viewed user-online',
+                'card_states' => 'active no-viewed user-online new-messages',
                 'subtitle' => 'Статус(соискатель/компания)',
                 'state_text' => 'Тема обращения',
-                'messages_count' => 0
-            ],
-            [
-                'title' => 'Имя пользователя',
-                'card_states' => 'no-viewed user-online new-messages',
-                'subtitle' => 'Статус(соискатель/компания)',
-                'state_text' => 'Тема обращения',
-                'messages_count' => 1
-            ],
-            [
-                'title' => 'Имя пользователя',
-                'card_states' => 'no-viewed',
-                'subtitle' => 'Статус(соискатель/компания)',
-                'state_text' => 'Тема обращения',
-                'messages_count' => 0
+                'messages_count' => 1,
+                'attributes' => 'data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Имя пользователя',
                 'card_states' => 'viewed new-messages user-online',
                 'subtitle' => 'Статус(соискатель/компания)',
                 'state_text' => 'Тема обращения',
-                'messages_count' => 1
+                'messages_count' => 1,
+                'attributes' => 'data-viewed="viewed"'
+            ],
+            [
+                'title' => 'Имя пользователя',
+                'card_states' => 'viewed user-online',
+                'subtitle' => 'Статус(соискатель/компания)',
+                'state_text' => 'Тема обращения',
+                'messages_count' => 0,
+                'attributes' => 'data-viewed="viewed"'
             ],
             [
                 'title' => 'Имя пользователя',
                 'card_states' => 'no-viewed',
                 'subtitle' => 'Статус(соискатель/компания)',
                 'state_text' => 'Тема обращения',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-viewed="no-viewed"'
+            ],
+            [
+                'title' => 'Имя пользователя',
+                'card_states' => 'no-viewed',
+                'subtitle' => 'Статус(соискатель/компания)',
+                'state_text' => 'Тема обращения',
+                'messages_count' => 0,
+                'attributes' => 'data-viewed="no-viewed"'
             ],
         ]
         : [
             [
                 'title' => 'Название вакансии',
-                'card_states' => 'viewed user-online approved',
+                'card_states' => 'active no-viewed user-online approved new-messages',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Приглашение',
-                'messages_count' => 0
-            ],
-            [
-                'title' => 'Название вакансии',
-                'card_states' => 'no-viewed user-online approved new-messages',
-                'subtitle' => 'Название компании',
-                'state_text' => 'Приглашение',
-                'messages_count' => 1
-            ],
-            [
-                'title' => 'Название вакансии',
-                'card_states' => 'no-viewed approved',
-                'subtitle' => 'Название компании',
-                'state_text' => 'Приглашение',
-                'messages_count' => 0
+                'messages_count' => 1,
+                'attributes' => 'data-sorted="approve" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'viewed new-messages reject user-online',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 1
+                'messages_count' => 1,
+                'attributes' => 'data-sorted="reject" data-viewed="viewed"'
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'viewed user-online approved',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Приглашение',
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="approve" data-viewed="viewed"'
+            ],
+            [
+                'title' => 'Название вакансии',
+                'card_states' => 'no-viewed approved',
+                'subtitle' => 'Название компании',
+                'state_text' => 'Приглашение',
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="approve" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
             [
                 'title' => 'Название вакансии',
                 'card_states' => 'no-viewed reject',
                 'subtitle' => 'Название компании',
                 'state_text' => 'Отказ',
-                'messages_count' => 0
+                'messages_count' => 0,
+                'attributes' => 'data-sorted="reject" data-viewed="no-viewed"'
             ],
         ]);
 ?>
 <div class="chats-list">
     <? foreach($cardsData as $card): ?>
-    <div class="chats-card <?= $card['card_states']; ?>">
+    <div class="chats-card <?= $card['card_states']; ?>" <?= $card['attributes']; ?>>
         <div class="chats-card__wrapper grid">
             <div class="chats-card__img avatar">
                 <img src="/images/avatar_rezume.png" alt="">

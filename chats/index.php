@@ -38,9 +38,9 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
                         </label>
                         <div class="select__dropdown">
                             <ul class="select__dropdown-list">
-                                <li class="select__option active" data-value="Все">Все чаты</li>
-                                <li class="select__option" data-value="Непрочитанные">Непрочитанные</li>
-                                <li class="select__option" data-value="Прочитанные">Прочитанные</li>
+                                <li class="select__option active" data-messages="all" data-value="Все">Все чаты</li>
+                                <li class="select__option" data-messages="no-viewed" data-value="Непрочитанные">Непрочитанные</li>
+                                <li class="select__option" data-messages="viewed" data-value="Прочитанные">Прочитанные</li>
                             </ul>
                         </div>
                     </div>

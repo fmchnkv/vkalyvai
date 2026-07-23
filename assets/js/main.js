@@ -2051,6 +2051,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.chats-card')?.forEach(card => {
         card?.addEventListener('click', function () {
+            document.querySelectorAll('.chats-card')?.forEach(card => {
+                card.classList.remove('active');
+            });
+            this.classList.add('active');
             document.querySelector('.chats')?.classList?.add('is-open');
         })
     })
@@ -2280,7 +2284,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //редактировать сообщение (ВРЕМЕННОЕ)
     const messageForm = document.querySelector('.dialog__form');
-    const messageInput = messageForm?.querySelector('input[name="message"]');
+    const messageInput = messageForm?.querySelector('[name="message"]');
     const messageSubmitBtn = messageForm?.querySelector('.inline-form__btn');
     const messageSubmitIcon = messageSubmitBtn?.innerHTML;
     let editingMessageWrapper = null;
@@ -2297,7 +2301,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!messageWrapper || !messageText || !text) return;
 
         editingMessageWrapper = messageWrapper;
+        showEditedMessage(text);
         messageInput.value = text;
+        resizeMessageInput();
         messageSubmitBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.8981 5.75747C15.2884 5.36709 15.9215 5.36751 16.3121 5.75747C16.7026 6.14786 16.7033 6.78094 16.3131 7.17153L9.24281 14.2428C9.05533 14.4303 8.80092 14.5357 8.53577 14.5358C8.27068 14.5357 8.0162 14.4303 7.82874 14.2428L4.29261 10.7077C3.90255 10.3172 3.90237 9.684 4.29261 9.2936C4.683 8.90324 5.31612 8.9035 5.70667 9.2936L8.5348 12.1217L14.8981 5.75747Z" fill="white"/>
         </svg>`;
@@ -2319,8 +2325,104 @@ document.addEventListener('DOMContentLoaded', () => {
 
         messageText.textContent = text;
         messageInput.value = '';
+        showEditedMessage();
+        resizeMessageInput();
         messageSubmitBtn.innerHTML = messageSubmitIcon;
         editingMessageWrapper = null;
         activeMessageWrapper = null;
     });
+
+    document.addEventListener('click', function(e) {
+        const cancelEditBtn = e.target.closest('.edit-cancel');
+
+        if(cancelEditBtn) {
+            messageInput.value = '';
+            showEditedMessage();
+            resizeMessageInput();
+            messageSubmitBtn.innerHTML = messageSubmitIcon;
+        }
+
+    })
+
+    function showEditedMessage(text) {
+        let editedMessage = document.querySelector('.chats__dialog-edited-message');
+        if(!editedMessage) return;
+        
+        if (text == null || text.trim() === '') {
+            editedMessage.innerHTML = '';
+            return;
+        }
+
+        let messageWrapper = document.createElement('div');
+        let textMessage = document.createElement('div');
+        let messageTitle = document.createElement('span');
+        let messageText = document.createElement('p');
+        let messageBtn = document.createElement('button');
+
+        messageWrapper.classList.add('edited-message__wrapper');
+        textMessage.classList.add('edited-message__wrapper-text');
+        messageTitle.textContent = 'Редактируемое сообщение';
+        messageText.textContent = text;
+        messageBtn.classList.add('edit-cancel');
+        messageBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_8002_19632)"><path d="M17.7363 7.5459L13.2812 12.001L17.7363 16.4561L16.4639 17.7285L12.0088 13.2734L7.55371 17.7285L6.28125 16.4561L10.7363 12.001L6.28125 7.5459L7.55371 6.27344L12.0088 10.7285L16.4639 6.27344L17.7363 7.5459Z" fill="#999999"/></g><defs><clipPath id="clip0_8002_19632"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>`;
+
+        textMessage.append(messageTitle);
+        textMessage.append(messageText);
+
+        messageWrapper.append(textMessage);
+        messageWrapper.append(messageBtn);
+
+        editedMessage.append(messageWrapper);
+    }
+
+    //инпут под текст
+    function resizeMessageInput() {
+        if (!messageInput) return;
+
+        messageInput.style.height = 'auto';
+
+        const maxHeight = parseFloat(getComputedStyle(messageInput).maxHeight);
+        const height = Math.min(messageInput.scrollHeight, maxHeight);
+
+        messageInput.style.height = `${height}px`;
+        messageInput.style.overflowY = messageInput.scrollHeight > maxHeight ? 'auto' : 'hidden';
+    }
+
+    messageInput?.addEventListener('input', resizeMessageInput);
+
+    //ВРЕМЕННАЯ ФИЛЬТРАЦИЯ ЧАТОВ
+    let activeMessagesFilter = document.querySelector('[data-messages].active')?.dataset.messages || 'all';
+    let activeStateFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
+
+    document.addEventListener('click', function(e) {
+        const chatsForMessages = e.target.closest('[data-messages]');
+        const chatsForState = e.target.closest('[data-filter]');
+        const allChats = document.querySelectorAll('.chats-card');
+
+        if (!chatsForMessages && !chatsForState) return;
+
+        if (chatsForMessages) {
+            activeMessagesFilter = chatsForMessages.dataset.messages;
+        }
+
+        if (chatsForState) {
+            const tabs = chatsForState.closest('.tabs');
+
+            tabs?.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            chatsForState.classList.add('active');
+
+            activeStateFilter = chatsForState.dataset.filter;
+        }
+
+        allChats.forEach(chat => {
+            const matchesMessages = activeMessagesFilter === 'all'
+                || chat.dataset.viewed === activeMessagesFilter;
+            const matchesState = activeStateFilter === 'all'
+                || chat.dataset.sorted === activeStateFilter;
+
+            chat.classList.toggle('unvisible', !matchesMessages || !matchesState);
+        });
+    })
 });
