@@ -1,4 +1,5 @@
 <div class="chats__dialog-bottom">
+    <div class="chats__dialog-edited-message"></div>
     <div class="chats__dialog-attached-images files-result-wrapper"></div>
     <div class="chats__dialog-bottom-wrapper">
         <button data-dialog-modal="add_files" class="message-item__button message-item__button--addFile">
@@ -22,7 +23,7 @@
             <div class="inline-form__row">
                 <div class="inline-form__input-wrapper">
                     <label class="inline-form__label field">
-                        <input class="field__input" type="text" name="message" placeholder="Сообщение">
+                        <textarea class="field__input" name="message" rows="1" placeholder="Сообщение"></textarea>
                     </label>
                 </div>
             </div>
