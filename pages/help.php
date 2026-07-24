@@ -159,48 +159,104 @@
         <div class="help__body">
             <div class="tabs-block__content js-tab-content active" data-tab="vacancies">
                 <ul class="cards cards--grid js-list" data-id="help-vacancies">
-                    <? for ($i = 0; $i < 3; $i++) : ?>
-                        <li class="cards__item">
-                            <a href="/pages/article.php" class="card card_help">
-                                <div class="card__top">
-                                    <span class="card__label tag tag_light">Соискателю</span>
-                                    <span class="card__date tag">26.03.2026</span>
-                                </div>
-                                <div class="card__content">
-                                    <h2 class="card__title">Первые шаги на вкалывай.рф для соискателя. Настройка профиля</h2>
-                                    <p class="card__description">Начните поиск работы на вкалывай.рф</p>
-                                </div>
-                                <div class="card__bottom">
-                                    <span class="card__time tag">4 мин.</span>
-                                </div>
-                            </a>
-                        </li>
-                    <? endfor; ?>
+                    <li class="cards__item">
+                        <a href="/pages/article-1.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Первые шаги на ВКАЛЫВАЙ: Как настроить профиль и получать на 40% больше откликов от работодателей</h2>
+                                <p class="card__description">Как правильно заполнить анкету, чтобы получать на 40% больше откликов.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">3 мин.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cards__item">
+                        <a href="/pages/article-2.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Как пройти модерацию и запустить резюме в поиск без задержек: Разбираем главные ошибки соискателей</h2>
+                                <p class="card__description">Разбираем главные ошибки соискателей из-за которых профиль могут отклонить.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">5 мин.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cards__item">
+                        <a href="/pages/article-3.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Инструкция: как работает автоподбор свежих вакансий на ВКАЛЫВАЙ</h2>
+                                <p class="card__description">Настраиваем сохраненный поиск для моментального получения уведомлений на почту.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">4 мин.</span>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
 
-                <div class="scroll-trigger"></div>
+                <!-- <div class="scroll-trigger"></div> -->
 
                 <? // include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
             </div>
             <div class="tabs-block__content js-tab-content" data-tab="rezumes">
                 <ul class="cards cards--grid js-list" data-id="help-rezumes">
-                    <? for ($i = 0; $i < 3; $i++) : ?>
-                        <li class="cards__item">
-                            <a href="/pages/article.php" class="card card_help">
-                                <div class="card__top">
-                                    <span class="card__label tag tag_light">Соискателю</span>
-                                    <span class="card__date tag">26.03.2026</span>
-                                </div>
-                                <div class="card__content">
-                                    <h2 class="card__title">Первые шаги на вкалывай.рф для соискателя. Настройка профиля</h2>
-                                    <p class="card__description">Начните поиск работы на вкалывай.рф</p>
-                                </div>
-                                <div class="card__bottom">
-                                    <span class="card__time tag">4 мин.</span>
-                                </div>
-                            </a>
-                        </li>
-                    <? endfor; ?>
+                    <li class="cards__item">
+                        <a href="/pages/article-4.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Как работает умный мэтчинг: находим сотрудников, а не просто резюме</h2>
+                                <p class="card__description">Инструкция для HR: как автоматический скоринг навыков экономит до 10 часов в неделю на ручном переборе анкет.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">3 мин.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cards__item">
+                        <a href="/pages/article-5.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Правила модерации вакансий: как избежать блокировок со стороны ФАС и Минтруда</h2>
+                                <p class="card__description">Разбираем законы о дискриминации. Как правильно составить описание вакансии без указания ограничений по полу, возрасту и национальности.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">5 мин.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cards__item">
+                        <a href="/pages/article-6.php" class="card card_help">
+                            <div class="card__top">
+                                <span class="card__label tag tag_light">Соискателю</span>
+                                <span class="card__date tag">26.03.2026</span>
+                            </div>
+                            <div class="card__content">
+                                <h2 class="card__title">Лайфхаки найма: как быстро закрыть смену соискателями с личным авто или патентом</h2>
+                                <p class="card__description">Настраиваем расширенные фильтры шторки для точечного поиска водителей, самосвалов и иностранных граждан.</p>
+                            </div>
+                            <div class="card__bottom">
+                                <span class="card__time tag">4 мин.</span>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
 
                 <? // include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
