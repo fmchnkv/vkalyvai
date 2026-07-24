@@ -787,6 +787,13 @@ document.addEventListener('DOMContentLoaded', () => {
             observer: true,
             spaceBetween: 8,
             slidesPerView: 'auto',
+            mousewheel: {
+                enabled: true,
+                sensitivity: 1,
+                forceToAxis: false,
+                releaseOnEdges: false,
+                eventsTarget: '.about-philosophy__list',
+            },
             breakpoints: {
                 1024: {
                     spaceBetween: 16,

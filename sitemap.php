@@ -62,6 +62,9 @@ $arMenu = [
     '/lk/moderator/resume.php' => 'ЛК - Резюме (Модератор)',
     '/lk/moderator/vacancies.php' => 'ЛК - Вакансии (Модератор)',
     '/lk/moderator/job_seeker_profile_view.php' => 'ЛК - Просмотр профиля соискателя (Модератор)',
+    '/chats/index.php' => 'Чаты (Соискатель)',
+    '/chats/index.php?client=Y' => 'Чаты (Работodатель)',
+    '/chats/index.php?moderator=Y' => 'Чаты (Модератор)',
 ];
 ?>
 
