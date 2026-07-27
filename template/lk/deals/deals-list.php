@@ -1,11 +1,20 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
-$dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pages/vacancy.php';
+$isResumeDeals = str_contains($uri, 'job_seeker');
+$dealsDetailUrl = $isResumeDeals ? '/pages/rezume.php' : '/pages/vacancy.php';
+$revisionTooltipText = $isResumeDeals
+    ? 'Резюме не прошло модерацию. Пожалуйста, отредактируйте текст и отправьте снова.'
+    : 'Вакансия не прошла модерацию. Пожалуйста, отредактируйте текст и отправьте снова.';
+$blockedTooltipText = $isResumeDeals
+    ? 'Доступ к резюме ограничен из-за нарушения правил платформы.'
+    : 'Доступ к вакансии ограничен из-за нарушения правил платформы.';
 ?>
 <div class="deals-list grid-list">
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state publish">Опубликовано</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state publish">Опубликовано</span>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
@@ -57,7 +66,7 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
                 </div>
                 <div class="deals__item">
                     <span>Приглашения</span>
-                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/employer/responces.php" class="link link_underline">64</a></p>
+                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/job_seeker/responces.php" class="link link_underline">64</a></p>
                 </div>
             </div>
             <?php endif; ?>
@@ -65,7 +74,16 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state working">На доработке</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state working">На доработке</span>
+                <button type="button" class="deals-item__status-help" data-moderation-tooltip
+                    aria-label="Пояснение к статусу «На доработке»">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><title>circle-question</title><path fill="none" stroke="#999999" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Zm0-7v-1c0-1 0-1.5 1-2s2-1 2-2.5c0-1-1-2.5-3-2.5s-3 1.264-3 3m3 6v2"/></svg>
+                </button>
+                <template class="moderation-tooltip__template">
+                    <div class="moderation-tooltip"><?= $revisionTooltipText ?></div>
+                </template>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
@@ -125,7 +143,21 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state blocked">Заблокировано</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state blocked">Заблокировано</span>
+                <button type="button" class="deals-item__status-help" data-moderation-tooltip
+                    aria-label="Пояснение к статусу «Заблокировано»">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><title>circle-question</title><path fill="none" stroke="#999999" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Zm0-7v-1c0-1 0-1.5 1-2s2-1 2-2.5c0-1-1-2.5-3-2.5s-3 1.264-3 3m3 6v2"/></svg>
+                </button>
+                <template class="moderation-tooltip__template">
+                    <div class="moderation-tooltip">
+                        <?= $blockedTooltipText ?>
+                        <a href="/pages/legal.php">Правила сайта</a>
+                        <span aria-hidden="true"> / </span>
+                        <a href="/pages/help.php">Написать в поддержку</a>
+                    </div>
+                </template>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
@@ -185,7 +217,9 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state neutral">На модерации</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state neutral">На модерации</span>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
@@ -245,7 +279,9 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state publish">Опубликовано</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state publish">Опубликовано</span>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">
@@ -305,7 +341,16 @@ $dealsDetailUrl = str_contains($uri, 'job_seeker') ? '/pages/rezume.php' : '/pag
     </div>
     <div class="deals-item lk-card ">
         <div class="deals-item__header card-header">
-            <span class="deals-item__status state working">На доработке</span>
+            <div class="deals-item__status-wrapper state-wrapper">
+                <span class="deals-item__status state working">На доработке</span>
+                <button type="button" class="deals-item__status-help" data-moderation-tooltip
+                    aria-label="Пояснение к статусу «На доработке»">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><title>circle-question</title><path fill="none" stroke="#999999" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Zm0-7v-1c0-1 0-1.5 1-2s2-1 2-2.5c0-1-1-2.5-3-2.5s-3 1.264-3 3m3 6v2"/></svg>
+                </button>
+                <template class="moderation-tooltip__template">
+                    <div class="moderation-tooltip"><?= $revisionTooltipText ?></div>
+                </template>
+            </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
                 <button class="deals-item__button deals-item__button--edit">

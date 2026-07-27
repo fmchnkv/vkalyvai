@@ -46,7 +46,6 @@ $arMenu = [
     '/lk/job_seeker/responces.php' => 'ЛК - Отклики (Соискатель)',
     '/lk/job_seeker/favorite.php?companies=Y' => 'ЛК - Избранные компании (Соискатель)',
     '/lk/job_seeker/favorite.php?vacanies=Y' => 'ЛК - Избранные вакансии (Соискатель)',
-    '/lk/job_seeker/favorite.php?deals=Y' => 'ЛК - Избранные резюме (Соискатель)',
     '/lk/job_seeker/notify.php' => 'ЛК - Уведомления (Соискатель)',
     '/lk/job_seeker/deals.php' => 'ЛК - Мои резюме (Соискатель)',
     '/lk/job_seeker/resume-form.php' => 'ЛК - Конструктор резюме (Соискатель)',

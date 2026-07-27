@@ -1080,6 +1080,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let modal = document.querySelector(`.modal[data-modal="${button.dataset.callModal}"]`);
             if (modal) {
+                //ВРЕМЕННОЕ
+                if (button.dataset.callModal === 'favorite-comment') {
+                    const favoriteMessage = modal.querySelector('[data-favorite-message]');
+                    const favoriteCard = button.closest(
+                        '.lk-card, .detail, .offers-grid__item, .offers-list__item, .companies-grid__item'
+                    );
+                    const entityLink = favoriteCard?.querySelector(
+                        'a[href*="company"], a[href*="rezume"], a[href*="resume"], a[href*="vacancy"]'
+                    );
+                    const currentPath = window.location.pathname;
+                    const entitySource = /company|rezume|resume|vacancy/i.test(currentPath)
+                        ? currentPath
+                        : entityLink?.getAttribute('href') || '';
+                    let entityMessage = 'Вакансия добавлена';
+
+                    if (/company/i.test(entitySource)) {
+                        entityMessage = 'Компания добавлена';
+                    } else if (/rezume|resume/i.test(entitySource)) {
+                        entityMessage = 'Резюме добавлено';
+                    }
+
+                    if (favoriteMessage) {
+                        favoriteMessage.textContent = entityMessage;
+                    }
+                }
+
                 modal.classList.add('active');
             }
         })
@@ -1123,7 +1149,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
 
             case 'number':
-                currentMask = new Inputmask({ alias: 'numeric', digits: 0, allowMinus: false, rightAlign: false });
+                const numberMaskOptions = {
+                    alias: 'numeric',
+                    digits: 0,
+                    allowMinus: false,
+                    rightAlign: false,
+                };
+
+                if (contactInput.dataset.max) {
+                    numberMaskOptions.max = Number(contactInput.dataset.max);
+                }
+
+                currentMask = new Inputmask(numberMaskOptions);
                 currentMask.mask(contactInput);
                 break;
 
@@ -1216,11 +1253,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 userValue.classList[action]('hidden');
                 editBtn.classList[action]('lk__hidden');
                 deleteBtn.classList[action]('lk__hidden');
+
+                if (action === 'remove' && input.matches('[data-auto-resize]')) {
+                    input.style.height = '';
+                    input.style.overflowY = '';
+                }
             }
 
             editBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 addClasses('add');
+
+                if (input.matches('[data-auto-resize]')) {
+                    resizeAutoHeightField(input);
+                }
             })
 
             saveBtn.addEventListener('click', function (e) {
@@ -2303,7 +2349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         editingMessageWrapper = messageWrapper;
         showEditedMessage(text);
         messageInput.value = text;
-        resizeMessageInput();
+        resizeAutoHeightField(messageInput);
         messageSubmitBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.8981 5.75747C15.2884 5.36709 15.9215 5.36751 16.3121 5.75747C16.7026 6.14786 16.7033 6.78094 16.3131 7.17153L9.24281 14.2428C9.05533 14.4303 8.80092 14.5357 8.53577 14.5358C8.27068 14.5357 8.0162 14.4303 7.82874 14.2428L4.29261 10.7077C3.90255 10.3172 3.90237 9.684 4.29261 9.2936C4.683 8.90324 5.31612 8.9035 5.70667 9.2936L8.5348 12.1217L14.8981 5.75747Z" fill="white"/>
         </svg>`;
@@ -2326,7 +2372,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageText.textContent = text;
         messageInput.value = '';
         showEditedMessage();
-        resizeMessageInput();
+        resizeAutoHeightField(messageInput);
         messageSubmitBtn.innerHTML = messageSubmitIcon;
         editingMessageWrapper = null;
         activeMessageWrapper = null;
@@ -2338,7 +2384,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(cancelEditBtn) {
             messageInput.value = '';
             showEditedMessage();
-            resizeMessageInput();
+            resizeAutoHeightField(messageInput);
             messageSubmitBtn.innerHTML = messageSubmitIcon;
         }
 
@@ -2375,20 +2421,28 @@ document.addEventListener('DOMContentLoaded', () => {
         editedMessage.append(messageWrapper);
     }
 
-    //инпут под текст
-    function resizeMessageInput() {
-        if (!messageInput) return;
+    // Автоматическая высота многострочных полей
+    function resizeAutoHeightField(field) {
+        if (!field) return;
 
-        messageInput.style.height = 'auto';
+        field.style.height = 'auto';
 
-        const maxHeight = parseFloat(getComputedStyle(messageInput).maxHeight);
-        const height = Math.min(messageInput.scrollHeight, maxHeight);
+        const maxHeight = parseFloat(getComputedStyle(field).maxHeight);
+        const hasMaxHeight = Number.isFinite(maxHeight);
+        const height = hasMaxHeight
+            ? Math.min(field.scrollHeight, maxHeight)
+            : field.scrollHeight;
 
-        messageInput.style.height = `${height}px`;
-        messageInput.style.overflowY = messageInput.scrollHeight > maxHeight ? 'auto' : 'hidden';
+        field.style.height = `${height}px`;
+        field.style.overflowY = hasMaxHeight && field.scrollHeight > maxHeight ? 'auto' : 'hidden';
     }
 
-    messageInput?.addEventListener('input', resizeMessageInput);
+    document.addEventListener('input', function(e) {
+        const field = e.target.closest('[data-auto-resize]');
+        if (!field) return;
+
+        resizeAutoHeightField(field);
+    });
 
     //ВРЕМЕННАЯ ФИЛЬТРАЦИЯ ЧАТОВ
     let activeMessagesFilter = document.querySelector('[data-messages].active')?.dataset.messages || 'all';
@@ -2397,11 +2451,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', function(e) {
         const chatsForMessages = e.target.closest('[data-messages]');
         const chatsForState = e.target.closest('[data-filter]');
-        const allChats = document.querySelectorAll('.chats-card');
+        const filterItems = document.querySelectorAll('[data-viewed]');
 
         if (!chatsForMessages && !chatsForState) return;
 
         if (chatsForMessages) {
+            const tabs = chatsForMessages.closest('.tabs');
+
+            tabs?.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            chatsForMessages.classList.add('active');
+
             activeMessagesFilter = chatsForMessages.dataset.messages;
         }
 
@@ -2416,13 +2477,139 @@ document.addEventListener('DOMContentLoaded', () => {
             activeStateFilter = chatsForState.dataset.filter;
         }
 
-        allChats.forEach(chat => {
+        filterItems.forEach(item => {
             const matchesMessages = activeMessagesFilter === 'all'
-                || chat.dataset.viewed === activeMessagesFilter;
+                || item.dataset.viewed === activeMessagesFilter;
             const matchesState = activeStateFilter === 'all'
-                || chat.dataset.sorted === activeStateFilter;
+                || item.dataset.sorted === activeStateFilter;
 
-            chat.classList.toggle('unvisible', !matchesMessages || !matchesState);
+            item.classList.toggle('unvisible', !matchesMessages || !matchesState);
         });
     })
+
+    const moderationTooltipTriggers = document.querySelectorAll('[data-moderation-tooltip]');
+    if (moderationTooltipTriggers.length && typeof tippy === 'function') {
+        tippy(moderationTooltipTriggers, {
+            content(reference) {
+                const template = reference
+                    .closest('.deals-item__status-wrapper')
+                    ?.querySelector('.moderation-tooltip__template');
+
+                return template?.content.firstElementChild?.cloneNode(true) || '';
+            },
+            interactive: true,
+            placement: 'top',
+            offset: [0, 6],
+            maxWidth: 320,
+            animation: 'scale',
+            theme: 'moderation',
+            hideOnClick: true,
+        });
+    }
+
+    //переключение способа указания оплаты в форме вакансии
+    const paymentTypeInputs = document.querySelectorAll('input[name="payment_amount_type"]');
+    const paymentRangeField = document.querySelector('[data-payment-field="range"]');
+    const paymentExactField = document.querySelector('[data-payment-field="exact"]');
+
+    if (paymentTypeInputs.length && paymentRangeField && paymentExactField) {
+        function togglePaymentFields(clearValues = false) {
+            const selectedPaymentType = document.querySelector('input[name="payment_amount_type"]:checked');
+            const isRange = selectedPaymentType && selectedPaymentType.value === 'range';
+            const isExact = selectedPaymentType && selectedPaymentType.value === 'exact';
+
+            paymentRangeField.classList.toggle('hidden', !isRange);
+            paymentExactField.classList.toggle('hidden', !isExact);
+
+            paymentRangeField.querySelectorAll('input').forEach(function (input) {
+                input.disabled = !isRange;
+
+                if (clearValues || !isRange) {
+                    input.value = '';
+                }
+            });
+            paymentExactField.querySelectorAll('input').forEach(function (input) {
+                input.disabled = !isExact;
+
+                if (clearValues || !isExact) {
+                    input.value = '';
+                }
+            });
+        }
+
+        paymentTypeInputs.forEach(function (input) {
+            input.addEventListener('change', function () {
+                togglePaymentFields(true);
+            });
+        });
+
+        togglePaymentFields();
+    }
+
+    //поле произвольного количества рабочих часов
+    const workHoursInputs = document.querySelectorAll('input[name="work_hours"]');
+    const customWorkHoursField = document.querySelector('[data-work-hours-field="other"]');
+
+    if (workHoursInputs.length && customWorkHoursField) {
+        function toggleCustomWorkHoursField() {
+            const selectedWorkHours = document.querySelector('input[name="work_hours"]:checked');
+            const isOther = selectedWorkHours && selectedWorkHours.value === 'other';
+            const customWorkHoursInput = customWorkHoursField.querySelector('input');
+
+            customWorkHoursField.classList.toggle('hidden', !isOther);
+
+            if (customWorkHoursInput) {
+                customWorkHoursInput.disabled = !isOther;
+
+                if (!isOther) {
+                    customWorkHoursInput.value = '';
+                }
+            }
+        }
+
+        workHoursInputs.forEach(function (input) {
+            input.addEventListener('change', toggleCustomWorkHoursField);
+        });
+
+        toggleCustomWorkHoursField();
+    }
+
+    //специальное поле "количество смен" в форме вакансий
+    const employmentInputs = document.querySelectorAll('input[name="employment_type"]');
+    const shiftField = document.querySelector('[data-employment-field="shift"]');
+    const otherField = document.querySelector('[data-employment-field="other"]');
+
+    if (employmentInputs.length && shiftField && otherField) {
+        function toggleEmploymentFields(clearValues = false) {
+            const selectedEmployment = document.querySelector('input[name="employment_type"]:checked');
+            const isShift = selectedEmployment && selectedEmployment.value === 'rotational';
+            const isOther = selectedEmployment && selectedEmployment.value !== 'rotational';
+
+            shiftField.hidden = !isShift;
+            otherField.hidden = !isOther;
+
+            shiftField.querySelectorAll('input').forEach(function (input) {
+                input.disabled = !isShift;
+
+                if (clearValues || !isShift) {
+                    input.checked = false;
+                }
+            });
+            otherField.querySelectorAll('input').forEach(function (input) {
+                input.disabled = !isOther;
+
+                if (clearValues || !isOther) {
+                    input.value = '';
+                }
+            });
+        }
+
+        employmentInputs.forEach(function (input) {
+            input.addEventListener('change', function () {
+                toggleEmploymentFields(true);
+            });
+        });
+
+        toggleEmploymentFields();
+    }
 });

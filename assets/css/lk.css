@@ -190,6 +190,64 @@
   background-color: #c2c2c2;
   color: #FFFFFF;
 }
+.deals-item__status-wrapper {
+  justify-content: flex-start;
+  gap: 6px;
+}
+.deals-item__status-help {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.deals-item__status-help svg {
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.deals-item__status-help:hover svg stroke,
+.deals-item__status-help:focus-visible svg stroke {
+  fill: #FC7827;
+  transition: all 0.3s ease;
+}
+.tippy-box[data-theme~='moderation'] {
+  background-color: #232323;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+}
+.tippy-box[data-theme~='moderation'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #232323;
+}
+.tippy-box[data-theme~='moderation'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #232323;
+}
+.tippy-box[data-theme~='moderation'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: #232323;
+}
+.tippy-box[data-theme~='moderation'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: #232323;
+}
+.tippy-box[data-theme~='moderation'] .tippy-content {
+  padding: 12px 16px;
+}
+.tippy-box[data-theme~='moderation'] .moderation-tooltip {
+  display: block;
+}
+.tippy-box[data-theme~='moderation'] .moderation-tooltip a {
+  color: #FC7827;
+  text-decoration: underline;
+}
 .lk {
   padding-top: 74px;
   padding-bottom: 40px;
@@ -862,9 +920,27 @@
   border: 1px solid #EBEBEB;
   background-color: #FFF2E9;
   border-radius: 16px;
+  gap: 4px;
   display: flex;
   justify-content: space-between;
-  gap: 4px;
+}
+.lk-card__notice p {
+  word-break: break-all;
+}
+.lk-card__notice textarea.lk-bubble__hidden-input {
+  min-width: 0;
+  resize: none;
+  border: 0;
+  background-color: transparent;
+  font: inherit;
+  line-height: 18px;
+  overflow-y: hidden;
+}
+.lk-card__notice textarea.lk-bubble__hidden-input.showed {
+  flex: 1 1 auto;
+  width: auto;
+  min-height: 18px;
+  max-height: 120px;
 }
 .lk-card__notice button:not(.btn--ok) svg path {
   transition: fill 0.3s ease;
@@ -1150,7 +1226,7 @@
   }
 }
 .lk .responces__sort {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .lk .responces__sort {
@@ -2213,6 +2289,14 @@
 }
 .lk .constructor__forms .skills-search form {
   margin-bottom: 0;
+}
+.lk .constructor__forms .vacancy-form__pay-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.lk .constructor__forms .vacancy-form__pay-block .subcaption {
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .lk .constructor__forms .vacancy-form__pay-section {

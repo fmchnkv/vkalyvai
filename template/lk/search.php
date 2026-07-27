@@ -1,5 +1,15 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
+
+if (str_contains($uri, 'companies')) {
+    $search_string = 'Поиск по компаниям';
+} elseif (str_contains($uri, 'job_seeker')) {
+    $search_string = 'Поиск по вакансиям';
+} elseif (str_contains($uri, 'employer')) {
+    $search_string = 'Поиск по резюме';
+} else {
+    $search_string = 'Поиск';
+}
 ?>
 <form class="catalog-nav__form employer__search-form inline-form">
     <div class="inline-form__row">
@@ -17,7 +27,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </clipPath>
                     </defs>
                 </svg>
-                <input class="field__input" type="text" name="search" placeholder="<?= str_contains($uri, 'job_seeker') ? 'Поиск по вакансиям' : (str_contains($uri, 'employer') ? 'Поиск по резюме' : 'Поиск'); ?>">
+                <input class="field__input" type="text" name="search" placeholder="<?= $search_string; ?>">
             </label>
         </div>
     </div>

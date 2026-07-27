@@ -5,7 +5,7 @@ $cardTxt = str_contains($uri, 'job_seeker') ? 'За последние 3 дня 
 $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать резюме' : 'Редактировать вакансию';
 ?>
 <div class="notify-list grid-list">
-    <div class="lk-card notify-list__item new">
+    <div class="lk-card notify-list__item new" data-viewed="no-viewed">
         <div class="notify__item-body">
             <h3><?php echo $cardTitle; ?></h3>
             <p><?php echo $cardTxt; ?></p>
@@ -27,7 +27,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
         </div>
     </div>
     <?/*
-    <div class="lk-card notify-list__item unseen">
+    <div class="lk-card notify-list__item unseen" data-viewed="no-viewed">
         <a href="javascript:void(0)" class="notify-list__item-header">
             <div class="notify-item__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +64,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
         </div>
     </div>
     */?>
-    <div class="lk-card notify-list__item viewed">
+    <div class="lk-card notify-list__item viewed" data-viewed="viewed">
         <div class="notify__item-body">
             <h3><?php echo $cardTitle; ?></h3>
             <p><?php echo $cardTxt; ?></p>
@@ -85,7 +85,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
             </button>
         </div>
     </div>
-    <div class="lk-card notify-list__item viewed">
+    <div class="lk-card notify-list__item viewed" data-viewed="viewed">
         <div class="notify__item-body">
             <h3><?php echo $cardTitle; ?></h3>
             <p><?php echo $cardTxt; ?></p>
@@ -106,7 +106,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
             </button>
         </div>
     </div>
-    <div class="lk-card notify-list__item new">
+    <div class="lk-card notify-list__item new" data-viewed="no-viewed">
         <div class="notify__item-body">
             <h3><?php echo $cardTitle; ?></h3>
             <p><?php echo $cardTxt; ?></p>
@@ -128,7 +128,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
         </div>
     </div>
     <?/*
-    <div class="lk-card notify-list__item unseen">
+    <div class="lk-card notify-list__item unseen" data-viewed="no-viewed">
         <a href="javascript:void(0)" class="notify-list__item-header">
             <div class="notify-item__avatar avatar empty">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
