@@ -22,10 +22,10 @@
             <? 
             $arr = ['Работодателям', 'Соискателям', 'PR и Маркетинг'];
             ?>
-            <? for ($i = 0; $i < 3; $i++) : ?>
+            <? for ($i = 0; $i < 1; $i++) : ?>
                 <li class="contacts__item contact-card">
-                    <span class="contact-card__title"><?= $arr[$i] ?></span>
-                    <p class="contact-card__description">Поможем решить любой вопрос!</p>
+                    <!-- <span class="contact-card__title"><?= $arr[$i] ?></span>
+                    <p class="contact-card__description">Поможем решить любой вопрос!</p> -->
                     <div class="contact-card__group">
                         <span class="contact-card__label">E-mail</span>
                         <a href="mailto:email@email.com" class="contact-card__link link">email@email.com</a>
