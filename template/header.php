@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
-    <link rel="stylesheet" href="/assets/css/slick-theme.css">
-    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 
     <link rel="stylesheet" href="/assets/css/main.css?v=<?= time() ?>">
     <link rel="stylesheet" href="/assets/css/filter.css?v=<?= time() ?>">

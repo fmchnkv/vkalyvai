@@ -69,33 +69,29 @@
                             <span class="radio__label">Частичная занятость</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="employment_type" value="shift" checked="">
+                            <input class="radio__input" type="radio" name="employment_type" value="shift">
                             <span class="radio__label">Проектная работа</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="employment_type" value="shift" checked="">
+                            <input class="radio__input" type="radio" name="employment_type" value="shift">
                             <span class="radio__label">Стажировка</span>
+                        </label>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="employment_type" value="rotational">
+                            <span class="radio__label">Вахтовый метод</span>
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set">
+                <div class="constructor__inputs-set" data-employment-field="shift" hidden>
                     <span class="subcaption">Укажите количество смен</span>
                     <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="15" checked="">
+                            <input class="radio__input" type="radio" name="shifts_count" value="15">
                             <span class="radio__label">15</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="20">
-                            <span class="radio__label">20</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="30">
                             <span class="radio__label">30</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="40">
-                            <span class="radio__label">40</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="45">
@@ -110,17 +106,17 @@
                             <span class="radio__label">90</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="120">
-                            <span class="radio__label">120</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="180">
-                            <span class="radio__label">180</span>
-                        </label>
-                        <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="other">
                             <span class="radio__label">Другое</span>
                         </label>
+                    </div>
+                </div>
+                <div class="constructor__inputs-set" data-employment-field="other" hidden>
+                    <span class="subcaption">Количество смен в месяц</span>
+                    <div class="constructor__inputs-list">
+                        <div class="lk__input-wrapper">
+                            <input type="text" data-mask="number" name="shifts_count_custom" placeholder="Количество смен" disabled>
+                        </div>
                     </div>
                 </div>
 
@@ -259,13 +255,28 @@
                 data-title="Условия и график" class="step-form" method="post">
                 <div class="constructor__inputs-set vacancy-form__pay-block">
                     <span class="subcaption">Оплата работы</span>
+                    <div class="lk__radio-buttons vacancy-form__radios">
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="payment_amount_type" value="range" checked="">
+                            <span class="radio__label">Диапазон</span>
+                        </label>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="payment_amount_type" value="exact">
+                            <span class="radio__label">Точная сумма</span>
+                        </label>
+                    </div>
                     <div class="constructor__inputs-block flex-list vacancy-form__pay-section">
-                        <div class="constructor__inputs-list grid-list grid-2-columns vacancy-form__prices-inputs">
+                        <div class="constructor__inputs-list grid-list grid-2-columns vacancy-form__prices-inputs" data-payment-field="range">
                             <div class="lk__input-wrapper">
                                 <input type="text" data-mask="number" value="" name="from" placeholder="От">
                             </div>
                             <div class="lk__input-wrapper">
                                 <input type="text" value="" data-mask="number" name="before" placeholder="До">
+                            </div>
+                        </div>
+                        <div class="constructor__inputs-list vacancy-form__prices-inputs hidden" data-payment-field="exact">
+                            <div class="lk__input-wrapper">
+                                <input type="text" data-mask="number" value="" name="exact_amount" placeholder="Точная сумма" disabled>
                             </div>
                         </div>
                         <div class="constructor__inputs-list grid-list vacancy-form__currency-inputs">
@@ -294,6 +305,16 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="lk__radio-buttons vacancy-form__radios">
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="payment_tax_type" value="net" checked="">
+                            <span class="radio__label">На руки</span>
+                        </label>
+                        <label class="lk__input-radio radio">
+                            <input class="radio__input" type="radio" name="payment_tax_type" value="gross">
+                            <span class="radio__label">До вычета НДФЛ</span>
+                        </label>
                     </div>
                 </div>
 
@@ -388,52 +409,16 @@
                     <div class="constructor__inputs-set grid-list">
                         <div class="lk__radio-buttons vacancy-form__radios">
                             <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="2" checked="">
-                                <span class="radio__label">2</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="3">
-                                <span class="radio__label">3</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="4">
+                                <input class="radio__input" type="radio" name="work_hours" value="4" checked="">
                                 <span class="radio__label">4</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="5">
-                                <span class="radio__label">5</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="6">
-                                <span class="radio__label">6</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="7">
-                                <span class="radio__label">7</span>
                             </label>
                             <label class="lk__input-radio radio">
                                 <input class="radio__input" type="radio" name="work_hours" value="8">
                                 <span class="radio__label">8</span>
                             </label>
                             <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="9">
-                                <span class="radio__label">9</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="10">
-                                <span class="radio__label">10</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="11">
-                                <span class="radio__label">11</span>
-                            </label>
-                            <label class="lk__input-radio radio">
                                 <input class="radio__input" type="radio" name="work_hours" value="12">
                                 <span class="radio__label">12</span>
-                            </label>
-                            <label class="lk__input-radio radio">
-                                <input class="radio__input" type="radio" name="work_hours" value="24">
-                                <span class="radio__label">24</span>
                             </label>
                             <label class="lk__input-radio radio">
                                 <input class="radio__input" type="radio" name="work_hours" value="by_agreement">
@@ -443,6 +428,11 @@
                                 <input class="radio__input" type="radio" name="work_hours" value="other">
                                 <span class="radio__label">Другое</span>
                             </label>
+                        </div>
+                        <div class="constructor__inputs-list hidden" data-work-hours-field="other">
+                            <div class="lk__input-wrapper">
+                                <input type="text" data-mask="number" data-max="16" max="16" name="work_hours_custom" placeholder="Количество часов" disabled>
+                            </div>
                         </div>
                         <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                             <label class="filter-group__checkbox checkbox">

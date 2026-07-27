@@ -23,7 +23,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -78,7 +78,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -133,7 +133,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -188,7 +188,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -243,7 +243,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path
@@ -298,7 +298,7 @@
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
-                <button class="like icon-button">
+                <button class="like icon-button" data-call-modal="favorite-comment">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
                             <path

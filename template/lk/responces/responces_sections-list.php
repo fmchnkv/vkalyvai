@@ -14,7 +14,4 @@
     <li class="tabs__item">
         <a href="javascript:void(0);" class="tabs__link tab">Приглашение</a>
     </li>
-    <li class="tabs__item">
-        <a href="javascript:void(0);" class="tabs__link tab">Архив</a>
-    </li>
 </ul>

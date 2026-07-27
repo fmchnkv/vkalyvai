@@ -175,6 +175,77 @@
     }
 }
 
+.deals-item__status-wrapper {
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.deals-item__status-help {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        pointer-events: none;
+        transition: all .3s ease;
+    }
+
+    &:hover, &:focus-visible {
+        svg stroke {
+            fill: @primary;
+            transition: all .3s ease;
+        }
+    }
+}
+
+.tippy-box[data-theme~='moderation'] {
+    background-color: @default;
+    border-radius: 12px;
+    color: @white;
+    font-family: inherit;
+    font-size: @f-body-xs;
+    line-height: @lh-body;
+
+    &[data-placement^='top'] > .tippy-arrow::before {
+        border-top-color: @default;
+    }
+
+    &[data-placement^='bottom'] > .tippy-arrow::before {
+        border-bottom-color: @default;
+    }
+
+    &[data-placement^='left'] > .tippy-arrow::before {
+        border-left-color: @default;
+    }
+
+    &[data-placement^='right'] > .tippy-arrow::before {
+        border-right-color: @default;
+    }
+
+    .tippy-content {
+        padding: 12px 16px;
+    }
+
+    .moderation-tooltip {
+        display: block;
+
+        a {
+            color: @primary;
+            text-decoration: underline;
+        }
+    }
+}
+
 
 .lk {
     padding-top: 74px;
@@ -866,6 +937,29 @@
             display: flex;
             justify-content: space-between;
             gap: 4px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                word-break: break-all;
+            }
+
+            textarea.lk-bubble__hidden-input {
+                min-width: 0;
+                resize: none;
+                border: 0;
+                background-color: transparent;
+                font: inherit;
+                line-height: @lh-body;
+                overflow-y: hidden;
+
+                &.showed {
+                    flex: 1 1 auto;
+                    width: auto;
+                    min-height: 18px;
+                    max-height: 120px;
+                }
+            }
 
             button:not(.btn--ok) {
                 svg path {
@@ -1162,7 +1256,7 @@
         }
 
         &__sort {
-            margin-top: 16px;
+            margin-top: 10px;
 
             .media-min(768px, {
                 margin-bottom: 32px;
@@ -2322,6 +2416,15 @@
                 }
             }
             .vacancy-form {
+                &__pay-block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    
+                    .subcaption {
+                        margin: 0;
+                    }
+                }
                 &__pay-section {
                     .media-min(768px, {
                         flex-wrap: nowrap;

@@ -23,7 +23,8 @@
             <div class="inline-form__row">
                 <div class="inline-form__input-wrapper">
                     <label class="inline-form__label field">
-                        <textarea class="field__input" name="message" rows="1" placeholder="Сообщение"></textarea>
+                        <textarea class="field__input" name="message" rows="1" placeholder="Сообщение"
+                            data-auto-resize></textarea>
                     </label>
                 </div>
             </div>
