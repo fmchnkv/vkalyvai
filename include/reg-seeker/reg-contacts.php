@@ -9,7 +9,7 @@
 
     <div class="auth-reg__group">
         <label class="auth-reg__input input">
-            <input type="email" placeholder="Електронная почта" class="input__field">
+            <input type="email" placeholder="Email" class="input__field">
         </label>
     </div>
 

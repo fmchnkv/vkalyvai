@@ -7,12 +7,6 @@
         </label>
     </div>
 
-    <div class="auth-reg__group">
-        <label class="auth-reg__checkbox checkbox">
-            <input type="checkbox" class="checkbox__input">
-            <span class="checkbox__label">Зарегистрироваться как самозанятый</span>
-        </label>
-    </div>
 
     <button class="auth-reg__submit btn btn_size-m btn_primary">Продолжить</button>
     <p class="auth-reg__accept">Продолжая, вы принимаете <a href="/pages/privacy.php">политику конфиденциальности</a> и <a href="/pages/legal.php">правила сервиса</a></p>

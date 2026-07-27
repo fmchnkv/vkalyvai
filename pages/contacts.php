@@ -70,7 +70,7 @@
             <? endfor; ?>
         </ul>
 
-        <div class="contacts__map map map_contacts">
+        <!-- <div class="contacts__map map map_contacts">
             <div class="map__wrapper">
                 <div class="map__overlay">
                     <button class="map__open btn btn_primary btn_size-s js-map-open">Посмотреть на карте</button>
@@ -81,7 +81,7 @@
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=30.332720%2C59.926167&mode=whatshere&whatshere%5Bpoint%5D=30.321142%2C59.924176&whatshere%5Bzoom%5D=13.4&z=13.4" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="feedback">
             <div class="feedback__inner">

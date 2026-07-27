@@ -37,13 +37,24 @@
     </div>
 
     <label class="auth-reg__checkbox checkbox">
-        <input class="checkbox__input" type="checkbox">
-        <span class="checkbox__label">Я даю <a href="/pages/legal.php">согласие на получение рекламных и информационных уведомлений</a>, связанных с услугами и предложениями сайта.</span>
+        <input class="checkbox__input js-checkbox-accept" type="checkbox">
+        <span class="checkbox__label">Регистрируясь, я даю <a href="/pages/privacy.php" target="_blank">согласие на обработку персональных данных</a> и принимаю условия <a href="/pages/legal.php">Пользовательского соглашения</a></span>
     </label>
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input" type="checkbox">
         <span class="checkbox__label">Я даю <a href="/pages/legal.php">согласие на получение email-рассылок</a>, включая новости, специальные предложения и информацию об обновлениях сервиса.</span>
     </label>
 
-    <button type="submit" class="auth-reg__submit btn btn_size-m btn_primary">Зарегистрироваться</button>
+    <button type="submit" class="auth-reg__submit btn btn_size-m btn_primary" disabled>Зарегистрироваться</button>
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxAccept = document.querySelector('.js-checkbox-accept');
+        const submitButton = document.querySelector('.auth-reg__submit');
+
+        checkboxAccept.addEventListener('change', function() {
+            submitButton.disabled = !this.checked;
+        });
+    });
+</script>
