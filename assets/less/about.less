@@ -481,17 +481,21 @@
             width: 304px;
         });
 
+        .media-min(1200px, {
+            width: auto;    
+        });
+
         .media-min(1280px, {
-            width: 352px;
+            // width: 352px;
         });
 
         .media-min(1441px, {
             padding: 20px;
-            width: 400px;
+            // width: 400px;
         });
 
         .media-min(1920px, {
-            width: 448px;
+            // width: 448px;
         });
     }
 
@@ -539,6 +543,15 @@
         .media-min(1441px, {
             font-size: @f-body-m;
             line-height: @lh-body-m;
+        });
+    }
+
+    .swiper-wrapper {
+
+        .media-min(1200px, {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         });
     }
 }
