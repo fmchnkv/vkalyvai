@@ -1157,6 +1157,12 @@
 
     .responces {
 
+        &__tabs-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         &__title {
             margin-bottom: 24px;
 
@@ -2420,15 +2426,23 @@
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    
+
                     .subcaption {
                         margin: 0;
                     }
                 }
                 &__pay-section {
+                    align-items: center;
+                    gap: 4px;
                     .media-min(768px, {
                         flex-wrap: nowrap;
                     });
+
+                    .select {
+                        input {
+                            padding: 16px;
+                        }
+                    }
                 }
                 &__skills {
                     &-wrapper {
