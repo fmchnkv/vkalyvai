@@ -284,6 +284,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (min-width: 768px) {
+  .auth-reg__row .auth-reg__row-item_full {
+    grid-column: span 2;
+  }
+}
 .auth-reg__row_birth .auth-reg__row-item:last-child {
   grid-column: span 2;
 }

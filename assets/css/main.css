@@ -3049,6 +3049,10 @@ input::placeholder {
 .textarea textarea:disabled::placeholder {
   color: #E0E0E0;
 }
+.textarea textarea::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .field {
   background-color: #FFFFFF;
   border-radius: 32px;

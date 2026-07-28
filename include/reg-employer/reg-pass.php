@@ -38,11 +38,11 @@
 
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input js-checkbox-accept" type="checkbox">
-        <span class="checkbox__label">Регистрируясь, я даю <a href="/pages/privacy.php" target="_blank">согласие на обработку персональных данных</a> и принимаю условия <a href="/pages/legal.php">Пользовательского соглашения</a></span>
+        <span class="checkbox__label">Регистрируясь, я даю <a href="/pages/privacy.php" target="_blank">согласие на обработку персональных данных</a> и&nbsp;принимаю условия <a href="/pages/legal.php">Пользовательского соглашения</a></span>
     </label>
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input" type="checkbox">
-        <span class="checkbox__label">Я даю <a href="/pages/legal.php">согласие на получение email-рассылок</a>, включая новости, специальные предложения и информацию об обновлениях сервиса.</span>
+        <span class="checkbox__label">Я согласен на получение новостей, рекламных уведомлений и&nbsp;специальных предложений сайта.</span>
     </label>
 
     <button type="submit" class="auth-reg__submit btn btn_size-m btn_primary" disabled>Зарегистрироваться</button>

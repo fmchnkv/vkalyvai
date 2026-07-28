@@ -81,7 +81,7 @@ $lkSidebarItems = [
             <?php $isActive = $currentPath === $item['href']; ?>
             <li<?= $isActive ? ' class="active"' : '' ?>>
                 <?= $item['icon'] ?>
-                <a href="<?= $item['href'] ?>"><?= $item['label'] ?></a>
+                <a href="<?= $item['href'] == '/lk/job_seeker/favorite.php' ? '/lk/job_seeker/favorite.php?vacancies=Y' : $item['href'] ?>"><?= $item['label'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

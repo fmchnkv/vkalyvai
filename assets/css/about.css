@@ -566,20 +566,14 @@
     width: 304px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .about-philosophy__item {
-    width: 352px;
+    width: auto;
   }
 }
 @media screen and (min-width: 1441px) {
   .about-philosophy__item {
     padding: 20px;
-    width: 400px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .about-philosophy__item {
-    width: 448px;
   }
 }
 .about-philosophy__image {
@@ -630,5 +624,12 @@
   .about-philosophy__text {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-philosophy .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 }

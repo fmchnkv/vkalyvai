@@ -42,7 +42,7 @@
     </label>
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input" type="checkbox">
-        <span class="checkbox__label">Я согласен на получение новостей, рекламных уведомлений и специальных предложений сайта</span>
+        <span class="checkbox__label">Я согласен на получение новостей, рекламных уведомлений и&nbsp;специальных предложений сайта.</span>
     </label>
 
     <button type="submit" class="auth-reg__submit btn btn_size-m btn_primary" disabled>Зарегистрироваться</button>
