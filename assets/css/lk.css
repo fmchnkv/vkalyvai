@@ -1123,6 +1123,11 @@
   width: 100%;
   max-width: max-content;
 }
+.lk .responces__tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .lk .responces__title {
   margin-bottom: 24px;
 }
@@ -2298,10 +2303,17 @@
 .lk .constructor__forms .vacancy-form__pay-block .subcaption {
   margin: 0;
 }
+.lk .constructor__forms .vacancy-form__pay-section {
+  align-items: center;
+  gap: 4px;
+}
 @media screen and (min-width: 768px) {
   .lk .constructor__forms .vacancy-form__pay-section {
     flex-wrap: nowrap;
   }
+}
+.lk .constructor__forms .vacancy-form__pay-section .select input {
+  padding: 16px;
 }
 .lk .constructor__forms .vacancy-form__skills-wrapper {
   margin-bottom: 16px;
