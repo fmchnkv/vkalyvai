@@ -158,7 +158,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                 'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M15.5996 3.90137C18.5813 3.90137 21 6.32681 21 9.29591V20.1006H8.40039C5.41869 20.1006 3 17.6752 3 14.7061V9.29591C2.99953 8.58694 3.13892 7.88453 3.41016 7.2295C3.6814 6.5745 4.07953 5.97959 4.58106 5.47852C5.08254 4.97754 5.67785 4.58019 6.33301 4.30958C6.98835 4.03896 7.69138 3.90019 8.40039 3.90137H15.5996ZM8.40039 12.9014H10.2002V11.1006H8.40039V12.9014ZM13.7998 12.9014H15.5996V11.1006H13.7998V12.9014Z" fill="#C2C2C2"/></g><defs><clipPath id="clip0_8009_5696"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>'
             ],
             [
-                'href' => '/lk/job_seeker/favorite.php',
+                'href' => '/lk/job_seeker/favorite.php?vacancies=Y',
                 'label' => 'Избранное',
                 'classes' => '',
                 'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M16.0576 4.00098C18.7918 4.00098 21.0078 6.25137 21.0078 9.40137C21.0075 15.7011 14.2578 19.3014 12.0078 20.6514C9.75786 19.3014 3.00809 15.7011 3.00781 9.40137C3.00781 6.25137 5.25801 4.00098 7.95801 4.00098C9.63187 4.00105 11.1078 4.90085 12.0078 5.80078C12.9078 4.90085 14.3838 4.00105 16.0576 4.00098Z" fill="#C2C2C2"/></g><defs><clipPath id="clip0_8009_2048"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>'
