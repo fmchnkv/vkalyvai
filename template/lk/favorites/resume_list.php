@@ -207,36 +207,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
             </div>
         </div>
-        <?php if(str_contains($uri, 'favorite')): ?>
-        <form method="post" class="lk-card__notice input-edit-form">
-            <p>Пометка, комментарий, который оставляется по желанию, при добавлении резюме в избранное</p>
-            <textarea data-mask="text" name="" id="notice" rows="1"
-                class="lk-bubble__hidden-input" data-auto-resize></textarea>
-            <div class="lk-card__buttons-wrapper">
-                <button class="btn--edit btn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                    <path d="M20.1035 21.001H3.9043V19.2012H20.1035V21.001ZM14.832 3.02734C15.0706 3.02743 15.2991 3.12237 15.4678 3.29102L18.0137 5.83691C18.1824 6.00569 18.2773 6.23499 18.2773 6.47363C18.2772 6.71212 18.1823 6.94071 18.0137 7.10938L7.72266 17.4014H3.9043V13.582L14.1953 3.29102C14.3641 3.12229 14.5934 3.02734 14.832 3.02734ZM5.7041 14.3281V15.6006H6.97656L16.1045 6.47363L14.832 5.2002L5.7041 14.3281Z" fill="#C2C2C2"/>
-                    </g>
-                    </svg>
-                </button>
-                <button type="submit" name="action" value="delete" class="notice--submit btn btn--delete">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                    <path d="M16.5039 4.80078H21.0039V6.60059H19.2041V20.1006C19.2041 20.3392 19.1092 20.5685 18.9404 20.7373C18.7716 20.9061 18.5424 21.001 18.3037 21.001H5.7041C5.46541 21.001 5.23617 20.9061 5.06738 20.7373C4.89866 20.5685 4.80371 20.3392 4.80371 20.1006V6.60059H3.00391V4.80078H7.50391V3.00098H16.5039V4.80078ZM6.60352 19.2012H17.4043V6.60059H6.60352V19.2012ZM11.1035 16.501H9.30371V9.30078H11.1035V16.501ZM14.7041 16.501H12.9043V9.30078H14.7041V16.501Z" fill="#C2C2C2"/>
-                    </g>
-                    </svg>
-                </button>
-                <button type="submit" name="action" value="save" class="notice--submit btn--ok btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" fill="#FC7827"></path>
-                    <path d="M8 0.5H12C16.1421 0.5 19.5 3.85786 19.5 8V12C19.5 16.1421 16.1421 19.5 12 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12V8C0.5 3.85786 3.85786 0.5 8 0.5Z" stroke="#FC7827"></path>
-                    <path d="M8.10397 12.2539L14.6808 6.21381C14.836 6.07127 15.017 6 15.224 6C15.4309 6 15.612 6.07127 15.7672 6.21381C15.9224 6.35635 16 6.52573 16 6.72196C16 6.91819 15.9224 7.08733 15.7672 7.2294L8.64718 13.7862C8.49198 13.9287 8.31091 14 8.10397 14C7.89703 14 7.71596 13.9287 7.56075 13.7862L4.22385 10.7216C4.06865 10.5791 3.99415 10.4099 4.00036 10.2142C4.00657 10.0184 4.08753 9.84903 4.24325 9.70601C4.39898 9.563 4.58341 9.49173 4.79656 9.4922C5.00971 9.49268 5.19388 9.56395 5.34909 9.70601L8.10397 12.2539Z" fill="white"></path>
-                    </svg>
-                </button>
-            </div>
-        </form>
-        <?php endif; ?>
+        <?php if (str_contains($uri, '/lk/employer/favorite.php')) require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/favorite_notice.php"); ?>
     </div>
     <div class="lk-card__wrapper">
         <div class="offers-list__item lk-card favorite-list__item">
