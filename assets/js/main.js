@@ -2452,6 +2452,19 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeAutoHeightField(field);
     });
 
+    window.addEventListener('resize', function() {
+        if (!document.querySelectorAll('.auth-reg__input [data-auto-resize]').length) return;
+        document.querySelectorAll('.auth-reg__input [data-auto-resize]').forEach(field => {
+            resizeAutoHeightField(field);
+        });
+    });
+
+    if (document.querySelectorAll('.auth-reg__input [data-auto-resize]').length) {
+        document.querySelectorAll('.auth-reg__input [data-auto-resize]').forEach(field => {
+            resizeAutoHeightField(field);
+        });
+    };
+
     //ВРЕМЕННАЯ ФИЛЬТРАЦИЯ ЧАТОВ
     let activeMessagesFilter = document.querySelector('[data-messages].active')?.dataset.messages || 'all';
     let activeStateFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';

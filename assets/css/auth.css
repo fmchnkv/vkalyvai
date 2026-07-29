@@ -305,6 +305,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.auth-reg__row_inn textarea,
+.auth-reg__row_inn input {
+  font-size: 14px;
+  line-height: 16px;
+}
 .auth-reg__submit {
   width: 100%;
   margin-top: 40px;
