@@ -1,5 +1,5 @@
 <div class="employer__responces-list grid-list">
-    <div class="employer__card-data-wrapper">
+    <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="approve">
         <div class="employer__responces-item lk-card card-viewed-not">
             <span class="employer__responces-item__status state neutral">Не просмотрен</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
@@ -116,7 +116,7 @@
         </div>
 
     </div>
-    <div class="employer__card-data-wrapper">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="approve">
         <div class="employer__responces-item lk-card card-approve">
             <div class="state-wrapper">
                 <span class="employer__responces-item__status state publish">Приглашение</span>
@@ -314,7 +314,7 @@
         </div>
     </div>
 
-    <div class="employer__card-data-wrapper">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
         <div class="employer__responces-item lk-card card-reject">
             <span class="employer__responces-item__status state blocked">Отказ</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
@@ -510,7 +510,7 @@
 
     </div>
 
-    <div class="employer__card-data-wrapper">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
         <div class="employer__responces-item lk-card card-viewed">
             <span class="employer__responces-item__status state neutral_see">Просмотрен</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>

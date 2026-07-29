@@ -3,7 +3,8 @@ $uri = $_SERVER['REQUEST_URI'];
 ?>
 
 <div class="vacancies-list grid-list">
-    <div class="offers-grid__item lk-card">
+    <div class="lk-card__wrapper">
+        <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
@@ -59,6 +60,8 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        </div>
+        <?php if (str_contains($uri, '/lk/job_seeker/favorite.php')) require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/favorite_notice.php"); ?>
     </div>
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>

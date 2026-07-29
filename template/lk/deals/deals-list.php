@@ -66,7 +66,7 @@ $blockedTooltipText = $isResumeDeals
                 </div>
                 <div class="deals__item">
                     <span>Приглашения</span>
-                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/job_seeker/responces.php" class="link link_underline">64</a></p>
+                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/<?= $isResumeDeals ? 'job_seeker' : 'employer'; ?>/responces.php" class="link link_underline">64</a></p>
                 </div>
             </div>
             <?php endif; ?>

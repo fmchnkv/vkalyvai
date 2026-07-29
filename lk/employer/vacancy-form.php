@@ -300,7 +300,11 @@
                                 <div class="select__dropdown">
                                     <ul class="select__dropdown-list" data-id="vacancy-space">
                                         <li class="select__option active" data-value="За месяц">За месяц</li>
-                                        <li class="select__option" data-value="За день">За день</li>                            
+                                        <li class="select__option" data-value="За день">За день</li>
+                                        <li class="select__option" data-value="За неделю">За неделю</li>
+                                        <li class="select__option" data-value="За проект">За проект</li>
+                                        <li class="select__option" data-value="За смену">За смену</li>
+                                        <li class="select__option" data-value="За час">За час</li>
                                     </ul>
                                 </div>
                             </div>
