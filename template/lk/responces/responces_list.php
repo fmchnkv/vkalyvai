@@ -1,5 +1,5 @@
 <div class="responces-list grid-list">
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="approve">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
@@ -29,7 +29,7 @@
         </div>
         <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
@@ -59,7 +59,7 @@
         </div>
         <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="approve">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
@@ -89,7 +89,7 @@
         </div>
         <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
@@ -119,7 +119,7 @@
         </div>
         <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="approve">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
@@ -149,7 +149,7 @@
         </div>
         <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
-    <div class="lk-card responces-list__item">
+    <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
             <span class="responces-item__status neutral state">Не просмотрен</span>
             <button class="deals-item__button deals-item__button--delete">
