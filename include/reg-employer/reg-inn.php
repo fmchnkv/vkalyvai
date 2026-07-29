@@ -5,22 +5,22 @@
 <form action="/lk/auth.php?reg=2&step=3" class="auth-reg__form" method="post">
     <div class="auth-reg__group">
         <div class="auth-reg__row auth-reg__row_2 auth-reg__row_inn">
-            <div class="auth-reg__row-item">
+            <div class="auth-reg__row-item auth-reg__row-item_full">
                 <span class="auth-reg__caption">Полное название</span>
-                <label class="auth-reg__input input">
-                    <input type="text" placeholder="-" value="Общество с ограниченой ответственностью «Название компании»" required class="input__field">
+                <label class="auth-reg__input textarea">
+                    <textarea class="textarea__field" required>Общество с ограниченной ответственностью «Название компании»</textarea>
                 </label>
             </div>
-            <div class="auth-reg__row-item">
+            <div class="auth-reg__row-item auth-reg__row-item_full">
                 <span class="auth-reg__caption">Юридический адрес</span>
-                <label class="auth-reg__input input">
-                    <input type="text" value="97022, Г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153" placeholder="-" class="input__field" required>
+                <label class="auth-reg__input textarea">
+                    <textarea class="textarea__field" required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
                 </label>
             </div>
-            <div class="auth-reg__row-item">
+            <div class="auth-reg__row-item auth-reg__row-item_full">
                 <span class="auth-reg__caption">Фактический адрес</span>
-                <label class="auth-reg__input input">
-                    <input type="text" value="97022, Г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153" placeholder="-" class="input__field" required>
+                <label class="auth-reg__input textarea">
+                    <textarea class="textarea__field" required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
                 </label>
             </div>
             <div class="auth-reg__row-item">
