@@ -27,7 +27,7 @@
                                     fill="#FC7827" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_2468">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -41,7 +41,7 @@
                                     fill="#FC7827" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_2478">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -55,7 +55,7 @@
                                     fill="#FC7827" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_2488">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -138,7 +138,7 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
@@ -163,31 +163,31 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__main-form lk__form">
+        <form action="/" method="post" class="lk__main-form lk__form">
             <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Статус поиска</span>
                     <div class="select" data-id="search_status">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="search_status" data-id="search_status" readonly placeholder="Активно ищу работу">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -210,7 +210,7 @@
                     <div class="lk__radio-buttons">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="gender" value="male" checked="">
-                            <span class="radio__label">Мужской</span>
+                            <span class="radio__label">Мужской</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="gender" value="female">
@@ -263,13 +263,13 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__main-form lk__form">
+        <form action="/" method="post" class="lk__main-form lk__form">
             <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Название компании</span>
@@ -294,18 +294,18 @@
                     <div class="select" data-id="registration_type">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="registration_type" data-id="registration_type" readonly placeholder="Организация">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -321,18 +321,18 @@
                     <div class="select" data-id="activity_area">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="activity_area" data-id="activity_area" readonly placeholder="Медицинская клиника">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -365,7 +365,7 @@
                             <path d="M12.0039 3.90137C16.8567 3.90137 20.8943 7.39298 21.7412 12.001C20.8952 16.609 16.8567 20.1006 12.0039 20.1006C7.15111 20.1006 3.1135 16.609 2.2666 12.001C3.1126 7.39298 7.15111 3.90137 12.0039 3.90137ZM12.0039 5.70898C10.1694 5.70898 8.38898 6.33067 6.9541 7.47363C5.51922 8.61661 4.51468 10.213 4.10449 12.001C4.51315 13.7903 5.51729 15.3878 6.95215 16.5322C8.38717 17.6767 10.1684 18.3004 12.0039 18.3008C13.8394 18.3004 15.6206 17.6767 17.0557 16.5322C18.4905 15.3878 19.4947 13.7903 19.9033 12.001C19.4931 10.213 18.4886 8.61661 17.0537 7.47363C15.6188 6.33067 13.8384 5.70898 12.0039 5.70898ZM12.0039 7.95117C13.078 7.95117 14.1086 8.3772 14.8682 9.13672C15.6277 9.89624 16.0537 10.9269 16.0537 12.001C16.0537 13.0751 15.6277 14.1057 14.8682 14.8652C14.1086 15.6248 13.078 16.0508 12.0039 16.0508C10.9298 16.0508 9.89917 15.6248 9.13965 14.8652C8.38013 14.1057 7.9541 13.0751 7.9541 12.001C7.9541 10.9269 8.38013 9.89624 9.13965 9.13672C9.89917 8.3772 10.9298 7.95117 12.0039 7.95117ZM12.0039 9.75098C11.4072 9.75098 10.835 9.9882 10.4131 10.4102C9.99113 10.8321 9.75391 11.4042 9.75391 12.001C9.75391 12.5977 9.99113 13.1698 10.4131 13.5918C10.835 14.0138 11.4072 14.251 12.0039 14.251C12.6006 14.251 13.1728 14.0138 13.5947 13.5918C14.0167 13.1698 14.2539 12.5977 14.2539 12.001C14.2539 11.4042 14.0167 10.8321 13.5947 10.4102C13.1728 9.9882 12.6006 9.75098 12.0039 9.75098Z" fill="#232323"/>
                             </g>
                             <defs>
-                            <clipPath id="clip0_8102_14688">
+                            <clipPath>
                             <rect width="24" height="24" fill="white"/>
                             </clipPath>
                             </defs>
@@ -383,7 +383,7 @@
                             <path d="M12.0039 3.90137C16.8567 3.90137 20.8943 7.39298 21.7412 12.001C20.8952 16.609 16.8567 20.1006 12.0039 20.1006C7.15111 20.1006 3.1135 16.609 2.2666 12.001C3.1126 7.39298 7.15111 3.90137 12.0039 3.90137ZM12.0039 5.70898C10.1694 5.70898 8.38898 6.33067 6.9541 7.47363C5.51922 8.61661 4.51468 10.213 4.10449 12.001C4.51315 13.7903 5.51729 15.3878 6.95215 16.5322C8.38717 17.6767 10.1684 18.3004 12.0039 18.3008C13.8394 18.3004 15.6206 17.6767 17.0557 16.5322C18.4905 15.3878 19.4947 13.7903 19.9033 12.001C19.4931 10.213 18.4886 8.61661 17.0537 7.47363C15.6188 6.33067 13.8384 5.70898 12.0039 5.70898ZM12.0039 7.95117C13.078 7.95117 14.1086 8.3772 14.8682 9.13672C15.6277 9.89624 16.0537 10.9269 16.0537 12.001C16.0537 13.0751 15.6277 14.1057 14.8682 14.8652C14.1086 15.6248 13.078 16.0508 12.0039 16.0508C10.9298 16.0508 9.89917 15.6248 9.13965 14.8652C8.38013 14.1057 7.9541 13.0751 7.9541 12.001C7.9541 10.9269 8.38013 9.89624 9.13965 9.13672C9.89917 8.3772 10.9298 7.95117 12.0039 7.95117ZM12.0039 9.75098C11.4072 9.75098 10.835 9.9882 10.4131 10.4102C9.99113 10.8321 9.75391 11.4042 9.75391 12.001C9.75391 12.5977 9.99113 13.1698 10.4131 13.5918C10.835 14.0138 11.4072 14.251 12.0039 14.251C12.6006 14.251 13.1728 14.0138 13.5947 13.5918C14.0167 13.1698 14.2539 12.5977 14.2539 12.001C14.2539 11.4042 14.0167 10.8321 13.5947 10.4102C13.1728 9.9882 12.6006 9.75098 12.0039 9.75098Z" fill="#232323"/>
                             </g>
                             <defs>
-                            <clipPath id="clip0_8102_14688">
+                            <clipPath>
                             <rect width="24" height="24" fill="white"/>
                             </clipPath>
                             </defs>
@@ -409,14 +409,14 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__modal-form lk__contacts-form">
-            <h3 class="lk__modal-form-title">Добавить контакт</h3>
+        <form action="/" method="post" class="lk__modal-form lk__contacts-form">
+            <p class="lk__modal-form-title">Добавить контакт</p>
             <div class="lk__modal-form-content">
                 <div class="lk__input-element">
                     <span class="subcaption">Тип контакта</span>
@@ -428,7 +428,7 @@
                                 <path d="M8.02637 3.90137C8.13792 3.90127 8.24533 3.94283 8.32812 4.01758C8.41095 4.09242 8.46345 4.19557 8.47461 4.30664C8.49528 4.51328 8.51425 4.67774 8.53223 4.80273C8.71109 6.05097 9.07734 7.26565 9.61914 8.4043C9.70449 8.58414 9.649 8.79883 9.4873 8.91406L7.54492 10.3018C8.7324 13.0687 10.9372 15.2744 13.7041 16.4619L15.0908 14.5234C15.1475 14.4442 15.23 14.3868 15.3242 14.3623C15.4184 14.3379 15.5185 14.3472 15.6064 14.3887C16.7449 14.9294 17.9583 15.2955 19.2061 15.4736C19.3312 15.4916 19.496 15.5115 19.7012 15.5313C19.8121 15.5426 19.9146 15.5949 19.9893 15.6777C20.0639 15.7605 20.1056 15.868 20.1055 15.9795H20.1045V19.1621C20.1045 19.3898 20.0176 19.6088 19.8623 19.7754C19.707 19.942 19.4948 20.0435 19.2676 20.0596C18.8745 20.0866 18.553 20.1015 18.3047 20.1016C10.3514 20.1016 3.9043 13.6545 3.9043 5.70117C3.9043 5.4528 3.91742 5.13148 3.94531 4.73828C3.96127 4.51103 4.06284 4.2979 4.22949 4.14258C4.39616 3.98727 4.61594 3.9013 4.84375 3.90137H8.02637Z" fill="#C2C2C2"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_7682_28051">
+                                <clipPath>
                                 <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                                 </defs>
@@ -441,7 +441,7 @@
                                 <path d="M20.1035 4.50098C20.3422 4.50098 20.5715 4.59587 20.7402 4.76465C20.909 4.93343 21.0039 5.16267 21.0039 5.40137V18.6006C21.0039 18.8393 20.909 19.0685 20.7402 19.2373C20.5715 19.4061 20.3422 19.501 20.1035 19.501H3.9043C3.6656 19.501 3.43636 19.4061 3.26758 19.2373C3.0988 19.0685 3.00391 18.8393 3.00391 18.6006V5.40137C3.00391 5.16267 3.0988 4.93343 3.26758 4.76465C3.43636 4.59587 3.6656 4.50098 3.9043 4.50098H20.1035ZM4.80371 17.7012H19.2041V8.31543L12.0684 14.7051L4.80371 8.29492V17.7012ZM12.0586 12.2969L18.7559 6.30078H5.26367L12.0586 12.2969Z" fill="#C2C2C2"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_7682_28356">
+                                <clipPath>
                                 <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                                 </defs>
@@ -454,7 +454,7 @@
                                 <path d="M14.0039 2.00098C16.8039 2.00098 18.2039 2.00111 19.2734 2.5459C20.2142 3.02527 20.9796 3.79063 21.459 4.73145C22.0038 5.80096 22.0039 7.20102 22.0039 10.001V14.001C22.0039 16.8009 22.0038 18.201 21.459 19.2705C20.9796 20.2113 20.2142 20.9767 19.2734 21.4561C18.2039 22.0008 16.8039 22.001 14.0039 22.001H10.0039C7.20395 22.001 5.80389 22.0008 4.73438 21.4561C3.79356 20.9767 3.02819 20.2113 2.54883 19.2705C2.00404 18.201 2.00391 16.8009 2.00391 14.001V10.001C2.00391 7.20102 2.00404 5.80096 2.54883 4.73145C3.02819 3.79063 3.79356 3.02527 4.73438 2.5459C5.80389 2.00111 7.20395 2.00098 10.0039 2.00098H14.0039ZM5.37891 8.08496C5.48739 13.2847 8.08736 16.4092 12.6455 16.4092H12.9043V13.4346C13.7082 13.5355 14.4645 13.8714 15.0781 14.4004C15.6918 14.9296 16.1354 15.6287 16.3535 16.4092H18.7207C18.4777 15.5106 18.0464 14.6737 17.4561 13.9541C16.8657 13.2346 16.1295 12.6483 15.2959 12.2344C16.0424 11.7811 16.6872 11.1786 17.1904 10.4648C17.6936 9.7509 18.0448 8.94052 18.2207 8.08496H16.0703C15.6036 9.73459 14.2207 11.2341 12.9043 11.376V8.08496H10.7539V13.8516C9.42061 13.5182 7.73723 11.9013 7.66211 8.08496H5.37891Z" fill="#C2C2C2"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_7682_29344">
+                                <clipPath>
                                 <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                                 </defs>
@@ -467,7 +467,7 @@
                                 <path d="M14.0039 2.00098C16.8039 2.00098 18.2039 2.00111 19.2734 2.5459C20.2142 3.02527 20.9796 3.79063 21.459 4.73145C22.0038 5.80096 22.0039 7.20102 22.0039 10.001V14.001C22.0039 16.8009 22.0038 18.201 21.459 19.2705C20.9796 20.2113 20.2142 20.9767 19.2734 21.4561C18.2039 22.0008 16.8039 22.001 14.0039 22.001H10.0039C7.20395 22.001 5.80389 22.0008 4.73438 21.4561C3.79356 20.9767 3.02819 20.2113 2.54883 19.2705C2.00404 18.201 2.00391 16.8009 2.00391 14.001V10.001C2.00391 7.20102 2.00404 5.80096 2.54883 4.73145C3.02819 3.79063 3.79356 3.02527 4.73438 2.5459C5.80389 2.00111 7.20395 2.00098 10.0039 2.00098H14.0039ZM16.1143 8.03027C15.7343 8.03027 15.1638 8.23063 12.3838 9.39062C11.4137 9.79065 9.47357 10.6305 6.55371 11.9004C6.08383 12.0904 5.83351 12.2702 5.81348 12.4502C5.77348 12.8002 6.26365 12.9104 6.89355 13.1104C7.40335 13.2803 8.08324 13.4703 8.44336 13.4805C8.76332 13.4905 9.1235 13.35 9.52344 13.0801C12.2534 11.2401 13.6541 10.31 13.7441 10.29C13.8141 10.28 13.8942 10.2606 13.9541 10.3105C13.9763 10.3342 13.9923 10.3633 14.001 10.3945C14.0096 10.4258 14.0108 10.4586 14.0039 10.4902C13.9539 10.7002 11.3941 13.0307 11.2441 13.1807C10.6742 13.7606 10.0337 14.1206 11.0234 14.7705C11.8734 15.3305 12.3739 15.6905 13.2539 16.2705C13.8138 16.6405 14.254 17.0705 14.834 17.0205C15.0939 16.9904 15.3737 16.7401 15.5137 15.9902C15.8437 14.2202 16.4936 10.3798 16.6436 8.7998C16.6535 8.65987 16.6336 8.47986 16.6436 8.41992C16.6335 8.33998 16.6037 8.23026 16.5039 8.15039C16.3841 8.05058 16.1945 8.03035 16.1143 8.03027Z" fill="#C2C2C2"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_7682_29352">
+                                <clipPath>
                                 <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                                 </defs>
@@ -480,7 +480,7 @@
                                 <path d="M17.0098 2.00195C19.7672 2.00207 22.0028 4.23766 22.0029 6.99512V17.0068C22.0028 19.7643 19.7672 21.9999 17.0098 22H6.99805C4.24058 21.9999 2.005 19.7643 2.00488 17.0068V6.99512C2.005 4.23765 4.24058 2.00207 6.99805 2.00195H17.0098ZM12.1289 4.3916C7.91737 4.3916 4.3625 7.6505 4.3623 11.9824C4.3623 13.7963 4.69755 15.0488 4.99316 16.1729C5.24131 17.0852 5.46094 17.9212 5.46094 18.9102C5.56734 20.227 7.99343 19.457 8.75977 18.4717C9.97124 19.3474 10.6691 19.5674 12.1689 19.5674C16.315 19.545 19.6603 16.1695 19.6465 12.0234C19.6465 7.81201 16.3439 4.39196 12.1289 4.3916ZM12.2305 8.13574V8.13965C14.3558 8.26151 15.992 10.0632 15.9092 12.1904C15.7665 14.3133 13.9504 15.9313 11.8252 15.8291C11.16 15.7757 10.5207 15.5482 9.97168 15.1689C9.63962 15.501 9.10628 15.9318 8.89453 15.8809C8.45302 15.7636 7.93483 13.5195 8.22656 11.6768C8.58056 9.45057 10.1795 8.03003 12.2305 8.13574Z" fill="#C2C2C2"/>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_7682_29360">
+                                <clipPath>
                                 <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                                 </defs>
@@ -512,32 +512,32 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__univercity-form lk__modal-form">
-            <h3 class="lk__modal-form-title">Место учебы</h3>
+        <form action="/" method="post" class="lk__univercity-form lk__modal-form">
+            <p class="lk__modal-form-title">Место учебы</p>
             <div class="lk__univercity-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Уровень образования</span>
                     <div class="select" data-id="education">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Высшее">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -573,18 +573,18 @@
                         <div class="select" data-id="education_month">
                             <label class="filter-group__input select__input input input_has-icon">
                                 <input class="input__field" type="text" name="education_month" data-id="education_month" readonly placeholder="Месяц">
-                                <div class="input__icon">
+                                <span class="input__icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_4687_14543">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </div>
+                                </span>
                             </label>
 
                             <div class="select__dropdown">
@@ -616,18 +616,18 @@
                         <div class="select" data-id="education_year">
                             <label class="filter-group__input select__input input input_has-icon">
                                 <input class="input__field" type="text" name="education_year" data-id="education_year" readonly placeholder="Год">
-                                <div class="input__icon">
+                                <span class="input__icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_4687_14543">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                </div>
+                                </span>
                             </label>
 
                             <div class="select__dropdown">
@@ -661,14 +661,14 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__driver-form lk__modal-form">
-            <h3 class="lk__modal-form-title">Опыт вождения</h3>
+        <form action="/" method="post" class="lk__driver-form lk__modal-form">
+            <p class="lk__modal-form-title">Опыт вождения</p>
             <div class="lk__driver-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <div class="lk__checkbox-buttons grid-list">
@@ -716,32 +716,32 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__language-form lk__modal-form">
-            <h3 class="lk__modal-form-title">Иностранный язык</h3>
+        <form action="/" method="post" class="lk__language-form lk__modal-form">
+            <p class="lk__modal-form-title">Иностранный язык</p>
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Язык</span>
                     <div class="select" data-id="external_language">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="external_language" data-id="external_language" readonly placeholder="Английский">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -766,18 +766,18 @@
                     <div class="select" data-id="language_level">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="language_level" data-id="language_level" readonly placeholder="А1-Начальный">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -809,32 +809,32 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__language-form lk__modal-form">
-            <h3 class="lk__modal-form-title">Родной язык</h3>
+        <form action="/" method="post" class="lk__language-form lk__modal-form">
+            <p class="lk__modal-form-title">Родной язык</p>
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Язык</span>
                     <div class="select" data-id="internal_language">
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="internal_language" data-id="internal_language" readonly placeholder="Английский">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -869,19 +869,19 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
         </button>
-        <form action="" method="post" class="lk__favorite-form lk__modal-form">
-            <h3 class="lk__modal-form-title" data-favorite-message>Вакансия добавлена в избранное</h3>
+        <form action="/" method="post" class="lk__favorite-form lk__modal-form">
+            <p class="lk__modal-form-title" data-favorite-message>Вакансия добавлена в избранное</p>
             <p class="lk__favorite-message">
                 При необходимости добавьте комментарий в поле ниже, или просто закройте окно
             </p>
             <div class="textarea">
-                <textarea data-mask="text" name="" id="favorite-comment" placeholder="Комментарий"></textarea>
+                <textarea data-mask="text" name="ddd" id="favorite-comment" placeholder="Комментарий"></textarea>
             </div>
             <button type="submit" class="btn btn_size-m btn_primary">
                 <span>Добавить</span>

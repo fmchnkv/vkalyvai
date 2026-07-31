@@ -2277,7 +2277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="${text}">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -2286,12 +2286,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -2303,7 +2303,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                             d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
                                             fill="white" />
                                         <defs>
-                                            <clipPath id="clip0_8003_4492">
+                                            <clipPath>
                                                 <rect width="16" height="16" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -2418,7 +2418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageTitle.textContent = 'Редактируемое сообщение';
         messageText.textContent = text;
         messageBtn.classList.add('edit-cancel');
-        messageBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_8002_19632)"><path d="M17.7363 7.5459L13.2812 12.001L17.7363 16.4561L16.4639 17.7285L12.0088 13.2734L7.55371 17.7285L6.28125 16.4561L10.7363 12.001L6.28125 7.5459L7.55371 6.27344L12.0088 10.7285L16.4639 6.27344L17.7363 7.5459Z" fill="#999999"/></g><defs><clipPath id="clip0_8002_19632"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>`;
+        messageBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_8002_19632)"><path d="M17.7363 7.5459L13.2812 12.001L17.7363 16.4561L16.4639 17.7285L12.0088 13.2734L7.55371 17.7285L6.28125 16.4561L10.7363 12.001L6.28125 7.5459L7.55371 6.27344L12.0088 10.7285L16.4639 6.27344L17.7363 7.5459Z" fill="#999999"/></g></svg>`;
 
         textMessage.append(messageTitle);
         textMessage.append(messageText);

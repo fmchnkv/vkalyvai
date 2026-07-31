@@ -5,7 +5,7 @@
         <label class="filter-group__input multiple-select__input">
             <input class="multiple-select__field" type="text" name="category" placeholder="Все резюме" readonly>
             <span class="multiple-select__counter"></span>
-            <div class="multiple-select__icon">
+            <span class="multiple-select__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -13,12 +13,12 @@
                             fill="#232323" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_4687_14543">
+                        <clipPath>
                             <rect width="24" height="24" fill="white" />
                         </clipPath>
                     </defs>
                 </svg>
-            </div>
+            </span>
         </label>
         <div class="multiple-select__dropdown">
             <ul class="multiple-select__dropdown-list">

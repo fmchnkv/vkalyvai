@@ -5,9 +5,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -51,7 +51,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -66,7 +66,7 @@
                                     fill="#5DB634" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7407_21646">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -90,7 +90,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -105,7 +105,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>
@@ -122,9 +122,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -168,7 +168,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -179,7 +179,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Отказ">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -188,12 +188,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -205,7 +205,7 @@
                                             d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z"
                                             fill="white" />
                                         <defs>
-                                            <clipPath id="clip0_8003_3149">
+                                            <clipPath>
                                                 <rect width="20" height="20" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -222,7 +222,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Отказ">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -231,12 +231,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
                     <a href="/pages/rezume.php" class="offers-list__link icon-link">
@@ -248,7 +248,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -263,7 +263,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>
@@ -282,7 +282,7 @@
                                 fill="#999999" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_4580_6383">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -295,7 +295,7 @@
                                 d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
                                 fill="white" />
                             <defs>
-                                <clipPath id="clip0_8003_4492">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" />
                                 </clipPath>
                             </defs>
@@ -321,9 +321,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -367,7 +367,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -378,7 +378,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Приглашение">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -387,12 +387,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -404,7 +404,7 @@
                                             d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
                                             fill="white" />
                                         <defs>
-                                            <clipPath id="clip0_8003_4492">
+                                            <clipPath>
                                                 <rect width="16" height="16" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -421,7 +421,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Приглашение">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -430,12 +430,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
                     <a href="/pages/rezume.php" class="offers-list__link icon-link">
@@ -447,7 +447,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -462,7 +462,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>
@@ -481,7 +481,7 @@
                                 fill="#999999" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_4580_6383">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -494,7 +494,7 @@
                                 d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
                                 fill="white" />
                             <defs>
-                                <clipPath id="clip0_8003_4492">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" />
                                 </clipPath>
                             </defs>
@@ -515,9 +515,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -561,7 +561,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -572,7 +572,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Отказ">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -581,12 +581,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
 
                         <div class="select__dropdown">
@@ -598,7 +598,7 @@
                                             d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z"
                                             fill="white" />
                                         <defs>
-                                            <clipPath id="clip0_8003_3149">
+                                            <clipPath>
                                                 <rect width="20" height="20" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -615,7 +615,7 @@
                         <label class="filter-group__input select__input input input_has-icon">
                             <input class="input__field" type="text" name="approved_state" data-id="approved_btns"
                                 readonly="" placeholder="Отказ">
-                            <div class="input__icon">
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -624,12 +624,12 @@
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
                     <a href="/pages/rezume.php" class="offers-list__link icon-link">
@@ -641,7 +641,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -656,7 +656,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>
@@ -675,7 +675,7 @@
                                 fill="#999999" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_4580_6383">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -688,7 +688,7 @@
                                 d="M11.8232 5.03125L8.85254 8.00098L11.8232 10.9707L10.9746 11.8193L8.00488 8.84961L5.03418 11.8193L4.18652 10.9707L7.15625 8.00098L4.18652 5.03125L5.03418 4.18262L8.00488 7.15234L10.9746 4.18262L11.8232 5.03125Z"
                                 fill="white" />
                             <defs>
-                                <clipPath id="clip0_8003_4492">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" />
                                 </clipPath>
                             </defs>
@@ -709,9 +709,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -755,7 +755,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -770,7 +770,7 @@
                                     fill="#5DB634" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7407_21646">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -794,7 +794,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -809,7 +809,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>
@@ -828,9 +828,9 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <h3 class="offer-header__title">
+                    <p class="offer-header__title">
                         <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </h3>
+                    </p>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -874,7 +874,7 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8147_26166">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -889,7 +889,7 @@
                                     fill="#5DB634" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7407_21646">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
@@ -913,7 +913,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -928,7 +928,7 @@
                                 fill="#F14C4C" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7407_21671">
+                            <clipPath>
                                 <rect width="16" height="16" fill="white" />
                             </clipPath>
                         </defs>

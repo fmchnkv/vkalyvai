@@ -297,11 +297,13 @@
 }
 .chats-card.active .chats-card__body h4,
 .chats-card.active .chats-card__body p,
-.chats-card.active .chats-card__body span {
+.chats-card.active .chats-card__body span,
+.chats-card.active .chats-card__body .h4 {
   color: #FFFFFF !important;
   transition: color 0.3s ease;
 }
-.chats-card.active .chats-card__props-header time {
+.chats-card.active .chats-card__props-header time,
+.chats-card.active .chats-card__props-header .time {
   color: #FFFFFF;
   transition: color 0.3s ease;
 }
@@ -334,7 +336,8 @@
 }
 .chats-card__body h4,
 .chats-card__body p,
-.chats-card__body span {
+.chats-card__body span,
+.chats-card__body .h4 {
   line-clamp: 1;
   -webkit-line-clamp: 1;
   display: -webkit-box;
@@ -344,9 +347,11 @@
   word-break: break-all;
   transition: color 0.3s ease;
 }
-.chats-card__body h4 {
+.chats-card__body h4,
+.chats-card__body .h4 {
   font-weight: 600;
   line-height: 113%;
+  font-size: 16px;
 }
 .chats-card__body p,
 .chats-card__body span {
@@ -368,7 +373,8 @@
   justify-content: flex-end;
   gap: 4px;
 }
-.chats-card__props-header time {
+.chats-card__props-header time,
+.chats-card__props-header .time {
   font-size: 12px;
   line-height: 117%;
   transition: color 0.3s ease;
@@ -606,7 +612,8 @@
   margin-left: auto;
   margin-right: 0;
 }
-.chats .dialog__messages-item .props time {
+.chats .dialog__messages-item .props time,
+.chats .dialog__messages-item .props .time {
   font-size: 12px;
   line-height: 117%;
 }
@@ -802,12 +809,14 @@
     font-size: 14px;
   }
 }
-.chats__dialog-vacancy .vacancy-info h5 {
+.chats__dialog-vacancy .vacancy-info h5,
+.chats__dialog-vacancy .vacancy-info .h5 {
   font-size: 14px;
   line-height: 114%;
 }
 @media screen and (min-width: 768px) {
-  .chats__dialog-vacancy .vacancy-info h5 {
+  .chats__dialog-vacancy .vacancy-info h5,
+  .chats__dialog-vacancy .vacancy-info .h5 {
     font-size: 16px;
   }
 }
@@ -923,7 +932,8 @@
   gap: 2px;
   margin: 0;
 }
-.chats__dialog-top .user-info .title h3 {
+.chats__dialog-top .user-info .title h3,
+.chats__dialog-top .user-info .title span {
   font-weight: 500;
   font-size: 14px;
   line-height: 114%;
@@ -936,7 +946,8 @@
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 768px) {
-  .chats__dialog-top .user-info .title h3 {
+  .chats__dialog-top .user-info .title h3,
+  .chats__dialog-top .user-info .title span {
     font-size: 16px;
   }
 }
@@ -1083,6 +1094,11 @@
   .chats .show-all-btn span {
     display: block;
   }
+}
+.delete-approve .h3 {
+  font-weight: 600;
+  font-size: 1.17em;
+  line-height: 114%;
 }
 .delete-approve p:last-of-type {
   padding-top: 20px;

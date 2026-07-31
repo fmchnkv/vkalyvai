@@ -31,7 +31,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -45,7 +45,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -86,7 +86,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -100,7 +100,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -141,7 +141,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -155,7 +155,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -196,7 +196,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -210,7 +210,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -251,7 +251,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -265,7 +265,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -306,7 +306,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_843">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -320,7 +320,7 @@
                                 fill="#999999"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4499_849">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white"></rect>
                             </clipPath>
                         </defs>

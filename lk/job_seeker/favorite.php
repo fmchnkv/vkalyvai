@@ -7,7 +7,7 @@ if (isset($_GET['resume']) && $_GET['resume'] === 'Y') {
 require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php");
 ?>
 
-<section class="lk">
+<div class="lk">
     <div class="container">
         <div class="lk__wrapper">
             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/job_seeker/lk_sidebar.php"); ?>
@@ -16,6 +16,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php");
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php"); ?>

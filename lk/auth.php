@@ -6,7 +6,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 0;
 $pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
 ?>
 
-<section class="auth-section">
+<div class="auth-section">
     <div class="container">
         <div class="auth-section__inner">
             <div class="auth-section__wrapper">
@@ -16,7 +16,7 @@ $pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
                             <path d="M13.9736 5.47071C14.2665 5.17781 14.7413 5.17781 15.0342 5.47071C15.3271 5.7636 15.3271 6.23836 15.0342 6.53125L9.56446 12.001L15.0342 17.4707C15.3271 17.7636 15.3271 18.2384 15.0342 18.5313C14.7413 18.8241 14.2665 18.8241 13.9736 18.5313L7.97364 12.5313C7.68074 12.2384 7.68074 11.7636 7.97364 11.4707L13.9736 5.47071Z" fill="#999999" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_5125_41776">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -57,6 +57,6 @@ $pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
             <? endif; ?>
         </div>
     </div>
-</section>
+</div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/footer_auth.php"); ?>

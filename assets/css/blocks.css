@@ -1358,7 +1358,8 @@
 .files-input-text .file-input-title span {
   color: #FC7827;
 }
-.files-input-text p {
+.files-input-text p,
+.files-input-text > span {
   font-size: 12px;
   line-height: 14px;
   color: #999999;

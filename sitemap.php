@@ -8,7 +8,7 @@
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
-                <span>Карта сайта</span>
+                <span>Карта сайта</span>
             </li>
         </ul>
     </div>
@@ -70,7 +70,7 @@ $arMenu = [
 <div class="sitemap about-section">
     <div class="container">
         <div class="content">
-            <h1 class="title">Карта сайта</h1>
+            <h1 class="title">Карта сайта</h1>
 
             <ul>
                 <? foreach ($arMenu as $url => $title) : ?>

@@ -8,7 +8,7 @@
                         fill="#999999" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_4580_6383">
+                    <clipPath>
                         <rect width="24" height="24" fill="white" />
                     </clipPath>
                 </defs>
@@ -17,7 +17,7 @@
         <div class="modal__content">
             <div class="vacancy">
                 <div class="vacancy__header vacancy-header">
-                    <h1 class="vacancy-header__title">Оператор call-центра со знанием немецкого языка</h1>
+                    <span class="vacancy-header__title">Оператор call-центра со знанием немецкого языка</span>
                     <span class="vacancy-header__sale">от 100 000 ₽</span>
                     <ul class="vacancy-header__tags tags">
                         <li class="tags__item tag">Полная занятость</li>

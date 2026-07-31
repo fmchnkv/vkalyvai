@@ -1,6 +1,6 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
 
-<section class="lk">
+<div class="lk">
     <div class="container">
         <div class="lk__wrapper">
             <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/moderator/lk_sidebar.php"); ?>
@@ -9,6 +9,6 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php"); ?>

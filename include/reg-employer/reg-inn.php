@@ -14,13 +14,13 @@
             <div class="auth-reg__row-item auth-reg__row-item_full">
                 <span class="auth-reg__caption">Юридический адрес</span>
                 <label class="auth-reg__input textarea">
-                    <textarea class="textarea__field" data-auto-resize required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
+                    <textarea class="textarea__field" data-auto-resize required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫй ОКРУГ АПТЕКАРСКИй ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
                 </label>
             </div>
             <div class="auth-reg__row-item auth-reg__row-item_full">
                 <span class="auth-reg__caption">Фактический адрес</span>
                 <label class="auth-reg__input textarea">
-                    <textarea class="textarea__field" data-auto-resize required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫЙ ОКРУГ АПТЕКАРСКИЙ ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
+                    <textarea class="textarea__field" data-auto-resize required>97022, г.Санкт-Петербург, ВНУТРИГОРОДСКАЯ ТЕРРИТОРИЯ ГОРОДА ФЕДЕРАЛЬНОГО ЗНАЧЕНИЯ МУНИЦИПАЛЬНЫй ОКРУГ АПТЕКАРСКИй ОСТРОВ, ПР-КТ МЕДИКОВ, Д. 5, ПОМЕЩ. 7Н, КОМ. 153</textarea>
                 </label>
             </div>
             <div class="auth-reg__row-item">

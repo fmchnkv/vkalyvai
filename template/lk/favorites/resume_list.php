@@ -14,7 +14,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -30,7 +30,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -45,7 +45,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -58,7 +58,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -68,9 +68,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -123,7 +123,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -135,7 +135,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -153,7 +153,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -169,7 +169,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -184,7 +184,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -197,7 +197,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -220,7 +220,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -236,7 +236,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -251,7 +251,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -264,7 +264,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -274,9 +274,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -329,7 +329,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -341,7 +341,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -359,7 +359,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -375,7 +375,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -390,7 +390,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -403,7 +403,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -425,7 +425,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -441,7 +441,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -456,7 +456,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -469,7 +469,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -479,9 +479,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -534,7 +534,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -546,7 +546,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -564,7 +564,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -580,7 +580,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -595,7 +595,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -608,7 +608,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -628,7 +628,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -644,7 +644,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -659,7 +659,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -672,7 +672,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -682,9 +682,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -737,7 +737,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -749,7 +749,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -767,7 +767,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -783,7 +783,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -798,7 +798,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -811,7 +811,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -831,7 +831,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -847,7 +847,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -862,7 +862,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -875,7 +875,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -885,9 +885,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -940,7 +940,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -952,7 +952,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -970,7 +970,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -986,7 +986,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -1001,7 +1001,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -1014,7 +1014,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -1034,7 +1034,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_4026_3544">
+                            <clipPath>
                                 <rect width="48" height="48" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -1050,7 +1050,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -1065,7 +1065,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -1078,7 +1078,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -1088,9 +1088,9 @@ $uri = $_SERVER['REQUEST_URI'];
                 </div>
 
                 <div class="offers-list__header offer-header">
-                    <h3 class="offer-header__title"><a href="/pages/rezume.php"
+                    <p class="offer-header__title"><a href="/pages/rezume.php"
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></h3>
+                            языка</a></p>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -1143,7 +1143,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                             fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8242_5013">
+                                        <clipPath>
                                             <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -1155,7 +1155,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
-                                    <clipPath id="clip0_8005_6994">
+                                    <clipPath>
                                     <rect width="20" height="20" fill="white"/>
                                     </clipPath>
                                     </defs>
@@ -1173,7 +1173,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_1575">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -1189,7 +1189,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4499_849">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -1204,7 +1204,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_7358_23992">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white" />
                                 </clipPath>
                             </defs>
@@ -1217,7 +1217,7 @@ $uri = $_SERVER['REQUEST_URI'];
                                     <path d="M16.0537 3.90137C18.7879 3.90137 21.0039 6.15176 21.0039 9.30176C21.0036 15.6015 14.2539 19.2018 12.0039 20.5518C9.75395 19.2018 3.00419 15.6015 3.00391 9.30176C3.00391 6.15176 5.2541 3.90137 7.9541 3.90137C9.62796 3.90144 11.1039 4.80124 12.0039 5.70117C12.9039 4.80124 14.3799 3.90144 16.0537 3.90137ZM16.0537 5.70117C15.0854 5.70124 14.0377 6.21414 13.2764 6.97363L12.0039 8.24609L10.7314 6.97363C9.9701 6.21414 8.92241 5.70124 7.9541 5.70117C6.2081 5.70117 4.80371 7.19216 4.80371 9.30176C4.80386 11.9512 6.30342 14.2812 8.98438 16.4141C9.65486 16.9469 10.3702 17.4448 11.1631 17.9443C11.4322 18.1144 11.6988 18.2772 12.0039 18.459C12.309 18.2772 12.5756 18.1145 12.8447 17.9453C13.6376 17.4449 14.3529 16.9469 15.0225 16.4141C17.7052 14.2812 19.204 11.9503 19.2041 9.30176C19.2041 7.17776 17.8204 5.70117 16.0537 5.70117Z" fill="#999999" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4499_843">
+                                    <clipPath>
                                         <rect width="24" height="24" fill="white" />
                                     </clipPath>
                                 </defs>

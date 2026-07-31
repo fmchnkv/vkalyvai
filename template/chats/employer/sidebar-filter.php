@@ -2,7 +2,7 @@
     <div class="chats__filters-select select" data-id="recruitment_stage">
         <label class="filter-group__input select__input input input_has-icon">
             <input class="input__field" type="text" name="recruitment_stage" placeholder="Этапы подбора" readonly>
-            <div class="input__icon">
+            <span class="input__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -10,12 +10,12 @@
                             fill="#232323"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4687_14543">
+                        <clipPath>
                             <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </svg>
-            </div>
+            </span>
         </label>
         <div class="select__dropdown">
             <ul class="select__dropdown-list">
@@ -29,7 +29,7 @@
         <label class="filter-group__input multiple-select__input">
             <input class="multiple-select__field" type="text" name="category" placeholder="Все вакансии" readonly="">
             <span class="multiple-select__counter"></span>
-            <div class="multiple-select__icon">
+            <span class="multiple-select__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -37,12 +37,12 @@
                             fill="#232323"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4687_14543">
+                        <clipPath>
                             <rect width="24" height="24" fill="white"></rect>
                         </clipPath>
                     </defs>
                 </svg>
-            </div>
+            </span>
         </label>
         <div class="multiple-select__dropdown">
             <ul class="multiple-select__dropdown-list">
