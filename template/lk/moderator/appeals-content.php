@@ -13,7 +13,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -22,7 +22,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="notify-action transp-btn lk__btn_has-icon">
@@ -34,7 +34,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -50,7 +50,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -59,7 +59,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="notify-action transp-btn lk__btn_has-icon">
@@ -71,7 +71,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -87,7 +87,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -96,7 +96,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="notify-action transp-btn lk__btn_has-icon">
@@ -108,7 +108,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -124,7 +124,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -133,7 +133,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="vacancies-edit transp-btn lk__btn_has-icon">
@@ -145,7 +145,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -161,7 +161,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -170,7 +170,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="notify-action transp-btn lk__btn_has-icon">
@@ -182,7 +182,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -198,7 +198,7 @@
                         <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827"></path>
                     </g>
                     <defs>
-                        <clipPath id="clip0_4026_3544">
+                        <clipPath>
                             <rect width="48" height="48" fill="white"></rect>
                         </clipPath>
                     </defs>
@@ -207,7 +207,7 @@
             <span>Имя пользователя</span>
         </a>
         <div class="notify__item-body">
-            <h3>Заголовок вопроса или жалобы</h3>
+            <span class="h3">Заголовок вопроса или жалобы</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta omnis sed deleniti rerum in officia, est rem corrupti placeat doloremque. Accusamus deserunt ullam, dolores cumque quisquam quibusdam eius rerum?
             Non iusto ipsum, est minus rerum ipsa et suscipit ipsam molestias aut molestiae ut voluptates quidem quod aperiam laboriosam asperiores a tempore cum porro sed placeat! Sint velit quibusdam accusamus?</p>
             <button class="notify-action transp-btn lk__btn_has-icon">
@@ -219,7 +219,7 @@
                             fill="#FC7827" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_7142_9460">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>

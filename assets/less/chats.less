@@ -235,13 +235,13 @@
                 transition: none;
             }
             .chats-card__body {
-                h4, p, span {
+                h4, p, span, .h4 {
                     color: @white !important;
                     transition: color .3s ease;
                 }
             }
             .chats-card__props-header {
-                time {
+                time, .time {
                     color: @white;
                     transition: color .3s ease;
                 }
@@ -280,15 +280,16 @@
             flex-direction: column;
             gap: 2px;
 
-            h4, p, span {
+            h4, p, span, .h4 {
                 .clamp-text(1);
                 word-break: break-all;
                 transition: color .3s ease;
             }
 
-            h4 {
+            h4, .h4 {
                 font-weight: 600;
                 line-height: 113%;
+                font-size: 16px;
             }
 
             p, span {
@@ -313,7 +314,7 @@
                 justify-content: flex-end;
                 gap: 4px;
 
-                time {
+                time, .time {
                     font-size: 12px;
                     line-height: 117%;
                     transition: color .3s ease;
@@ -609,7 +610,7 @@
                     margin-left: auto;
                     margin-right: 0;
 
-                    time {
+                    time, .time {
                         font-size: 12px;
                         line-height: 117%;
                     }
@@ -828,7 +829,7 @@
                         font-size: 14px;
                     });
                 }
-                h5 {
+                h5, .h5 {
                     font-size: 14px;
                     line-height: 114%;
 
@@ -951,7 +952,7 @@
                 gap: 2px;
                 margin: 0;
 
-                h3 {
+                h3, span {
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 114%;
@@ -1131,6 +1132,11 @@
 }
 
 .delete-approve {
+    .h3 {
+        font-weight: 600;
+        font-size: 1.17em;
+        line-height: 114%;
+    }
     p {
         &:last-of-type {
             padding-top: 20px;

@@ -1,7 +1,7 @@
 <div class="chats__dialog-body">
     <div class="dialog__messages">
         <div class="dialog__messages-date">
-            <time datetime="">30 июня</time>
+            <span class="time">30 июня</span>
         </div>
         <div class="dialog__messages-container">
             <div class="dialog__messages-wrapper">
@@ -22,7 +22,7 @@
                             <p>Спасибо за внимание к моей кандидатуре!</p>
                         </div>
                         <div class="props">
-                            <time datetime="">17:01</time>
+                            <span class="time">17:01</span>
                             <div class="message-state">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8003_27634">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" transform="translate(4 4)" />
                                 </clipPath>
                             </defs>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="dialog__messages-date">
-            <time datetime="">Сегодня, 31 июня</time>
+            <span class="time">Сегодня, 31 июня</span>
         </div>
 
         <div class="dialog__messages-container">
@@ -74,7 +74,7 @@
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8003_27643">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" transform="translate(4 4)" />
                                 </clipPath>
                             </defs>
@@ -91,7 +91,7 @@
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8003_27634">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" transform="translate(4 4)" />
                                 </clipPath>
                             </defs>
@@ -105,7 +105,7 @@
                             <img src="/images/dialog_img.png" alt="">
                         </div>
                         <div class="props">
-                            <time datetime="">12:00</time>
+                            <span class="time">12:00</span>
                             <div class="message-state">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@
                                             fill="#FC7827" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_8003_21758">
+                                        <clipPath>
                                             <rect width="12" height="12" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -138,7 +138,7 @@
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8003_27643">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" transform="translate(4 4)" />
                                 </clipPath>
                             </defs>
@@ -155,7 +155,7 @@
                                     fill="#999999" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_8003_27634">
+                                <clipPath>
                                     <rect width="16" height="16" fill="white" transform="translate(4 4)" />
                                 </clipPath>
                             </defs>
@@ -179,7 +179,7 @@
                             <p>Спасибо за внимание к моей кандидатуре!</p>
                         </div>
                         <div class="props">
-                            <time datetime="">17:01</time>
+                            <span class="time">17:01</span>
                             <div class="message-state">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +231,7 @@
             </svg>
         </button>
         <div class="modal__content delete-approve">
-            <h3>Удалить сообщение</h3>
+            <span class="h3">Удалить сообщение</span>
             <div class="txt">
                 <p>Вы уверены, что хотите удалить это сообщение?</p>
                 <p>Это действие нельзя будет отменить.</p>

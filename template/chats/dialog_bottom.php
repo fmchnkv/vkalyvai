@@ -13,7 +13,7 @@
                         fill="#232323" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_8003_30813">
+                    <clipPath>
                         <rect width="20" height="20" fill="white" transform="translate(11 11)" />
                     </clipPath>
                 </defs>
@@ -36,7 +36,7 @@
                             fill="white" />
                     </g>
                     <defs>
-                        <clipPath id="clip0_8003_30827">
+                        <clipPath>
                             <rect width="20" height="20" fill="white" />
                         </clipPath>
                     </defs>
@@ -47,7 +47,7 @@
     </div>
 </div>
 <div data-modal-content="add_files" data-files-type="noname" class="inputs-files-block chats__dialog__modal dialog__inputs-files-block">
-    <form action="">
+    <form action="/">
         <div class="inputs-files-title chats__dialog__inputs-title">
             <span class="subcaption">Прикрепить файл</span>
             <p>Подсказка для любого пользователя какие файлы и для чего можно добавлять в чат</p>
@@ -61,18 +61,18 @@
                         fill="#FC7827" />
                 </g>
                 <defs>
-                    <clipPath id="clip0_7542_2494">
+                    <clipPath>
                         <rect width="40" height="40" fill="white" />
                     </clipPath>
                 </defs>
             </svg>
-            <div class="files-input-text dialog__files-input-text">
-                <div class="file-input-title">
+            <span class="files-input-text dialog__files-input-text">
+                <span class="file-input-title">
                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
-                </div>
-                <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером
-                    не более 10мб.</p>
-            </div>
+                </span>
+                <span>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером
+                    не более 10мб.</span>
+            </span>
         </label>
         <div class="dialog__files-result-wrapper files-result-wrapper"></div>
         <div class="dialog__files-result-noties files-result-noties">
@@ -87,7 +87,7 @@
 </div>
 
 <div data-modal-content="invite" class="dialog__cloise-block chats__dialog__modal">
-    <form action="">
+    <form action="/">
         <div class="chats__dialog__inputs-title">
             <span class="subcaption">Изменить статус резюме</span>
         </div>
@@ -101,7 +101,7 @@
                     <span>Статус</span>
                     <input class="input__field" type="text" name="choise" readonly=""
                         placeholder="">
-                    <div class="input__icon">
+                    <span class="input__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -109,12 +109,12 @@
                                     fill="#232323"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_4687_14543">
+                                <clipPath>
                                     <rect width="24" height="24" fill="white"></rect>
                                 </clipPath>
                             </defs>
                         </svg>
-                    </div>
+                    </span>
                 </label>
 
                 <div class="select__dropdown">
@@ -126,7 +126,7 @@
             </div>
             <div class="choise__textarea-wrapper textarea">
                 <span>Сообщение</span>
-                <textarea name="descr" id="">Текст сообщения генерируется автоматически в зависимости от выбранного статуса. Перед отправкой его можно отредактировать самостоятельно</textarea>
+                <textarea name="descr" >Текст сообщения генерируется автоматически в зависимости от выбранного статуса. Перед отправкой его можно отредактировать самостоятельно</textarea>
             </div>
             <div class="dialog__state-btns chats__dialog__modal-btns">
                 <button type="button" class="btn btn_light btn_size-m cancel-btn" data-close-modal>Отмена</button>

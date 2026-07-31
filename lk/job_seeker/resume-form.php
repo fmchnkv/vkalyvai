@@ -71,7 +71,7 @@
                     <div class="lk__radio-buttons gender-select">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="gender" value="male" checked="">
-                            <span class="radio__label">Мужской</span>
+                            <span class="radio__label">Мужской</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="gender" value="female">
@@ -100,7 +100,7 @@
                                             fill="#FC7827" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_7081_845">
+                                        <clipPath>
                                             <rect width="32" height="32" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -121,7 +121,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2334">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -137,7 +137,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2339">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -183,7 +183,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2334">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -199,7 +199,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2339">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -231,7 +231,7 @@
                                             fill="#FC7827" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_7081_631">
+                                        <clipPath>
                                             <rect width="32" height="32" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -252,7 +252,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2334">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -268,7 +268,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2339">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -300,7 +300,7 @@
                                             fill="#FC7827" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_7081_1003">
+                                        <clipPath>
                                             <rect width="32" height="32" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -321,7 +321,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2334">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -337,7 +337,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2339">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -369,7 +369,7 @@
                                             fill="#FC7827" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_7081_356">
+                                        <clipPath>
                                             <rect width="32" height="32" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -390,7 +390,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2334">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -406,7 +406,7 @@
                                                 fill="#999999" />
                                         </g>
                                         <defs>
-                                            <clipPath id="clip0_7002_2339">
+                                            <clipPath>
                                                 <rect width="24" height="24" fill="white" />
                                             </clipPath>
                                         </defs>
@@ -438,7 +438,7 @@
                                         fill="#FC7827" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_7081_644">
+                                    <clipPath>
                                         <rect width="20" height="20" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -500,18 +500,18 @@
                                         <div class="select big-select" data-id="education">
                                             <label class="filter-group__input select__input input input_has-icon">
                                                 <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Уровень образования">
-                                                <div class="input__icon">
+                                                <span class="input__icon">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <g>
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                                         </g>
                                                         <defs>
-                                                            <clipPath id="clip0_4687_14543">
+                                                            <clipPath>
                                                                 <rect width="24" height="24" fill="white" />
                                                             </clipPath>
                                                         </defs>
                                                     </svg>
-                                                </div>
+                                                </span>
                                             </label>
 
                                             <div class="select__dropdown">
@@ -563,18 +563,18 @@
                                     <div class="select big-select" data-id="education">
                                         <label class="filter-group__input select__input input input_has-icon">
                                             <input class="input__field" type="text" name="education" data-id="education" readonly placeholder="Уровень образования">
-                                            <div class="input__icon">
+                                            <span class="input__icon">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g>
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4736 8.97065C17.7665 8.67775 18.2412 8.67775 18.5341 8.97065C18.827 9.26354 18.827 9.73832 18.5341 10.0312L12.5341 16.0312C12.2595 16.3058 11.8248 16.3232 11.5302 16.083L11.4736 16.0312L5.47358 10.0312C5.18068 9.7383 5.18068 9.26354 5.47358 8.97065C5.76647 8.67775 6.24123 8.67775 6.53412 8.97065L12.0038 14.4404L17.4736 8.97065Z" fill="#232323" />
                                                     </g>
                                                     <defs>
-                                                        <clipPath id="clip0_4687_14543">
+                                                        <clipPath>
                                                             <rect width="24" height="24" fill="white" />
                                                         </clipPath>
                                                     </defs>
                                                 </svg>
-                                            </div>
+                                            </span>
                                         </label>
 
                                         <div class="select__dropdown">
@@ -628,7 +628,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_7081_644">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -722,7 +722,7 @@
                                     fill="#FC7827"></path>
                             </g>
                             <defs>
-                                <clipPath id="clip0_7081_644">
+                                <clipPath>
                                     <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
@@ -756,7 +756,7 @@
                                         fill="#232323" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4827_39596">
+                                    <clipPath>
                                         <rect width="12" height="12" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -773,7 +773,7 @@
                                         fill="#232323" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4827_39596">
+                                    <clipPath>
                                         <rect width="12" height="12" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -790,7 +790,7 @@
                                         fill="#232323" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4827_39596">
+                                    <clipPath>
                                         <rect width="12" height="12" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -807,7 +807,7 @@
                                         fill="#232323" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4827_39596">
+                                    <clipPath>
                                         <rect width="12" height="12" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -824,7 +824,7 @@
                                         fill="#232323" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_4827_39596">
+                                    <clipPath>
                                         <rect width="12" height="12" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -904,7 +904,7 @@
                             <div class="constructor__inputs-set grid-list duties">
                                 <span class="subcaption">Основные обязанности</span>
                                 <div class="constructor__textarea-wrapper textarea">
-                                    <textarea name="descr" id="" placeholder="Описание работы"></textarea>
+                                    <textarea name="descr"  placeholder="Описание работы"></textarea>
                                 </div>
                                 <div class="constructor__hints-wrapper swiper">
                                     <div class="swiper-wrapper">
@@ -961,7 +961,7 @@
                         <div class="constructor__inputs-set grid-list duties">
                             <span class="subcaption">Основные обязанности</span>
                             <div class="constructor__textarea-wrapper textarea">
-                                <textarea name="descr" id="" placeholder="Описание работы"></textarea>
+                                <textarea name="descr"  placeholder="Описание работы"></textarea>
                             </div>
                             <div class="constructor__hints-wrapper swiper">
                                 <div class="swiper-wrapper">
@@ -991,7 +991,7 @@
                                 fill="#FC7827"></path>
                         </g>
                         <defs>
-                            <clipPath id="clip0_7081_644">
+                            <clipPath>
                                 <rect width="20" height="20" fill="white"></rect>
                             </clipPath>
                         </defs>
@@ -1014,7 +1014,7 @@
                     <div class="construstor__inputs-files-block inputs-files-block" data-files-type="portfolio">
                         <div class="constructor__inputs-title inputs-files-title">
                             <span class="subcaption">Портфолио</span>
-                            <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
+                            <span>Вы можете добавить фото или видео, отражающие вашу квалификацию</span>
                         </div>
                         <label class="constructor__files-input-wrapper files-input-wrapper">
                             <input type="file" name="portfolio[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
@@ -1026,17 +1026,17 @@
                                         fill="#FC7827" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_7542_2494">
+                                    <clipPath>
                                         <rect width="40" height="40" fill="white" />
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div class="constructor__files-input-text files-input-text">
-                                <div class="file-input-title">
+                            <span class="constructor__files-input-text files-input-text">
+                                <span class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
-                                </div>
-                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
-                            </div>
+                                </span>
+                                <span>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</span>
+                            </span>
                         </label>
                         <div class="constructor__files-result-wrapper files-result-wrapper"></div>
                         <div class="constructor__files-result-noties files-result-noties">
@@ -1047,7 +1047,7 @@
                     <div class="construstor__inputs-files-block inputs-files-block" data-files-type="certificates">
                         <div class="constructor__inputs-title inputs-files-title">
                             <span class="subcaption">Сертификаты</span>
-                            <p>Вы можете добавить фото или видео, отражающие вашу квалификацию</p>
+                            <span>Вы можете добавить фото или видео, отражающие вашу квалификацию</span>
                         </div>
                         <label class="constructor__files-input-wrapper files-input-wrapper">
                             <input type="file" name="certificates[]" multiple accept="image/png, image/jpeg, image/webp, .pdf, .doc, .docx">
@@ -1059,17 +1059,17 @@
                                         fill="#FC7827" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_7542_2494">
+                                    <clipPath>
                                         <rect width="40" height="40" fill="white" />
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <div class="constructor__files-input-text files-input-text">
-                                <div class="file-input-title">
+                            <span class="constructor__files-input-text files-input-text">
+                                <span class="file-input-title">
                                     <span>Нажмите чтобы загрузить</span> или перетащите файлы
-                                </div>
-                                <p>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</p>
-                            </div>
+                                </span>
+                                <span>Вы можете загрузить до 10 фото в формате PNG, JPG, JPEG, WEBP, PDF, DOC, DOCX общим размером не более 10мб.</span>
+                            </span>
                         </label>
                         <div class="constructor__files-result-wrapper files-result-wrapper"></div>
                         <div class="constructor__files-result-noties files-result-noties">

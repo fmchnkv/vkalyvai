@@ -9,7 +9,7 @@
         </div>
 
         <div class="companies-grid__info">
-            <h3 class="companies-grid__name">Название компании</h3>
+            <span class="companies-grid__name">Название компании</span>
             <span class="companies-grid__counter">99 активных вакансий</span>
         </div>
     </a>

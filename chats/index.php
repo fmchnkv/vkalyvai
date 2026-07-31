@@ -11,16 +11,17 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
 ?>
 <section class="chats">
     <div class="container">
+        <h1 style="display: none">Чаты</h1>
         <div class="chats__wrapper">
             <div class="chats__sidebar">
                 <div class="chats__sidebar-header">
                     <div class="chats__select select" data-id="chats">
                         <label class="filter-group__input select__input input input_has-icon">
-                            <div class="txt">
+                            <span class="txt">
                                 <span><?= $whoIs == 'moderator' ? 'Обращения' : 'Чаты'; ?></span>
                                 <input class="input__field" type="text" name="chats" placeholder="Все" readonly>
-                            </div>
-                            <div class="input__icon">
+                            </span>
+                            <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -29,12 +30,12 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
                                             fill="#232323"></path>
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_4687_14543">
+                                        <clipPath>
                                             <rect width="24" height="24" fill="white"></rect>
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                         <div class="select__dropdown">
                             <ul class="select__dropdown-list">
@@ -73,3 +74,4 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
 <script src="/assets/js/inputmask.min.js"></script>
 <script defer src="/assets/js/slick.min.js"></script>
 <script defer src="/assets/js/main.js?v=<?= time() ?>"></script>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php"); ?>

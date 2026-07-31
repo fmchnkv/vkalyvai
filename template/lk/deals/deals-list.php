@@ -25,7 +25,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -39,7 +39,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -94,7 +94,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -108,7 +108,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -168,7 +168,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -182,7 +182,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -230,7 +230,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -244,7 +244,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -292,7 +292,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -306,7 +306,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -361,7 +361,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8308">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>
@@ -375,7 +375,7 @@ $blockedTooltipText = $isResumeDeals
                                 fill="#C2C2C2" />
                         </g>
                         <defs>
-                            <clipPath id="clip0_7142_8317">
+                            <clipPath>
                                 <rect width="24" height="24" fill="white" />
                             </clipPath>
                         </defs>

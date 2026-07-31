@@ -14,7 +14,7 @@
                     fill="#FC7827" />
             </g>
             <defs>
-                <clipPath id="clip0_7142_9460">
+                <clipPath>
                     <rect width="20" height="20" fill="white" />
                 </clipPath>
             </defs>
@@ -31,7 +31,7 @@
                 fill="#FC7827" />
         </g>
         <defs>
-            <clipPath id="clip0_7142_9460">
+            <clipPath>
                 <rect width="20" height="20" fill="white" />
             </clipPath>
         </defs>

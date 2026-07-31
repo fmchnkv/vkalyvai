@@ -1337,7 +1337,9 @@
 .lk .notify-list__item.viewed::after {
   background-color: #c2c2c2;
 }
-.lk .notify-list__item h3 {
+.lk .notify-list__item h3,
+.lk .notify-list__item .h3 {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -1345,13 +1347,15 @@
   margin-bottom: 12px;
 }
 @media screen and (min-width: 768px) {
-  .lk .notify-list__item h3 {
+  .lk .notify-list__item h3,
+  .lk .notify-list__item .h3 {
     font-size: 18px;
     line-height: 18px;
   }
 }
 @media screen and (min-width: 1441px) {
-  .lk .notify-list__item h3 {
+  .lk .notify-list__item h3,
+  .lk .notify-list__item .h3 {
     font-size: 20px;
     line-height: 20px;
   }
