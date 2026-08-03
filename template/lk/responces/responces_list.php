@@ -22,7 +22,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 1 — непрочитанное, приглашение</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
@@ -52,7 +52,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 2 — непрочитанное, отказ</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
@@ -82,7 +82,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 3 — непрочитанное, приглашение</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
@@ -112,7 +112,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 4 — непрочитанное, отказ</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
@@ -142,7 +142,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 5 — непрочитанное, приглашение</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
@@ -172,7 +172,7 @@
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Название должности ограниченное по символам максимельно в одну строчку</a>
+                <a href="/pages/vacancy.php">Вакансия 6 — непрочитанное, отказ</a>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
