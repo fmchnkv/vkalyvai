@@ -83,7 +83,15 @@
                     </div>
                 </div>
                 <div class="constructor__inputs-set" data-employment-field="shift" hidden>
-                    <span class="subcaption">Укажите количество смен</span>
+                    <span class="subcaption">Продолжительность вахты (в днях)</span>
+                    <div class="constructor__inputs-list">
+                        <div class="lk__input-wrapper">
+                            <input type="text" data-mask="number" name="shifts_count_custom" placeholder="Количество смен" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="constructor__inputs-set" data-employment-field="other" hidden>
+                    <span class="subcaption">Количество смен в месяц</span>
                     <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="15">
@@ -91,32 +99,12 @@
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="30">
-                            <span class="radio__label">30</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="45">
-                            <span class="radio__label">45</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="60">
-                            <span class="radio__label">60</span>
-                        </label>
-                        <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="90">
-                            <span class="radio__label">90</span>
+                            <span class="radio__label">20</span>
                         </label>
                         <label class="lk__input-radio radio">
                             <input class="radio__input" type="radio" name="shifts_count" value="other">
                             <span class="radio__label">Другое</span>
                         </label>
-                    </div>
-                </div>
-                <div class="constructor__inputs-set" data-employment-field="other" hidden>
-                    <span class="subcaption">Количество смен в месяц</span>
-                    <div class="constructor__inputs-list">
-                        <div class="lk__input-wrapper">
-                            <input type="text" data-mask="number" name="shifts_count_custom" placeholder="Количество смен" disabled>
-                        </div>
                     </div>
                 </div>
 

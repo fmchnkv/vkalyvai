@@ -6,7 +6,7 @@
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
+                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — непрочитанный, приглашенный</a>
                     </p>
                     <span>01.06.2695</span>
                 </div>
@@ -123,7 +123,7 @@
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
+                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — непрочитанный, отказ</a>
                     </p>
                     <span>01.06.2695</span>
                 </div>
@@ -322,7 +322,7 @@
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
+                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, приглашенный</a>
                     </p>
                     <span>01.06.2695</span>
                 </div>
@@ -516,7 +516,7 @@
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
+                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, отказ</a>
                     </p>
                     <span>01.06.2695</span>
                 </div>
@@ -710,7 +710,7 @@
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
+                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, отказ 2</a>
                     </p>
                     <span>01.06.2695</span>
                 </div>
