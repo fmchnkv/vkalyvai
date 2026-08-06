@@ -773,9 +773,12 @@
                         </div>
                         <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                             <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="special_marker[]" value="other">
+                                <input class="checkbox__input" type="checkbox" data-other="custom_marker" name="special_marker[]" value="other">
                                 <span class="checkbox__label">Другой параметр</span>
                             </label>
+                        </div>
+                        <div class="lk__input-wrapper custom_marker hidden">
+                            <input type="text" value="" name="custom_marker" placeholder="Введите свой вариант отметки">
                         </div>
                     </div>
                 </div>
