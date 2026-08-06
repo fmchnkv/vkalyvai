@@ -1,3 +1,6 @@
+<? 
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+?>
 <section class="main-hero main-hero--rezumes">
     <div class="container">
         <div class="main-hero__inner">
@@ -8,7 +11,11 @@
             </div>
 
             <div class="main-hero__form-wrapper">
-                <form action="/" method="GET" class="main-hero__form">
+                <form action="/pages/rezumes.php" method="GET" class="main-hero__form">
+                    <? if ($auth && $auth === 'N') : ?>
+                        <input type="hidden" name="client" value="Y">
+                        <input type="hidden" name="auth" value="N">
+                    <? endif; ?>
                     <div class="main-hero__row">
 
                         <div class="main-hero__input-wrapper main-hero__input-wrapper_text">
@@ -130,10 +137,7 @@
                 ?>
             </div>
 
-            <ul class="offers__list offers-list js-list" data-id="rezumes">
-                <? 
-                $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
-                ?>
+            <ul class="offers__list offers-list js-list" data-id="<?= $auth && $auth == 'N' ? 'rezumes_empty' : 'rezumes'; ?>">
                 <? for ($i = 0; $i < 4; $i++) {
                     if ($auth && $auth == 'N') {
                         include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item_empty.php';
@@ -143,14 +147,14 @@
                 } ?>
             </ul>
 
-            <? if ($auth && $auth == 'N') : ?>
+            <?/* if ($auth && $auth == 'N') : ?>
                 
-            <? else : ?>
+            <? else : */?>
                 <div class="offers__nav">
-                    <button class="btn btn_outline btn_size-m js-load" data-id="rezumes">Показать еще&nbsp;<span>4</span></button>
-                    <a href="/pages/rezumes.php" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
+                    <button class="btn btn_outline btn_size-m js-load" data-id="<?= $auth && $auth == 'N' ? 'rezumes_empty' : 'rezumes'; ?>">Показать еще&nbsp;<span>4</span></button>
+                    <a href="/pages/rezumes.php<?= $auth && $auth == 'N' ? '?client=Y&auth=N' : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
                 </div>
-            <? endif; ?>
+            <? // endif; ?>
         </div>
     </div>
 </section>

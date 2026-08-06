@@ -9,11 +9,11 @@
                         fill="#FC7827" />
                 </svg>
                 <div class="lk-bubble__text-wrapper">
-                    <p>Название документа.word</p>
+                    <a href="javascript:void(0)" data-doc="/pravki_04_08.docx" data-call-modal="doc-modal">Название документа.word</a>
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <a href="javascript:void(0)" download="download" class="btn--download btn">
+                <a href="/pravki_04_08.docx" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g>
                             <path
@@ -51,11 +51,11 @@
                         fill="#FC7827" />
                 </svg>
                 <div class="lk-bubble__text-wrapper">
-                    <p>Название документа.word</p>
+                    <a href="javascript:void(0)" data-doc="/pravki_04_08.docx" data-call-modal="doc-modal">Название документа.word</a>
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <a href="javascript:void(0)" download="download" class="btn--download btn">
+                <a href="/pravki_04_08.docx" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g>
                             <path
@@ -93,11 +93,11 @@
                         fill="#FC7827" />
                 </svg>
                 <div class="lk-bubble__text-wrapper">
-                    <p>Название документа.word</p>
+                    <a href="javascript:void(0)" data-doc="/pravki_04_08.docx" data-call-modal="doc-modal">Название документа.word</a>
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <a href="javascript:void(0)" download="download" class="btn--download btn">
+                <a href="/pravki_04_08.docx" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g>
                             <path
@@ -135,11 +135,11 @@
                         fill="#FC7827" />
                 </svg>
                 <div class="lk-bubble__text-wrapper">
-                    <p>Название документа.word</p>
+                    <a href="javascript:void(0)" data-doc="/pravki_04_08.docx" data-call-modal="doc-modal">Название документа.word</a>
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <a href="javascript:void(0)" download="download" class="btn--download btn">
+                <a href="/pravki_04_08.docx" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g>
                             <path
@@ -177,11 +177,11 @@
                         fill="#FC7827" />
                 </svg>
                 <div class="lk-bubble__text-wrapper">
-                    <p>Название документа.word</p>
+                    <a href="javascript:void(0)" data-doc="/pravki_04_08.pdf" data-call-modal="doc-modal">Название документа.pdf</a>
                 </div>
             </div>
             <div class="lk-bubble__buttons-wrapper">
-                <a href="javascript:void(0)" download="download" class="btn--download btn">
+                <a href="/pravki_04_08.pdf" download="download" class="btn--download btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g>
                             <path

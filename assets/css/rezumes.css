@@ -84,7 +84,7 @@
   }
 }
 .offers-list__avatar {
-  margin-right: auto;
+  /*margin-right: auto;*/
   flex: 0 0 auto;
 }
 @media screen and (min-width: 768px) {

@@ -343,7 +343,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
             <div class="detail__sidebar">
                 <div class="detail__actions">
-                    <a href="<?php echo str_contains($uri, 'employer') ? '/lk/employer/index.php' : '/lk/job_seeker/index.php'; ?>" class="detail__btn btn btn_primary btn_size-l">Связаться</a>
+                    <a href="/chats/index.php?client=Y" class="detail__btn btn btn_primary btn_size-l">Связаться</a>
                     <button class="detail__like btn btn_light btn_size-m btn_has-icon"
                         data-call-modal="favorite-comment">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

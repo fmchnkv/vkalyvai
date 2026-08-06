@@ -1,5 +1,5 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<? $auth = isset($_GET['auth']) ? $_GET['auth'] : ''; ?>
 <div class="breadcrumbs">
 	<div class="container">
 		<ul class="breadcrumbs__list">
@@ -161,8 +161,18 @@
 			</div>
 		</div>
 
-		<ul class="catalog__list offers-list js-list" data-id="rezumes">
-			<? for ($i = 0; $i < 6; $i++) { include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php'; } ?>
+		<ul class="catalog__list offers-list js-list" data-id="<?= $auth && $auth == 'N' ? 'rezumes_empty' : 'rezumes'; ?>">
+			<? 
+			if($auth && $auth == 'N') {
+				for ($i = 0; $i < 6; $i++) { 
+					include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item_empty.php'; 
+				}
+			} else {
+				for ($i = 0; $i < 6; $i++) { 
+					include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php';
+				}
+			}
+			?>
 		</ul>
 
 		<div class="scroll-trigger"></div>

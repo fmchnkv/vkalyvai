@@ -804,7 +804,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Если слайдер уже был создан — уничтожаем его
             if (philosophySlider !== undefined) {
                 // true, true означает очистить инлайн-стили Swiper
-                philosophySlider.destroy(true, true); 
+                philosophySlider.destroy(true, true);
             }
             return;
         } else if (breakpoint.matches === false) {
@@ -874,6 +874,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     url = '/ajax/vacancies.php';
                 } else if (id == 'rezumes') {
                     url = '/ajax/rezumes.php';
+                } else if (id == 'rezumes_empty') {
+                    url = '/ajax/rezumes-empty.php';
                 }
 
                 sendAjaxRequest(url, 2, 4, id);
@@ -944,6 +946,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 urlAjax = '/ajax/help.php';
             } else if (id == 'companies') {
                 urlAjax = '/ajax/companies.php';
+            } else if(id == 'rezumes_empty') {
+                urlAjax = '/ajax/rezumes-empty.php';
             }
 
             const response = await fetch(urlAjax, {
@@ -1611,12 +1615,12 @@ document.addEventListener('DOMContentLoaded', () => {
         initFilesDropZone(input);
     });
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const rejectImagesBtn = e.target.closest('.reject-images');
-        if(!rejectImagesBtn) return;
+        if (!rejectImagesBtn) return;
 
         const imagesForm = rejectImagesBtn.closest('form');
-        if(!imagesForm) return;
+        if (!imagesForm) return;
 
         const input = imagesForm.querySelector('input[type="file"]');
         if (!input) return;
@@ -1864,7 +1868,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (showRemoveButton) {
             const removeBtn = document.createElement('button');
-            if(showFakeRemoveButton) {
+            if (showFakeRemoveButton) {
                 removeBtn.setAttribute('data-fake', 'true');
             }
             removeBtn.type = 'button';
@@ -1912,12 +1916,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addMoreBtn(resultWrapper, classes = [], data = false) {
         const button = document.createElement('div');
-        if(classes.length > 0) {
+        if (classes.length > 0) {
             classes.forEach(classCss => {
                 button.classList.add(classCss);
             });
         }
-        if(data) {
+        if (data) {
             button.setAttribute('data-dialog-modal', data);
         }
         button.innerHTML = `<span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2209,14 +2213,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const modal = document.querySelector(`[data-modal-content="${chatsChangeBlockBtn.dataset.dialogModal}"]`);
             if (!modal) return;
 
-            if(chatsChangeBlockBtn.dataset.action) {
+            if (chatsChangeBlockBtn.dataset.action) {
                 document.querySelectorAll('[data-choise]')?.forEach(item => {
                     item.classList.remove('active');
                 })
                 let modalState = modal.querySelector(`[data-choise="${chatsChangeBlockBtn.dataset.action}"]`);
                 let input = modal.querySelector('input');
 
-                if(input && modalState) {
+                if (input && modalState) {
                     modalState.classList.add('active');
                     input.value = modalState.dataset.value;
                 }
@@ -2240,11 +2244,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //смена статуса резюме из чата (ВРЕМЕННОЕ)
     const changeStateBtn = document.querySelector('[data-change-state]');
-    if(changeStateBtn) {
+    if (changeStateBtn) {
         const changeStateForm = changeStateBtn.closest('form');
 
-        if(changeStateForm) {
-            changeStateForm.addEventListener('submit', function(e) {
+        if (changeStateForm) {
+            changeStateForm.addEventListener('submit', function (e) {
                 e.preventDefault();
 
                 const btnsWrapper = document.querySelector('.dialog-btns');
@@ -2321,12 +2325,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const statusSelectInput = statusSelect?.querySelector('.select__input');
                 const closeStatusSelect = statusSelect?.querySelector('[data-close-status-select]');
 
-                statusSelectInput?.addEventListener('click', function(event) {
+                statusSelectInput?.addEventListener('click', function (event) {
                     event.preventDefault();
                     statusSelect.classList.toggle('active');
                 });
 
-                closeStatusSelect?.addEventListener('click', function() {
+                closeStatusSelect?.addEventListener('click', function () {
                     statusSelect.classList.remove('active');
                 });
 
@@ -2343,7 +2347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageSubmitIcon = messageSubmitBtn?.innerHTML;
     let editingMessageWrapper = null;
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const editMessageBtn = e.target.closest('.message-item__button--edit');
 
         if (!editMessageBtn || !messageInput || !messageSubmitBtn) return;
@@ -2367,7 +2371,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageInput.focus();
     })
 
-    messageForm?.addEventListener('submit', function(e) {
+    messageForm?.addEventListener('submit', function (e) {
         if (!editingMessageWrapper || !messageInput || !messageSubmitBtn) return;
 
         e.preventDefault();
@@ -2386,10 +2390,10 @@ document.addEventListener('DOMContentLoaded', () => {
         activeMessageWrapper = null;
     });
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const cancelEditBtn = e.target.closest('.edit-cancel');
 
-        if(cancelEditBtn) {
+        if (cancelEditBtn) {
             messageInput.value = '';
             showEditedMessage();
             resizeAutoHeightField(messageInput);
@@ -2400,8 +2404,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showEditedMessage(text) {
         let editedMessage = document.querySelector('.chats__dialog-edited-message');
-        if(!editedMessage) return;
-        
+        if (!editedMessage) return;
+
         if (text == null || text.trim() === '') {
             editedMessage.innerHTML = '';
             return;
@@ -2445,14 +2449,14 @@ document.addEventListener('DOMContentLoaded', () => {
         field.style.overflowY = hasMaxHeight && field.scrollHeight > maxHeight ? 'auto' : 'hidden';
     }
 
-    document.addEventListener('input', function(e) {
+    document.addEventListener('input', function (e) {
         const field = e.target.closest('[data-auto-resize]');
         if (!field) return;
 
         resizeAutoHeightField(field);
     });
 
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         if (!document.querySelectorAll('.auth-reg__input [data-auto-resize]').length) return;
         document.querySelectorAll('.auth-reg__input [data-auto-resize]').forEach(field => {
             resizeAutoHeightField(field);
@@ -2469,7 +2473,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeMessagesFilter = document.querySelector('[data-messages].active')?.dataset.messages || 'all';
     let activeStateFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const chatsForMessages = e.target.closest('[data-messages]');
         const chatsForState = e.target.closest('[data-filter]');
         const filterItems = document.querySelectorAll('[data-viewed]');
@@ -2633,4 +2637,132 @@ document.addEventListener('DOMContentLoaded', () => {
 
         toggleEmploymentFields();
     }
+
+    /* Документы в модалке */
+    document.addEventListener("click", async (event) => {
+        const button = event.target.closest("[data-doc]");
+
+        if (!button) {
+            return;
+        }
+
+        const fileUrl = button.dataset.doc;
+        const extension = fileUrl
+            .split("?")[0]
+            .split(".")
+            .pop()
+            .toLowerCase();
+
+        const container = document.querySelector("#docx-container");
+
+        if (!container) {
+            return;
+        }
+
+        container.replaceChildren();
+
+        try {
+            if (extension === "pdf") {
+                const pdfjsLib = await import("/assets/js/pdf.mjs");
+
+                pdfjsLib.GlobalWorkerOptions.workerSrc =
+                    "/assets/js/pdf.worker.mjs";
+
+                const pdf = await pdfjsLib.getDocument({
+                    url: fileUrl
+                }).promise;
+
+                const pagesContainer = document.createElement("div");
+                pagesContainer.className = "pdf-pages";
+                container.appendChild(pagesContainer);
+
+                for (
+                    let pageNumber = 1;
+                    pageNumber <= pdf.numPages;
+                    pageNumber++
+                ) {
+                    const page = await pdf.getPage(pageNumber);
+                    const originalViewport = page.getViewport({ scale: 1 });
+
+                    const availableWidth = pagesContainer.clientWidth;
+                    const scale = availableWidth / originalViewport.width;
+                    const pixelRatio = window.devicePixelRatio || 1;
+
+                    const renderViewport = page.getViewport({
+                        scale: scale * pixelRatio
+                    });
+
+                    const canvas = document.createElement("canvas");
+                    const context = canvas.getContext("2d");
+
+                    canvas.width = Math.ceil(renderViewport.width);
+                    canvas.height = Math.ceil(renderViewport.height);
+
+                    canvas.style.width =
+                        `${Math.ceil(originalViewport.width * scale)}px`;
+
+                    canvas.style.height =
+                        `${Math.ceil(originalViewport.height * scale)}px`;
+
+                    pagesContainer.appendChild(canvas);
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: renderViewport
+                    }).promise;
+                }
+
+                return;
+            }
+
+            if (extension === "docx") {
+                const response = await fetch(fileUrl);
+
+                if (!response.ok) {
+                    throw new Error(`Ошибка загрузки: ${response.status}`);
+                }
+
+                const file = await response.blob();
+
+                await docx.renderAsync(file, container, container, {
+                    breakPages: true,
+                    renderHeaders: true,
+                    renderFooters: true,
+                    renderFootnotes: true
+                });
+
+                return;
+            }
+
+            container.textContent = "Предпросмотр этого формата не поддерживается";
+        } catch (error) {
+            console.error("Ошибка предпросмотра документа:", error);
+            container.textContent = "Не удалось открыть документ";
+        }
+    });
+
+    const otherInput = document.querySelector('input[data-other]');
+
+    if(otherInput) {
+        otherInput.addEventListener('change', function() {
+            let inpClass = this.dataset.other;
+            if(inpClass && inpClass !== '') {
+                let dopInput = document.querySelector(`.${inpClass}`);
+
+                if(dopInput) {
+                    dopInput.querySelector('input').value = '';
+                    dopInput.classList.toggle('hidden');
+                }
+            }
+        })
+    }
+
+    /*
+    const noHoverCards = document.querySelectorAll('.no-hover.offers-list__item');
+
+    if(noHoverCards.length) {
+        noHoverCards.forEach(card => {
+            card.style = 'pointer-events: all';
+        })
+    }*/
 });

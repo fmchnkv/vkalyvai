@@ -1364,3 +1364,74 @@
   line-height: 14px;
   color: #999999;
 }
+.auth-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.auth-hero__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.auth-hero__choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.auth-hero__btn {
+  width: 100%;
+  font-size: 18px;
+  line-height: 22px;
+}
+.auth-hero__btn.active {
+  background-color: #FC7827;
+  color: #FFFFFF;
+}
+.auth-hero__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: #999999 !important;
+}
+.auth-hero__link.active {
+  color: #FC7827 !important;
+}
+#docx-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: auto;
+  height: min(80vh, 800px);
+}
+#docx-container .document-preview__pdf {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#docx-container .docx-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+#docx-container .docx-wrapper section.docx {
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+#docx-container .docx-wrapper table,
+#docx-container .docx-wrapper img,
+#docx-container .docx-wrapper div {
+  max-width: 100%;
+}
+#docx-container .docx-wrapper img {
+  object-fit: contain;
+}
