@@ -3640,6 +3640,14 @@ input::placeholder {
 .modal[data-modal="registration"] .modal__wrapper p {
   max-width: 80%;
 }
+.modal[data-modal="registration_2"] .modal__wrapper {
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.modal[data-modal="registration_2"] .modal__wrapper p {
+  max-width: 80%;
+}
 .modal__wrapper {
   position: relative;
   background-color: #FFFFFF;

@@ -19,7 +19,7 @@
                         </svg>
                         <span>Написать</span>
                     </button>
-                    <button class="detail__share btn btn_light btn_size-m btn_has-icon">
+                    <button class="detail__share btn btn_light btn_size-m btn_has-icon js-share-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.7539 4.00098H17.5039V5.50098H16.0039V16.751C16.0039 16.9499 15.9248 17.1406 15.7842 17.2812C15.6435 17.4219 15.4528 17.501 15.2539 17.501H4.75391C4.55499 17.501 4.36429 17.4219 4.22363 17.2812C4.08298 17.1406 4.00391 16.9499 4.00391 16.751V5.50098H2.50391V4.00098H6.25391V2.50098H13.7539V4.00098ZM5.50391 16.001H14.5039V5.50098H5.50391V16.001ZM9.25391 13.751H7.75391V7.75098H9.25391V13.751ZM12.2539 13.751H10.7539V7.75098H12.2539V13.751Z" fill="#F14C4C"/>
                             <defs>

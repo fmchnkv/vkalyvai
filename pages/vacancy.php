@@ -1,5 +1,9 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
 
+<?php 
+$auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
+?>
+
 <div class="breadcrumbs">
     <div class="container">
         <a href="/pages/vacancies.php" class="breadcrumbs__back btn-link">
@@ -83,19 +87,21 @@
                             <li class="tags__item tag tag_size-m">Планирование продаж</li>
                         </ul>
                     </div>
-
-                    <div class="vacancy__cta cta">
-                        <div class="cta__inner">
-                            <img class="cta__bg cta__bg_vacancy" src="/images/cta.png" alt="">
-                            <div class="cta__row">
-                                <div class="cta__top">
-                                    <span class="cta__title">Подходит вам на 80%</span>
-                                    <p class="cta__description">Ваши навыки подходят под требования вакансии на 80%!</p>
+                    
+                    <?php if (!$auth || $auth != 'N') : ?>
+                        <div class="vacancy__cta cta">
+                            <div class="cta__inner">
+                                <img class="cta__bg cta__bg_vacancy" src="/images/cta.png" alt="">
+                                <div class="cta__row">
+                                    <div class="cta__top">
+                                        <span class="cta__title">Подходит вам на 80%</span>
+                                        <p class="cta__description">Ваши навыки подходят под требования вакансии на 80%!</p>
+                                    </div>
+                                    <button class="cta__btn btn btn_secondary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
                                 </div>
-                                <button class="cta__btn btn btn_secondary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
 
                     <div class="vacancy__content content">
                         <span class="subcaption">Описание вакансии</span>
@@ -127,83 +133,89 @@
                     */ ?>
                 </div>
 
-                <div class="feedback" id="feedback">
-                    <div class="feedback__inner">
-                        <span class="feedback__title">Быстрый отклик</span>
-                        <form action="/" class="feedback__form">
-                            <div class="select">
-                                <label class="select__input input_form input input_size-l input_has-icon input_has-avatar">
-                                    <span class="input__avatar avatar">
-                                        <img src="/images/avatar.png" alt="">
-                                    </span>
-                                    <input class="input__field" name="name" type="text" readonly value="" placeholder="Название резюме, 100000Р">
-                                    <span class="input__icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g >
-                                                <path d="M12.0038 3.25098C12.4181 3.25098 12.7538 3.58676 12.7538 4.00098V18.1904L18.4736 12.4707C18.7665 12.1778 19.2412 12.1778 19.5341 12.4707C19.827 12.7636 19.827 13.2384 19.5341 13.5312L12.5341 20.5312C12.2412 20.8241 11.7665 20.8241 11.4736 20.5312L4.47358 13.5312C4.18068 13.2384 4.18068 12.7636 4.47358 12.4707C4.76647 12.1778 5.24123 12.1778 5.53412 12.4707L11.2538 18.1904V4.00098C11.2538 3.58676 11.5896 3.25098 12.0038 3.25098Z" fill="#232323"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath>
-                                                    <rect width="24" height="24" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </label>
-                                <div class="select__dropdown">
-                                    <ul class="select__dropdown-list">
-                                        <li class="select__option active" data-value="Кладовщик, 50000Р">Кладовщик, 50000Р</li>
-                                        <li class="select__option" data-value="Менеджер, 100000Р">Менеджер, 100000Р</li>
-                                        <li class="select__option" data-value="Дизайнер, 150000Р">Дизайнер, 150000Р</li>
+                <?php if (!$auth || $auth != 'N') : ?>
+                    <div class="feedback" id="feedback">
+                        <div class="feedback__inner">
+                            <span class="feedback__title">Быстрый отклик</span>
+                            <form action="/" class="feedback__form">
+                                <div class="select">
+                                    <label class="select__input input_form input input_size-l input_has-icon input_has-avatar">
+                                        <span class="input__avatar avatar">
+                                            <img src="/images/avatar.png" alt="">
+                                        </span>
+                                        <input class="input__field" name="name" type="text" readonly value="" placeholder="Название резюме, 100000Р">
+                                        <span class="input__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g >
+                                                    <path d="M12.0038 3.25098C12.4181 3.25098 12.7538 3.58676 12.7538 4.00098V18.1904L18.4736 12.4707C18.7665 12.1778 19.2412 12.1778 19.5341 12.4707C19.827 12.7636 19.827 13.2384 19.5341 13.5312L12.5341 20.5312C12.2412 20.8241 11.7665 20.8241 11.4736 20.5312L4.47358 13.5312C4.18068 13.2384 4.18068 12.7636 4.47358 12.4707C4.76647 12.1778 5.24123 12.1778 5.53412 12.4707L11.2538 18.1904V4.00098C11.2538 3.58676 11.5896 3.25098 12.0038 3.25098Z" fill="#232323"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="24" height="24" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <div class="select__dropdown">
+                                        <ul class="select__dropdown-list">
+                                            <li class="select__option active" data-value="Кладовщик, 50000Р">Кладовщик, 50000Р</li>
+                                            <li class="select__option" data-value="Менеджер, 100000Р">Менеджер, 100000Р</li>
+                                            <li class="select__option" data-value="Дизайнер, 150000Р">Дизайнер, 150000Р</li>
+                                        </ul>
+                                    </div>
+                                </div>
+        
+                                <div class="textarea">
+                                    <textarea name="textarea" placeholder="Расскажите коротко о себе, задайте вопросы или используйте готовые ниже..."></textarea>
+                                    <ul class="textarea__choices tags">
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как происходят выплаты?">Как происходят выплаты?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно без опыта?">Можно без опыта?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Получится совмещать?">Получится совмещать?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть корпоративный транспорт?">Есть корпоративный транспорт?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как до вас добраться?">Как до вас добраться?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Где территориально находится?">Где территориально находится?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть ночные смены?">Есть ночные смены?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно работать только по выходным?">Можно работать только по выходным?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Какой график работы?">Какой график работы?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Предоставляется ли жилье?">Предоставляется ли жилье?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Питание бесплатное?">Питание бесплатное?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Выдаете ли вы рабочую форму?">Выдаете ли вы рабочую форму?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Нужна ли медкнижка?">Нужна ли медкнижка?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно устроиться как самозанятый?">Можно устроиться как самозанятый?</li>
+                                        <li class="tags__item tag tag_btn js-textarea-choice" data-value="Когда можно выходить на смену?">Когда можно выходить на смену?</li>
                                     </ul>
                                 </div>
-                            </div>
-    
-                            <div class="textarea">
-                                <textarea name="textarea" placeholder="Расскажите коротко о себе, задайте вопросы или используйте готовые ниже..."></textarea>
-                                <ul class="textarea__choices tags">
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как происходят выплаты?">Как происходят выплаты?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно без опыта?">Можно без опыта?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Получится совмещать?">Получится совмещать?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть корпоративный транспорт?">Есть корпоративный транспорт?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Как до вас добраться?">Как до вас добраться?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Где территориально находится?">Где территориально находится?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Есть ночные смены?">Есть ночные смены?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно работать только по выходным?">Можно работать только по выходным?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Какой график работы?">Какой график работы?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Предоставляется ли жилье?">Предоставляется ли жилье?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Питание бесплатное?">Питание бесплатное?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Выдаете ли вы рабочую форму?">Выдаете ли вы рабочую форму?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Нужна ли медкнижка?">Нужна ли медкнижка?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Можно устроиться как самозанятый?">Можно устроиться как самозанятый?</li>
-                                    <li class="tags__item tag tag_btn js-textarea-choice" data-value="Когда можно выходить на смену?">Когда можно выходить на смену?</li>
-                                </ul>
-                            </div>
-    
-                            <button class="feedback__btn btn btn_primary btn_size-m">Откликнуться</button>
-                        </form>
+        
+                                <button class="feedback__btn btn btn_primary btn_size-m">Откликнуться</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
 
             <div class="detail__sidebar">
                 <div class="detail__actions">
-                    <button class="detail__btn btn btn_primary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
-                    <button class="detail__like btn btn_light btn_size-m btn_has-icon"
-                        data-call-modal="favorite-comment">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g >
-                                <path d="M13.3789 3.25098C15.6573 3.25098 17.5038 5.12615 17.5039 7.75098C17.5039 13.0008 11.879 16.0009 10.0039 17.126C8.12876 16.0009 2.50391 13.0008 2.50391 7.75098C2.50406 5.12615 4.379 3.25098 6.62891 3.25098C8.02381 3.25098 9.25389 4.00103 10.0039 4.75098C10.7539 4.00103 11.984 3.25098 13.3789 3.25098ZM13.3789 4.75098C12.572 4.75098 11.6989 5.17861 11.0645 5.81152L10.0039 6.87207L8.94336 5.81152C8.30887 5.17861 7.43584 4.75098 6.62891 4.75098C5.174 4.75098 4.00405 5.99315 4.00391 7.75098C4.00391 9.95893 5.25314 11.9012 7.4873 13.6787C8.04605 14.1227 8.64296 14.5369 9.30371 14.9531C9.52795 15.0949 9.74967 15.2313 10.0039 15.3828C10.2581 15.2313 10.4799 15.0951 10.7041 14.9541C11.3649 14.5371 11.9615 14.1227 12.5195 13.6787C14.7553 11.9012 16.0039 9.95823 16.0039 7.75098C16.0038 5.98115 14.8511 4.75098 13.3789 4.75098Z" fill="#FC7827" />
-                            </g>
-                            <defs>
-                                <clipPath>
-                                    <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <span>В избранное</span>
-                    </button>
-                    <button class="detail__share btn btn_light btn_size-m btn_has-icon">
+                    <?php if ($auth && $auth == 'N') : ?>
+                        <button class="detail__btn btn btn_primary btn_size-l" data-call-modal="registration_2">Откликнуться</button>
+                    <?php else : ?>
+                        <button class="detail__btn btn btn_primary btn_size-l js-anchor-feedback" data-id="feedback">Откликнуться</button>
+                        <button class="detail__like btn btn_light btn_size-m btn_has-icon"
+                            data-call-modal="favorite-comment">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g >
+                                    <path d="M13.3789 3.25098C15.6573 3.25098 17.5038 5.12615 17.5039 7.75098C17.5039 13.0008 11.879 16.0009 10.0039 17.126C8.12876 16.0009 2.50391 13.0008 2.50391 7.75098C2.50406 5.12615 4.379 3.25098 6.62891 3.25098C8.02381 3.25098 9.25389 4.00103 10.0039 4.75098C10.7539 4.00103 11.984 3.25098 13.3789 3.25098ZM13.3789 4.75098C12.572 4.75098 11.6989 5.17861 11.0645 5.81152L10.0039 6.87207L8.94336 5.81152C8.30887 5.17861 7.43584 4.75098 6.62891 4.75098C5.174 4.75098 4.00405 5.99315 4.00391 7.75098C4.00391 9.95893 5.25314 11.9012 7.4873 13.6787C8.04605 14.1227 8.64296 14.5369 9.30371 14.9531C9.52795 15.0949 9.74967 15.2313 10.0039 15.3828C10.2581 15.2313 10.4799 15.0951 10.7041 14.9541C11.3649 14.5371 11.9615 14.1227 12.5195 13.6787C14.7553 11.9012 16.0039 9.95823 16.0039 7.75098C16.0038 5.98115 14.8511 4.75098 13.3789 4.75098Z" fill="#FC7827" />
+                                </g>
+                                <defs>
+                                    <clipPath>
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>В избранное</span>
+                        </button>
+                    <?php endif; ?>
+                    <button class="detail__share btn btn_light btn_size-m btn_has-icon js-share-btn">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M12.6582 2.70603C13.3378 2.43957 14.0912 2.43052 14.7773 2.67966C15.4635 2.92894 16.0356 3.41992 16.3857 4.06052C16.7359 4.70125 16.8405 5.44791 16.6797 6.16013C16.5189 6.87225 16.1041 7.50159 15.5127 7.92966C14.9212 8.35769 14.1935 8.55509 13.4668 8.48533C12.7402 8.41551 12.0636 8.08339 11.5645 7.55076L8.41406 9.26755C8.53496 9.74857 8.53496 10.2524 8.41406 10.7334L11.5635 12.4511C12.0627 11.9183 12.739 11.5854 13.4658 11.5156C14.1926 11.4458 14.9202 11.6432 15.5117 12.0713C16.1032 12.4993 16.5178 13.1286 16.6787 13.8408C16.8396 14.553 16.7358 15.2997 16.3857 15.9404C16.0357 16.5811 15.4635 17.0719 14.7773 17.3213C14.091 17.5706 13.337 17.5615 12.6572 17.2949C11.9775 17.0283 11.4188 16.5224 11.085 15.873C10.7513 15.2238 10.6651 14.4753 10.8438 13.7676L7.69434 12.0508C7.28335 12.4899 6.74988 12.7955 6.16309 12.9277C5.5759 13.0599 4.96217 13.012 4.40234 12.791C3.84254 12.57 3.36197 12.1861 3.02344 11.6885C2.68489 11.1908 2.50391 10.6028 2.50391 10.001C2.50391 9.39908 2.68489 8.81108 3.02344 8.31345C3.36197 7.81584 3.84254 7.43193 4.40234 7.21091C4.96217 6.98989 5.5759 6.94204 6.16309 7.07419C6.74988 7.20636 7.28335 7.51196 7.69434 7.95115L10.8447 6.23435C10.6659 5.52647 10.7512 4.77728 11.085 4.1279C11.4188 3.47849 11.9784 2.97264 12.6582 2.70603ZM13.7539 13.001C13.3562 13.001 12.9746 13.1583 12.6934 13.4394C12.4121 13.7207 12.2539 14.1031 12.2539 14.501C12.254 14.8986 12.4121 15.2803 12.6934 15.5615C12.9746 15.8427 13.3562 16.0009 13.7539 16.001C14.1516 16.001 14.5332 15.8426 14.8145 15.5615C15.0957 15.2803 15.2538 14.8986 15.2539 14.501C15.2539 14.1031 15.0958 13.7207 14.8145 13.4394C14.5332 13.1584 14.1516 13.001 13.7539 13.001ZM5.50391 8.50095C5.10624 8.50099 4.72461 8.6583 4.44336 8.93943C4.16205 9.22073 4.00391 9.60313 4.00391 10.001C4.00401 10.3986 4.16214 10.7803 4.44336 11.0615C4.72462 11.3427 5.10619 11.5009 5.50391 11.501C5.90161 11.501 6.28317 11.3426 6.56445 11.0615C6.84567 10.7803 7.00381 10.3986 7.00391 10.001C7.00391 9.60313 6.84576 9.22073 6.56445 8.93943C6.28318 8.65836 5.90155 8.50095 5.50391 8.50095ZM13.7539 4.00095C13.3562 4.00099 12.9746 4.1583 12.6934 4.43943C12.4121 4.72073 12.2539 5.10313 12.2539 5.50095C12.254 5.89864 12.4121 6.28028 12.6934 6.5615C12.9746 6.8427 13.3562 7.00091 13.7539 7.00095C14.1516 7.00095 14.5332 6.84264 14.8145 6.5615C15.0957 6.28028 15.2538 5.89864 15.2539 5.50095C15.2539 5.10313 15.0958 4.72073 14.8145 4.43943C14.5332 4.15836 14.1516 4.00095 13.7539 4.00095Z" fill="#FC7827" />

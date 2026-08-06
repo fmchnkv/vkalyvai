@@ -1,3 +1,6 @@
+<?php 
+$auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
+?>
 <section class="main-hero">
     <div class="container">
         <div class="main-hero__inner">
@@ -8,7 +11,10 @@
             </div>
 
             <div class="main-hero__form-wrapper">
-                <form action="/" method="GET" class="main-hero__form">
+                <form action="/pages/vacancies.php" method="GET" class="main-hero__form">
+                    <?php if ($auth && $auth == 'N') : ?>
+                        <input type="hidden" name="auth" value="N">
+                    <?php endif; ?>
                     <div class="main-hero__row">
 
                         <div class="main-hero__input-wrapper main-hero__input-wrapper_text">
@@ -143,7 +149,11 @@
 
             <ul class="offers__list offers-grid js-list" data-id="vacancies">
                 <? for ($i = 0; $i < 4; $i++) {
-                    include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item.php';
+                    if ($auth && $auth == 'N') {                  
+                        include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item_empty.php';
+                    }  else {
+                        include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item.php';
+                    }
                 } ?>
             </ul>
 
