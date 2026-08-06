@@ -308,7 +308,7 @@
                             </svg>
                         </div>
                         <div class="company-info-grid__content">
-                            <span class="company-info-grid__title">Москва, Московская область</span>
+                            <span class="company-info-grid__title" data-tippy-content="Москва, Московская область">Москва, Московская область</span>
                             <span class="company-info-grid__subtitle">город</span>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
 
                         </div>
                         <div class="company-info-grid__content">
-                            <span class="company-info-grid__title">Медицинская клиника</span>
+                            <span class="company-info-grid__title" data-tippy-content="Медицинская клиника">Медицинская клиника</span>
                             <span class="company-info-grid__subtitle">cфера деятельности</span>
                         </div>
                     </div>
@@ -365,7 +365,7 @@
 
                         </div>
                         <div class="company-info-grid__content">
-                            <span class="company-info-grid__title">https://blueberry-digital.ru/</span>
+                            <a href="#" class="company-info-grid__title link_color" target="_blank" data-tippy-content="https://blueberry-digital.ru/">https://blueberry-digital.ru/</a>
                             <span class="company-info-grid__subtitle">сайт</span>
                         </div>
                     </div>

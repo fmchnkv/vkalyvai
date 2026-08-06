@@ -2782,4 +2782,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    if (document.querySelector('[data-tippy-content]')) {
+        tippy('[data-tippy-content]', {
+            content: '[data-tippy-content]',
+            arrow: false,
+        });
+    }
 });
