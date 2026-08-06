@@ -74,4 +74,8 @@ if (isset($_GET['client']) && $_GET['client'] == 'Y') {
 <script src="/assets/js/inputmask.min.js"></script>
 <script defer src="/assets/js/slick.min.js"></script>
 <script defer src="/assets/js/main.js?v=<?= time() ?>"></script>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php"); ?>
+<div class="overlay"></div>
+</div>
+</body>
+
+</html>

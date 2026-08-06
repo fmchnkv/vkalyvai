@@ -2122,6 +2122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const backBtn = e.target.closest('.chats__dialog-back');
         if (!backBtn) return;
 
+
         document.querySelector('.chats')?.classList?.remove('is-open');
     })
 
