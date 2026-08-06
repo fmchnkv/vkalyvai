@@ -957,6 +957,10 @@
     </div>
 </div>
 
+<div class="share-modal">
+    <p class="share-modal__text">Ссылка скопирована в&nbsp;буфер обмена</p>
+</div>
+
 <!-- превью резюме и вакансий -->
 <? require($_SERVER["DOCUMENT_ROOT"]."/lk/modals/previews/resume-preview.php"); ?>
 <? require($_SERVER["DOCUMENT_ROOT"]."/lk/modals/previews/vacancy-preview.php"); ?>

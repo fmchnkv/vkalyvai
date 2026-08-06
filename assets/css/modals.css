@@ -164,3 +164,30 @@
     line-height: 22px;
   }
 }
+.share-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 16px;
+  text-align: center;
+  max-width: 200px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  z-index: 100;
+  border: 1px solid #FC7827;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.share-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.share-modal__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FC7827;
+}

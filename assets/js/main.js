@@ -2765,4 +2765,21 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style = 'pointer-events: all';
         })
     }*/
+
+    const shareModalBtns = document.querySelectorAll('.js-share-btn');
+
+    if (shareModalBtns.length) {
+        shareModalBtns.forEach(shareModalBtn => {
+            shareModalBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // copy link
+                const link = shareModalBtn.dataset.link;
+                navigator.clipboard.writeText(link);
+                document.querySelector('.share-modal').classList.add('active');
+                setTimeout(() => {
+                    document.querySelector('.share-modal').classList.remove('active');
+                }, 2000);
+            });
+        });
+    }
 });
