@@ -69,6 +69,31 @@
     grid-template-columns: 25% minmax(0, 1fr);
   }
 }
+.chats__wrapper-outer {
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .chats__wrapper-outer {
+    display: grid;
+    grid-template-columns: 216px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .chats__wrapper-outer {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+.chats__menu-sidebar {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .chats__menu-sidebar {
+    display: block;
+    margin-top: 8px;
+    min-height: 0;
+  }
+}
 .chats__sidebar {
   display: flex;
   flex-direction: column;

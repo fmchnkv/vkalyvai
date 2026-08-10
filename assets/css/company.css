@@ -70,12 +70,7 @@
   }
 }
 .company-info-grid__title {
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
 }
 .company-info-grid__subtitle {
   font-size: 14px;
@@ -111,12 +106,7 @@
 }
 @media screen and (max-width: 1023px) {
   .company-info-grid__title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    word-break: break-all;
+    word-break: break-word;
   }
 }
 .company-info-grid__subtitle {
