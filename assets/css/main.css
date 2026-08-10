@@ -1343,7 +1343,7 @@
   }
 }
 .portfolio-slider .swiper-slide a {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
   border-radius: 32px;
@@ -1363,6 +1363,36 @@
   .portfolio-slider .slider-button {
     display: flex;
   }
+}
+.portfolio-slider__preview-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FC7827;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+}
+.portfolio-slider__preview-file svg {
+  width: 48px;
+  height: 48px;
+}
+.portfolio-slider__preview-file span {
+  padding: 0 24px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  font-weight: 400;
 }
 .sertificates-slider {
   overflow: visible;
@@ -2048,6 +2078,16 @@ input::placeholder {
 }
 .link_underline:hover {
   border-bottom: 1px solid #FC7827;
+}
+.link_color {
+  border-bottom: none;
+}
+.link_color:hover {
+  border-bottom: none;
+  color: #FC7827;
+}
+.link_primary {
+  color: #FC7827;
 }
 .icon-link {
   display: flex;
@@ -3640,6 +3680,14 @@ input::placeholder {
 .modal[data-modal="registration"] .modal__wrapper p {
   max-width: 80%;
 }
+.modal[data-modal="registration_2"] .modal__wrapper {
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.modal[data-modal="registration_2"] .modal__wrapper p {
+  max-width: 80%;
+}
 .modal__wrapper {
   position: relative;
   background-color: #FFFFFF;
@@ -3729,6 +3777,33 @@ input::placeholder {
     font-size: 18px;
     line-height: 22px;
   }
+}
+.share-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 16px;
+  text-align: center;
+  max-width: 200px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  z-index: 100;
+  border: 1px solid #FC7827;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.share-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.share-modal__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FC7827;
 }
 .header {
   position: fixed;
@@ -4854,4 +4929,8 @@ img {
     font-size: 40px;
     line-height: 40px;
   }
+}
+#docx-container iframe {
+  width: 100%;
+  height: 99%;
 }

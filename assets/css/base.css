@@ -158,6 +158,16 @@ input::placeholder {
 .link_underline:hover {
   border-bottom: 1px solid #FC7827;
 }
+.link_color {
+  border-bottom: none;
+}
+.link_color:hover {
+  border-bottom: none;
+  color: #FC7827;
+}
+.link_primary {
+  color: #FC7827;
+}
 .icon-link {
   display: flex;
   align-items: center;

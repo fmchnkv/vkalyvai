@@ -1,5 +1,7 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<?php 
+$auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
+?>
 <div class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__list">
@@ -269,7 +271,11 @@
 
         <ul class="catalog__list offers-grid js-list" data-id="vacancies">
             <? for ($i = 0; $i < 4; $i++) {
-                include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item.php';
+                if ($auth && $auth == 'N') {                  
+                    include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item_empty.php';
+                }  else {
+                    include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item.php';
+                }
             } ?>
         </ul>
 

@@ -31,18 +31,11 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/lk/job_seeker/notify.php',
-        'label' => 'Уведомления',
-        'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                <path d="M11.8789 16.751C11.8789 17.2483 11.6817 17.7255 11.3301 18.0771C10.9784 18.4288 10.5012 18.626 10.0039 18.626C9.50663 18.626 9.02937 18.4288 8.67773 18.0771C8.3261 17.7255 8.12891 17.2483 8.12891 16.751H11.8789ZM10.0039 2.50098C13.7314 2.50098 16.7539 5.53341 16.7539 9.27441V14.501H17.5039V16.001H2.50391V14.501H3.25391V9.27441C3.25391 5.53341 6.27641 2.50098 10.0039 2.50098Z" fill="#FC7827"/>
-                </g>
-                <defs>
-                <clipPath>
-                <rect width="20" height="20" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>',
+        'href' => '/chats/index.php',
+        'label' => 'Чаты',
+        'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.76191 19.9416L3.00001 21L4.05841 16.2381C3.36139 14.9343 2.99778 13.4784 3.00001 12C3.00001 7.0293 7.02931 3 12 3C16.9707 3 21 7.0293 21 12C21 16.9707 16.9707 21 12 21C10.5216 21.0022 9.06567 20.6386 7.76191 19.9416Z" fill="#FC7827"/>
+                </svg>',
     ],
     [
         'href' => '/lk/job_seeker/responces.php',
@@ -71,7 +64,21 @@ $lkSidebarItems = [
                 </clipPath>
                 </defs>
             </svg>',
-    ]
+    ],
+    [
+        'href' => '/lk/job_seeker/notify.php',
+        'label' => 'Уведомления',
+        'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M11.8789 16.751C11.8789 17.2483 11.6817 17.7255 11.3301 18.0771C10.9784 18.4288 10.5012 18.626 10.0039 18.626C9.50663 18.626 9.02937 18.4288 8.67773 18.0771C8.3261 17.7255 8.12891 17.2483 8.12891 16.751H11.8789ZM10.0039 2.50098C13.7314 2.50098 16.7539 5.53341 16.7539 9.27441V14.501H17.5039V16.001H2.50391V14.501H3.25391V9.27441C3.25391 5.53341 6.27641 2.50098 10.0039 2.50098Z" fill="#FC7827"/>
+                </g>
+                <defs>
+                <clipPath>
+                <rect width="20" height="20" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>',
+    ],
 ];
 ?>
 
@@ -79,7 +86,7 @@ $lkSidebarItems = [
     <ul>
         <?php foreach ($lkSidebarItems as $item): ?>
             <?php $isActive = $currentPath === $item['href']; ?>
-            <li<?= $isActive ? ' class="active"' : '' ?>>
+            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] == '/lk/job_seeker/favorite.php' ? '/lk/job_seeker/favorite.php?vacancies=Y' : $item['href'] ?>'">
                 <?= $item['icon'] ?>
                 <a href="<?= $item['href'] == '/lk/job_seeker/favorite.php' ? '/lk/job_seeker/favorite.php?vacancies=Y' : $item['href'] ?>"><?= $item['label'] ?></a>
             </li>

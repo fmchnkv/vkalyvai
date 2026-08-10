@@ -41,6 +41,18 @@
         }
     }
 
+    &[data-modal="registration_2"] {
+        .modal__wrapper {
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+
+            p {
+                max-width: 80%;
+            }
+        }
+    }
+
     &__wrapper {
         position: relative;
         background-color: @white;
@@ -138,5 +150,36 @@
             font-size: @f-body-m;
             line-height: @lh-body-m;
         });
+    }
+}
+
+.share-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px;
+    text-align: center;
+    max-width: 200px;
+    background-color: @white;
+    border-radius: 16px;
+    z-index: 100;
+    border: 1px solid @primary;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility;
+    .transition-ext(.3s, ease-in-out);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: @f-body-s;
+        line-height: @lh-body-s;
+        color: @primary;
     }
 }

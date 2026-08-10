@@ -2122,6 +2122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const backBtn = e.target.closest('.chats__dialog-back');
         if (!backBtn) return;
 
+
         document.querySelector('.chats')?.classList?.remove('is-open');
     })
 
@@ -2640,11 +2641,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Документы в модалке */
     document.addEventListener("click", async (event) => {
-        const button = event.target.closest("[data-doc]");
+        let button = event.target.closest("[data-doc]");
 
         if (!button) {
             return;
         }
+
+        event.preventDefault();
+
 
         const fileUrl = button.dataset.doc;
         const extension = fileUrl
@@ -2659,11 +2663,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const modal = container.closest(".modal");
+
         container.replaceChildren();
 
+        modal.classList.add("active");
+
         try {
-            if (extension === "pdf") {
+            if (extension === "pdf1") {
                 const pdfjsLib = await import("/assets/js/pdf.mjs");
+
+                console.log(pdfjsLib);
 
                 pdfjsLib.GlobalWorkerOptions.workerSrc =
                     "/assets/js/pdf.worker.mjs";
@@ -2711,6 +2721,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         viewport: renderViewport
                     }).promise;
                 }
+
+                return;
+            }
+
+            if (extension === "pdf") {
+                const iframeElement = document.createElement("iframe");
+                iframeElement.src = fileUrl;
+                container.appendChild(iframeElement);
 
                 return;
             }
@@ -2765,4 +2783,28 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style = 'pointer-events: all';
         })
     }*/
+
+    const shareModalBtns = document.querySelectorAll('.js-share-btn');
+
+    if (shareModalBtns.length) {
+        shareModalBtns.forEach(shareModalBtn => {
+            shareModalBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // copy link
+                const link = shareModalBtn.dataset.link;
+                navigator.clipboard.writeText(link);
+                document.querySelector('.share-modal').classList.add('active');
+                setTimeout(() => {
+                    document.querySelector('.share-modal').classList.remove('active');
+                }, 2000);
+            });
+        });
+    }
+
+    if (document.querySelector('[data-tippy-content]')) {
+        tippy('[data-tippy-content]', {
+            content: '[data-tippy-content]',
+            arrow: false,
+        });
+    }
 });
