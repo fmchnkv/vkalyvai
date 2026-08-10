@@ -72,9 +72,9 @@ $lkSidebarItems = [
     <ul>
         <?php foreach ($lkSidebarItems as $item): ?>
             <?php $isActive = $currentPath === $item['href']; ?>
-            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] ?>'">
+            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] == '/chats/index.php' ? '/chats/index.php?moderator=Y' : $item['href'] ?>'">
                 <?= $item['icon'] ?>
-                <a href="<?= $item['href'] ?>"><?= $item['label'] ?></a>
+                <a href="<?= $item['href'] == '/chats/index.php' ? '/chats/index.php?moderator=Y' : $item['href'] ?>"><?= $item['label'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

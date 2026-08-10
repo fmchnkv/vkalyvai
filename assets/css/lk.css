@@ -1977,6 +1977,7 @@
 .lk .docs-bubbles .lk-bubble {
   gap: 8px;
   padding: 13px 16px;
+  cursor: pointer;
 }
 .lk .docs-bubbles .lk-bubble__content {
   gap: 8px;

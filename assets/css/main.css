@@ -3316,6 +3316,9 @@ input::placeholder {
   padding: 12px 24px;
   font-size: 18px;
 }
+.file-input input {
+  display: none;
+}
 .inline-form {
   display: flex;
   background-color: #F5F5F5;

@@ -2642,8 +2642,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Документы в модалке */
     document.addEventListener("click", async (event) => {
         let button = event.target.closest("[data-doc]");
+        let downloadButton = event.target.closest(".btn--download") || event.target.closest(".btn--delete");
 
-        if (!button) {
+        if (!button || downloadButton) {
             return;
         }
 
@@ -2805,6 +2806,23 @@ document.addEventListener('DOMContentLoaded', () => {
         tippy('[data-tippy-content]', {
             content: '[data-tippy-content]',
             arrow: false,
+        });
+    }
+
+    const removeActionBtn = document.querySelector('.js-action-remove');
+
+    if(removeActionBtn) {
+        removeActionBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.target.closest('.modal').classList.remove('active');
+        });
+    }
+
+    const fileInput = document.querySelector('.js-file-input');
+
+    if (fileInput) {
+        fileInput.addEventListener('change', (e) => {
+            e.target.closest('.modal').classList.remove('active');
         });
     }
 });
