@@ -27,14 +27,18 @@
         .media-min(1024px, {
             overflow: hidden;
             display: grid;
-            grid-template-columns: 30% minmax(0, 1fr);
+            grid-template-columns: 40% minmax(0, 1fr);
             border: 1px solid @border-neutral;
             margin-top: 8px;
             border-radius: 20px;
         });
 
+        .media-min(1180px, {
+            grid-template-columns: 35% minmax(0, 1fr);
+        });
+
         .media-min(1441px, {
-            grid-template-columns: 25% minmax(0, 1fr);
+            grid-template-columns: 35% minmax(0, 1fr);
         });
 
         &-outer {
@@ -228,6 +232,7 @@
         padding: 12px 0;
         position: relative;
         display: block;
+        cursor: pointer;
 
 
         &:not(:last-of-type) {
