@@ -2641,11 +2641,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Документы в модалке */
     document.addEventListener("click", async (event) => {
-        const button = event.target.closest("[data-doc]");
+        let button = event.target.closest("[data-doc]");
 
         if (!button) {
             return;
         }
+
+        event.preventDefault();
+
 
         const fileUrl = button.dataset.doc;
         const extension = fileUrl
@@ -2660,11 +2663,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const modal = container.closest(".modal");
+
         container.replaceChildren();
 
+        modal.classList.add("active");
+
         try {
-            if (extension === "pdf") {
+            if (extension === "pdf1") {
                 const pdfjsLib = await import("/assets/js/pdf.mjs");
+
+                console.log(pdfjsLib);
 
                 pdfjsLib.GlobalWorkerOptions.workerSrc =
                     "/assets/js/pdf.worker.mjs";
@@ -2712,6 +2721,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         viewport: renderViewport
                     }).promise;
                 }
+
+                return;
+            }
+
+            if (extension === "pdf") {
+                const iframeElement = document.createElement("iframe");
+                iframeElement.src = fileUrl;
+                container.appendChild(iframeElement);
 
                 return;
             }

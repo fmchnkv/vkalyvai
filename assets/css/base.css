@@ -165,6 +165,9 @@ input::placeholder {
   border-bottom: none;
   color: #FC7827;
 }
+.link_primary {
+  color: #FC7827;
+}
 .icon-link {
   display: flex;
   align-items: center;

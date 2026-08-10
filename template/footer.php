@@ -69,7 +69,7 @@
                     <span class="footer__caption">Соискателям</span>
                     <ul class="footer__menu f-menu">
                         <li class="f-menu__item">
-                            <a href="/pages/rules-rezume.php" class="f-menu__link link">Правила составления резюме</a>
+                            <a href="/pages/article.php" class="f-menu__link link">Правила составления резюме</a>
                         </li>
                         <li class="f-menu__item">
                             <a href="/lk/job_seeker/resume-form.php" class="f-menu__link link">Создать резюме</a>
@@ -87,7 +87,7 @@
                     <span class="footer__caption">Работодателям</span>
                     <ul class="footer__menu f-menu">
                         <li class="f-menu__item">
-                            <a href="/pages/rules-vacancy.php" class="f-menu__link link">Правила размещения вакансии</a>
+                            <a href="/pages/article-5.php" class="f-menu__link link">Правила размещения вакансии</a>
                         </li>
                         <li class="f-menu__item">
                             <a href="/lk/employer/vacancy-form.php" class="f-menu__link link">Разместить вакансию</a>

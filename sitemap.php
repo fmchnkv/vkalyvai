@@ -54,6 +54,7 @@ $arMenu = [
     '/lk/job_seeker/deals.php' => 'ЛК - Мои резюме (Соискатель)',
     '/lk/job_seeker/resume-form.php' => 'ЛК - Конструктор резюме (Соискатель)',
     '/lk/employer/index.php' => 'ЛК - Профиль (Работодатель)',
+    '/lk/employer/prices.php' => 'ЛК - Тарифы (Работодатель)',
     '/lk/employer/notify.php' => 'ЛК - Уведомления (Работодатель)',
     '/lk/employer/responces.php' => 'ЛК - Отклики (Работодатель)',
     '/lk/employer/deals.php' => 'ЛК - Мои вакансии (Работодатель)',

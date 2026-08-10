@@ -58,6 +58,13 @@ $lkSidebarItems = [
                 </defs>
             </svg>',
     ],
+    [
+        'href' => '/chats/index.php',
+        'label' => 'Чаты',
+        'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.76191 19.9416L3.00001 21L4.05841 16.2381C3.36139 14.9343 2.99778 13.4784 3.00001 12C3.00001 7.0293 7.02931 3 12 3C16.9707 3 21 7.0293 21 12C21 16.9707 16.9707 21 12 21C10.5216 21.0022 9.06567 20.6386 7.76191 19.9416Z" fill="#FC7827"/>
+                </svg>',
+    ],
 ];
 ?>
 
@@ -65,7 +72,7 @@ $lkSidebarItems = [
     <ul>
         <?php foreach ($lkSidebarItems as $item): ?>
             <?php $isActive = $currentPath === $item['href']; ?>
-            <li<?= $isActive ? ' class="active"' : '' ?>>
+            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] ?>'">
                 <?= $item['icon'] ?>
                 <a href="<?= $item['href'] ?>"><?= $item['label'] ?></a>
             </li>
