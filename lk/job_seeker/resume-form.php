@@ -127,7 +127,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button type="submit" name="action" value="delete"
+                                <button type="button" name="action" data-call-modal="action-remove"
                                     class="contact--submit btn btn--delete" data-call-modal="action-remove">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button type="submit" name="action" value="delete"
+                                <button type="button" name="action" data-call-modal="action-remove"
                                     class="contact--submit btn btn--delete" data-call-modal="action-remove">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +258,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button type="submit" name="action" value="delete"
+                                <button type="button" name="action" data-call-modal="action-remove"
                                     class="contact--submit btn btn--delete" data-call-modal="action-remove">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -327,7 +327,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button type="submit" name="action" value="delete"
+                                <button type="button" name="action" data-call-modal="action-remove"
                                     class="contact--submit btn btn--delete" data-call-modal="action-remove">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -396,7 +396,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button type="submit" name="action" value="delete"
+                                <button type="button" name="action" data-call-modal="action-remove"
                                     class="contact--submit btn btn--delete" data-call-modal="action-remove">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">

@@ -31,7 +31,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -100,7 +100,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -174,7 +174,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -236,7 +236,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -298,7 +298,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -367,7 +367,7 @@ $blockedTooltipText = $isResumeDeals
                         </defs>
                     </svg>
                 </button>
-                <button class="deals-item__button deals-item__button--delete">
+                <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
