@@ -1,7 +1,7 @@
 <h1 class="deals__title page-title lk__page-title">Мои резюме</h1>
 <div class="deals-wrapper">
     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/deals/deals-list.php"); ?>
-    <button class="btn add-resume-btn detail__btn btn_primary btn_size-m">Добавить резюме</button>
+    <a href="/lk/job_seeker/resume-form.php" class="btn add-resume-btn detail__btn btn_primary btn_size-m">Добавить резюме</a>
 </div>
 <div class="deals__title-wrapper full-width">
     <h2 class="lk__section-title vacancies-title">Подходящие вакансии</h2>

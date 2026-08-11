@@ -37,7 +37,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -176,7 +176,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -243,7 +243,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -382,7 +382,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -448,7 +448,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -587,7 +587,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -651,7 +651,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -790,7 +790,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -854,7 +854,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -993,7 +993,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -1057,7 +1057,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path
@@ -1196,7 +1196,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         </svg>
                     </button>
                     <?php if(str_contains($uri, 'favorite')): ?>
-                    <button class="delete icon-button">
+                    <button class="delete icon-button" data-call-modal="action-remove">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path

@@ -1867,7 +1867,6 @@
     }
 
     &__input-wrapper {
-        padding: 12px 20px;
         border: 1px solid @border-neutral;
         border-radius: @border-radius-xl;
         position: relative;
@@ -1879,7 +1878,13 @@
         background-color: transparent;
         transition: all .3s ease;
 
+        &:has(input[type="checkbox"]), &:has(input[type="radio"]):not(.modal-contact) {
+            padding: 12px 20px;
+        }
+
         input {
+            padding: 12px 20px;
+            border-radius: @border-radius-xl;
             font-weight: 400;
             font-size: @f-body;
             line-height: @lh-body-m;
@@ -2403,11 +2408,14 @@
                 });
             }
             .constructor__inputs-checkbox {
-                padding: 11px 12px;
+                label {
+                    width: 100%;
+                    padding: 11px 12px;
 
-                .media-min(1441px, {
-                    padding: 15px 16px;
-                });
+                    .media-min(1441px, {
+                        padding: 15px 16px;
+                    });
+                }
             }
             .btn_size-m {
                 .media-min(1441px, {
@@ -2531,14 +2539,19 @@
                 }
 
                 .lk__input-wrapper {
-                    padding: 12px;
 
-                    .media-min(1441px, {
-                        padding: 16px !important;
-                    });
+                    input {
+                        padding: 12px;
+
+                        .media-min(1441px, {
+                            padding: 16px !important;
+                        });
+                    }
 
                     &.driver-item {
-                        padding: 11px 16px;
+                        input {
+                            padding: 11px 16px;
+                        }
                     }
                 }
 
@@ -2679,11 +2692,7 @@
                 }
             }
             &-checkbox {
-                padding: 12px;
-
-                .media-min(1024px, {
-                    padding: 16px;
-                });
+                padding: 0;
             }
             &-list {
                 gap: 8px;
@@ -3167,5 +3176,12 @@
     &__btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+.password-wrapper {
+    button {
+        position: absolute;
+        right: 10px;
     }
 }
