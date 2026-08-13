@@ -627,6 +627,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tabSelect = document.querySelector('.js-tab-select');
                 const parentTabs = jsTab.closest('.tabs');
 
+                // ВВРЕМЕННОЕ
+                if (['/pages/help.php', '/pages/faq.php'].includes(window.location.pathname)) {
+                    const url = new URL(window.location.href);
+
+                    if (tab === 'rezumes') {
+                        url.searchParams.set('client', 'Y');
+                    } else if (tab === 'vacancies') {
+                        url.searchParams.delete('client');
+                    }
+
+                    window.location.href = url.toString();
+                    return;
+                }
+
                 if (isCatalog) {
                     tabSelect.classList.remove('active');
                     tabSelect.querySelector('span').textContent = jsTab.textContent;
@@ -876,6 +890,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     url = '/ajax/rezumes.php';
                 } else if (id == 'rezumes_empty') {
                     url = '/ajax/rezumes-empty.php';
+                } else if (id == 'vacancies_empty') {
+                    url = '/ajax/vacancies-empty.php';
                 }
 
                 sendAjaxRequest(url, 2, 4, id);
@@ -887,7 +903,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = {
             page: page,
-            perPage: perPage
+            perPage: perPage,
+            auth: new URLSearchParams(window.location.search).get('auth') || ''
         };
 
         const list = document.querySelector(`.js-list[data-id="${id}"]`);
@@ -948,7 +965,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 urlAjax = '/ajax/companies.php';
             } else if(id == 'rezumes_empty') {
                 urlAjax = '/ajax/rezumes-empty.php';
+            } else if(id == 'vacancies_empty') {
+                urlAjax = '/ajax/vacancies-empty.php';
+            } else if(id == 'companies_empty') {
+                urlAjax = '/ajax/companies-empty.php';
             }
+
 
             const response = await fetch(urlAjax, {
                 method: 'POST',
@@ -958,7 +980,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify({
                     page: page,
-                    perPage: 4
+                    perPage: 4,
+                    auth: new URLSearchParams(window.location.search).get('auth') || ''
                 })
             });
 
@@ -1086,16 +1109,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //вызов модалок с кнопок
-    document.querySelectorAll('[data-call-modal]').forEach(button => {
-        button.addEventListener('click', function (e) {
+    //document.querySelectorAll('[data-call-modal]').forEach(button => {
+        document.addEventListener('click', function (e) {
+            const callModalBtn = e.target.closest('[data-call-modal]');
+            if(!callModalBtn) return;
             e.preventDefault();
 
-            let modal = document.querySelector(`.modal[data-modal="${button.dataset.callModal}"]`);
+            let modal = document.querySelector(`.modal[data-modal="${callModalBtn.dataset.callModal}"]`);
             if (modal) {
                 //ВРЕМЕННОЕ
-                if (button.dataset.callModal === 'favorite-comment') {
+                if (callModalBtn.dataset.callModal === 'favorite-comment') {
                     const favoriteMessage = modal.querySelector('[data-favorite-message]');
-                    const favoriteCard = button.closest(
+                    const favoriteCard = callModalBtn.closest(
                         '.lk-card, .detail, .offers-grid__item, .offers-list__item, .companies-grid__item'
                     );
                     const entityLink = favoriteCard?.querySelector(
@@ -1121,7 +1146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.classList.add('active');
             }
         })
-    });
+    //});
 
     //маски контактов
     const contactInput = document.getElementById('contact_data');

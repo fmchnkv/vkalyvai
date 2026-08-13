@@ -67,20 +67,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -108,13 +108,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -144,7 +144,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -273,20 +273,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -314,13 +314,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -350,7 +350,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -478,20 +478,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -519,13 +519,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -555,7 +555,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -681,20 +681,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -722,13 +722,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -758,7 +758,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -884,20 +884,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -925,13 +925,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -961,7 +961,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
@@ -1087,20 +1087,20 @@ $uri = $_SERVER['REQUEST_URI'];
                     <?php endif; ?>
                 </div>
 
-                <div class="offers-list__header offer-header">
-                    <p class="offer-header__title"><a href="/pages/rezume.php"
+                <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__header offer-header">
+                    <div class="offer-header__title"><div
                             class="link">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского
-                            языка</a></p>
+                            языка</div></div>
                     <ul class="offer-header__main">
                         <li class="offer-header__main-item">Мужчина, 42 года</li>
                         <li class="offer-header__main-item has-dot">Был сегодня</li>
                         <li class="offer-header__main-item has-dot">Обновлено вчера</li>
                     </ul>
                     <span class="offer-header__sale">100 000 ₽</span>
-                </div>
+                </a>
             </div>
 
-            <div class="offers-list__content">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__content">
 
                 <ul class="offers-list__profile profile profile--list">
                     <li class="profile__item">
@@ -1128,13 +1128,13 @@ $uri = $_SERVER['REQUEST_URI'];
                     </li>
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
-            </div>
+            </a>
 
             <div class="offers-list__bottom">
                 <div class="offers-list__bottom-btns">
                     <?php if (str_contains($uri, 'employer')): ?>
                         <div class="employer__deals-dop-btns">
-                            <a href="/chats/index.php?client=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
+                            <a href="/chats/index.php?client=Y&auth=Y" class="btn btn_primary btn_size-l mob__hide-text lk__btn_has-icon">
 
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
@@ -1164,7 +1164,7 @@ $uri = $_SERVER['REQUEST_URI'];
                             </a>
                         </div>
                     <?php endif; ?>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Смотреть резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >

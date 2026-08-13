@@ -4,7 +4,7 @@
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">

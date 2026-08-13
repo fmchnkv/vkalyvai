@@ -1,49 +1,51 @@
 <div class="employer__responces-list grid-list">
     <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="approve">
         <div class="employer__responces-item lk-card card-viewed-not">
-            <span class="employer__responces-item__status state neutral">Не просмотрен</span>
-            <div class="employer__responces-item__vacancy">Название вакансии</div>
-            <div class="employer__responces-item__body">
-                <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — непрочитанный, приглашенный</a>
-                    </p>
-                    <span>01.06.2695</span>
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
+                <span class="employer__responces-item__status state neutral">Не просмотрен</span>
+                <div class="employer__responces-item__vacancy">Название вакансии</div>
+                <div class="employer__responces-item__body">
+                    <div class="employer__responces-item__title">
+                        <div class="offer-header__title">
+                            <div class="link">Иванов Иван Иванович — непрочитанный, приглашенный</div>
+                        </div>
+                        <span>01.06.2695</span>
+                    </div>
+                    <ul class="offer-header__main">
+                        <li class="offer-header__main-item">Мужчина, 42 года</li>
+                        <li class="offer-header__main-item has-dot">Был сегодня</li>
+                        <li class="offer-header__main-item has-dot">Обновлено вчера</li>
+                    </ul>
+                    <ul class="offers-list__profile profile profile--list">
+                        <li class="profile__item">
+                            <span class="profile__label">Гражданство</span>
+                            <span class="profile__value">Гражданство РФ</span>
+                        </li>
+                        <li class="profile__item">
+                            <span class="profile__label">Участие в СВО</span>
+                            <span class="profile__value">Участник СВО</span>
+                        </li>
+                        <li class="profile__item">
+                            <span class="profile__label">Образование</span>
+                            <span class="profile__value">Высшее</span>
+                        </li>
+                        <li class="profile__item">
+                            <span class="profile__label">Общий опыт</span>
+                            <span class="profile__value">20 лет</span>
+                        </li>
+                    </ul>
+                    <ul class="offers-list__info offer-info">
+                        <li class="offer-info__item">
+                            <img src="/images/geo-icon.svg" alt="geo icon">
+                            <span>Город, район, метро</span>
+                        </li>
+                        <li class="offer-info__item has-dot">Не готов к командировкам</li>
+                    </ul>
                 </div>
-                <ul class="offer-header__main">
-                    <li class="offer-header__main-item">Мужчина, 42 года</li>
-                    <li class="offer-header__main-item has-dot">Был сегодня</li>
-                    <li class="offer-header__main-item has-dot">Обновлено вчера</li>
-                </ul>
-                <ul class="offers-list__profile profile profile--list">
-                    <li class="profile__item">
-                        <span class="profile__label">Гражданство</span>
-                        <span class="profile__value">Гражданство РФ</span>
-                    </li>
-                    <li class="profile__item">
-                        <span class="profile__label">Участие в СВО</span>
-                        <span class="profile__value">Участник СВО</span>
-                    </li>
-                    <li class="profile__item">
-                        <span class="profile__label">Образование</span>
-                        <span class="profile__value">Высшее</span>
-                    </li>
-                    <li class="profile__item">
-                        <span class="profile__label">Общий опыт</span>
-                        <span class="profile__value">20 лет</span>
-                    </li>
-                </ul>
-                <ul class="offers-list__info offer-info">
-                    <li class="offer-info__item">
-                        <img src="/images/geo-icon.svg" alt="geo icon">
-                        <span>Город, район, метро</span>
-                    </li>
-                    <li class="offer-info__item has-dot">Не готов к командировкам</li>
-                </ul>
-            </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -81,7 +83,7 @@
                         </svg>
                         <span class="desk-elem tab-elem">Отказать</span>
                     </button>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -118,13 +120,15 @@
     </div>
     <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="reject">
         <div class="employer__responces-item lk-card card-reject">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state blocked">Отказ</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — непрочитанный, отказ</a>
-                    </p>
+                    <div class="offer-header__title">
+                        <div class="link">Иванов Иван Иванович — непрочитанный,
+                            отказ</div>
+                    </div>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -158,9 +162,10 @@
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
             </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -239,7 +244,7 @@
                             </span>
                         </label>
                     </div>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -313,6 +318,7 @@
     </div>
     <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="approve">
         <div class="employer__responces-item lk-card card-approve">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <div class="state-wrapper">
                 <span class="employer__responces-item__status state publish">Приглашение</span>
                 <span class="responces-item__count">1</span>
@@ -321,9 +327,10 @@
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, приглашенный</a>
-                    </p>
+                    <div class="offer-header__title">
+                        <div class="link">Иванов Иван Иванович — прочитанный,
+                            приглашенный</div>
+                    </div>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -357,9 +364,10 @@
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
             </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -438,7 +446,7 @@
                             </span>
                         </label>
                     </div>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -511,13 +519,14 @@
 
     <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
         <div class="employer__responces-item lk-card card-reject">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state blocked">Отказ</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, отказ</a>
-                    </p>
+                    <div class="offer-header__title">
+                        <div class="link">Иванов Иван Иванович — прочитанный, отказ</div>
+                    </div>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -551,9 +560,10 @@
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
             </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -632,7 +642,7 @@
                             </span>
                         </label>
                     </div>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -705,13 +715,15 @@
 
     <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
         <div class="employer__responces-item lk-card card-viewed">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state neutral_see">Просмотрен</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович — прочитанный, отказ 2</a>
-                    </p>
+                    <div class="offer-header__title">
+                        <div class="link">Иванов Иван Иванович — прочитанный, отказ
+                            2</div>
+                    </div>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -745,9 +757,10 @@
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
             </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -785,7 +798,7 @@
                         </svg>
                         <span class="desk-elem tab-elem">Отказать</span>
                     </button>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -824,13 +837,14 @@
 
     <template id="employer-responces-card-template">
         <div class="employer__responces-item lk-card card-viewed">
+            <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state neutral_see">Просмотрен</span>
             <div class="employer__responces-item__vacancy">Название вакансии</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
-                    <p class="offer-header__title">
-                        <a href="/pages/rezume.php" class="link">Иванов Иван Иванович</a>
-                    </p>
+                    <div class="offer-header__title">
+                        <div class="link">Иванов Иван Иванович</div>
+                    </div>
                     <span>01.06.2695</span>
                 </div>
                 <ul class="offer-header__main">
@@ -864,9 +878,10 @@
                     <li class="offer-info__item has-dot">Не готов к командировкам</li>
                 </ul>
             </div>
+            </a>
             <div class="employer__responces-item__footer">
                 <div class="buttons-wrapper">
-                    <a href="/chats/index.php?client=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
+                    <a href="/chats/index.php?client=Y&auth=Y" class="chat__btn btn btn_primary btn_size-m lk__btn_has-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -904,7 +919,7 @@
                         </svg>
                         <span class="desk-elem tab-elem">Отказать</span>
                     </button>
-                    <a href="/pages/rezume.php" class="offers-list__link icon-link">
+                    <a href="/pages/rezume.php?client=Y&auth=Y" class="offers-list__link icon-link">
                         <span>Резюме</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>

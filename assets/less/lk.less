@@ -864,13 +864,23 @@
             border-color: @primary;
         }
 
-        button, a {
-            &:not(.btn) {
+        button:not(.btn),
+        a:not(.btn):not(:has(div, ul, ol, section, article, header, footer)) {
+            transition: color .3s ease;
+
+            &:hover {
+                color: @primary;
                 transition: color .3s ease;
-                &:hover {
-                    color: @primary;
-                    transition: color .3s ease;
-                }
+            }
+        }
+
+        a:not(.btn):has(div, ul, ol, section, article, header, footer) {
+            color: inherit;
+
+            .link,
+            .link:hover {
+                color: inherit;
+                border-bottom-color: transparent;
             }
         }
 
@@ -1232,7 +1242,7 @@
                 flex-direction: column;
                 gap: 8px;
 
-                a {
+                .responces-title {
                     font-weight: 600;
                     font-size: @f-body;
                     line-height: @lh-body-s;
@@ -1674,6 +1684,10 @@
                     padding: 20px;
                     gap: 16px;
                 });
+
+                > a {
+                    padding: 0;
+                }
 
                 &__vacancy {
                     font-weight: 500;
@@ -2926,6 +2940,15 @@
 
     &-chat {
         padding: 11px;
+    }
+
+    .offers-grid__item {
+        > a {
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            background: transparent;
+        }
     }
 }
 

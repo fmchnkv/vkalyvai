@@ -19,7 +19,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -82,7 +82,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -160,7 +160,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -223,7 +223,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -286,7 +286,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>
@@ -349,7 +349,7 @@
                 <img src="/images/company-avatar.png" alt="">
             </div>
             <div class="moderator__item__title-content">
-                <a href="/pages/company.php" class="offers-grid__title">Название компании</a>
+                <a href="/pages/company.php?auth=Y" class="offers-grid__title">Название компании</a>
                 <ul class="offers-grid__tags tags">
                     <li class="offer-header__main-item has-dot">64 активных вакансии</li>
                     <li class="offer-header__main-item has-dot">Был сегодня</li>

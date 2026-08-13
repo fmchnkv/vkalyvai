@@ -1,25 +1,28 @@
 <div class="vacancies-list grid-list">
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
-        <span class="offers-grid__sale">от 100 000 ₽</span>
-        <ul class="offers-grid__tags tags">
-            <li class="tags__item tag tag_small">Полная занятость</li>
-            <li class="tags__item tag tag_small">Опыт от 1 года</li>
-            <li class="tags__item tag tag_small">На месте работодателя</li>
-        </ul>
-        <ul class="offers-grid__info offer-info">
-            <li class="offer-info__item">
-                <img src="/images/company-icon.svg" alt="company icon">
-                <span>Название компании</span>
-            </li>
-            <li class="offer-info__item">
-                <img src="/images/geo-icon.svg" alt="geo icon">
-                <span>Город, район, метро</span>
-            </li>
-        </ul>
-        <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
-            по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
-            интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
+            <span class="offers-grid__sale">от 100 000 ₽</span>
+            <ul class="offers-grid__tags tags">
+                <li class="tags__item tag tag_small">Полная занятость</li>
+                <li class="tags__item tag tag_small">Опыт от 1 года</li>
+                <li class="tags__item tag tag_small">На месте работодателя</li>
+            </ul>
+            <ul class="offers-grid__info offer-info">
+                <li class="offer-info__item">
+                    <img src="/images/company-icon.svg" alt="company icon">
+                    <span>Название компании</span>
+                </li>
+                <li class="offer-info__item">
+                    <img src="/images/geo-icon.svg" alt="geo icon">
+                    <span>Город, район, метро</span>
+                </li>
+            </ul>
+            <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
+                по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
+                интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
+
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
@@ -55,7 +58,8 @@
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -75,6 +79,7 @@
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
@@ -110,7 +115,8 @@
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -130,6 +136,7 @@
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
@@ -165,7 +172,8 @@
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -185,6 +193,7 @@
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
@@ -220,7 +229,8 @@
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -240,6 +250,7 @@
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">
@@ -275,7 +286,8 @@
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -295,6 +307,7 @@
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <div class="offers-grid__actions offer-actions">

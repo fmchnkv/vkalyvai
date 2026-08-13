@@ -13,10 +13,10 @@ if (!$companies && !$vacancies) {
 <div class="lk__filters-wrapper">
     <ul class="favorite__tabs lk__tabs tabs">
         <li class="tabs__item">
-            <a href="<?= $currentPage ?>?vacancies=Y" class="tabs__link tab<?= $vacancies == 'Y' ? ' active' : '' ?>">Вакансии</a>
+            <a href="<?= $currentPage ?>?vacancies=Y&auth=Y" class="tabs__link tab<?= $vacancies == 'Y' ? ' active' : '' ?>">Вакансии</a>
         </li>
         <li class="tabs__item">
-            <a href="<?= $currentPage ?>?companies=Y" class="tabs__link tab<?= $companies == 'Y' ? ' active' : '' ?>">Компании</a>
+            <a href="<?= $currentPage ?>?companies=Y&auth=Y" class="tabs__link tab<?= $companies == 'Y' ? ' active' : '' ?>">Компании</a>
         </li>
     </ul>
     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/sort.php"); ?>

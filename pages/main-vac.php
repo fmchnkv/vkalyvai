@@ -1,5 +1,5 @@
 <?php 
-$auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
 ?>
 <section class="main-hero">
     <div class="container">
@@ -147,7 +147,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
                 ?>
             </div>
 
-            <ul class="offers__list offers-grid js-list" data-id="vacancies">
+            <ul class="offers__list offers-grid js-list" data-id="vacancies<?= $auth && $auth == 'N' ? '_empty' : ''; ?>">
                 <? for ($i = 0; $i < 4; $i++) {
                     if ($auth && $auth == 'N') {                  
                         include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item_empty.php';
@@ -158,8 +158,8 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
             </ul>
 
             <div class="offers__nav">
-                <button class="btn btn_outline btn_size-m js-load" data-id="vacancies">Показать еще&nbsp;<span>4</span></button>
-                <a href="/pages/vacancies.php" class="btn btn_primary btn_size-m">Смотреть все вакансии</a>
+                <button class="btn btn_outline btn_size-m js-load" data-id="vacancies<?= $auth && $auth == 'N' ? '_empty' : ''; ?>">Показать еще&nbsp;<span>4</span></button>
+                <a href="/pages/vacancies.php<?= $auth && $auth == 'N' ? '?auth=N' : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все вакансии</a>
             </div>
         </div>
     </div>

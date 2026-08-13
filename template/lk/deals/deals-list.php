@@ -1,7 +1,7 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 $isResumeDeals = str_contains($uri, 'job_seeker');
-$dealsDetailUrl = $isResumeDeals ? '/pages/rezume.php' : '/pages/vacancy.php';
+$dealsDetailUrl = $isResumeDeals ? '/pages/rezume.php?client=Y&auth=Y' : '/pages/vacancy.php?auth=Y';
 $revisionTooltipText = $isResumeDeals
     ? 'Резюме не прошло модерацию. Пожалуйста, отредактируйте текст и отправьте снова.'
     : 'Вакансия не прошла модерацию. Пожалуйста, отредактируйте текст и отправьте снова.';
@@ -66,7 +66,7 @@ $blockedTooltipText = $isResumeDeals
                 </div>
                 <div class="deals__item">
                     <span>Приглашения</span>
-                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/<?= $isResumeDeals ? 'job_seeker' : 'employer'; ?>/responces.php" class="link link_underline">64</a></p>
+                    <p><a href="https://vkalivay-new.blueberry-digital.ru/lk/<?= $isResumeDeals ? 'job_seeker' : 'employer'; ?>/responces.php?auth=Y" class="link link_underline">64</a></p>
                 </div>
             </div>
             <?php endif; ?>
@@ -152,9 +152,9 @@ $blockedTooltipText = $isResumeDeals
                 <template class="moderation-tooltip__template">
                     <div class="moderation-tooltip">
                         <?= $blockedTooltipText ?>
-                        <a href="/pages/legal.php">Правила сайта</a>
+                        <a href="/pages/legal.php?auth=Y">Правила сайта</a>
                         <span aria-hidden="true"> / </span>
-                        <a href="/pages/help.php">Написать в поддержку</a>
+                        <a href="/pages/help.php?auth=Y">Написать в поддержку</a>
                     </div>
                 </template>
             </div>

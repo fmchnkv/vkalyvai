@@ -4,7 +4,7 @@
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
@@ -54,7 +54,7 @@
             <div class="catalog-nav__split-row">
                 <div class="catalog-nav__actions">
                     <button class="catalog-nav__nav-btn btn btn_outline btn_size-s btn_has-icon js-tab-select">
-                        <span>Соискателю</span>
+                        <span><?= $client == 'Y' ? 'Работодателю' : 'Соискателю'; ?></span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path d="M10.0048 2.58398C10.4188 2.58416 10.7547 2.92003 10.7548 3.33398V14.8564L15.3085 10.3037C15.6015 10.0113 16.0764 10.011 16.3691 10.3037C16.6617 10.5965 16.6614 11.0714 16.3691 11.3643L10.5351 17.1973C10.2422 17.4902 9.76745 17.4902 9.47455 17.1973L3.64154 11.3643C3.34865 11.0714 3.34865 10.5966 3.64154 10.3037C3.93446 10.0111 4.40931 10.0109 4.70209 10.3037L9.25483 14.8564V3.33398C9.255 2.92003 9.59087 2.58416 10.0048 2.58398Z" fill="#FC7827" />
@@ -69,10 +69,10 @@
 
                     <ul class="catalog-nav__tabs tabs">
                         <li class="tabs__item">
-                            <button class="tabs__link tab active js-tab is-catalog" data-tab="vacancies">Соискателю</button>
+                            <button class="tabs__link tab <?= $client == 'Y' ? '' : 'active'; ?> js-tab is-catalog" data-tab="vacancies">Соискателю</button>
                         </li>
                         <li class="tabs__item">
-                            <button class="tabs__link tab js-tab is-catalog" data-tab="rezumes">Работодателю</button>
+                            <button class="tabs__link tab <?= $client == 'Y' ? 'active' : ''; ?> js-tab is-catalog" data-tab="rezumes">Работодателю</button>
                         </li>
                     </ul>
                 </div>
@@ -156,7 +156,7 @@
         </div>
 
         <div class="faq__body">
-            <div class="tabs-block__content js-tab-content active" data-tab="vacancies">
+            <div class="tabs-block__content js-tab-content <?= $client == 'Y' ? '' : 'active'; ?>" data-tab="vacancies">
                 <ul class="faq__list accordion js-list" data-id="faq-vacancies">
                     <li class="accordion__item">
                         <div class="accordion__header">
@@ -239,7 +239,7 @@
                 <? // include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; 
                 ?>
             </div>
-            <div class="tabs-block__content js-tab-content" data-tab="rezumes">
+            <div class="tabs-block__content js-tab-content <?= $client == 'Y' ? 'active' : ''; ?>" data-tab="rezumes">
                 <ul class="faq__list accordion js-list" data-id="faq-rezumes">
                     <li class="accordion__item">
                         <div class="accordion__header">

@@ -22,7 +22,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>
@@ -74,7 +74,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>
@@ -141,7 +141,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>
@@ -193,7 +193,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>
@@ -245,7 +245,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>
@@ -297,7 +297,7 @@
             <div class="date">01.06.2397</div>
         </div>
         <div class="moderator__item__title-wrapper">
-            <a href="/pages/vacancy.php" class="offers-grid__title">Начальник отдела</a>
+            <a href="/pages/vacancy.php?auth=Y" class="offers-grid__title">Начальник отдела</a>
             <ul class="offers-grid__tags tags">
                 <li class="tags__item">100 000 ₽</li>
                 <li class="tags__item">Полная занятость</li>

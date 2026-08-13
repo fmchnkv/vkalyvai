@@ -65,6 +65,10 @@
 .offers-grid__item:hover {
   box-shadow: 0px 8px 64px -12px rgba(20, 20, 20, 0.12);
 }
+.offers-grid__item-link {
+  display: flex;
+  flex-direction: column;
+}
 .offers-grid__title {
   margin-bottom: 12px;
   font-weight: 600;

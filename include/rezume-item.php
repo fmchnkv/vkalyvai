@@ -1,6 +1,6 @@
 <li class="offers-list__item">
     <div class="offers-list__top">
-        <div class="offers-list__avatar avatar empty">
+        <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__avatar avatar empty">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
                     <path d="M24 6.00195C33.9414 6.00195 42 14.0606 42 24.002C42 33.9434 33.9414 42.002 24 42.002C14.0586 42.002 6 33.9434 6 24.002C6 14.0606 14.0586 6.00195 24 6.00195ZM24 9.60156C20.1809 9.60156 16.5179 11.1188 13.8174 13.8193C11.1169 16.5199 9.59961 20.1828 9.59961 24.002C9.59961 27.8211 11.1169 31.484 13.8174 34.1846C16.5179 36.8851 20.1809 38.4023 24 38.4023C27.8191 38.4023 31.4821 36.8851 34.1826 34.1846C36.8831 31.484 38.4004 27.8211 38.4004 24.002C38.4004 20.1828 36.8831 16.5199 34.1826 13.8193C31.4821 11.1188 27.8191 9.60156 24 9.60156ZM18.5996 24.002C18.5996 25.4341 19.1689 26.8076 20.1816 27.8203C21.1943 28.833 22.5678 29.4023 24 29.4023C25.4322 29.4023 26.8057 28.833 27.8184 27.8203C28.8311 26.8076 29.4004 25.4341 29.4004 24.002H33C33 26.3889 32.0521 28.6784 30.3643 30.3662C28.6764 32.054 26.3869 33.002 24 33.002C21.6131 33.002 19.3236 32.054 17.6357 30.3662C15.9479 28.6784 15 26.3889 15 24.002H18.5996Z" fill="#FC7827" />
@@ -11,7 +11,7 @@
                     </clipPath>
                 </defs>
             </svg>
-        </div>
+        </a>
 
         <div class="offers-list__actions offer-actions">
             <button class="like icon-button" data-call-modal="favorite-comment">
@@ -40,18 +40,18 @@
             </button>
         </div>
 
-        <div class="offers-list__header offer-header">
-            <a href="/pages/rezume.php" class="offer-header__title">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского языка</a>
+        <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__header offer-header">
+            <div class="offer-header__title">ОФИС-МЕНЕДЖЕР/СЕКРЕТАРЬ/помощник руководителя со знанием КДП и английского языка</div>
             <ul class="offer-header__main">
                 <li class="offer-header__main-item">Мужчина, 42 года</li>
                 <li class="offer-header__main-item has-dot">Был сегодня</li>
                 <li class="offer-header__main-item has-dot">Обновлено вчера</li>
             </ul>
             <span class="offer-header__sale">100 000 ₽</span>
-        </div>
+        </a>
     </div>
 
-    <div class="offers-list__content">
+    <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__content">
         <ul class="offers-list__tags tags">
             <li class="tags__item tag tag_small tag_green">Активно ищу работу</li>
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -84,11 +84,11 @@
                 <span class="profile__value">20 лет</span>
             </li>
         </ul>
-    </div>
+    </a>
 
     <div class="offers-list__bottom">
         <button class="offers-list__btn btn btn_light btn_size-m">Связаться</button>
-        <a href="/pages/rezume.php" class="offers-list__link icon-link">
+        <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__link icon-link">
             <span>Смотреть резюме</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >

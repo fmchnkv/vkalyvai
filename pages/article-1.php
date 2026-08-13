@@ -1,14 +1,16 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<?
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+?>
 <div class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item">
-                <a href="/pages/help.php" class="link">Помощь</a>
+                <a href="/pages/help.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Помощь</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
@@ -16,7 +18,7 @@
             </li>
         </ul>
 
-        <a href="/pages/help.php" class="breadcrumbs__back btn-link">
+        <a href="/pages/help.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="breadcrumbs__back btn-link">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path d="M6.80762 2.80365C7.10055 2.51125 7.57543 2.51092 7.86816 2.80365C8.16073 3.0964 8.16052 3.57132 7.86816 3.8642L4.48145 7.25092H13.3379C13.7517 7.25127 14.0877 7.58707 14.0879 8.00092C14.0877 8.41477 13.7517 8.75057 13.3379 8.75092H4.48145L7.86816 12.1367C8.16084 12.4293 8.16041 12.9043 7.86816 13.1972C7.57527 13.4901 7.10051 13.4901 6.80762 13.1972L2.14062 8.53119C2.00005 8.39062 1.92098 8.19972 1.9209 8.00092C1.92098 7.8022 2.00015 7.61121 2.14062 7.47065L6.80762 2.80365Z" fill="#FC7827" />

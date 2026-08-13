@@ -1,10 +1,12 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<? $auth = isset($_GET['auth']) ? $_GET['auth'] : ''; 
+$params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
+?>
 <div class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
@@ -29,18 +31,21 @@
 
                 <ul class="catalog-nav__tabs tabs">
                     <li class="tabs__item">
-                        <a href="/pages/vacancies.php" class="tabs__link tab">Вакансии</a>
+                        <a href="/pages/vacancies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab">Вакансии</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/rezumes.php" class="tabs__link tab">Резюме</a>
+                        <a href="/pages/rezumes.php?client=Y<?= $params ? '&' . $params : ''; ?>" class="tabs__link tab">Резюме</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/companies.php" class="tabs__link tab active">Компании</a>
+                        <a href="/pages/companies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab active">Компании</a>
                     </li>
                 </ul>
             </div>
 
             <form class="catalog-nav__form inline-form">
+                <? if($auth && $auth == 'N'): ?>
+                <input type="hidden" name="auth" value="N">
+                <? endif; ?>
                 <div class="inline-form__row">
                     <div class="inline-form__input-wrapper">
                         <label class="inline-form__label field">
@@ -221,10 +226,18 @@
             </div>
         </div>
 
-        <ul class="catalog__list companies-grid js-list" data-id="companies">
-            <? for ($i = 0; $i < 12; $i++) {
-                include $_SERVER["DOCUMENT_ROOT"] . '/include/company-item.php';
-            } ?>
+        <ul class="catalog__list companies-grid js-list" data-id="companies<?= $auth && $auth == 'N' ? '_empty' : ''; ?>">
+            <? 
+            if($auth && $auth == 'N') {
+				for ($i = 0; $i < 12; $i++) { 
+					require $_SERVER["DOCUMENT_ROOT"] . '/include/company-item_empty.php';
+				}
+			} else {
+				for ($i = 0; $i < 12; $i++) { 
+					require $_SERVER["DOCUMENT_ROOT"] . '/include/company-item.php';
+				}
+			}
+            ?>
         </ul>
         <div class="scroll-trigger"></div>
         <? // include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; 
