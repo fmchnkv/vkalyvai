@@ -1,5 +1,7 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<?
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+?>
 <section class="about-hero about-section about-first">
     <div class="container">
         <div class="about-hero__inner">
@@ -9,8 +11,8 @@
                 <div class="about-hero__bottom">
                     <p class="about-hero__text">Удобный поиск вакансий и сотрудников. <br>Минимум действий — максимум результата!</p>
                     <div class="about-hero__actions">
-                        <a href="/pages/vacancies.php" class="about-hero__btn btn btn_primary btn_size-s">Каталог вакансий</a>
-                        <a href="/pages/rezumes.php" class="about-hero__btn btn btn_secondary btn_size-s">Каталог резюме</a>
+                        <a href="/pages/vacancies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-hero__btn btn btn_primary btn_size-s">Каталог вакансий</a>
+                        <a href="/pages/rezumes.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="about-hero__btn btn btn_secondary btn_size-s">Каталог резюме</a>
                     </div>
                 </div>
             </div>
@@ -75,10 +77,10 @@
                 </div>
                 <span class="about-features__caption">Возможности для соискателя</span>
                 <div class="about-features__tabs">
-                    <a href="/lk/job_seeker/resume-form.php" class="about-features__tab tab active btn_size-s">Покажи себя</a>
-                    <a href="/pages/vacancies.php" class="about-features__tab tab btn_size-s">Изучи рынок</a>
-                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Выбирай, где работать</a>
-                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>
+                    <a href="/lk/job_seeker/resume-form.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab active btn_size-s">Покажи себя</a>
+                    <a href="/pages/vacancies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">Изучи рынок</a>
+                    <a href="/pages/companies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">Выбирай, где работать</a>
+                    <a href="/pages/help.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">По всем вопросам</a>
                 </div>
             </li>
             <li class="about-features__item">
@@ -87,10 +89,10 @@
                 </div>
                 <span class="about-features__caption">Возможности для работодателя</span>
                 <div class="about-features__tabs">
-                    <a href="/lk/employer/vacancy-form.php" class="about-features__tab tab active btn_size-s">Заяви о своей компании</a>
-                    <a href="/pages/rezumes.php" class="about-features__tab tab btn_size-s">Выбирай лучших в штат</a>
-                    <a href="/pages/companies.php" class="about-features__tab tab btn_size-s">Управляй наймом в один клик</a>
-                    <a href="/pages/help.php" class="about-features__tab tab btn_size-s">По всем вопросам</a>
+                    <a href="/lk/employer/vacancy-form.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab active btn_size-s">Заяви о своей компании</a>
+                    <a href="/pages/rezumes.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">Выбирай лучших в штат</a>
+                    <a href="/pages/companies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">Управляй наймом в один клик</a>
+                    <a href="/pages/help.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="about-features__tab tab btn_size-s">По всем вопросам</a>
                 </div>
             </li>
         </ul>
@@ -314,8 +316,8 @@
                 <span class="cta__title">Мы уже всё нашли для вас!</span>
                 <p class="cta__description">Забудьте про сложные анкеты и бесконечные проверки. Просто открывайте нужный каталог и выбирайте лучшее прямо сейчас.</p>
                 <div class="cta__actions">
-                    <a href="/pages/vacancies.php" class="cta__btn btn btn_primary">Каталог вакансий</a>
-                    <a href="/pages/rezumes.php" class="cta__btn btn btn_secondary">Каталог резюме</a>
+                    <a href="/pages/vacancies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="cta__btn btn btn_primary">Каталог вакансий</a>
+                    <a href="/pages/rezumes.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="cta__btn btn btn_secondary">Каталог резюме</a>
                 </div>
             </div>
         </div>

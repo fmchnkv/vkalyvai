@@ -6,7 +6,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
 
 <div class="breadcrumbs">
     <div class="container">
-        <a href="/pages/vacancies.php" class="breadcrumbs__back btn-link">
+        <a href="/pages/vacancies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="breadcrumbs__back btn-link">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
                     <path d="M6.80762 2.80365C7.10055 2.51125 7.57543 2.51092 7.86816 2.80365C8.16073 3.0964 8.16052 3.57132 7.86816 3.8642L4.48145 7.25092H13.3379C13.7517 7.25127 14.0877 7.58707 14.0879 8.00092C14.0877 8.41477 13.7517 8.75057 13.3379 8.75092H4.48145L7.86816 12.1367C8.16084 12.4293 8.16041 12.9043 7.86816 13.1972C7.57527 13.4901 7.10051 13.4901 6.80762 13.1972L2.14062 8.53119C2.00005 8.39062 1.92098 8.19972 1.9209 8.00092C1.92098 7.8022 2.00015 7.61121 2.14062 7.47065L6.80762 2.80365Z" fill="#FC7827" />

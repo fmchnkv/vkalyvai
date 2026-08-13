@@ -12,8 +12,8 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
 
             <div class="main-hero__form-wrapper">
                 <form action="/pages/rezumes.php" method="GET" class="main-hero__form">
+                    <input type="hidden" name="client" value="Y">
                     <? if ($auth && $auth === 'N') : ?>
-                        <input type="hidden" name="client" value="Y">
                         <input type="hidden" name="auth" value="N">
                     <? endif; ?>
                     <div class="main-hero__row">
@@ -120,7 +120,7 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
                 <h2 class="offers__caption caption">Активные кандидаты</h2>
                 <? 
                 /*
-                <a href="/pages/rezumes.php" class="offers__link icon-link">
+                <a href="/pages/rezumes.php?client=Y" class="offers__link icon-link">
                     <span>Смотреть все</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -152,7 +152,7 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
             <? else : */?>
                 <div class="offers__nav">
                     <button class="btn btn_outline btn_size-m js-load" data-id="<?= $auth && $auth == 'N' ? 'rezumes_empty' : 'rezumes'; ?>">Показать еще&nbsp;<span>4</span></button>
-                    <a href="/pages/rezumes.php<?= $auth && $auth == 'N' ? '?client=Y&auth=N' : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
+                    <a href="/pages/rezumes.php?client=Y<?= $auth && $auth == 'N' ? '&auth=N' : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
                 </div>
             <? // endif; ?>
         </div>

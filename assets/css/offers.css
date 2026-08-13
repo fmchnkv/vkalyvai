@@ -118,7 +118,8 @@
   }
 }
 .offer-header__title:visited,
-.offer-header__title a:visited {
+.offer-header__title a:visited,
+.offer-header__title .link:visited {
   color: #999999;
 }
 .offer-header__title:hover {

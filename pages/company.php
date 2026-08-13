@@ -1,8 +1,10 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
-
+<?
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+?>
 <div class="breadcrumbs">
     <div class="container">
-        <a href="/pages/companies.php" class="breadcrumbs__back btn-link">
+        <a href="/pages/companies.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="breadcrumbs__back btn-link">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g >
                     <path d="M6.80762 2.80365C7.10055 2.51125 7.57543 2.51092 7.86816 2.80365C8.16073 3.0964 8.16052 3.57132 7.86816 3.8642L4.48145 7.25092H13.3379C13.7517 7.25127 14.0877 7.58707 14.0879 8.00092C14.0877 8.41477 13.7517 8.75057 13.3379 8.75092H4.48145L7.86816 12.1367C8.16084 12.4293 8.16041 12.9043 7.86816 13.1972C7.57527 13.4901 7.10051 13.4901 6.80762 13.1972L2.14062 8.53119C2.00005 8.39062 1.92098 8.19972 1.9209 8.00092C1.92098 7.8022 2.00015 7.61121 2.14062 7.47065L6.80762 2.80365Z" fill="#FC7827" />
@@ -220,7 +222,7 @@
                                 </div>
                                 */
                                 ?>
-
+                                <? if(!$auth || $auth != 'N'): ?>
                                 <div class="feedback">
                                     <div class="feedback__inner">
                                         <span class="feedback__title">Хочу тут работать</span>
@@ -279,10 +281,15 @@
                                         </form>
                                     </div>
                                 </div>
+                                <? endif; ?>
                             </div>
                             <div class="tabs-block__content js-tab-content" data-tab="vacancies">
-                                <ul class="catalog__list offers-grid offers-grid_single js-list" data-id="vacancies">
+                                <ul class="catalog__list offers-grid offers-grid_single js-list" data-id="vacancies<?= $auth && $auth == 'N' ? '_empty' : ''; ?>">
+                                    <? if(!$auth || $auth != 'N'): ?>
                                     <? for ($i = 0; $i < 8; $i++) { include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item.php'; } ?>
+                                    <? else: ?>
+                                    <? for ($i = 0; $i < 8; $i++) { include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item_empty.php'; } ?>
+                                    <? endif; ?>
                                 </ul>
                                 <div class="scroll-trigger"></div>
                                 <? // include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>
@@ -372,7 +379,7 @@
                 </div>
                 <div class="detail__actions">
                     <button class="detail__like btn btn_light btn_size-m btn_has-icon"
-                        data-call-modal="favorite-comment">
+                        <?= $auth && $auth == 'N' ? 'data-call-modal="registration_2"' : 'data-call-modal="favorite-comment"'; ?>>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g >
                                 <path d="M13.3789 3.25098C15.6573 3.25098 17.5038 5.12615 17.5039 7.75098C17.5039 13.0008 11.879 16.0009 10.0039 17.126C8.12876 16.0009 2.50391 13.0008 2.50391 7.75098C2.50406 5.12615 4.379 3.25098 6.62891 3.25098C8.02381 3.25098 9.25389 4.00103 10.0039 4.75098C10.7539 4.00103 11.984 3.25098 13.3789 3.25098ZM13.3789 4.75098C12.572 4.75098 11.6989 5.17861 11.0645 5.81152L10.0039 6.87207L8.94336 5.81152C8.30887 5.17861 7.43584 4.75098 6.62891 4.75098C5.174 4.75098 4.00405 5.99315 4.00391 7.75098C4.00391 9.95893 5.25314 11.9012 7.4873 13.6787C8.04605 14.1227 8.64296 14.5369 9.30371 14.9531C9.52795 15.0949 9.74967 15.2313 10.0039 15.3828C10.2581 15.2313 10.4799 15.0951 10.7041 14.9541C11.3649 14.5371 11.9615 14.1227 12.5195 13.6787C14.7553 11.9012 16.0039 9.95823 16.0039 7.75098C16.0038 5.98115 14.8511 4.75098 13.3789 4.75098Z" fill="#FC7827" />

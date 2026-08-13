@@ -1,5 +1,5 @@
 <li class="companies-grid__item">
-    <a href="/pages/company.php" class="companies-grid__link">
+    <a href="/pages/company.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="companies-grid__link">
         <div class="companies-grid__avatar avatar empty">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>

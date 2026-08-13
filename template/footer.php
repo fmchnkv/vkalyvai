@@ -1,8 +1,16 @@
+<?
+$auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+if (strpos($_SERVER['REQUEST_URI'], '/lk/') !== false) {
+    $auth = 'Y';
+}
+$params = $auth !== '' ? '?auth=' . urlencode($auth) : '';
+$queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
+?>
 <footer class="footer">
     <div class="container">
         <div class="footer__row">
             <div class="footer__left">
-                <a href="/" class="footer__logo">
+                <a href="/<?= $params ?>" class="footer__logo">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="50" height="50" rx="25" fill="#FC7827" />
                         <path
@@ -69,16 +77,18 @@
                     <span class="footer__caption">Соискателям</span>
                     <ul class="footer__menu f-menu">
                         <li class="f-menu__item">
-                            <a href="/pages/article.php" class="f-menu__link link">Правила составления резюме</a>
+                            <a href="/pages/article.php<?= $params ?>" class="f-menu__link link">Правила составления резюме</a>
+                        </li>
+                        <? if(!$auth || $auth != 'N'): ?>
+                        <li class="f-menu__item">
+                            <a href="/lk/job_seeker/resume-form.php<?= $params ?>" class="f-menu__link link">Создать резюме</a>
+                        </li>
+                        <? endif; ?>
+                        <li class="f-menu__item">
+                            <a href="/pages/vacancies.php<?= $params ?>" class="f-menu__link link">Каталог вакансий</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/lk/job_seeker/resume-form.php" class="f-menu__link link">Создать резюме</a>
-                        </li>
-                        <li class="f-menu__item">
-                            <a href="/pages/vacancies.php" class="f-menu__link link">Каталог вакансий</a>
-                        </li>
-                        <li class="f-menu__item">
-                            <a href="/pages/companies.php" class="f-menu__link link">Каталог компаний</a>
+                            <a href="/pages/companies.php<?= $params ?>" class="f-menu__link link">Каталог компаний</a>
                         </li>
                     </ul>
                 </div>
@@ -87,13 +97,15 @@
                     <span class="footer__caption">Работодателям</span>
                     <ul class="footer__menu f-menu">
                         <li class="f-menu__item">
-                            <a href="/pages/article-5.php" class="f-menu__link link">Правила размещения вакансии</a>
+                            <a href="/pages/article-5.php<?= $params ?>" class="f-menu__link link">Правила размещения вакансии</a>
                         </li>
+                        <? if(!$auth || $auth != 'N'): ?>
                         <li class="f-menu__item">
-                            <a href="/lk/employer/vacancy-form.php" class="f-menu__link link">Разместить вакансию</a>
+                            <a href="/lk/employer/vacancy-form.php<?= $params ?>" class="f-menu__link link">Разместить вакансию</a>
                         </li>
+                        <? endif; ?>
                         <li class="f-menu__item">
-                            <a href="/pages/rezumes.php" class="f-menu__link link">Каталог резюме</a>
+                            <a href="/pages/rezumes.php?client=Y<?= $queryParams ?>" class="f-menu__link link">Каталог резюме</a>
                         </li>
                     </ul>
                 </div>
@@ -102,16 +114,16 @@
                     <span class="footer__caption">Вкалывай</span>
                     <ul class="footer__menu f-menu">
                         <li class="f-menu__item">
-                            <a href="/pages/about.php" class="f-menu__link link">О компании</a>
+                            <a href="/pages/about.php<?= $params ?>" class="f-menu__link link">О компании</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/help.php" class="f-menu__link link">Помощь</a>
+                            <a href="/pages/help.php<?= $params ?>" class="f-menu__link link">Помощь</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/faq.php" class="f-menu__link link">Вопрос ответ</a>
+                            <a href="/pages/faq.php<?= $params ?>" class="f-menu__link link">Вопрос ответ</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/contacts.php" class="f-menu__link link">Контакты</a>
+                            <a href="/pages/contacts.php<?= $params ?>" class="f-menu__link link">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -121,8 +133,8 @@
         <div class="footer__bottom">
             <p class="footer__copyright"><?= date('Y') ?> Права защищены</p>
             <div class="footer__links">
-                <a href="/pages/privacy.php" class="link">Политика конфиденциальности</a>
-                <a href="/pages/legal.php" class="link">Пользовательское соглашение</a>
+                <a href="/pages/privacy.php<?= $params ?>" class="link">Политика конфиденциальности</a>
+                <a href="/pages/legal.php<?= $params ?>" class="link">Пользовательское соглашение</a>
             </div>
         </div>
     </div>

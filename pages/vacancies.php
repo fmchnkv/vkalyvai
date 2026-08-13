@@ -1,12 +1,13 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
 <?php 
 $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
+$params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
 ?>
 <div class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
@@ -31,13 +32,13 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
 
                 <ul class="catalog-nav__tabs tabs">
                     <li class="tabs__item">
-                        <a href="/pages/vacancies.php" class="tabs__link tab active">Вакансии</a>
+                        <a href="/pages/vacancies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab active">Вакансии</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/rezumes.php" class="tabs__link tab">Резюме</a>
+                        <a href="/pages/rezumes.php?client=Y<?= $params ? '&' . $params : ''; ?>" class="tabs__link tab">Резюме</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/companies.php" class="tabs__link tab">Компании</a>
+                        <a href="/pages/companies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab">Компании</a>
                     </li>
                 </ul>
 
@@ -56,6 +57,9 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
             </div>
 
             <form class="catalog-nav__form inline-form">
+                <? if($auth && $auth == 'N'): ?>
+                <input type="hidden" name="auth" value="N">
+                <? endif; ?>
                 <div class="inline-form__row">
                     <div class="inline-form__input-wrapper">
                         <label class="inline-form__label field">
@@ -269,7 +273,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
             </div>
         </div>
 
-        <ul class="catalog__list offers-grid js-list" data-id="vacancies">
+        <ul class="catalog__list offers-grid js-list" data-id="vacancies<?= $auth && $auth == 'N' ? '_empty' : ''; ?>">
             <? for ($i = 0; $i < 4; $i++) {
                 if ($auth && $auth == 'N') {                  
                     include $_SERVER["DOCUMENT_ROOT"] . '/include/vacancy-item_empty.php';

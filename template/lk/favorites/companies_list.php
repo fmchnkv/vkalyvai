@@ -4,7 +4,7 @@ $uri = $_SERVER['REQUEST_URI'];
 <div class="catalog__list companies-grid js-list" data-id="companies">
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -44,7 +44,7 @@ $uri = $_SERVER['REQUEST_URI'];
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -83,7 +83,7 @@ $uri = $_SERVER['REQUEST_URI'];
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -122,7 +122,7 @@ $uri = $_SERVER['REQUEST_URI'];
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -161,7 +161,7 @@ $uri = $_SERVER['REQUEST_URI'];
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >
@@ -200,7 +200,7 @@ $uri = $_SERVER['REQUEST_URI'];
     </div>
     <div class="lk-card__wrapper">
         <div class="companies-grid__item lk-card">
-            <a href="/pages/company.php" class="companies-grid__link">
+            <a href="/pages/company.php?auth=Y" class="companies-grid__link">
                 <div class="companies-grid__avatar avatar empty">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g >

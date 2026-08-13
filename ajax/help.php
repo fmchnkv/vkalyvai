@@ -1,6 +1,10 @@
-<? for ($i = 0; $i < 12; $i++) : ?>
+<?php
+$requestData = json_decode(file_get_contents('php://input'), true) ?: [];
+$auth = isset($requestData['auth']) ? $requestData['auth'] : '';
+for ($i = 0; $i < 12; $i++) :
+?>
     <li class="cards__item">
-        <a href="/pages/article.php" class="card card_help">
+        <a href="/pages/article.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="card card_help">
             <div class="card__top">
                 <span class="card__label tag tag_light">Соискателю</span>
                 <span class="card__date tag">26.03.2026</span>

@@ -113,6 +113,7 @@
 }
 .offers-list__content {
   margin-bottom: 16px;
+  display: block;
 }
 @media screen and (min-width: 1441px) {
   .offers-list__content {

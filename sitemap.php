@@ -4,7 +4,7 @@
     <div class="container">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item breadcrumbs__item_home">
-                <a href="/" class="link">Главная</a>
+                <a href="/<?= isset($auth) && $auth == 'N' ? '?auth=N' : ''; ?>" class="link">Главная</a>
                 <span>/</span>
             </li>
             <li class="breadcrumbs__item current">
@@ -25,9 +25,9 @@ $arMenu = [
     '/pages/vacancies.php?auth=N' => 'Каталог вакансий (неавторизованный)',
     'pages/vacancy.php' => 'Вакансия',
     'pages/vacancy.php?auth=N' => 'Вакансия (неавторизованный)',
-    '/pages/rezumes.php' => 'Каталог резюме',
-    '/pages/rezumes.php?auth=N' => 'Каталог резюме (неавторизованный)',
-    'pages/rezume.php' => 'Резюме',
+    '/pages/rezumes.php?client=Y' => 'Каталог резюме',
+    '/pages/rezumes.php?client=Y&auth=N' => 'Каталог резюме (неавторизованный)',
+    'pages/rezume.php?client=Y' => 'Резюме',
     '/pages/companies.php' => 'Каталог компаний',
     'pages/company.php' => 'Компания',
     '/pages/about.php' => 'О нас',

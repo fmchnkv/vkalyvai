@@ -66,6 +66,9 @@ if (strpos($uri, '/chats/') !== false) {
     $auth = 'Y';
 }
 
+$authParam = $auth !== '' ? '?auth=' . urlencode($auth) : '';
+$authQueryParam = $auth !== '' ? '&auth=' . urlencode($auth) : '';
+
 $authMobileMenuItems = str_contains($uri, 'moderator')
     ? [
         [
@@ -174,7 +177,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
             <div class="container">
                 <div class="header__row">
                     <? if ($_SERVER['PHP_SELF'] != '/index.php'): ?>
-                        <a href="/" class="header__logo">
+                        <a href="/<?= $authParam ?>" class="header__logo">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="50" height="50" rx="25" fill="#FC7827" />
                                 <path
@@ -200,20 +203,20 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                 <ul class="nav__list">
                                     <? if ($client && $client == 'Y'): ?>
                                         <li class="nav__item">
-                                            <a href="/pages/rezumes.php" class="nav__link link">Поиск резюме</a>
+                                            <a href="/pages/rezumes.php?client=Y<?= $authQueryParam ?>" class="nav__link link">Поиск резюме</a>
                                         </li>
                                     <? else: ?>
                                         <li class="nav__item">
-                                            <a href="/pages/vacancies.php" class="nav__link link">Поиск вакансий</a>
+                                            <a href="/pages/vacancies.php<?= $authParam ?>" class="nav__link link">Поиск вакансий</a>
                                         </li>
                                     <? endif; ?>
 
                                     <li class="nav__item">
-                                        <a href="/lk/employer/responces.php" class="nav__link link">Отклики</a>
+                                        <a href="/lk/employer/responces.php<?= $authParam ?>" class="nav__link link">Отклики</a>
                                     </li>
 
                                     <li class="nav__item">
-                                        <a href="/pages/help.php" class="nav__link link">Помощь</a>
+                                        <a href="/pages/help.php<?= $authParam ?>" class="nav__link link">Помощь</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -235,7 +238,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                     </svg>
                                     <span>Поиск <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></span>
                                 </a>
-                                <a href="/chats/index.php<?= str_contains($uri, 'moderator') ? '?moderator=Y' : ((str_contains($uri, 'employer') || str_contains($uri, 'client')) ? '?client=Y' : ''); ?>" class="btn btn_light btn_has-icon lk-chat">
+                                <a href="/chats/index.php<?= str_contains($uri, 'moderator') ? '?moderator=Y&auth=Y' : ((str_contains($uri, 'employer') || str_contains($uri, 'client')) ? '?client=Y&auth=Y' : '?auth=Y'); ?>" class="btn btn_light btn_has-icon lk-chat">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g>
@@ -250,7 +253,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                         </defs>
                                     </svg>
                                 </a>
-                                <a href="/lk/<?= $client && $client == 'Y' ? 'employer' : 'job_seeker'; ?>/index.php" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
+                                <a href="/lk/<?= $client && $client == 'Y' ? 'employer' : 'job_seeker'; ?>/index.php?auth=Y" class="btn btn_size-m btn_neutral btn_has-icon lk-btn">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g>
@@ -267,10 +270,10 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                     <span>Профиль</span>
                                 </a>
                                 <? if ($client && $client == 'Y'): ?>
-                                    <a href="/lk/employer/vacancy-form.php"
+                                    <a href="/lk/employer/vacancy-form.php?auth=Y"
                                         class="btn btn_size-m btn_secondary m-none lk-create-link">Создать вакансию</a>
                                 <? else: ?>
-                                    <a href="/lk/job_seeker/resume-form.php"
+                                    <a href="/lk/job_seeker/resume-form.php?auth=Y"
                                         class="btn btn_size-m btn_secondary m-none lk-create-link">Создать резюме</a>
                                 <? endif; ?>
 
@@ -351,12 +354,12 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                             </button>
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a href="/"
+                                    <a href="/<?= $auth && $auth == 'N' ? '?auth=N' : ''; ?>"
                                         class="nav__link link <?= ($client && $client == 'Y') ? '' : 'active' ?>">Соискателю</a>
                                 </li>
 
                                 <li class="nav__item">
-                                    <a href="/?client=Y"
+                                    <a href="/?client=Y<?= $auth && $auth == 'N' ? '&auth=N' : ''; ?>"
                                         class="nav__link link <?= ($client && $client == 'Y') ? 'active' : '' ?>">Работодателю</a>
                                 </li>
                             </ul>
@@ -379,11 +382,12 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                 </svg>
                                 <span>Войти</span>
                             </a>
+
                             <? if ($client && $client == 'Y'): ?>
-                                <a href="/lk/employer/vacancy-form.php" class="btn btn_size-s btn_secondary m-none">Создать
+                                <a href="<?= isset($auth) && $auth == 'N' ? 'javascript:void(0)' : '/lk/employer/vacancy-form.php'; ?>" <?= isset($auth) && $auth == 'N' ? 'data-call-modal="registration_2"' : ''; ?> class="btn btn_size-s btn_secondary m-none">Создать
                                     вакансию</a>
                             <? else: ?>
-                                <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-s btn_secondary m-none">Создать
+                                <a href="<?= isset($auth) && $auth == 'N' ? 'javascript:void(0)' : '/lk/job_seeker/resume-form.php'; ?>" <?= isset($auth) && $auth == 'N' ? 'data-call-modal="registration_2"' : ''; ?> class="btn btn_size-s btn_secondary m-none">Создать
                                     резюме</a>
                             <? endif; ?>
 
@@ -410,37 +414,37 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
             <div class="burger-menu">
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item">
-                        <a href="/pages/vacancies.php" class="link">Каталог <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></a>
+                        <a href="<?= $client && $client == 'Y' ? '/pages/rezumes.php?client=Y' . $authQueryParam : '/pages/vacancies.php' . $authParam; ?>" class="link">Каталог <?= $client && $client == 'Y' ? 'резюме' : 'вакансий'; ?></a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/companies.php" class="link">Каталог компаний</a>
+                        <a href="/pages/companies.php<?= $authParam ?>" class="link">Каталог компаний</a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/article.php" class="link">Правила <?= $client && $client == 'Y' ? 'размещения вакансии' : 'составления резюме'; ?></a>
+                        <a href="/pages/article.php<?= $authParam ?>" class="link">Правила <?= $client && $client == 'Y' ? 'размещения вакансии' : 'составления резюме'; ?></a>
                     </li>
                     <? if ($client && $client == 'Y'): ?>
                         <li class="burger-menu__item">
-                            <a href="/lk/employer/vacancy-form.php" class="btn btn_size-m btn_primary">Создать
+                            <a href="/lk/employer/vacancy-form.php?auth=Y" class="btn btn_size-m btn_primary">Создать
                                 вакансию</a>
                         </li>
                     <? else: ?>
                         <li class="burger-menu__item">
-                            <a href="/lk/job_seeker/resume-form.php" class="btn btn_size-m btn_primary">Создать резюме</a>
+                            <a href="/lk/job_seeker/resume-form.php?auth=Y" class="btn btn_size-m btn_primary">Создать резюме</a>
                         </li>
                     <? endif; ?>
                 </ul>
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item">
-                        <a href="/pages/about.php" class="link">О компании</a>
+                        <a href="/pages/about.php<?= $authParam ?>" class="link">О компании</a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/help.php" class="link">Помощь</a>
+                        <a href="/pages/help.php<?= $authParam ?>" class="link">Помощь</a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/faq.php" class="link">Вопрос ответ</a>
+                        <a href="/pages/faq.php<?= $authParam ?>" class="link">Вопрос ответ</a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/contacts.php" class="link">Контакты</a>
+                        <a href="/pages/contacts.php<?= $authParam ?>" class="link">Контакты</a>
                     </li>
                     <? if ($auth && $auth == 'Y'): ?>
                         <li class="burger-menu__item">
@@ -456,7 +460,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                 <ul class="auth-mobile-menu__row">
                     <?php foreach ($authMobileMenuItems as $item): ?>
                         <li class="auth-mobile-menu__item <?= str_contains($uri, $item['href']) ? 'active' : ''; ?> <?= $item['classes'] ?>">
-                            <a href="<?= $item['href'] ?>" class="btn">
+                            <a href="<?= $item['href'] . (str_contains($item['href'], '?') ? $authQueryParam : $authParam) ?>" class="btn">
                                 <?= $item['icon'] ?>
                             </a>
                             <span><?= $item['label'] ?></span>

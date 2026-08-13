@@ -17,17 +17,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 1 — непрочитанное, приглашение</a>
+                <div class="responces-title">Вакансия 1 — непрочитанное, приглашение</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
@@ -47,17 +47,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 2 — непрочитанное, отказ</a>
+                <div class="responces-title">Вакансия 2 — непрочитанное, отказ</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="approve">
         <div class="card-header responces-item__header">
@@ -77,17 +77,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 3 — непрочитанное, приглашение</a>
+                <div class="responces-title">Вакансия 3 — непрочитанное, приглашение</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
@@ -107,17 +107,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 4 — непрочитанное, отказ</a>
+                <div class="responces-title">Вакансия 4 — непрочитанное, отказ</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="approve">
         <div class="card-header responces-item__header">
@@ -137,17 +137,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 5 — непрочитанное, приглашение</a>
+                <div class="responces-title">Вакансия 5 — непрочитанное, приглашение</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
     <div class="lk-card responces-list__item" data-viewed="no-viewed" data-sorted="reject">
         <div class="card-header responces-item__header">
@@ -167,17 +167,17 @@
                 </svg>
             </button>
         </div>
-        <div class="responces-item__body">
+        <a href="/pages/vacancy.php?auth=Y" class="responces-item__body">
             <div class="responces-item__icon">
                 <img src="/images/resp_avatar.png" alt="">
             </div>
             <div class="responces-item__content">
-                <a href="/pages/vacancy.php">Вакансия 6 — непрочитанное, отказ</a>
+                <div class="responces-title">Вакансия 6 — непрочитанное, отказ</div>
                 <p>Название компании</p>
                 <span>01.04.2026</span>
             </div>
-        </div>
-        <a href="/chats/index.php" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
+        </a>
+        <a href="/chats/index.php?auth=Y" class="responces-item__btn btn btn_primary btn_size-s">Перейти в чат</a>
     </div>
 </div>
 <? include $_SERVER["DOCUMENT_ROOT"] . '/include/pagination.php'; ?>

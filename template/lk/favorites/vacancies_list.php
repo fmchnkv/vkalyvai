@@ -5,7 +5,8 @@ $uri = $_SERVER['REQUEST_URI'];
 <div class="vacancies-list grid-list">
     <div class="lk-card__wrapper">
         <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -25,6 +26,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
@@ -64,7 +66,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <?php if (str_contains($uri, '/lk/job_seeker/favorite.php')) require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/favorite_notice.php"); ?>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -84,6 +87,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
@@ -121,7 +125,8 @@ $uri = $_SERVER['REQUEST_URI'];
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -141,6 +146,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
@@ -178,7 +184,8 @@ $uri = $_SERVER['REQUEST_URI'];
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -198,6 +205,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
@@ -235,7 +243,8 @@ $uri = $_SERVER['REQUEST_URI'];
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -255,6 +264,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
@@ -292,7 +302,8 @@ $uri = $_SERVER['REQUEST_URI'];
         </div>
     </div>
     <div class="offers-grid__item lk-card">
-        <a href="/pages/vacancy.php" class="offers-grid__title">Оператор call-центра со знанием немецкого языка</a>
+        <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
+            <div class="offers-grid__title">Оператор call-центра со знанием немецкого языка</div>
         <span class="offers-grid__sale">от 100 000 ₽</span>
         <ul class="offers-grid__tags tags">
             <li class="tags__item tag tag_small">Полная занятость</li>
@@ -312,6 +323,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <p class="offers-grid__description">Проектирование дизайна и участие в процессе развития продукта с нуля. Работа
             по улучшению и развитию дизайн-системы компании.<br> Опыт работы в b2b сегменте и опыт работы с нагруженными
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
+        </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>

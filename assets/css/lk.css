@@ -853,13 +853,21 @@
   border-color: #FC7827;
 }
 .lk-card button:not(.btn),
-.lk-card a:not(.btn) {
+.lk-card a:not(.btn):not(:has(div, ul, ol, section, article, header, footer)) {
   transition: color 0.3s ease;
 }
 .lk-card button:not(.btn):hover,
-.lk-card a:not(.btn):hover {
+.lk-card a:not(.btn):not(:has(div, ul, ol, section, article, header, footer)):hover {
   color: #FC7827;
   transition: color 0.3s ease;
+}
+.lk-card a:not(.btn):has(div, ul, ol, section, article, header, footer) {
+  color: inherit;
+}
+.lk-card a:not(.btn):has(div, ul, ol, section, article, header, footer) .link,
+.lk-card a:not(.btn):has(div, ul, ol, section, article, header, footer) .link:hover {
+  color: inherit;
+  border-bottom-color: transparent;
 }
 .lk-card__wrapper {
   display: grid;
@@ -1197,7 +1205,7 @@
   flex-direction: column;
   gap: 8px;
 }
-.lk .responces-item__content a {
+.lk .responces-item__content .responces-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -1210,7 +1218,7 @@
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 1024px) {
-  .lk .responces-item__content a {
+  .lk .responces-item__content .responces-title {
     font-size: 18px;
     line-height: 22px;
   }
@@ -1621,6 +1629,9 @@
     padding: 20px;
     gap: 16px;
   }
+}
+.lk .employer__responces-item > a {
+  padding: 0;
 }
 .lk .employer__responces-item__vacancy {
   font-weight: 500;
@@ -2747,6 +2758,12 @@
 }
 .lk-chat {
   padding: 11px;
+}
+.lk .offers-grid__item > a {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
 }
 .constructor__modal .modal__content {
   overflow-y: auto;
