@@ -1068,7 +1068,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textareaChoices.forEach(choice => {
             choice.addEventListener('click', () => {
                 let parent = choice.closest('.textarea');
-                parent.querySelector('textarea').value = choice.dataset.value;
+                parent.querySelector('textarea').value += choice.dataset.value + ' ';
             });
         });
     }

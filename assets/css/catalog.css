@@ -52,6 +52,12 @@
     flex-direction: column;
   }
 }
+.catalog-nav__inner-employer {
+  flex-direction: row;
+}
+.catalog-nav__inner-employer .catalog-nav__form {
+  width: 100%;
+}
 .catalog-nav__actions {
   display: flex;
   align-items: center;
@@ -266,14 +272,9 @@
   font-weight: 600;
 }
 .catalog {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
-  .catalog {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .catalog {
     margin-bottom: 40px;
   }

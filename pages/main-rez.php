@@ -13,8 +13,8 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
             <div class="main-hero__form-wrapper">
                 <form action="/pages/rezumes.php" method="GET" class="main-hero__form">
                     <input type="hidden" name="client" value="Y">
-                    <? if ($auth && $auth === 'N') : ?>
-                        <input type="hidden" name="auth" value="N">
+                    <? if ($auth) : ?>
+                        <input type="hidden" name="auth" value="<?= $auth; ?>">
                     <? endif; ?>
                     <div class="main-hero__row">
 
@@ -152,7 +152,7 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
             <? else : */?>
                 <div class="offers__nav">
                     <button class="btn btn_outline btn_size-m js-load" data-id="<?= $auth && $auth == 'N' ? 'rezumes_empty' : 'rezumes'; ?>">Показать еще&nbsp;<span>4</span></button>
-                    <a href="/pages/rezumes.php?client=Y<?= $auth && $auth == 'N' ? '&auth=N' : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
+                    <a href="/pages/rezumes.php?client=Y<?= $auth ? '&auth=' . urlencode($auth) : ''; ?>" class="btn btn_primary btn_size-m">Смотреть все резюме</a>
                 </div>
             <? // endif; ?>
         </div>
