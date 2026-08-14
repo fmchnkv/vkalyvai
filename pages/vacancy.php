@@ -50,7 +50,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
 
                     <ul class="companies-grid companies-grid_single">
                         <li class="companies-grid__item">
-                            <a href="/pages/company.php" class="companies-grid__link">
+                            <a href="/pages/company.php<?= $auth ? '?auth='.urldecode($auth) : ''; ?>" class="companies-grid__link">
                                 <div class="companies-grid__avatar avatar empty">
                                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g >
@@ -232,7 +232,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
 
                 <ul class="companies-grid companies-grid_single">
                     <li class="companies-grid__item">
-                        <a href="/pages/company.php" class="companies-grid__link">
+                        <a href="/pages/company.php<?= $auth ? '?auth='.urldecode($auth) : ''; ?>" class="companies-grid__link">
                             <div class="companies-grid__avatar avatar empty">
                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g >
