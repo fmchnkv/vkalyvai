@@ -34,9 +34,11 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
                     <li class="tabs__item">
                         <a href="/pages/vacancies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab active">Вакансии</a>
                     </li>
+                    <? if($auth && $auth == 'N'): ?>
                     <li class="tabs__item">
                         <a href="/pages/rezumes.php?client=Y<?= $params ? '&' . $params : ''; ?>" class="tabs__link tab">Резюме</a>
                     </li>
+                    <? endif; ?>
                     <li class="tabs__item">
                         <a href="/pages/companies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab">Компании</a>
                     </li>
@@ -57,8 +59,8 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
             </div>
 
             <form class="catalog-nav__form inline-form">
-                <? if($auth && $auth == 'N'): ?>
-                <input type="hidden" name="auth" value="N">
+                <? if($auth): ?>
+                <input type="hidden" name="auth" value="<?= $auth; ?>">
                 <? endif; ?>
                 <div class="inline-form__row">
                     <div class="inline-form__input-wrapper">

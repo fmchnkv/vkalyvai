@@ -5,7 +5,7 @@ $client = isset($_GET['client']) ? $_GET['client'] : '';
 $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
 ?>
 
-<? if (($client && $client == 'Y') || ($auth && $auth == 'Y')) : ?>
+<? if ($client && $client == 'Y') : ?>
     <? require($_SERVER["DOCUMENT_ROOT"]."/pages/main-rez.php"); ?>
 <? else : ?>
     <? require($_SERVER["DOCUMENT_ROOT"]."/pages/main-vac.php"); ?>

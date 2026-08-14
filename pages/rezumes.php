@@ -18,8 +18,10 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
 
 <div class="catalog-nav">
 	<div class="container">
-		<div class="catalog-nav__inner">
+		<div class="catalog-nav__inner <?= $auth && $auth != 'N' ? 'catalog-nav__inner-employer' : ''; ?>">
+			
 			<div class="catalog-nav__actions">
+				<? if($auth && $auth == 'N' && $client == 'Y'): ?>
 				<button class="catalog-nav__nav-btn btn btn_outline btn_size-m btn_has-icon">
 					<span>Вакансии</span>
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +42,7 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
 						<a href="/pages/companies.php<?= $params ? '?' . $params : ''; ?>" class="tabs__link tab">Компании</a>
 					</li>
 				</ul>
-
+				<? endif; ?>
 				<button class="catalog-nav__filter-btn btn btn_secondary btn_icon btn_icon-m js-filter-btn">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g>
@@ -56,8 +58,8 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
 			</div>
 
 			<form class="catalog-nav__form inline-form">
-				<? if($auth && $auth == 'N'): ?>
-                <input type="hidden" name="auth" value="N">
+				<? if($auth): ?>
+                <input type="hidden" name="auth" value="<?= $auth; ?>">
                 <? endif; ?>
 				<div class="inline-form__row">
 					<div class="inline-form__input-wrapper">

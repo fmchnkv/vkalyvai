@@ -2371,6 +2371,12 @@ input::placeholder {
     flex-direction: column;
   }
 }
+.catalog-nav__inner-employer {
+  flex-direction: row;
+}
+.catalog-nav__inner-employer .catalog-nav__form {
+  width: 100%;
+}
 .catalog-nav__actions {
   display: flex;
   align-items: center;

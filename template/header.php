@@ -66,8 +66,13 @@ if (strpos($uri, '/chats/') !== false) {
     $auth = 'Y';
 }
 
+
 $authParam = $auth !== '' ? '?auth=' . urlencode($auth) : '';
+$clientParam = $client !== ''
+    ? ($authParam !== '' ? '&client=' : '?client=') . urlencode($client)
+    : '';
 $authQueryParam = $auth !== '' ? '&auth=' . urlencode($auth) : '';
+
 
 $authMobileMenuItems = str_contains($uri, 'moderator')
     ? [
@@ -177,7 +182,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
             <div class="container">
                 <div class="header__row">
                     <? if ($_SERVER['PHP_SELF'] != '/index.php'): ?>
-                        <a href="/<?= $authParam ?>" class="header__logo">
+                        <a href="/<?= $authParam . $clientParam ?>" class="header__logo">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="50" height="50" rx="25" fill="#FC7827" />
                                 <path
@@ -354,12 +359,12 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                             </button>
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a href="/<?= $auth && $auth == 'N' ? '?auth=N' : ''; ?>"
+                                    <a href="/<?= $auth ? '?auth=' . urlencode($auth) : ''; ?>"
                                         class="nav__link link <?= ($client && $client == 'Y') ? '' : 'active' ?>">Соискателю</a>
                                 </li>
 
                                 <li class="nav__item">
-                                    <a href="/?client=Y<?= $auth && $auth == 'N' ? '&auth=N' : ''; ?>"
+                                    <a href="/?client=Y<?= $auth ? '&auth=' . urlencode($auth) : ''; ?>"
                                         class="nav__link link <?= ($client && $client == 'Y') ? 'active' : '' ?>">Работодателю</a>
                                 </li>
                             </ul>
