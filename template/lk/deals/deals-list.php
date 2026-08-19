@@ -8,6 +8,15 @@ $revisionTooltipText = $isResumeDeals
 $blockedTooltipText = $isResumeDeals
     ? 'Доступ к резюме ограничен из-за нарушения правил платформы.'
     : 'Доступ к вакансии ограничен из-за нарушения правил платформы.';
+
+$editUri = '';
+if(str_contains($uri, 'employer')) {
+    $editUri = '/employer/vacancy-form.php';
+} elseif(str_contains($uri, 'job_seeker')) {
+    $editUri = '/job_seeker/resume-form.php';
+} else {
+    $editUri = 'javascript:void(0)';
+}
 ?>
 <div class="deals-list grid-list">
     <div class="deals-item lk-card ">
@@ -17,7 +26,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -30,7 +39,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -86,7 +95,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -99,7 +108,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -160,7 +169,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -173,7 +182,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -222,7 +231,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -235,7 +244,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -284,7 +293,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -297,7 +306,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -353,7 +362,7 @@ $blockedTooltipText = $isResumeDeals
             </div>
             <?php if(!str_contains($uri, 'moderator')): ?>
             <div class="buttons-wrapper">
-                <button class="deals-item__button deals-item__button--edit">
+                <a href="/lk<?= $editUri ?>?edit_mode=Y" class="deals-item__button deals-item__button--edit">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
@@ -366,7 +375,7 @@ $blockedTooltipText = $isResumeDeals
                             </clipPath>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <button class="deals-item__button deals-item__button--delete" data-call-modal="action-remove">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>

@@ -501,7 +501,21 @@
                                 <span class="checkbox__label">По всему миру</span>
                             </label>
                         </div>
-                    </div>                
+                    </div> 
+                    
+                    <div class="filter__group filter-group">
+                        <span class="filter-group__title">Участник СВО</span>
+                        <div class="filter-group__checkboxes">
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="svo" value="1">
+                                <span class="checkbox__label">Да</span>
+                            </label>
+                            <label class="filter-group__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox" name="svo" value="0">
+                                <span class="checkbox__label">Нет</span>
+                            </label>
+                        </div>
+                    </div> 
 
                 </div>
 

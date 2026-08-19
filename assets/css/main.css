@@ -3815,6 +3815,48 @@ input::placeholder {
   line-height: 16px;
   color: #FC7827;
 }
+.responce-modal .modal__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.responce-modal .modal__inner .responce-modal__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .responce-modal .modal__inner .responce-modal__title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .responce-modal .modal__inner .responce-modal__title {
+    font-size: 24px;
+  }
+}
+.responce-modal .modal__inner .responce-modal__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  color: #999999;
+}
+.responce-modal .modal__inner .responce-modal__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.responce-modal .modal__inner .multiple-select__input {
+  padding: 20px 16px;
+}
+.responce-modal .modal__inner .multiple-select__option {
+  border-radius: 8px;
+  border: 1px solid #EBEBEB;
+}
+.responce-modal .modal__inner .multiple-select__icon {
+  bottom: 50%;
+  transform: translateY(50%);
+}
 .header {
   position: fixed;
   top: 0;

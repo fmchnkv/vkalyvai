@@ -22,7 +22,7 @@
             интерфейсами. Опыт работы с дизайн системами и библиотеками...</p>
     </a>
     <div class="offers-grid__bottom">
-        <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+        <button <?= isset($auth) && $auth === 'Y' ? 'data-call-modal="quick_responce"' : ''; ?> class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
         <div class="offers-grid__actions offer-actions">
             <button class="like icon-button" data-call-modal="favorite-comment">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

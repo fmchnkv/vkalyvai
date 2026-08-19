@@ -87,7 +87,7 @@
     </a>
 
     <div class="offers-list__bottom">
-        <button class="offers-list__btn btn btn_light btn_size-m">Связаться</button>
+        <button <?= isset($auth) && $auth === 'Y' ? 'data-call-modal="quick_call"' : ''; ?> class="offers-list__btn btn btn_light btn_size-m">Связаться</button>
         <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__link icon-link">
             <span>Смотреть резюме</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

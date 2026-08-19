@@ -2477,6 +2477,7 @@
                     &-wrapper {
                         margin-bottom: 16px;
                         border-radius: @border-radius-m;
+                        padding: 16px 20px;
                         .remove-skill {
                             font-size: 14px;
                         }
@@ -2560,6 +2561,14 @@
                         .media-min(1441px, {
                             padding: 16px !important;
                         });
+
+                        &[type="text"] {
+                            color: @default;
+
+                            &::placeholder {
+                                color: @neutral;
+                            }
+                        }
                     }
 
                     &.driver-item {
@@ -2741,9 +2750,9 @@
                     .clamp-text(1);
                     word-break: break-all;
                 }
-
+                
                 .field_text.lk__input-wrapper {
-                    padding: 12px 20px;
+                    padding: 0;
                 }
             }
             &-group {

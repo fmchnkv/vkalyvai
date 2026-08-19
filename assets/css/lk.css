@@ -2344,6 +2344,7 @@
 .lk .constructor__forms .vacancy-form__skills-wrapper {
   margin-bottom: 16px;
   border-radius: 16px;
+  padding: 16px 20px;
 }
 .lk .constructor__forms .vacancy-form__skills-wrapper .remove-skill {
   font-size: 14px;
@@ -2419,6 +2420,12 @@
   .lk .constructor__forms .step-form .lk__input-wrapper input {
     padding: 16px !important;
   }
+}
+.lk .constructor__forms .step-form .lk__input-wrapper input[type="text"] {
+  color: #232323;
+}
+.lk .constructor__forms .step-form .lk__input-wrapper input[type="text"]::placeholder {
+  color: #999999;
 }
 .lk .constructor__forms .step-form .lk__input-wrapper.driver-item input {
   padding: 11px 16px;
@@ -2593,7 +2600,7 @@
   word-break: break-all;
 }
 .lk .constructor__inputs-set .field_text.lk__input-wrapper {
-  padding: 12px 20px;
+  padding: 0;
 }
 .lk .constructor__inputs-group .constructor-select {
   margin-bottom: 8px;
