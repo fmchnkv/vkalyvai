@@ -131,7 +131,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
@@ -337,7 +337,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
@@ -542,7 +542,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
@@ -745,7 +745,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
@@ -948,7 +948,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>
@@ -1151,7 +1151,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
                                 <span>Перейти в чат</span>
                             </a>
-                            <a href="javascript:void(0)" class="btn btn_light btn_size-l btn_has-icon">
+                            <a href="javascript:void(0)" data-call-modal="quick_call" class="btn btn_light btn_size-l btn_has-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.7529 9.25098H15.2529V10.751H10.7529V15.251H9.25293V10.751H4.75293V9.25098H9.25293V4.75098H10.7529V9.25098Z" fill="#5DB634"/>
                                     <defs>

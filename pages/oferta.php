@@ -20,13 +20,13 @@
             <div class="privacy__sidebar">
                 <ul class="privacy__tabs tabs">
                     <li class="tabs__item">
-                        <a href="/pages/privacy.php" class="tabs__link tab">Политика конфиденциальности</a>
+                        <a href="/pages/privacy.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="tabs__link tab">Политика конфиденциальности</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/legal.php" class="tabs__link tab">Пользовательское соглашение</a>
+                        <a href="/pages/legal.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="tabs__link tab">Пользовательское соглашение</a>
                     </li>
                     <li class="tabs__item">
-                        <a href="/pages/oferta.php" class="tabs__link tab active">Публичная оферта</a>
+                        <a href="/pages/oferta.php<?= isset($auth) && $auth !== '' ? '?auth=' . urlencode($auth) : ''; ?>" class="tabs__link tab active">Публичная оферта</a>
                     </li>
                 </ul>
             </div>

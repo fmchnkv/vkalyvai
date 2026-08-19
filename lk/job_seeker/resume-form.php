@@ -1,4 +1,17 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
+<?
+$editMode = isset($_GET['edit_mode']) ? $_GET['edit_mode'] : '';
+$fill = isset($_GET['fill']) ? $_GET['fill'] : '';
+if($editMode && $editMode == 'Y') {
+    $fill = 'Y';
+    $checked = 'checked=""';
+    $name = 'Иван';
+    $secondName = 'Иванов';
+    $patron = 'Иванович';
+    $city = 'Москва';
+    $address = 'Шереметьевская ул., 20, Москва';
+}
+?>
 <section class="lk constructor">
     <div class="container">
         <!-- Шаги -->
@@ -22,7 +35,7 @@
                 <div class="constructor__inputs-list grid-list">
                     <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                         <label class="filter-group__checkbox checkbox">
-                            <input class="checkbox__input" type="checkbox" name="profession" value="1">
+                            <input class="checkbox__input" type="checkbox" <?= $checked ?? ''; ?> name="profession" value="1">
                             <span class="checkbox__label">Пункт из списка</span>
                         </label>
                     </div>
@@ -56,13 +69,13 @@
                     <span class="subcaption">ФИО</span>
                     <div class="constructor__inputs-list grid-list grid-3-columns">
                         <div class="lk__input-wrapper">
-                            <input type="text" value="" name="secondName" placeholder="Фамилия">
+                            <input type="text" value="<?= $secondName ?? ''; ?>" name="secondName" placeholder="Фамилия">
                         </div>
                         <div class="lk__input-wrapper">
-                            <input type="text" value="" name="name" placeholder="Имя">
+                            <input type="text" value="<?= $name ?? ''; ?>" name="name" placeholder="Имя">
                         </div>
                         <div class="lk__input-wrapper">
-                            <input type="text" value="" name="patronymic" placeholder="Отчество">
+                            <input type="text" value="<?= $patron ?? ''; ?>" name="patronymic" placeholder="Отчество">
                         </div>
                     </div>
                 </div>
@@ -462,7 +475,7 @@
             <form class="grid-list step-form" id="step-form-education" data-form="3" data-title="Образование"
                 method="post">
                 <div class="education-wrapper grid-list">
-                    <?php if(isset($_GET['fill']) && $_GET['fill'] == 'Y'): ?>
+                    <?php if($fill && $fill == 'Y'): ?>
                     <div class="institutions-list grid-list">
                         <label class="lk-bubble lk-bubble__education checkbox institutions-bubble big-bubble">
                             <input class="checkbox__input" type="checkbox" name="institution" value="1" checked>

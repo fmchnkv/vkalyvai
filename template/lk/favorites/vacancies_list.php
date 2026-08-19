@@ -29,7 +29,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>
@@ -90,7 +90,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>
@@ -149,7 +149,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>
@@ -208,7 +208,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>
@@ -267,7 +267,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>
@@ -326,7 +326,7 @@ $uri = $_SERVER['REQUEST_URI'];
         </a>
         <div class="offers-grid__bottom">
             <?php if (str_contains($uri, 'job_seeker')): ?>
-                <button class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
+                <button data-call-modal="quick_responce" class="btn btn_light btn_size-m js-vacancy-apply">Откликнуться</button>
             <?php elseif (str_contains($uri, 'employer')): ?>
                 <button class="btn btn_light btn_size-m js-vacancy-apply">Подробнее</button>
             <? endif; ?>

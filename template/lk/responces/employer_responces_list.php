@@ -1,9 +1,9 @@
 <div class="employer__responces-list grid-list">
-    <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="approve">
+    <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="approve" data-vacancy-id="vacancy-1">
         <div class="employer__responces-item lk-card card-viewed-not">
             <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
                 <span class="employer__responces-item__status state neutral">Не просмотрен</span>
-                <div class="employer__responces-item__vacancy">Название вакансии</div>
+                <div class="employer__responces-item__vacancy">Название вакансии 1</div>
                 <div class="employer__responces-item__body">
                     <div class="employer__responces-item__title">
                         <div class="offer-header__title">
@@ -118,11 +118,11 @@
         </div>
 
     </div>
-    <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="reject">
+    <div class="employer__card-data-wrapper" data-viewed="no-viewed" data-sorted="reject" data-vacancy-id="vacancy-2">
         <div class="employer__responces-item lk-card card-reject">
             <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state blocked">Отказ</span>
-            <div class="employer__responces-item__vacancy">Название вакансии</div>
+            <div class="employer__responces-item__vacancy">Название вакансии 2</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <div class="offer-header__title">
@@ -316,7 +316,7 @@
 
 
     </div>
-    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="approve">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="approve" data-vacancy-id="vacancy-3">
         <div class="employer__responces-item lk-card card-approve">
             <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <div class="state-wrapper">
@@ -324,7 +324,7 @@
                 <span class="responces-item__count">1</span>
             </div>
 
-            <div class="employer__responces-item__vacancy">Название вакансии</div>
+            <div class="employer__responces-item__vacancy">Название вакансии 3</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <div class="offer-header__title">
@@ -517,11 +517,11 @@
         </div>
     </div>
 
-    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject" data-vacancy-id="vacancy-4">
         <div class="employer__responces-item lk-card card-reject">
             <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state blocked">Отказ</span>
-            <div class="employer__responces-item__vacancy">Название вакансии</div>
+            <div class="employer__responces-item__vacancy">Название вакансии 4</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <div class="offer-header__title">
@@ -713,11 +713,11 @@
         </div>
     </div>
 
-    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject">
+    <div class="employer__card-data-wrapper" data-viewed="viewed" data-sorted="reject" data-vacancy-id="vacancy-5">
         <div class="employer__responces-item lk-card card-viewed">
             <a href="/pages/rezume.php?client=Y&auth=Y" class="employer__responces-item">
             <span class="employer__responces-item__status state neutral_see">Просмотрен</span>
-            <div class="employer__responces-item__vacancy">Название вакансии</div>
+            <div class="employer__responces-item__vacancy">Название вакансии 5</div>
             <div class="employer__responces-item__body">
                 <div class="employer__responces-item__title">
                     <div class="offer-header__title">

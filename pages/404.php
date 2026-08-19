@@ -10,8 +10,8 @@
                 <span class="page-404__subtitle">Страница не найдена</span>
                 <p class="page-404__description">Что то пошло не так, возможно страница с таким адресом <br>удалена или не существует!</p>
                 <div class="page-404__actions">
-                    <a href="/pages/vacancies.php" class="page-404__btn btn btn_primary btn_size-m">Каталог вакансий</a>
-                    <a href="/" class="page-404__btn btn btn_secondary btn_size-m">На главную</a>
+                    <button onclick="history.back()" class="page-404__btn btn btn_primary btn_size-m">Назад</button>
+                    <a href="/<?= $auth ? '?auth="' . $auth . '"' : ''; ?>" class="page-404__btn btn btn_secondary btn_size-m">На главную</a>
                 </div>
             </div>
         </div>

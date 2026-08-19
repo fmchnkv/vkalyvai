@@ -1,4 +1,15 @@
 <? require($_SERVER["DOCUMENT_ROOT"] . "/template/header.php"); ?>
+<?
+$editMode = isset($_GET['edit_mode']) ? $_GET['edit_mode'] : '';
+
+if($editMode && $editMode == 'Y') {
+    $vacancy = 'Начальник отдела';
+    $checked = 'checked=""';
+    $vacancyDescr = 'Описание вакансии для редактирования';
+    $city = 'Москва';
+    $address = 'Шереметьевская ул., 20, Москва';
+}
+?>
 <section class="lk constructor">
     <div class="container">
         <!-- Шаги -->
@@ -16,10 +27,10 @@
                     <span class="subcaption">Название и специальность</span>
                     <div class="constructor__inputs-list grid-list vacancy-form__titles-inputs grid-2-columns">
                         <div class="lk__input-wrapper">
-                            <input type="text" value="" name="vacancyName" placeholder="Название вакансии">
+                            <input type="text" value="<?= $vacancy ?? ''; ?>" name="vacancyName" placeholder="Название вакансии">
                         </div>
                         <div class="lk__input-wrapper">
-                            <input type="text" value="" name="special" placeholder="Специальность">
+                            <input type="text" value="<?= $vacancyDescr ?? ''; ?>" name="special" placeholder="Специальность">
                         </div>
                     </div>
                 </div>
@@ -61,7 +72,7 @@
                     <span class="subcaption">Тип занятости</span>
                     <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="employment_type" value="full">
+                            <input class="radio__input" type="radio" name="employment_type" <?= $checked ?? ''; ?> value="full">
                             <span class="radio__label">Полная занятость</span>
                         </label>
                         <label class="lk__input-radio radio">
@@ -98,7 +109,7 @@
                             <span class="radio__label">15</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="shifts_count" value="30">
+                            <input class="radio__input" type="radio" name="shifts_count" value="20" <?= $checked ?? ''; ?>>
                             <span class="radio__label">20</span>
                         </label>
                         <label class="lk__input-radio radio">
@@ -119,7 +130,7 @@
                         </div>
                         <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                             <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="work_format[]" value="remote">
+                                <input class="checkbox__input" type="checkbox" name="work_format[]" <?= $checked ?? ''; ?> value="remote">
                                 <span class="checkbox__label">Удаленно</span>
                             </label>
                         </div>
@@ -142,7 +153,7 @@
                     <div class="constructor__inputs-list flex-list">
                         <div class="constructor__inputs-checkbox lk-bubble tight-bubble bright-bubble">
                             <label class="filter-group__checkbox checkbox">
-                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" value="tk_rf">
+                                <input class="checkbox__input" type="checkbox" name="employment_registration[]" <?= $checked ?? ''; ?> value="tk_rf">
                                 <span class="checkbox__label">ТК РФ</span>
                             </label>
                         </div>
@@ -177,7 +188,7 @@
                     <span class="subcaption">Город публикации</span>
                     <div class="select" data-id="vacancy-city">
                         <label class="filter-group__input select__input input input_has-icon">
-                            <input class="input__field" type="text" name="vacancy-city" data-id="education" readonly="" placeholder="Укажите один или несколько городов">
+                            <input class="input__field" type="text" value="<?= $city ?? ''; ?>" name="vacancy-city" data-id="education" readonly="" placeholder="Укажите один или несколько городов">
                             <span class="input__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -206,7 +217,7 @@
                     <div class="vacancy-form__map grid-list">
                         <div class="main-hero__input-wrapper main-hero__input-wrapper_text">
                             <label class="main-hero__label field field_text lk__input-wrapper" data-id="vacancy_address">
-                                <input class="field__input js-autocomplete-input" type="text" name="vacancy_address" placeholder="Введите адрес">
+                                <input class="field__input js-autocomplete-input" value="<?= $address ?? ''; ?>" type="text" name="vacancy_address" placeholder="Введите адрес">
                             </label>
                             <div class="field__dropdown js-without-choice" data-id="vacancy_address">
                                 <ul class="field__dropdown-list">
@@ -245,11 +256,11 @@
                     <span class="subcaption">Оплата работы</span>
                     <div class="lk__radio-buttons vacancy-form__radios">
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="payment_amount_type" value="range" checked="">
+                            <input class="radio__input" type="radio" name="payment_amount_type" value="range" <? if(!isset($checked)): ?> checked="" <? endif; ?>>
                             <span class="radio__label">Диапазон</span>
                         </label>
                         <label class="lk__input-radio radio">
-                            <input class="radio__input" type="radio" name="payment_amount_type" value="exact">
+                            <input class="radio__input" type="radio" name="payment_amount_type" value="exact" <?= $checked ?? ''; ?>>
                             <span class="radio__label">Точная сумма</span>
                         </label>
                     </div>
@@ -262,9 +273,9 @@
                                 <input type="text" value="" data-mask="number" name="before" placeholder="До">
                             </div>
                         </div>
-                        <div class="constructor__inputs-list vacancy-form__prices-inputs hidden" data-payment-field="exact">
+                        <div class="constructor__inputs-list vacancy-form__prices-inputs <?= !$editMode || $editMode != 'Y' ? 'hidden' : ''; ?>" data-payment-field="exact">
                             <div class="lk__input-wrapper">
-                                <input type="text" data-mask="number" value="" name="exact_amount" placeholder="Точная сумма" disabled>
+                                <input type="text" data-mask="number" value="<?= $editMode && $editMode == 'Y' ? 100000 : ''; ?>" name="exact_amount" placeholder="Точная сумма" disabled>
                             </div>
                         </div>
                         <div class="constructor__inputs-list grid-list vacancy-form__currency-inputs">

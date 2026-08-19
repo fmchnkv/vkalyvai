@@ -462,6 +462,26 @@ document.addEventListener('DOMContentLoaded', () => {
         multipleSelectOptions.forEach(multipleSelectOption => {
             multipleSelectOption.addEventListener('click', (e) => {
                 e.preventDefault();
+
+                const parent = multipleSelectOption.closest('.multiple-select');
+
+                if (parent.classList.contains('multiple-select_single')) {
+                    parent.querySelectorAll('.multiple-select__option').forEach(option => {
+                        option.classList.remove('active');
+                        option.setAttribute('aria-checked', 'false');
+                    });
+
+                    multipleSelectOption.classList.add('active');
+                    multipleSelectOption.setAttribute('aria-checked', 'true');
+
+                    const title = multipleSelectOption.querySelector('.multiple-select__title');
+                    parent.querySelector('.multiple-select__field').value = title
+                        ? title.textContent.trim()
+                        : multipleSelectOption.dataset.value;
+                    parent.classList.remove('active');
+                    return;
+                }
+
                 multipleSelectOption.classList.toggle('active');
 
                 let curChoices = multipleSelectOption.closest('.multiple-select').querySelectorAll('.multiple-select__option.active');
@@ -482,7 +502,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
 
-                let parent = multipleSelectOption.closest('.multiple-select');
                 let id = parent.dataset.id;
                 let tag = document.querySelectorAll(`.select__tag[data-id="${id}"]`);
 
@@ -1111,14 +1130,20 @@ document.addEventListener('DOMContentLoaded', () => {
     //вызов модалок с кнопок
     //document.querySelectorAll('[data-call-modal]').forEach(button => {
         document.addEventListener('click', function (e) {
-            const callModalBtn = e.target.closest('[data-call-modal]');
+            const responseInviteBtn = e.target.closest(
+                '.employer__card-data-wrapper .buttons-wrapper > .accept__btn:first-of-type, ' +
+                '.employer__card-data-wrapper [data-dropdown-btn="approve"]'
+            );
+            const callModalBtn = e.target.closest('[data-call-modal]')
+                || responseInviteBtn;
             if(!callModalBtn) return;
             e.preventDefault();
 
-            let modal = document.querySelector(`.modal[data-modal="${callModalBtn.dataset.callModal}"]`);
+            const modalName = callModalBtn.dataset.callModal || 'quick_call';
+            let modal = document.querySelector(`.modal[data-modal="${modalName}"]`);
             if (modal) {
                 //ВРЕМЕННОЕ
-                if (callModalBtn.dataset.callModal === 'favorite-comment') {
+                if (modalName === 'favorite-comment') {
                     const favoriteMessage = modal.querySelector('[data-favorite-message]');
                     const favoriteCard = callModalBtn.closest(
                         '.lk-card, .detail, .offers-grid__item, .offers-list__item, .companies-grid__item'
@@ -1143,6 +1168,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
 
+                if (modalName === 'quick_call') {
+                    const responseCard = callModalBtn.closest('.employer__card-data-wrapper');
+                    const vacancyId = responseCard?.dataset.vacancyId;
+                    const vacancySelect = modal.querySelector('.multiple-select_single');
+
+                    if (vacancyId && vacancySelect) {
+                        const vacancyField = vacancySelect.querySelector('.multiple-select__field');
+                        const vacancyOptions = vacancySelect.querySelectorAll('.multiple-select__option');
+                        let selectedVacancy = null;
+
+                        vacancyOptions.forEach(option => {
+                            const isSelected = option.dataset.value === vacancyId;
+
+                            option.classList.toggle('active', isSelected);
+                            option.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+
+                            if (isSelected) {
+                                selectedVacancy = option;
+                            }
+                        });
+
+                        if (vacancyField && selectedVacancy) {
+                            vacancyField.value = selectedVacancy
+                                .querySelector('.multiple-select__title')
+                                ?.textContent.trim() || selectedVacancy.dataset.value;
+                        }
+                    }
+                }
+
                 modal.classList.add('active');
             }
         })
@@ -1153,34 +1207,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const radios = document.querySelectorAll('input[name="contact_type"]');
     const maskInputs = document.querySelectorAll('input[data-mask]');
     const passwordWrappers = document.querySelectorAll('.password-wrapper');
-    let currentMask = null;
 
-    function applyMaskFor(contactInput, type) {
+    function applyMaskFor(contactInput, type, clearValue = false) {
         if (!contactInput || !type) return;
 
-        if (currentMask) {
-            currentMask.remove();
-            currentMask = null;
-        }
+        removeMask(contactInput);
+        let mask = null;
 
         switch (type) {
             case 'tel':
-                currentMask = new Inputmask({ mask: '+7 (999) 999-99-99' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ mask: '+7 (999) 999-99-99' });
                 contactInput.type = 'tel';
                 contactInput.placeholder = '+7 (___) ___-__-__';
                 break;
 
             case 'email':
-                currentMask = new Inputmask({ alias: 'email' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ alias: 'email' });
                 contactInput.type = 'text';
                 contactInput.placeholder = 'name@example.com';
                 break;
 
             case 'inn':
-                currentMask = new Inputmask({ mask: '999999999999' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ mask: '999999999999' });
                 contactInput.type = 'text';
                 contactInput.placeholder = '999999999999';
                 break;
@@ -1197,32 +1245,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     numberMaskOptions.max = Number(contactInput.dataset.max);
                 }
 
-                currentMask = new Inputmask(numberMaskOptions);
-                currentMask.mask(contactInput);
+                mask = new Inputmask(numberMaskOptions);
                 break;
 
             case 'password':
-                currentMask = new Inputmask({ mask: '******************' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ mask: '******************' });
                 contactInput.type = 'password';
                 contactInput.placeholder = 'admin';
                 break;
 
             case 'soc':
-                currentMask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ regex: '^[A-Za-z0-9_.@-]{3,64}$' });
                 contactInput.type = 'text';
                 contactInput.placeholder = 'id221396498';
                 break;
 
             default:
-                currentMask = new Inputmask({ regex: '^[А-Яа-яЁёA-Za-z0-9_.@-\\s]{3,64}$' });
-                currentMask.mask(contactInput);
+                mask = new Inputmask({ regex: '^[А-Яа-яЁёA-Za-z0-9_.@-\\s]{3,64}$' });
                 contactInput.type = 'text';
                 contactInput.placeholder = 'Введите текст';
                 break;
         }
-        contactInput.value = '';
+
+        mask.mask(contactInput);
+
+        if (clearValue) {
+            contactInput.value = '';
+        }
     }
 
     function removeMask(input) {
@@ -1234,7 +1283,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (radios) {
         radios.forEach(r => r.addEventListener('change', (e) => {
-            if (e.target.value) applyMaskFor(contactInput, e.target.value);
+            if (e.target.value) applyMaskFor(contactInput, e.target.value, true);
         }));
     }
 
