@@ -176,7 +176,7 @@ $params = $auth !== '' ? 'auth=' . urlencode($auth) : '';
 				}
 			} else {
 				for ($i = 0; $i < 6; $i++) { 
-					include $_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php';
+					require($_SERVER["DOCUMENT_ROOT"] . '/include/rezume-item.php');
 				}
 			}
 			?>
