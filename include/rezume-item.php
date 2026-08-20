@@ -87,7 +87,11 @@
     </a>
 
     <div class="offers-list__bottom">
-        <button <?= isset($auth) && $auth === 'Y' ? 'data-call-modal="quick_call"' : ''; ?> class="offers-list__btn btn btn_light btn_size-m">Связаться</button>
+        <? if($i == 0): ?>
+            <a href="/chats/index.php?client=Y&auth=Y" class="offers-list__btn btn btn_light btn_size-m">Cвязатья</a>
+        <? else: ?>
+            <button <?= isset($auth) && $auth === 'Y' ? 'data-call-modal="quick_call"' : ''; ?> class="offers-list__btn btn btn_light btn_size-m">Связаться</button>
+        <? endif; ?>
         <a href="/pages/rezume.php?client=Y<?= isset($auth) && $auth !== '' ? '&auth=' . urlencode($auth) : ''; ?>" class="offers-list__link icon-link">
             <span>Смотреть резюме</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
