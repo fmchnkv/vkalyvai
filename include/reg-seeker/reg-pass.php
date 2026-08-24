@@ -38,7 +38,7 @@
 
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input js-checkbox-accept" type="checkbox" required>
-        <span class="checkbox__label">Регистрируясь, я даю <a href="/pages/privacy.php" target="_blank">согласие на обработку персональных данных</a> и принимаю условия <a href="/pages/legal.php">Пользовательского соглашения</a></span>
+        <span class="checkbox__label">Регистрируясь, я даю <a href="/pages/privacy.php?auth=N" target="_blank">согласие на обработку персональных данных</a> и принимаю условия <a href="/pages/legal.php?auth=N">Пользовательского соглашения</a></span>
     </label>
     <label class="auth-reg__checkbox checkbox">
         <input class="checkbox__input" type="checkbox">

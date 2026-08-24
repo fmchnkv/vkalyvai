@@ -1305,11 +1305,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnShow.addEventListener('click', function (e) {
                     e.preventDefault();
 
-                    if (input.type == 'text') {
-                        input.type = 'password';
-                    } else {
-                        input.type = 'text';
-                    }
+                    const shouldShowPassword = input.type === 'password';
+
+                    input.type = shouldShowPassword ? 'text' : 'password';
+                    btnShow.setAttribute(
+                        'aria-label',
+                        shouldShowPassword ? 'Скрыть пароль' : 'Показать пароль'
+                    );
+                    btnShow.setAttribute('aria-pressed', String(shouldShowPassword));
                 });
             }
         });
@@ -2604,6 +2607,30 @@ document.addEventListener('DOMContentLoaded', () => {
             animation: 'scale',
             theme: 'moderation',
             hideOnClick: true,
+        });
+    }
+
+    const profileClampTooltipFields = document.querySelectorAll(
+        '[data-profile-clamp-tooltips] .tight-bubble p'
+    );
+
+    if (profileClampTooltipFields.length && typeof tippy === 'function') {
+        const isTextClamped = (element) => (
+            element.scrollWidth > element.clientWidth
+            || element.scrollHeight > element.clientHeight
+        );
+
+        tippy(profileClampTooltipFields, {
+            content: '',
+            placement: 'top',
+            animation: 'scale',
+            onShow(instance) {
+                if (!isTextClamped(instance.reference)) {
+                    return false;
+                }
+
+                instance.setContent(instance.reference.textContent.trim());
+            },
         });
     }
 

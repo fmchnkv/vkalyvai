@@ -1,7 +1,7 @@
-<div class="lk__input-grid grid-3-columns">
+<div class="grid-3-columns birthday-date">
     <div class="select" data-id="day">
         <label class="filter-group__input select__input input input_has-icon">
-            <input class="input__field" type="text" name="day" <?= $editMode && $editMode == 'Y' ? 'value="9"' : ''; ?>  data-id="day" readonly placeholder="День">
+            <input class="input__field" type="text" name="day" <?= isset($editMode) && $editMode == 'Y' ? 'value="9"' : ''; ?>  data-id="day" readonly placeholder="День">
             <span class="input__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -19,7 +19,7 @@
         <div class="select__dropdown">
             <ul class="select__dropdown-list" data-id="day">
                 <?php for ($i = 1; $i <= 31; $i++): ?>
-                    <li class="select__option" <?= $editMode && $editMode == 'Y' && $i == 9 ? 'active' : ''; ?> data-value="<?= $i ?>">
+                    <li class="select__option" <?= isset($editMode) && $editMode == 'Y' && $i == 9 ? 'active' : ''; ?> data-value="<?= $i ?>">
                         <?= $i ?>
                     </li>
                 <?php endfor; ?>

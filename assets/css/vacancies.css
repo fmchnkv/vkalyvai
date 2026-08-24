@@ -69,6 +69,12 @@
   display: flex;
   flex-direction: column;
 }
+.offers-grid__date {
+  color: #999999;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 12px;
+}
 .offers-grid__title {
   margin-bottom: 12px;
   font-weight: 600;

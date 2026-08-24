@@ -5,7 +5,7 @@ $maxYear = $currentYear - 18;
 ?>
 <div class="select" data-id="year">
     <label class="filter-group__input select__input input input_has-icon">
-        <input class="input__field" type="text" name="year" data-id="year" <?= $editMode && $editMode == 'Y' ? 'value="1999"' : ''; ?> readonly placeholder="Год">
+        <input class="input__field" type="text" name="year" data-id="year" <?= isset($editMode) && $editMode == 'Y' ? 'value="1999"' : ''; ?> readonly placeholder="Год">
         <span class="input__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -23,7 +23,7 @@ $maxYear = $currentYear - 18;
     <div class="select__dropdown">
         <ul class="select__dropdown-list" data-id="year">
             <?php for ($year = $maxYear; $year >= $minYear; $year--): ?>
-                <li class="select__option <?= $editMode && $editMode == 'Y' && $year == 1999 ? 'active' : ''; ?>" data-value="<?= $year ?>">
+                <li class="select__option <?= isset($editMode) && $editMode == 'Y' && $year == 1999 ? 'active' : ''; ?>" data-value="<?= $year ?>">
                     <?= $year ?>
                 </li>
             <?php endfor; ?>
