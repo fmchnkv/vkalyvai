@@ -30,6 +30,7 @@
 .gray-bubble {
     border: 1px solid @border-neutral;
     background-color: @bg-secondary;
+    position: relative;
 }
 
 .bright-bubble {
@@ -242,6 +243,44 @@
         a {
             color: @primary;
             text-decoration: underline;
+        }
+    }
+}
+
+.grid-3-columns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .media-min(768px, {
+        grid-template-columns: repeat(3, 1fr);
+    });
+}
+
+.birthday-date {
+    .grid-3-columns {
+        @media(max-width: 465px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .media-min(768px, {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+    });
+    &.date-columns {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+    }
+    &__with-title {
+        span {
+            font-weight: 500;
+            line-height: @lh-body;
+            color: @neutral;
+            display: block;
+            margin-bottom: 8px;
         }
     }
 }
@@ -1297,11 +1336,12 @@
         }
         &-action {
             font-size: @f-body;
+            max-width: max-content;
 
             .media-min(768px, {
                 font-size: @f-body-m;
             });
-    }
+        }
         &__tabs {
             .media-min(768px, {
                 margin-bottom: 0;
@@ -1836,7 +1876,7 @@
         justify-content: space-between;
         flex-direction: column;
         position: relative;
-        height: 90vh;
+        /*height: 90vh;*/
         overflow: hidden;
         padding-right: 0;
 
@@ -1848,6 +1888,7 @@
             width: 100%;
 
             .media-min(1024px, {
+                padding: 24px 0 0;
                 position: sticky;
             });
 
@@ -1862,6 +1903,7 @@
             margin-bottom: 0;
             overflow-y: auto;
             padding-right: 10px;
+            padding-bottom: 10px;
         }
     }
 
@@ -1974,7 +2016,7 @@
         }
 
         label {
-            width: 100%;
+            width: calc(50% - 8px);
 
             .radio__label {
                 font-size: @f-body-m;
@@ -2884,32 +2926,6 @@
 
     }
 
-    .grid-2-columns {
-        .media-min(768px, {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: flex-end;
-        });
-        &.date-columns {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: flex-end;
-        }
-        &__with-title {
-            span {
-                font-weight: 500;
-                line-height: @lh-body;
-                color: @neutral;
-                display: block;
-                margin-bottom: 8px;
-            }
-        }
-    }
-
-    .grid-3-columns {
-        .media-min(768px, {
-            grid-template-columns: repeat(3, 1fr);
-        });
-    }
-
     label {
         cursor: pointer;
     }
@@ -3216,4 +3232,22 @@
         position: absolute;
         right: 10px;
     }
+}
+
+.profile-password {
+    input {
+        width: 100%;
+    }
+    button {
+        top: 50%;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.birthday-date {
+    gap: 8px;
 }

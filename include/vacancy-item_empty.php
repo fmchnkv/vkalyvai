@@ -41,4 +41,5 @@
             </button>
         </div>
     </div>
+    <div class="offers-grid__date">01.01.2026</div>
 </li>

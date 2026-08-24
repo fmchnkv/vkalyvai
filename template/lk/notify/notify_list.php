@@ -3,12 +3,30 @@ $uri = $_SERVER['REQUEST_URI'];
 $cardTitle = str_contains($uri, 'job_seeker') ? 'Ваше резюме поднялось в поиске' : 'Ваша вакансия поднялась в поиске';
 $cardTxt = str_contains($uri, 'job_seeker') ? 'За последние 3 дня ваше резюме стало чаще появляться в результатах поиска работодателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о последних проектах или добавить новые навыки.' : 'За последние 3 дня ваша вакансия стала чаще появляться в результатах поиска соискателей. Чтобы сохранить высокий интерес, рекомендуем обновить информацию о вакансии или добавить новые навыки.';
 $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать резюме' : 'Редактировать вакансию';
+$cardUrl = str_contains($uri, 'job_seeker') ? '/lk/job_seeker/resume-form.php?edit_mode=Y' : '/lk/employer/vacancy-form.php?edit_mode=Y';
 ?>
 <div class="notify-list grid-list">
     <div class="lk-card notify-list__item new" data-viewed="no-viewed">
         <div class="notify__item-body">
             <span class="h3"><?php echo $cardTitle; ?></span>
             <p><?php echo $cardTxt; ?></p>
+            <? if(isset($cardUrl) && $cardUrl !== ''): ?>
+            <a href="<?= $cardUrl; ?>" class="notify-action transp-btn lk__btn_has-icon">
+                <span><?php echo $cardAction; ?></span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g >
+                        <path
+                            d="M7.38666 4.46985C7.67957 4.17708 8.15436 4.177 8.44721 4.46985L13.4472 9.46985C13.7398 9.76273 13.7399 10.2376 13.4472 10.5304L8.44721 15.5304C8.1544 15.8232 7.67958 15.823 7.38666 15.5304C7.09377 15.2375 7.09377 14.7627 7.38666 14.4699L11.8564 10.0001L7.38666 5.5304C7.09377 5.23751 7.09377 4.76275 7.38666 4.46985Z"
+                            fill="#FC7827" />
+                    </g>
+                    <defs>
+                        <clipPath>
+                            <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <? else: ?>
             <button class="notify-action transp-btn lk__btn_has-icon">
                 <span><?php echo $cardAction; ?></span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +42,7 @@ $cardAction = str_contains($uri, 'job_seeker') ? 'Редактировать р�
                     </defs>
                 </svg>
             </button>
+            <? endif; ?>
         </div>
     </div>
     <?/*

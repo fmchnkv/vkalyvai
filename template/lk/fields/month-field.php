@@ -1,6 +1,6 @@
 <div class="select" data-id="month">
     <label class="filter-group__input select__input input input_has-icon">
-        <input class="input__field" type="text" name="month" <?= $editMode && $editMode == 'Y' ? 'value="Сентябрь"' : ''; ?> data-id="month" readonly placeholder="Месяц">
+        <input class="input__field" type="text" name="month" <?= isset($editMode) && $editMode == 'Y' ? 'value="Сентябрь"' : ''; ?> data-id="month" readonly placeholder="Месяц">
         <span class="input__icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -34,7 +34,7 @@
             ];
             foreach ($months as $month):
                 ?>
-                <li class="select__option <?= $editMode && $editMode == 'Y' && $month == 'Сентябрь' ? 'active' : ''; ?>" data-value="<?= $month ?>">
+                <li class="select__option <?= isset($editMode) && $editMode == 'Y' && $month == 'Сентябрь' ? 'active' : ''; ?>" data-value="<?= $month ?>">
                     <?= $month ?>
                 </li>
             <?php endforeach; ?>

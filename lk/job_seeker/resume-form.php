@@ -92,7 +92,7 @@ if($editMode && $editMode == 'Y') {
                         </label>
                     </div>
                 </div>
-                <div class="constructor__inputs-set constructor-select big-select">
+                <div class="constructor__inputs-set constructor-select big-select birthday-date">
                     <span class="subcaption">Дата рождения</span>
                     <? require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/date-fields.php"); ?>
                 </div>

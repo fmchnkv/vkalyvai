@@ -1,7 +1,7 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 $isResumeDeals = str_contains($uri, 'job_seeker');
-$dealsDetailUrl = $isResumeDeals ? '/pages/rezume.php?client=Y&auth=Y' : '/pages/vacancy.php?auth=Y';
+$dealsDetailUrl = $isResumeDeals ? '/pages/rezume.php?auth=Y' : '/pages/vacancy.php?client=Y&auth=Y';
 $revisionTooltipText = $isResumeDeals
     ? 'Резюме не прошло модерацию. Пожалуйста, отредактируйте текст и отправьте снова.'
     : 'Вакансия не прошла модерацию. Пожалуйста, отредактируйте текст и отправьте снова.';

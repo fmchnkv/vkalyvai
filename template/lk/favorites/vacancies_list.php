@@ -62,6 +62,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
         </div>
         <?php if (str_contains($uri, '/lk/job_seeker/favorite.php')) require($_SERVER["DOCUMENT_ROOT"] . "/template/lk/favorites/favorite_notice.php"); ?>
     </div>
@@ -123,6 +124,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
     </div>
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
@@ -182,6 +184,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
     </div>
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
@@ -241,6 +244,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
     </div>
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
@@ -300,6 +304,7 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
     </div>
     <div class="offers-grid__item lk-card">
         <a href="/pages/vacancy.php?auth=Y" class="offers-grid__item">
@@ -359,5 +364,6 @@ $uri = $_SERVER['REQUEST_URI'];
                 </button>
             </div>
         </div>
+        <div class="offers-grid__date">01.01.2026</div>
     </div>
 </div>
