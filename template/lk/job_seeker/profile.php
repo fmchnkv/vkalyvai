@@ -44,7 +44,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
 <div class="lk__content detail__section">
     <span class="subcaption">Основная информация</span>
-    <div class="grid-bubbles grid-list personal-bubbles">
+    <div class="grid-bubbles grid-list personal-bubbles main-information">
         <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>ФИО</span>
             <p>Иванов Иван Иванович</p>
@@ -56,18 +56,6 @@ $uri = $_SERVER['REQUEST_URI'];
         <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
             <span>Дата рождения</span>
             <p>01.01.1990</p>
-        </div>
-        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
-            <span>Место жительства</span>
-            <p>Москва, Малая Тульская улица, 2/1 к5</p>
-        </div>
-        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
-            <span>Участник СВО</span>
-            <p>Нет</p>
-        </div>
-        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
-            <span>Статус поиска</span>
-            <p>Активно ищу работу</p>
         </div>
         <?php if(!str_contains($uri, 'moderator')): ?>
         <div class="lk-bubble tight-bubble gray-bubble">
@@ -87,6 +75,18 @@ $uri = $_SERVER['REQUEST_URI'];
             </div>
         </div>
         <?php endif; ?>
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+            <span>Участник СВО</span>
+            <p>Нет</p>
+        </div>
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+            <span>Статус поиска</span>
+            <p>Активно ищу работу</p>
+        </div>
+        <div class="<?= str_contains($uri, 'moderator') ? 'not-editable' : ''; ?> lk-bubble tight-bubble gray-bubble lk-bubble__text-wrapper">
+            <span>Место жительства</span>
+            <p>Москва, Малая Тульская улица, 2/1 к5</p>
+        </div>
     </div>
 </div>
 

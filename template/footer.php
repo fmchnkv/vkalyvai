@@ -337,7 +337,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__main-form lk__form">
+        <form  method="post" class="lk__main-form lk__form">
             <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Статус поиска</span>
@@ -366,8 +366,8 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                             <ul class="select__dropdown-list" data-id="search_status">
                                 <li class="select__option active" data-value="Активно ищу работу">Активно ищу работу
                                 </li>
-                                <li class="select__option" data-value="Пассивно ищу работу">Пассивно ищу работу</li>
-                                <li class="select__option" data-value="Не ищу работу">Не ищу работу</li>
+                                <li class="select__option" data-value="Рассматриваю предложения">Рассматриваю предложения</li>
+                                <li class="select__option" data-value="Работаю">Работаю</li>
                             </ul>
                         </div>
                     </div>
@@ -474,7 +474,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__modal-form lk__user-form">
+        <form method="post" class="lk__modal-form lk__user-form">
             <p class="lk__modal-form-title">Добавить пользователя</p>
             <div class="lk__modal-form-content lk__form-inputs">
                 <div class="lk__input-element">
@@ -552,7 +552,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__modal-form lk__user-form">
+        <form method="post" class="lk__modal-form lk__user-form">
             <p class="lk__modal-form-title">Редактировать пользователя</p>
             <div class="lk__modal-form-content lk__form-inputs">
                 <div class="lk__input-element">
@@ -630,7 +630,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__main-form lk__form">
+        <form  method="post" class="lk__main-form lk__form">
             <div class="lk__main-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
                     <span class="subcaption">Название компании</span>
@@ -716,7 +716,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 <div class="lk__input-element">
                     <span class="subcaption">Регион</span>
                     <div class="lk__input-wrapper">
-                        <input type="text" value="" placeholder="Иванов Иван Иванович">
+                        <input type="text" value="" placeholder="Москва, Московская область">
                     </div>
                 </div>
                 <div class="lk__input-element">
@@ -791,7 +791,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__modal-form lk__contacts-form">
+        <form  method="post" class="lk__modal-form lk__contacts-form">
             <p class="lk__modal-form-title">Добавить контакт</p>
             <div class="lk__modal-form-content">
                 <div class="lk__input-element">
@@ -909,7 +909,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__univercity-form lk__modal-form">
+        <form  method="post" class="lk__univercity-form lk__modal-form">
             <p class="lk__modal-form-title">Место учебы</p>
             <div class="lk__univercity-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
@@ -1070,7 +1070,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__driver-form lk__modal-form">
+        <form  method="post" class="lk__driver-form lk__modal-form">
             <p class="lk__modal-form-title">Опыт вождения</p>
             <div class="lk__driver-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
@@ -1125,7 +1125,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__language-form lk__modal-form">
+        <form  method="post" class="lk__language-form lk__modal-form">
             <p class="lk__modal-form-title">Иностранный язык</p>
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
@@ -1222,7 +1222,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__language-form lk__modal-form">
+        <form  method="post" class="lk__language-form lk__modal-form">
             <p class="lk__modal-form-title">Родной язык</p>
             <div class="lk__language-form-inputs lk__form-inputs">
                 <div class="lk__input-element">
@@ -1286,7 +1286,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                 </defs>
             </svg>
         </button>
-        <form action="/" method="post" class="lk__favorite-form lk__modal-form">
+        <form  method="post" class="lk__favorite-form lk__modal-form">
             <p class="lk__modal-form-title" data-favorite-message>Вакансия добавлена в избранное</p>
             <p class="lk__favorite-message">
                 При необходимости добавьте комментарий в поле ниже, или просто закройте окно

@@ -327,7 +327,7 @@
                 <img src="/images/cta.png" alt="" class="feedback__bg">
                 <span class="feedback__title">Не нашли свой ответ?</span>
                 <p class="feedback__description">Заполните форму и мы свяжемся с вами в ближайшее время!</p>
-                <form action="/" class="feedback__form">
+                <form  class="feedback__form">
                     <div class="feedback__group-row">
                         <label class="input input_form input_size-l">
                             <input type="text" placeholder="Ваше имя">

@@ -137,7 +137,7 @@ $auth = isset($_REQUEST['auth']) ? $_REQUEST['auth'] : '';
                     <div class="feedback" id="feedback">
                         <div class="feedback__inner">
                             <span class="feedback__title">Быстрый отклик</span>
-                            <form action="/" class="feedback__form">
+                            <form  class="feedback__form">
                                 <div class="select">
                                     <label class="select__input input_form input input_size-l input_has-icon input_has-avatar">
                                         <span class="input__avatar avatar">

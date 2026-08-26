@@ -3,7 +3,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 0;
 ?>
 <div class="auth-login">
     <span class="auth-login__title"><?= $role == 1 ? 'Соискатель' : 'Работодатель'; ?></span>
-    <form action="/" class="auth-login__form">
+    <form  class="auth-login__form">
         <label class="auth-login__input input">
             <input class="input__field" type="email" placeholder="Электронная почта" name="LOGIN">
         </label>

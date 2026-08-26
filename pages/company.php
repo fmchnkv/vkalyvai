@@ -227,7 +227,7 @@ $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
                                     <div class="feedback__inner">
                                         <span class="feedback__title">Хочу тут работать</span>
                                         <p class="feedback__description">Вы можете предложить свои услуги работодателю напрямую, не дожидаясь появления открытых вакансий!</p>
-                                        <form action="/" class="feedback__form">
+                                        <form  class="feedback__form">
                                             <div class="select">
                                                 <label class="select__input input input_form input_size-l input_has-icon input_has-avatar">
                                                     <span class="input__avatar avatar">

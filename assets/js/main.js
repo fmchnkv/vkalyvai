@@ -1349,27 +1349,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            editBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                addClasses('add');
+            if(editBtn) {
+                editBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    addClasses('add');
 
-                if (input.matches('[data-auto-resize]')) {
-                    resizeAutoHeightField(input);
-                }
-            })
+                    if (input.matches('[data-auto-resize]')) {
+                        resizeAutoHeightField(input);
+                    }
+                })
+            }
 
-            saveBtn.addEventListener('click', function (e) {
-                e.preventDefault();
+            if(saveBtn) {
+                saveBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-                if (input.value) {
-                    form.classList.remove('error');
-                    userValue.textContent = input.value;
-                    // form.submit();
-                    addClasses('remove');
-                } else {
-                    form.classList.add('error');
-                }
-            })
+                    if (input.value) {
+                        form.classList.remove('error');
+                        userValue.textContent = input.value;
+                        // form.submit();
+                        addClasses('remove');
+                    } else {
+                        form.classList.add('error');
+                    }
+                })
+            }
         });
     }
 
@@ -2610,7 +2614,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const profileClampTooltipFields = document.querySelectorAll(
+    /*const profileClampTooltipFields = document.querySelectorAll(
         '[data-profile-clamp-tooltips] .tight-bubble p'
     );
 
@@ -2632,7 +2636,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 instance.setContent(instance.reference.textContent.trim());
             },
         });
-    }
+    }*/
 
     //переключение способа указания оплаты в форме вакансии
     const paymentTypeInputs = document.querySelectorAll('input[name="payment_amount_type"]');
