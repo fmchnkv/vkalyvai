@@ -7,7 +7,7 @@ $pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
     <span class="auth-pass__title"><?= $pass == 1 ? 'Восстановление пароля' : 'Придумайте пароль'; ?></span>
     <? if ($pass == 1) : ?>
         <p class="auth-pass__description">Введите адрес электронной почты профиля.</p>
-        <form action="/" class="auth-pass__form">
+        <form  class="auth-pass__form">
             <label class="auth-pass__input input">
                 <input class="input__field" type="email" placeholder="Электронная почта">
             </label>
@@ -16,7 +16,7 @@ $pass = isset($_GET['pass']) ? $_GET['pass'] : 0;
         </form>
     <? else : ?>
         <p class="auth-pass__description">Пароль должен содержать минимум одну заглавную букву, одну строчную букву и одну цифру.</p>
-        <form action="/" class="auth-pass__form">
+        <form  class="auth-pass__form">
             <label class="auth-pass__input input input_has-icon">
                 <input class="input__field" type="password" placeholder="Пароль">
                 <span class="input__icon js-password-toggle">

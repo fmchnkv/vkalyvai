@@ -47,7 +47,7 @@
     </div>
 </div>
 <div data-modal-content="add_files" data-files-type="noname" class="inputs-files-block chats__dialog__modal dialog__inputs-files-block">
-    <form action="/">
+    <form >
         <div class="inputs-files-title chats__dialog__inputs-title">
             <span class="subcaption">Прикрепить файл</span>
             <p>Подсказка для любого пользователя какие файлы и для чего можно добавлять в чат</p>
@@ -87,7 +87,7 @@
 </div>
 
 <div data-modal-content="invite" class="dialog__cloise-block chats__dialog__modal">
-    <form action="/">
+    <form >
         <div class="chats__dialog__inputs-title">
             <span class="subcaption">Изменить статус резюме</span>
         </div>

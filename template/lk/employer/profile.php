@@ -6,6 +6,25 @@
         </div>
     </div>
     <div class="lk__buttons">
+        <button class="btn btn_size-m btn_primary lk__btn_has-icon profile-btn">
+            <div class="mob-elem icons-block">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                <path d="M20 6v5h-5"/>
+                <path d="M4 18v-5h5"/>
+                <path d="M6.1 9a7 7 0 0 1 11.6-2.6L20 11"/>
+                <path d="M17.9 15a7 7 0 0 1-11.6 2.6L4 13"/>
+                </svg>
+            </div>
+            <span class="desk-elem">Обновить данные по ИНН</span>
+        </button>
         <a href="#" data-call-modal="edit__company" class="btn btn_size-m btn_primary lk__btn_has-icon profile-btn">
             <div class="mob-elem icons-block">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +122,7 @@
 
 <div class="lk__content detail__section">
     <span class="subcaption">Реквизиты компании</span>
-    <div class="grid-bubbles grid-list personal-bubbles">
+    <div class="grid-bubbles grid-list personal-bubbles requisites-wrapper">
         <div class="lk-bubble tight-bubble gray-bubble">
             <span>Полное название</span>
             <p>Общество с ограниченой ответственностью «Название компании»</p>

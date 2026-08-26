@@ -131,6 +131,36 @@
             max-width: 60%;
         });
     }
+    &.requisites-wrapper {
+        .lk-bubble {
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                .media-min(768px, {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                });
+
+                p {
+                    line-clamp: initial;
+                    -webkit-line-clamp: initial;
+                }
+            }
+        }
+    }
+    &.main-information {
+        .lk-bubble {
+            &:last-child {
+                .media-min(768px, {
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                });
+
+                p {
+                    line-clamp: initial;
+                    -webkit-line-clamp: initial;
+                }
+            }
+        }
+    }
 }
 
 .card-header {
@@ -765,6 +795,7 @@
     &__buttons {
         display: flex;
         gap: 4px;
+        align-items: center;
 
         .profile-btn {
             padding: 9px;
@@ -3035,6 +3066,11 @@
 
 .mob-elem {
     display: block !important;
+    &.icons-block {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
     .media-min(768px, {
         display: none !important;
     });
