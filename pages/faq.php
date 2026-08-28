@@ -347,7 +347,7 @@
                     <div class="feedback__submit-row">
                         <button class="feedback__btn btn btn_primary btn_size-m">Отправить заявку</button>
                         <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input">
+                            <input type="checkbox" required class="checkbox__input">
                             <span class="checkbox__label">Даю согласие на <a class="link link_primary" href="/pages/privacy.php">обработку персональных данных</a>.</span>
                         </label>
                     </div>

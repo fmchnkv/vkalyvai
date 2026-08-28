@@ -1,10 +1,18 @@
 <?
 $auth = isset($_GET['auth']) ? $_GET['auth'] : '';
+$client = isset($_GET['client']) ? $_GET['client'] : '';
 if (strpos($_SERVER['REQUEST_URI'], '/lk/') !== false) {
     $auth = 'Y';
 }
+if (strpos($_SERVER['REQUEST_URI'], '/lk/employer/') !== false) {
+    $client = 'Y';
+}
 $params = $auth !== '' ? '?auth=' . urlencode($auth) : '';
 $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
+$helpParams = $params;
+if ($client !== '') {
+    $helpParams .= ($helpParams !== '' ? '&client=' : '?client=') . urlencode($client);
+}
 ?>
 <footer class="footer">
     <div class="container">
@@ -122,7 +130,7 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
                             <a href="/pages/about.php<?= $params ?>" class="f-menu__link link">О компании</a>
                         </li>
                         <li class="f-menu__item">
-                            <a href="/pages/help.php<?= $params ?>" class="f-menu__link link">Помощь</a>
+                            <a href="/pages/help.php<?= $helpParams ?>" class="f-menu__link link">Помощь</a>
                         </li>
                         <li class="f-menu__item">
                             <a href="/pages/faq.php<?= $params ?>" class="f-menu__link link">Вопрос ответ</a>
@@ -314,8 +322,12 @@ $queryParams = $auth !== '' ? '&auth=' . urlencode($auth) : '';
         </button>
         <div class="modal__inner">
             <div class="modal__content modal__content_center">
+                <? if($auth == 'Y'): ?>
                 <p class="modal__success">Ваше сообщение успешно отправлено. <br>Вся переписка с работодателем доступна
                     в личном кабинете.</p>
+                <? else: ?>
+                <p class="modal__success">Ваше сообщение успешно отправлено!<br><br>Мы свяжемся с вами по указанным контактным данным в ближайшее время.<br>Войдите в личный кабинет, чтобы быстрее отслеживать статус ваших обращений.</p>
+                <? endif; ?>
             </div>
         </div>
     </div>

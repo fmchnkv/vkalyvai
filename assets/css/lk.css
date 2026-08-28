@@ -2826,6 +2826,108 @@
   box-shadow: none;
   background: transparent;
 }
+.lk .autosearch-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__content {
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .lk .autosearch-item__content {
+    gap: 20px;
+  }
+}
+.lk .autosearch-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lk .autosearch-item__header .title {
+  font-weight: 600;
+  /*font-size: @f-h6;*/
+  font-size: 16px;
+  line-height: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__header .title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .lk .autosearch-item__header .title {
+    font-size: 20px;
+  }
+}
+.lk .autosearch-item__header svg {
+  max-width: 16px;
+  max-height: 16px;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__header svg {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .lk .autosearch-item__header svg {
+    max-width: 24px;
+    max-height: 24px;
+  }
+}
+.lk .autosearch-item__address {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__address {
+    font-size: 16px;
+  }
+}
+.lk .autosearch-item__filters {
+  display: grid;
+  gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__filters {
+    gap: 12px;
+  }
+}
+.lk .autosearch-item__filters li {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__filters li {
+    font-size: 16px;
+  }
+}
+.lk .autosearch-item__bottom {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .lk .autosearch-item__bottom {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.lk .autosearch-item__bottom a {
+  max-width: max-content;
+}
+.lk .autosearch-item__btn-new {
+  color: #5DB634;
+}
+.lk .autosearch-item__btn-new svg {
+  transition: all 0.3s ease;
+}
+.lk .autosearch-item__btn-new:hover svg path {
+  fill: #FC7827;
+  transition: all 0.3s ease;
+}
 .constructor__modal .modal__content {
   overflow-y: auto;
 }

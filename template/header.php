@@ -221,7 +221,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                                     </li>
 
                                     <li class="nav__item">
-                                        <a href="/pages/help.php<?= $authParam ?>" class="nav__link link">Помощь</a>
+                                        <a href="/pages/help.php<?= $authParam . $clientParam ?>" class="nav__link link">Помощь</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -443,7 +443,7 @@ $authMobileMenuItems = str_contains($uri, 'moderator')
                         <a href="/pages/about.php<?= $authParam ?>" class="link">О компании</a>
                     </li>
                     <li class="burger-menu__item">
-                        <a href="/pages/help.php<?= $authParam ?>" class="link">Помощь</a>
+                        <a href="/pages/help.php<?= $authParam . $clientParam ?>" class="link">Помощь</a>
                     </li>
                     <li class="burger-menu__item">
                         <a href="/pages/faq.php<?= $authParam ?>" class="link">Вопрос ответ</a>

@@ -3326,6 +3326,9 @@ input::placeholder {
 .file-input input {
   display: none;
 }
+.checkbox__input:user-invalid + .checkbox__label::before {
+  border-color: #F14C4C;
+}
 .inline-form {
   display: flex;
   background-color: #F5F5F5;
