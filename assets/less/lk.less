@@ -3012,6 +3012,112 @@
             background: transparent;
         }
     }
+
+    .autosearch-item {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .media-min(768px, {
+                gap: 16px;
+            });
+            .media-min(1440px, {
+                gap: 20px;
+            });
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title {
+                font-weight: 600;
+                /*font-size: @f-h6;*/
+                font-size: @f-body;
+                line-height: 100%;
+                margin: 0;
+
+                .media-min(768px, {
+                    font-size: @f-body-m;
+                });
+                .media-min(1440px, {
+                    font-size: @f-h6;
+                });
+            }
+
+            svg {
+                max-width: 16px;
+                max-height: 16px;
+
+                .media-min(768px, {
+                    max-width: 20px;
+                    max-height: 20px;
+                });
+
+                .media-min(1440px, {
+                    max-width: 24px;
+                    max-height: 24px;
+                });
+            }
+        }
+
+        &__address {
+            font-size: @f-body-s;
+
+            .media-min(768px, {
+                font-size: @f-body;
+            });
+        }
+
+        &__filters {
+            display: grid;
+            gap: 8px;
+
+            .media-min(768px, {
+                gap: 12px;
+            });
+
+            li {
+                font-size: @f-body-s;
+
+                .media-min(768px, {
+                    font-size: @f-body;
+                });
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+
+            .media-min(768px, {
+                flex-direction: row;
+                gap: 20px;
+            });
+
+            a {
+                max-width: max-content;
+            }
+        }
+
+        &__btn-new {
+            color: @green;
+
+            svg {
+                transition: all .3s ease;
+            }
+
+            &:hover {
+                svg path {
+                    fill: @primary;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
 }
 
 .constructor__modal {

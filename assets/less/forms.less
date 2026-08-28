@@ -1,6 +1,10 @@
 @import url(_variables.less);
 @import url(_mixins.less);
 
+.checkbox__input:user-invalid + .checkbox__label::before {
+    border-color: @error;
+}
+
 .inline-form {
     display: flex;
     background-color: @bg-secondary;

@@ -1,9 +1,9 @@
 <?php
-$currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$currentPath = $_SERVER['REQUEST_URI'];
 
 $lkSidebarItems = [
     [
-        'href' => '/lk/employer/index.php',
+        'href' => '/lk/employer/index.php?auth=Y',
         'label' => 'Профиль',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -17,7 +17,7 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/lk/employer/prices.php',
+        'href' => '/lk/employer/prices.php?auth=Y',
         'label' => 'Цены и тарифы',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -27,7 +27,7 @@ $lkSidebarItems = [
                 ',
     ],
     [
-        'href' => '/lk/employer/deals.php',
+        'href' => '/lk/employer/deals.php?auth=Y',
         'label' => 'Мои вакансии',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -41,7 +41,7 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/chats/index.php',
+        'href' => '/chats/index.php?client=Y&auth=Y',
         'label' => 'Чаты',
         'icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.76191 19.9416L3.00001 21L4.05841 16.2381C3.36139 14.9343 2.99778 13.4784 3.00001 12C3.00001 7.0293 7.02931 3 12 3C16.9707 3 21 7.0293 21 12C21 16.9707 16.9707 21 12 21C10.5216 21.0022 9.06567 20.6386 7.76191 19.9416Z" fill="#FC7827"/>
@@ -49,7 +49,7 @@ $lkSidebarItems = [
                 ',
     ],
     [
-        'href' => '/lk/employer/responces.php',
+        'href' => '/lk/employer/responces.php?auth=Y',
         'label' => 'Мои отклики',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -63,7 +63,7 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/lk/employer/favorite.php',
+        'href' => '/lk/employer/favorite.php?autoSearch=Y&auth=Y',
         'label' => 'Избранное',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -77,7 +77,7 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/lk/employer/docs.php',
+        'href' => '/lk/employer/docs.php?auth=Y',
         'label' => 'Документы',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -91,7 +91,7 @@ $lkSidebarItems = [
             </svg>',
     ],
     [
-        'href' => '/lk/employer/notify.php',
+        'href' => '/lk/employer/notify.php?auth=Y',
         'label' => 'Уведомления',
         'icon' => '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -112,13 +112,10 @@ $lkSidebarItems = [
         <?php foreach ($lkSidebarItems as $item): ?>
             <?php
             $isActive = $currentPath === $item['href'];
-            $itemUrl = $item['href'] == '/chats/index.php'
-                ? '/chats/index.php?client=Y&auth=Y'
-                : $item['href'] . '?auth=Y';
             ?>
-            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $itemUrl ?>'">
+            <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] ?>'">
                 <?= $item['icon'] ?>
-                <a href="<?= $itemUrl ?>"><?= $item['label'] ?></a>
+                <a href="<?= $item['href'] ?>"><?= $item['label'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
