@@ -1,5 +1,5 @@
 <?php
-$currentPath = $_SERVER['REQUEST_URI'];
+$currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 $lkSidebarItems = [
     [
@@ -85,7 +85,7 @@ $lkSidebarItems = [
 <nav class="lk__sidebar">
     <ul>
         <?php foreach ($lkSidebarItems as $item): ?>
-            <?php $isActive = $currentPath === $item['href']; ?>
+            <?php $isActive = $currentPath === parse_url($item['href'], PHP_URL_PATH); ?>
             <li<?= $isActive ? ' class="active"' : '' ?> onclick="window.location.href='<?= $item['href'] ?>'">
                 <?= $item['icon'] ?>
                 <a href="<?= $item['href'] ?>"><?= $item['label'] ?></a>
